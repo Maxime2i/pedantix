@@ -3,6 +3,8 @@ import requests
 import random
 from flask_cors import CORS
 import re
+from datetime import date
+import unicodedata
 
 app = Flask(__name__)
 CORS(app)
@@ -32,13 +34,60 @@ def tokenize(text):
 @app.route("/api/random_page", methods=["GET"])
 def random_page():
     title = random.choice(WIKI_TITRES)
+    print(f"[PARTIE LIBRE] Titre choisi : {title}")
     page = get_wikipedia_page(title)
     if page:
         tokens = tokenize(page["extract"])
+        token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
-            "extract_tokens": tokens,
-            "title": page["title"]
+            "token_info": token_info
         })
+    return jsonify({"error": "Page non trouvée"}), 404
+
+@app.route("/api/daily_page", methods=["GET"])
+def daily_page():
+    today = date.today().isoformat()
+    idx = abs(hash(today)) % len(WIKI_TITRES)
+    title = WIKI_TITRES[idx]
+    print(f"[MOT DU JOUR] Titre choisi : {title}")
+    page = get_wikipedia_page(title)
+    if page:
+        tokens = tokenize(page["extract"])
+        token_info = [len(t) if t.isalpha() else t for t in tokens]
+        return jsonify({
+            "token_info": token_info,
+            "date": today
+        })
+    return jsonify({"error": "Page non trouvée"}), 404
+
+@app.route("/api/reveal_title", methods=["POST"])
+def reveal_title():
+    data = request.json
+    mode = data.get("mode")
+    if mode == "daily":
+        today = date.today().isoformat()
+        idx = abs(hash(today)) % len(WIKI_TITRES)
+        title = WIKI_TITRES[idx]
+        return jsonify({"title": title})
+    elif mode == "random":
+        # Pour le mode random, le frontend doit envoyer le titre choisi (à améliorer si besoin)
+        title = data.get("title")
+        return jsonify({"title": title})
+    return jsonify({"error": "Mode inconnu"}), 400
+
+@app.route("/api/reveal_text", methods=["POST"])
+def reveal_text():
+    data = request.json
+    mode = data.get("mode")
+    if mode == "daily":
+        today = date.today().isoformat()
+        idx = abs(hash(today)) % len(WIKI_TITRES)
+        title = WIKI_TITRES[idx]
+    else:
+        title = data.get("title")
+    page = get_wikipedia_page(title)
+    if page:
+        return jsonify({"extract": page["extract"]})
     return jsonify({"error": "Page non trouvée"}), 404
 
 def get_synonyms(word):
@@ -61,36 +110,46 @@ def get_synonyms(word):
 @app.route("/api/reveal_word", methods=["POST"])
 def reveal_word():
     data = request.json
-    tokens = data.get("extract_tokens", [])
-    revealed = set(data.get("revealed", []))
-    synonym_guesses = data.get("synonym_guesses", {})  # dict: index -> mot proposé
+    token_info = data.get("token_info", [])
+    revealed_tokens = data.get("revealed_tokens", {})
     word = data.get("word", "").lower()
-    synonyms = get_synonyms(word)
-    exact_indices = [i for i, t in enumerate(tokens) if t.lower() == word]
-    synonym_indices = [i for i, t in enumerate(tokens) if t.lower() in synonyms and t.lower() != word]
-    # On ajoute le mot proposé à la liste des révélés
-    revealed.add(word)
-    # On met à jour les synonymes proposés
-    for i in synonym_indices:
-        synonym_guesses[str(i)] = word  # On stocke le mot proposé pour cet index
-    # Construction de l'affichage :
-    display = []
-    for i, t in enumerate(tokens):
-        if t.lower() in revealed:
-            display.append(t)
-        elif str(i) in synonym_guesses:
-            display.append(f"[{synonym_guesses[str(i)]}]")  # On affiche le mot proposé entre crochets
-        elif not t.isalpha():
-            display.append(t)
-        else:
-            display.append("█"*len(t))
+    # Correction : conversion explicite des clés en int
+    new_revealed = {int(k): v for k, v in revealed_tokens.items()}
+    for i, info in enumerate(token_info):
+        if isinstance(info, int) and len(word) == info:
+            new_revealed[i] = word
     return jsonify({
-        "display": display,
-        "revealed": list(revealed),
-        "synonym_guesses": synonym_guesses,
-        "synonym_indices": synonym_indices,
-        "exact_indices": exact_indices
+        "revealed_tokens": new_revealed,
+        "synonym_guesses": {},
     })
+
+def normalize_title(s):
+    s = s.lower().replace('_', ' ').replace('-', ' ')
+    s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+    s = ' '.join(s.split())
+    return s
+
+@app.route("/api/check_title", methods=["POST"])
+def check_title():
+    data = request.json
+    mode = data.get("mode")
+    guesses = data.get("guesses", [])  # liste de mots proposés (normalisés)
+    if mode == "daily":
+        today = date.today().isoformat()
+        idx = abs(hash(today)) % len(WIKI_TITRES)
+        title = WIKI_TITRES[idx]
+    else:
+        title = data.get("title", "")
+    def normalize(s):
+        s = s.lower().replace('_', ' ').replace('-', ' ')
+        s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+        s = ' '.join(s.split())
+        return s
+    title_words = set(normalize(title).split())
+    guesses_set = set(normalize(g) for g in guesses)
+    if title_words.issubset(guesses_set):
+        return jsonify({"ok": True})
+    return jsonify({"ok": False})
 
 if __name__ == "__main__":
     app.run(debug=True)
