@@ -5,6 +5,14 @@ function removeAccents(str: string) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
+function normalize(word: string) {
+  return word
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\w-]/g, '');
+}
+
 function App() {
   const [extractTokens, setExtractTokens] = useState<string[]>([]);
   const [displayTokens, setDisplayTokens] = useState<string[]>([]);
@@ -26,6 +34,8 @@ function App() {
   const [tokenInfo, setTokenInfo] = useState<(number|string)[]>([]);
   const [revealedTokens, setRevealedTokens] = useState<{ [key: number]: string }>({});
   const [guesses, setGuesses] = useState<string[]>([]);
+  const [lastGuess, setLastGuess] = useState('');
+  const [lexicalReveals, setLexicalReveals] = useState<{ [index: number]: string }>({});
 
   const fetchPage = async (selectedMode = mode) => {
     setLoading(true);
@@ -48,8 +58,10 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     setTokenInfo(data.token_info);
-    setExtractTokens([]);
-    setDisplayTokens([]);
+    setExtractTokens(data.tokens || []);
+    setDisplayTokens(
+      (data.tokens || []).map((t: string) => (/\w/.test(t) ? '█'.repeat(t.length) : t))
+    );
     setFullText('');
     if (selectedMode === 'random') {
       setTitle(data.title || '');
@@ -72,6 +84,7 @@ function App() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
+    setLastGuess(input.trim());
     setAttempts(a => a + 1);
     const newGuesses = [...guesses, input.trim()];
     setGuesses(newGuesses);
@@ -103,14 +116,24 @@ function App() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        token_info: tokenInfo,
-        revealed_tokens: revealedTokens,
-        word: input
+        word: input,
+        tokens: extractTokens,
+        revealed: revealed
       })
     });
     const dataWord = await resWord.json();
-    setRevealedTokens(dataWord.revealed_tokens || {});
-    setSynonymGuesses(dataWord.synonym_guesses || {});
+    setDisplayTokens(dataWord.display);
+    setRevealed(dataWord.revealed);
+    // Mise à jour de la persistance des mots du champ lexical
+    setLexicalReveals(prev => {
+      const updated = { ...prev };
+      dataWord.display.forEach((t: string, i: number) => {
+        if (t.startsWith('*') && t.endsWith('*')) {
+          updated[i] = input.trim();
+        }
+      });
+      return updated;
+    });
     setMessage('');
     setInput('');
   };
@@ -129,19 +152,6 @@ function App() {
     });
     const data = await res.json();
     setRevealedTitle(data.title);
-  };
-
-  const getDisplayTokens = () => {
-    return tokenInfo.map((info, i) => {
-      if (typeof info === 'string') return info;
-      if (revealedTokens[i]) {
-        return revealedTokens[i];
-      }
-      if (synonymGuesses[String(i)]) {
-        return `[${synonymGuesses[String(i)]}]`;
-      }
-      return '█'.repeat(info);
-    });
   };
 
   const revealFullText = async () => {
@@ -184,18 +194,6 @@ function App() {
       setMessage("Ce n'est pas le bon titre.");
       // NE PAS appeler /api/reveal_title ici !
     }
-  };
-
-  // Affichage stylé : mots exacts normaux, synonymes proposés en blanc sur fond noir, le reste masqué
-  const renderToken = (t: string, i: number) => {
-    if (t.startsWith('[') && t.endsWith(']')) {
-      return (
-        <span key={i} className="synonym">
-          {t.slice(1, -1)}
-        </span>
-      );
-    }
-    return <span key={i}>{t}</span>;
   };
 
   return (
@@ -254,7 +252,28 @@ function App() {
       <div className="masked-text">
         {showFullText && fullText
           ? fullText
-          : getDisplayTokens().map((t: string, i: number) => renderToken(t, i))}
+          : displayTokens.map((t: string, i: number) => {
+              if (lexicalReveals[i]) {
+                if (revealed.includes(normalize(extractTokens[i]))) {
+                  return <span key={i} style={{ marginRight: /\w/.test(extractTokens[i]) ? 2 : 0 }}>{extractTokens[i]}</span>;
+                }
+                return (
+                  <span key={i} style={{ color: 'blue', textDecoration: 'underline', marginRight: 2 }}>{lexicalReveals[i]}</span>
+                );
+              }
+              if (t.startsWith('*') && t.endsWith('*')) {
+                setTimeout(() => {
+                  setLexicalReveals(prev => ({
+                    ...prev,
+                    [i]: lastGuess
+                  }));
+                }, 0);
+                return (
+                  <span key={i} style={{ color: 'blue', textDecoration: 'underline', marginRight: 2 }}>{lastGuess}</span>
+                );
+              }
+              return <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>{t}</span>;
+            })}
       </div>
       {showTitle && (
         <div style={{ marginTop: 20, color: 'red', textAlign: 'center' }}>
@@ -294,6 +313,19 @@ function App() {
                 <strong>Le titre était : {revealedTitle}</strong>
               ) : (
                 <button onClick={revealTitle} className="share-btn">Révéler le titre</button>
+              )}
+            </div>
+            <div style={{ marginTop: 18 }}>
+              {!showFullText && (
+                <button
+                  onClick={async () => {
+                    await revealFullText();
+                    setShowCongrats(false);
+                  }}
+                  className="share-btn"
+                >
+                  Voir la page complète
+                </button>
               )}
             </div>
           </div>

@@ -5,6 +5,13 @@ from flask_cors import CORS
 import re
 from datetime import date
 import unicodedata
+import os
+import json
+import html
+
+# Chargement du champ lexical
+with open(os.path.join(os.path.dirname(__file__), "dico/lexical_field.json"), encoding="utf-8") as f:
+    LEXICAL_FIELD = json.load(f)
 
 app = Flask(__name__)
 CORS(app)
@@ -40,7 +47,8 @@ def random_page():
         tokens = tokenize(page["extract"])
         token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
-            "token_info": token_info
+            "token_info": token_info,
+            "tokens": tokens
         })
     return jsonify({"error": "Page non trouvée"}), 404
 
@@ -56,6 +64,7 @@ def daily_page():
         token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
             "token_info": token_info,
+            "tokens": tokens,
             "date": today
         })
     return jsonify({"error": "Page non trouvée"}), 404
@@ -107,23 +116,52 @@ def get_synonyms(word):
         print(f"Erreur lors de la récupération des synonymes : {e}")
     return []
 
+def normalize(word):
+    import unicodedata
+    import html
+    word = html.unescape(word)  # Convertit les entités HTML
+    word = word.lower()
+    word = word.split('>')[0].split(':')[0]  # retire les suffixes
+    word = ''.join(c for c in unicodedata.normalize('NFD', word) if unicodedata.category(c) != 'Mn')
+    word = re.sub(r'[^\w-]', '', word)
+    return word
+
 @app.route("/api/reveal_word", methods=["POST"])
 def reveal_word():
     data = request.json
-    token_info = data.get("token_info", [])
-    revealed_tokens = data.get("revealed_tokens", {})
-    word = data.get("word", "").lower()
-    # Correction : conversion explicite des clés en int
-    new_revealed = {int(k): v for k, v in revealed_tokens.items()}
-    for i, info in enumerate(token_info):
-        if isinstance(info, int) and len(word) == info:
-            new_revealed[i] = word
+    tokens = data.get("tokens", [])
+    revealed = set(data.get("revealed", []))
+    word = data.get("word", "").strip()
+    norm_word = normalize(word)
+    # Ajoute le mot proposé à la liste des révélés
+    revealed.add(norm_word)
+    # Récupère le champ lexical du mot proposé
+    champ_lexical = set(normalize(w) for w in LEXICAL_FIELD.get(norm_word, []))
+    # Construction de l'affichage
+    display = []
+    for t in tokens:
+        norm_t = normalize(t)
+        if not t.isalpha():
+            display.append(t)
+        elif norm_t in revealed:
+            display.append(t)
+        elif norm_t in champ_lexical:
+            display.append(f"*{t}*")  # Style spécial pour champ lexical
+            print(f"Comparaison : '{norm_t}' dans {champ_lexical}")
+        else:
+            display.append("█"*len(t))
+    print(f"Mot proposé : '{word}' (normalisé : '{norm_word}')")
+    print(f"Champ lexical : {champ_lexical}")
+    print(f"Extrait tokens : {[normalize(t) for t in tokens if t.isalpha()]}")
     return jsonify({
-        "revealed_tokens": new_revealed,
-        "synonym_guesses": {},
+        "display": display,
+        "revealed": list(revealed)
     })
 
 def normalize_title(s):
+    # Supprimer les parenthèses et leur contenu
+    import re
+    s = re.sub(r'\([^)]*\)', '', s)
     s = s.lower().replace('_', ' ').replace('-', ' ')
     s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
     s = ' '.join(s.split())
