@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
+const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 function removeAccents(str: string) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
@@ -53,8 +55,8 @@ function App() {
     setTokenInfo([]);
     setGuesses([]);
     let url = selectedMode === 'daily'
-      ? 'http://localhost:5000/api/daily_page'
-      : 'http://localhost:5000/api/random_page';
+      ? `${apiUrl}/api/daily_page`
+      : `${apiUrl}/api/random_page`;
     const res = await fetch(url);
     const data = await res.json();
     setTokenInfo(data.token_info);
@@ -89,7 +91,7 @@ function App() {
     const newGuesses = [...guesses, input.trim()];
     setGuesses(newGuesses);
     // Vérifie d'abord si tous les mots du titre ont été proposés
-    const res = await fetch('http://localhost:5000/api/check_title', {
+    const res = await fetch(`${apiUrl}/api/check_title`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ mode, guesses: newGuesses, title: mode === 'random' ? title : undefined })
@@ -102,7 +104,7 @@ function App() {
       setShowConfetti(true);
       setTimeout(() => setShowConfetti(false), 3500);
       // On révèle le titre pour l'affichage UNIQUEMENT après victoire
-      const resTitle = await fetch('http://localhost:5000/api/reveal_title', {
+      const resTitle = await fetch(`${apiUrl}/api/reveal_title`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mode, title: mode === 'random' ? title : undefined })
@@ -112,7 +114,7 @@ function App() {
       return;
     }
     // Sinon, on traite comme un mot à révéler
-    const resWord = await fetch('http://localhost:5000/api/reveal_word', {
+    const resWord = await fetch(`${apiUrl}/api/reveal_word`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -145,7 +147,7 @@ function App() {
   };
 
   const revealTitle = async () => {
-    const res = await fetch('http://localhost:5000/api/reveal_title', {
+    const res = await fetch(`${apiUrl}/api/reveal_title`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ mode, title: mode === 'random' ? title : undefined })
@@ -155,7 +157,7 @@ function App() {
   };
 
   const revealFullText = async () => {
-    const res = await fetch('http://localhost:5000/api/reveal_text', {
+    const res = await fetch(`${apiUrl}/api/reveal_text`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ mode, title: mode === 'random' ? title : undefined })
@@ -170,7 +172,7 @@ function App() {
     if (!input.trim()) return;
     setAttempts(a => a + 1);
     // Vérifie le titre auprès du backend sans jamais révéler le titre
-    const res = await fetch('http://localhost:5000/api/check_title', {
+    const res = await fetch(`${apiUrl}/api/check_title`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ mode, guess: input, title: mode === 'random' ? title : undefined })
@@ -183,7 +185,7 @@ function App() {
       setShowConfetti(true);
       setTimeout(() => setShowConfetti(false), 3500);
       // On révèle le titre pour l'affichage UNIQUEMENT après victoire
-      const resTitle = await fetch('http://localhost:5000/api/reveal_title', {
+      const resTitle = await fetch(`${apiUrl}/api/reveal_title`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mode, title: mode === 'random' ? title : undefined })
