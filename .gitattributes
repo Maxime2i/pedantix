@@ -1,0 +1,1 @@
+backend/dico/lexical_field.json filter=lfs diff=lfs merge=lfs -text
