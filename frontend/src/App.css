@@ -86,12 +86,35 @@ body {
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
-    opacity: 0.2;
+    opacity: 0.4;
   }
   50% {
     transform: translateY(-20px) rotate(180deg);
-    opacity: 0.4;
+    opacity: 0.8;
   }
+}
+
+/* Particle variations */
+.particle:nth-child(2n) {
+  background-color: rgba(139, 92, 246, 0.2);
+  animation-duration: 8s;
+}
+
+.particle:nth-child(3n) {
+  background-color: rgba(236, 72, 153, 0.2);
+  animation-duration: 7s;
+}
+
+.particle:nth-child(4n) {
+  width: 6px;
+  height: 6px;
+  animation-duration: 9s;
+}
+
+.particle:nth-child(5n) {
+  width: 10px;
+  height: 10px;
+  animation-duration: 5s;
 }
 
 /* Container */

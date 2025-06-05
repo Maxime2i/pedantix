@@ -58,7 +58,7 @@ function App() {
   const [restorationChecked, setRestorationChecked] = useState(false);
 
   useEffect(() => {
-    const newParticles = Array.from({ length: 20 }, (_, i) => ({
+    const newParticles = Array.from({ length: 200 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -282,19 +282,6 @@ function App() {
     setMessage("Score copié dans le presse-papier !");
   };
 
-  const revealTitle = async () => {
-    const res = await fetch(`${apiUrl}/api/reveal_title`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        mode,
-        title: mode === "random" ? title : undefined,
-      }),
-    });
-    const data = await res.json();
-    setRevealedTitle(data.title);
-  };
-
   const revealFullText = async () => {
     const res = await fetch(`${apiUrl}/api/reveal_text`, {
       method: "POST",
@@ -307,43 +294,6 @@ function App() {
     const data = await res.json();
     setFullText(data.extract);
     setShowFullText(true);
-  };
-
-  const handleTitleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim()) return;
-    setAttempts((a) => a + 1);
-    // Vérifie le titre auprès du backend sans jamais révéler le titre
-    const res = await fetch(`${apiUrl}/api/check_title`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        mode,
-        guess: input,
-        title: mode === "random" ? title : undefined,
-      }),
-    });
-    const data = await res.json();
-    if (data.ok) {
-      setWin(true);
-      setMessage("Bravo, tu as trouvé le titre !");
-      setInput("");
-      setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 3500);
-      // On révèle le titre pour l'affichage UNIQUEMENT après victoire
-      const resTitle = await fetch(`${apiUrl}/api/reveal_title`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          mode,
-          title: mode === "random" ? title : undefined,
-        }),
-      });
-      const dataTitle = await resTitle.json();
-      setRevealedTitle(dataTitle.title);
-    } else {
-      setMessage("Ce n'est pas le bon titre.");
-    }
   };
 
   const revealedCount = displayTokens.filter(
