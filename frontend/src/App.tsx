@@ -87,13 +87,10 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     setTokenInfo(data.token_info);
-    setExtractTokens(data.tokens || []);
-    setDisplayTokens(
-      (data.tokens || []).map((t: string) =>
-        /\w/.test(t) ? `__HIDDEN_BLOCK__:${t.length}` : t
-      )
-    );
+    setDisplayTokens(data.tokens || []);
     setFullText("");
+    setRevealed([]);
+    setLexicalReveals({});
     if (selectedMode === "random") {
       setTitle(data.title || "");
     } else {
@@ -167,7 +164,7 @@ function App() {
   // Sauvegarde à chaque changement pertinent (victoire ou nouvelle proposition)
   useEffect(() => {
     if (mode !== "daily") return;
-    if (!extractTokens.length) return;
+    if (!displayTokens.length) return;
     saveGameState({
       win,
       guesses,
@@ -176,20 +173,13 @@ function App() {
       attempts,
       lexicalReveals,
     });
-  }, [win, guesses, revealed, revealedTitle, attempts, extractTokens, mode, lexicalReveals]);
+  }, [win, guesses, revealed, revealedTitle, attempts, displayTokens, mode, lexicalReveals]);
 
   // Met à jour l'affichage du texte masqué après restauration ou changement de revealed ou lexicalReveals
   useEffect(() => {
-    if (!extractTokens.length) return;
     if (showFullText) return; // Ne rien faire si le texte complet est affiché
-    setDisplayTokens(
-      extractTokens.map((t: string, i: number) => {
-        if (lexicalReveals[i]) return `*${lexicalReveals[i]}*`;
-        if (/\w/.test(t) && revealed.includes(normalize(t))) return t;
-        return /\w/.test(t) ? `__HIDDEN_BLOCK__:${t.length}` : t;
-      })
-    );
-  }, [extractTokens, revealed, showFullText, lexicalReveals]);
+    // L'affichage est déjà géré par displayTokens
+  }, [displayTokens, revealed, showFullText, lexicalReveals]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -234,7 +224,6 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         word: input,
-        tokens: extractTokens,
         revealed: revealed,
       }),
     });
@@ -246,7 +235,10 @@ function App() {
       const updated = { ...prev };
       dataWord.display.forEach((t: string, i: number) => {
         if (t.startsWith("*") && t.endsWith("*")) {
-          updated[i] = input.trim();
+          // On stocke le mot proposé par l'utilisateur, pas le mot révélé
+          if (!updated[i]) {
+            updated[i] = input.trim();
+          }
         }
       });
       return updated;
@@ -325,11 +317,11 @@ function App() {
     }
   };
 
-  const revealedCount = extractTokens.filter(
+  const revealedCount = displayTokens.filter(
     (token) => revealed.includes(normalize(token)) && token.length >= 2
   ).length;
 
-  const totalGuessable = extractTokens.filter(token => token.length >= 2 && /\w/.test(token)).length;
+  const totalGuessable = displayTokens.filter(token => token.length >= 2 && /\w/.test(token)).length;
   const percentDiscovered = totalGuessable > 0 ? Math.round((revealedCount / totalGuessable) * 100) : 0;
 
   return (
@@ -404,6 +396,29 @@ function App() {
                   {showFullText && fullText
                     ? fullText
                     : displayTokens.map((t: string, i: number) => {
+                        // Si le vrai mot a été trouvé, on l'affiche (en blanc)
+                        if (
+                          t.startsWith("__HIDDEN_BLOCK__") === false &&
+                          revealed.includes(normalize(t))
+                        ) {
+                          return (
+                            <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>
+                              {t}
+                            </span>
+                          );
+                        }
+                        // Sinon, si un mot du champ lexical a été trouvé à cet index, on l'affiche en bleu
+                        if (lexicalReveals[i]) {
+                          return (
+                            <span
+                              key={i}
+                              style={{ color: "blue", textDecoration: "underline", marginRight: 2 }}
+                            >
+                              {lexicalReveals[i]}
+                            </span>
+                          );
+                        }
+                        // Sinon, on affiche le bloc masqué ou la ponctuation
                         if (t.startsWith("__HIDDEN_BLOCK__")) {
                           const length = parseInt(t.split(":")[1], 10) || 1;
                           return (
@@ -421,39 +436,8 @@ function App() {
                             />
                           );
                         }
-                        if (lexicalReveals[i]) {
-                          if (revealed.includes(normalize(extractTokens[i]))) {
-                            return (
-                              <span
-                                key={i}
-                                style={{
-                                  marginRight: /\w/.test(extractTokens[i])
-                                    ? 2
-                                    : 0,
-                                }}
-                              >
-                                {extractTokens[i]}
-                              </span>
-                            );
-                          }
-                          return (
-                            <span
-                              key={i}
-                              style={{
-                                color: "blue",
-                                textDecoration: "underline",
-                                marginRight: 2,
-                              }}
-                            >
-                              {lexicalReveals[i]}
-                            </span>
-                          );
-                        }
                         return (
-                          <span
-                            key={i}
-                            style={{ marginRight: /\w/.test(t) ? 2 : 0 }}
-                          >
+                          <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>
                             {t}
                           </span>
                         );
@@ -522,26 +506,24 @@ function App() {
                         // On normalise le mot proposé
                         const normalizedWord = normalize(word);
 
-                        // On vérifie s'il est dans extractTokens (texte principal) et dans revealed
-                        const isInExtract = extractTokens.some(
+                        // On vérifie s'il est dans displayTokens (texte principal) et dans revealed
+                        const isInDisplay = displayTokens.some(
                           (token, i) =>
                             normalize(token) === normalizedWord &&
                             revealed.includes(normalize(token)) &&
                             token.length >= 2 // tu peux ajuster la longueur minimale ici
                         );
 
-                        console.log(isInExtract, word, extractTokens);
                         // On vérifie s'il a permis de révéler un mot du champ lexical
-                        const isLexical = Object.values(lexicalReveals).includes(word) && !isInExtract;
+                        const isLexical = Object.values(lexicalReveals).includes(word) && !isInDisplay;
 
-                        console.log(isLexical, word);
 
                         let className = "history-item";
-                        if (isInExtract) className += " history-item-found"; // vert
+                        if (isInDisplay) className += " history-item-found"; // vert
                         else if (isLexical) className += " history-item-lexical"; // jaune
 
                         let wordClass = "history-word";
-                        if (isInExtract) wordClass += " history-word-found";
+                        if (isInDisplay) wordClass += " history-word-found";
                         else if (isLexical) wordClass += " history-word-lexical";
 
                         return (

@@ -18,7 +18,7 @@ CORS(app)
 
 # Liste de quelques titres de pages pour simplifier (à améliorer ensuite)
 WIKI_TITRES = [
-    "France", "Python_(langage)", "Tour_Eiffel", "Albert_Einstein", "Chat", "Intelligence_artificielle"
+    "Chat"
 ]
 
 DICOLINK_API_KEY = "TA_CLE_API_ICI"
@@ -61,10 +61,14 @@ def daily_page():
     page = get_wikipedia_page(title)
     if page:
         tokens = tokenize(page["extract"])
+        masked_tokens = [
+            f"__HIDDEN_BLOCK__:{len(t)}" if t.isalpha() else t
+            for t in tokens
+        ]
         token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
             "token_info": token_info,
-            "tokens": tokens,
+            "tokens": masked_tokens,
             "date": today
         })
     return jsonify({"error": "Page non trouvée"}), 404
@@ -129,15 +133,23 @@ def normalize(word):
 @app.route("/api/reveal_word", methods=["POST"])
 def reveal_word():
     data = request.json
-    tokens = data.get("tokens", [])
-    revealed = set(data.get("revealed", []))
     word = data.get("word", "").strip()
+    revealed = set(data.get("revealed", []))
+    mode = data.get("mode", "daily")
+    # On retrouve le titre et le texte de la page
+    if mode == "daily":
+        today = date.today().isoformat()
+        idx = abs(hash(today)) % len(WIKI_TITRES)
+        title = WIKI_TITRES[idx]
+    else:
+        title = data.get("title")
+    page = get_wikipedia_page(title)
+    if not page:
+        return jsonify({"error": "Page non trouvée"}), 404
+    tokens = tokenize(page["extract"])
     norm_word = normalize(word)
-    # Ajoute le mot proposé à la liste des révélés
     revealed.add(norm_word)
-    # Récupère le champ lexical du mot proposé
     champ_lexical = set(normalize(w) for w in LEXICAL_FIELD.get(norm_word, []))
-    # Construction de l'affichage
     display = []
     for t in tokens:
         norm_t = normalize(t)
@@ -146,13 +158,9 @@ def reveal_word():
         elif norm_t in revealed:
             display.append(t)
         elif norm_t in champ_lexical:
-            display.append(f"*{t}*")  # Style spécial pour champ lexical
-            print(f"Comparaison : '{norm_t}' dans {champ_lexical}")
+            display.append(f"*__HIDDEN_BLOCK__:{len(t)}*")
         else:
-            display.append("█"*len(t))
-    print(f"Mot proposé : '{word}' (normalisé : '{norm_word}')")
-    print(f"Champ lexical : {champ_lexical}")
-    print(f"Extrait tokens : {[normalize(t) for t in tokens if t.isalpha()]}")
+            display.append("__HIDDEN_BLOCK__:" + str(len(t)))
     return jsonify({
         "display": display,
         "revealed": list(revealed)
