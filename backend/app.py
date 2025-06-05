@@ -18,7 +18,7 @@ CORS(app)
 
 # Liste de quelques titres de pages pour simplifier (à améliorer ensuite)
 WIKI_TITRES = [
-    "Chat"
+    "Python_(langage)"
 ]
 
 DICOLINK_API_KEY = "TA_CLE_API_ICI"
@@ -48,7 +48,8 @@ def random_page():
         token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
             "token_info": token_info,
-            "tokens": tokens
+            "tokens": tokens,
+            "title": page["title"]
         })
     return jsonify({"error": "Page non trouvée"}), 404
 
@@ -69,7 +70,8 @@ def daily_page():
         return jsonify({
             "token_info": token_info,
             "tokens": masked_tokens,
-            "date": today
+            "date": today,
+            "title": page["title"]
         })
     return jsonify({"error": "Page non trouvée"}), 404
 
@@ -81,11 +83,13 @@ def reveal_title():
         today = date.today().isoformat()
         idx = abs(hash(today)) % len(WIKI_TITRES)
         title = WIKI_TITRES[idx]
-        return jsonify({"title": title})
+        title_clean = title.replace("_", " ")
+        return jsonify({"title": title_clean})
     elif mode == "random":
         # Pour le mode random, le frontend doit envoyer le titre choisi (à améliorer si besoin)
         title = data.get("title")
-        return jsonify({"title": title})
+        title_clean = title.replace("_", " ")
+        return jsonify({"title": title_clean})
     return jsonify({"error": "Mode inconnu"}), 400
 
 @app.route("/api/reveal_text", methods=["POST"])
@@ -186,12 +190,14 @@ def check_title():
         title = WIKI_TITRES[idx]
     else:
         title = data.get("title", "")
+    # On normalise le titre (réponse) en supprimant ce qu'il y a entre parenthèses
+    title_words = set(normalize_title(title).split())
+    # On normalise les propositions sans toucher aux parenthèses
     def normalize(s):
         s = s.lower().replace('_', ' ').replace('-', ' ')
         s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
         s = ' '.join(s.split())
         return s
-    title_words = set(normalize(title).split())
     guesses_set = set(normalize(g) for g in guesses)
     if title_words.issubset(guesses_set):
         return jsonify({"ok": True})

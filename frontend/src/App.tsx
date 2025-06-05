@@ -54,7 +54,7 @@ function App() {
   }>({});
   const [particles, setParticles] = useState<Particle[]>([]);
   const [restored, setRestored] = useState(false);
-  const [showLength, setShowLength] = useState<{ [index: number]: boolean }>({});
+  const [showLength, setShowLength] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const newParticles = Array.from({ length: 20 }, (_, i) => ({
@@ -92,11 +92,7 @@ function App() {
     setFullText("");
     setRevealed([]);
     setLexicalReveals({});
-    if (selectedMode === "random") {
-      setTitle(data.title || "");
-    } else {
-      setTitle("");
-    }
+    setTitle(data.title || "");
     setLoading(false);
   };
 
@@ -174,7 +170,16 @@ function App() {
       attempts,
       lexicalReveals,
     });
-  }, [win, guesses, revealed, revealedTitle, attempts, displayTokens, mode, lexicalReveals]);
+  }, [
+    win,
+    guesses,
+    revealed,
+    revealedTitle,
+    attempts,
+    displayTokens,
+    mode,
+    lexicalReveals,
+  ]);
 
   // Met à jour l'affichage du texte masqué après restauration ou changement de revealed ou lexicalReveals
   useEffect(() => {
@@ -322,8 +327,11 @@ function App() {
     (token) => revealed.includes(normalize(token)) && token.length >= 2
   ).length;
 
-  const totalGuessable = displayTokens.filter(token => token.length >= 2 && /\w/.test(token)).length;
-  const percentDiscovered = totalGuessable > 0 ? Math.round((revealedCount / totalGuessable) * 100) : 0;
+  const totalGuessable = displayTokens.filter(
+    (token) => token.length >= 2 && /\w/.test(token)
+  ).length;
+  const percentDiscovered =
+    totalGuessable > 0 ? Math.round((revealedCount / totalGuessable) * 100) : 0;
 
   return (
     <div className="app">
@@ -348,16 +356,9 @@ function App() {
         </header>
 
         <main className="main-grid">
-
-
-
-
-
           <section className="text-section">
-
-
-             {/* Zone de saisie */}
-             <div className="input-card">
+            {/* Zone de saisie */}
+            <div className="input-card">
               <div className="card-header">
                 <h3 className="card-title">
                   <span className="icon">🔍</span>
@@ -374,14 +375,17 @@ function App() {
                     className="word-input"
                     disabled={win || (restored && win)}
                   />
-                  <button type="submit" className="submit-button" disabled={!input.trim() || win || (restored && win)}>
+                  <button
+                    type="submit"
+                    className="submit-button"
+                    disabled={!input.trim() || win || (restored && win)}
+                  >
                     <span className="icon">✨</span>
                     Valider
                   </button>
                 </form>
               </div>
             </div>
-
 
             {/* Texte Wikipedia */}
             <div className="text-card">
@@ -390,10 +394,103 @@ function App() {
                   <span className="icon">🎯</span>
                   Texte Wikipedia
                 </div>
-                <span className="found-badge">{revealedCount} mots trouvés</span>
+                <span className="found-badge">
+                  {revealedCount} mots trouvés
+                </span>
               </div>
               <div className="text-card-content">
                 <div className="wiki-text">
+                  {/* Affichage du titre masqué/révélé dans la section texte */}
+                  {title && (
+                    <div
+                      style={{
+                        textAlign: "left",
+                        marginBottom: 18,
+                        minHeight: 28,
+                      }}
+                    >
+                      {title.split(/(\s+)/).map((part, idx) => {
+                        if (/^\s+$/.test(part)) {
+                          return <span key={idx}>{part}</span>;
+                        }
+                        // On normalise le mot du titre
+                        const normalizedPart = normalize(part);
+                        const isRevealed =
+                          win || revealed.includes(normalizedPart);
+                        if (isRevealed) {
+                          return (
+                            <span
+                              key={idx}
+                              style={{
+                                fontSize: 22,
+                                fontWeight: 700,
+                                letterSpacing: 1,
+                                color: "#fff",
+                                marginRight: 4,
+                              }}
+                            >
+                              {part}
+                            </span>
+                          );
+                        } else {
+                          return (
+                            <span
+                              key={idx}
+                              style={{
+                                display: "inline-block",
+                                width: 14 * part.length,
+                                height: 18,
+                                background: "#ccc",
+                                borderRadius: 4,
+                                marginRight: 4,
+                                verticalAlign: "middle",
+                                position: "relative",
+                                cursor: "pointer",
+                              }}
+                              onClick={() => {
+                                setShowLength((prev) => ({
+                                  ...prev,
+                                  ["title-" + idx]: true,
+                                }));
+                                setTimeout(() => {
+                                  setShowLength((prev) => ({
+                                    ...prev,
+                                    ["title-" + idx]: false,
+                                  }));
+                                }, 2000);
+                              }}
+                              title="Mot du titre caché"
+                            >
+                              <span
+                                className={`fade-in-out${
+                                  showLength["title-" + idx] ? " visible" : ""
+                                }`}
+                                style={{
+                                  position: "absolute",
+                                  top: 0,
+                                  left: 0,
+                                  width: "100%",
+                                  height: "100%",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  color: "#2563eb",
+                                  fontWeight: 700,
+                                  fontSize: 14,
+                                  pointerEvents: "none",
+                                  zIndex: 2,
+                                  opacity: showLength["title-" + idx] ? 1 : 0,
+                                  transition: "opacity 0.4s",
+                                }}
+                              >
+                                {part.length}
+                              </span>
+                            </span>
+                          );
+                        }
+                      })}
+                    </div>
+                  )}
                   {showFullText && fullText
                     ? fullText
                     : displayTokens.map((t: string, i: number) => {
@@ -403,7 +500,10 @@ function App() {
                           revealed.includes(normalize(t))
                         ) {
                           return (
-                            <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>
+                            <span
+                              key={i}
+                              style={{ marginRight: /\w/.test(t) ? 2 : 0 }}
+                            >
                               {t}
                             </span>
                           );
@@ -420,7 +520,7 @@ function App() {
                                 marginRight: 4,
                                 padding: "0 8px",
                                 fontWeight: 600,
-                                userSelect: "none"
+                                userSelect: "none",
                               }}
                             >
                               {lexicalReveals[i]}
@@ -441,12 +541,18 @@ function App() {
                                 marginRight: 4,
                                 verticalAlign: "middle",
                                 cursor: "pointer",
-                                userSelect: "none"
+                                userSelect: "none",
                               }}
                               onClick={() => {
-                                setShowLength((prev) => ({ ...prev, [i]: true }));
+                                setShowLength((prev) => ({
+                                  ...prev,
+                                  [i]: true,
+                                }));
                                 setTimeout(() => {
-                                  setShowLength((prev) => ({ ...prev, [i]: false }));
+                                  setShowLength((prev) => ({
+                                    ...prev,
+                                    [i]: false,
+                                  }));
                                 }, 2000);
                               }}
                             >
@@ -462,7 +568,9 @@ function App() {
                               />
                               {/* Nombre de lettres en bleu, centré et par-dessus */}
                               <span
-                                className={`fade-in-out${showLength[i] ? " visible" : ""}`}
+                                className={`fade-in-out${
+                                  showLength[i] ? " visible" : ""
+                                }`}
                                 style={{
                                   position: "absolute",
                                   top: 0,
@@ -478,7 +586,7 @@ function App() {
                                   pointerEvents: "none",
                                   zIndex: 2,
                                   opacity: showLength[i] ? 1 : 0,
-                                  transition: "opacity 0.4s"
+                                  transition: "opacity 0.4s",
                                 }}
                               >
                                 {length}
@@ -487,7 +595,10 @@ function App() {
                           );
                         }
                         return (
-                          <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>
+                          <span
+                            key={i}
+                            style={{ marginRight: /\w/.test(t) ? 2 : 0 }}
+                          >
                             {t}
                           </span>
                         );
@@ -496,15 +607,6 @@ function App() {
               </div>
             </div>
           </section>
-
-
-
-
-
-
-
-
-
 
           <aside className="sidebar">
             {/* Statistiques */}
@@ -526,17 +628,12 @@ function App() {
                 </div>
                 <div className="stat-row">
                   <span className="stat-label">Page découverte</span>
-                  <span className="stat-badge percent">{percentDiscovered}%</span>
+                  <span className="stat-badge percent">
+                    {percentDiscovered}%
+                  </span>
                 </div>
               </div>
             </div>
-
-
-
-
-           
-
-
 
             {/* Historique */}
             <div className="history-card">
@@ -549,7 +646,9 @@ function App() {
               <div className="card-content">
                 <div className="history-scroll">
                   {guesses.length === 0 ? (
-                    <p className="no-history">Aucune proposition pour le moment</p>
+                    <p className="no-history">
+                      Aucune proposition pour le moment
+                    </p>
                   ) : (
                     <div className="history-list">
                       {[...guesses].reverse().map((word, index) => {
@@ -565,16 +664,20 @@ function App() {
                         );
 
                         // On vérifie s'il a permis de révéler un mot du champ lexical
-                        const isLexical = Object.values(lexicalReveals).includes(word) && !isInDisplay;
-
+                        const isLexical =
+                          Object.values(lexicalReveals).includes(word) &&
+                          !isInDisplay;
 
                         let className = "history-item";
-                        if (isInDisplay) className += " history-item-found"; // vert
-                        else if (isLexical) className += " history-item-lexical"; // jaune
+                        if (isInDisplay)
+                          className += " history-item-found"; // vert
+                        else if (isLexical)
+                          className += " history-item-lexical"; // jaune
 
                         let wordClass = "history-word";
                         if (isInDisplay) wordClass += " history-word-found";
-                        else if (isLexical) wordClass += " history-word-lexical";
+                        else if (isLexical)
+                          wordClass += " history-word-lexical";
 
                         return (
                           <div key={index} className={className}>
@@ -587,22 +690,12 @@ function App() {
                 </div>
               </div>
             </div>
-
-
-            </aside>
-
-
-
-
-
+          </aside>
         </main>
       </div>
 
-
-
-
-       {/* Modal de victoire */}
-       {showCongrats && (
+      {/* Modal de victoire */}
+      {showCongrats && (
         <div className="modal-overlay" onClick={() => setShowCongrats(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
@@ -613,7 +706,8 @@ function App() {
             </div>
             <div className="modal-content">
               <p className="victory-text">
-                Vous avez trouvé le mot <span className="target-word">"{revealedTitle}"</span> !
+                Vous avez trouvé le mot{" "}
+                <span className="target-word">"{revealedTitle}"</span> !
               </p>
               <div className="victory-stats">
                 <div className="victory-stat">
@@ -625,8 +719,8 @@ function App() {
                   <div className="victory-stat-label">Mots trouvés</div>
                 </div>
               </div>
-               <button
-                 onClick={async () => {
+              <button
+                onClick={async () => {
                   await revealFullText();
                   setShowCongrats(false);
                 }}
@@ -639,140 +733,6 @@ function App() {
         </div>
       )}
     </div>
-
-    // <h1>Pedantix - Wikipédia</h1>
-    // <div className="layout-top">
-    //   <div className="mode-switcher" style={{ display: 'flex', gap: 10, marginBottom: 18 }}>
-    //     <button
-    //       className={mode === 'daily' ? 'active-mode' : ''}
-    //       onClick={() => { setMode('daily'); fetchPage('daily'); }}
-    //       style={{ fontWeight: mode === 'daily' ? 700 : 400 }}
-    //     >
-    //       Mot du jour
-    //     </button>
-    //     { (mode !== 'daily' || win) && (
-    //       <button
-    //         className={mode === 'random' ? 'active-mode' : ''}
-    //         onClick={() => { setMode('random'); fetchPage('random'); }}
-    //         style={{ fontWeight: mode === 'random' ? 700 : 400 }}
-    //       >
-    //         Partie libre
-    //       </button>
-    //     )}
-    //   </div>
-    //   <form onSubmit={handleSubmit} className="search-bar">
-    //     <input
-    //       type="text"
-    //       value={input}
-    //       onChange={e => setInput(e.target.value)}
-    //       placeholder="Propose un mot ou le titre..."
-    //       disabled={win}
-    //       style={{ padding: 8, fontSize: 16, flex: 1 }}
-    //     />
-    //     <button type="submit" disabled={win} style={{ padding: 8 }}>
-    //       Valider
-    //     </button>
-    //   </form>
-    //   <div className="actions-row">
-    //     { (mode !== 'daily' || win) && (
-    //       <button onClick={() => setShowTitle(true)} style={{ marginRight: 8 }}>
-    //         Abandonner / Révéler la réponse
-    //       </button>
-    //     )}
-    //     { mode !== 'daily' && (
-    //       <button onClick={() => fetchPage()}>Nouvelle page</button>
-    //     )}
-    //     { (mode !== 'daily' || win) && (
-    //       <button onClick={revealFullText} style={{ marginLeft: 8 }}>
-    //         Révéler le texte complet
-    //       </button>
-    //     )}
-    //   </div>
-    //   <div className="attempts">Propositions : <strong>{attempts}</strong></div>
-    //   <div style={{ margin: '12px 0', color: win ? '#007b00' : 'red', minHeight: 24 }}>{message}</div>
-    // </div>
-    // <div className="masked-text">
-    //   {showFullText && fullText
-    //     ? fullText
-    //     : displayTokens.map((t: string, i: number) => {
-    //         if (lexicalReveals[i]) {
-    //           if (revealed.includes(normalize(extractTokens[i]))) {
-    //             return <span key={i} style={{ marginRight: /\w/.test(extractTokens[i]) ? 2 : 0 }}>{extractTokens[i]}</span>;
-    //           }
-    //           return (
-    //             <span key={i} style={{ color: 'blue', textDecoration: 'underline', marginRight: 2 }}>{lexicalReveals[i]}</span>
-    //           );
-    //         }
-    //         if (t.startsWith('*') && t.endsWith('*')) {
-    //           setTimeout(() => {
-    //             setLexicalReveals(prev => ({
-    //               ...prev,
-    //               [i]: lastGuess
-    //             }));
-    //           }, 0);
-    //           return (
-    //             <span key={i} style={{ color: 'blue', textDecoration: 'underline', marginRight: 2 }}>{lastGuess}</span>
-    //           );
-    //         }
-    //         return <span key={i} style={{ marginRight: /\w/.test(t) ? 2 : 0 }}>{t}</span>;
-    //       })}
-    // </div>
-    // {showTitle && (
-    //   <div style={{ marginTop: 20, color: 'red', textAlign: 'center' }}>
-    //     {revealedTitle ? (
-    //       <strong>Le titre était : {revealedTitle}</strong>
-    //     ) : (
-    //       <button onClick={revealTitle} className="share-btn">Révéler le titre</button>
-    //     )}
-    //   </div>
-    // )}
-    // {showConfetti && (
-    //   <div className="confetti">
-    //     <div className="confetti-piece" style={{ left: '10%' }} />
-    //     <div className="confetti-piece" style={{ left: '30%' }} />
-    //     <div className="confetti-piece" style={{ left: '50%' }} />
-    //     <div className="confetti-piece" style={{ left: '70%' }} />
-    //     <div className="confetti-piece" style={{ left: '90%' }} />
-    //     <div className="confetti-piece" style={{ left: '20%' }} />
-    //     <div className="confetti-piece" style={{ left: '80%' }} />
-    //   </div>
-    // )}
-    // {showCongrats && mode === 'daily' && (
-    //   <div className="modal-congrats">
-    //     <div className="modal-content">
-    //       <h2>🎉 Félicitations !</h2>
-    //       <p>Tu as trouvé le mot du jour en <strong>{attempts}</strong> propositions.</p>
-    //       <button onClick={handleShare} className="share-btn">Partager mon score</button>
-    //       <button
-    //         className="playfree-btn"
-    //         onClick={() => { setMode('random'); fetchPage('random'); setShowCongrats(false); }}
-    //         style={{ marginTop: 12 }}
-    //       >
-    //         Jouer en mode libre
-    //       </button>
-    //       <div style={{ marginTop: 18 }}>
-    //         {revealedTitle ? (
-    //           <strong>Le titre était : {revealedTitle}</strong>
-    //         ) : (
-    //           <button onClick={revealTitle} className="share-btn">Révéler le titre</button>
-    //         )}
-    //       </div>
-    //       <div style={{ marginTop: 18 }}>
-    //         {!showFullText && (
-    //           <button
-    //             onClick={async () => {
-    //               await revealFullText();
-    //               setShowCongrats(false);
-    //             }}
-    //             className="share-btn"
-    //           >
-    //             Voir la page complète
-    //           </button>
-    //         )}
-    //       </div>
-    //     </div>
-    //   </div>
-    // )}
   );
 }
 
