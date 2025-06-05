@@ -54,6 +54,7 @@ function App() {
   }>({});
   const [particles, setParticles] = useState<Particle[]>([]);
   const [restored, setRestored] = useState(false);
+  const [showLength, setShowLength] = useState<{ [index: number]: boolean }>({});
 
   useEffect(() => {
     const newParticles = Array.from({ length: 20 }, (_, i) => ({
@@ -412,7 +413,15 @@ function App() {
                           return (
                             <span
                               key={i}
-                              style={{ color: "blue", textDecoration: "underline", marginRight: 2 }}
+                              style={{
+                                color: "black",
+                                background: "#ccc",
+                                borderRadius: 4,
+                                marginRight: 4,
+                                padding: "0 8px",
+                                fontWeight: 600,
+                                userSelect: "none"
+                              }}
                             >
                               {lexicalReveals[i]}
                             </span>
@@ -426,14 +435,55 @@ function App() {
                               key={i}
                               style={{
                                 display: "inline-block",
+                                position: "relative",
                                 width: 14 * length,
                                 height: 18,
-                                background: "#ccc",
-                                borderRadius: 4,
                                 marginRight: 4,
-                                verticalAlign: "middle"
+                                verticalAlign: "middle",
+                                cursor: "pointer",
+                                userSelect: "none"
                               }}
-                            />
+                              onClick={() => {
+                                setShowLength((prev) => ({ ...prev, [i]: true }));
+                                setTimeout(() => {
+                                  setShowLength((prev) => ({ ...prev, [i]: false }));
+                                }, 2000);
+                              }}
+                            >
+                              {/* Bloc masqué */}
+                              <span
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  background: "#ccc",
+                                  borderRadius: 4,
+                                }}
+                              />
+                              {/* Nombre de lettres en bleu, centré et par-dessus */}
+                              <span
+                                className={`fade-in-out${showLength[i] ? " visible" : ""}`}
+                                style={{
+                                  position: "absolute",
+                                  top: 0,
+                                  left: 0,
+                                  width: "100%",
+                                  height: "100%",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  color: "#2563eb",
+                                  fontWeight: 700,
+                                  fontSize: 14,
+                                  pointerEvents: "none",
+                                  zIndex: 2,
+                                  opacity: showLength[i] ? 1 : 0,
+                                  transition: "opacity 0.4s"
+                                }}
+                              >
+                                {length}
+                              </span>
+                            </span>
                           );
                         }
                         return (

@@ -653,3 +653,12 @@ body {
     align-items: flex-start;
   }
 }
+
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.fade-in-out.visible {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
