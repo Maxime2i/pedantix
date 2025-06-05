@@ -8,6 +8,7 @@ import unicodedata
 import os
 import json
 import html
+import threading
 
 # Chargement du champ lexical
 with open(os.path.join(os.path.dirname(__file__), "dico/lexical_field.json"), encoding="utf-8") as f:
@@ -38,30 +39,110 @@ def tokenize(text):
     # On sépare les mots et la ponctuation
     return re.findall(r"\w+|[\W]", text, re.UNICODE)
 
+def get_random_wikipedia_page():
+    # 1. Obtenir un titre de page aléatoire
+    url_random = "https://fr.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit=1"
+    r = requests.get(url_random)
+    if r.status_code != 200:
+        return None
+    data = r.json()
+    random_list = data.get("query", {}).get("random", [])
+    if not random_list:
+        return None
+    title = random_list[0]["title"]
+
+    # 2. Obtenir le texte et l'image de la page
+    url_page = (
+        "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts|pageimages"
+        f"&exintro=true&explaintext=true&piprop=original&titles={requests.utils.quote(title)}"
+    )
+    r2 = requests.get(url_page)
+    if r2.status_code != 200:
+        return None
+    data2 = r2.json()
+    pages = data2.get("query", {}).get("pages", {})
+    if not pages:
+        return None
+    page_data = next(iter(pages.values()))
+    extract = page_data.get("extract", "")
+    image_url = page_data.get("original", {}).get("source") if "original" in page_data else None
+    return {
+        "title": title,
+        "extract": extract,
+        "image_url": image_url
+    }
+
+def get_daily_title():
+    """Retourne le titre du jour, en le stockant dans un fichier si besoin."""
+    today = date.today().isoformat()
+    path = os.path.join(os.path.dirname(__file__), "daily_page.json")
+    lock = threading.Lock()
+    with lock:
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except Exception:
+                    data = {}
+        else:
+            data = {}
+        if data.get("date") == today and data.get("title"):
+            return data["title"]
+        # Sinon, on génère un nouveau titre et on le stocke
+        url_random = "https://fr.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit=1"
+        r = requests.get(url_random)
+        if r.status_code != 200:
+            return None
+        data_random = r.json()
+        random_list = data_random.get("query", {}).get("random", [])
+        if not random_list:
+            return None
+        title = random_list[0]["title"]
+        # On stocke
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump({"date": today, "title": title}, f)
+        return title
+
 @app.route("/api/random_page", methods=["GET"])
 def random_page():
-    title = random.choice(WIKI_TITRES)
-    print(f"[PARTIE LIBRE] Titre choisi : {title}")
-    page = get_wikipedia_page(title)
-    if page:
+    page = get_random_wikipedia_page()
+    if page and page["extract"]:
         tokens = tokenize(page["extract"])
         token_info = [len(t) if t.isalpha() else t for t in tokens]
         return jsonify({
             "token_info": token_info,
             "tokens": tokens,
-            "title": page["title"]
+            "title": page["title"],
+            "image_url": page["image_url"]
         })
     return jsonify({"error": "Page non trouvée"}), 404
 
 @app.route("/api/daily_page", methods=["GET"])
 def daily_page():
     today = date.today().isoformat()
-    idx = abs(hash(today)) % len(WIKI_TITRES)
-    title = WIKI_TITRES[idx]
-    print(f"[MOT DU JOUR] Titre choisi : {title}")
-    page = get_wikipedia_page(title)
-    if page:
-        tokens = tokenize(page["extract"])
+    title = get_daily_title()
+    if not title:
+        return jsonify({"error": "Page non trouvée"}), 404
+    # 2. Obtenir le texte et l'image de la page
+    url_page = (
+        "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts|pageimages"
+        f"&exintro=true&explaintext=true&piprop=original&titles={requests.utils.quote(title)}"
+    )
+    r2 = requests.get(url_page)
+    if r2.status_code != 200:
+        return jsonify({"error": "Page non trouvée"}), 404
+    data2 = r2.json()
+    pages = data2.get("query", {}).get("pages", {})
+    if not pages:
+        return jsonify({"error": "Page non trouvée"}), 404
+    page_data = next(iter(pages.values()))
+    extract = page_data.get("extract", "")
+    image_url = page_data.get("original", {}).get("source") if "original" in page_data else None
+
+    print(f"[MOT DU JOUR] Titre choisi : {title}", extract, image_url)
+
+    if extract:
+        tokens = tokenize(extract)
         masked_tokens = [
             f"__HIDDEN_BLOCK__:{len(t)}" if t.isalpha() else t
             for t in tokens
@@ -71,7 +152,8 @@ def daily_page():
             "token_info": token_info,
             "tokens": masked_tokens,
             "date": today,
-            "title": page["title"]
+            "title": title,
+            "image_url": image_url
         })
     return jsonify({"error": "Page non trouvée"}), 404
 
@@ -80,13 +162,12 @@ def reveal_title():
     data = request.json
     mode = data.get("mode")
     if mode == "daily":
-        today = date.today().isoformat()
-        idx = abs(hash(today)) % len(WIKI_TITRES)
-        title = WIKI_TITRES[idx]
+        title = get_daily_title()
+        if not title:
+            return jsonify({"error": "Page non trouvée"}), 404
         title_clean = title.replace("_", " ")
         return jsonify({"title": title_clean})
     elif mode == "random":
-        # Pour le mode random, le frontend doit envoyer le titre choisi (à améliorer si besoin)
         title = data.get("title")
         title_clean = title.replace("_", " ")
         return jsonify({"title": title_clean})
@@ -97,14 +178,27 @@ def reveal_text():
     data = request.json
     mode = data.get("mode")
     if mode == "daily":
-        today = date.today().isoformat()
-        idx = abs(hash(today)) % len(WIKI_TITRES)
-        title = WIKI_TITRES[idx]
+        title = get_daily_title()
+        if not title:
+            return jsonify({"error": "Page non trouvée"}), 404
     else:
         title = data.get("title")
-    page = get_wikipedia_page(title)
-    if page:
-        return jsonify({"extract": page["extract"]})
+    # On récupère le texte de la page
+    url_page = (
+        "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts"
+        f"&exintro=true&explaintext=true&titles={requests.utils.quote(title)}"
+    )
+    r2 = requests.get(url_page)
+    if r2.status_code != 200:
+        return jsonify({"error": "Page non trouvée"}), 404
+    data2 = r2.json()
+    pages = data2.get("query", {}).get("pages", {})
+    if not pages:
+        return jsonify({"error": "Page non trouvée"}), 404
+    page_data = next(iter(pages.values()))
+    extract = page_data.get("extract", "")
+    if extract:
+        return jsonify({"extract": extract})
     return jsonify({"error": "Page non trouvée"}), 404
 
 def get_synonyms(word):
@@ -142,15 +236,28 @@ def reveal_word():
     mode = data.get("mode", "daily")
     # On retrouve le titre et le texte de la page
     if mode == "daily":
-        today = date.today().isoformat()
-        idx = abs(hash(today)) % len(WIKI_TITRES)
-        title = WIKI_TITRES[idx]
+        title = get_daily_title()
+        if not title:
+            return jsonify({"error": "Page non trouvée"}), 404
     else:
         title = data.get("title")
-    page = get_wikipedia_page(title)
-    if not page:
+    # On récupère le texte de la page
+    url_page = (
+        "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts"
+        f"&exintro=true&explaintext=true&titles={requests.utils.quote(title)}"
+    )
+    r2 = requests.get(url_page)
+    if r2.status_code != 200:
         return jsonify({"error": "Page non trouvée"}), 404
-    tokens = tokenize(page["extract"])
+    data2 = r2.json()
+    pages = data2.get("query", {}).get("pages", {})
+    if not pages:
+        return jsonify({"error": "Page non trouvée"}), 404
+    page_data = next(iter(pages.values()))
+    extract = page_data.get("extract", "")
+    if not extract:
+        return jsonify({"error": "Page non trouvée"}), 404
+    tokens = tokenize(extract)
     norm_word = normalize(word)
     revealed.add(norm_word)
     champ_lexical = set(normalize(w) for w in LEXICAL_FIELD.get(norm_word, []))
@@ -185,9 +292,9 @@ def check_title():
     mode = data.get("mode")
     guesses = data.get("guesses", [])  # liste de mots proposés (normalisés)
     if mode == "daily":
-        today = date.today().isoformat()
-        idx = abs(hash(today)) % len(WIKI_TITRES)
-        title = WIKI_TITRES[idx]
+        title = get_daily_title()
+        if not title:
+            return jsonify({"ok": False})
     else:
         title = data.get("title", "")
     # On normalise le titre (réponse) en supprimant ce qu'il y a entre parenthèses
@@ -199,6 +306,8 @@ def check_title():
         s = ' '.join(s.split())
         return s
     guesses_set = set(normalize(g) for g in guesses)
+    print(f"Guesses : {guesses_set}")
+    print(f"Title : {title_words}")
     if title_words.issubset(guesses_set):
         return jsonify({"ok": True})
     return jsonify({"ok": False})
