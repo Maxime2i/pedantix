@@ -55,6 +55,7 @@ function App() {
   const [particles, setParticles] = useState<Particle[]>([]);
   const [restored, setRestored] = useState(false);
   const [showLength, setShowLength] = useState<Record<string, boolean>>({});
+  const [restorationChecked, setRestorationChecked] = useState(false);
 
   useEffect(() => {
     const newParticles = Array.from({ length: 20 }, (_, i) => ({
@@ -67,6 +68,7 @@ function App() {
   }, []);
 
   const fetchPage = async (selectedMode = mode) => {
+    setRestored(false);
     setLoading(true);
     setRevealed([]);
     setSynonymGuesses({});
@@ -97,8 +99,34 @@ function App() {
   };
 
   useEffect(() => {
-    fetchPage();
-  }, []);
+    if (mode !== "daily") return;
+    const saved = localStorage.getItem("pedantix_daily_game");
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.date === getTodayStr()) {
+          setGuesses(data.guesses || []);
+          setAttempts(data.attempts || 0);
+          setWin(data.win || false);
+          setRevealed(data.revealed || []);
+          setRevealedTitle(data.revealedTitle || null);
+          setLexicalReveals(data.lexicalReveals || {});
+          setDisplayTokens(data.displayTokens || []);
+          setTitle(data.title || "");
+          setRestored(true);
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+    setRestorationChecked(true);
+  }, [mode]);
+
+  useEffect(() => {
+    if (restorationChecked && !restored) {
+      fetchPage();
+    }
+  }, [restorationChecked, restored]);
 
   useEffect(() => {
     if (win && mode === "daily") {
@@ -114,6 +142,8 @@ function App() {
     revealedTitle,
     attempts,
     lexicalReveals,
+    displayTokens,
+    title,
   }: {
     win: boolean;
     guesses: string[];
@@ -121,6 +151,8 @@ function App() {
     revealedTitle: string | null;
     attempts: number;
     lexicalReveals: { [index: number]: string };
+    displayTokens: string[];
+    title: string;
   }) {
     if (mode !== "daily") return;
     const data = {
@@ -131,37 +163,17 @@ function App() {
       revealedTitle,
       attempts,
       lexicalReveals,
+      displayTokens,
+      title,
     };
     localStorage.setItem("pedantix_daily_game", JSON.stringify(data));
   }
-
-  // Restauration de l'état du jeu si la partie du jour existe déjà
-  useEffect(() => {
-    if (mode !== "daily") return;
-    const saved = localStorage.getItem("pedantix_daily_game");
-    if (saved) {
-      try {
-        const data = JSON.parse(saved);
-        if (data.date === getTodayStr()) {
-          // On restaure l'état
-          setGuesses(data.guesses || []);
-          setAttempts(data.attempts || 0);
-          setWin(data.win || false);
-          setRevealed(data.revealed || []);
-          setRevealedTitle(data.revealedTitle || null);
-          setLexicalReveals(data.lexicalReveals || {});
-          setRestored(true);
-        }
-      } catch (e) {
-        // ignore
-      }
-    }
-  }, [mode]);
 
   // Sauvegarde à chaque changement pertinent (victoire ou nouvelle proposition)
   useEffect(() => {
     if (mode !== "daily") return;
     if (!displayTokens.length) return;
+    console.log(displayTokens);
     saveGameState({
       win,
       guesses,
@@ -169,6 +181,8 @@ function App() {
       revealedTitle,
       attempts,
       lexicalReveals,
+      displayTokens,
+      title,
     });
   }, [
     win,
@@ -179,6 +193,7 @@ function App() {
     displayTokens,
     mode,
     lexicalReveals,
+    title,
   ]);
 
   // Met à jour l'affichage du texte masqué après restauration ou changement de revealed ou lexicalReveals
@@ -194,7 +209,32 @@ function App() {
     setAttempts((a) => a + 1);
     const newGuesses = [...guesses, input.trim()];
     setGuesses(newGuesses);
-    // Vérifie d'abord si tous les mots du titre ont été proposés
+
+    // 1. On traite d'abord comme un mot à révéler
+    const resWord = await fetch(`${apiUrl}/api/reveal_word`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        word: input,
+        revealed: revealed,
+      }),
+    });
+    const dataWord = await resWord.json();
+    setDisplayTokens(dataWord.display);
+    setRevealed(dataWord.revealed);
+    setLexicalReveals((prev) => {
+      const updated = { ...prev };
+      dataWord.display.forEach((t: string, i: number) => {
+        if (t.startsWith("*") && t.endsWith("*")) {
+          if (!updated[i]) {
+            updated[i] = input.trim();
+          }
+        }
+      });
+      return updated;
+    });
+
+    // 2. Ensuite, on vérifie la victoire
     const res = await fetch(`${apiUrl}/api/check_title`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -222,33 +262,16 @@ function App() {
       });
       const dataTitle = await resTitle.json();
       setRevealedTitle(dataTitle.title);
+
+      // On ajoute tous les mots du titre à revealed pour la cohérence d'affichage
+      const titleWords = (mode === "random" ? title : data.title || title)
+        .split(/\s+/)
+        .map(normalize)
+        .filter(Boolean);
+      setRevealed((prev) => Array.from(new Set([...prev, ...titleWords])));
       return;
     }
-    // Sinon, on traite comme un mot à révéler
-    const resWord = await fetch(`${apiUrl}/api/reveal_word`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        word: input,
-        revealed: revealed,
-      }),
-    });
-    const dataWord = await resWord.json();
-    setDisplayTokens(dataWord.display);
-    setRevealed(dataWord.revealed);
-    // Mise à jour de la persistance des mots du champ lexical
-    setLexicalReveals((prev) => {
-      const updated = { ...prev };
-      dataWord.display.forEach((t: string, i: number) => {
-        if (t.startsWith("*") && t.endsWith("*")) {
-          // On stocke le mot proposé par l'utilisateur, pas le mot révélé
-          if (!updated[i]) {
-            updated[i] = input.trim();
-          }
-        }
-      });
-      return updated;
-    });
+
     setMessage("");
     setInput("");
   };
@@ -673,6 +696,8 @@ function App() {
                       {[...guesses].reverse().map((word, index) => {
                         // On normalise le mot proposé
                         const normalizedWord = normalize(word);
+
+                        console.log(normalizedWord, displayTokens, lexicalReveals);
 
                         // On vérifie s'il est dans displayTokens (texte principal) et dans revealed
                         const isInDisplay = displayTokens.some(
