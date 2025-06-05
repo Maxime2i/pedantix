@@ -166,11 +166,37 @@ def reveal_title():
         if not title:
             return jsonify({"error": "Page non trouvée"}), 404
         title_clean = title.replace("_", " ")
-        return jsonify({"title": title_clean})
+        # Récupérer l'image associée à la page du jour
+        url_page = (
+            "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages"
+            f"&piprop=original&titles={requests.utils.quote(title)}"
+        )
+        r2 = requests.get(url_page)
+        image_url = None
+        if r2.status_code == 200:
+            data2 = r2.json()
+            pages = data2.get("query", {}).get("pages", {})
+            if pages:
+                page_data = next(iter(pages.values()))
+                image_url = page_data.get("original", {}).get("source") if "original" in page_data else None
+        return jsonify({"title": title_clean, "image_url": image_url})
     elif mode == "random":
         title = data.get("title")
         title_clean = title.replace("_", " ")
-        return jsonify({"title": title_clean})
+        # Récupérer l'image associée à la page passée
+        url_page = (
+            "https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages"
+            f"&piprop=original&titles={requests.utils.quote(title)}"
+        )
+        r2 = requests.get(url_page)
+        image_url = None
+        if r2.status_code == 200:
+            data2 = r2.json()
+            pages = data2.get("query", {}).get("pages", {})
+            if pages:
+                page_data = next(iter(pages.values()))
+                image_url = page_data.get("original", {}).get("source") if "original" in page_data else None
+        return jsonify({"title": title_clean, "image_url": image_url})
     return jsonify({"error": "Mode inconnu"}), 400
 
 @app.route("/api/reveal_text", methods=["POST"])

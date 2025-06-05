@@ -56,6 +56,7 @@ function App() {
   const [restored, setRestored] = useState(false);
   const [showLength, setShowLength] = useState<Record<string, boolean>>({});
   const [restorationChecked, setRestorationChecked] = useState(false);
+  const [revealedImage, setRevealedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const newParticles = Array.from({ length: 200 }, (_, i) => ({
@@ -262,6 +263,7 @@ function App() {
       });
       const dataTitle = await resTitle.json();
       setRevealedTitle(dataTitle.title);
+      setRevealedImage(dataTitle.image_url || null);
 
       // On ajoute tous les mots du titre à revealed pour la cohérence d'affichage
       const titleWords = (mode === "random" ? title : data.title || title)
@@ -700,19 +702,15 @@ function App() {
             </div>
             <div className="modal-content">
               <p className="victory-text">
-                Vous avez trouvé le mot{" "}
-                <span className="target-word">"{revealedTitle}"</span> !
+                Vous avez trouvé le mot {revealedTitle && (
+                  <span className="target-word">"{revealedTitle}"</span>
+                )} en {guesses.length} propositions !
               </p>
-              <div className="victory-stats">
-                <div className="victory-stat">
-                  <div className="victory-stat-value">{guesses.length}</div>
-                  <div className="victory-stat-label">Propositions</div>
+              {revealedImage && (
+                <div style={{ margin: "18px 0", textAlign: "center" }}>
+                  <img src={revealedImage} alt="Illustration de la page" style={{ maxWidth: "100%", maxHeight: 220, borderRadius: 8, boxShadow: "0 2px 8px #0002" }} />
                 </div>
-                <div className="victory-stat">
-                  <div className="victory-stat-value">{revealedCount}</div>
-                  <div className="victory-stat-label">Mots trouvés</div>
-                </div>
-              </div>
+              )}
               <button
                 onClick={async () => {
                   await revealFullText();
