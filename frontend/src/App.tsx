@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { SocialIcon } from 'react-social-icons'
-
 
 const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
