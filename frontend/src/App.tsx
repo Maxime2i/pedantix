@@ -18,6 +18,11 @@ function normalize(word: string) {
     .replace(/[^\w-]/g, "");
 }
 
+// Utilitaire pour la date du jour (format AAAA-MM-JJ)
+function getTodayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
 function App() {
   const [extractTokens, setExtractTokens] = useState<string[]>([]);
   const [displayTokens, setDisplayTokens] = useState<string[]>([]);
@@ -48,6 +53,7 @@ function App() {
     [index: number]: string;
   }>({});
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [restored, setRestored] = useState(false);
 
   useEffect(() => {
     const newParticles = Array.from({ length: 20 }, (_, i) => ({
@@ -84,7 +90,7 @@ function App() {
     setExtractTokens(data.tokens || []);
     setDisplayTokens(
       (data.tokens || []).map((t: string) =>
-        /\w/.test(t) ? "█".repeat(t.length) : t
+        /\w/.test(t) ? `__HIDDEN_BLOCK__:${t.length}` : t
       )
     );
     setFullText("");
@@ -105,6 +111,85 @@ function App() {
       setShowCongrats(true);
     }
   }, [win, mode]);
+
+  // Fonction pour sauvegarder l'état du jeu dans le localStorage
+  function saveGameState({
+    win,
+    guesses,
+    revealed,
+    revealedTitle,
+    attempts,
+    lexicalReveals,
+  }: {
+    win: boolean;
+    guesses: string[];
+    revealed: string[];
+    revealedTitle: string | null;
+    attempts: number;
+    lexicalReveals: { [index: number]: string };
+  }) {
+    if (mode !== "daily") return;
+    const data = {
+      date: getTodayStr(),
+      win,
+      guesses,
+      revealed,
+      revealedTitle,
+      attempts,
+      lexicalReveals,
+    };
+    localStorage.setItem("pedantix_daily_game", JSON.stringify(data));
+  }
+
+  // Restauration de l'état du jeu si la partie du jour existe déjà
+  useEffect(() => {
+    if (mode !== "daily") return;
+    const saved = localStorage.getItem("pedantix_daily_game");
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.date === getTodayStr()) {
+          // On restaure l'état
+          setGuesses(data.guesses || []);
+          setAttempts(data.attempts || 0);
+          setWin(data.win || false);
+          setRevealed(data.revealed || []);
+          setRevealedTitle(data.revealedTitle || null);
+          setLexicalReveals(data.lexicalReveals || {});
+          setRestored(true);
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+  }, [mode]);
+
+  // Sauvegarde à chaque changement pertinent (victoire ou nouvelle proposition)
+  useEffect(() => {
+    if (mode !== "daily") return;
+    if (!extractTokens.length) return;
+    saveGameState({
+      win,
+      guesses,
+      revealed,
+      revealedTitle,
+      attempts,
+      lexicalReveals,
+    });
+  }, [win, guesses, revealed, revealedTitle, attempts, extractTokens, mode, lexicalReveals]);
+
+  // Met à jour l'affichage du texte masqué après restauration ou changement de revealed ou lexicalReveals
+  useEffect(() => {
+    if (!extractTokens.length) return;
+    if (showFullText) return; // Ne rien faire si le texte complet est affiché
+    setDisplayTokens(
+      extractTokens.map((t: string, i: number) => {
+        if (lexicalReveals[i]) return `*${lexicalReveals[i]}*`;
+        if (/\w/.test(t) && revealed.includes(normalize(t))) return t;
+        return /\w/.test(t) ? `__HIDDEN_BLOCK__:${t.length}` : t;
+      })
+    );
+  }, [extractTokens, revealed, showFullText, lexicalReveals]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -240,6 +325,13 @@ function App() {
     }
   };
 
+  const revealedCount = extractTokens.filter(
+    (token) => revealed.includes(normalize(token)) && token.length >= 2
+  ).length;
+
+  const totalGuessable = extractTokens.filter(token => token.length >= 2 && /\w/.test(token)).length;
+  const percentDiscovered = totalGuessable > 0 ? Math.round((revealedCount / totalGuessable) * 100) : 0;
+
   return (
     <div className="app">
       {particles.map((particle) => (
@@ -263,20 +355,72 @@ function App() {
         </header>
 
         <main className="main-grid">
+
+
+
+
+
           <section className="text-section">
+
+
+             {/* Zone de saisie */}
+             <div className="input-card">
+              <div className="card-header">
+                <h3 className="card-title">
+                  <span className="icon">🔍</span>
+                  Votre proposition
+                </h3>
+              </div>
+              <div className="card-content">
+                <form onSubmit={handleSubmit} className="input-form">
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder="Entrez votre mot..."
+                    className="word-input"
+                    disabled={win || (restored && win)}
+                  />
+                  <button type="submit" className="submit-button" disabled={!input.trim() || win || (restored && win)}>
+                    <span className="icon">✨</span>
+                    Valider
+                  </button>
+                </form>
+              </div>
+            </div>
+
+
+            {/* Texte Wikipedia */}
             <div className="text-card">
               <div className="text-card-header">
                 <div className="text-card-title">
                   <span className="icon">🎯</span>
                   Texte Wikipedia
                 </div>
-                <span className="found-badge">99 mots trouvés</span>
+                <span className="found-badge">{revealedCount} mots trouvés</span>
               </div>
               <div className="text-card-content">
                 <div className="wiki-text">
                   {showFullText && fullText
                     ? fullText
                     : displayTokens.map((t: string, i: number) => {
+                        if (t.startsWith("__HIDDEN_BLOCK__")) {
+                          const length = parseInt(t.split(":")[1], 10) || 1;
+                          return (
+                            <span
+                              key={i}
+                              style={{
+                                display: "inline-block",
+                                width: 14 * length,
+                                height: 18,
+                                background: "#ccc",
+                                borderRadius: 4,
+                                marginRight: 4,
+                                verticalAlign: "middle"
+                              }}
+                            />
+                          );
+                        }
                         if (lexicalReveals[i]) {
                           if (revealed.includes(normalize(extractTokens[i]))) {
                             return (
@@ -305,26 +449,6 @@ function App() {
                             </span>
                           );
                         }
-                        if (t.startsWith("*") && t.endsWith("*")) {
-                          setTimeout(() => {
-                            setLexicalReveals((prev) => ({
-                              ...prev,
-                              [i]: lastGuess,
-                            }));
-                          }, 0);
-                          return (
-                            <span
-                              key={i}
-                              style={{
-                                color: "blue",
-                                textDecoration: "underline",
-                                marginRight: 2,
-                              }}
-                            >
-                              {lastGuess}
-                            </span>
-                          );
-                        }
                         return (
                           <span
                             key={i}
@@ -338,6 +462,8 @@ function App() {
               </div>
             </div>
           </section>
+
+
 
 
 
@@ -362,40 +488,19 @@ function App() {
                 </div>
                 <div className="stat-row">
                   <span className="stat-label">Mots trouvés</span>
-                  <span className="stat-badge found">99</span>
+                  <span className="stat-badge found">{revealedCount}</span>
                 </div>
-                
+                <div className="stat-row">
+                  <span className="stat-label">Page découverte</span>
+                  <span className="stat-badge percent">{percentDiscovered}%</span>
+                </div>
               </div>
             </div>
 
 
 
 
-            {/* Zone de saisie */}
-            <div className="input-card">
-              <div className="card-header">
-                <h3 className="card-title">
-                  <span className="icon">🔍</span>
-                  Votre proposition
-                </h3>
-              </div>
-              <div className="card-content">
-                <form onSubmit={handleSubmit} className="input-form">
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Entrez votre mot..."
-                    className="word-input"
-                    disabled={win}
-                  />
-                  <button type="submit" className="submit-button" disabled={!input.trim() || win}>
-                    <span className="icon">✨</span>
-                    Valider
-                  </button>
-                </form>
-              </div>
-            </div>
+           
 
 
 
@@ -413,13 +518,37 @@ function App() {
                     <p className="no-history">Aucune proposition pour le moment</p>
                   ) : (
                     <div className="history-list">
-                      {guesses.map((word, index) => {
-                        const isFound = revealed.includes(normalize(word))
+                      {[...guesses].reverse().map((word, index) => {
+                        // On normalise le mot proposé
+                        const normalizedWord = normalize(word);
+
+                        // On vérifie s'il est dans extractTokens (texte principal) et dans revealed
+                        const isInExtract = extractTokens.some(
+                          (token, i) =>
+                            normalize(token) === normalizedWord &&
+                            revealed.includes(normalize(token)) &&
+                            token.length >= 2 // tu peux ajuster la longueur minimale ici
+                        );
+
+                        console.log(isInExtract, word, extractTokens);
+                        // On vérifie s'il a permis de révéler un mot du champ lexical
+                        const isLexical = Object.values(lexicalReveals).includes(word) && !isInExtract;
+
+                        console.log(isLexical, word);
+
+                        let className = "history-item";
+                        if (isInExtract) className += " history-item-found"; // vert
+                        else if (isLexical) className += " history-item-lexical"; // jaune
+
+                        let wordClass = "history-word";
+                        if (isInExtract) wordClass += " history-word-found";
+                        else if (isLexical) wordClass += " history-word-lexical";
+
                         return (
-                          <div key={index} className={`history-item ${isFound ? "history-item-found" : ""}`}>
-                            <span className={`history-word ${isFound ? "history-word-found" : ""}`}>{word}</span>
+                          <div key={index} className={className}>
+                            <span className={wordClass}>{word}</span>
                           </div>
-                        )
+                        );
                       })}
                     </div>
                   )}
@@ -460,7 +589,7 @@ function App() {
                   <div className="victory-stat-label">Propositions</div>
                 </div>
                 <div className="victory-stat">
-                  <div className="victory-stat-value">99</div>
+                  <div className="victory-stat-value">{revealedCount}</div>
                   <div className="victory-stat-label">Mots trouvés</div>
                 </div>
               </div>
