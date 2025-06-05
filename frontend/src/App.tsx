@@ -635,6 +635,25 @@ function App() {
               </div>
             </div>
 
+            {/* Règle du jeu */}
+            <div className="rules-card">
+              <div className="card-header">
+                <h3 className="card-title">
+                  <span className="icon">📜</span>
+                  Règle du jeu
+                </h3>
+              </div>
+              <div className="card-content">
+                <ul style={{ paddingLeft: 18, margin: 0 }}>
+                  <li>Devinez le titre de la page Wikipédia cachée.</li>
+                  <li>Proposez des mots pour révéler le texte.</li>
+                  <li>Les mots du même champ lexical sont révélés en noir.</li>
+                  <li>Cliquez sur un mot pour révéler son nombre de lettres.</li>
+                  <li>Essayez de trouver le titre exact pour gagner !</li>
+                </ul>
+              </div>
+            </div>
+
             {/* Historique */}
             <div className="history-card">
               <div className="card-header">
