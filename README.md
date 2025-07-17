@@ -11,6 +11,9 @@ Pedantix est une application web ludique inspirée du jeu "mot du jour" où l'ut
 
 ---
 
+<img width="1671" height="1033" alt="Capture d’écran 2025-07-17 à 15 14 02" src="https://github.com/user-attachments/assets/6720e072-7a5a-436d-8f4c-06a5c322dc2f" />
+
+
 ## Structure du projet
 
 ```
