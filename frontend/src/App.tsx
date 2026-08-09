@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 
 const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
@@ -24,31 +24,18 @@ function getTodayStr() {
 }
 
 function App() {
-  const [extractTokens, setExtractTokens] = useState<string[]>([]);
   const [displayTokens, setDisplayTokens] = useState<string[]>([]);
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState<string[]>([]);
-  const [synonymGuesses, setSynonymGuesses] = useState<{
-    [key: string]: string;
-  }>({});
-  const [loading, setLoading] = useState(true);
-  const [message, setMessage] = useState("");
   const [title, setTitle] = useState("");
   const [revealedTitle, setRevealedTitle] = useState<string | null>(null);
   const [win, setWin] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
   const [showFullText, setShowFullText] = useState(false);
   const [fullText, setFullText] = useState("");
   const [attempts, setAttempts] = useState(0);
-  const [showConfetti, setShowConfetti] = useState(false);
-  const [mode, setMode] = useState<"daily" | "random">("daily");
+  const [mode] = useState<"daily" | "random">("daily");
   const [showCongrats, setShowCongrats] = useState(false);
-  const [tokenInfo, setTokenInfo] = useState<(number | string)[]>([]);
-  const [revealedTokens, setRevealedTokens] = useState<{
-    [key: number]: string;
-  }>({});
   const [guesses, setGuesses] = useState<string[]>([]);
-  const [lastGuess, setLastGuess] = useState("");
   const [lexicalReveals, setLexicalReveals] = useState<{
     [index: number]: string;
   }>({});
@@ -68,36 +55,31 @@ function App() {
     setParticles(newParticles);
   }, []);
 
-  const fetchPage = async (selectedMode = mode) => {
-    setRestored(false);
-    setLoading(true);
-    setRevealed([]);
-    setSynonymGuesses({});
-    setInput("");
-    setMessage("");
-    setWin(false);
-    setShowTitle(false);
-    setShowFullText(false);
-    setFullText("");
-    setAttempts(0);
-    setShowConfetti(false);
-    setRevealedTitle(null);
-    setTokenInfo([]);
-    setGuesses([]);
-    let url =
-      selectedMode === "daily"
-        ? `${apiUrl}/api/daily_page`
-        : `${apiUrl}/api/random_page`;
-    const res = await fetch(url);
-    const data = await res.json();
-    setTokenInfo(data.token_info);
-    setDisplayTokens(data.tokens || []);
-    setFullText("");
-    setRevealed([]);
-    setLexicalReveals({});
-    setTitle(data.title || "");
-    setLoading(false);
-  };
+  const fetchPage = useCallback(
+    async (selectedMode = mode) => {
+      setRestored(false);
+      setRevealed([]);
+      setInput("");
+      setWin(false);
+      setShowFullText(false);
+      setFullText("");
+      setAttempts(0);
+      setRevealedTitle(null);
+      setGuesses([]);
+      let url =
+        selectedMode === "daily"
+          ? `${apiUrl}/api/daily_page`
+          : `${apiUrl}/api/random_page`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setDisplayTokens(data.tokens || []);
+      setFullText("");
+      setRevealed([]);
+      setLexicalReveals({});
+      setTitle(data.title || "");
+    },
+    [mode]
+  );
 
   useEffect(() => {
     if (mode !== "daily") return;
@@ -127,7 +109,7 @@ function App() {
     if (restorationChecked && !restored) {
       fetchPage();
     }
-  }, [restorationChecked, restored]);
+    }, [restorationChecked, restored, fetchPage]);
 
   useEffect(() => {
     if (win && mode === "daily") {
@@ -136,28 +118,8 @@ function App() {
   }, [win, mode]);
 
   // Fonction pour sauvegarder l'état du jeu dans le localStorage
-  function saveGameState({
-    win,
-    guesses,
-    revealed,
-    revealedTitle,
-    attempts,
-    lexicalReveals,
-    displayTokens,
-    title,
-  }: {
-    win: boolean;
-    guesses: string[];
-    revealed: string[];
-    revealedTitle: string | null;
-    attempts: number;
-    lexicalReveals: { [index: number]: string };
-    displayTokens: string[];
-    title: string;
-  }) {
-    if (mode !== "daily") return;
-    const data = {
-      date: getTodayStr(),
+  const saveGameState = useCallback(
+    ({
       win,
       guesses,
       revealed,
@@ -166,15 +128,37 @@ function App() {
       lexicalReveals,
       displayTokens,
       title,
-    };
-    localStorage.setItem("pedantix_daily_game", JSON.stringify(data));
-  }
+    }: {
+      win: boolean;
+      guesses: string[];
+      revealed: string[];
+      revealedTitle: string | null;
+      attempts: number;
+      lexicalReveals: { [index: number]: string };
+      displayTokens: string[];
+      title: string;
+    }) => {
+      if (mode !== "daily") return;
+      const data = {
+        date: getTodayStr(),
+        win,
+        guesses,
+        revealed,
+        revealedTitle,
+        attempts,
+        lexicalReveals,
+        displayTokens,
+        title,
+      };
+      localStorage.setItem("pedantix_daily_game", JSON.stringify(data));
+    },
+    [mode]
+  );
 
   // Sauvegarde à chaque changement pertinent (victoire ou nouvelle proposition)
   useEffect(() => {
     if (mode !== "daily") return;
     if (!displayTokens.length) return;
-    console.log(displayTokens);
     saveGameState({
       win,
       guesses,
@@ -195,18 +179,12 @@ function App() {
     mode,
     lexicalReveals,
     title,
+    saveGameState,
   ]);
-
-  // Met à jour l'affichage du texte masqué après restauration ou changement de revealed ou lexicalReveals
-  useEffect(() => {
-    if (showFullText) return; // Ne rien faire si le texte complet est affiché
-    // L'affichage est déjà géré par displayTokens
-  }, [displayTokens, revealed, showFullText, lexicalReveals]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
-    setLastGuess(input.trim());
     setAttempts((a) => a + 1);
     const newGuesses = [...guesses, input.trim()];
     setGuesses(newGuesses);
@@ -248,10 +226,7 @@ function App() {
     const data = await res.json();
     if (data.ok) {
       setWin(true);
-      setMessage("Bravo, tu as trouvé le titre !");
       setInput("");
-      setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 3500);
       // On révèle le titre pour l'affichage UNIQUEMENT après victoire
       const resTitle = await fetch(`${apiUrl}/api/reveal_title`, {
         method: "POST",
@@ -274,14 +249,12 @@ function App() {
       return;
     }
 
-    setMessage("");
     setInput("");
   };
 
   const handleShare = () => {
     const shareText = `J'ai trouvé le mot du jour Pedantix en ${attempts} propositions ! Essaie aussi : https://tonsitepedantix.fr`;
     navigator.clipboard.writeText(shareText);
-    setMessage("Score copié dans le presse-papier !");
   };
 
   const revealFullText = async () => {
@@ -648,8 +621,6 @@ function App() {
                       {[...guesses].reverse().map((word, index) => {
                         // On normalise le mot proposé
                         const normalizedWord = normalize(word);
-
-                        console.log(normalizedWord, displayTokens, lexicalReveals);
 
                         // On vérifie s'il est dans displayTokens (texte principal) et dans revealed
                         const isInDisplay = displayTokens.some(
