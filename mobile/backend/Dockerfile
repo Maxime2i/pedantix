@@ -14,6 +14,9 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py lemmatize.py stopwords.py download_embeddings.sh reduce_embeddings.py entrypoint.sh ./
+# Les 300 articles du jour (petit fichier) : copiés dans l'image ; seuls les
+# embeddings (750 Mo) sont bootstrappés dans le volume.
+COPY data/articles.json ./data/articles.json
 RUN chmod +x /app/download_embeddings.sh /app/entrypoint.sh
 
 EXPOSE 5000
