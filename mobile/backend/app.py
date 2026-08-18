@@ -14,6 +14,9 @@ import requests
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
+from lemmatize import lemmatize
+from stopwords import STOPWORDS
+
 DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
@@ -34,6 +37,17 @@ ARTICLES_PATH = DATA_DIR / "articles.json"
 # réellement liés au sujet.
 EXACT_THRESHOLD = 0.85
 PROCH_THRESHOLD = 0.40
+# Révélation ORANGE dans l'article : un mot de l'article (ou du titre) dont la
+# similarité cosinus avec la proposition dépasse ce seuil s'affiche en orange.
+# Calibré sur l'article « Amplificateur électronique » : proposer
+# « amplificateur » révèle ampli (0.752), amplification (0.835), signal
+# (0.602), électronique (0.4950), électrique (0.555)… ; proposer « banane » ne
+# révèle RIEN (max mesuré 0.313). Plancher de bruit hors stopwords ~0.45-0.59
+# sur des mots isolés (« pain »->puissance 0.514, « économie »->puissance
+# 0.532) : fausses révélations rares et limitées à 1-2 mots, acceptées. Les
+# stopwords ne sont JAMAIS révélés en orange par cosinus (uniquement en vert
+# par présence exacte, ou par lemmatisation pour les formes d'un même verbe).
+SEUIL_ORANGE_REVEAL = 0.49
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
 
@@ -202,10 +216,21 @@ def get_puzzle(num: int) -> dict:
     intro = fetch_intro(title)
     tokens = tokenize(intro)
     words = [t["w"] for t in tokens]
+    # Mots du TITRE (mêmes règles de normalisation que l'article : minuscules,
+    # accents conservés). Indice = position dans `title_words`. Ils sont
+    # révélables indépendamment de l'article (h2 masqué puis révélé).
+    title_words = WORD_RE.findall(title.lower())
+    if not title_words:
+        title_words = [title.lower()]
     # Plus AUCUN état de partie côté serveur : les scores/ révélations sont
     # 100 % côté client. Le cache ne garde que le contenu du puzzle (titre,
     # tokens, mots) pour éviter de re-télécharger l'article à chaque requête.
-    puzzle = {"title": title, "words": words, "tokens": tokens}
+    puzzle = {
+        "title": title,
+        "title_words": title_words,
+        "words": words,
+        "tokens": tokens,
+    }
     PUZZLE_CACHE[num] = puzzle
     return puzzle
 
@@ -253,6 +278,7 @@ def puzzle():
             "num": num,
             "title": p["title"],
             "title_hidden": True,
+            "title_words": p["title_words"],
             "words": p["words"],
             "tokens": p["tokens"],
             # Plus AUCUN état de partie : pas de `scores` accumulés. Chaque
@@ -287,6 +313,70 @@ def title_embedding(title: str) -> np.ndarray | None:
     return vec / norm
 
 
+def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
+    """Révélations dans l'article pour la proposition `w`.
+
+    Retourne (positions_exactes, article_updates) :
+    - positions_exactes : le mot est PRÉSENT tel quel dans le texte -> VERT
+      (y compris stopwords : un mot présent est un mot TROUVÉ).
+    - article_updates    : mots PROCHES -> ORANGE, avec les règles anti-spam :
+        * jamais un stopword en orange par similarité cosinus (seulement en
+          vert par présence exacte) ;
+        * jamais un mot déjà vert (présence exacte) ;
+        * lemmatisation : forme fléchie du MÊME lemme -> orange même si
+          stopword (ex. « être » révèle « est », « sont »).
+    """
+    exact = [i for i, tw in enumerate(words) if tw == w]
+    exact_set = set(exact)
+    updates: dict[int, dict] = {}
+    if w in WORD_TO_IDX:
+        w_vec = EMBEDDINGS[WORD_TO_IDX[w]]
+        w_lemma = lemmatize(w)
+        for i, tw in enumerate(words):
+            if i in exact_set:
+                continue
+            # Même lemme (formes fléchies d'un même verbe / pluriel) : fortement
+            # proche, autorisé même pour un stopword (comportement original).
+            if lemmatize(tw) == w_lemma:
+                updates[i] = {"pos": i, "word": tw, "level": "proche"}
+                continue
+            # Proximité cosinus : jamais pour les stopwords (cibles OU
+            # proposition) — anti-spam.
+            if tw in STOPWORDS or w in STOPWORDS:
+                continue
+            if tw not in WORD_TO_IDX:
+                continue
+            c = float(w_vec @ EMBEDDINGS[WORD_TO_IDX[tw]])
+            if c >= SEUIL_ORANGE_REVEAL:
+                updates[i] = {"pos": i, "word": tw, "level": "proche"}
+    return exact, list(updates.values())
+
+
+def title_updates_for(w: str, title_words: list[str]) -> list[dict]:
+    """Révélations des mots du TITRE (h2) pour la proposition `w`.
+
+    level "exact" : la proposition EST le mot du titre (vert).
+    level "proche": même lemme ou cosinus >= SEUIL_ORANGE_REVEAL (orange).
+    Mêmes règles anti-spam que l'article (pas de stopword orange par cosinus).
+    """
+    updates: list[dict] = []
+    w_lemma = lemmatize(w)
+    for j, tw in enumerate(title_words):
+        if tw == w:
+            updates.append({"idx": j, "word": tw, "level": "exact"})
+            continue
+        if lemmatize(tw) == w_lemma:
+            updates.append({"idx": j, "word": tw, "level": "proche"})
+            continue
+        if tw in STOPWORDS or w in STOPWORDS:
+            continue
+        if w in WORD_TO_IDX and tw in WORD_TO_IDX:
+            c = float(EMBEDDINGS[WORD_TO_IDX[w]] @ EMBEDDINGS[WORD_TO_IDX[tw]])
+            if c >= SEUIL_ORANGE_REVEAL:
+                updates.append({"idx": j, "word": tw, "level": "proche"})
+    return updates
+
+
 @app.post("/score")
 def score():
     # STATELESS : aucune écriture dans PUZZLE_CACHE. La réponse dépend
@@ -304,6 +394,11 @@ def score():
     title_found = normalize_full(raw_word) == title_norm or (w and w == title_norm)
 
     if title_found:
+        # Tous les mots du titre sont révélés (le client affiche la victoire).
+        title_updates = [
+            {"idx": j, "word": tw, "level": "exact"}
+            for j, tw in enumerate(p["title_words"])
+        ]
         return jsonify(
             {
                 "word": w,
@@ -313,6 +408,8 @@ def score():
                 "score": 1.0,
                 "temperature_level": "exact",
                 "revealed_positions": [],
+                "article_updates": [],
+                "title_updates": title_updates,
                 "present_in_article": True,
                 "message": "Bravo ! Vous avez trouvé le titre !",
             }
@@ -333,12 +430,12 @@ def score():
     # (comparaison exacte normalisée) révèle ses positions — y compris les
     # stopwords et mots courts (« un », « le », « de »…) : un mot présent est
     # un mot TROUVÉ, il se montre en vert. Plus AUCUN filtre.
-    revealed_positions: list[int] = []
+    # En COMPLÉMENT : mots proches (orange) dans l'article ET le titre.
+    revealed_positions, article_updates = ([], [])
     if w:
-        revealed_positions = [
-            i for i, tw in enumerate(p["words"]) if tw == w
-        ]
+        revealed_positions, article_updates = article_reveals(w, p["words"])
     present_in_article = bool(revealed_positions)
+    title_updates = title_updates_for(w, p["title_words"]) if w else []
 
     if not w or w not in WORD_TO_IDX:
         message = "Je ne trouve pas ce mot dans mon vocabulaire."
@@ -358,6 +455,8 @@ def score():
             "score": score_val,
             "temperature_level": temperature_level,
             "revealed_positions": revealed_positions,
+            "article_updates": article_updates,
+            "title_updates": title_updates,
             "present_in_article": present_in_article,
             "message": message,
         }

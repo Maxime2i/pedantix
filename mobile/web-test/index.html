@@ -20,6 +20,16 @@
     .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
     .title-area { margin-bottom: 1rem; min-height: 1.5em; }
     .title-correct { color: #4caf50; font-weight: bold; font-size: 1.05rem; }
+    .puzzle-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background: #1a1a1a;
+      border-radius: 8px;
+      border-left: 3px solid #1565c0;
+      line-height: 1.8;
+    }
     #error {
       display: none;
       background: #3a1515;
@@ -52,6 +62,7 @@
       line-height: 1.8;
     }
     .revealed-exact { color: #4caf50; }
+    .revealed-close { color: #ff9800; }
     .blank { vertical-align: bottom; margin: 0 1px; }
     .controls {
       display: flex;
@@ -136,8 +147,10 @@
     const state = {
       num: 0,
       title: "",
+      titleWords: [],        // mots du titre (h2), révélés indépendamment
+      titleRevealed: new Map(), // idx -> "exact"|"proche" (vert gagne)
       tokens: [],
-      revealed: new Map(), // pos -> true (mots exacts révélés, état 100 % client)
+      revealed: new Map(), // pos -> "exact"|"proche" (mots révélés, état 100 % client)
       guesses: [],          // { word, score, level: "exact"|"proche"|"froid" }
       won: false,
     };
@@ -189,16 +202,38 @@
 
     function renderArticle() {
       // Article masqué au départ. Seuls les mots proposés présents dans
-      // l'article s'affichent, en VERT (revealed_positions de /score).
-      // Rien n'est restauré depuis le serveur : état local uniquement.
+      // l'article s'affichent, en VERT (revealed_positions de /score) ; les
+      // mots PROCHES s'affichent en ORANGE (article_updates). Rien n'est
+      // restauré depuis le serveur : état local uniquement. Vert gagne.
       const parts = state.tokens.map((t, i) => {
-        if (state.revealed.has(i)) {
+        const lvl = state.revealed.get(i);
+        if (lvl === "exact") {
           return `<span class="revealed-exact">${escapeHtml(t.w)}</span>`;
+        }
+        if (lvl === "proche") {
+          return `<span class="revealed-close">${escapeHtml(t.w)}</span>`;
         }
         const len = t.w.length;
         return `<span class="blank" style="display:inline-block;min-width:calc(1ch * ${len});border-bottom:2px solid #555;height:1.2em"></span>`;
       });
       $("article").innerHTML = parts.join(" ");
+    }
+
+    function renderTitle() {
+      // Titre masqué en haut de l'article (h2), mots révélés en vert/orange
+      // quand ils sont touchés par /score (title_updates).
+      const parts = state.titleWords.map((w, i) => {
+        const lvl = state.titleRevealed.get(i);
+        if (lvl === "exact") {
+          return `<span class="revealed-exact">${escapeHtml(w)}</span>`;
+        }
+        if (lvl === "proche") {
+          return `<span class="revealed-close">${escapeHtml(w)}</span>`;
+        }
+        const len = w.length;
+        return `<span class="blank" style="display:inline-block;min-width:calc(1ch * ${len});border-bottom:2px solid #555;height:1.2em"></span>`;
+      });
+      $("title-area").innerHTML = `<h2 class="puzzle-title">${parts.join(" ")}</h2>`;
     }
 
     function win() {
@@ -218,15 +253,17 @@
         const data = await resp.json();
         state.num = data.num;
         state.title = data.title;
+        state.titleWords = data.title_words || [];
         state.tokens = data.tokens;
         state.revealed = new Map(); // jamais de restauration serveur
+        state.titleRevealed = new Map();
         state.guesses = [];
         state.won = false;
         $("puzzle-info").textContent = `Pédantix #${data.num}`;
-        $("title-area").innerHTML = "";
         $("word-input").disabled = false;
         $("btn-guess").disabled = false;
         renderHistory();
+        renderTitle();
         renderArticle();
       } catch (e) {
         showError("Impossible de charger le puzzle : " + e.message);
@@ -254,12 +291,24 @@
           level: data.temperature_level || "froid",
           present: !!data.present_in_article,
         });
-        // Révélations exactes : positions où le mot proposé figure dans
-        // l'article, affichées en vert. État local uniquement.
+        // Révélations : VERT pour la présence exacte (revealed_positions),
+        // ORANGE pour les mots proches (article_updates / title_updates).
+        // État local uniquement ; le VERT gagne sur l'ORANGE.
         (data.revealed_positions || []).forEach((pos) => {
-          state.revealed.set(pos, true);
+          state.revealed.set(pos, "exact");
+        });
+        (data.article_updates || []).forEach((u) => {
+          if (state.revealed.get(u.pos) !== "exact") {
+            state.revealed.set(u.pos, u.level);
+          }
+        });
+        (data.title_updates || []).forEach((u) => {
+          if (state.titleRevealed.get(u.idx) !== "exact") {
+            state.titleRevealed.set(u.idx, u.level);
+          }
         });
         renderHistory();
+        renderTitle();
         renderArticle();
         $("word-input").value = "";
         if (data.title_found) {

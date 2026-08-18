@@ -174,6 +174,7 @@ STOPWORDS = {
     "tu",
     "un",
     "une",
+    "vers",
     "vos",
     "votre",
     "vous",
