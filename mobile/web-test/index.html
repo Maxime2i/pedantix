@@ -142,8 +142,8 @@
     const state = {
       num: 0,
       tokens: [],
-      revealed: new Set(),
-      exactWords: new Set(),
+      levels: new Map(), // pos -> "exact" | "proche" (révélations par position)
+      thresholds: { exact: 0.85, proche: 0.50 },
       guesses: [],
     };
 
@@ -185,14 +185,16 @@
     }
 
     function renderArticle() {
-      const parts = state.tokens.map((t) => {
-        if (!t.hidden) {
-          return `<span class="visible">${escapeHtml(t.w)}</span>`;
-        }
-        if (state.exactWords.has(t.w)) {
+      // Fidélité à l'original : au départ AUCUN mot n'est visible. Seuls les
+      // tokens dont la position a franchi un seuil (via /score) s'affichent,
+      // en vert (exact) ou orange (proche). Les autres restent des espaces
+      // de même largeur.
+      const parts = state.tokens.map((t, i) => {
+        const level = state.levels.get(i);
+        if (level === "exact") {
           return `<span class="revealed-exact">${escapeHtml(t.w)}</span>`;
         }
-        if (state.revealed.has(t.w)) {
+        if (level === "proche") {
           return `<span class="revealed-close">${escapeHtml(t.w)}</span>`;
         }
         const len = t.w.length;
@@ -209,8 +211,18 @@
         const data = await resp.json();
         state.num = data.num;
         state.tokens = data.tokens;
-        state.revealed = new Set();
-        state.exactWords = new Set();
+        state.levels = new Map();
+        if (data.thresholds) {
+          state.thresholds = data.thresholds;
+        }
+        // Restaure les révélations déjà acquises (état serveur) : le score
+        // courant de chaque position détermine son niveau d'affichage.
+        if (Array.isArray(data.scores)) {
+          data.scores.forEach((s, i) => {
+            if (s >= state.thresholds.exact) state.levels.set(i, "exact");
+            else if (s >= state.thresholds.proche) state.levels.set(i, "proche");
+          });
+        }
         state.guesses = [];
         $("puzzle-info").textContent = `Pédantix #${data.num}`;
         $("title-area").innerHTML = "";
@@ -235,15 +247,10 @@
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
         state.guesses.push({ word: data.word, score: data.score, exact: data.exact });
-        if (data.exact) {
-          state.exactWords.add(data.word);
-        }
-        (data.revealed || []).forEach((w) => {
-          if (data.exact && w === data.word) {
-            state.exactWords.add(w);
-          } else {
-            state.revealed.add(w);
-          }
+        // Applique les révélations par position (franchissement de seuil) :
+        // l'état s'accumule entre les essais, le vert gagne sur l'orange.
+        (data.updates || []).forEach((u) => {
+          state.levels.set(u.pos, u.level);
         });
         renderHistory();
         renderArticle();

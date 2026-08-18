@@ -14,13 +14,18 @@ import requests
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
-from stopwords import STOPWORDS
-
 DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
+# Seuil « exact » (vert) : au-dessus, un mot de l'article est considéré trouvé
+# et affiché en clair.
 EXACT_THRESHOLD = 0.85
-REVEAL_THRESHOLD = 0.80
+# Seuil « proche » (orange) : similarité cosinus à partir de laquelle un mot
+# de l'article devient visible en orange (proche mais pas trouvé). Fixé à 0.50 :
+# des mots sémantiquement proches mais pas synonymes (ex. « audio » vs
+# « amplificateur », cos ≈ 0.54) s'affichent en orange sans être considérés
+# exacts. En dessous : mot masqué.
+SEUIL_ORANGE = 0.50
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
 
@@ -170,12 +175,14 @@ def fetch_intro(title: str) -> str:
 
 
 def tokenize(text: str) -> list[dict]:
+    # Fidélité à l'original : TOUS les mots sont masqués au départ, y compris
+    # les stopwords (« de », « la », « le »…). Le champ `hidden` reste présent
+    # pour compatibilité mais vaut toujours True : la visibilité est pilotée
+    # par le score courant de chaque position (voir /score).
     text_lower = text.lower()
     tokens: list[dict] = []
     for match in WORD_RE.finditer(text_lower):
-        word = match.group(0)
-        hidden = word not in STOPWORDS
-        tokens.append({"w": word, "hidden": hidden})
+        tokens.append({"w": match.group(0), "hidden": True})
     return tokens
 
 
@@ -186,8 +193,11 @@ def get_puzzle(num: int) -> dict:
     title = ARTICLES[num % len(ARTICLES)]
     intro = fetch_intro(title)
     tokens = tokenize(intro)
-    words = [t["w"] for t in tokens if t["hidden"]]
-    puzzle = {"title": title, "words": words, "tokens": tokens}
+    words = [t["w"] for t in tokens]
+    # État de la partie : score courant par position de token (0 = masqué).
+    # Accumulé par /score via score[pos] = max(score[pos], similarité).
+    scores = [0.0] * len(tokens)
+    puzzle = {"title": title, "words": words, "tokens": tokens, "scores": scores}
     PUZZLE_CACHE[num] = puzzle
     return puzzle
 
@@ -229,9 +239,21 @@ def puzzle():
             "title_hidden": True,
             "words": p["words"],
             "tokens": p["tokens"],
+            # État courant de la partie (scores par position) + seuils :
+            # permet au client de restaurer les révélations après un rechargement.
+            "scores": p["scores"],
+            "thresholds": {"exact": EXACT_THRESHOLD, "proche": SEUIL_ORANGE},
             "revealed": [],
         }
     )
+
+
+def level_for(score: float) -> str:
+    if score >= EXACT_THRESHOLD:
+        return "exact"
+    if score >= SEUIL_ORANGE:
+        return "proche"
+    return "hidden"
 
 
 @app.post("/score")
@@ -241,24 +263,13 @@ def score():
     raw_word = data.get("word", "")
     w = normalize_guess(str(raw_word))
 
-    if not w:
+    if not w or w not in WORD_TO_IDX:
         return jsonify(
             {
                 "word": w,
                 "exact": False,
                 "revealed": [],
-                "score": 0.0,
-                "cosine": None,
-                "message": "Je ne trouve pas ce mot dans mon vocabulaire.",
-            }
-        )
-
-    if w not in WORD_TO_IDX:
-        return jsonify(
-            {
-                "word": w,
-                "exact": False,
-                "revealed": [],
+                "updates": [],
                 "score": 0.0,
                 "cosine": None,
                 "message": "Je ne trouve pas ce mot dans mon vocabulaire.",
@@ -266,42 +277,49 @@ def score():
         )
 
     p = get_puzzle(num)
-    words = p["words"]
+    tokens = p["tokens"]
+    scores = p["scores"]
+
     vec = EMBEDDINGS[WORD_TO_IDX[w]]
     sims = EMBEDDINGS @ vec
 
-    playable_vocab_idx: list[int] = []
-    playable_word_idx: list[int] = []
-    for i, word in enumerate(words):
-        idx = WORD_TO_IDX.get(word)
-        if idx is not None:
-            playable_vocab_idx.append(idx)
-            playable_word_idx.append(i)
+    # Similarité avec CHAQUE token de l'article (stopwords compris) : ils ont
+    # un embedding fastText, leur similarité restera faible mais ils participent
+    # au calcul. Token sans embedding → similarité 0.
+    token_sims: list[float] = []
+    for t in tokens:
+        idx = WORD_TO_IDX.get(t["w"])
+        token_sims.append(float(sims[idx]) if idx is not None else 0.0)
 
-    if playable_vocab_idx:
-        best = float(max(sims[i] for i in playable_vocab_idx))
-    else:
-        best = 0.0
+    best = max(token_sims, default=0.0)
+    exact_in_words = w in p["words"]
+    exact = exact_in_words or best >= EXACT_THRESHOLD
 
-    exact_in_words = w in words
-    exact = exact_in_words or best > EXACT_THRESHOLD
-
+    # État accumulé : score[pos] = max(score[pos], similarité). On ne signale
+    # dans `updates` que les positions dont le niveau d'affichage change
+    # (franchissement d'un seuil), pour que le client recolore en conséquence.
+    updates: list[dict] = []
     revealed: list[str] = []
-    seen: set[str] = set()
-    for vi, wi in zip(playable_vocab_idx, playable_word_idx):
-        if sims[vi] > REVEAL_THRESHOLD:
-            word = words[wi]
-            if word not in seen:
-                revealed.append(word)
-                seen.add(word)
-    if exact_in_words and w not in seen:
+    seen_revealed: set[str] = set()
+    for i, sim in enumerate(token_sims):
+        old_level = level_for(scores[i])
+        scores[i] = max(scores[i], sim)
+        new_level = level_for(scores[i])
+        if new_level != old_level and new_level != "hidden":
+            updates.append({"pos": i, "word": tokens[i]["w"], "level": new_level})
+            if new_level == "exact":
+                word = tokens[i]["w"]
+                if word not in seen_revealed:
+                    revealed.append(word)
+                    seen_revealed.add(word)
+    if exact_in_words and w not in seen_revealed:
         revealed.append(w)
 
     if exact:
         message = "Trouvé !"
-    elif best > REVEAL_THRESHOLD:
+    elif best >= 0.70:
         message = "Très proche !"
-    elif best > 0.5:
+    elif best >= SEUIL_ORANGE:
         message = "Proche..."
     else:
         message = "Froid..."
@@ -311,6 +329,7 @@ def score():
             "word": w,
             "exact": exact,
             "revealed": revealed,
+            "updates": updates,
             "score": round((best + 1) / 2, 4),
             "cosine": round(best, 4),
             "message": message,
