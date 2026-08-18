@@ -58,9 +58,9 @@ body::before {
 .app {
   position: relative;
   z-index: 1;
-  max-width: 680px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 1rem 3rem;
+  padding: 1rem 1.25rem 3rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,42 +71,53 @@ body::before {
   outline-offset: 2px;
 }
 
-/* ---------- Header centré « magazine » ---------- */
+/* ---------- Header pleine largeur « magazine » ---------- */
 .header {
   position: relative;
-  text-align: center;
-  padding: 0.75rem 0 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0 1rem;
   border-bottom: 1px solid var(--border-soft); /* filet éditorial fin */
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-/* Petit trait terracotta centré, posé sur le filet. */
+/* Petit trait terracotta posé sur le filet, à gauche (écho du magazine). */
 .header::after {
   content: "";
   position: absolute;
   bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 56px;
   height: 2px;
   background: var(--accent);
   border-radius: 2px;
 }
 
+.header-left {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  min-width: 0;
+}
+
 .brand {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--text);
 }
 
 .header-meta {
-  margin-top: 0.35rem;
+  margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   color: var(--muted);
@@ -130,12 +141,10 @@ body::before {
 }
 
 .history-toggle {
-  position: absolute;
-  top: 0.4rem;
-  right: 0;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  flex-shrink: 0;
   padding: 0.42rem 0.8rem;
   border: 1px solid #e8c9a8;
   border-radius: 999px;
@@ -158,8 +167,8 @@ body::before {
 }
 
 .back-today {
-  display: block;
-  margin: 0 auto 1rem;
+  display: inline-block;
+  margin: 0 0 1rem;
   padding: 0.45rem 1.1rem;
   border: 1px solid #e0c9a8;
   border-radius: 999px;
@@ -268,7 +277,7 @@ body::before {
 /* ---------- Titre masqué ---------- */
 .title-section {
   margin-bottom: 1.25rem;
-  text-align: center;
+  text-align: left;
 }
 
 .puzzle-title {
@@ -293,6 +302,22 @@ body::before {
   border-radius: 12px;
   padding: 0.9rem 1.1rem;
   animation: reveal 0.3s ease-out;
+}
+
+/* ---------- Grid magazine : article (1fr) | sidebar historique ---------- */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.main-col {
+  min-width: 0;
+}
+
+.sidebar {
+  min-width: 0;
 }
 
 /* ---------- Article ---------- */
@@ -363,7 +388,6 @@ body::before {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1rem;
-  margin-top: 1.5rem;
 }
 
 .history-table {
@@ -550,7 +574,13 @@ button.share:hover {
 /* ---------- Responsive ---------- */
 @media (max-width: 479px) {
   /* Pilule Historique réduite à l'icône (aria-label conservé) :
-     évite tout chevauchement avec le logo serif centré. */
+     header compact mobile : logo à gauche, icône à droite. */
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
   .history-toggle {
     padding: 0.42rem 0.55rem;
   }
@@ -558,11 +588,15 @@ button.share:hover {
   .history-toggle-label {
     display: none;
   }
+
+  .brand {
+    font-size: 1.7rem;
+  }
 }
 
 @media (min-width: 768px) {
   .app {
-    padding: 2rem 2rem 4rem;
+    padding: 1.5rem 2rem 4rem;
   }
 
   .article {
@@ -574,8 +608,15 @@ button.share:hover {
   }
 }
 
-@media (min-width: 1440px) {
-  .app {
-    max-width: 680px;
+/* Desktop « magazine » : article pleine largeur + sidebar historique sticky. */
+@media (min-width: 900px) {
+  .main-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 1.5rem;
   }
 }

@@ -240,6 +240,21 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
+        <div className="header-left">
+          <h1 className="brand">Pédantix</h1>
+          <div className="header-meta">
+            {num > 0 && (
+              <span className="meta-day">
+                Jour nº{num}
+                {num !== todayNum ? " · jour passé" : ""}
+              </span>
+            )}
+            <span className="meta-sep">·</span>
+            <span className="meta-guesses">
+              {guesses.length} essai{guesses.length > 1 ? "s" : ""}
+            </span>
+          </div>
+        </div>
         <button
           type="button"
           className="history-toggle"
@@ -266,19 +281,6 @@ export default function App() {
           </svg>
           <span className="history-toggle-label">Historique</span>
         </button>
-        <h1 className="brand">Pédantix</h1>
-        <div className="header-meta">
-          {num > 0 && (
-            <span className="meta-day">
-              Jour nº{num}
-              {num !== todayNum ? " · jour passé" : ""}
-            </span>
-          )}
-          <span className="meta-sep">·</span>
-          <span className="meta-guesses">
-            {guesses.length} essai{guesses.length > 1 ? "s" : ""}
-          </span>
-        </div>
       </header>
 
       {num > 0 && todayNum > 0 && num !== todayNum && (
@@ -317,82 +319,86 @@ export default function App() {
 
       {error && <div className="error-banner">{error}</div>}
 
-      <main>
-        <section className="title-section">
-          {won ? (
-            <p className="title-correct">Bravo ! Le titre était : {title}</p>
-          ) : (
-            <h2 className="puzzle-title" aria-label="Titre masqué">
-              {titleWords.map((w, i) => (
+      <main className="main-grid">
+        <div className="main-col">
+          <section className="title-section">
+            {won ? (
+              <p className="title-correct">Bravo ! Le titre était : {title}</p>
+            ) : (
+              <h2 className="puzzle-title" aria-label="Titre masqué">
+                {titleWords.map((w, i) => (
+                  <Fragment key={i}>
+                    {i > 0 && " "}
+                    {titleRevealed[i] ? (
+                      <span className="w w-exact">{titleRevealed[i].text}</span>
+                    ) : (
+                      <span
+                        className="blank title-blank"
+                        style={{ minWidth: `calc(1ch * ${w.length})` }}
+                      />
+                    )}
+                  </Fragment>
+                ))}
+              </h2>
+            )}
+          </section>
+
+          <section className="article" aria-label="Article masqué">
+            {tokens.map((t, i) => {
+              const r = revealed[i];
+              return (
                 <Fragment key={i}>
                   {i > 0 && " "}
-                  {titleRevealed[i] ? (
-                    <span className="w w-exact">{titleRevealed[i].text}</span>
+                  {r?.level === "exact" ? (
+                    <span className="w w-exact">{r.text}</span>
+                  ) : r?.level === "proche" ? (
+                    <span className="w w-proche" style={{ color: orangeColor(r.cos) }}>
+                      {r.text}
+                    </span>
                   ) : (
                     <span
-                      className="blank title-blank"
-                      style={{ minWidth: `calc(1ch * ${w.length})` }}
+                      className="blank"
+                      style={{ minWidth: `calc(1ch * ${t.w.length})` }}
                     />
                   )}
                 </Fragment>
-              ))}
-            </h2>
-          )}
-        </section>
+              );
+            })}
+          </section>
+        </div>
 
-        <section className="article" aria-label="Article masqué">
-          {tokens.map((t, i) => {
-            const r = revealed[i];
-            return (
-              <Fragment key={i}>
-                {i > 0 && " "}
-                {r?.level === "exact" ? (
-                  <span className="w w-exact">{r.text}</span>
-                ) : r?.level === "proche" ? (
-                  <span className="w w-proche" style={{ color: orangeColor(r.cos) }}>
-                    {r.text}
-                  </span>
-                ) : (
-                  <span
-                    className="blank"
-                    style={{ minWidth: `calc(1ch * ${t.w.length})` }}
-                  />
-                )}
-              </Fragment>
-            );
-          })}
-        </section>
-
-        <section className="history">
-          <h2 className="section-label">Historique de la partie</h2>
-          <table className="history-table">
-            <thead>
-              <tr>
-                <th>Nº</th>
-                <th>Mot</th>
-              </tr>
-            </thead>
-            <tbody>
-              {guesses.length === 0 ? (
+        <aside className="sidebar">
+          <section className="history">
+            <h2 className="section-label">Historique de la partie</h2>
+            <table className="history-table">
+              <thead>
                 <tr>
-                  <td colSpan={2} className="empty">
-                    Aucun essai
-                  </td>
+                  <th>Nº</th>
+                  <th>Mot</th>
                 </tr>
-              ) : (
-                guesses
-                  .map((g, i) => ({ g, n: i + 1 }))
-                  .reverse()
-                  .map(({ g, n }) => (
-                    <tr key={n}>
-                      <td className="num">{n}</td>
-                      <td>{g.word}</td>
-                    </tr>
-                  ))
-              )}
-            </tbody>
-          </table>
-        </section>
+              </thead>
+              <tbody>
+                {guesses.length === 0 ? (
+                  <tr>
+                    <td colSpan={2} className="empty">
+                      Aucun essai
+                    </td>
+                  </tr>
+                ) : (
+                  guesses
+                    .map((g, i) => ({ g, n: i + 1 }))
+                    .reverse()
+                    .map(({ g, n }) => (
+                      <tr key={n}>
+                        <td className="num">{n}</td>
+                        <td>{g.word}</td>
+                      </tr>
+                    ))
+                )}
+              </tbody>
+            </table>
+          </section>
+        </aside>
       </main>
 
       <form className="controls" onSubmit={handleSubmit}>
