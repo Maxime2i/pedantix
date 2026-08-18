@@ -17,16 +17,16 @@ export interface RevealState {
 }
 
 /**
- * Dégradé d'orange — thème clair, assombri pour contraste AA sur fond clair :
- * cos 0.49 -> #f9a825, cos 0.85 -> #ef6c00, borné entre les deux
- * (défaut 0.67 si cos absent).
+ * Dégradé d'orange — thème éditorial « magazine chaleureux » :
+ * cos 0.49 -> #d97706 (ambre), cos 0.85+ -> #c2571c (terracotta),
+ * borné entre les deux (défaut 0.67 si cos absent).
  */
 export function orangeColor(cos: number | null | undefined): string {
   const c = cos == null ? 0.67 : Math.min(Math.max(cos, 0.49), 0.85);
   const t = (c - 0.49) / (0.85 - 0.49);
-  const r = Math.round(245 - 6 * t);
-  const g = Math.round(168 - 60 * t);
-  const b = Math.round(37 - 37 * t);
+  const r = Math.round(217 - 23 * t);
+  const g = Math.round(119 - 32 * t);
+  const b = Math.round(6 + 22 * t);
   return `rgb(${r}, ${g}, ${b})`;
 }
 

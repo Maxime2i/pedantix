@@ -1,21 +1,28 @@
-/* Pédantix — thème CLAIR, simple, lisible. Mobile-first. */
+/* Pédantix — thème « magazine chaleureux » : papier crème, serif, terracotta/ambre.
+   Structure JSX inchangée ; uniquement la peau visuelle. Mobile-first. */
 :root {
-  --bg: #f7f8fa;
-  --card: #ffffff;
-  --text: #202124;
-  --muted: #5f6368;
-  --border: #dadce0;
-  --border-soft: #e8eaed;
-  --green: #1e8e3e;
-  --blue: #1a73e8;
-  --blue-dark: #1765cc;
-  --blue-tint: #e8f0fe;
-  --orange-bg: #fff3e0;
+  --bg: #f6f1e7;
+  --bg-2: #faf6ec;
+  --card: #fffdf6;
+  --text: #3b3226;
+  --muted: #7a6f5d;
+  --accent: #c05621; /* terracotta */
+  --accent-dark: #b3481a;
+  --accent-tint: #fbeeda; /* ambre très pâle */
+  --amber: #d97706;
+  --amber-ink: #b45309; /* ambre foncé lisible sur ambre pâle */
+  --green: #3e7c4f; /* vert chaleureux, lisible sur crème */
   --red-text: #b3261e;
-  --red-bg: #fce8e6;
-  --red-border: #e6b4ac;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --red-bg: #fbe8e2;
+  --red-border: #e8bfb2;
+  --border: #e0d5bd;
+  --border-soft: #e8dcc6; /* filet éditorial */
+  --blank: #ece2cf; /* boîtes de mots masqués */
+  --shadow: 0 1px 4px rgba(120, 90, 40, 0.1);
   --radius: 12px;
+  --radius-sm: 8px;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 *,
@@ -32,13 +39,26 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
+/* Motif discret : points très légers, comme du papier. Sobre. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(192, 86, 33, 0.05) 1.1px, transparent 1.1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .app {
-  max-width: 640px;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
   margin: 0 auto;
   padding: 1rem 1rem 3rem;
   min-height: 100vh;
@@ -46,70 +66,105 @@ body {
   flex-direction: column;
 }
 
-/* ---------- Header centré, simple ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Header centré « magazine » ---------- */
 .header {
   position: relative;
   text-align: center;
-  padding: 0.25rem 0 1rem;
-  border-bottom: 1px solid var(--border-soft);
-  margin-bottom: 1.25rem;
+  padding: 0.75rem 0 1.4rem;
+  border-bottom: 1px solid var(--border-soft); /* filet éditorial fin */
+  margin-bottom: 1.5rem;
+}
+
+/* Petit trait terracotta centré, posé sur le filet. */
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .brand {
   margin: 0;
-  font-size: 1.6rem;
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   color: var(--text);
 }
 
 .header-meta {
-  margin-top: 0.25rem;
-  font-size: 0.95rem;
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   color: var(--muted);
 }
 
 .meta-sep {
-  margin: 0 0.35rem;
+  margin: 0 0.5rem;
+}
+
+/* Badge d'essais : ambre pâle, discret, à côté du compteur. */
+.meta-guesses {
+  display: inline-block;
+  padding: 0.18rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--amber-ink);
+  font-weight: 600;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
 }
 
 .history-toggle {
   position: absolute;
-  top: 0;
+  top: 0.4rem;
   right: 0;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid var(--border);
+  padding: 0.42rem 0.8rem;
+  border: 1px solid #e8c9a8;
   border-radius: 999px;
-  background: var(--card);
-  color: var(--muted);
-  font-size: 0.85rem;
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .history-toggle:hover {
-  border-color: var(--blue);
-  color: var(--blue);
+  background: #f4d9b8;
+  border-color: #dcb085;
 }
 
 .history-toggle[aria-expanded="true"] {
-  border-color: var(--blue);
-  color: var(--blue);
-  background: var(--blue-tint);
+  border-color: var(--accent);
+  background: #f4d9b8;
 }
 
 .back-today {
   display: block;
   margin: 0 auto 1rem;
   padding: 0.45rem 1.1rem;
-  border: 1px solid var(--border);
+  border: 1px solid #e0c9a8;
   border-radius: 999px;
   background: var(--card);
-  color: var(--blue);
+  color: var(--accent-dark);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -117,8 +172,8 @@ body {
 }
 
 .back-today:hover {
-  background: var(--blue-tint);
-  border-color: var(--blue);
+  background: var(--accent-tint);
+  border-color: var(--accent);
 }
 
 /* ---------- Panneau historique des jours ---------- */
@@ -132,12 +187,24 @@ body {
 }
 
 .section-label {
-  margin: 0 0 0.5rem;
-  font-size: 0.78rem;
-  font-weight: 600;
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   color: var(--muted);
+}
+
+/* Petit losange ambre, marque éditoriale devant les titres de section. */
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.5rem;
+  background: var(--amber);
+  border-radius: 1px;
+  transform: rotate(45deg) translateY(-1px);
 }
 
 .days-list {
@@ -163,15 +230,15 @@ body {
 }
 
 .day-row:hover {
-  background: #f1f3f4;
+  background: #f4ecdc;
 }
 
 .day-row.current {
-  background: var(--blue-tint);
+  background: var(--accent-tint);
 }
 
 .day-row.current .day-num {
-  color: var(--blue);
+  color: var(--accent-dark);
 }
 
 .day-num {
@@ -206,7 +273,8 @@ body {
 
 .puzzle-title {
   margin: 0;
-  font-size: 1.6rem;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 2;
   letter-spacing: 0.01em;
@@ -215,14 +283,15 @@ body {
 
 .title-correct {
   margin: 0;
-  background: #e6f4ea;
-  border: 1px solid #b7e1c3;
-  color: var(--green);
+  background: var(--accent-tint);
+  border: 1px solid rgba(192, 86, 33, 0.45);
+  color: #7a3b12;
+  font-family: var(--font-serif);
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.5;
-  border-radius: 10px;
-  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
   animation: reveal 0.3s ease-out;
 }
 
@@ -232,24 +301,25 @@ body {
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 1.1rem;
+  padding: 1.15rem;
   line-height: 1.9;
   font-size: 1.05rem;
   overflow-wrap: anywhere;
 }
 
-/* Mots masqués : boîtes gris clair arrondies, largeur = longueur du mot */
+/* Mots masqués : crème soutenu, arrondis, largeur = longueur du mot. */
 .blank {
   display: inline-block;
   vertical-align: bottom;
-  background: #e8eaed;
+  background: var(--blank);
   border-radius: 6px;
   height: 1.2em;
   margin: 0 2px;
 }
 
+/* Boîtes du titre légèrement plus grandes. */
 .title-blank {
-  height: 1.25em;
+  height: 1.3em;
   border-radius: 7px;
 }
 
@@ -265,11 +335,13 @@ body {
 }
 
 .w-proche {
-  background: var(--orange-bg);
+  background: var(--accent-tint);
+  border: 1px solid rgba(192, 86, 33, 0.16);
   border-radius: 6px;
   padding: 0 0.28em;
   min-width: 1.5em;
   text-align: center;
+  font-weight: 600;
   animation: reveal 0.3s ease-out;
 }
 
@@ -309,10 +381,10 @@ body {
 
 .history-table th {
   color: var(--muted);
-  font-weight: 600;
-  font-size: 0.75rem;
+  font-weight: 700;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 .history-table td.num {
@@ -341,18 +413,18 @@ body {
   color: var(--text);
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .guess-input::placeholder {
-  color: #80868b;
+  color: #9a8f7c;
 }
 
 .guess-input:focus {
   outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.18);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(192, 86, 33, 0.18);
 }
 
 .guess-input:disabled {
@@ -370,19 +442,29 @@ button:disabled {
   cursor: default;
 }
 
+/* Bouton « Proposer » : terracotta, pilule, hover foncé, focus visible. */
 button.primary {
-  padding: 0.9rem 1.6rem;
+  padding: 0.9rem 1.7rem;
   border: none;
   border-radius: 999px;
-  background: var(--blue);
+  background: var(--accent);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
 }
 
 button.primary:hover:not(:disabled) {
-  background: var(--blue-dark);
+  background: var(--accent-dark);
+}
+
+button.primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button.primary:focus-visible {
+  outline: 3px solid rgba(192, 86, 33, 0.4);
+  outline-offset: 2px;
 }
 
 /* ---------- Feedback émojis + messages ---------- */
@@ -397,8 +479,8 @@ button.primary:hover:not(:disabled) {
 
 .vocab-msg {
   margin-top: 0.4rem;
-  background: #f1f3f4;
-  border-radius: 8px;
+  background: #f3ead6;
+  border-radius: 10px;
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
   color: var(--muted);
@@ -412,17 +494,17 @@ button.primary:hover:not(:disabled) {
 
 button.share {
   padding: 0.55rem 1.4rem;
-  border: 1px solid var(--border);
+  border: 1px solid #e0c9a8;
   border-radius: 999px;
   background: var(--card);
-  color: var(--blue);
+  color: var(--accent-dark);
   font-weight: 600;
   transition: border-color 0.15s, background 0.15s;
 }
 
 button.share:hover {
-  border-color: var(--blue);
-  background: var(--blue-tint);
+  border-color: var(--accent);
+  background: var(--accent-tint);
 }
 
 /* ---------- Erreur / toast ---------- */
@@ -431,7 +513,7 @@ button.share:hover {
   border: 1px solid var(--red-border);
   color: var(--red-text);
   padding: 0.6rem 0.8rem;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
@@ -442,10 +524,10 @@ button.share:hover {
   left: 50%;
   transform: translateX(-50%);
   background: var(--text);
-  color: #fff;
+  color: #fffdf6;
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(80, 60, 30, 0.25);
   animation: toast-in 0.25s ease-out;
   z-index: 100;
 }
@@ -466,6 +548,18 @@ button.share:hover {
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 479px) {
+  /* Pilule Historique réduite à l'icône (aria-label conservé) :
+     évite tout chevauchement avec le logo serif centré. */
+  .history-toggle {
+    padding: 0.42rem 0.55rem;
+  }
+
+  .history-toggle-label {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .app {
     padding: 2rem 2rem 4rem;
@@ -482,6 +576,6 @@ button.share:hover {
 
 @media (min-width: 1440px) {
   .app {
-    max-width: 640px;
+    max-width: 680px;
   }
 }
