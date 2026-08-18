@@ -10,11 +10,12 @@ import argparse
 import gzip
 import io
 import json
+import os
 import sys
 from pathlib import Path
 
 MAX_WORDS = 300_000
-DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
+DATA_DIR = Path(os.environ.get("PEDANTIX_DATA_DIR", "/home/ubuntu/pedantix/mobile/backend/data"))
 OUT_PATH = DATA_DIR / "frWiki_reduced.vec"
 META_PATH = DATA_DIR / "embeddings_meta.json"
 

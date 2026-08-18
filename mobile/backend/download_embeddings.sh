@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-# Télécharge les embeddings FR et produit data/frWiki_reduced.vec (300k mots).
+# Télécharge les embeddings FR et produit ${DATA_DIR}/frWiki_reduced.vec (300k mots).
+# Utilisable en local ET dans un conteneur : pas de .venv, python3 système.
+# Idempotent : si le .vec réduit existe et est non vide, ne fait rien.
+# Télécharge le .vec complet vers un .tmp puis mv (jamais de fichier partiel),
+# puis supprime le .vec complet après réduction (économie de volume).
 set -euo pipefail
 
-DATA_DIR="/home/ubuntu/pedantix/mobile/backend/data"
-PY="/home/ubuntu/pedantix/mobile/backend/.venv/bin/python"
-REDUCE="/home/ubuntu/pedantix/mobile/backend/reduce_embeddings.py"
+DATA_DIR="${1:-${PEDANTIX_DATA_DIR:-/home/ubuntu/pedantix/mobile/backend/data}}"
+PY="${PYTHON:-python3}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REDUCE="${SCRIPT_DIR}/reduce_embeddings.py"
 OUT="${DATA_DIR}/frWiki_reduced.vec"
 META="${DATA_DIR}/embeddings_meta.json"
 UA="PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; embeddings download)"
@@ -28,30 +33,29 @@ try_source() {
   local url="$1"
   local name="$2"
   local license="$3"
+  local tmp="${DATA_DIR}/wiki.fr.download.tmp"
+  local full="${DATA_DIR}/wiki.fr.vec"
   echo "=== Téléchargement ${name}: ${url}"
-  # Stream → réduction. SIGPIPE (141) est normal dès 300k lignes lues
-  # (curl/unzip arrêtés en cours de route).
-  set +e
+  if ! curl -L --fail --retry 3 --retry-delay 4 --connect-timeout 30 \
+      -A "${UA}" --http1.1 -o "${tmp}" "${url}"; then
+    rm -f "${tmp}"
+    return 1
+  fi
+  # Fichier complet téléchargé → nom final (pas de fichier partiel).
   case "${url}" in
-    *.gz)
-      curl -L --fail --retry 3 --retry-delay 4 --connect-timeout 30 \
-          -A "${UA}" --http1.1 "${url}" \
-          | gzip -dc \
-          | "${PY}" "${REDUCE}" -
-      ;;
     *.zip)
-      curl -L --fail --retry 3 --retry-delay 4 --connect-timeout 30 \
-          -A "${UA}" --http1.1 "${url}" \
-          | funzip \
-          | "${PY}" "${REDUCE}" -
+      unzip -p "${tmp}" > "${full}" || { rm -f "${tmp}" "${full}"; return 1; }
+      rm -f "${tmp}"
       ;;
     *)
-      curl -L --fail --retry 3 --retry-delay 4 --connect-timeout 30 \
-          -A "${UA}" --http1.1 "${url}" \
-          | "${PY}" "${REDUCE}" -
+      mv "${tmp}" "${full}"
       ;;
   esac
-  set -e
+  # Réduction : lit le .vec complet, écrit le réduit au même endroit.
+  if ! "${PY}" "${REDUCE}" "${full}"; then
+    rm -f "${full}"
+    return 1
+  fi
   if [[ -s "${OUT}" ]]; then
     local nlines
     nlines="$(head -n 1 "${OUT}" | awk '{print $1}')"
@@ -67,10 +71,12 @@ meta["license"] = "${license}"
 p.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 print("Source retenue:", "${name}", "${license}")
 PY
+      # Le .vec complet ne sert plus : suppression (volume Docker limité).
+      rm -f "${full}"
       return 0
     fi
   fi
-  rm -f "${OUT}"
+  rm -f "${full}" "${OUT}"
   return 1
 }
 

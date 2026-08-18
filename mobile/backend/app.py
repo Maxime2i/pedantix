@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import unicodedata
@@ -17,7 +18,7 @@ from flask_cors import CORS
 from lemmatize import lemmatize
 from stopwords import STOPWORDS
 
-DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
+DATA_DIR = Path(os.environ.get("PEDANTIX_DATA_DIR", "/home/ubuntu/pedantix/mobile/backend/data"))
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
 # Gameplay Cémantix : chaque PROPOSITION reçoit une température selon sa
