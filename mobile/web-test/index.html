@@ -158,16 +158,21 @@
       setTimeout(() => el.classList.remove("show"), 2500);
     }
 
-    // Couleur de la PROPOSITION = sa température (décidée par le serveur vs
-    // le titre). Aucun seuil à recalculer côté client.
+    // Couleur de la PROPOSITION — priorité :
+    //   1. VERT si le mot est DANS l'article (present_in_article) ou si la
+    //      température est « exact » : c'est un mot TROUVÉ (y compris
+    //      stopwords/mots courts : « un », « le »…).
+    //   2. ORANGE si la température est « proche » (lié au titre, absent du
+    //      texte).
+    //   3. ROUGE sinon.
     function guessClass(g) {
-      if (g.level === "exact") return "exact";
+      if (g.present || g.level === "exact") return "exact";
       if (g.level === "proche") return "hot";
       return "cold";
     }
 
     function emojiForGuess(g) {
-      if (g.level === "exact") return "🟩";
+      if (g.present || g.level === "exact") return "🟩";
       if (g.level === "proche") return "🟧";
       return "🟥";
     }
@@ -247,6 +252,7 @@
           word: word,
           score: data.score != null ? data.score : 0,
           level: data.temperature_level || "froid",
+          present: !!data.present_in_article,
         });
         // Révélations exactes : positions où le mot proposé figure dans
         // l'article, affichées en vert. État local uniquement.

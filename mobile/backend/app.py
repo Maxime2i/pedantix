@@ -14,8 +14,6 @@ import requests
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
-from stopwords import STOPWORDS
-
 DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
@@ -23,12 +21,19 @@ ARTICLES_PATH = DATA_DIR / "articles.json"
 # proximité sémantique avec le TITRE de l'article (le « mot secret »).
 # Seuil « exact » (vert) : la proposition est très proche / identique au titre.
 # Seuil « proche » (orange) : la proposition est liée au titre sans le trouver.
+# ATTENTION : la couleur de l'historique côté client donne PRIORITÉ à la
+# présence dans l'article (present_in_article → vert), la température ne
+# s'applique qu'aux mots absents du texte.
 # Calibrés sur « Amplificateur électronique » (cosinus vs embedding du titre,
 # moyenne des embeddings de ses mots) : « amplificateur » 0.8646 → vert,
-# « ampli » 0.6393 → orange, « audio » 0.5291 → orange, « banane » 0.2493 →
-# rouge, stopwords (« le », « de »…) ~0.05-0.11 → rouge.
+# « ampli » 0.6393 → orange, « audio » 0.5291 → orange, « fréquence » 0.5224
+# → orange, « frequence » 0.4453 → orange, « banane » 0.2493 → rouge,
+# stopwords (« le », « de »…) ~0.05-0.11 → rouge côté température MAIS vert
+# car présents dans l'article. En dessous de 0.40 : bruit sémantique mesuré
+# à ~0.31 max (« avion ») — la bande [0.40, 0.45] ne contient que des mots
+# réellement liés au sujet.
 EXACT_THRESHOLD = 0.85
-PROCH_THRESHOLD = 0.50
+PROCH_THRESHOLD = 0.40
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
 
@@ -266,14 +271,6 @@ def temperature_for(cosine: float) -> str:
     return "froid"
 
 
-def revealable(word: str) -> bool:
-    # Un token d'article ne doit JAMAIS être révélé si c'est un stopword ou un
-    # mot de ≤ 2 lettres : fastText leur donne des similarités artificiellement
-    # hautes avec des mots fréquents. Un stopword proposé peut recevoir une
-    # température (vs le titre) mais ne révèle rien dans l'article.
-    return word not in STOPWORDS and len(word) > 2
-
-
 def title_embedding(title: str) -> np.ndarray | None:
     """Embedding du titre = moyenne des embeddings de ses mots présents dans
     le vocabulaire. None si aucun mot du titre n'est connu."""
@@ -316,6 +313,7 @@ def score():
                 "score": 1.0,
                 "temperature_level": "exact",
                 "revealed_positions": [],
+                "present_in_article": True,
                 "message": "Bravo ! Vous avez trouvé le titre !",
             }
         )
@@ -331,13 +329,16 @@ def score():
             score_val = round((cosine + 1) / 2, 4)
             temperature_level = temperature_for(cosine)
 
-    # Révélation dans l'article : UNIQUEMENT si le mot proposé y figure
-    # exactement (positions des tokens). Plus aucune révélation « proche ».
+    # Révélation dans l'article : TOUT mot proposé présent dans le texte
+    # (comparaison exacte normalisée) révèle ses positions — y compris les
+    # stopwords et mots courts (« un », « le », « de »…) : un mot présent est
+    # un mot TROUVÉ, il se montre en vert. Plus AUCUN filtre.
     revealed_positions: list[int] = []
     if w:
         revealed_positions = [
-            i for i, tw in enumerate(p["words"]) if tw == w and revealable(tw)
+            i for i, tw in enumerate(p["words"]) if tw == w
         ]
+    present_in_article = bool(revealed_positions)
 
     if not w or w not in WORD_TO_IDX:
         message = "Je ne trouve pas ce mot dans mon vocabulaire."
@@ -357,6 +358,7 @@ def score():
             "score": score_val,
             "temperature_level": temperature_level,
             "revealed_positions": revealed_positions,
+            "present_in_article": present_in_article,
             "message": message,
         }
     )
