@@ -19,17 +19,16 @@ from stopwords import STOPWORDS
 DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
-# Seuil « exact » (vert) : au-dessus, un mot de l'article est considéré trouvé
-# et affiché en clair.
+# Gameplay Cémantix : chaque PROPOSITION reçoit une température selon sa
+# proximité sémantique avec le TITRE de l'article (le « mot secret »).
+# Seuil « exact » (vert) : la proposition est très proche / identique au titre.
+# Seuil « proche » (orange) : la proposition est liée au titre sans le trouver.
+# Calibrés sur « Amplificateur électronique » (cosinus vs embedding du titre,
+# moyenne des embeddings de ses mots) : « amplificateur » 0.8646 → vert,
+# « ampli » 0.6393 → orange, « audio » 0.5291 → orange, « banane » 0.2493 →
+# rouge, stopwords (« le », « de »…) ~0.05-0.11 → rouge.
 EXACT_THRESHOLD = 0.85
-# Seuil « proche » (orange) : similarité cosinus à partir de laquelle un mot
-# de l'article devient visible en orange (proche mais pas trouvé). Calibré sur
-# l'article « Amplificateur électronique » : « audio » (cos max 0.5404) révèle
-# uniquement les mots réellement liés (analogique 0.5404, amplificateurs
-# 0.5168, amplificateur 0.5122, ampli 0.4927) ; « banane » (0.3133), « voiture »
-# (0.4074) ou « moteur » (0.4242) ne révèlent rien. Au-delà de 0.50 on perd
-# « ampli » ; en dessous on fait remonter des mots plus marginaux.
-SEUIL_ORANGE = 0.49
+PROCH_THRESHOLD = 0.50
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
 
@@ -182,7 +181,7 @@ def tokenize(text: str) -> list[dict]:
     # Fidélité à l'original : TOUS les mots sont masqués au départ, y compris
     # les stopwords (« de », « la », « le »…). Le champ `hidden` reste présent
     # pour compatibilité mais vaut toujours True : la visibilité est pilotée
-    # par le score courant de chaque position (voir /score).
+    # côté CLIENT, uniquement par les révélations exactes renvoyées par /score.
     text_lower = text.lower()
     tokens: list[dict] = []
     for match in WORD_RE.finditer(text_lower):
@@ -198,10 +197,10 @@ def get_puzzle(num: int) -> dict:
     intro = fetch_intro(title)
     tokens = tokenize(intro)
     words = [t["w"] for t in tokens]
-    # État de la partie : score courant par position de token (0 = masqué).
-    # Accumulé par /score via score[pos] = max(score[pos], similarité).
-    scores = [0.0] * len(tokens)
-    puzzle = {"title": title, "words": words, "tokens": tokens, "scores": scores}
+    # Plus AUCUN état de partie côté serveur : les scores/ révélations sont
+    # 100 % côté client. Le cache ne garde que le contenu du puzzle (titre,
+    # tokens, mots) pour éviter de re-télécharger l'article à chaque requête.
+    puzzle = {"title": title, "words": words, "tokens": tokens}
     PUZZLE_CACHE[num] = puzzle
     return puzzle
 
@@ -221,6 +220,14 @@ def normalize_title(text: str) -> str:
     text = "".join(c for c in text if unicodedata.category(c) != "Mn")
     text = text.lower()
     return re.sub(r"[\s()]", "", text)
+
+
+def normalize_full(text: str) -> str:
+    """Phrase entière normalisée : sans accents, minuscules, uniquement les
+    caractères de mots (supprime ponctuation, tirets, apostrophes)."""
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    return "".join(WORD_RE.findall(text.lower()))
 
 
 app = Flask(__name__, static_folder=str(ROOT / "web-test"), static_url_path="")
@@ -243,114 +250,113 @@ def puzzle():
             "title_hidden": True,
             "words": p["words"],
             "tokens": p["tokens"],
-            # État courant de la partie (scores par position) + seuils :
-            # permet au client de restaurer les révélations après un rechargement.
-            "scores": p["scores"],
-            "thresholds": {"exact": EXACT_THRESHOLD, "proche": SEUIL_ORANGE},
+            # Plus AUCUN état de partie : pas de `scores` accumulés. Chaque
+            # joueur part de zéro, ses révélations vivent côté client.
+            "thresholds": {"exact": EXACT_THRESHOLD, "proche": PROCH_THRESHOLD},
             "revealed": [],
         }
     )
 
 
-def level_for(score: float) -> str:
-    if score >= EXACT_THRESHOLD:
+def temperature_for(cosine: float) -> str:
+    if cosine >= EXACT_THRESHOLD:
         return "exact"
-    if score >= SEUIL_ORANGE:
+    if cosine >= PROCH_THRESHOLD:
         return "proche"
-    return "hidden"
+    return "froid"
 
 
 def revealable(word: str) -> bool:
     # Un token d'article ne doit JAMAIS être révélé si c'est un stopword ou un
     # mot de ≤ 2 lettres : fastText leur donne des similarités artificiellement
-    # hautes avec des mots fréquents (ex. « son » vs « en » ≈ 0.57), ce qui
-    # faisait apparaître « un », « ou », « est », « la »… dans les révélations.
-    # Leur score peut être calculé (chaud/froid global) mais ne franchit aucun
-    # seuil d'affichage.
+    # hautes avec des mots fréquents. Un stopword proposé peut recevoir une
+    # température (vs le titre) mais ne révèle rien dans l'article.
     return word not in STOPWORDS and len(word) > 2
+
+
+def title_embedding(title: str) -> np.ndarray | None:
+    """Embedding du titre = moyenne des embeddings de ses mots présents dans
+    le vocabulaire. None si aucun mot du titre n'est connu."""
+    title_words = [tw for tw in WORD_RE.findall(title.lower()) if tw in WORD_TO_IDX]
+    if not title_words:
+        return None
+    if len(title_words) == 1:
+        vec = EMBEDDINGS[WORD_TO_IDX[title_words[0]]]
+    else:
+        vec = np.mean([EMBEDDINGS[WORD_TO_IDX[tw]] for tw in title_words], axis=0)
+    norm = np.linalg.norm(vec)
+    if norm == 0:
+        return None
+    return vec / norm
 
 
 @app.post("/score")
 def score():
+    # STATELESS : aucune écriture dans PUZZLE_CACHE. La réponse dépend
+    # uniquement de (num, word) : température vs TITRE + révélations exactes.
     data = request.get_json(silent=True) or {}
     num = data.get("num", puzzle_num())
-    raw_word = data.get("word", "")
-    w = normalize_guess(str(raw_word))
+    raw_word = str(data.get("word", ""))
+    p = get_puzzle(num)
+    title = p["title"]
 
-    if not w or w not in WORD_TO_IDX:
+    w = normalize_guess(raw_word)
+    title_norm = normalize_full(title)
+    # Victoire : soit la phrase complète normalisée == titre, soit le mot
+    # normalisé le plus long == titre (cas des titres à un seul mot).
+    title_found = normalize_full(raw_word) == title_norm or (w and w == title_norm)
+
+    if title_found:
         return jsonify(
             {
                 "word": w,
-                "exact": False,
-                "revealed": [],
-                "updates": [],
-                "score": 0.0,
-                "cosine": None,
-                "message": "Je ne trouve pas ce mot dans mon vocabulaire.",
+                "title_found": True,
+                "correct": True,
+                "cosine": 1.0,
+                "score": 1.0,
+                "temperature_level": "exact",
+                "revealed_positions": [],
+                "message": "Bravo ! Vous avez trouvé le titre !",
             }
         )
 
-    p = get_puzzle(num)
-    tokens = p["tokens"]
-    scores = p["scores"]
+    # Température de la PROPOSITION vs le TITRE (cosinus sémantique).
+    cosine = None
+    score_val = 0.0
+    temperature_level = "froid"
+    if w and w in WORD_TO_IDX:
+        tvec = title_embedding(title)
+        if tvec is not None:
+            cosine = float(EMBEDDINGS[WORD_TO_IDX[w]] @ tvec)
+            score_val = round((cosine + 1) / 2, 4)
+            temperature_level = temperature_for(cosine)
 
-    vec = EMBEDDINGS[WORD_TO_IDX[w]]
-    sims = EMBEDDINGS @ vec
+    # Révélation dans l'article : UNIQUEMENT si le mot proposé y figure
+    # exactement (positions des tokens). Plus aucune révélation « proche ».
+    revealed_positions: list[int] = []
+    if w:
+        revealed_positions = [
+            i for i, tw in enumerate(p["words"]) if tw == w and revealable(tw)
+        ]
 
-    # Similarité avec CHAQUE token de l'article (stopwords compris) : ils ont
-    # un embedding fastText, leur similarité restera faible mais ils participent
-    # au calcul. Token sans embedding → similarité 0.
-    token_sims: list[float] = []
-    for t in tokens:
-        idx = WORD_TO_IDX.get(t["w"])
-        token_sims.append(float(sims[idx]) if idx is not None else 0.0)
-
-    best = max(token_sims, default=0.0)
-    exact_in_words = w in p["words"]
-    exact = exact_in_words or best >= EXACT_THRESHOLD
-
-    # État accumulé : score[pos] = max(score[pos], similarité). On ne signale
-    # dans `updates` que les positions dont le niveau d'affichage change
-    # (franchissement d'un seuil), pour que le client recolore en conséquence.
-    # Les stopwords et mots ≤ 2 lettres sont exclus de la révélation : leur
-    # score n'est jamais accumulé (score[pos] reste 0) pour qu'ils ne puissent
-    # pas non plus ressortir via la restauration d'état de /puzzle.
-    updates: list[dict] = []
-    revealed: list[str] = []
-    seen_revealed: set[str] = set()
-    for i, sim in enumerate(token_sims):
-        if not revealable(tokens[i]["w"]):
-            continue
-        old_level = level_for(scores[i])
-        scores[i] = max(scores[i], sim)
-        new_level = level_for(scores[i])
-        if new_level != old_level and new_level != "hidden":
-            updates.append({"pos": i, "word": tokens[i]["w"], "level": new_level})
-            if new_level == "exact":
-                word = tokens[i]["w"]
-                if word not in seen_revealed:
-                    revealed.append(word)
-                    seen_revealed.add(word)
-    if exact_in_words and w not in seen_revealed and revealable(w):
-        revealed.append(w)
-
-    if exact:
-        message = "Trouvé !"
-    elif best >= 0.70:
-        message = "Très proche !"
-    elif best >= SEUIL_ORANGE:
-        message = "Proche..."
+    if not w or w not in WORD_TO_IDX:
+        message = "Je ne trouve pas ce mot dans mon vocabulaire."
+    elif temperature_level == "exact":
+        message = "Très proche du titre !"
+    elif temperature_level == "proche":
+        message = "Proche du titre..."
     else:
         message = "Froid..."
 
     return jsonify(
         {
             "word": w,
-            "exact": exact,
-            "revealed": revealed,
-            "updates": updates,
-            "score": round((best + 1) / 2, 4),
-            "cosine": round(best, 4),
+            "title_found": False,
+            "correct": False,
+            "cosine": round(cosine, 4) if cosine is not None else None,
+            "score": score_val,
+            "temperature_level": temperature_level,
+            "revealed_positions": revealed_positions,
             "message": message,
         }
     )

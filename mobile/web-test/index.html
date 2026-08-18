@@ -19,8 +19,7 @@
     h1 { font-size: 1.4rem; margin: 0 0 0.25rem; }
     .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
     .title-area { margin-bottom: 1rem; min-height: 1.5em; }
-    .title-correct { color: #4caf50; font-weight: bold; }
-    .title-wrong { color: #f44336; }
+    .title-correct { color: #4caf50; font-weight: bold; font-size: 1.05rem; }
     #error {
       display: none;
       background: #3a1515;
@@ -52,8 +51,6 @@
       margin-bottom: 1.2rem;
       line-height: 1.8;
     }
-    .visible { color: #aaa; }
-    .revealed-close { color: #ff9800; }
     .revealed-exact { color: #4caf50; }
     .blank { vertical-align: bottom; margin: 0 1px; }
     .controls {
@@ -73,6 +70,7 @@
       color: #eee;
       font-size: 1rem;
     }
+    input[type="text"]:disabled { opacity: 0.5; }
     button {
       padding: 0.55rem 1rem;
       border: none;
@@ -85,6 +83,7 @@
     button:hover { background: #444; }
     button.primary { background: #1565c0; }
     button.primary:hover { background: #1976d2; }
+    button:disabled { opacity: 0.5; cursor: default; }
     #toast {
       position: fixed;
       bottom: 1.5rem;
@@ -103,6 +102,7 @@
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
+    #toast.success { background: #1b5e20; }
     .section-label {
       font-size: 0.8rem;
       color: #666;
@@ -120,16 +120,10 @@
   <div id="history"></div>
   <div id="article">Chargement de l'article…</div>
 
-  <div class="section-label">Proposer un mot</div>
+  <div class="section-label">Proposer un mot ou le titre</div>
   <div class="controls">
-    <input type="text" id="word-input" placeholder="Votre mot" autocomplete="off">
+    <input type="text" id="word-input" placeholder="Votre mot (ou le titre)" autocomplete="off">
     <button class="primary" id="btn-guess">Proposer</button>
-  </div>
-
-  <div class="section-label">Deviner le titre</div>
-  <div class="controls">
-    <input type="text" id="title-input" placeholder="Titre de l'article" autocomplete="off">
-    <button id="btn-title">Trouver le titre</button>
   </div>
 
   <div class="controls">
@@ -141,10 +135,11 @@
   <script>
     const state = {
       num: 0,
+      title: "",
       tokens: [],
-      levels: new Map(), // pos -> "exact" | "proche" (révélations par position)
-      thresholds: { exact: 0.85, proche: 0.49 },
-      guesses: [],
+      revealed: new Map(), // pos -> true (mots exacts révélés, état 100 % client)
+      guesses: [],          // { word, score, level: "exact"|"proche"|"froid" }
+      won: false,
     };
 
     const $ = (id) => document.getElementById(id);
@@ -155,34 +150,25 @@
       el.style.display = msg ? "block" : "none";
     }
 
-    function showToast(msg) {
+    function showToast(msg, success) {
       const el = $("toast");
       el.textContent = msg;
+      el.classList.toggle("success", !!success);
       el.classList.add("show");
-      setTimeout(() => el.classList.remove("show"), 2000);
+      setTimeout(() => el.classList.remove("show"), 2500);
     }
 
-    // Cohérence avec le serveur : le niveau d'un essai se décide sur le
-    // COSINUS brut comparé aux seuils (exact/proche) renvoyés par /puzzle.
-    // Le score affiché (g.score) est normalisé (cos+1)/2 — il ne faut pas le
-    // comparer directement aux seuils bruts.
-    function guessCosine(g) {
-      return g.cosine != null ? g.cosine : g.score * 2 - 1;
-    }
-
+    // Couleur de la PROPOSITION = sa température (décidée par le serveur vs
+    // le titre). Aucun seuil à recalculer côté client.
     function guessClass(g) {
-      if (g.exact) return "exact";
-      const cos = guessCosine(g);
-      if (cos >= state.thresholds.exact) return "exact";
-      if (cos >= state.thresholds.proche) return "hot";
+      if (g.level === "exact") return "exact";
+      if (g.level === "proche") return "hot";
       return "cold";
     }
 
     function emojiForGuess(g) {
-      if (g.exact) return "🟩";
-      const cos = guessCosine(g);
-      if (cos >= state.thresholds.exact) return "🟩";
-      if (cos >= state.thresholds.proche) return "🟧";
+      if (g.level === "exact") return "🟩";
+      if (g.level === "proche") return "🟧";
       return "🟥";
     }
 
@@ -197,22 +183,26 @@
     }
 
     function renderArticle() {
-      // Fidélité à l'original : au départ AUCUN mot n'est visible. Seuls les
-      // tokens dont la position a franchi un seuil (via /score) s'affichent,
-      // en vert (exact) ou orange (proche). Les autres restent des espaces
-      // de même largeur.
+      // Article masqué au départ. Seuls les mots proposés présents dans
+      // l'article s'affichent, en VERT (revealed_positions de /score).
+      // Rien n'est restauré depuis le serveur : état local uniquement.
       const parts = state.tokens.map((t, i) => {
-        const level = state.levels.get(i);
-        if (level === "exact") {
+        if (state.revealed.has(i)) {
           return `<span class="revealed-exact">${escapeHtml(t.w)}</span>`;
-        }
-        if (level === "proche") {
-          return `<span class="revealed-close">${escapeHtml(t.w)}</span>`;
         }
         const len = t.w.length;
         return `<span class="blank" style="display:inline-block;min-width:calc(1ch * ${len});border-bottom:2px solid #555;height:1.2em"></span>`;
       });
       $("article").innerHTML = parts.join(" ");
+    }
+
+    function win() {
+      state.won = true;
+      $("title-area").innerHTML =
+        `<span class="title-correct">Bravo ! Le titre était : ${escapeHtml(state.title)}</span>`;
+      $("word-input").disabled = true;
+      $("btn-guess").disabled = true;
+      showToast("Bravo ! Titre trouvé 🎉", true);
     }
 
     async function loadPuzzle() {
@@ -222,22 +212,15 @@
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
         state.num = data.num;
+        state.title = data.title;
         state.tokens = data.tokens;
-        state.levels = new Map();
-        if (data.thresholds) {
-          state.thresholds = data.thresholds;
-        }
-        // Restaure les révélations déjà acquises (état serveur) : le score
-        // courant de chaque position détermine son niveau d'affichage.
-        if (Array.isArray(data.scores)) {
-          data.scores.forEach((s, i) => {
-            if (s >= state.thresholds.exact) state.levels.set(i, "exact");
-            else if (s >= state.thresholds.proche) state.levels.set(i, "proche");
-          });
-        }
+        state.revealed = new Map(); // jamais de restauration serveur
         state.guesses = [];
+        state.won = false;
         $("puzzle-info").textContent = `Pédantix #${data.num}`;
         $("title-area").innerHTML = "";
+        $("word-input").disabled = false;
+        $("btn-guess").disabled = false;
         renderHistory();
         renderArticle();
       } catch (e) {
@@ -248,7 +231,7 @@
 
     async function submitGuess() {
       const word = $("word-input").value.trim();
-      if (!word) return;
+      if (!word || state.won) return;
       showError("");
       try {
         const resp = await fetch("/score", {
@@ -258,41 +241,28 @@
         });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
-        state.guesses.push({ word: data.word, score: data.score, cosine: data.cosine, exact: data.exact });
-        // Applique les révélations par position (franchissement de seuil) :
-        // l'état s'accumule entre les essais, le vert gagne sur l'orange.
-        (data.updates || []).forEach((u) => {
-          state.levels.set(u.pos, u.level);
+        state.guesses.push({
+          // La PROPOSITION affichée = ce que le joueur a tapé (la température
+          // vient du serveur, pas de réécriture du mot).
+          word: word,
+          score: data.score != null ? data.score : 0,
+          level: data.temperature_level || "froid",
+        });
+        // Révélations exactes : positions où le mot proposé figure dans
+        // l'article, affichées en vert. État local uniquement.
+        (data.revealed_positions || []).forEach((pos) => {
+          state.revealed.set(pos, true);
         });
         renderHistory();
         renderArticle();
         $("word-input").value = "";
-        $("word-input").focus();
-      } catch (e) {
-        showError("Erreur lors du score : " + e.message);
-      }
-    }
-
-    async function submitTitle() {
-      const answer = $("title-input").value.trim();
-      if (!answer) return;
-      showError("");
-      try {
-        const resp = await fetch("/page", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ num: state.num, answer }),
-        });
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const data = await resp.json();
-        const area = $("title-area");
-        if (data.correct) {
-          area.innerHTML = `<span class="title-correct">${escapeHtml(data.title)}</span>`;
+        if (data.title_found) {
+          win();
         } else {
-          area.innerHTML = `<span class="title-wrong">Non…</span>`;
+          $("word-input").focus();
         }
       } catch (e) {
-        showError("Erreur titre : " + e.message);
+        showError("Erreur lors du score : " + e.message);
       }
     }
 
@@ -322,10 +292,6 @@
     $("btn-guess").addEventListener("click", submitGuess);
     $("word-input").addEventListener("keydown", (e) => {
       if (e.key === "Enter") submitGuess();
-    });
-    $("btn-title").addEventListener("click", submitTitle);
-    $("title-input").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") submitTitle();
     });
     $("btn-share").addEventListener("click", share);
 
