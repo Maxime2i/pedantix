@@ -62,16 +62,6 @@
       letter-spacing: 0.05em;
     }
     .history-table td.num { color: #888; width: 2.5em; }
-    .temp-square {
-      display: inline-block;
-      width: 0.9em;
-      height: 0.9em;
-      border-radius: 3px;
-      vertical-align: middle;
-    }
-    .temp-square.exact { background: #4caf50; }
-    .temp-square.hot { background: #ff9800; }
-    .temp-square.cold { background: #f44336; }
     #article {
       background: #1a1a1a;
       padding: 1rem;
@@ -206,15 +196,6 @@
       setTimeout(() => el.classList.remove("show"), 2500);
     }
 
-    // Classe de température d'un essai pour le carré de l'historique :
-    // temperature_level de la proposition vs le TITRE (exact -> vert,
-    // proche -> orange, froid -> rouge).
-    function tempClass(level) {
-      if (level === "exact") return "exact";
-      if (level === "proche") return "hot";
-      return "cold";
-    }
-
     function emojiForGuess(g) {
       if (g.present || g.level === "exact") return "🟩";
       if (g.level === "proche") return "🟧";
@@ -222,19 +203,15 @@
     }
 
     function renderHistory() {
-      // Tableau compact « Nº | Mot | température », les plus récents en haut.
+      // Tableau compact « Nº | Mot », les plus récents en haut (comme l'original).
       const rows = state.guesses
         .map((g, i) => ({ g, num: i + 1 }))
         .reverse()
-        .map(
-          ({ g, num }) =>
-            `<tr><td class="num">${num}</td><td>${escapeHtml(g.word)}</td>` +
-            `<td><span class="temp-square ${tempClass(g.level)}" title="${escapeHtml(g.word)} — ${g.score.toFixed(2)}"></span></td></tr>`
-        )
+        .map(({ g, num }) => `<tr><td class="num">${num}</td><td>${escapeHtml(g.word)}</td></tr>`)
         .join("");
       $("history").innerHTML =
-        `<table class="history-table"><thead><tr><th>Nº</th><th>Mot</th><th>Température</th></tr></thead>` +
-        `<tbody>${rows || `<tr><td colspan="3" style="color:#666">Aucun essai</td></tr>`}</tbody></table>`;
+        `<table class="history-table"><thead><tr><th>Nº</th><th>Mot</th></tr></thead>` +
+        `<tbody>${rows || `<tr><td colspan="2" style="color:#666">Aucun essai</td></tr>`}</tbody></table>`;
     }
 
     function escapeHtml(s) {
