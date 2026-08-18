@@ -1,0 +1,7 @@
+backend/.venv/
+__pycache__/
+*.pyc
+backend/data/*.gz
+backend/data/*.vec
+backend/data/*.zip
+backend/data/frWiki_non_lem.txt*
