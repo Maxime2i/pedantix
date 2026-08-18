@@ -4,7 +4,7 @@
   "description": "Retrouvez le titre de l'article du jour, mot après mot.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0d0f12",
-  "theme_color": "#0d0f12",
+  "background_color": "#f7f8fa",
+  "theme_color": "#f7f8fa",
   "icons": []
 }

@@ -272,7 +272,8 @@ def health():
 
 @app.get("/puzzle")
 def puzzle():
-    num = puzzle_num()
+    # `?num=X` charge un jour précis (historique) ; défaut = jour courant.
+    num = request.args.get("num", type=int) or puzzle_num()
     p = get_puzzle(num)
     return jsonify(
         {

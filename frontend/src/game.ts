@@ -17,14 +17,17 @@ export interface RevealState {
 }
 
 /**
- * Dégradé d'orange : cos 0.49 -> rgb(255,191,0), cos 0.85 -> rgb(255,105,0),
- * borné entre les deux (défaut 0.67 si cos absent).
+ * Dégradé d'orange — thème clair, assombri pour contraste AA sur fond clair :
+ * cos 0.49 -> #f9a825, cos 0.85 -> #ef6c00, borné entre les deux
+ * (défaut 0.67 si cos absent).
  */
 export function orangeColor(cos: number | null | undefined): string {
   const c = cos == null ? 0.67 : Math.min(Math.max(cos, 0.49), 0.85);
   const t = (c - 0.49) / (0.85 - 0.49);
-  const g = Math.round(191 - 86 * t);
-  return `rgb(255, ${g}, 0)`;
+  const r = Math.round(245 - 6 * t);
+  const g = Math.round(168 - 60 * t);
+  const b = Math.round(37 - 37 * t);
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 export function emojiForGuess(g: Guess): string {
