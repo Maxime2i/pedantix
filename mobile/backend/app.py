@@ -14,6 +14,8 @@ import requests
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
+from stopwords import STOPWORDS
+
 DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
 VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
 ARTICLES_PATH = DATA_DIR / "articles.json"
@@ -21,11 +23,13 @@ ARTICLES_PATH = DATA_DIR / "articles.json"
 # et affiché en clair.
 EXACT_THRESHOLD = 0.85
 # Seuil « proche » (orange) : similarité cosinus à partir de laquelle un mot
-# de l'article devient visible en orange (proche mais pas trouvé). Fixé à 0.50 :
-# des mots sémantiquement proches mais pas synonymes (ex. « audio » vs
-# « amplificateur », cos ≈ 0.54) s'affichent en orange sans être considérés
-# exacts. En dessous : mot masqué.
-SEUIL_ORANGE = 0.50
+# de l'article devient visible en orange (proche mais pas trouvé). Calibré sur
+# l'article « Amplificateur électronique » : « audio » (cos max 0.5404) révèle
+# uniquement les mots réellement liés (analogique 0.5404, amplificateurs
+# 0.5168, amplificateur 0.5122, ampli 0.4927) ; « banane » (0.3133), « voiture »
+# (0.4074) ou « moteur » (0.4242) ne révèlent rien. Au-delà de 0.50 on perd
+# « ampli » ; en dessous on fait remonter des mots plus marginaux.
+SEUIL_ORANGE = 0.49
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
 
@@ -256,6 +260,16 @@ def level_for(score: float) -> str:
     return "hidden"
 
 
+def revealable(word: str) -> bool:
+    # Un token d'article ne doit JAMAIS être révélé si c'est un stopword ou un
+    # mot de ≤ 2 lettres : fastText leur donne des similarités artificiellement
+    # hautes avec des mots fréquents (ex. « son » vs « en » ≈ 0.57), ce qui
+    # faisait apparaître « un », « ou », « est », « la »… dans les révélations.
+    # Leur score peut être calculé (chaud/froid global) mais ne franchit aucun
+    # seuil d'affichage.
+    return word not in STOPWORDS and len(word) > 2
+
+
 @app.post("/score")
 def score():
     data = request.get_json(silent=True) or {}
@@ -298,10 +312,15 @@ def score():
     # État accumulé : score[pos] = max(score[pos], similarité). On ne signale
     # dans `updates` que les positions dont le niveau d'affichage change
     # (franchissement d'un seuil), pour que le client recolore en conséquence.
+    # Les stopwords et mots ≤ 2 lettres sont exclus de la révélation : leur
+    # score n'est jamais accumulé (score[pos] reste 0) pour qu'ils ne puissent
+    # pas non plus ressortir via la restauration d'état de /puzzle.
     updates: list[dict] = []
     revealed: list[str] = []
     seen_revealed: set[str] = set()
     for i, sim in enumerate(token_sims):
+        if not revealable(tokens[i]["w"]):
+            continue
         old_level = level_for(scores[i])
         scores[i] = max(scores[i], sim)
         new_level = level_for(scores[i])
@@ -312,7 +331,7 @@ def score():
                 if word not in seen_revealed:
                     revealed.append(word)
                     seen_revealed.add(word)
-    if exact_in_words and w not in seen_revealed:
+    if exact_in_words and w not in seen_revealed and revealable(w):
         revealed.append(w)
 
     if exact:

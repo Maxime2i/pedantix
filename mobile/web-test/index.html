@@ -143,7 +143,7 @@
       num: 0,
       tokens: [],
       levels: new Map(), // pos -> "exact" | "proche" (révélations par position)
-      thresholds: { exact: 0.85, proche: 0.50 },
+      thresholds: { exact: 0.85, proche: 0.49 },
       guesses: [],
     };
 
@@ -162,15 +162,27 @@
       setTimeout(() => el.classList.remove("show"), 2000);
     }
 
+    // Cohérence avec le serveur : le niveau d'un essai se décide sur le
+    // COSINUS brut comparé aux seuils (exact/proche) renvoyés par /puzzle.
+    // Le score affiché (g.score) est normalisé (cos+1)/2 — il ne faut pas le
+    // comparer directement aux seuils bruts.
+    function guessCosine(g) {
+      return g.cosine != null ? g.cosine : g.score * 2 - 1;
+    }
+
     function guessClass(g) {
       if (g.exact) return "exact";
-      if (g.score >= 0.90) return "hot";
+      const cos = guessCosine(g);
+      if (cos >= state.thresholds.exact) return "exact";
+      if (cos >= state.thresholds.proche) return "hot";
       return "cold";
     }
 
     function emojiForGuess(g) {
       if (g.exact) return "🟩";
-      if (g.score >= 0.90) return "🟧";
+      const cos = guessCosine(g);
+      if (cos >= state.thresholds.exact) return "🟩";
+      if (cos >= state.thresholds.proche) return "🟧";
       return "🟥";
     }
 
@@ -246,7 +258,7 @@
         });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const data = await resp.json();
-        state.guesses.push({ word: data.word, score: data.score, exact: data.exact });
+        state.guesses.push({ word: data.word, score: data.score, cosine: data.cosine, exact: data.exact });
         // Applique les révélations par position (franchissement de seuil) :
         // l'état s'accumule entre les essais, le vert gagne sur l'orange.
         (data.updates || []).forEach((u) => {
