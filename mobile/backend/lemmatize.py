@@ -194,6 +194,21 @@ for _base, _forms in {
         LEMMAS[_f] = _base
 
 
+# Groupes de DÉTERMINANTS — confirmés sur l'original (pedantix.certitudes.org)
+# par tests UI navigateur (jour nº1558) : proposer « le » -> « le », « la »,
+# « les », « l' » VERT ; « un » -> « un », « une » VERT (mais PAS « des ») ;
+# « ce » -> « ce », « cette », « ces » VERT. Seuls les groupes observés sont
+# implémentés : « cet » (absent de l'article testé) et « mon/ma/mes » (absents
+# aussi) ne sont PAS inclus, faute de confirmation sur l'original.
+# NB : « l' » élidé est tokenisé « l » par WORD_RE -> forme du groupe « le ».
+for _f in ("le", "la", "les", "l"):
+    LEMMAS[_f] = "le"
+for _f in ("un", "une"):
+    LEMMAS[_f] = "un"
+for _f in ("ce", "cette", "ces"):
+    LEMMAS[_f] = "ce"
+
+
 def strip_accents(text: str) -> str:
     """Minuscules sans accents (NFD puis suppression des diacritiques)."""
     text = unicodedata.normalize("NFD", text.lower())
@@ -202,6 +217,10 @@ def strip_accents(text: str) -> str:
 
 def lemmatize(form: str) -> str:
     """Lemme léger d'une forme : table de verbes, puis stemming pluriel."""
+    # « là » (adverbe) ne doit PAS être groupé avec le déterminant « la » :
+    # on le garde tel quel avant le lookup (collision après strip_accents).
+    if form == "là":
+        return "la"
     key = strip_accents(form)
     if key in LEMMAS:
         return LEMMAS[key]

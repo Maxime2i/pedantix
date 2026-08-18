@@ -37,8 +37,9 @@ ARTICLES_PATH = DATA_DIR / "articles.json"
 # réellement liés au sujet.
 EXACT_THRESHOLD = 0.85
 PROCH_THRESHOLD = 0.40
-# Révélation ORANGE dans l'article : un mot de l'article (ou du titre) dont la
-# similarité cosinus avec la proposition dépasse ce seuil s'affiche en orange.
+# Révélation ORANGE dans l'article : un mot de l'article dont la similarité
+# cosinus avec la proposition dépasse ce seuil s'affiche en orange (la
+# proposition s'affiche, avec un dégradé de teinte selon le cosinus).
 # Calibré sur l'article « Amplificateur électronique » : proposer
 # « amplificateur » révèle ampli (0.752), amplification (0.835), signal
 # (0.602), électronique (0.4950), électrique (0.555)… ; proposer « banane » ne
@@ -46,7 +47,7 @@ PROCH_THRESHOLD = 0.40
 # sur des mots isolés (« pain »->puissance 0.514, « économie »->puissance
 # 0.532) : fausses révélations rares et limitées à 1-2 mots, acceptées. Les
 # stopwords ne sont JAMAIS révélés en orange par cosinus (uniquement en vert
-# par présence exacte, ou par lemmatisation pour les formes d'un même verbe).
+# par présence exacte ou par lemme).
 SEUIL_ORANGE_REVEAL = 0.49
 UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
 ROOT = Path("/home/ubuntu/pedantix/mobile")
@@ -316,37 +317,26 @@ def title_embedding(title: str) -> np.ndarray | None:
 def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
     """Révélations dans l'article pour la proposition `w`.
 
-    Retourne (positions_exactes, article_updates) :
-    - positions_exactes : le mot est PRÉSENT tel quel dans le texte -> VERT
-      (y compris stopwords : un mot présent est un mot TROUVÉ).
-    - article_updates    : mots PROCHES -> ORANGE, avec les règles anti-spam :
-        * jamais un stopword en orange par similarité cosinus (seulement en
-          vert par présence exacte) ;
-        * jamais un mot déjà vert (présence exacte) ;
-        * lemmatisation : forme fléchie du MÊME lemme -> orange même si
-          stopword (ex. « être » révèle « est », « sont »).
+    Retourne (positions_vertes, article_updates) :
+    - positions_vertes : le mot est PRÉSENT tel quel (tw == w) OU partage le
+      MÊME LEMME (formes fléchies : « être » révèle est/sont/soit, « le »
+      révèle la/les/l') -> VERT, le mot réel de l'article s'affiche en clair.
+      Les stopwords sont inclus (un mot présent ou du même lemme est un mot
+      TROUVÉ).
+    - article_updates    : mots PROCHES par COSINUS uniquement -> ORANGE, la
+      proposition s'affiche (display = w) avec le cosinus dans `cos` pour le
+      dégradé de teinte côté client. Anti-spam : jamais un stopword en orange
+      par cosinus ; jamais un mot déjà vert (présence exacte OU lemme).
     """
-    exact = [i for i, tw in enumerate(words) if tw == w]
+    w_lemma = lemmatize(w)
+    exact = [i for i, tw in enumerate(words) if tw == w or lemmatize(tw) == w_lemma]
     exact_set = set(exact)
     updates: dict[int, dict] = {}
     if w in WORD_TO_IDX:
         w_vec = EMBEDDINGS[WORD_TO_IDX[w]]
-        w_lemma = lemmatize(w)
         for i, tw in enumerate(words):
             if i in exact_set:
                 continue
-            # Même lemme (formes fléchies d'un même verbe / pluriel) : fortement
-            # proche, autorisé même pour un stopword (comportement original).
-            # Affichage : c'est la PROPOSITION qui se montre en orange (display),
-            # pas la forme du texte (word reste conservé pour le débug).
-            if lemmatize(tw) == w_lemma:
-                updates[i] = {"pos": i, "word": tw, "display": w,
-                              "level": "proche", "source": "lemma"}
-                continue
-            # Proximité cosinus : jamais pour les stopwords (cibles OU
-            # proposition) — anti-spam. Affichage : TOUJOURS la proposition
-            # (display = w), comme pour le lemme ; word reste le mot réel de
-            # l'article (debug).
             if tw in STOPWORDS or w in STOPWORDS:
                 continue
             if tw not in WORD_TO_IDX:
@@ -354,36 +344,26 @@ def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
             c = float(w_vec @ EMBEDDINGS[WORD_TO_IDX[tw]])
             if c >= SEUIL_ORANGE_REVEAL:
                 updates[i] = {"pos": i, "word": tw, "display": w,
-                              "level": "proche", "source": "cosine"}
+                              "level": "proche", "source": "cosine",
+                              "cos": round(c, 4)}
     return exact, list(updates.values())
 
 
 def title_updates_for(w: str, title_words: list[str]) -> list[dict]:
     """Révélations des mots du TITRE (h2) pour la proposition `w`.
 
-    level "exact" : la proposition EST le mot du titre (vert).
-    level "proche": même lemme ou cosinus >= SEUIL_ORANGE_REVEAL (orange).
-    Mêmes règles anti-spam que l'article (pas de stopword orange par cosinus).
+    Règles officielles : « les mots du titre sont corrects ou pas, ils ne
+    sont JAMAIS grisés ». Le titre ne passe qu'en VERT (quand trouvé) ou
+    reste masqué : AUCUNE révélation « proche » (ni lemme ni cosinus).
+    - level "exact" : la proposition EST le mot du titre (vert).
+    - Le même lemme (forme fléchie, ex. « électroniques » -> « électronique »)
+      passe aussi en vert, cohérent avec l'article.
     """
     updates: list[dict] = []
     w_lemma = lemmatize(w)
     for j, tw in enumerate(title_words):
-        if tw == w:
+        if tw == w or lemmatize(tw) == w_lemma:
             updates.append({"idx": j, "word": tw, "display": tw, "level": "exact"})
-            continue
-        # Même lemme -> orange affichant la PROPOSITION (ex. « être » révèle
-        # « est » du titre en affichant « être »).
-        if lemmatize(tw) == w_lemma:
-            updates.append({"idx": j, "word": tw, "display": w,
-                            "level": "proche", "source": "lemma"})
-            continue
-        if tw in STOPWORDS or w in STOPWORDS:
-            continue
-        if w in WORD_TO_IDX and tw in WORD_TO_IDX:
-            c = float(EMBEDDINGS[WORD_TO_IDX[w]] @ EMBEDDINGS[WORD_TO_IDX[tw]])
-            if c >= SEUIL_ORANGE_REVEAL:
-                updates.append({"idx": j, "word": tw, "display": w,
-                                "level": "proche", "source": "cosine"})
     return updates
 
 
@@ -448,7 +428,8 @@ def score():
     title_updates = title_updates_for(w, p["title_words"]) if w else []
 
     if not w or w not in WORD_TO_IDX:
-        message = "Je ne trouve pas ce mot dans mon vocabulaire."
+        # Texte EXACT de l'original : « Je ne trouve pas ce mot. »
+        message = "Je ne trouve pas ce mot."
     elif temperature_level == "exact":
         message = "Très proche du titre !"
     elif temperature_level == "proche":
