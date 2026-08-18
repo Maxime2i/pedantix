@@ -5,8 +5,73 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f6f1e7" />
-    <meta name="description" content="Pédantix — retrouvez le titre de l'article du jour, mot après mot." />
-    <title>Pédantix</title>
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Pédantix — le mot du jour : retrouvez le titre de l'article Wikipédia du jour, mot après mot. Un jeu de culture générale quotidien, gratuit et sans inscription."
+    />
+    <title>Pédantix — Le mot du jour (jeu de culture générale)</title>
+    <link rel="canonical" href="https://pedantix.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pédantix" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://pedantix.vercel.app/" />
+    <meta property="og:title" content="Pédantix — Le mot du jour (jeu de culture générale)" />
+    <meta
+      property="og:description"
+      content="Retrouvez le titre de l'article Wikipédia du jour, mot après mot. Un jeu de culture générale quotidien, gratuit et sans inscription."
+    />
+    <meta property="og:image" content="https://pedantix.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pédantix — Le mot du jour, jeu de culture générale" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pédantix — Le mot du jour (jeu de culture générale)" />
+    <meta
+      name="twitter:description"
+      content="Retrouvez le titre de l'article Wikipédia du jour, mot après mot. Un jeu de culture générale quotidien, gratuit et sans inscription."
+    />
+    <meta name="twitter:image" content="https://pedantix.vercel.app/og-image.png" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Pédantix",
+            "url": "https://pedantix.vercel.app/",
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "VideoGame",
+            "name": "Pédantix",
+            "description": "Jeu de culture générale quotidien : retrouvez le titre de l'article Wikipédia du jour, mot après mot, sans aide extérieure.",
+            "genre": "Énigme / Jeu de mots",
+            "inLanguage": "fr-FR",
+            "url": "https://pedantix.vercel.app/",
+            "applicationCategory": "Game"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNH4W6SEFF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TNH4W6SEFF');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
