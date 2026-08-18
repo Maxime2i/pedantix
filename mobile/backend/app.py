@@ -337,8 +337,11 @@ def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
                 continue
             # Même lemme (formes fléchies d'un même verbe / pluriel) : fortement
             # proche, autorisé même pour un stopword (comportement original).
+            # Affichage : c'est la PROPOSITION qui se montre en orange (display),
+            # pas la forme du texte (word reste conservé pour le débug).
             if lemmatize(tw) == w_lemma:
-                updates[i] = {"pos": i, "word": tw, "level": "proche"}
+                updates[i] = {"pos": i, "word": tw, "display": w,
+                              "level": "proche", "source": "lemma"}
                 continue
             # Proximité cosinus : jamais pour les stopwords (cibles OU
             # proposition) — anti-spam.
@@ -348,7 +351,8 @@ def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
                 continue
             c = float(w_vec @ EMBEDDINGS[WORD_TO_IDX[tw]])
             if c >= SEUIL_ORANGE_REVEAL:
-                updates[i] = {"pos": i, "word": tw, "level": "proche"}
+                updates[i] = {"pos": i, "word": tw, "display": tw,
+                              "level": "proche", "source": "cosine"}
     return exact, list(updates.values())
 
 
@@ -363,17 +367,21 @@ def title_updates_for(w: str, title_words: list[str]) -> list[dict]:
     w_lemma = lemmatize(w)
     for j, tw in enumerate(title_words):
         if tw == w:
-            updates.append({"idx": j, "word": tw, "level": "exact"})
+            updates.append({"idx": j, "word": tw, "display": tw, "level": "exact"})
             continue
+        # Même lemme -> orange affichant la PROPOSITION (ex. « être » révèle
+        # « est » du titre en affichant « être »).
         if lemmatize(tw) == w_lemma:
-            updates.append({"idx": j, "word": tw, "level": "proche"})
+            updates.append({"idx": j, "word": tw, "display": w,
+                            "level": "proche", "source": "lemma"})
             continue
         if tw in STOPWORDS or w in STOPWORDS:
             continue
         if w in WORD_TO_IDX and tw in WORD_TO_IDX:
             c = float(EMBEDDINGS[WORD_TO_IDX[w]] @ EMBEDDINGS[WORD_TO_IDX[tw]])
             if c >= SEUIL_ORANGE_REVEAL:
-                updates.append({"idx": j, "word": tw, "level": "proche"})
+                updates.append({"idx": j, "word": tw, "display": tw,
+                                "level": "proche", "source": "cosine"})
     return updates
 
 
@@ -396,7 +404,7 @@ def score():
     if title_found:
         # Tous les mots du titre sont révélés (le client affiche la victoire).
         title_updates = [
-            {"idx": j, "word": tw, "level": "exact"}
+            {"idx": j, "word": tw, "display": tw, "level": "exact"}
             for j, tw in enumerate(p["title_words"])
         ]
         return jsonify(

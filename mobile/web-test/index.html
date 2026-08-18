@@ -211,7 +211,10 @@
           return `<span class="revealed-exact">${escapeHtml(t.w)}</span>`;
         }
         if (lvl === "proche") {
-          return `<span class="revealed-close">${escapeHtml(t.w)}</span>`;
+          // Texte affiché = display (proposition pour un lemme, mot réel pour
+          // un cosinus) ; le mot réel reste accessible via state.tokens[i].w.
+          const txt = state.revealedText.get(i) || t.w;
+          return `<span class="revealed-close">${escapeHtml(txt)}</span>`;
         }
         const len = t.w.length;
         return `<span class="blank" style="display:inline-block;min-width:calc(1ch * ${len});border-bottom:2px solid #555;height:1.2em"></span>`;
@@ -228,7 +231,10 @@
           return `<span class="revealed-exact">${escapeHtml(w)}</span>`;
         }
         if (lvl === "proche") {
-          return `<span class="revealed-close">${escapeHtml(w)}</span>`;
+          // Texte affiché = display (proposition pour un lemme, mot réel pour
+          // un cosinus) ; le mot réel du titre reste accessible via titleWords[i].
+          const txt = state.titleRevealedText.get(i) || w;
+          return `<span class="revealed-close">${escapeHtml(txt)}</span>`;
         }
         const len = w.length;
         return `<span class="blank" style="display:inline-block;min-width:calc(1ch * ${len});border-bottom:2px solid #555;height:1.2em"></span>`;
@@ -256,7 +262,9 @@
         state.titleWords = data.title_words || [];
         state.tokens = data.tokens;
         state.revealed = new Map(); // jamais de restauration serveur
+        state.revealedText = new Map(); // texte affiché pour l'orange (display)
         state.titleRevealed = new Map();
+        state.titleRevealedText = new Map();
         state.guesses = [];
         state.won = false;
         $("puzzle-info").textContent = `Pédantix #${data.num}`;
@@ -294,17 +302,22 @@
         // Révélations : VERT pour la présence exacte (revealed_positions),
         // ORANGE pour les mots proches (article_updates / title_updates).
         // État local uniquement ; le VERT gagne sur l'ORANGE.
+        // Pour l'orange, le texte affiché = u.display (la proposition pour
+        // une révélation par lemme, le mot réel pour le cosinus) ; le mot
+        // réel reste dans u.word (debug). Le vert affiche toujours le mot réel.
         (data.revealed_positions || []).forEach((pos) => {
           state.revealed.set(pos, "exact");
         });
         (data.article_updates || []).forEach((u) => {
           if (state.revealed.get(u.pos) !== "exact") {
             state.revealed.set(u.pos, u.level);
+            state.revealedText.set(u.pos, u.display || u.word);
           }
         });
         (data.title_updates || []).forEach((u) => {
           if (state.titleRevealed.get(u.idx) !== "exact") {
             state.titleRevealed.set(u.idx, u.level);
+            state.titleRevealedText.set(u.idx, u.display || u.word);
           }
         });
         renderHistory();
