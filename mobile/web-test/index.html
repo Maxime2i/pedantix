@@ -211,8 +211,8 @@
           return `<span class="revealed-exact">${escapeHtml(t.w)}</span>`;
         }
         if (lvl === "proche") {
-          // Texte affiché = display (proposition pour un lemme, mot réel pour
-          // un cosinus) ; le mot réel reste accessible via state.tokens[i].w.
+          // Texte affiché = display = LA PROPOSITION (lemme OU cosinus) ; le
+          // mot réel de l'article reste accessible via state.tokens[i].w.
           const txt = state.revealedText.get(i) || t.w;
           return `<span class="revealed-close">${escapeHtml(txt)}</span>`;
         }
@@ -231,8 +231,8 @@
           return `<span class="revealed-exact">${escapeHtml(w)}</span>`;
         }
         if (lvl === "proche") {
-          // Texte affiché = display (proposition pour un lemme, mot réel pour
-          // un cosinus) ; le mot réel du titre reste accessible via titleWords[i].
+          // Texte affiché = display = LA PROPOSITION (lemme OU cosinus) ; le
+          // mot réel du titre reste accessible via titleWords[i].
           const txt = state.titleRevealedText.get(i) || w;
           return `<span class="revealed-close">${escapeHtml(txt)}</span>`;
         }

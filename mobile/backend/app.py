@@ -344,14 +344,16 @@ def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
                               "level": "proche", "source": "lemma"}
                 continue
             # Proximité cosinus : jamais pour les stopwords (cibles OU
-            # proposition) — anti-spam.
+            # proposition) — anti-spam. Affichage : TOUJOURS la proposition
+            # (display = w), comme pour le lemme ; word reste le mot réel de
+            # l'article (debug).
             if tw in STOPWORDS or w in STOPWORDS:
                 continue
             if tw not in WORD_TO_IDX:
                 continue
             c = float(w_vec @ EMBEDDINGS[WORD_TO_IDX[tw]])
             if c >= SEUIL_ORANGE_REVEAL:
-                updates[i] = {"pos": i, "word": tw, "display": tw,
+                updates[i] = {"pos": i, "word": tw, "display": w,
                               "level": "proche", "source": "cosine"}
     return exact, list(updates.values())
 
@@ -380,7 +382,7 @@ def title_updates_for(w: str, title_words: list[str]) -> list[dict]:
         if w in WORD_TO_IDX and tw in WORD_TO_IDX:
             c = float(EMBEDDINGS[WORD_TO_IDX[w]] @ EMBEDDINGS[WORD_TO_IDX[tw]])
             if c >= SEUIL_ORANGE_REVEAL:
-                updates.append({"idx": j, "word": tw, "display": tw,
+                updates.append({"idx": j, "word": tw, "display": w,
                                 "level": "proche", "source": "cosine"})
     return updates
 
