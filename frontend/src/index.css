@@ -17,7 +17,8 @@
   --red-border: #e8bfb2;
   --border: #e0d5bd;
   --border-soft: #e8dcc6; /* filet éditorial */
-  --blank: #ece2cf; /* boîtes de mots masqués */
+  --blank: #241f1a; /* boîtes noires des mots masqués (comme le vrai Pédantix) */
+  --blank-border: #3b342b; /* bordure fine des boîtes noires */
   --shadow: 0 1px 4px rgba(120, 90, 40, 0.1);
   --radius: 12px;
   --radius-sm: 8px;
@@ -140,61 +141,7 @@ body::before {
   line-height: 1.3;
 }
 
-.history-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  flex-shrink: 0;
-  padding: 0.42rem 0.8rem;
-  border: 1px solid #e8c9a8;
-  border-radius: 999px;
-  background: var(--accent-tint);
-  color: var(--accent-dark);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.history-toggle:hover {
-  background: #f4d9b8;
-  border-color: #dcb085;
-}
-
-.history-toggle[aria-expanded="true"] {
-  border-color: var(--accent);
-  background: #f4d9b8;
-}
-
-.back-today {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.45rem 1.1rem;
-  border: 1px solid #e0c9a8;
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--accent-dark);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.back-today:hover {
-  background: var(--accent-tint);
-  border-color: var(--accent);
-}
-
-/* ---------- Panneau historique des jours ---------- */
-.history-panel {
-  background: var(--card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1rem;
-  margin-bottom: 1.25rem;
-}
-
+/* Label de section éditorial (historique de partie, etc.). */
 .section-label {
   margin: 0 0 0.6rem;
   font-size: 0.72rem;
@@ -214,64 +161,6 @@ body::before {
   background: var(--amber);
   border-radius: 1px;
   transform: rotate(45deg) translateY(-1px);
-}
-
-.days-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.day-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  width: 100%;
-  padding: 0.55rem 0.6rem;
-  border: none;
-  border-radius: 8px;
-  background: transparent;
-  text-align: left;
-  font-family: inherit;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.12s;
-}
-
-.day-row:hover {
-  background: #f4ecdc;
-}
-
-.day-row.current {
-  background: var(--accent-tint);
-}
-
-.day-row.current .day-num {
-  color: var(--accent-dark);
-}
-
-.day-num {
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-}
-
-.day-date {
-  color: var(--muted);
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.day-status {
-  margin-left: auto;
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-align: right;
-}
-
-.day-status.won {
-  color: var(--green);
-  font-weight: 600;
 }
 
 /* ---------- Titre masqué ---------- */
@@ -373,20 +262,23 @@ body::before {
   overflow-wrap: anywhere;
 }
 
-/* Mots masqués : crème soutenu, arrondis, largeur = longueur du mot. */
+/* Mots masqués : boîtes NOIRES chaudes, hauteur fixe, largeur = longueur
+   du mot. Aucune animation : une page fraîche évoque du texte masqué,
+   jamais un chargement (comme le vrai Pédantix). */
 .blank {
   display: inline-block;
   vertical-align: bottom;
   background: var(--blank);
+  border: 1px solid var(--blank-border);
   border-radius: 6px;
-  height: 1.2em;
+  height: 1.6em;
   margin: 0 2px;
 }
 
-/* Boîtes du titre légèrement plus grandes. */
+/* Boîtes du titre : mêmes dimensions (uniformité des boîtes noires). */
 .title-blank {
-  height: 1.3em;
-  border-radius: 7px;
+  height: 1.6em;
+  border-radius: 6px;
 }
 
 /* ---------- Mots révélés ---------- */
@@ -637,20 +529,11 @@ button.share:hover {
 }
 
 @media (max-width: 479px) {
-  /* Pilule Historique réduite à l'icône (aria-label conservé) :
-     header compact mobile : logo à gauche, icône à droite. */
+  /* Header compact mobile : logo et méta empilés à gauche. */
   .header-left {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.15rem;
-  }
-
-  .history-toggle {
-    padding: 0.42rem 0.55rem;
-  }
-
-  .history-toggle-label {
-    display: none;
   }
 
   .brand {
@@ -665,10 +548,6 @@ button.share:hover {
 
   .article {
     padding: 1.4rem 1.5rem;
-  }
-
-  .history-toggle-label {
-    display: inline;
   }
 }
 

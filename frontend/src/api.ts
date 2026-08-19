@@ -59,9 +59,8 @@ async function json<T>(url: string, init?: RequestInit): Promise<T> {
   return (await resp.json()) as T;
 }
 
-export function fetchPuzzle(num?: number): Promise<Puzzle> {
-  const qs = num ? `?num=${num}` : "";
-  return json<Puzzle>(`${API_BASE}/puzzle${qs}`);
+export function fetchPuzzle(): Promise<Puzzle> {
+  return json<Puzzle>(`${API_BASE}/puzzle`);
 }
 
 export function submitScore(num: number, word: string): Promise<ScoreResponse> {

@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1a73e8"/>
-  <text x="32" y="44" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#ffffff" text-anchor="middle">P</text>
-  <circle cx="50" cy="14" r="6" fill="#34a853"/>
+  <!-- Pédantix — favicon éditorial : papier crème, « P » serif terracotta,
+       filet ambre (écho du trait du header). -->
+  <rect width="64" height="64" rx="14" fill="#f6f1e7"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#e0d5bd" stroke-width="1.5"/>
+  <text x="32" y="44" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#c05621" text-anchor="middle">P</text>
+  <rect x="22" y="49" width="20" height="3" rx="1.5" fill="#d97706"/>
 </svg>
