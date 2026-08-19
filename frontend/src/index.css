@@ -276,7 +276,6 @@ body::before {
 
 /* ---------- Titre masqué ---------- */
 .title-section {
-  margin-bottom: 1.25rem;
   text-align: left;
 }
 
@@ -304,20 +303,62 @@ body::before {
   animation: reveal 0.3s ease-out;
 }
 
-/* ---------- Grid magazine : article (1fr) | sidebar historique ---------- */
-.main-grid {
+/* ---------- Grille du jeu (mobile-first) ----------
+   Ordre mobile : titre → saisie (+feedback) → article → historique.
+   Desktop (>=900px) : article + sidebar, saisie sous la grille. */
+.game {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-areas:
+    "title"
+    "controls"
+    "feedback"
+    "vocab"
+    "article"
+    "sidebar"
+    "share";
+  gap: 1rem;
   align-items: start;
 }
 
-.main-col {
+/* Anti-blowout : les items de la grille ne doivent jamais forcer la piste à
+   dépasser le conteneur (ex. l'input ~20ch du formulaire à 375px). */
+.game > * {
   min-width: 0;
 }
 
+.title-section {
+  grid-area: title;
+  margin-bottom: 0;
+}
+
+.controls {
+  grid-area: controls;
+  margin-top: 0;
+}
+
+.feedback {
+  grid-area: feedback;
+  margin-top: 0;
+}
+
+.vocab-msg {
+  grid-area: vocab;
+  margin-top: 0;
+}
+
+.article {
+  grid-area: article;
+}
+
 .sidebar {
+  grid-area: sidebar;
   min-width: 0;
+}
+
+.share-row {
+  grid-area: share;
+  margin-top: 0;
 }
 
 /* ---------- Article ---------- */
@@ -424,7 +465,6 @@ body::before {
 .controls {
   display: flex;
   gap: 0.6rem;
-  margin-top: 1.5rem;
   align-items: stretch;
 }
 
@@ -494,7 +534,6 @@ button.primary:focus-visible {
 /* ---------- Feedback émojis + messages ---------- */
 .feedback {
   min-height: 1.5em;
-  margin-top: 0.6rem;
   font-size: 1rem;
   letter-spacing: 0.1em;
   color: var(--muted);
@@ -502,7 +541,6 @@ button.primary:focus-visible {
 }
 
 .vocab-msg {
-  margin-top: 0.4rem;
   background: #f3ead6;
   border-radius: 10px;
   padding: 0.5rem 0.75rem;
@@ -512,7 +550,6 @@ button.primary:focus-visible {
 }
 
 .share-row {
-  margin-top: 1rem;
   text-align: center;
 }
 
@@ -572,6 +609,33 @@ button.share:hover {
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 899px) {
+  /* Input mobile confortable : 16px minimum (anti-zoom iOS), ~48px de haut,
+     bouton « Proposer » à côté, même hauteur, zone tactile généreuse. */
+  .guess-input {
+    padding: 0.85rem 0.9rem;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  button.primary {
+    min-height: 48px;
+    padding: 0.85rem 1.4rem;
+    font-size: 1rem;
+  }
+}
+
+/* Très petits écrans : le bouton passe sous l'input, pleine largeur. */
+@media (max-width: 359px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  button.primary {
+    width: 100%;
+  }
+}
+
 @media (max-width: 479px) {
   /* Pilule Historique réduite à l'icône (aria-label conservé) :
      header compact mobile : logo à gauche, icône à droite. */
@@ -608,11 +672,20 @@ button.share:hover {
   }
 }
 
-/* Desktop « magazine » : article pleine largeur + sidebar historique sticky. */
+/* Desktop « magazine » : article + sidebar historique à droite, saisie sous
+   la grille (ordre inchangé par rapport à l'ancien layout). */
 @media (min-width: 900px) {
-  .main-grid {
+  .game {
     grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 2rem;
+    grid-template-areas:
+      "title sidebar"
+      "article sidebar"
+      "controls controls"
+      "feedback feedback"
+      "vocab vocab"
+      "share share";
+    column-gap: 2rem;
+    row-gap: 1.5rem;
   }
 
   .sidebar {

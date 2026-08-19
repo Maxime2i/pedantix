@@ -319,53 +319,77 @@ export default function App() {
 
       {error && <div className="error-banner">{error}</div>}
 
-      <main className="main-grid">
-        <div className="main-col">
-          <section className="title-section">
-            {won ? (
-              <p className="title-correct">Bravo ! Le titre était : {title}</p>
-            ) : (
-              <h2 className="puzzle-title" aria-label="Titre masqué">
-                {titleWords.map((w, i) => (
-                  <Fragment key={i}>
-                    {i > 0 && " "}
-                    {titleRevealed[i] ? (
-                      <span className="w w-exact">{titleRevealed[i].text}</span>
-                    ) : (
-                      <span
-                        className="blank title-blank"
-                        style={{ minWidth: `calc(1ch * ${w.length})` }}
-                      />
-                    )}
-                  </Fragment>
-                ))}
-              </h2>
-            )}
-          </section>
-
-          <section className="article" aria-label="Article masqué">
-            {tokens.map((t, i) => {
-              const r = revealed[i];
-              return (
+      {/* Ordre DOM = ordre mobile : titre → saisie (+feedback) → article →
+          historique de partie. Sur desktop (>=900px), les aires de la grille
+          replacent la sidebar à droite et la saisie sous la grille. */}
+      <main className="game">
+        <section className="title-section">
+          {won ? (
+            <p className="title-correct">Bravo ! Le titre était : {title}</p>
+          ) : (
+            <h2 className="puzzle-title" aria-label="Titre masqué">
+              {titleWords.map((w, i) => (
                 <Fragment key={i}>
                   {i > 0 && " "}
-                  {r?.level === "exact" ? (
-                    <span className="w w-exact">{r.text}</span>
-                  ) : r?.level === "proche" ? (
-                    <span className="w w-proche" style={{ color: orangeColor(r.cos) }}>
-                      {r.text}
-                    </span>
+                  {titleRevealed[i] ? (
+                    <span className="w w-exact">{titleRevealed[i].text}</span>
                   ) : (
                     <span
-                      className="blank"
-                      style={{ minWidth: `calc(1ch * ${t.w.length})` }}
+                      className="blank title-blank"
+                      style={{ minWidth: `calc(1ch * ${w.length})` }}
                     />
                   )}
                 </Fragment>
-              );
-            })}
-          </section>
+              ))}
+            </h2>
+          )}
+        </section>
+
+        <form className="controls" onSubmit={handleSubmit}>
+          <input
+            ref={inputRef}
+            type="text"
+            className="guess-input"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Votre mot (ou le titre)"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            disabled={won}
+            aria-label="Proposer un mot ou le titre"
+          />
+          <button type="submit" className="primary" disabled={won}>
+            Proposer
+          </button>
+        </form>
+        <div className="feedback" aria-live="polite">
+          {feedback}
         </div>
+        {vocabMsg && <div className="vocab-msg">{vocabMsg}</div>}
+
+        <section className="article" aria-label="Article masqué">
+          {tokens.map((t, i) => {
+            const r = revealed[i];
+            return (
+              <Fragment key={i}>
+                {i > 0 && " "}
+                {r?.level === "exact" ? (
+                  <span className="w w-exact">{r.text}</span>
+                ) : r?.level === "proche" ? (
+                  <span className="w w-proche" style={{ color: orangeColor(r.cos) }}>
+                    {r.text}
+                  </span>
+                ) : (
+                  <span
+                    className="blank"
+                    style={{ minWidth: `calc(1ch * ${t.w.length})` }}
+                  />
+                )}
+              </Fragment>
+            );
+          })}
+        </section>
 
         <aside className="sidebar">
           <section className="history">
@@ -399,36 +423,13 @@ export default function App() {
             </table>
           </section>
         </aside>
+
+        <div className="share-row">
+          <button type="button" className="share" onClick={handleShare}>
+            Partager
+          </button>
+        </div>
       </main>
-
-      <form className="controls" onSubmit={handleSubmit}>
-        <input
-          ref={inputRef}
-          type="text"
-          className="guess-input"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Votre mot (ou le titre)"
-          autoComplete="off"
-          autoCorrect="off"
-          spellCheck={false}
-          disabled={won}
-          aria-label="Proposer un mot ou le titre"
-        />
-        <button type="submit" className="primary" disabled={won}>
-          Proposer
-        </button>
-      </form>
-      <div className="feedback" aria-live="polite">
-        {feedback}
-      </div>
-      {vocabMsg && <div className="vocab-msg">{vocabMsg}</div>}
-
-      <div className="share-row">
-        <button type="button" className="share" onClick={handleShare}>
-          Partager
-        </button>
-      </div>
 
       {toast && <div className={`toast${toast.success ? " success" : ""}`}>{toast.msg}</div>}
     </div>
