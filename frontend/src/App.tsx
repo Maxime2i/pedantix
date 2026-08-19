@@ -23,6 +23,10 @@ export default function App() {
   const [tokens, setTokens] = useState<Token[]>([]);
   const [guesses, setGuesses] = useState<Guess[]>([]);
   const [revealed, setRevealed] = useState<Record<number, RevealState>>({});
+  // Cosinus de la proposition actuellement affichée (orange) sur chaque
+  // position : une position orange n'est remplacée que par une proposition
+  // PLUS proche (cos strictement supérieur). Miroir de revealed[].cos.
+  const [revealedCos, setRevealedCos] = useState<Map<number, number>>(new Map());
   const [titleRevealed, setTitleRevealed] = useState<Record<number, RevealState>>({});
   const [won, setWon] = useState(false);
   const [feedback, setFeedback] = useState("");
@@ -70,12 +74,37 @@ export default function App() {
           next[pos] = { level: "exact", text: tokens[pos]?.w ?? "", cos: null };
         }
         for (const u of data.article_updates || []) {
-          if (next[u.pos]?.level !== "exact") {
-            next[u.pos] = {
-              level: u.level === "exact" ? "exact" : "proche",
-              text: u.display || u.word,
-              cos: u.cos ?? null,
-            };
+          const cur = next[u.pos];
+          // Vert gagne : une position déjà exacte n'est jamais remplacée.
+          if (cur?.level === "exact") continue;
+          const isExact = u.level === "exact";
+          const newCos = u.cos ?? null;
+          // Orange affiché : ne remplacer que si la nouvelle proposition est
+          // PLUS proche du mot caché (cos strictement supérieur).
+          const prevCos = revealedCos.get(u.pos);
+          if (!isExact && newCos != null && prevCos != null && newCos <= prevCos) {
+            continue;
+          }
+          next[u.pos] = {
+            level: isExact ? "exact" : "proche",
+            text: u.display || u.word,
+            cos: newCos,
+          };
+        }
+        return next;
+      });
+      // Miroir : cos par position orange (retiré quand la position devient
+      // verte, gardé quand une proposition moins proche est rejetée).
+      setRevealedCos((prev) => {
+        const next = new Map(prev);
+        for (const pos of data.revealed_positions || []) next.delete(pos);
+        for (const u of data.article_updates || []) {
+          const newCos = u.cos ?? null;
+          if (u.level === "exact" || newCos == null) {
+            next.delete(u.pos);
+          } else {
+            const prevCos = next.get(u.pos);
+            if (prevCos == null || newCos > prevCos) next.set(u.pos, newCos);
           }
         }
         return next;
@@ -91,7 +120,7 @@ export default function App() {
         return next;
       });
     },
-    [tokens],
+    [tokens, revealedCos],
   );
 
   async function handleSubmit(e: FormEvent) {
