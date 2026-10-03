@@ -1,29 +1,101 @@
 /* Pédantix — thème « magazine chaleureux » : papier crème, serif, terracotta/ambre.
-   Structure JSX inchangée ; uniquement la peau visuelle. Mobile-first. */
-:root {
+   Quatre variantes comme l'original (coloré/gris × clair/sombre), posées sur
+   <html class="light-colorful|dark-colorful|light-grey|dark-grey">. Mobile-first. */
+:root,
+:root.light-colorful {
+  color-scheme: light;
   --bg: #f6f1e7;
-  --bg-2: #faf6ec;
   --card: #fffdf6;
   --text: #3b3226;
   --muted: #7a6f5d;
   --accent: #c05621; /* terracotta */
   --accent-dark: #b3481a;
-  --accent-tint: #fbeeda; /* ambre très pâle */
+  --accent-tint: #fbeeda;
   --amber: #d97706;
-  --amber-ink: #b45309; /* ambre foncé lisible sur ambre pâle */
-  --green: #3e7c4f; /* vert chaleureux, lisible sur crème */
+  --amber-ink: #b45309;
+  --green: #3e7c4f;
+  --fresh-bg: #c8efc0; /* mot trouvé au dernier essai */
   --red-text: #b3261e;
   --red-bg: #fbe8e2;
   --red-border: #e8bfb2;
   --border: #e0d5bd;
-  --border-soft: #e8dcc6; /* filet éditorial */
-  --blank: #241f1a; /* boîtes noires des mots masqués (comme le vrai Pédantix) */
-  --blank-border: #3b342b; /* bordure fine des boîtes noires */
+  --border-soft: #e8dcc6;
+  --blank: #241f1a; /* boîtes noires des mots masqués */
+  --flash-len: #5ad1ff;
+  --flash-word: #66ee66;
+  --dots: rgba(192, 86, 33, 0.05);
+  --overlay: rgba(36, 31, 26, 0.45);
   --shadow: 0 1px 4px rgba(120, 90, 40, 0.1);
   --radius: 12px;
-  --radius-sm: 8px;
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root.dark-colorful {
+  color-scheme: dark;
+  --bg: #1d1915;
+  --card: #27211b;
+  --text: #ece3d3;
+  --muted: #a99c86;
+  --accent: #e07a3f;
+  --accent-dark: #f08d52;
+  --accent-tint: #3a2a1d;
+  --amber: #f59e0b;
+  --amber-ink: #f6b453;
+  --green: #7cc48d;
+  --fresh-bg: #2f5a37;
+  --red-text: #f3a497;
+  --red-bg: #3a201b;
+  --red-border: #6b3328;
+  --border: #463b2e;
+  --border-soft: #3a3027;
+  --blank: #0d0b09;
+  --dots: rgba(224, 122, 63, 0.05);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+:root.light-grey {
+  color-scheme: light;
+  --bg: #efefef;
+  --card: #fcfcfc;
+  --text: #2e2e2e;
+  --muted: #6e6e6e;
+  --accent: #555;
+  --accent-dark: #333;
+  --accent-tint: #e6e6e6;
+  --amber: #777;
+  --amber-ink: #444;
+  --green: #2f6b3d;
+  --fresh-bg: #cfe8cf;
+  --border: #d4d4d4;
+  --border-soft: #e2e2e2;
+  --blank: #222;
+  --dots: rgba(0, 0, 0, 0.03);
+}
+
+:root.dark-grey {
+  color-scheme: dark;
+  --bg: #1b1b1b;
+  --card: #262626;
+  --text: #e6e6e6;
+  --muted: #9a9a9a;
+  --accent: #bbb;
+  --accent-dark: #ddd;
+  --accent-tint: #333;
+  --amber: #aaa;
+  --amber-ink: #ccc;
+  --green: #8fcf9c;
+  --fresh-bg: #305a38;
+  --red-text: #f3a497;
+  --red-bg: #3a201b;
+  --red-border: #6b3328;
+  --border: #3d3d3d;
+  --border-soft: #333;
+  --blank: #0a0a0a;
+  --dots: rgba(255, 255, 255, 0.03);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -45,15 +117,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Motif discret : points très légers, comme du papier. Sobre. */
+/* Motif discret : points très légers, comme du papier. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(192, 86, 33, 0.05) 1.1px, transparent 1.1px);
+  background-image: radial-gradient(var(--dots) 1.1px, transparent 1.1px);
   background-size: 26px 26px;
   pointer-events: none;
   z-index: 0;
+}
+
+a {
+  color: var(--accent-dark);
 }
 
 .app {
@@ -61,7 +137,7 @@ body::before {
   z-index: 1;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 1.25rem 3rem;
+  padding: 1rem 1rem 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,20 +148,31 @@ body::before {
   outline-offset: 2px;
 }
 
-/* ---------- Header pleine largeur « magazine » ---------- */
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ---------- Header « magazine » ---------- */
 .header {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem 1rem;
   flex-wrap: wrap;
   padding: 0.5rem 0 1rem;
-  border-bottom: 1px solid var(--border-soft); /* filet éditorial fin */
+  border-bottom: 1px solid var(--border-soft);
   margin-bottom: 1.25rem;
 }
 
-/* Petit trait terracotta posé sur le filet, à gauche (écho du magazine). */
 .header::after {
   content: "";
   position: absolute;
@@ -111,11 +198,9 @@ body::before {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--text);
 }
 
 .header-meta {
-  margin: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -128,7 +213,6 @@ body::before {
   margin: 0 0.5rem;
 }
 
-/* Badge d'essais : ambre pâle, discret, à côté du compteur. */
 .meta-guesses {
   display: inline-block;
   padding: 0.18rem 0.65rem;
@@ -141,230 +225,253 @@ body::before {
   line-height: 1.3;
 }
 
-/* Label de section éditorial (historique de partie, etc.). */
-.section-label {
-  margin: 0 0 0.6rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.rules-toggle {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
   color: var(--muted);
-}
-
-/* Petit losange ambre, marque éditoriale devant les titres de section. */
-.section-label::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 0.5rem;
-  background: var(--amber);
-  border-radius: 1px;
-  transform: rotate(45deg) translateY(-1px);
-}
-
-/* ---------- Titre masqué ---------- */
-.title-section {
-  text-align: left;
-}
-
-.puzzle-title {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
   font-weight: 600;
-  line-height: 2;
-  letter-spacing: 0.01em;
-  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.title-correct {
-  margin: 0;
+.rules-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
   background: var(--accent-tint);
-  border: 1px solid rgba(192, 86, 33, 0.45);
-  color: #7a3b12;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.5;
-  border-radius: 12px;
-  padding: 0.9rem 1.1rem;
-  animation: reveal 0.3s ease-out;
 }
 
-/* ---------- Grille du jeu (mobile-first) ----------
-   Ordre mobile : titre → saisie (+feedback) → article → historique.
-   Desktop (>=900px) : article + sidebar, saisie sous la grille. */
+/* ---------- Grille du jeu ---------- */
 .game {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "title"
+    "success"
     "controls"
     "feedback"
-    "vocab"
     "article"
-    "sidebar"
-    "share";
+    "sidebar";
   gap: 1rem;
   align-items: start;
 }
 
-/* Anti-blowout : les items de la grille ne doivent jamais forcer la piste à
-   dépasser le conteneur (ex. l'input ~20ch du formulaire à 375px). */
 .game > * {
   min-width: 0;
 }
 
 .title-section {
   grid-area: title;
-  margin-bottom: 0;
 }
-
+.success {
+  grid-area: success;
+}
 .controls {
   grid-area: controls;
-  margin-top: 0;
 }
-
 .feedback {
   grid-area: feedback;
-  margin-top: 0;
 }
-
-.vocab-msg {
-  grid-area: vocab;
-  margin-top: 0;
-}
-
 .article {
   grid-area: article;
 }
-
 .sidebar {
   grid-area: sidebar;
-  min-width: 0;
 }
 
-.share-row {
-  grid-area: share;
-  margin-top: 0;
+/* ---------- Titre et article ---------- */
+.puzzle-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
 }
 
-/* ---------- Article ---------- */
 .article {
   background: var(--card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.15rem;
-  line-height: 1.9;
+  line-height: 1.95;
   font-size: 1.05rem;
   overflow-wrap: anywhere;
 }
 
-/* Mots masqués : boîtes NOIRES chaudes, hauteur fixe, largeur = longueur
-   du mot. Aucune animation : une page fraîche évoque du texte masqué,
-   jamais un chargement (comme le vrai Pédantix). */
-.blank {
+.article p {
+  margin: 0 0 0.9em;
+}
+
+.article > :last-child {
+  margin-bottom: 0;
+}
+
+.article ul,
+.article ol {
+  margin: 0 0 0.9em;
+  padding-left: 1.4em;
+}
+
+/* Comme l'original : le texte ne se copie pas tant que la page est cachée. */
+.puzzle-title,
+.article {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.puzzle-title.selectable,
+.article.selectable {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.wiki-img {
+  float: right;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 0 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Boîte noire : mot caché, ou proposition proche écrite en gris. */
+.box {
   display: inline-block;
-  vertical-align: bottom;
   background: var(--blank);
-  border: 1px solid var(--blank-border);
+  color: transparent;
   border-radius: 6px;
-  height: 1.6em;
-  margin: 0 2px;
-}
-
-/* Boîtes du titre : mêmes dimensions (uniformité des boîtes noires). */
-.title-blank {
-  height: 1.6em;
-  border-radius: 6px;
-}
-
-/* ---------- Mots révélés ---------- */
-.w {
-  display: inline-block;
-}
-
-.w-exact {
-  color: var(--green);
-  font-weight: 600;
-  animation: reveal 0.3s ease-out;
-}
-
-.w-proche {
-  background: var(--accent-tint);
-  border: 1px solid rgba(192, 86, 33, 0.16);
-  border-radius: 6px;
-  padding: 0 0.28em;
-  min-width: 1.5em;
+  padding: 0 0.25em;
+  margin: 1px 1px;
+  line-height: 1.45;
   text-align: center;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.box-close {
+  font-family: var(--font-body);
+  font-size: 0.95em;
+}
+
+.box-flash {
+  cursor: default;
+  font-family: var(--font-body);
+  font-size: 0.85em;
+}
+
+.box-flash-len {
+  color: var(--flash-len);
+}
+
+.box-flash-word {
+  color: var(--flash-word);
+}
+
+.w-found {
   animation: reveal 0.3s ease-out;
+}
+
+/* Mots trouvés au dernier essai : surlignés en vert. */
+.w-fresh {
+  background: var(--fresh-bg);
+  border-radius: 4px;
+  padding: 0 0.15em;
+  box-shadow: 0 0 0 1px var(--fresh-bg);
 }
 
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(3px);
   }
   to {
     opacity: 1;
-    transform: none;
   }
 }
 
-/* ---------- Historique de partie (Nº | Mot) ---------- */
-.history {
-  background: var(--card);
-  border: 1px solid var(--border-soft);
+/* ---------- Victoire ---------- */
+.success {
+  background: var(--accent-tint);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1rem;
+  padding: 0.9rem 1.1rem;
+  animation: reveal 0.3s ease-out;
 }
 
-.history-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
+.success p {
+  margin: 0.3rem 0;
 }
 
-.history-table th,
-.history-table td {
-  padding: 0.4rem 0.5rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border-soft);
+.story {
+  letter-spacing: 0.05em;
 }
 
-.history-table th {
-  color: var(--muted);
+.link-button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: inherit;
   font-weight: 700;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  color: var(--accent-dark);
+  text-decoration: underline;
 }
 
-.history-table td.num {
-  color: var(--muted);
-  width: 2.5em;
+.success-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
 }
 
-.history-table td.empty {
-  color: var(--muted);
+.success-options label {
+  cursor: pointer;
 }
 
-/* ---------- Contrôles ---------- */
+/* ---------- Saisie ---------- */
 .controls {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
   align-items: stretch;
+}
+
+/* 📌 : la saisie reste visible en haut pendant le défilement. */
+.controls.pinned {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  background: var(--bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.pin {
+  border: none;
+  background: none;
+  padding: 0 0.15rem;
+  font-size: 1.1rem;
+}
+
+.guessbox {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
 }
 
 .guess-input {
   flex: 1;
   min-width: 0;
-  padding: 0.9rem 1rem;
-  font-size: 1.05rem;
+  padding: 0.85rem 2.4rem 0.85rem 1rem;
+  font-size: 16px; /* anti-zoom iOS */
   font-family: inherit;
   color: var(--text);
   background: var(--card);
@@ -374,7 +481,8 @@ body::before {
 }
 
 .guess-input::placeholder {
-  color: #9a8f7c;
+  color: var(--muted);
+  opacity: 0.8;
 }
 
 .guess-input:focus {
@@ -383,24 +491,21 @@ body::before {
   box-shadow: 0 0 0 3px rgba(192, 86, 33, 0.18);
 }
 
-.guess-input:disabled {
-  opacity: 0.5;
+.previous {
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem;
 }
 
-button {
-  font-family: inherit;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-/* Bouton « Proposer » : terracotta, pilule, hover foncé, focus visible. */
 button.primary {
-  padding: 0.9rem 1.7rem;
+  padding: 0.85rem 1.5rem;
+  min-height: 48px;
   border: none;
   border-radius: 999px;
   background: var(--accent);
@@ -418,118 +523,198 @@ button.primary:active:not(:disabled) {
   transform: translateY(1px);
 }
 
-button.primary:focus-visible {
-  outline: 3px solid rgba(192, 86, 33, 0.4);
-  outline-offset: 2px;
-}
-
-/* ---------- Feedback émojis + messages ---------- */
 .feedback {
   min-height: 1.5em;
   font-size: 1rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   color: var(--muted);
-  text-align: center;
+  overflow-wrap: anywhere;
 }
 
-.vocab-msg {
-  background: #f3ead6;
-  border-radius: 10px;
-  padding: 0.5rem 0.75rem;
+/* ---------- Résumé : progression + essais ---------- */
+.history {
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.day-meter {
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.05em;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.history-table th {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.history-table td.num {
+  color: var(--muted);
+  width: 3em;
+}
+
+.history-table td.empty {
+  color: var(--muted);
+}
+
+.collapse-cell {
+  width: 2em;
+  text-align: right !important;
+}
+
+.sort {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.yesterday {
+  margin: 0.9rem 0 0;
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--muted);
   text-align: center;
 }
 
-.share-row {
-  text-align: center;
+.footer a {
+  color: inherit;
 }
 
-button.share {
-  padding: 0.55rem 1.4rem;
-  border: 1px solid #e0c9a8;
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--accent-dark);
-  font-weight: 600;
-  transition: border-color 0.15s, background 0.15s;
+.loading-msg {
+  color: var(--muted);
+  font-style: italic;
 }
 
-button.share:hover {
-  border-color: var(--accent);
-  background: var(--accent-tint);
-}
-
-/* ---------- Erreur / toast ---------- */
 .error-banner {
   background: var(--red-bg);
   border: 1px solid var(--red-border);
   color: var(--red-text);
   padding: 0.6rem 0.8rem;
   border-radius: 10px;
-  margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.toast {
+/* ---------- Boîtes de dialogue ---------- */
+.modal-overlay {
   position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text);
-  color: #fffdf6;
-  padding: 0.6rem 1.2rem;
+  inset: 0;
+  z-index: 80;
+  background: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  padding: 1.3rem 1.4rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.modal-title {
+  margin: 0 2rem 0.75rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+}
+
+.dialog-text p {
+  margin: 0 0 0.8rem;
+}
+
+.dialog-text h3 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1rem;
+}
+
+.settings fieldset {
+  border: 1px solid var(--border-soft);
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(80, 60, 30, 0.25);
-  animation: toast-in 0.25s ease-out;
-  z-index: 100;
+  margin: 0 0 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
 }
 
-.toast.success {
-  background: var(--green);
+.settings legend {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-@keyframes toast-in {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
+.settings label {
+  cursor: pointer;
+}
+
+.history-scroll {
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.share-story {
+  white-space: pre-wrap;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 899px) {
-  /* Input mobile confortable : 16px minimum (anti-zoom iOS), ~48px de haut,
-     bouton « Proposer » à côté, même hauteur, zone tactile généreuse. */
-  .guess-input {
-    padding: 0.85rem 0.9rem;
-    font-size: 16px;
-    min-height: 48px;
-  }
-
-  button.primary {
-    min-height: 48px;
-    padding: 0.85rem 1.4rem;
-    font-size: 1rem;
-  }
-}
-
-/* Très petits écrans : le bouton passe sous l'input, pleine largeur. */
-@media (max-width: 359px) {
-  .controls {
-    flex-direction: column;
-  }
-
-  button.primary {
-    width: 100%;
-  }
-}
-
 @media (max-width: 479px) {
-  /* Header compact mobile : logo et méta empilés à gauche. */
   .header-left {
     flex-direction: column;
     align-items: flex-start;
@@ -539,11 +724,19 @@ button.share:hover {
   .brand {
     font-size: 1.7rem;
   }
+
+  .puzzle-title {
+    font-size: 1.4rem;
+  }
+
+  button.primary {
+    padding: 0.85rem 1rem;
+  }
 }
 
 @media (min-width: 768px) {
   .app {
-    padding: 1.5rem 2rem 4rem;
+    padding: 1.5rem 2rem 2rem;
   }
 
   .article {
@@ -551,24 +744,30 @@ button.share:hover {
   }
 }
 
-/* Desktop « magazine » : article + sidebar historique à droite, saisie sous
-   la grille (ordre inchangé par rapport à l'ancien layout). */
+/* Desktop : page à gauche, résumé à droite, saisie au-dessus de la page. */
 @media (min-width: 900px) {
   .game {
     grid-template-columns: minmax(0, 1fr) 300px;
     grid-template-areas:
       "title sidebar"
-      "article sidebar"
-      "controls controls"
-      "feedback feedback"
-      "vocab vocab"
-      "share share";
+      "success sidebar"
+      "controls sidebar"
+      "feedback sidebar"
+      "article sidebar";
+    grid-template-rows: auto auto auto auto 1fr;
     column-gap: 2rem;
-    row-gap: 1.5rem;
+    row-gap: 1rem;
   }
 
   .sidebar {
     position: sticky;
     top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }

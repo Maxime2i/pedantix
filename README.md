@@ -1,116 +1,52 @@
-# Pedantix
+# Pédantix
 
-Pedantix est une application web ludique inspirée du jeu "mot du jour" où l'utilisateur doit deviner un mot ou un titre d'article Wikipédia à partir d'indices textuels. Le projet est composé d’un backend Python (Flask) et d’un frontend React.
+Clone du jeu [Pédantix](https://pedantix.certitudes.org/) : chaque jour à midi, une page Wikipédia française est masquée. Le joueur propose des mots ; ceux présents dans le texte apparaissent en clair, les mots proches par le sens s’affichent en gris dans leur boîte. L’objectif est de retrouver **tous les mots du titre**.
 
-## Fonctionnalités principales
+Le comportement suit l’original : même modèle de proximité (frWac), mêmes scores, mêmes règles de lemmes, même numérotation des jours, même source d’articles. Seul l’habillage diffère.
 
-- Génération quotidienne d’un article mystère à deviner (mode "mot du jour")
-- Masquage progressif du texte pour augmenter la difficulté
-- Interface web moderne et interactive
-- Statistiques chiffré sur chaque partie
+Le backend n’envoie jamais le titre ni les mots cachés au client — seulement des longueurs et la ponctuation visible.
 
----
-
-<img width="1671" height="1033" alt="Capture d’écran 2025-07-17 à 15 14 02" src="https://github.com/user-attachments/assets/6720e072-7a5a-436d-8f4c-06a5c322dc2f" />
-
-
-## Structure du projet
+## Structure
 
 ```
 pedantix/
-│
-├── backend/      # Serveur Flask (API, logique du jeu, accès Wikipédia)
-│   ├── app.py
-│   ├── requirements.txt
-│   └── dico/
-│
-└── frontend/     # Application React (interface utilisateur)
-    ├── src/
-    ├── public/
-    ├── package.json
-    └── README.md
+├── mobile/backend/   # API Flask (puzzle du jour, scoring, embeddings)
+├── frontend/         # Interface Vite + React + TypeScript
+└── backend/          # Ancien prototype (obsolète, ne plus utiliser)
 ```
-
----
 
 ## Installation
 
-### Prérequis
-
-- Node.js (>= 14)
-- Python 3.8+
-- pip
-
-### Backend (Flask)
-
-1. Installe les dépendances Python :
-   ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-2. Lance le serveur Flask :
-   ```bash
-   flask run
-   ```
-   Par défaut, l’API sera disponible sur `http://localhost:5000`.
-
-### Frontend (React)
-
-1. Installe les dépendances Node :
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-2. Démarre l’application React :
-   ```bash
-   npm start
-   ```
-   L’interface sera accessible sur `http://localhost:3000`.
-
----
-
-## Dépendances principales
-
 ### Backend
 
-- Flask
-- flask-cors
-- requests
-- gunicorn (déploiement)
-- gdown
+```bash
+cd mobile/backend
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+bash prepare_data.sh         # modèle frWac + Lexique 3.83 (≈ 150 Mo)
+.venv/bin/python app.py       # http://localhost:5000
+```
 
-Voir `backend/requirements.txt` pour la liste complète.
+Les données (articles, vecteurs, lexique, base SQLite) sont dans `mobile/backend/data/`, ou dans `$PEDANTIX_DATA_DIR` si défini. Détails : [mobile/README.md](mobile/README.md).
 
 ### Frontend
 
-- React
-- react-scripts
-- TypeScript
-- @testing-library/react
+```bash
+cd frontend
+cp .env.example .env          # VITE_API_URL=http://localhost:5000
+npm install
+npm run dev                   # http://localhost:5173
+```
 
-Voir `frontend/package.json` pour la liste complète.
+## Règles (alignées sur l’original)
 
----
+- Tous les mots (et nombres) sont masqués ; ponctuation et apostrophes restent visibles. Le titre forme les premières cases.
+- Mot présent : affiché en clair. L’infinitif ou le masculin singulier révèle les formes conjuguées, féminines et plurielles ; accents obligatoires.
+- Mot proche (score ≥ 35) : la proposition s’affiche dans la boîte, en gris d’autant plus clair qu’elle est proche. Les cases du titre ne sont jamais grisées.
+- Clic sur une boîte : nombre de lettres.
+- Victoire dès que tous les mots du titre sont trouvés : rang du jour, partage, page révélée en entier ou mot par mot.
+- Nouvelle page à midi (heure de Paris) ; la partie du jour est sauvegardée dans le navigateur.
 
-## Scripts utiles
+## Licence
 
-### Frontend
-
-- `npm start` : Démarre le serveur de développement React
-- `npm run build` : Génère la version de production
-
-### Backend
-
-- `flask run` : Démarre le serveur Flask
-
----
-
-## Personnalisation
-
-- Le backend utilise un champ lexical stocké dans `backend/dico/lexical_field.json`.
-- Les titres d’articles sont récupérés via l’API Wikipédia.
-
+MIT

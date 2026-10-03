@@ -1,7 +1,6 @@
 backend/.venv/
 __pycache__/
 *.pyc
-backend/data/*.gz
-backend/data/*.vec
-backend/data/*.zip
-backend/data/frWiki_non_lem.txt*
+# Données générées par backend/prepare_data.sh et base locale
+backend/data/*
+!backend/data/articles.json

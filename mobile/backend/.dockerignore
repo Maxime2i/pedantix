@@ -1,7 +1,5 @@
-data/*.vec
-data/*.gz
-data/*.zip
-data/frWiki_non_lem.txt*
+data/*
+!data/articles.json
 .venv/
 __pycache__/
 *.pyc

@@ -1,18 +1,9 @@
 #!/usr/bin/env bash
 # Point d'entrée du conteneur pedantix-backend.
-# Au premier démarrage (volume vide) : bootstrap des embeddings (~1,6 Go à
-# télécharger puis réduction → plusieurs minutes, voulu ; le volume persiste
-# ensuite). Puis lance le serveur Flask.
+# Au premier démarrage (volume vide) : téléchargement du modèle frWac et de
+# Lexique 3.83 (~150 Mo, une à deux minutes ; le volume persiste ensuite).
 set -euo pipefail
 
-DATA_DIR="${PEDANTIX_DATA_DIR:-/app/data}"
-OUT="${DATA_DIR}/frWiki_reduced.vec"
+bash /app/prepare_data.sh "${PEDANTIX_DATA_DIR:-/app/data}"
 
-if [[ -f "${OUT}" && -s "${OUT}" ]]; then
-  echo "Embeddings déjà présents: ${OUT}"
-else
-  echo "=== Bootstrap embeddings (premier démarrage) ==="
-  bash /app/download_embeddings.sh
-fi
-
-exec python /app/app.py
+exec gunicorn --bind "0.0.0.0:${PORT:-5000}" --workers 1 --threads 8 --timeout 60 app:app

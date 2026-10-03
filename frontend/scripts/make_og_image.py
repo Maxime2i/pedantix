@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Génère public/og-image.png (1200x630) — fond crème, titre serif terracotta."""
+from pathlib import Path
+
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1200, 630
@@ -37,5 +39,6 @@ sub = "Jeu de culture générale · Article Wikipédia du jour"
 bb2 = d.textbbox((0, 0), sub, font=font_sub)
 d.text(((W - (bb2[2] - bb2[0])) / 2, 350), sub, font=font_sub, fill=INK)
 
-img.save("/home/ubuntu/pedantix/frontend/public/og-image.png", "PNG")
-print("OK: public/og-image.png")
+out = Path(__file__).resolve().parent.parent / "public" / "og-image.png"
+img.save(out, "PNG")
+print(f"OK: {out}")

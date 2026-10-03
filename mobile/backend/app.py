@@ -1,480 +1,587 @@
-"""Serveur Flask Pédantix mobile — article Wikipédia du jour, devinettes sémantiques."""
+"""Serveur Pédantix — page Wikipédia du jour, alignée sur pedantix.certitudes.org.
+
+- Nouvelle page chaque jour à midi, heure de Paris ; nº1604 = 3 octobre 2026.
+- Pool : articles vitaux de Wikipédia (niveau 4), cf. fetch_articles.py.
+- Texte : introduction de l'article, mise en forme conservée (gras, italique,
+  paragraphes, listes). Le titre forme les premières cases (ids 0..k-1).
+- Proximité : word2vec frWac de J.-P. Fauconnier (même modèle que l'original),
+  score = cos × 100, affiché à partir de 35. Les cases du titre ne sont
+  jamais grisées.
+- Lemmes : cf. lemmatize.py.
+
+Le client ne reçoit jamais les mots cachés : seulement leur longueur.
+"""
 
 from __future__ import annotations
 
+import html
 import json
 import os
+import random
 import re
+import sqlite3
 import sys
-import unicodedata
-from datetime import date, datetime, timezone
+import threading
+from datetime import date, datetime, timedelta
+from html.parser import HTMLParser
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import numpy as np
 import requests
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from lemmatize import lemmatize
-from stopwords import STOPWORDS
+from lemmatize import reveals
 
-DATA_DIR = Path(os.environ.get("PEDANTIX_DATA_DIR", "/home/ubuntu/pedantix/mobile/backend/data"))
-VEC_PATH = DATA_DIR / "frWiki_reduced.vec"
-ARTICLES_PATH = DATA_DIR / "articles.json"
-# Gameplay Cémantix : chaque PROPOSITION reçoit une température selon sa
-# proximité sémantique avec le TITRE de l'article (le « mot secret »).
-# Seuil « exact » (vert) : la proposition est très proche / identique au titre.
-# Seuil « proche » (orange) : la proposition est liée au titre sans le trouver.
-# ATTENTION : la couleur de l'historique côté client donne PRIORITÉ à la
-# présence dans l'article (present_in_article → vert), la température ne
-# s'applique qu'aux mots absents du texte.
-# Calibrés sur « Amplificateur électronique » (cosinus vs embedding du titre,
-# moyenne des embeddings de ses mots) : « amplificateur » 0.8646 → vert,
-# « ampli » 0.6393 → orange, « audio » 0.5291 → orange, « fréquence » 0.5224
-# → orange, « frequence » 0.4453 → orange, « banane » 0.2493 → rouge,
-# stopwords (« le », « de »…) ~0.05-0.11 → rouge côté température MAIS vert
-# car présents dans l'article. En dessous de 0.40 : bruit sémantique mesuré
-# à ~0.31 max (« avion ») — la bande [0.40, 0.45] ne contient que des mots
-# réellement liés au sujet.
-EXACT_THRESHOLD = 0.85
-PROCH_THRESHOLD = 0.40
-# Révélation ORANGE dans l'article : un mot de l'article dont la similarité
-# cosinus avec la proposition dépasse ce seuil s'affiche en orange (la
-# proposition s'affiche, avec un dégradé de teinte selon le cosinus).
-# Calibré sur l'article « Amplificateur électronique » : proposer
-# « amplificateur » révèle ampli (0.752), amplification (0.835), signal
-# (0.602), électronique (0.4950), électrique (0.555)… ; proposer « banane » ne
-# révèle RIEN (max mesuré 0.313). Plancher de bruit hors stopwords ~0.45-0.59
-# sur des mots isolés (« pain »->puissance 0.514, « économie »->puissance
-# 0.532) : fausses révélations rares et limitées à 1-2 mots, acceptées. Les
-# stopwords ne sont JAMAIS révélés en orange par cosinus (uniquement en vert
-# par présence exacte ou par lemme).
-SEUIL_ORANGE_REVEAL = 0.49
-UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
-ROOT = Path("/home/ubuntu/pedantix/mobile")
+HERE = Path(__file__).resolve().parent
+DATA_DIR = Path(os.environ.get("PEDANTIX_DATA_DIR", str(HERE / "data")))
+EMB_PATH = DATA_DIR / "frwac.npy"
+VOCAB_PATH = DATA_DIR / "frwac.vocab.txt"
+# Le pool est cherché à côté du code (image Docker) avant le dossier de
+# données : un volume persistant ne fige pas une ancienne version du pool.
+ARTICLES_PATH = next(
+    (
+        p
+        for p in (
+            Path(os.environ.get("PEDANTIX_ARTICLES", HERE / "articles.json")),
+            DATA_DIR / "articles.json",
+            HERE / "data" / "articles.json",
+        )
+        if p.is_file()
+    ),
+    DATA_DIR / "articles.json",
+)
+DB_PATH = DATA_DIR / "pedantix.db"
 
-FALLBACK_ARTICLES = [
-    "France",
-    "Paris",
-    "Tour Eiffel",
-    "Révolution française",
-    "Napoléon Ier",
-    "Seconde Guerre mondiale",
-    "Albert Einstein",
-    "Théorie de la relativité",
-    "Charles Darwin",
-    "Évolution biologique",
-    "Marie Curie",
-    "Antarctique",
-    "Amazonie",
-    "Soleil",
-    "Lune",
-    "Terre",
-    "Internet",
-    "Intelligence artificielle",
-    "Ordinateur",
-    "Linux",
-    "Python (langage)",
-    "Football",
-    "Jeux olympiques",
-    "Cinéma",
-    "Musique",
-    "Peinture",
-    "Victor Hugo",
-    "Les Misérables",
-    "Molière",
-    "Voltaire",
-    "Louis XIV",
-    "Union européenne",
-    "Égypte antique",
-    "Grèce antique",
-    "Rome antique",
-    "Japon",
-    "Chine",
-    "États-Unis",
-    "Canada",
-    "Océan Atlantique",
-]
+PARIS = ZoneInfo("Europe/Paris")
+EPOCH = date(2022, 5, 13)  # jour nº0 : le nº1604 tombe le 3 octobre 2026, comme l'original
+CHANGE_HOUR = 12  # nouvelle page à midi, heure française
+SCORE_MIN = 35.0  # en dessous, l'original ne renvoie rien
+HISTORY_DAYS = 100
+MIN_WORDS = 40  # introduction trop courte : on passe à la page suivante
+UA = "Pedantix/2.0 (https://github.com/Maxime2i/pedantix)"
 
-WORD_RE = re.compile(r"[a-zàâäéèêëîïôöùûüÿçœæ]+")
-PUZZLE_EPOCH = date(2026, 1, 1)
+# Mots : lettres avec traits d'union internes (« peut-être », « Saint-Louis »
+# forment une seule case, comme dans le vocabulaire frWac), ou nombres.
+# Comme l'original, chiffres et lettres sont séparés : « 1er » → « 1 » + « er ».
+WORD_RE = re.compile(r"[^\W\d_]+(?:-[^\W\d_]+)*|\d+")
+APOSTROPHES = ("'", "’")
 
 
-def load_embeddings(path: Path) -> tuple[dict[str, int], np.ndarray]:
-    if not path.is_file():
-        print("Run mobile/backend/download_embeddings.sh", file=sys.stderr)
-        sys.exit(1)
+# ---------------------------------------------------------------- embeddings
 
-    with path.open(encoding="utf-8") as fh:
-        header = fh.readline().strip().split()
-        if len(header) != 2:
-            print(f"En-tête invalide dans {path}", file=sys.stderr)
-            sys.exit(1)
-        n_expected, dim = int(header[0]), int(header[1])
 
-        # Matrice pré-allouée : on évite 300k petits objets numpy/python
-        # (pic RAM ~0,7 Go au lieu de ~1,1 Go).
-        words: list[str] = []
-        mat = np.empty((n_expected, dim), dtype=np.float32)
-        i = 0
-        for line in fh:
-            if i >= n_expected:
-                break
-            parts = line.strip().split()
-            if len(parts) != dim + 1:
-                continue
-            word = parts[0]
-            if "</" in word:
-                continue
-            try:
-                mat[i] = np.asarray(parts[1:], dtype=np.float32)
-            except ValueError:
-                continue  # ligne corrompue : ignorée
-            words.append(word)
-            i += 1
-
-    mat = mat[:i]
-    norms = np.linalg.norm(mat, axis=1)
-    norms[norms == 0] = 1.0
-    mat /= norms[:, None]
-    word_to_idx = {w: idx for idx, w in enumerate(words)}
-
-    if i != n_expected:
+def load_embeddings() -> tuple[dict[str, int], np.ndarray | None]:
+    if not (EMB_PATH.is_file() and VOCAB_PATH.is_file()):
         print(
-            f"Avertissement : {i} mots chargés, {n_expected} attendus",
+            f"Embeddings absents ({EMB_PATH}) — proximité désactivée. "
+            "Lancez mobile/backend/prepare_data.sh",
             file=sys.stderr,
         )
-    return word_to_idx, mat
+        return {}, None
+    words = VOCAB_PATH.read_text(encoding="utf-8").split("\n")
+    mat = np.load(EMB_PATH, mmap_mode="r")
+    vocab: dict[str, int] = {}
+    for i, w in enumerate(words):
+        vocab.setdefault(w, i)
+    return vocab, mat
 
 
-WORD_TO_IDX, EMBEDDINGS = load_embeddings(VEC_PATH)
+VOCAB, EMBEDDINGS = load_embeddings()
+
+
+def vec_index(form: str, elided: bool = False) -> int | None:
+    """Index du vecteur d'un mot de l'article (« l » élidé → « l' »)."""
+    low = form.lower()
+    if elided and low + "'" in VOCAB:
+        return VOCAB[low + "'"]
+    return VOCAB.get(low)
+
+
+# ------------------------------------------------------------------ calendrier
+
+
+def puzzle_num(now: datetime | None = None) -> int:
+    now = now or datetime.now(PARIS)
+    return ((now.astimezone(PARIS) - timedelta(hours=CHANGE_HOUR)).date() - EPOCH).days
+
+
+def change_timestamp() -> int:
+    """Instant (epoch, secondes) du dernier changement de page."""
+    now = datetime.now(PARIS)
+    start = now.replace(hour=CHANGE_HOUR, minute=0, second=0, microsecond=0)
+    if now < start:
+        start -= timedelta(days=1)
+    return int(start.timestamp())
+
+
+# ---------------------------------------------------------------------- pool
 
 
 def load_articles() -> list[str]:
-    if ARTICLES_PATH.is_file():
-        try:
-            with ARTICLES_PATH.open(encoding="utf-8") as fh:
-                data = json.load(fh)
-            if isinstance(data, list) and data:
-                return [str(t) for t in data]
-        except (json.JSONDecodeError, OSError):
-            pass
-    return list(FALLBACK_ARTICLES)
+    with ARTICLES_PATH.open(encoding="utf-8") as fh:
+        titles = [str(t) for t in json.load(fh) if t]
+    random.Random("pedantix").shuffle(titles)
+    return titles
 
 
 ARTICLES = load_articles()
-PUZZLE_CACHE: dict[int, dict] = {}
 
 
-def puzzle_num() -> int:
-    today = datetime.now(timezone.utc).date()
-    return (today - PUZZLE_EPOCH).days
+def candidate_titles(num: int):
+    n = len(ARTICLES)
+    for j in range(n):
+        yield ARTICLES[(num + j * 7919) % n]
 
 
-def fetch_intro(title: str) -> str:
-    try:
-        resp = requests.get(
-            "https://fr.wikipedia.org/w/api.php",
-            params={
-                "action": "query",
-                "prop": "extracts",
-                "exintro": "1",
-                "explaintext": "1",
-                "format": "json",
-                "origin": "*",
-                "titles": title,
-            },
-            headers={"User-Agent": UA},
-            timeout=10,
+def url_title(title: str) -> str:
+    return title.replace(" ", "_")
+
+
+# ---------------------------------------------------------------- base locale
+
+
+def db() -> sqlite3.Connection:
+    conn = sqlite3.connect(DB_PATH, timeout=10)
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS puzzles (num INTEGER PRIMARY KEY, title TEXT NOT NULL, data TEXT NOT NULL)"
+    )
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS solvers (num INTEGER PRIMARY KEY, count INTEGER NOT NULL)"
+    )
+    return conn
+
+
+def solvers(num: int) -> int:
+    with db() as conn:
+        row = conn.execute("SELECT count FROM solvers WHERE num = ?", (num,)).fetchone()
+    return row[0] if row else 0
+
+
+def add_solver(num: int) -> int:
+    with db() as conn:
+        conn.execute(
+            "INSERT INTO solvers (num, count) VALUES (?, 1) "
+            "ON CONFLICT(num) DO UPDATE SET count = count + 1",
+            (num,),
         )
-        resp.raise_for_status()
-        pages = resp.json().get("query", {}).get("pages", {})
-        for page in pages.values():
-            extract = page.get("extract")
-            if extract:
-                return extract
-    except (requests.RequestException, ValueError, KeyError):
-        pass
-    return "Article introuvable aujourd'hui. Essayez plus tard."
+        return conn.execute("SELECT count FROM solvers WHERE num = ?", (num,)).fetchone()[0]
 
 
-def tokenize(text: str) -> list[dict]:
-    # Fidélité à l'original : TOUS les mots sont masqués au départ, y compris
-    # les stopwords (« de », « la », « le »…). Le champ `hidden` reste présent
-    # pour compatibilité mais vaut toujours True : la visibilité est pilotée
-    # côté CLIENT, uniquement par les révélations exactes renvoyées par /score.
-    text_lower = text.lower()
-    tokens: list[dict] = []
-    for match in WORD_RE.finditer(text_lower):
-        tokens.append({"w": match.group(0), "hidden": True})
-    return tokens
+# ------------------------------------------------------------ article → cases
 
 
-def get_puzzle(num: int) -> dict:
-    if num in PUZZLE_CACHE:
-        return PUZZLE_CACHE[num]
-
-    title = ARTICLES[num % len(ARTICLES)]
-    intro = fetch_intro(title)
-    tokens = tokenize(intro)
-    words = [t["w"] for t in tokens]
-    # Mots du TITRE (mêmes règles de normalisation que l'article : minuscules,
-    # accents conservés). Indice = position dans `title_words`. Ils sont
-    # révélables indépendamment de l'article (h2 masqué puis révélé).
-    title_words = WORD_RE.findall(title.lower())
-    if not title_words:
-        title_words = [title.lower()]
-    # Plus AUCUN état de partie côté serveur : les scores/ révélations sont
-    # 100 % côté client. Le cache ne garde que le contenu du puzzle (titre,
-    # tokens, mots) pour éviter de re-télécharger l'article à chaque requête.
-    puzzle = {
-        "title": title,
-        "title_words": title_words,
-        "words": words,
-        "tokens": tokens,
-    }
-    PUZZLE_CACHE[num] = puzzle
-    return puzzle
+BLOCK_TAGS = {"p", "ul", "ol", "li", "dl", "dt", "dd", "blockquote"}
+INLINE_TAGS = {"b", "i", "sub", "sup"}
+TAG_ALIASES = {"strong": "b", "em": "i"}
+SKIP_TAGS = {"style", "script", "table", "figure", "math", "annotation"}
 
 
-def normalize_guess(raw: str) -> str:
-    w = raw.lower().strip()
-    if any(ch in w for ch in ("'", '"', "\u2019")):
-        w = re.split(r"['\"\u2019]", w)[-1]
-    parts = WORD_RE.findall(w)
-    if not parts:
-        return ""
-    return max(parts, key=len)
+class IntroParser(HTMLParser):
+    """HTML de l'introduction → arbre {"t": tag, "c": [...]} | str.
+
+    Les balises inconnues (span, abbr, a…) sont dépliées et les textes
+    adjacents fusionnés : « [<span>z</span><span>o</span>] » donne « [zo] ».
+    """
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.root: dict = {"t": "root", "c": []}
+        self.stack = [self.root]
+        self.skip = 0
+
+    def handle_starttag(self, tag, attrs):
+        tag = TAG_ALIASES.get(tag, tag)
+        if tag in SKIP_TAGS:
+            self.skip += 1
+        elif self.skip:
+            return
+        elif tag in BLOCK_TAGS or tag in INLINE_TAGS:
+            node = {"t": tag, "c": []}
+            self.stack[-1]["c"].append(node)
+            self.stack.append(node)
+
+    def handle_endtag(self, tag):
+        tag = TAG_ALIASES.get(tag, tag)
+        if tag in SKIP_TAGS:
+            self.skip = max(0, self.skip - 1)
+        elif self.skip:
+            return
+        elif tag in BLOCK_TAGS or tag in INLINE_TAGS:
+            for i in range(len(self.stack) - 1, 0, -1):
+                if self.stack[i]["t"] == tag:
+                    del self.stack[i:]
+                    break
+
+    def handle_data(self, data):
+        if self.skip:
+            return
+        children = self.stack[-1]["c"]
+        if children and isinstance(children[-1], str):
+            children[-1] += data
+        else:
+            children.append(data)
 
 
-def normalize_title(text: str) -> str:
-    text = unicodedata.normalize("NFD", text)
-    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
-    text = text.lower()
-    return re.sub(r"[\s()]", "", text)
+CONTAINER_TAGS = {"root", "ul", "ol", "dl", "blockquote"}
 
 
-def normalize_full(text: str) -> str:
-    """Phrase entière normalisée : sans accents, minuscules, uniquement les
-    caractères de mots (supprime ponctuation, tirets, apostrophes)."""
-    text = unicodedata.normalize("NFD", text)
-    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
-    return "".join(WORD_RE.findall(text.lower()))
+def _clean(node: dict) -> dict | None:
+    """Espaces normalisés, blocs vides supprimés."""
+    container = node["t"] in CONTAINER_TAGS
+    out: list = []
+    for child in node["c"]:
+        if isinstance(child, str):
+            text = re.sub(r"\s+", " ", child)
+            # Entre deux blocs, les blancs ne comptent pas ; dans un texte,
+            # ils séparent les mots (« <b>x</b> <i>y</i> »).
+            if text.strip() or not container:
+                out.append(text)
+        else:
+            c = _clean(child)
+            if c:
+                out.append(c)
+    if out and isinstance(out[0], str):
+        out[0] = out[0].lstrip()
+    if out and isinstance(out[-1], str):
+        out[-1] = out[-1].rstrip()
+    out = [c for c in out if c != ""]
+    if not out or not any(
+        (isinstance(c, str) and WORD_RE.search(c)) or isinstance(c, dict) for c in out
+    ):
+        return None
+    return {"t": node["t"], "c": out}
 
 
-app = Flask(__name__, static_folder=str(ROOT / "web-test"), static_url_path="")
+def parse_intro(raw_html: str) -> list[dict]:
+    parser = IntroParser()
+    parser.feed(raw_html)
+    root = _clean(parser.root)
+    blocks: list[dict] = []
+    for child in root["c"] if root else []:
+        if isinstance(child, str) or child["t"] in INLINE_TAGS:
+            if blocks and blocks[-1].get("loose"):
+                blocks[-1]["c"].append(child)
+            else:
+                blocks.append({"t": "p", "c": [child], "loose": True})
+        else:
+            blocks.append(child)
+    for b in blocks:
+        b.pop("loose", None)
+    return blocks
+
+
+def tokenize_tree(nodes: list, words: list[dict]) -> list:
+    """Remplace chaque mot par une case {"w": id, "n": longueur}."""
+    out: list = []
+    for node in nodes:
+        if isinstance(node, dict):
+            out.append({"t": node["t"], "c": tokenize_tree(node["c"], words)})
+            continue
+        pos = 0
+        for m in WORD_RE.finditer(node):
+            if m.start() > pos:
+                out.append(node[pos : m.start()])
+            elided = node[m.end() : m.end() + 1] in APOSTROPHES
+            words.append({"text": m.group(), "elided": elided})
+            out.append({"w": len(words) - 1, "n": len(m.group())})
+            pos = m.end()
+        if pos < len(node):
+            out.append(node[pos:])
+    return out
+
+
+def fetch_intro(title: str) -> tuple[str, str] | None:
+    """(titre canonique, HTML de l'introduction), ou None si la page n'existe pas."""
+    resp = requests.get(
+        "https://fr.wikipedia.org/w/api.php",
+        params={
+            "action": "query",
+            "prop": "extracts",
+            "exintro": "1",
+            "redirects": "1",
+            "format": "json",
+            "formatversion": "2",
+            "titles": title,
+        },
+        headers={"User-Agent": UA},
+        timeout=15,
+    )
+    resp.raise_for_status()
+    pages = resp.json().get("query", {}).get("pages", [])
+    if not pages or pages[0].get("missing") or not pages[0].get("extract"):
+        return None
+    return pages[0]["title"], pages[0]["extract"]
+
+
+def build_puzzle(title: str, raw_html: str) -> dict | None:
+    words: list[dict] = []
+    title_nodes = tokenize_tree([title], words)
+    k = len(words)
+    article = tokenize_tree(parse_intro(raw_html), words)
+    if k == 0 or len(words) - k < MIN_WORDS:
+        return None
+    return {"title": title, "k": k, "words": words, "title_nodes": title_nodes, "article": article}
+
+
+# ------------------------------------------------------------------- puzzles
+
+
+def number_score(guess: int, hidden: int) -> float:
+    """Proximité de deux nombres, comme l'original : 100 × (1 − |écart| / caché).
+
+    Mesuré sur le jour nº1604 : 1804 → 1582 = 85,97 ; 2024 → 1804 = 87,8.
+    """
+    return round(100 * (1 - abs(guess - hidden) / hidden), 2)
+
+
+class Puzzle:
+    def __init__(self, num: int, data: dict) -> None:
+        self.num = num
+        self.title: str = data["title"]
+        self.k: int = data["k"]
+        self.words: list[dict] = data["words"]
+        self.title_nodes = data["title_nodes"]
+        self.article = data["article"]
+        self.secret = [url_title(self.title), self.title]
+
+        # Formes (minuscules) → ids, pour les révélations exactes.
+        self.forms: dict[str, list[int]] = {}
+        for i, w in enumerate(self.words):
+            self.forms.setdefault(w["text"].lower(), []).append(i)
+
+        # Proximité : une ligne par (forme, élision) de l'article, hors titre.
+        groups: dict[tuple[str, bool], list[int]] = {}
+        for i in range(self.k, len(self.words)):
+            w = self.words[i]
+            groups.setdefault((w["text"].lower(), w["elided"]), []).append(i)
+        self.close_ids: list[list[int]] = []
+        rows: list[int] = []
+        if EMBEDDINGS is not None:
+            for (form, elided), ids in groups.items():
+                idx = vec_index(form, elided)
+                if idx is not None:
+                    rows.append(idx)
+                    self.close_ids.append(ids)
+        self.close_mat = (
+            np.asarray(EMBEDDINGS[rows]) if rows else np.zeros((0, 1), dtype=np.float32)
+        )
+        # Nombres : absents de frWac, rapprochés par écart relatif (cf. number_score).
+        self.numbers = [
+            (int(form), ids) for (form, _), ids in groups.items() if form.isdigit() and int(form) > 0
+        ]
+
+    def score(self, guess: str) -> dict:
+        x: dict[str, list[int]] = {}
+        exact: set[int] = set()
+        for form, ids in self.forms.items():
+            if reveals(guess, form):
+                for i in ids:
+                    x.setdefault(self.words[i]["text"], []).append(i)
+                    exact.add(i)
+        if guess.isdigit():
+            # Un nombre est toujours accepté, même sans voisin.
+            for value, ids in self.numbers:
+                score = number_score(int(guess), value)
+                ids = [i for i in ids if i not in exact]
+                if score >= SCORE_MIN and ids:
+                    x.setdefault(f"#{score}", []).extend(ids)
+            return {"x": x, "known": True}
+        known = bool(exact)
+        g = VOCAB.get(guess)
+        if g is not None and len(self.close_ids):
+            known = True
+            sims = self.close_mat @ np.asarray(EMBEDDINGS[g])
+            for j in np.nonzero(sims * 100 >= SCORE_MIN)[0]:
+                ids = [i for i in self.close_ids[j] if i not in exact]
+                if ids:
+                    x.setdefault(f"#{round(float(sims[j]) * 100, 2)}", []).extend(ids)
+        elif g is not None:
+            known = True
+        return {"x": x, "known": known}
+
+    def title_found(self, answer: list) -> bool:
+        if len(answer) < self.k:
+            return False
+        return all(reveals(normalize(str(answer[i])), self.words[i]["text"]) for i in range(self.k))
+
+    def reveal_all(self) -> dict[str, str]:
+        return {str(i): w["text"] for i, w in enumerate(self.words)}
+
+
+PUZZLES: dict[int, Puzzle] = {}
+PUZZLE_LOCK = threading.Lock()
+
+
+def get_puzzle(num: int) -> Puzzle:
+    """Puzzle du jour `num`, construit une fois puis stocké en base.
+
+    Une erreur réseau lève une exception (rien n'est mis en cache) : la
+    requête suivante retentera Wikipédia.
+    """
+    if num in PUZZLES:
+        return PUZZLES[num]
+    with PUZZLE_LOCK:
+        if num in PUZZLES:
+            return PUZZLES[num]
+        with db() as conn:
+            row = conn.execute("SELECT data FROM puzzles WHERE num = ?", (num,)).fetchone()
+        if row:
+            data = json.loads(row[0])
+        else:
+            data = None
+            for i, candidate in enumerate(candidate_titles(num)):
+                if i >= 20:
+                    raise RuntimeError("Aucune page exploitable trouvée")
+                fetched = fetch_intro(candidate)
+                if fetched:
+                    data = build_puzzle(*fetched)
+                if data:
+                    break
+            with db() as conn:
+                conn.execute(
+                    "INSERT OR REPLACE INTO puzzles (num, title, data) VALUES (?, ?, ?)",
+                    (num, data["title"], json.dumps(data, ensure_ascii=False)),
+                )
+        puzzle = Puzzle(num, data)
+        for old in [n for n in PUZZLES if n < num - 1]:
+            del PUZZLES[old]
+        PUZZLES[num] = puzzle
+        return puzzle
+
+
+def past_titles(first: int, last: int) -> dict[int, str]:
+    """Titres des jours first..last : ceux stockés, sinon le premier candidat."""
+    with db() as conn:
+        rows = dict(
+            conn.execute("SELECT num, title FROM puzzles WHERE num BETWEEN ? AND ?", (first, last))
+        )
+    return {n: rows.get(n) or next(candidate_titles(n)) for n in range(first, last + 1)}
+
+
+def all_solvers(first: int, last: int) -> dict[int, int]:
+    with db() as conn:
+        return dict(
+            conn.execute("SELECT num, count FROM solvers WHERE num BETWEEN ? AND ?", (first, last))
+        )
+
+
+# ----------------------------------------------------------------------- API
+
+
+def normalize(word: str) -> str:
+    """Comme l'original : minuscules, seuls lettres, chiffres et tirets."""
+    return re.sub(r"[^\w-]|_", "", word).lower()
+
+
+app = Flask(__name__)
 CORS(app)
+
+
+def requested_num() -> int | None:
+    raw = request.args.get("n")
+    if raw is None:
+        body = request.get_json(silent=True) or {}
+        raw = body.get("num")
+    try:
+        return int(raw)
+    except (TypeError, ValueError):
+        return None
 
 
 @app.get("/health")
 def health():
-    return jsonify({"ok": True})
+    return jsonify({"ok": True, "embeddings": EMBEDDINGS is not None, "num": puzzle_num()})
 
 
 @app.get("/puzzle")
 def puzzle():
-    # `?num=X` charge un jour précis (historique) ; défaut = jour courant.
-    num = request.args.get("num", type=int) or puzzle_num()
-    p = get_puzzle(num)
+    num = puzzle_num()
+    try:
+        p = get_puzzle(num)
+    except (requests.RequestException, RuntimeError) as exc:
+        return jsonify({"error": f"Wikipédia indisponible : {exc}"}), 503
+    yesterday = past_titles(num - 1, num - 1)[num - 1]
     return jsonify(
         {
             "num": num,
-            "title": p["title"],
-            "title_hidden": True,
-            "title_words": p["title_words"],
-            "words": p["words"],
-            "tokens": p["tokens"],
-            # Plus AUCUN état de partie : pas de `scores` accumulés. Chaque
-            # joueur part de zéro, ses révélations vivent côté client.
-            "thresholds": {"exact": EXACT_THRESHOLD, "proche": PROCH_THRESHOLD},
-            "revealed": [],
+            "change": change_timestamp(),
+            "k": p.k,
+            "count": len(p.words),
+            "title": p.title_nodes,
+            "article": p.article,
+            "yesterday": [url_title(yesterday), yesterday],
+            "v": solvers(num),
         }
     )
-
-
-def temperature_for(cosine: float) -> str:
-    if cosine >= EXACT_THRESHOLD:
-        return "exact"
-    if cosine >= PROCH_THRESHOLD:
-        return "proche"
-    return "froid"
-
-
-def title_embedding(title: str) -> np.ndarray | None:
-    """Embedding du titre = moyenne des embeddings de ses mots présents dans
-    le vocabulaire. None si aucun mot du titre n'est connu."""
-    title_words = [tw for tw in WORD_RE.findall(title.lower()) if tw in WORD_TO_IDX]
-    if not title_words:
-        return None
-    if len(title_words) == 1:
-        vec = EMBEDDINGS[WORD_TO_IDX[title_words[0]]]
-    else:
-        vec = np.mean([EMBEDDINGS[WORD_TO_IDX[tw]] for tw in title_words], axis=0)
-    norm = np.linalg.norm(vec)
-    if norm == 0:
-        return None
-    return vec / norm
-
-
-def article_reveals(w: str, words: list[str]) -> tuple[list[int], list[dict]]:
-    """Révélations dans l'article pour la proposition `w`.
-
-    Retourne (positions_vertes, article_updates) :
-    - positions_vertes : le mot est PRÉSENT tel quel (tw == w) OU partage le
-      MÊME LEMME (formes fléchies : « être » révèle est/sont/soit, « le »
-      révèle la/les/l') -> VERT, le mot réel de l'article s'affiche en clair.
-      Les stopwords sont inclus (un mot présent ou du même lemme est un mot
-      TROUVÉ).
-    - article_updates    : mots PROCHES par COSINUS uniquement -> ORANGE, la
-      proposition s'affiche (display = w) avec le cosinus dans `cos` pour le
-      dégradé de teinte côté client. Anti-spam : jamais un stopword en orange
-      par cosinus ; jamais un mot déjà vert (présence exacte OU lemme).
-    """
-    w_lemma = lemmatize(w)
-    exact = [i for i, tw in enumerate(words) if tw == w or lemmatize(tw) == w_lemma]
-    exact_set = set(exact)
-    updates: dict[int, dict] = {}
-    if w in WORD_TO_IDX:
-        w_vec = EMBEDDINGS[WORD_TO_IDX[w]]
-        for i, tw in enumerate(words):
-            if i in exact_set:
-                continue
-            if tw in STOPWORDS or w in STOPWORDS:
-                continue
-            if tw not in WORD_TO_IDX:
-                continue
-            c = float(w_vec @ EMBEDDINGS[WORD_TO_IDX[tw]])
-            if c >= SEUIL_ORANGE_REVEAL:
-                updates[i] = {"pos": i, "word": tw, "display": w,
-                              "level": "proche", "source": "cosine",
-                              "cos": round(c, 4)}
-    return exact, list(updates.values())
-
-
-def title_updates_for(w: str, title_words: list[str]) -> list[dict]:
-    """Révélations des mots du TITRE (h2) pour la proposition `w`.
-
-    Règles officielles : « les mots du titre sont corrects ou pas, ils ne
-    sont JAMAIS grisés ». Le titre ne passe qu'en VERT (quand trouvé) ou
-    reste masqué : AUCUNE révélation « proche » (ni lemme ni cosinus).
-    - level "exact" : la proposition EST le mot du titre (vert).
-    - Le même lemme (forme fléchie, ex. « électroniques » -> « électronique »)
-      passe aussi en vert, cohérent avec l'article.
-    """
-    updates: list[dict] = []
-    w_lemma = lemmatize(w)
-    for j, tw in enumerate(title_words):
-        if tw == w or lemmatize(tw) == w_lemma:
-            updates.append({"idx": j, "word": tw, "display": tw, "level": "exact"})
-    return updates
 
 
 @app.post("/score")
 def score():
-    # STATELESS : aucune écriture dans PUZZLE_CACHE. La réponse dépend
-    # uniquement de (num, word) : température vs TITRE + révélations exactes.
-    data = request.get_json(silent=True) or {}
-    num = data.get("num", puzzle_num())
-    raw_word = str(data.get("word", ""))
-    p = get_puzzle(num)
-    title = p["title"]
+    num = puzzle_num()
+    if requested_num() != num:
+        return jsonify({"r": True})
+    body = request.get_json(silent=True) or {}
+    word = normalize(str(body.get("word", "")))[:60]
+    if not word:
+        return jsonify({"e": "Je ne trouve pas ce mot.", "w": word})
+    try:
+        p = get_puzzle(num)
+    except (requests.RequestException, RuntimeError):
+        return jsonify({"e": "Une erreur s´est produite."}), 503
 
-    w = normalize_guess(raw_word)
-    title_norm = normalize_full(title)
-    # Victoire : soit la phrase complète normalisée == titre, soit le mot
-    # normalisé le plus long == titre (cas des titres à un seul mot).
-    title_found = normalize_full(raw_word) == title_norm or (w and w == title_norm)
+    result = p.score(word)
+    if not result["known"]:
+        return jsonify({"e": f"Je ne trouve pas le mot <i>{html.escape(word)}</i>.", "w": word})
 
-    if title_found:
-        # Tous les mots du titre sont révélés (le client affiche la victoire).
-        title_updates = [
-            {"idx": j, "word": tw, "display": tw, "level": "exact"}
-            for j, tw in enumerate(p["title_words"])
-        ]
-        return jsonify(
-            {
-                "word": w,
-                "title_found": True,
-                "correct": True,
-                "cosine": 1.0,
-                "score": 1.0,
-                "temperature_level": "exact",
-                "revealed_positions": [],
-                "article_updates": [],
-                "title_updates": title_updates,
-                "present_in_article": True,
-                "message": "Bravo ! Vous avez trouvé le titre !",
-            }
-        )
-
-    # Température de la PROPOSITION vs le TITRE (cosinus sémantique).
-    cosine = None
-    score_val = 0.0
-    temperature_level = "froid"
-    if w and w in WORD_TO_IDX:
-        tvec = title_embedding(title)
-        if tvec is not None:
-            cosine = float(EMBEDDINGS[WORD_TO_IDX[w]] @ tvec)
-            score_val = round((cosine + 1) / 2, 4)
-            temperature_level = temperature_for(cosine)
-
-    # Révélation dans l'article : TOUT mot proposé présent dans le texte
-    # (comparaison exacte normalisée) révèle ses positions — y compris les
-    # stopwords et mots courts (« un », « le », « de »…) : un mot présent est
-    # un mot TROUVÉ, il se montre en vert. Plus AUCUN filtre.
-    # En COMPLÉMENT : mots proches (orange) dans l'article ET le titre.
-    revealed_positions, article_updates = ([], [])
-    if w:
-        revealed_positions, article_updates = article_reveals(w, p["words"])
-    present_in_article = bool(revealed_positions)
-    title_updates = title_updates_for(w, p["title_words"]) if w else []
-
-    if not w or w not in WORD_TO_IDX:
-        # Texte EXACT de l'original : « Je ne trouve pas ce mot. »
-        message = "Je ne trouve pas ce mot."
-    elif temperature_level == "exact":
-        message = "Très proche du titre !"
-    elif temperature_level == "proche":
-        message = "Proche du titre..."
-    else:
-        message = "Froid..."
-
-    return jsonify(
-        {
-            "word": w,
-            "title_found": False,
-            "correct": False,
-            "cosine": round(cosine, 4) if cosine is not None else None,
-            "score": score_val,
-            "temperature_level": temperature_level,
-            "revealed_positions": revealed_positions,
-            "article_updates": article_updates,
-            "title_updates": title_updates,
-            "present_in_article": present_in_article,
-            "message": message,
-        }
-    )
+    payload = {"w": word, "x": result["x"], "v": solvers(num)}
+    answer = body.get("answer")
+    if isinstance(answer, list) and p.title_found(answer[: p.k]):
+        payload["d"] = p.secret
+        payload["v"] = add_solver(num)
+    return jsonify(payload)
 
 
 @app.post("/page")
 def page():
-    data = request.get_json(silent=True) or {}
-    answer = str(data.get("answer", ""))
-    num = data.get("num", puzzle_num())
-    p = get_puzzle(num)
-    correct = normalize_title(answer) == normalize_title(p["title"])
-    return jsonify(
-        {
-            "correct": correct,
-            "title": p["title"] if correct else None,
-        }
-    )
+    num = puzzle_num()
+    body = request.get_json(silent=True) or {}
+    answer = str(body.get("answer") or request.form.get("answer") or "")
+    try:
+        p = get_puzzle(num)
+    except (requests.RequestException, RuntimeError):
+        return jsonify({}), 503
+    if answer not in (p.title, url_title(p.title)):
+        return jsonify({})
+    return jsonify(p.reveal_all())
+
+
+@app.get("/stats")
+def stats():
+    num = puzzle_num()
+    if requested_num() != num:
+        return jsonify({"r": True})
+    return jsonify({"v": solvers(num)})
+
+
+@app.get("/history")
+def history():
+    num = puzzle_num()
+    first = max(0, num - HISTORY_DAYS)
+    titles = past_titles(first, num - 1)
+    counts = all_solvers(first, num)
+    rows = [[num, counts.get(num, 0), ["", ""]]]
+    for n in range(num - 1, first - 1, -1):
+        rows.append([n, counts.get(n, 0), [url_title(titles[n]), titles[n]]])
+    return jsonify(rows)
 
 
 @app.get("/")
 def index():
-    return send_from_directory(app.static_folder, "index.html")
+    return jsonify({"ok": True, "service": "pedantix", "num": puzzle_num()})
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    port = int(os.environ.get("PORT", "5000"))
+    app.run(host="0.0.0.0", port=port, debug=False)

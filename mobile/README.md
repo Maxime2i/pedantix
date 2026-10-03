@@ -1,110 +1,54 @@
-# Pédantix Mobile
+# Pédantix — backend
 
-Clone mobile du jeu [Pédantix](https://pedantix.certitudes.org) : chaque jour, un article Wikipédia français est tiré au sort. L'introduction est affichée avec les mots significatifs masqués. Le joueur propose des mots ; les mots sémantiquement proches sont révélés, les autres reçoivent un score chaud/froid. L'objectif final est de deviner le titre de l'article.
+API Flask du clone de [Pédantix](https://pedantix.certitudes.org), alignée sur l’original (protocole, scores, lemmes, calendrier).
 
-## Principe du jeu
+## Fonctionnement
 
-1. **Article du jour** — déterminé par la date UTC (numéro de puzzle = jours depuis le 1ᵉʳ janvier 2026).
-2. **Intro masquée** — les mots courants (stopwords) restent visibles ; les autres apparaissent comme des blancs.
-3. **Propositions** — chaque mot est comparé aux mots masqués via des embeddings word2vec français. Les mots très proches (> 0,80) se révèlent ; un score de 0 à 1 indique la proximité sémantique.
-4. **Titre** — une fois l'intro suffisamment dévoilée, le joueur peut tenter de deviner le titre de l'article.
-
-## Architecture
-
-```
-mobile/
-├── README.md
-├── .gitignore
-├── web-test/
-│   └── index.html          # Interface de test (HTML/CSS/JS inline)
-└── backend/
-    ├── app.py              # Serveur Flask (API + page de test)
-    ├── fetch_articles.py   # Télécharge la liste d'articles Wikipédia
-    ├── stopwords.py        # Mots visibles par défaut
-    ├── reduce_embeddings.py
-    ├── download_embeddings.sh
-    ├── requirements.txt
-    ├── data/
-    │   ├── articles.json       # Liste de titres (généré)
-    │   └── frWiki_reduced.vec  # Embeddings réduits (généré)
-    └── .venv/                  # Environnement Python 3.11
-```
-
-## Embeddings
-
-Les vecteurs proviennent du modèle **fastText wiki FR** :
-
-- **URL** : https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.fr.vec
-- **Licence** : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-- **Réduction** : le script `reduce_embeddings.py` conserve les 300 000 mots les plus fréquents (format texte word2vec, 300 dimensions) et produit `data/frWiki_reduced.vec`.
-
-Le fichier `.vec` complet (~2,8 Go) n'est jamais stocké entièrement : le téléchargement est streamé et réduit à la volée par `download_embeddings.sh`.
+1. **Page du jour** : nouvelle page à **midi, heure de Paris**. La numérotation est celle de l’original (nº1604 = 3 octobre 2026).
+2. **Pool** : les « articles vitaux » de Wikipédia (niveau 4, ≈ 10 700 sujets), traduits vers leur titre français (`fetch_articles.py`). 91 des 100 dernières pages de l’original y figurent.
+3. **Texte** : l’introduction de l’article, mise en forme conservée (gras, italique, paragraphes, listes). Le titre forme les premières cases (ids `0..k-1`). Mots à trait d’union (`peut-être`) = une case ; élisions (`l'`) = une case + apostrophe visible.
+4. **Proximité** : modèle word2vec **frWac** de Jean-Philippe Fauconnier (`frWac_non_lem_no_postag_no_phrase_200_cbow_cut100`), le même que l’original (scores identiques au centième). Score = cos × 100, renvoyé à partir de **35**. Les nombres, absents du modèle, sont rapprochés par écart relatif : `100 × (1 − |proposé − caché| / caché)` (mesuré sur l’original). Les cases du titre ne sont jamais grisées.
+5. **Lemmes** (`lemmatize.py`) : une proposition révèle les formes dont elle est le lemme (`être` → est, été ; `grand` → grande, grands) ou le féminin singulier (`grande` → grandes). Une forme fléchie ne révèle qu’elle-même (`est` ↛ sont). Accents obligatoires. Mots pleins : Lexique 3.83 ; mots grammaticaux : table calée sur l’original (`le` → la, l', les ; `de` → d', du, des ; `à` → au ; `il` → elle…).
+6. **Classement** : nombre de joueurs ayant trouvé, en SQLite (`data/pedantix.db`).
 
 ## Installation
 
-Depuis `mobile/backend/` :
-
 ```bash
+cd mobile/backend
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-bash download_embeddings.sh
-.venv/bin/python fetch_articles.py
+bash prepare_data.sh          # modèle frWac (126 Mo) + Lexique 3.83 → data/
+.venv/bin/python app.py       # http://localhost:5000
 ```
 
-## Lancement
+Sans `prepare_data.sh`, le serveur démarre quand même : pas de proximité, et seuls les mots grammaticaux sont regroupés.
+
+`python fetch_articles.py` régénère le pool (`data/articles.json`, versionné).
+
+Variables : `PEDANTIX_DATA_DIR` (données et base), `PEDANTIX_ARTICLES` (pool), `PORT`.
+
+## Docker
 
 ```bash
-.venv/bin/python app.py
+docker build -t pedantix-backend mobile/backend
+docker run -p 5000:5000 -v pedantix-data:/app/data pedantix-backend
 ```
 
-Le serveur écoute sur `http://0.0.0.0:5000`. Ouvrir `http://localhost:5000/` pour l'interface de test.
+Au premier démarrage, `entrypoint.sh` prépare les données dans le volume, puis lance gunicorn.
 
-## Routes API
+## Routes (protocole de l’original)
 
-| Méthode | Route    | Description |
-|---------|----------|-------------|
-| `GET`   | `/health` | Santé du serveur → `{"ok": true}` |
-| `GET`   | `/puzzle` | Puzzle du jour (num, title, tokens, words, revealed vide) |
-| `POST`  | `/score`  | Évalue un mot → score, cosine, revealed, message |
-| `POST`  | `/page`   | Vérifie le titre → `{"correct": bool, "title": ...}` |
-| `GET`   | `/`       | Page web-test (`index.html`) |
+| Méthode | Route | Réponse |
+|---|---|---|
+| `GET` | `/puzzle` | `{num, change, k, count, title, article, yesterday, v}` : arbre de la page, mots remplacés par `{w: id, n: longueur}` |
+| `POST` | `/score?n=` | `{num, word, answer}` → `{w, x, v}` avec `x` = `{"Mot": [ids], "#61.51": [ids]}` ; `d` = `[url, titre]` si `answer` complète le titre ; `e` si mot inconnu ; `r` si le jour a changé |
+| `POST` | `/page` | `{answer: titre}` → `{id: mot}` pour toute la page |
+| `GET` | `/stats?n=` | `{v}` (nombre de joueurs ayant trouvé) ou `{r: true}` |
+| `GET` | `/history` | `[[nº, joueurs, [url, titre]], …]` sur 100 jours, titre du jour masqué |
+| `GET` | `/health` | état du serveur |
 
-### Seuils sémantiques
+## Licences des données
 
-| Seuil | Valeur | Effet |
-|-------|--------|-------|
-| `EXACT_THRESHOLD`  | **0,85** | Le mot est considéré comme « trouvé » (exact ou quasi-exact) |
-| `REVEAL_THRESHOLD` | **0,80** | Les mots proches sont révélés dans l'intro |
-
-Le score affiché est `(cosine + 1) / 2`, arrondi à 4 décimales (0 = très froid, 1 = identique).
-
-### Exemples curl
-
-```bash
-# Santé
-curl -s http://localhost:5000/health
-
-# Puzzle du jour
-curl -s http://localhost:5000/puzzle | python3 -m json.tool
-
-# Proposer un mot
-curl -s -X POST http://localhost:5000/score \
-  -H 'Content-Type: application/json' \
-  -d '{"word": "paris"}' | python3 -m json.tool
-
-# Deviner le titre
-curl -s -X POST http://localhost:5000/page \
-  -H 'Content-Type: application/json' \
-  -d '{"answer": "France"}' | python3 -m json.tool
-```
-
-## Dépendances
-
-Python 3.11, stdlib + :
-
-- `flask`
-- `flask-cors`
-- `numpy`
-- `requests`
-
-Le script `fetch_articles.py` n'utilise que la stdlib (`urllib`).
+- frWac word2vec : Jean-Philippe Fauconnier, CC BY 3.0.
+- Lexique 3.83 : New, Pallier et al., CC BY-SA 4.0.
+- Textes : Wikipédia, CC BY-SA 4.0.

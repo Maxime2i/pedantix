@@ -1,121 +1,110 @@
 #!/usr/bin/env python3
-"""Télécharge les titres Wikipédia FR (articles de qualité) vers articles.json."""
+"""Construit data/articles.json : le pool de pages du jour.
+
+Comme l'original, les pages viennent des « articles vitaux » de Wikipédia
+(Wikipedia:Vital articles, niveau 4 par défaut, ~10 000 sujets), traduits
+vers leur titre français via les liens interlangues. On garde l'ordre
+alphabétique : app.py mélange le pool de façon déterministe.
+
+Usage : python fetch_articles.py [--level 4]
+"""
 
 from __future__ import annotations
 
+import argparse
 import json
-import random
-import urllib.error
-import urllib.parse
-import urllib.request
+import os
+import sys
+import time
 from pathlib import Path
 
-DATA_DIR = Path("/home/ubuntu/pedantix/mobile/backend/data")
+import requests
+
+DATA_DIR = Path(os.environ.get("PEDANTIX_DATA_DIR", Path(__file__).resolve().parent / "data"))
 ARTICLES_PATH = DATA_DIR / "articles.json"
-UA = "PedantixMobile/1.0 (https://github.com/Maxime2i/pedantix; dev)"
+UA = "Pedantix/2.0 (https://github.com/Maxime2i/pedantix; articles)"
+EN_API = "https://en.wikipedia.org/w/api.php"
 
-FALLBACK_ARTICLES = [
-    "France",
-    "Paris",
-    "Tour Eiffel",
-    "Révolution française",
-    "Napoléon Ier",
-    "Seconde Guerre mondiale",
-    "Albert Einstein",
-    "Théorie de la relativité",
-    "Charles Darwin",
-    "Évolution biologique",
-    "Marie Curie",
-    "Antarctique",
-    "Amazonie",
-    "Soleil",
-    "Lune",
-    "Terre",
-    "Internet",
-    "Intelligence artificielle",
-    "Ordinateur",
-    "Linux",
-    "Python (langage)",
-    "Football",
-    "Jeux olympiques",
-    "Cinéma",
-    "Musique",
-    "Peinture",
-    "Victor Hugo",
-    "Les Misérables",
-    "Molière",
-    "Voltaire",
-    "Louis XIV",
-    "Union européenne",
-    "Égypte antique",
-    "Grèce antique",
-    "Rome antique",
-    "Japon",
-    "Chine",
-    "États-Unis",
-    "Canada",
-    "Océan Atlantique",
-]
-
-SKIP_PREFIXES = ("Catégorie:", "Portail:", "Modèle:", "Wikipédia:")
-MAX_TITLES = 300
+SESSION = requests.Session()
+SESSION.headers["User-Agent"] = UA
 
 
-def fetch_category_members() -> list[str]:
-    titles: list[str] = []
-    cmcontinue: str | None = None
+def api(params: dict) -> dict:
+    params = {**params, "format": "json", "formatversion": "2"}
+    for attempt in range(5):
+        resp = SESSION.get(EN_API, params=params, timeout=60)
+        if resp.status_code == 429:
+            time.sleep(2 + 2 * attempt)
+            continue
+        resp.raise_for_status()
+        return resp.json()
+    resp.raise_for_status()
+    return {}
 
-    while len(titles) < MAX_TITLES:
-        params: dict[str, str] = {
-            "action": "query",
-            "list": "categorymembers",
-            "cmtitle": "Catégorie:Article de qualité",
-            "cmtype": "page",
-            "cmlimit": "500",
-            "format": "json",
-            "origin": "*",
-        }
-        if cmcontinue:
-            params["cmcontinue"] = cmcontinue
 
-        url = "https://fr.wikipedia.org/w/api.php?" + urllib.parse.urlencode(params)
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-
-        for member in data.get("query", {}).get("categorymembers", []):
-            title = member.get("title", "")
-            if not title or title.startswith(SKIP_PREFIXES):
-                continue
-            titles.append(title)
-            if len(titles) >= MAX_TITLES:
-                break
-
-        cont = data.get("continue", {})
-        cmcontinue = cont.get("cmcontinue")
-        if not cmcontinue:
+def vital_pages(level: int) -> list[str]:
+    """Toutes les sous-pages « Wikipedia:Vital articles/Level/N[/…] »."""
+    pages: list[str] = []
+    params = {
+        "action": "query",
+        "list": "allpages",
+        "apnamespace": "4",
+        "apprefix": f"Vital articles/Level/{level}",
+        "aplimit": "max",
+    }
+    while True:
+        data = api(params)
+        pages += [p["title"] for p in data["query"]["allpages"]]
+        if "continue" not in data:
             break
+        params.update(data["continue"])
+    return pages
 
-    return titles[:MAX_TITLES]
+
+def french_titles(page: str) -> set[str]:
+    """Titres FR des articles liés depuis une page de liste anglaise."""
+    titles: set[str] = set()
+    params = {
+        "action": "query",
+        "titles": page,
+        "generator": "links",
+        "gplnamespace": "0",
+        "gpllimit": "max",
+        "prop": "langlinks",
+        "lllang": "fr",
+        "lllimit": "max",
+        "redirects": "1",
+    }
+    while True:
+        data = api(params)
+        for p in data.get("query", {}).get("pages", []):
+            for ll in p.get("langlinks", []):
+                title = ll.get("title", "")
+                if title and ":" not in title:
+                    titles.add(title)
+        if "continue" not in data:
+            break
+        params.update(data["continue"])
+    return titles
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--level", type=int, default=4)
+    args = parser.parse_args()
+
+    pages = vital_pages(args.level)
+    if not pages:
+        sys.exit("Aucune page « Vital articles » trouvée.")
+    titles: set[str] = set()
+    for i, page in enumerate(pages, 1):
+        titles |= french_titles(page)
+        print(f"[{i}/{len(pages)}] {page} → {len(titles)} titres", file=sys.stderr)
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-    try:
-        titles = fetch_category_members()
-        if not titles:
-            raise ValueError("Aucun titre récupéré")
-    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, json.JSONDecodeError, OSError):
-        titles = list(FALLBACK_ARTICLES)
-
-    rng = random.Random(42)
-    rng.shuffle(titles)
-
     with ARTICLES_PATH.open("w", encoding="utf-8") as fh:
-        json.dump(titles, fh, ensure_ascii=False, indent=2)
-
-    print(len(titles))
+        json.dump(sorted(titles), fh, ensure_ascii=False, indent=0)
+    print(f"{len(titles)} titres → {ARTICLES_PATH}")
 
 
 if __name__ == "__main__":
