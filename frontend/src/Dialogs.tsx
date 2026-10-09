@@ -1,10 +1,10 @@
-// Boîtes de dialogue : règles, FAQ, couleurs, historique, partage.
-import { useEffect, useState } from "react";
+// Boîtes de dialogue : règles, FAQ, réglages, historique, partage.
+import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { fetchHistory, wikiUrl } from "./api";
-import type { HistoryRow, Secret } from "./api";
-import { store } from "./game";
-import type { Mode, Palette, Settings } from "./game";
+import type { HistoryRow, Puzzle, Secret } from "./api";
+import { puzzleDate, store } from "./game";
+import type { Mode, Settings } from "./game";
 
 export function Dialog({ title, onClose, children }: { title: string; onClose: () => void; children: ReactNode }) {
   useEffect(() => {
@@ -25,168 +25,198 @@ export function Dialog({ title, onClose, children }: { title: string; onClose: (
   );
 }
 
-export function Rules({ change }: { change: number }) {
+const STEPS: [string, string, string][] = [
+  ["📄", "Une page Wikipédia cachée", "Chaque jour, tous les mots d’un article sont masqués. Retrouvez son titre."],
+  [
+    "✏️",
+    "Proposez des mots",
+    "Un mot présent dans l’article apparaît partout où il se trouve. L’infinitif ou le masculin singulier révèle aussi les autres formes. Les accents comptent.",
+  ],
+  [
+    "◐",
+    "Les mots proches",
+    "Un mot proche par le sens s’inscrit en gris dans la boîte : plus il est clair, plus il est proche.",
+  ],
+  ["👆", "Cliquez sur une boîte", "Pour voir le nombre de lettres du mot caché."],
+  [
+    "🏆",
+    "Trouvez le titre",
+    "Vous gagnez quand tous les mots du titre sont révélés. Votre rang est votre place parmi ceux qui ont trouvé aujourd’hui.",
+  ],
+];
+
+export function Rules({ change, onStart }: { change: number; onStart: () => void }) {
   const local = new Date(change * 1000).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   return (
     <div className="dialog-text">
-      <p>Retrouvez la page Wikipédia du jour en dévoilant, essai après essai, les mots de son introduction.</p>
-      <p>
-        Chaque mot présent dans le texte apparaît en clair. Un mot proche par le sens reste dans sa boîte,
-        écrit en gris : plus il est clair, plus il est proche du mot caché. Les mots de votre dernier essai sont
-        surlignés en vert ou en orange. Pressez une boîte noire pour voir la longueur du mot.
-      </p>
-      <p>
-        Vous gagnez quand tous les mots du titre sont dévoilés. Ils ne sont jamais grisés : trouvés ou cachés.
-        L’infinitif d’un verbe ou la forme masculine singulière d’un mot suffit à révéler ses formes conjuguées,
-        féminines et plurielles. Les majuscules sont inutiles, les accents comptent.
-      </p>
-      <p>
-        Comptez plusieurs dizaines d’essais. Le rang affiché à la fin est votre place parmi les joueurs qui ont
-        trouvé la page du jour, quel que soit le nombre d’essais. Vous pourrez alors afficher la page, révéler les
-        mots un par un, ou continuer à jouer.
-      </p>
-      <p>
-        Une nouvelle page chaque jour à midi, heure française (<b>{local}</b> chez vous).
-      </p>
+      <ul className="steps">
+        {[...STEPS, ["🕛", "Une nouvelle page chaque jour", `À midi, heure française (${local} chez vous).`]].map(
+          ([icon, title, text]) => (
+            <li key={title}>
+              <span className="step-icon" aria-hidden="true">
+                {icon}
+              </span>
+              <div>
+                <b>{title}</b>
+                <p>{text}</p>
+              </div>
+            </li>
+          ),
+        )}
+      </ul>
+      <button type="button" className="primary wide" onClick={onStart}>
+        C’est parti
+      </button>
     </div>
   );
 }
+
+const QUESTIONS: [string, string][] = [
+  [
+    "D’où viennent les pages ?",
+    "D’une liste d’environ 10 000 sujets essentiels de Wikipédia (les « articles vitaux »). La page du jour est tirée au hasard, la même pour tout le monde.",
+  ],
+  [
+    "Comment est calculée la proximité ?",
+    "Avec un modèle word2vec entraîné sur un grand corpus de pages web françaises (frWac). Deux mots sont proches s’ils apparaissent dans des contextes semblables, ce qui donne parfois des surprises : « grand » et « petit » sont très proches.",
+  ],
+  [
+    "Pourquoi mon mot n’est-il pas reconnu ?",
+    "Il n’est ni dans le texte ni dans le vocabulaire du modèle. Vérifiez l’orthographe et les accents : « etre » n’est pas « être ».",
+  ],
+  ["Ma partie est-elle sauvegardée ?", "Oui, dans ce navigateur. Elle repart à zéro à l’arrivée de la page suivante."],
+];
 
 export function Faq() {
   return (
     <div className="dialog-text">
-      <h3>D’où viennent les pages ?</h3>
-      <p>
-        D’une liste d’environ 10 000 sujets essentiels de Wikipédia (les « articles vitaux »). La page du jour est
-        tirée au hasard, la même pour tout le monde.
-      </p>
-      <h3>Comment est calculée la proximité ?</h3>
-      <p>
-        Avec un modèle word2vec entraîné sur un grand corpus de pages web françaises (frWac, Jean-Philippe
-        Fauconnier). Deux mots sont proches s’ils apparaissent dans des contextes semblables, ce qui donne parfois
-        des associations surprenantes : « grand » et « petit » sont très proches.
-      </p>
-      <h3>Pourquoi mon mot n’est-il pas reconnu ?</h3>
-      <p>
-        Il n’est ni dans le texte ni dans le vocabulaire du modèle. Vérifiez l’orthographe et les accents :
-        « etre » n’est pas « être ».
-      </p>
-      <h3>Ma partie est-elle sauvegardée ?</h3>
-      <p>Oui, dans ce navigateur. Elle est remise à zéro à l’arrivée de la page suivante.</p>
+      {QUESTIONS.map(([q, a]) => (
+        <div key={q} className="faq-item">
+          <h3>{q}</h3>
+          <p>{a}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
-export function Colors({ settings, onChange }: { settings: Settings; onChange: (s: Settings) => void }) {
-  const palettes: [Palette, string][] = [
-    ["colorful", "Coloré"],
-    ["grey", "Gris"],
-  ];
+export function SettingsForm({ settings, onChange }: { settings: Settings; onChange: (s: Settings) => void }) {
   const modes: [Mode, string][] = [
+    ["system", "Auto"],
     ["light", "Clair"],
     ["dark", "Sombre"],
-    ["system", "Système"],
   ];
   return (
-    <div className="dialog-text settings">
-      <fieldset>
-        <legend>Thème</legend>
-        {palettes.map(([value, label]) => (
-          <label key={value}>
-            <input
-              type="radio"
-              name="palette"
-              checked={settings.palette === value}
-              onChange={() => onChange({ ...settings, palette: value })}
-            />{" "}
-            {label}
-          </label>
-        ))}
-      </fieldset>
-      <fieldset>
-        <legend>Mode</legend>
+    <div className="dialog-text">
+      <h3 className="setting-label">Mode</h3>
+      <div className="segmented" role="radiogroup" aria-label="Mode">
         {modes.map(([value, label]) => (
-          <label key={value}>
-            <input
-              type="radio"
-              name="mode"
-              checked={settings.mode === value}
-              onChange={() => onChange({ ...settings, mode: value })}
-            />{" "}
+          <button
+            key={value}
+            type="button"
+            role="radio"
+            aria-checked={settings.mode === value}
+            className={settings.mode === value ? "on" : ""}
+            onClick={() => onChange({ ...settings, mode: value })}
+          >
             {label}
-          </label>
+          </button>
         ))}
-      </fieldset>
-      <fieldset>
-        <legend>Options</legend>
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.blind}
-            onChange={(e) => onChange({ ...settings, blind: e.target.checked })}
-          />{" "}
-          Daltonien (💚🟠 au lieu de 🟩🟧)
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={settings.animation}
-            onChange={(e) => onChange({ ...settings, animation: e.target.checked })}
-          />{" "}
-          Animation de victoire
-        </label>
-      </fieldset>
+      </div>
     </div>
   );
 }
 
-export function History({ num, solvers, secret }: { num: number; solvers: number; secret: Secret | null }) {
+export function History({ puzzle, solvers, secret }: { puzzle: Puzzle; solvers: number; secret: Secret | null }) {
+  const num = puzzle.num;
   const [rows, setRows] = useState<HistoryRow[] | null>(null);
   const [error, setError] = useState(false);
-  useEffect(() => {
+  const load = () => {
+    setError(false);
     fetchHistory().then(setRows, () => setError(true));
-  }, []);
-  if (error) return <p className="dialog-text">Une erreur s’est produite.</p>;
-  if (!rows) return <p className="dialog-text">Chargement…</p>;
+  };
+  useEffect(load, []);
+
+  // Vos parties : essais par jour (négatif = en cours ou abandonné).
+  const stats = useMemo(() => {
+    const days = Object.values(store.read<Record<number, number>>("days", {}));
+    const won = days.filter((d) => d > 0);
+    const avg = won.length ? Math.round(won.reduce((a, b) => a + b, 0) / won.length) : 0;
+    return { played: days.length, won: won.length, avg };
+    // Recalculé quand la partie du jour change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secret, rows]);
+
   return (
-    <div className="history-scroll">
-      <table className="history-table">
-        <thead>
-          <tr>
-            <th>Nº</th>
-            <th>Page</th>
-            <th>Essais</th>
-            <th />
-            <th>Trouvée par</th>
-          </tr>
-        </thead>
-        <tbody>
+    <div className="history-dialog">
+      <div className="stats">
+        <div>
+          <b>{stats.played}</b>
+          <span>Jouées</span>
+        </div>
+        <div>
+          <b>{stats.won}</b>
+          <span>Trouvées</span>
+        </div>
+        <div>
+          <b>{stats.avg || "–"}</b>
+          <span>Coups en moy.</span>
+        </div>
+      </div>
+      <h3 className="section-title">100 derniers jours</h3>
+      {error ? (
+        <p className="dialog-text">
+          Impossible de charger l’historique.{" "}
+          <button type="button" className="link-button" onClick={load}>
+            Réessayer
+          </button>
+        </p>
+      ) : !rows ? (
+        <p className="dialog-text muted">Chargement…</p>
+      ) : (
+        <ul className="history-scroll day-list">
           {rows.map(([n, count, row]) => {
             // La page du jour n'est connue que de ceux qui l'ont trouvée.
             const [url, title] = n === num && secret ? secret : row;
             const day = store.day(n);
-            const tries = day == null ? "" : Math.abs(day);
-            const mark = day == null ? "" : day > 0 ? "✅" : n < num ? "❌" : "";
+            const players = n === num ? Math.max(solvers, count) : count;
+            const status =
+              day == null ? null : day > 0 ? (
+                <span className="pill pill-found">{day} coups</span>
+              ) : n < num ? (
+                <span className="pill pill-none">Non trouvée</span>
+              ) : (
+                <span className="pill pill-close">En cours</span>
+              );
+            const body = (
+              <>
+                <span className="day-main">
+                  <span className={title ? "day-title" : "day-title muted"}>
+                    {title || (n === num ? "Page du jour" : "?")}
+                  </span>
+                  <span className="day-meta">
+                    {puzzleDate(puzzle.change, num - n, true)} ·{" "}
+                    {players ? `${players} ${players > 1 ? "joueurs" : "joueur"}` : "personne pour l’instant"}
+                  </span>
+                </span>
+                {status}
+                {title ? <span className="muted" aria-hidden="true">↗</span> : null}
+              </>
+            );
             return (
-              <tr key={n}>
-                <td className="num">{n}</td>
-                <td>
-                  {title ? (
-                    <a href={wikiUrl(url)} target="_blank" rel="noopener noreferrer">
-                      {title}
-                    </a>
-                  ) : (
-                    "?"
-                  )}
-                </td>
-                <td className="num">{tries}</td>
-                <td>{mark}</td>
-                <td className="num">{(n === num ? Math.max(solvers, count) : count) || ""}</td>
-              </tr>
+              <li key={n}>
+                {title ? (
+                  <a href={wikiUrl(url)} target="_blank" rel="noopener noreferrer">
+                    {body}
+                  </a>
+                ) : (
+                  <div>{body}</div>
+                )}
+              </li>
             );
           })}
-        </tbody>
-      </table>
+        </ul>
+      )}
     </div>
   );
 }

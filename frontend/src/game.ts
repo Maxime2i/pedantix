@@ -57,31 +57,20 @@ export const store = {
 
 // ---------------------------------------------------------------- réglages
 
-export type Palette = "colorful" | "grey";
 export type Mode = "light" | "dark" | "system";
 
 export interface Settings {
-  palette: Palette;
   mode: Mode;
-  /** Daltonien : 💚🟠 au lieu de 🟩🟧. */
-  blind: boolean;
-  animation: boolean;
 }
 
 export function loadSettings(): Settings {
   return {
-    palette: read<Palette>("theme", "colorful", ""),
     mode: read<Mode>("mode", "system", ""),
-    blind: read<boolean>("blind", false, ""),
-    animation: read<boolean>("animation", true, ""),
   };
 }
 
 export function saveSettings(s: Settings): void {
-  write("theme", s.palette, "");
   write("mode", s.mode, "");
-  write("blind", s.blind, "");
-  write("animation", s.animation, "");
 }
 
 // ------------------------------------------------------------------ règles
@@ -111,7 +100,6 @@ export function countTurns(cells: Cell[]): Turns {
 }
 
 export const BLOCKS = { green: "🟩", orange: "🟧", red: "🟥" };
-export const BLIND_BLOCKS = { green: "💚", orange: "🟠", red: "🟥" };
 export type Blocks = typeof BLOCKS;
 
 /** Barre de progression en `size` carrés, proportionnelle aux cases. */
@@ -132,9 +120,26 @@ export function rankingLabel(rank: number): string {
 
 export const plural = (n: number, word: string) => `${n} ${word}${n > 1 ? "s" : ""}`;
 
-export function shareText(num: number, tries: number, turns: Turns): string {
+/**
+ * Date d'une page : `change` est l'instant de publication (midi, Paris) de la page du jour.
+ * `daysBefore` remonte aux pages précédentes (historique).
+ */
+export function puzzleDate(change: number, daysBefore = 0, short = false): string {
+  const start = new Date((change - 86400 * daysBefore) * 1000);
+  try {
+    const text = start.toLocaleDateString("fr-FR", short
+      ? { weekday: "short", day: "numeric", month: "short", timeZone: "Europe/Paris" }
+      : { weekday: "long", day: "numeric", month: "long", timeZone: "Europe/Paris" });
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  } catch {
+    return start.toDateString();
+  }
+}
+
+/** `change` : instant de publication de la page (sert à la dater). */
+export function shareText(change: number, tries: number, turns: Turns): string {
   return (
-    `J'ai trouvé #pedantix nº${num} en ${plural(tries, "coup")} !\n` +
+    `J'ai trouvé le #pedantix du ${puzzleDate(change).toLowerCase()} en ${plural(tries, "coup")} !\n` +
     `${story(turns, 20)}\n${window.location.origin}/`
   );
 }

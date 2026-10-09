@@ -6,7 +6,7 @@ export type Node = string | { w: number; n: number } | { t: string; c: Node[] };
 
 export interface Puzzle {
   num: number;
-  /** Instant (epoch, s) du changement de page, à midi heure de Paris. */
+  /** Instant (epoch, s) de publication de la page du jour, à midi heure de Paris. */
   change: number;
   /** Nombre de cases du titre : ids 0..k-1. */
   k: number;

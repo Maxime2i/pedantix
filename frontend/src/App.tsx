@@ -7,28 +7,35 @@ import type { Node, Puzzle, Secret } from "./api";
 import { renderNodes } from "./Article";
 import type { CellView, Flash } from "./Article";
 import { launchConfetti } from "./confetti";
-import { Colors, Dialog, Faq, History, Rules, Share } from "./Dialogs";
+import { Dialog, Faq, History, Rules, SettingsForm, Share } from "./Dialogs";
 import {
-  BLIND_BLOCKS,
-  BLOCKS,
   countTurns,
   improves,
   loadSettings,
   normalize,
-  plural,
+  puzzleDate,
   saveSettings,
   shareText,
   store,
-  story,
 } from "./game";
 import type { Cell, Guesses, Score, Settings, Turns } from "./game";
 
-type DialogName = "rules" | "faq" | "colors" | "history" | "share";
+type DialogName = "rules" | "faq" | "settings" | "history" | "share";
+type Sort = "recent" | "close" | "alpha";
+type FeedbackKind = "found" | "close" | "miss" | "info" | "error";
+
+/** Résultat du dernier essai (ou message), affiché sous la saisie. */
+interface Feedback {
+  kind: FeedbackKind;
+  text?: string;
+  /** Message d'erreur du serveur (HTML). */
+  html?: string;
+}
 
 const STATS_INTERVAL = 5 * 60 * 1000;
 const FLASH_MS = 2000;
 const COLLAPSED_ROWS = 5;
-const EXPIRED_MSG = "Le temps imparti de 24h s’est écoulé. Rafraîchissement en cours…";
+const FEEDBACK_ICONS: Record<FeedbackKind, string> = { found: "✓", close: "◐", miss: "✕", info: "✦", error: "⚠" };
 
 /** Longueur de chaque case, indexée par id. */
 function cellLengths(nodes: Node[], out: number[] = []): number[] {
@@ -63,9 +70,30 @@ function parseScores(x: Record<string, number[]> = {}): Record<number, Score> {
   return scores;
 }
 
+/** Mots révélés et meilleure proximité d'une proposition. */
+function summarize(scores: Record<number, Score>) {
+  let found = 0;
+  let best = 0;
+  for (const s of Object.values(scores)) {
+    if (typeof s === "string") found++;
+    else best = Math.max(best, s);
+  }
+  return { found, best };
+}
+
+const count = (n: number, one: string, many: string) => `${n} ${n > 1 ? many : one}`;
+
+function describe(word: string, scores: Record<number, Score>, again = false): Feedback {
+  const { found, best } = summarize(scores);
+  const prefix = again ? `« ${word} » déjà proposé · ` : `« ${word} » · `;
+  if (found) return { kind: "found", text: prefix + count(found, "mot révélé", "mots révélés") };
+  if (best) return { kind: "close", text: prefix + `proche (${Math.round(best)})` };
+  return { kind: "miss", text: prefix + "absent de la page" };
+}
+
 function rankLabel(rank: number) {
   const medal = ["", "🥇", "🥈", "🥉"][rank] ?? "";
-  if (rank <= 0) return <>N<sup>ème</sup></>;
+  if (rank <= 0) return <>–</>;
   return (
     <>
       {medal}
@@ -75,17 +103,29 @@ function rankLabel(rank: number) {
   );
 }
 
+/** Barre de progression : vert (trouvés), orange (proches), reste. */
+function ProgressBar({ turns: [green, close, hidden] }: { turns: Turns }) {
+  const total = green + close + hidden || 1;
+  return (
+    <div className="progress-bar" aria-hidden="true">
+      <span className="progress-green" style={{ flexGrow: green / total }} />
+      <span className="progress-close" style={{ flexGrow: close / total }} />
+      <span style={{ flexGrow: hidden / total }} />
+    </div>
+  );
+}
+
 function useTheme(settings: Settings) {
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     const apply = () => {
       const mode = settings.mode === "system" ? (media.matches ? "dark" : "light") : settings.mode;
-      document.documentElement.className = `${mode}-${settings.palette}`;
+      document.documentElement.className = mode;
     };
     apply();
     media.addEventListener("change", apply);
     return () => media.removeEventListener("change", apply);
-  }, [settings.mode, settings.palette]);
+  }, [settings.mode]);
 }
 
 export default function App() {
@@ -101,12 +141,10 @@ export default function App() {
   const [ranking, setRanking] = useState(0);
   const [turns, setTurns] = useState<Turns>([0, 0, 0]);
   const [solvers, setSolvers] = useState(0);
-  const [message, setMessage] = useState<{ html?: string; text?: string }>({});
+  const [message, setMessage] = useState<Feedback | null>(null);
   const [input, setInput] = useState("");
-  const [placeholder, setPlaceholder] = useState("Mot");
   const [busy, setBusy] = useState(false);
-  const [alpha, setAlpha] = useState(false);
-  const [chronoDir, setChronoDir] = useState(-1);
+  const [sort, setSort] = useState<Sort>("recent");
   const [collapsed, setCollapsed] = useState(true);
   const [pinned, setPinned] = useState(false);
   const [dialog, setDialog] = useState<DialogName | null>(null);
@@ -118,53 +156,64 @@ export default function App() {
   const inputRef = useRef<HTMLInputElement>(null);
   const recent = useRef<string[]>([""]);
   const recentIdx = useRef(0);
+  const currentNum = useRef<number | null>(null);
 
   useTheme(settings);
-  const blocks = settings.blind ? BLIND_BLOCKS : BLOCKS;
   const lengths = useMemo(
     () => (puzzle ? cellLengths(puzzle.article, cellLengths(puzzle.title)) : []),
     [puzzle],
   );
 
-  const expire = useCallback(() => {
-    setMessage({ text: EXPIRED_MSG });
-    window.setTimeout(() => window.location.reload(), 3000);
-  }, []);
-
   // Chargement du jour et de la partie sauvegardée.
-  useEffect(() => {
-    fetchPuzzle().then(
-      (p) => {
-        store.startDay(p.num);
-        const saved = store.read<Guesses>("guesses", {});
-        let restored: Cell[] = Array.from({ length: p.count }, () => ({ word: "", score: 0 }));
-        for (const [word, [, scores]] of Object.entries(saved).sort((a, b) => a[1][0] - b[1][0])) {
-          restored = applyScores(restored, word, scores).cells;
-        }
-        setCells(restored);
-        setGuesses(saved);
-        setNTries(Math.abs(store.day(p.num) ?? 0));
-        setSecret(store.read<Secret | null>("secret", null));
-        setRanking(store.read<number>("ranking", 0));
-        setTurns(store.read<Turns>("turns", [0, 0, 0]));
-        setSolvers(p.v);
-        setPuzzle(p);
-        if (!store.read<boolean>("readRules", false)) {
-          setDialog("rules");
-          store.write("readRules", true);
-        }
-      },
-      (e: Error) => setLoadError(`Impossible de charger la page du jour : ${e.message}`),
-    );
+  const load = useCallback(async () => {
+    try {
+      const p = await fetchPuzzle();
+      store.startDay(p.num);
+      const saved = store.read<Guesses>("guesses", {});
+      let restored: Cell[] = Array.from({ length: p.count }, () => ({ word: "", score: 0 }));
+      for (const [word, [, scores]] of Object.entries(saved).sort((a, b) => a[1][0] - b[1][0])) {
+        restored = applyScores(restored, word, scores).cells;
+      }
+      setCells(restored);
+      setFresh(new Set());
+      setFreshClose(new Set());
+      setGuesses(saved);
+      setNTries(Math.abs(store.day(p.num) ?? 0));
+      setSecret(store.read<Secret | null>("secret", null));
+      setRanking(store.read<number>("ranking", 0));
+      setTurns(store.read<Turns>("turns", [0, 0, 0]));
+      setSolvers(p.v);
+      if (currentNum.current != null && currentNum.current !== p.num) {
+        setSee(false);
+        setWordMode(false);
+        setPageWords(null);
+        setWikiImg(null);
+        setMessage({ kind: "info", text: "Nouvelle page du jour !" });
+      }
+      currentNum.current = p.num;
+      setPuzzle(p);
+      if (!store.read<boolean>("readRules", false)) {
+        setDialog("rules");
+        store.write("readRules", true);
+      }
+    } catch (e) {
+      if (currentNum.current == null) setLoadError(`Impossible de charger la page du jour : ${(e as Error).message}`);
+      else setMessage({ kind: "error", text: "Pas de connexion. Réessayez." });
+    }
   }, []);
 
-  // « Trouvé par N personnes », rafraîchi toutes les 5 minutes.
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  // Joueurs ayant trouvé : rafraîchi toutes les 5 minutes et au retour sur l'onglet.
   useEffect(() => {
     if (!puzzle) return;
     const tick = () => {
       if (document.visibilityState !== "visible") return;
+      if (Date.now() / 1000 >= puzzle.change + 86400) return void load();
       fetchStats(puzzle.num).then(
-        (s) => (s.r ? expire() : setSolvers((v) => Math.max(v, s.v ?? 0))),
+        (s) => (s.r ? load() : setSolvers((v) => Math.max(v, s.v ?? 0))),
         () => {},
       );
     };
@@ -174,25 +223,40 @@ export default function App() {
       window.clearInterval(timer);
       document.removeEventListener("visibilitychange", tick);
     };
-  }, [puzzle, expire]);
+  }, [puzzle, load]);
+
+  // Une fois la page trouvée, son image illustre le résultat.
+  useEffect(() => {
+    if (secret && wikiImg == null) {
+      fetchWikiImage(secret[0]).then((src) => setWikiImg(src ?? ""), () => setWikiImg(""));
+    }
+  }, [secret, wikiImg]);
 
   const guessCount = useMemo(
     () => Object.values(guesses).reduce((m, [n]) => Math.max(m, n), 0),
     [guesses],
   );
 
-  /** Affiche une proposition (nouvelle ou déjà jouée) et le retour en carrés. */
-  function show(word: string, scores: Record<number, Score>): Cell[] {
+  // Sans message récent (ouverture de la page), on rappelle le dernier essai.
+  const feedback = useMemo<Feedback | null>(() => {
+    if (message) return message;
+    const last = Object.entries(guesses).sort((a, b) => b[1][0] - a[1][0])[0];
+    return last ? describe(last[0], last[1][1]) : null;
+  }, [message, guesses]);
+
+  /** Met en avant une proposition (nouvelle ou déjà jouée) et annonce le résultat. */
+  function show(word: string, scores: Record<number, Score>, again = false): Cell[] {
     const r = applyScores(cells, word, scores);
     setCells(r.cells);
     setFresh(r.fresh);
     setFreshClose(r.freshClose);
-    const feedback =
-      blocks.green.repeat(r.fresh.size) +
-      blocks.orange.repeat(r.freshClose.size) +
-      (r.fresh.size + r.freshClose.size ? "" : blocks.red);
-    setMessage({ text: feedback });
+    setMessage(describe(word, scores, again));
     return r.cells;
+  }
+
+  /** Revoir une proposition déjà jouée (depuis la liste des essais). */
+  function replay(word: string) {
+    if (guesses[word]) show(word, guesses[word][1], true);
   }
 
   async function handleSubmit(e: FormEvent) {
@@ -204,11 +268,9 @@ export default function App() {
     recent.current = ["", ...recent.current].slice(0, 21);
     recentIdx.current = 0;
     setInput("");
-    setPlaceholder(word);
-    setMessage({});
 
     if (guesses[word]) {
-      show(word, guesses[word][1]);
+      show(word, guesses[word][1], true);
       return;
     }
 
@@ -222,14 +284,15 @@ export default function App() {
     try {
       res = await postScore(puzzle.num, word, answer);
     } catch {
-      setMessage({ text: "Une erreur s’est produite." });
+      setInput(word);
+      setMessage({ kind: "error", text: "Pas de connexion. Réessayez." });
       return;
     } finally {
       setBusy(false);
     }
-    if (res.r) return expire();
+    if (res.r) return void load();
     if (res.e) {
-      setMessage({ html: res.e });
+      setMessage({ kind: "error", html: res.e });
       return;
     }
 
@@ -259,7 +322,8 @@ export default function App() {
       store.write("turns", finalTurns);
       store.write("ranking", rank);
       store.setDay(puzzle.num, tries);
-      if (settings.animation) launchConfetti();
+      launchConfetti();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
@@ -292,21 +356,14 @@ export default function App() {
       setPageWords(words);
       return words;
     } catch {
-      setMessage({ text: "Une erreur s’est produite." });
+      setMessage({ kind: "error", text: "Pas de connexion. Réessayez." });
       return null;
     }
   }
 
   async function toggleSee(checked: boolean) {
-    if (!checked) {
-      setSee(false);
-      return;
-    }
-    if (!(await loadPage())) return;
-    setSee(true);
-    if (secret && wikiImg == null) {
-      fetchWikiImage(secret[0]).then((src) => setWikiImg(src ?? ""), () => setWikiImg(""));
-    }
+    if (!checked) return setSee(false);
+    if (await loadPage()) setSee(true);
   }
 
   function flash(id: number, value: Flash) {
@@ -330,6 +387,17 @@ export default function App() {
     }
   }
 
+  /** Partage natif sur mobile, sinon copie dans le presse-papiers. */
+  function share() {
+    if (!puzzle) return;
+    const text = shareText(puzzle.change, nTries, turns);
+    if (navigator.share && window.matchMedia("(pointer: coarse)").matches) {
+      navigator.share({ text }).catch(() => {});
+    } else {
+      setDialog("share");
+    }
+  }
+
   function updateSettings(s: Settings) {
     setSettings(s);
     saveSettings(s);
@@ -345,14 +413,20 @@ export default function App() {
   };
 
   const rows = useMemo(() => {
-    const entries = Object.entries(guesses);
-    if (alpha) entries.sort((a, b) => a[0].localeCompare(b[0]));
-    else entries.sort((a, b) => chronoDir * (a[1][0] - b[1][0]));
-    return collapsed ? entries.slice(0, COLLAPSED_ROWS) : entries;
-  }, [guesses, alpha, chronoDir, collapsed]);
+    const list = Object.entries(guesses).map(([word, [n, scores]]) => ({ word, n, ...summarize(scores) }));
+    if (sort === "alpha") list.sort((a, b) => a.word.localeCompare(b.word));
+    else if (sort === "close") list.sort((a, b) => b.found - a.found || b.best - a.best);
+    else list.sort((a, b) => b.n - a.n);
+    return collapsed ? list.slice(0, COLLAPSED_ROWS) : list;
+  }, [guesses, sort, collapsed]);
+  const nGuesses = Object.keys(guesses).length;
 
   if (loadError) return <div className="app"><div className="error-banner">{loadError}</div></div>;
   if (!puzzle) return <div className="app"><p className="loading-msg">Chargement de la page du jour…</p></div>;
+
+  const progress = countTurns(cells);
+  const [green, close, hidden] = progress;
+  const percent = (t: Turns) => Math.round((t[0] * 100) / (t[0] + t[1] + t[2] || 1));
 
   return (
     <div className="app">
@@ -360,13 +434,11 @@ export default function App() {
         <div className="header-left">
           <h1 className="brand">Pédantix</h1>
           <div className="header-meta">
-            <span className="meta-day">Jour nº{puzzle.num}</span>
+            <span className="meta-day">{puzzleDate(puzzle.change)}</span>
             {solvers > 0 && (
               <>
                 <span className="meta-sep">·</span>
-                <span className="meta-guesses">
-                  Trouvé par {solvers > 1 ? `${solvers} personnes` : "1 personne"}
-                </span>
+                <span className="meta-guesses">Trouvé par {solvers}</span>
               </>
             )}
           </div>
@@ -374,8 +446,8 @@ export default function App() {
         <nav className="header-nav">
           <button type="button" className="rules-toggle" onClick={() => setDialog("rules")}>Règles</button>
           <button type="button" className="rules-toggle" onClick={() => setDialog("faq")}>FAQ</button>
-          <button type="button" className="rules-toggle" onClick={() => setDialog("colors")}>Couleurs</button>
           <button type="button" className="rules-toggle" onClick={() => setDialog("history")}>Historique</button>
+          <button type="button" className="rules-toggle" onClick={() => setDialog("settings")}>Réglages</button>
         </nav>
       </header>
 
@@ -383,35 +455,56 @@ export default function App() {
         <section className="title-section">
           <h2 className={`puzzle-title${see ? " selectable" : ""}`} aria-label="Titre de la page">
             {renderNodes(puzzle.title, view, "t")}
-            {see && wikiImg ? <img className="wiki-img" src={wikiImg} alt="" /> : null}
           </h2>
         </section>
 
         {secret && (
           <section className="success">
-            <p>
-              <b>Bravo !</b> Vous êtes <b>{rankLabel(ranking)}</b> à la trouver, en{" "}
-              <b>{plural(nTries, "coup")}</b>. Résumé du jour :
-            </p>
-            <p className="story">{story(turns, 20, blocks)}</p>
-            <p>
-              <button type="button" className="link-button" onClick={() => setDialog("share")}>
-                Partagez
-              </button>{" "}
-              et revenez jouer demain.
-            </p>
+            <div className="result-hero">
+              {wikiImg ? (
+                <img className="result-img" src={wikiImg} alt="" />
+              ) : (
+                <div className="result-img result-trophy" aria-hidden="true">🏆</div>
+              )}
+              <div>
+                <p className="result-kicker">Bravo ! La page du {puzzleDate(puzzle.change).toLowerCase()} était</p>
+                <p className="result-title">{secret[1]}</p>
+              </div>
+            </div>
+            <div className="tiles">
+              <div className="tile">
+                <b>{nTries}</b>
+                <span>{nTries > 1 ? "coups" : "coup"}</span>
+              </div>
+              <div className="tile">
+                <b>{rankLabel(ranking)}</b>
+                <span>rang du jour</span>
+              </div>
+              <div className="tile">
+                <b>{percent(turns)} %</b>
+                <span>page révélée</span>
+              </div>
+            </div>
+            <ProgressBar turns={turns} />
+            <div className="result-actions">
+              <button type="button" className="primary" onClick={share}>
+                Partager mon résultat
+              </button>
+              <a className="secondary" href={wikiUrl(secret[0])} target="_blank" rel="noopener noreferrer">
+                Lire sur Wikipédia ↗
+              </a>
+            </div>
             <p className="success-options">
               <label>
-                <input type="checkbox" checked={see} onChange={(e) => toggleSee(e.target.checked)} /> Voir la{" "}
-                <a href={wikiUrl(secret[0])} target="_blank" rel="noopener noreferrer">
-                  page
-                </a>
+                <input type="checkbox" checked={see} onChange={(e) => toggleSee(e.target.checked)} /> Afficher toute
+                la page
               </label>
               <label>
                 <input type="checkbox" checked={wordMode} onChange={(e) => setWordMode(e.target.checked)} />{" "}
-                Révéler les mots séparément
+                Révéler un mot en cliquant dessus
               </label>
             </p>
+            <p className="muted result-footer">Revenez demain à midi pour une nouvelle page.</p>
           </section>
         )}
 
@@ -433,7 +526,7 @@ export default function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleInputKey}
-              placeholder={placeholder}
+              placeholder={secret ? "Continuer à jouer…" : "Proposer un mot"}
               autoComplete="off"
               autoCorrect="off"
               autoCapitalize="none"
@@ -451,75 +544,84 @@ export default function App() {
             Envoyer
           </button>
         </form>
-        {message.html ? (
-          <div className="feedback" aria-live="polite" dangerouslySetInnerHTML={{ __html: message.html }} />
-        ) : (
-          <div className="feedback" aria-live="polite">
-            {message.text}
-          </div>
-        )}
+        <div className={`feedback${feedback ? ` feedback-${feedback.kind}` : ""}`} aria-live="polite">
+          {feedback && (
+            <>
+              <span className="feedback-icon" aria-hidden="true">
+                {FEEDBACK_ICONS[feedback.kind]}
+              </span>
+              {feedback.html ? (
+                <span dangerouslySetInnerHTML={{ __html: feedback.html }} />
+              ) : (
+                <span>{feedback.text}</span>
+              )}
+            </>
+          )}
+        </div>
 
         <section className={`article${see ? " selectable" : ""}`} aria-label="Page masquée">
+          {see && wikiImg ? <img className="wiki-img" src={wikiImg} alt="" /> : null}
           {renderNodes(puzzle.article, view, "a")}
         </section>
 
         <aside className="sidebar">
           <section className="history">
-            <p className="day-meter" aria-label="Progression du jour">
-              {story(countTurns(cells), 10, blocks)}
-            </p>
-            <table className="history-table">
-              <thead>
-                <tr>
-                  <th>
-                    <button
-                      type="button"
-                      className="sort"
-                      onClick={() => {
-                        if (!alpha) setChronoDir((d) => -d);
-                        setAlpha(false);
-                      }}
-                    >
-                      Nº
+            <div className="day-meter" aria-label={`Page révélée à ${percent(progress)} %`}>
+              <ProgressBar turns={[green, close, hidden]} />
+              <span className="day-percent">{percent(progress)} %</span>
+            </div>
+            <div className="guesses-head">
+              <h3>Vos essais{nGuesses ? ` · ${nGuesses}` : ""}</h3>
+              <div className="segmented" role="tablist" aria-label="Trier les essais">
+                {(
+                  [
+                    ["recent", "Récents"],
+                    ["close", "Meilleurs"],
+                    ["alpha", "A → Z"],
+                  ] as [Sort, string][]
+                ).map(([key, label]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    role="tab"
+                    aria-selected={sort === key}
+                    className={sort === key ? "on" : ""}
+                    onClick={() => setSort(key)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {rows.length === 0 ? (
+              <p className="empty">Aucun essai pour l’instant.</p>
+            ) : (
+              <ul className="guess-list">
+                {rows.map((g) => (
+                  <li key={g.word}>
+                    <button type="button" onClick={() => replay(g.word)} title="Remettre en évidence">
+                      <span className="num">{g.n}</span>
+                      <span className="word">{g.word}</span>
+                      {g.found ? (
+                        <span className="pill pill-found">{count(g.found, "mot", "mots")}</span>
+                      ) : g.best ? (
+                        <span className="pill pill-close">{Math.round(g.best)}</span>
+                      ) : (
+                        <span className="pill-none">—</span>
+                      )}
                     </button>
-                  </th>
-                  <th>
-                    <button type="button" className="sort" onClick={() => setAlpha(true)}>
-                      Mot
-                    </button>
-                  </th>
-                  <th className="collapse-cell">
-                    <button
-                      type="button"
-                      className="sort"
-                      onClick={() => setCollapsed((c) => !c)}
-                      title={collapsed ? "Tout afficher" : "Minimiser"}
-                    >
-                      {collapsed ? "🔻" : "🔺"}
-                    </button>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.length === 0 ? (
-                  <tr>
-                    <td colSpan={3} className="empty">
-                      Aucun essai
-                    </td>
-                  </tr>
-                ) : (
-                  rows.map(([word, [n]]) => (
-                    <tr key={word}>
-                      <td className="num">{n}</td>
-                      <td colSpan={2}>{word}</td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {nGuesses > COLLAPSED_ROWS && (
+              <button type="button" className="link-button show-all" onClick={() => setCollapsed((c) => !c)}>
+                {collapsed ? `Tout afficher (${nGuesses})` : "Réduire"}
+              </button>
+            )}
             {puzzle.yesterday[1] && (
               <p className="yesterday">
-                La page d’hier était :<br />
+                Page d’hier :{" "}
                 <a href={wikiUrl(puzzle.yesterday[0])} target="_blank" rel="noopener noreferrer">
                   <b>{puzzle.yesterday[1]}</b>
                 </a>
@@ -530,33 +632,34 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        Données de <a href="https://fauconnier.github.io/#data">Jean-Philippe Fauconnier</a>,{" "}
-        <a href="http://www.lexique.org/">Lexique 3.83</a> et <a href="https://fr.wikipedia.org">Wikipédia</a>.
+        Textes : <a href="https://fr.wikipedia.org">Wikipédia</a> (CC BY-SA 4.0). Proximité : modèle frWac de{" "}
+        <a href="https://fauconnier.github.io/#data">Jean-Philippe Fauconnier</a> (CC BY 3.0). Lemmes :{" "}
+        <a href="http://www.lexique.org/">Lexique 3.83</a>.
       </footer>
 
       {dialog === "rules" && (
         <Dialog title="Comment jouer" onClose={() => setDialog(null)}>
-          <Rules change={puzzle.change} />
+          <Rules change={puzzle.change} onStart={() => setDialog(null)} />
         </Dialog>
       )}
       {dialog === "faq" && (
-        <Dialog title="FAQ" onClose={() => setDialog(null)}>
+        <Dialog title="Questions fréquentes" onClose={() => setDialog(null)}>
           <Faq />
         </Dialog>
       )}
-      {dialog === "colors" && (
-        <Dialog title="Couleurs" onClose={() => setDialog(null)}>
-          <Colors settings={settings} onChange={updateSettings} />
+      {dialog === "settings" && (
+        <Dialog title="Réglages" onClose={() => setDialog(null)}>
+          <SettingsForm settings={settings} onChange={updateSettings} />
         </Dialog>
       )}
       {dialog === "history" && (
         <Dialog title="Historique" onClose={() => setDialog(null)}>
-          <History num={puzzle.num} solvers={solvers} secret={secret} />
+          <History puzzle={puzzle} solvers={solvers} secret={secret} />
         </Dialog>
       )}
       {dialog === "share" && (
         <Dialog title="Partager" onClose={() => setDialog(null)}>
-          <Share text={shareText(puzzle.num, nTries, turns)} />
+          <Share text={shareText(puzzle.change, nTries, turns)} />
         </Dialog>
       )}
     </div>
