@@ -39,12 +39,32 @@
           "imageWidth": 160,
           "backgroundColor": "#f6f1e7",
           "dark": {
-            "image": "./assets/splash-icon.png",
+            "image": "./assets/splash-icon-dark.png",
             "backgroundColor": "#1d1915"
           }
         }
       ],
-      "expo-router"
-    ]
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#c05621"
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f3af554f-ff96-4a85-a1e6-3655a2c21a99"
+      }
+    },
+    "owner": "maxime2ii",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f3af554f-ff96-4a85-a1e6-3655a2c21a99"
+    }
   }
 }

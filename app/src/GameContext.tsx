@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { ReactNode } from "react";
 import { AppState } from "react-native";
 import * as Haptics from "expo-haptics";
+import { useNetInfo } from "@react-native-community/netinfo";
 import { fetchPuzzle, fetchStats, fetchWikiImage, postPage, postScore } from "./api";
 import type { Node, Puzzle, Secret } from "./api";
 import type { Flash } from "./Article";
@@ -88,6 +89,9 @@ function describe(word: string, scores: Record<number, Score>, again = false): {
 function useGameState() {
   const [puzzle, setPuzzle] = useState<Puzzle | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  // Hors ligne seulement quand c'est certain (null = pas encore connu).
+  const net = useNetInfo();
+  const offline = net.isConnected === false || net.isInternetReachable === false;
   const [refreshing, setRefreshing] = useState(false);
   const [cells, setCells] = useState<Cell[]>([]);
   const [fresh, setFresh] = useState<Set<number>>(new Set());
@@ -166,6 +170,16 @@ function useGameState() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Retour du réseau : on recharge si la page n'avait pas pu l'être.
+  const wasOffline = useRef(false);
+  useEffect(() => {
+    if (offline) wasOffline.current = true;
+    else if (wasOffline.current) {
+      wasOffline.current = false;
+      if (loadError || !puzzle) load();
+    }
+  }, [offline, loadError, puzzle, load]);
+
   const expire = useCallback(() => {
     notify("info", "Nouvelle page du jour !");
     load();
@@ -231,6 +245,11 @@ function useGameState() {
     if (guesses[word]) {
       show(word, guesses[word][1], true);
       return true;
+    }
+
+    if (offline) {
+      notify("error", "Hors ligne : votre mot n’a pas été envoyé.");
+      return false;
     }
 
     // Pour chaque case du titre : le mot déjà trouvé, sinon la proposition.
@@ -338,6 +357,7 @@ function useGameState() {
   return {
     puzzle,
     loadError,
+    offline,
     refreshing,
     load,
     cells,

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité — Pédantix</title>
+    <meta name="description" content="Politique de confidentialité du site et de l’application Pédantix." />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://pedantix.vercel.app/confidentialite/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f1e7;
+        --card: #fffdf6;
+        --text: #3b3226;
+        --muted: #7a6f5d;
+        --accent: #b3481a;
+        --border: #e0d5bd;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1d1915;
+          --card: #27211b;
+          --text: #ece3d3;
+          --muted: #a99c86;
+          --accent: #f08d52;
+          --border: #463b2e;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      main { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+      a { color: var(--accent); }
+      .back { display: inline-block; margin-bottom: 1.5rem; font-weight: 600; text-decoration: none; }
+      h1, h2 { font-family: "Fraunces", Georgia, serif; line-height: 1.2; }
+      h1 { font-size: 2.2rem; margin: 0 0 0.25rem; }
+      h2 { font-size: 1.3rem; margin: 2rem 0 0.5rem; }
+      .updated { color: var(--muted); margin: 0 0 2rem; }
+      .summary {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+      }
+      .summary ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+      li { margin: 0.25rem 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="/">← Retour au jeu</a>
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Dernière mise à jour : 9 octobre 2026</p>
+
+      <div class="summary">
+        <strong>En bref</strong>
+        <ul>
+          <li>Pas de compte, pas de nom, pas d’adresse e-mail demandés.</li>
+          <li>Votre partie est enregistrée uniquement sur votre appareil.</li>
+          <li>Les mots que vous proposez sont envoyés au serveur pour être comparés à la page du jour, mais ne sont pas conservés.</li>
+          <li>L’application mobile ne contient ni publicité ni outil de mesure d’audience.</li>
+        </ul>
+      </div>
+
+      <p>
+        Cette politique s’applique au site <a href="https://pedantix.vercel.app/">pedantix.vercel.app</a> et à
+        l’application mobile Pédantix pour iOS et Android.
+      </p>
+
+      <h2>Données traitées pour jouer</h2>
+      <p>
+        Chaque mot que vous proposez est envoyé à notre serveur avec le numéro de la page du jour, pour savoir s’il
+        figure dans le texte ou s’il en est proche. Le serveur répond puis oublie la proposition : elle n’est ni
+        enregistrée ni associée à vous.
+      </p>
+      <p>
+        Lorsque vous trouvez la page, le serveur augmente de un le nombre de joueurs l’ayant trouvée ce jour-là. Seul
+        ce compteur est conservé, sans aucune information sur vous.
+      </p>
+
+      <h2>Données enregistrées sur votre appareil</h2>
+      <p>
+        Vos propositions du jour, vos résultats des jours précédents et vos réglages (thème, notifications) sont
+        enregistrés sur votre appareil : dans le stockage du navigateur sur le site, dans le stockage de
+        l’application sur mobile. Ils ne quittent pas votre appareil. Vous pouvez les effacer en vidant les données
+        du site dans votre navigateur ou en désinstallant l’application.
+      </p>
+
+      <h2>Notifications (application mobile)</h2>
+      <p>
+        Si vous les autorisez, l’application vous rappelle chaque jour à midi qu’une nouvelle page est disponible.
+        Ce rappel est programmé localement sur votre téléphone : aucun identifiant de notification n’est envoyé à un
+        serveur. Vous pouvez le désactiver à tout moment dans les réglages de l’application ou de votre téléphone.
+      </p>
+
+      <h2>Services tiers</h2>
+      <ul>
+        <li>
+          <strong>Wikipédia</strong> : après avoir trouvé la page, l’image de l’article est chargée depuis les
+          serveurs de la Wikimedia Foundation, qui reçoivent alors votre adresse IP comme pour toute visite. Voir
+          leur <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">politique de confidentialité</a>.
+        </li>
+        <li>
+          <strong>Google Analytics</strong> (site web uniquement) : le site mesure sa fréquentation avec Google
+          Analytics 4, qui dépose des cookies et collecte des données de navigation (pages vues, type d’appareil,
+          localisation approximative). Voir la
+          <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>. L’application
+          mobile n’utilise pas Google Analytics.
+        </li>
+        <li>
+          <strong>Hébergement</strong> : comme tout serveur web, nos hébergeurs peuvent conserver temporairement des
+          journaux techniques (adresse IP, date, page demandée) pour la sécurité et le bon fonctionnement du service.
+        </li>
+      </ul>
+
+      <h2>Enfants</h2>
+      <p>
+        Pédantix ne collecte sciemment aucune donnée personnelle, y compris auprès des enfants de moins de 13 ans.
+      </p>
+
+      <h2>Vos droits</h2>
+      <p>
+        Conformément au RGPD, vous disposez d’un droit d’accès, de rectification et d’effacement de vos données.
+        Comme nous ne conservons aucune donnée vous concernant, la plupart de ces demandes se règlent en effaçant les
+        données de votre appareil. Pour toute question, écrivez-nous à
+        <a href="mailto:contact@exemple.fr">contact@exemple.fr</a>. Vous pouvez aussi saisir la
+        <a href="https://www.cnil.fr/">CNIL</a>.
+      </p>
+
+      <h2>Modifications</h2>
+      <p>
+        Cette politique peut évoluer. La date de dernière mise à jour figure en haut de cette page.
+      </p>
+    </main>
+  </body>
+</html>

@@ -86,11 +86,19 @@ export default function PlayScreen() {
   if (!puzzle) {
     return (
       <SafeAreaView style={[styles.center, { backgroundColor: t.bg }]}>
-        {game.loadError ? (
+        {game.offline ? (
           <>
-            <Icon ios="wifi.exclamationmark" android="wifi_off" size={40} color={t.muted} />
+            <Icon ios="wifi.slash" android="wifi_off" size={40} color={t.muted} />
+            <Text style={[styles.emptyTitle, { color: t.text }]}>Pas de connexion internet</Text>
+            <Text style={[styles.emptyText, { color: t.muted }]}>
+              La page du jour s’affichera dès que vous serez reconnecté.
+            </Text>
+          </>
+        ) : game.loadError ? (
+          <>
+            <Icon ios="exclamationmark.triangle" android="warning" size={40} color={t.muted} />
             <Text style={[styles.emptyTitle, { color: t.text }]}>Page du jour indisponible</Text>
-            <Text style={[styles.emptyText, { color: t.muted }]}>Vérifiez votre connexion internet.</Text>
+            <Text style={[styles.emptyText, { color: t.muted }]}>Le serveur ne répond pas. Réessayez dans un instant.</Text>
             <PrimaryButton label="Réessayer" onPress={() => game.load()} />
           </>
         ) : (
@@ -143,6 +151,15 @@ export default function PlayScreen() {
         </View>
         <Text style={[styles.progressText, { color: t.muted }]}>{Math.round((green * 100) / total)} %</Text>
       </View>
+
+      {game.offline && (
+        <View style={[styles.offline, { backgroundColor: t.accentTint }]} accessibilityLiveRegion="polite">
+          <Icon ios="wifi.slash" android="wifi_off" size={15} color={t.accentDark} />
+          <Text style={[styles.offlineText, { color: t.text }]}>
+            Pas de connexion internet. Vous pourrez proposer des mots dès votre retour en ligne.
+          </Text>
+        </View>
+      )}
 
       <ScrollView
         style={styles.flex}
@@ -229,6 +246,8 @@ const styles = StyleSheet.create({
   badge: { position: "absolute", top: -4, right: -6, minWidth: 18, height: 18, borderRadius: 9, paddingHorizontal: 4, alignItems: "center", justifyContent: "center" },
   badgeText: { color: "#fff", fontSize: 11, fontWeight: "700" },
   progress: { flexDirection: "row", alignItems: "center", gap: 10, paddingHorizontal: 20, paddingBottom: 10 },
+  offline: { flexDirection: "row", alignItems: "center", gap: 8, marginHorizontal: 16, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 8, borderRadius: 10 },
+  offlineText: { fontSize: 13, flex: 1 },
   progressText: { fontSize: 12, fontVariant: ["tabular-nums"], minWidth: 34, textAlign: "right" },
   scroll: { paddingHorizontal: 16, paddingTop: 4, paddingBottom: 24, gap: 14 },
   solved: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 14, borderWidth: StyleSheet.hairlineWidth },

@@ -4,12 +4,38 @@ import { Fraunces_600SemiBold, Fraunces_700Bold, useFonts } from "@expo-google-f
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import { GameProvider } from "../GameContext";
+import { GameProvider, useGame } from "../GameContext";
 import { loadStorage } from "../game";
-import { SettingsProvider } from "../settings";
+import { cancelDaily, requestPermission, scheduleDaily } from "../notifications";
+import { SettingsProvider, useSettings } from "../settings";
 import { SERIF_BOLD, useThemeColors } from "../theme";
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
+/**
+ * Garde le rappel quotidien en phase avec le réglage : demande l'autorisation
+ * au premier lancement, et coupe le réglage si elle est refusée.
+ */
+function NotificationsSync() {
+  const { settings, update } = useSettings();
+  const { puzzle } = useGame();
+  const change = puzzle?.change;
+  useEffect(() => {
+    if (!settings.notify) {
+      cancelDaily();
+      return;
+    }
+    // On attend la page du jour : l'heure de publication en vient, et la
+    // demande d'autorisation n'arrive pas sur un écran vide.
+    if (!change) return;
+    requestPermission().then((status) => {
+      if (status === "granted") scheduleDaily(change);
+      else update({ notify: false });
+    }, () => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [settings.notify, change]);
+  return null;
+}
 
 function Screens() {
   const t = useThemeColors();
@@ -64,6 +90,7 @@ export default function RootLayout() {
   return (
     <SettingsProvider>
       <GameProvider>
+        <NotificationsSync />
         <Screens />
       </GameProvider>
     </SettingsProvider>

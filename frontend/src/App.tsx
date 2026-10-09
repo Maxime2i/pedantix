@@ -634,7 +634,7 @@ export default function App() {
       <footer className="footer">
         Textes : <a href="https://fr.wikipedia.org">Wikipédia</a> (CC BY-SA 4.0). Proximité : modèle frWac de{" "}
         <a href="https://fauconnier.github.io/#data">Jean-Philippe Fauconnier</a> (CC BY 3.0). Lemmes :{" "}
-        <a href="http://www.lexique.org/">Lexique 3.83</a>.
+        <a href="http://www.lexique.org/">Lexique 3.83</a>. <a href="/confidentialite/">Confidentialité</a>.
       </footer>
 
       {dialog === "rules" && (

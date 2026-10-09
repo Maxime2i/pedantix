@@ -80,16 +80,20 @@ export type Mode = "light" | "dark" | "system";
 
 export interface Settings {
   mode: Mode;
+  /** Notification quotidienne à l'arrivée de la nouvelle page. */
+  notify: boolean;
 }
 
 export function loadSettings(): Settings {
   return {
     mode: read<Mode>("mode", "system", ""),
+    notify: read<boolean>("notify", true, ""),
   };
 }
 
 export function saveSettings(s: Settings): void {
   write("mode", s.mode, "");
+  write("notify", s.notify, "");
 }
 
 // ------------------------------------------------------------------ règles

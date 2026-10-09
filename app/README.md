@@ -45,6 +45,16 @@ npx eas-cli@latest submit --platform android   # compte Google Play (25 $ une fo
 
 `--profile preview` produit un APK Android installable directement et une build iOS de test interne.
 
+### Mises à jour sans passer par les stores (EAS Update)
+
+Les changements de code JavaScript (écrans, textes, règles) peuvent être envoyés directement aux apps installées :
+
+```bash
+npx eas-cli@latest update --channel production --message "Correction du partage"
+```
+
+L'app télécharge la mise à jour au lancement et l'applique au lancement suivant. Les builds `preview` écoutent le canal `preview`, les builds `production` le canal `production`. Un changement natif (nouveau module, icône, `app.json`) demande en revanche une nouvelle build. La version de l'app (`version` dans `app.json`) sert de `runtimeVersion` : il faut l'augmenter à chaque nouvelle build publiée sur les stores.
+
 Identifiant de l'app : `fr.pedantix.app` (dans `app.json`, à changer avant la première publication si besoin — il est définitif ensuite).
 
 Note : avec Xcode 26.3, `npx expo run:ios` (build native locale) échoue dans `expo-modules-jsi` (bug Expo SDK 57). Expo Go et les builds EAS ne sont pas concernés.
