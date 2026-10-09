@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Pédantix",
+    "slug": "pedantix",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "pedantix",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#f6f1e7",
+    "ios": {
+      "bundleIdentifier": "fr.pedantix.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "fr.pedantix.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#f6f1e7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#f6f1e7",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#1d1915"
+          }
+        }
+      ],
+      "expo-router"
+    ]
+  }
+}

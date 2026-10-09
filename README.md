@@ -12,6 +12,7 @@ Le backend n’envoie jamais le titre ni les mots cachés au client — seulemen
 pedantix/
 ├── mobile/backend/   # API Flask (puzzle du jour, scoring, embeddings)
 ├── frontend/         # Interface Vite + React + TypeScript
+├── app/              # App mobile iOS / Android (Expo + React Native)
 └── backend/          # Ancien prototype (obsolète, ne plus utiliser)
 ```
 
@@ -37,6 +38,16 @@ cp .env.example .env          # VITE_API_URL=http://localhost:5000
 npm install
 npm run dev                   # http://localhost:5173
 ```
+
+### App mobile
+
+```bash
+cd app
+npm install
+npx expo start                # Expo Go ou simulateur
+```
+
+Détails et publication sur les stores : [app/README.md](app/README.md).
 
 ## Règles (alignées sur l’original)
 
