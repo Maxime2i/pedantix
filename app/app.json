@@ -10,7 +10,7 @@
     "backgroundColor": "#f6f1e7",
     "ios": {
       "bundleIdentifier": "fr.pedantix.app",
-      "supportsTablet": true,
+      "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
