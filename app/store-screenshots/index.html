@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pédantix · Captures stores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800;9..144,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+<style>
+/*
+  Captures App Store / Google Play de Pédantix, sur le gabarit de la série « Vinted »
+  (cf. Trouve-la-r-gle/store-screenshots), adapté à la charte de l'app.
+  ?n=1..7 (une capture)  ·  ?w=&h= (format Play)  ·  sans paramètre : galerie.
+  render.sh exporte tout.
+*/
+:root {
+  /* Fond des captures : ambre chaud, titres encre, mise en valeur terracotta. */
+  --bg: #F2B544;
+  --ink: #241F1A;
+  --accent: #A3401A;
+  --ring: #C05621;
+  --display: "Fraunces", Georgia, serif;
+  --body: "DM Sans", -apple-system, sans-serif;
+  /* App (src/theme.ts, clair) */
+  --a-bg: #F6F1E7; --a-card: #FFFDF6; --a-text: #3B3226; --a-muted: #7A6F5D; --a-accent: #C05621;
+  --a-tint: #FBEEDA; --a-green: #3E7C4F; --a-fresh: #C8EFC0; --a-border: #E0D5BD; --a-soft: #E8DCC6; --a-blank: #241F1A;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #1a1a1a; }
+body.gallery #root { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; }
+body.gallery .holder { width: 322px; height: 699px; overflow: hidden; border-radius: 18px; flex: none; }
+body.gallery .slide { transform: scale(0.25); transform-origin: top left; }
+body.single .holder:not(.on) { display: none; }
+svg.ic { display: inline-block; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.slide { width: 1290px; height: 2796px; position: relative; overflow: hidden; background: var(--bg); color: var(--ink); font-family: var(--body); }
+.slide::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 64%, rgb(255 255 255 / .38), transparent 70%); }
+.head { position: absolute; top: 200px; left: 70px; right: 70px; text-align: center; z-index: 5; }
+.head h1 { font-family: var(--display); font-weight: 800; font-size: 104px; line-height: 1.04; letter-spacing: -0.008em; margin: 0; text-wrap: balance; }
+.head h1 em { font-style: italic; color: var(--accent); }
+.head p { font-size: 54px; line-height: 1.28; margin: 40px 0 0; opacity: .85; font-weight: 500; }
+
+/* Téléphone */
+.phone { position: absolute; z-index: 3; background: #0B0B0C; padding: 26px; border-radius: 150px; box-shadow: 0 60px 120px rgb(80 40 10 / .45), inset 0 0 0 6px #2B2B2E; }
+.phone .viewport { width: calc(393px * var(--k)); height: calc(852px * var(--k)); border-radius: 124px; overflow: hidden; position: relative; }
+.screen { width: 393px; height: 852px; transform: scale(var(--k)); transform-origin: top left; position: relative; overflow: hidden; background: var(--a-bg); color: var(--a-text); font-family: -apple-system, "SF Pro Text", var(--body); }
+.island { position: absolute; top: 11px; left: 50%; translate: -50% 0; width: 124px; height: 36px; border-radius: 20px; background: #000; z-index: 9; }
+.status { position: relative; z-index: 2; height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 6px 34px 0 46px; font-size: 17px; font-weight: 600; }
+.status b { display: inline-block; width: 27px; height: 13px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; }
+.status b::after { content: ""; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+.home-ind { position: absolute; bottom: 8px; left: 50%; translate: -50% 0; width: 140px; height: 5px; border-radius: 3px; background: #000; z-index: 9; opacity: .85; }
+
+/* Écran de jeu */
+.g-head { display: flex; align-items: center; gap: 10px; padding: 6px 20px 10px; }
+.brand { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 36px; }
+.meta { font-size: 13px; color: var(--a-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.hbtn { width: 38px; height: 38px; border-radius: 19px; background: var(--a-card); border: .5px solid var(--a-soft); display: grid; place-items: center; position: relative; color: var(--a-text); }
+.badge { position: absolute; top: -4px; right: -6px; min-width: 18px; height: 18px; border-radius: 9px; padding: 0 4px; background: var(--a-accent); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+.prog { display: flex; align-items: center; gap: 10px; padding: 0 20px 10px; }
+.bar { flex: 1; height: 6px; border-radius: 3px; background: var(--a-soft); display: flex; overflow: hidden; }
+.pct { font-size: 12px; color: var(--a-muted); min-width: 34px; text-align: right; }
+.body { padding: 4px 16px 0; display: flex; flex-direction: column; gap: 14px; }
+.input { height: 48px; border-radius: 24px; background: var(--a-card); display: flex; align-items: center; padding: 0 5px 0 16px; font-size: 17px; }
+.input .ph { color: var(--a-muted); flex: 1; }
+.input .val { flex: 1; }
+.input .val::after { content: ""; display: inline-block; width: 2px; height: 20px; background: var(--a-accent); vertical-align: -4px; margin-left: 1px; }
+.send { width: 38px; height: 38px; border-radius: 19px; display: grid; place-items: center; }
+.fb { display: flex; align-items: center; gap: 6px; padding: 0 16px; margin-top: -6px; font-size: 14px; }
+.ptitle { font-family: var(--display); font-weight: 600; font-size: 28px; line-height: 46px; padding: 0 4px; }
+.article { background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 16px; padding: 16px; font-size: 17px; line-height: 31px; }
+.article p { margin: 0 0 14px; }
+.box { display: inline-block; vertical-align: -4px; height: 1.3em; border-radius: 5px; margin: 0 1px; background: var(--a-blank); text-align: center; font-weight: 600; font-size: 1em; line-height: 1.3em; white-space: nowrap; overflow: hidden; }
+.fresh { background: var(--a-fresh); }
+
+/* Feuille de résultat */
+.sheet-bg { position: absolute; inset: 0; background: rgb(0 0 0 / .25); }
+.sheet { position: absolute; left: 6px; right: 6px; top: 110px; bottom: 0; background: var(--a-bg); border-radius: 34px 34px 0 0; padding: 10px 0 0; }
+.grab { width: 36px; height: 5px; border-radius: 3px; background: var(--a-border); margin: 0 auto; }
+.tiles { display: flex; gap: 10px; padding: 0 16px; }
+.tile { flex: 1; background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 14px; padding: 14px 0; text-align: center; }
+.tile b { display: block; font-family: var(--display); font-size: 24px; }
+.tile span { font-size: 12px; color: var(--a-muted); }
+.btn { height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 17px; font-weight: 600; }
+
+/* Listes (historique) */
+.ltitle { font-family: var(--display); font-weight: 700; font-size: 34px; padding: 4px 20px 12px; }
+.group { margin: 0 16px; background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 12px; overflow: hidden; }
+.lrow { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-bottom: .5px solid var(--a-soft); }
+.lrow:last-child { border-bottom: 0; }
+.pill-s { border-radius: 999px; padding: 3px 8px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.sect { font-size: 13px; color: var(--a-muted); margin: 0 32px 6px; letter-spacing: .3px; }
+
+/* Décor */
+.ring { position: absolute; border: 46px solid var(--ring); border-radius: 50%; z-index: 2; }
+.ring.front { z-index: 4; clip-path: polygon(0 50%, 22% 50%, 22% 100%, 0 100%); }
+.float { position: absolute; z-index: 3; }
+.step { width: 990px; background: #FFFDF6; color: var(--ink); border-radius: 64px; padding: 60px 64px; display: flex; align-items: center; gap: 44px; box-shadow: 0 40px 90px rgb(80 40 10 / .3); }
+.step .num { width: 150px; height: 150px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--ink); color: var(--bg); font-family: var(--display); font-weight: 800; font-size: 84px; }
+.step .txt { font-family: var(--display); font-weight: 700; font-size: 58px; line-height: 1.08; letter-spacing: -0.01em; }
+.step .demo { margin-left: auto; flex: none; }
+.mosaic { position: absolute; left: -60px; right: -60px; top: 860px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; padding: 0 34px; }
+.mtile { height: 520px; border-radius: 44px; padding: 44px; display: flex; flex-direction: column; justify-content: space-between; }
+.mtile .k { font-size: 28px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.mtile .v { font-family: var(--display); font-weight: 700; font-size: 54px; line-height: 1.05; letter-spacing: -0.01em; }
+.mtile.dark { background: var(--ink); color: #FFF7EA; } .mtile.dark .k { color: var(--bg); }
+.mtile.mid { background: var(--ring); color: #FFF7EA; } .mtile.mid .k { color: #FFE2B8; }
+.mtile.light { background: #FFFDF6; color: var(--ink); } .mtile.light .k { color: var(--accent); }
+.mtile .hid { display: flex; flex-wrap: wrap; gap: 14px; }
+.mtile .hid i { height: 58px; border-radius: 12px; background: currentColor; opacity: .9; }
+.pill { position: absolute; left: 50%; translate: -50% 0; z-index: 6; background: var(--ink); color: #FFF7EA; border-radius: 999px; height: 150px; padding: 0 70px 0 56px; display: flex; align-items: center; gap: 28px; font-size: 52px; font-weight: 700; box-shadow: 0 30px 70px rgb(80 40 10 / .45); white-space: nowrap; border: 4px solid var(--bg); }
+.wide .slide > .phone, .wide .slide > .ring, .wide .slide > .float { translate: var(--dx) 0; }
+
+/* Écran verrouillé */
+.lock { position: absolute; inset: 0; background: linear-gradient(170deg, #3A2A1D 0%, #7A3A18 45%, #C05621 80%, #F2B544 120%); color: #fff; }
+.notif { margin: 0 12px; background: rgb(255 255 255 / .82); color: #1d1d1f; border-radius: 22px; padding: 12px 14px; display: flex; gap: 10px; backdrop-filter: blur(20px); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const params = new URLSearchParams(location.search);
+
+/* ---------- Icônes (SVG, tracés simples) ---------- */
+const I = {
+  list: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1" fill="currentColor"/><circle cx="4.5" cy="12" r="1" fill="currentColor"/><circle cx="4.5" cy="18" r="1" fill="currentColor"/></svg>`,
+  cal: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>`,
+  gear: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg>`,
+  up: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M12 19V5M6 11l6-6 6 6"/></svg>`,
+  check: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5" stroke="#fff" stroke-width="2.4"/></svg>`,
+  half: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 0 0 19z" fill="currentColor"/></svg>`,
+  trophy: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.4A5 5 0 0 1 13 14.9V18h3v3H8v-3h3v-3.1A5 5 0 0 1 8.4 12H8a4 4 0 0 1-4-4V5h3zM5.5 6.5V8A2.5 2.5 0 0 0 7.3 10.4 6 6 0 0 1 7 8.5v-2zm13 0H17v2a6 6 0 0 1-.3 1.9A2.5 2.5 0 0 0 18.5 8z"/></svg>`,
+  share: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><path d="M12 15V3M7.5 7.5L12 3l4.5 4.5M5 11v8.5h14V11"/></svg>`,
+  bell: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"/></svg>`,
+  arrow: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>`,
+  type: s => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M6.5 10h1M10 10h1M13.5 10h1M17 10h.5M8 14h8"/></svg>`,
+};
+
+/* ---------- Page de démonstration (texte écrit pour les captures) ---------- */
+const TITLE = "Tour Eiffel";
+const TEXT = [
+  "La tour Eiffel est une tour métallique construite à Paris pour l'Exposition universelle de 1889. Haute de 330 mètres, elle se dresse au bord de la Seine, au bout du Champ-de-Mars.",
+  "Conçue par l'entreprise de Gustave Eiffel, elle fut longtemps le plus haut monument du monde. Elle attire aujourd'hui des millions de visiteurs chaque année et symbolise la France à l'étranger.",
+];
+const grey = s => Math.max(0, Math.min(255, Math.round(255 * Math.log10(s - 30) / 2)));
+const box = (len, word = "", color = "transparent") =>
+  `<span class="box" style="width:${Math.max(len, word.length) * 0.55 + 0.5}em;color:${color}">${word}</span>`;
+
+/**
+ * Rend un texte façon Pédantix. `st` : { found: Set (mots révélés), fresh: Set (surlignés),
+ * close: { mot caché: [proposition, score, orange?] } }. Le reste est masqué.
+ */
+function render(text, st) {
+  return text.replace(/([\p{L}\p{N}-]+)/gu, (w) => {
+    const k = w.toLowerCase();
+    if (st.found.has(k)) return st.fresh?.has(k) ? `<span class="fresh">${w}</span>` : w;
+    const c = st.close?.[k];
+    if (c) {
+      const g = grey(c[1]);
+      return box(w.length, c[0], c[2] ? `rgb(255,${g},0)` : `rgb(${g},${g},${g})`);
+    }
+    return box(w.length);
+  });
+}
+
+const status = (dark) => `<div class="island"></div><div class="status" style="color:${dark ? "#fff" : "#000"}"><span>9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><b></b></span></div>`;
+
+/* ---------- Écrans de l'app ---------- */
+const GRAMMAR = ["la", "le", "les", "l", "est", "une", "de", "à", "au", "du", "et", "elle", "pour", "par", "des", "d"];
+function gameScreen({ found, fresh = [], close = {}, typed, feedback, guesses, progress }) {
+  const st = { found: new Set([...GRAMMAR, ...found]), fresh: new Set(fresh), close };
+  const [g, o] = progress;
+  const fb = feedback ? `<div class="fb">${feedback[0] === "found" ? `<span style="color:var(--a-green)">${I.check(15)}</span>` : `<span style="color:var(--a-accent)">${I.half(15)}</span>`}<span>${feedback[1]}</span></div>` : "";
+  return `<div class="screen">${status()}
+    <div class="g-head"><div style="flex:1"><div class="brand">Pédantix</div><div class="meta">Vendredi 9 octobre · trouvé par 312</div></div>
+      <span class="hbtn">${I.list(18)}<span class="badge">${guesses}</span></span><span class="hbtn">${I.cal(18)}</span><span class="hbtn">${I.gear(18)}</span></div>
+    <div class="prog"><div class="bar"><i style="flex:${g};background:var(--a-green)"></i><i style="flex:${o};background:var(--a-accent);opacity:.75"></i><i style="flex:${100 - g - o}"></i></div><span class="pct">${g} %</span></div>
+    <div class="body">
+      <div class="input">${typed ? `<span class="val">${typed}</span>` : `<span class="ph">Proposer un mot</span>`}<span class="send" style="background:${typed ? "var(--a-accent)" : "var(--a-soft)"};color:${typed ? "#fff" : "var(--a-muted)"}">${I.up(18)}</span></div>
+      ${fb}
+      <div class="ptitle">${render(TITLE, { ...st, close: {} })}</div>
+      <div class="article">${TEXT.map(p => `<p>${render(p, st)}</p>`).join("")}</div>
+    </div><div class="home-ind"></div></div>`;
+}
+
+const screens = {
+  // Début de partie : quelques mots trouvés.
+  early: () => gameScreen({
+    found: ["paris", "construite", "mètres", "monde", "france"], fresh: ["paris"],
+    close: { exposition: ["salon", 52], seine: ["fleuve", 61, true] },
+    typed: "", feedback: ["found", "« paris » · 1 mot révélé"], guesses: 9, progress: [21, 4],
+  }),
+  // Milieu de partie : beaucoup de mots proches en gris.
+  close: () => gameScreen({
+    found: ["paris", "construite", "mètres", "monde", "france", "haute", "bord", "seine", "plus", "monument", "visiteurs", "chaque", "année", "millions", "aujourd", "hui", "bout", "1889", "330", "longtemps", "attire", "étranger", "symbolise", "conçue", "entreprise", "se", "dresse", "fut", "haut", "il"],
+    close: { tour: ["clocher", 58, true], métallique: ["acier", 66], eiffel: ["architecte", 41], exposition: ["salon", 52], universelle: ["mondiale", 63], gustave: ["victor", 47], champ: ["prairie", 49], mars: ["avril", 57] },
+    typed: "fer", feedback: ["close", "« clocher » · proche (58)"], guesses: 37, progress: [64, 11],
+  }),
+  result: () => `<div class="screen">${gameScreen({ found: ["paris", "tour", "eiffel"], guesses: 52, progress: [78, 6] }).replace(/^<div class="screen">|<\/div>$/g, "")}
+    <div class="sheet-bg"></div>
+    <div class="sheet"><div class="grab"></div>
+      <div style="text-align:right;padding:6px 20px 0;color:var(--a-accent);font-weight:600;font-size:17px">OK</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 24px 20px">
+        <div style="width:112px;height:112px;border-radius:24px;background:var(--a-tint);display:grid;place-items:center;color:var(--a-accent);margin-bottom:10px">${I.trophy(48)}</div>
+        <div style="font-size:14px;color:var(--a-muted)">Bravo ! La page du vendredi 9 octobre était</div>
+        <div style="font-family:var(--display);font-weight:700;font-size:30px">${TITLE}</div>
+      </div>
+      <div class="tiles"><div class="tile"><b>52</b><span>coups</span></div><div class="tile"><b>🥉3e</b><span>rang du jour</span></div><div class="tile"><b>78 %</b><span>page révélée</span></div></div>
+      <div style="padding:18px 20px"><div class="bar" style="height:10px;border-radius:5px"><i style="flex:78;background:var(--a-green)"></i><i style="flex:6;background:var(--a-accent);opacity:.75"></i><i style="flex:16"></i></div></div>
+      <div style="padding:0 16px;display:flex;flex-direction:column;gap:10px">
+        <div class="btn" style="background:var(--a-accent);color:#fff">${I.share(18)} Partager mon résultat</div>
+        <div class="btn" style="background:var(--a-card);border:1px solid var(--a-border)">Lire sur Wikipédia</div>
+      </div>
+    </div><div class="home-ind"></div></div>`,
+  history: () => {
+    const rows = [
+      ["Page du jour", "Ven. 9 oct. · 312 joueurs", ["En cours", "var(--a-tint)", "var(--a-accent)"]],
+      ["Donald Hebb", "Jeu. 8 oct. · 1 204 joueurs", ["41 coups", "var(--a-fresh)", "var(--a-text)"]],
+      ["Nouvelle-Angleterre", "Mer. 7 oct. · 1 377 joueurs", ["63 coups", "var(--a-fresh)", "var(--a-text)"]],
+      ["Matériel informatique", "Mar. 6 oct. · 1 105 joueurs", ["Non trouvée", "var(--a-soft)", "var(--a-muted)"]],
+      ["Imagerie médicale", "Lun. 5 oct. · 1 298 joueurs", ["38 coups", "var(--a-fresh)", "var(--a-text)"]],
+      ["Jaïnisme", "Dim. 4 oct. · 986 joueurs", ["74 coups", "var(--a-fresh)", "var(--a-text)"]],
+      ["Passage de Drake", "Sam. 3 oct. · 1 142 joueurs", ["29 coups", "var(--a-fresh)", "var(--a-text)"]],
+      ["Échidné", "Mer. 30 sept. · 1 019 joueurs", null],
+    ];
+    return `<div class="screen">${status()}
+      <div style="padding:2px 16px"><span class="hbtn" style="width:44px;height:44px;border-radius:22px;font-size:22px">‹</span></div>
+      <div class="ltitle">Historique</div>
+      <div class="group" style="display:flex;padding:14px 0;margin-bottom:24px">${[["24", "Jouées"], ["21", "Trouvées"], ["47", "Coups en moy."]].map(([v, l], i) => `<div style="flex:1;text-align:center;${i ? "border-left:.5px solid var(--a-border)" : ""}"><div style="font-family:var(--display);font-weight:700;font-size:26px">${v}</div><div style="font-size:12px;color:var(--a-muted)">${l}</div></div>`).join("")}</div>
+      <div class="sect">100 DERNIERS JOURS</div>
+      <div class="group">${rows.map(([t, s, p], i) => `<div class="lrow"><div style="flex:1"><div style="font-size:16px;font-weight:500;color:${i ? "var(--a-text)" : "var(--a-muted)"}">${t}</div><div style="font-size:12px;color:var(--a-muted)">${s}</div></div>${p ? `<span class="pill-s" style="background:${p[1]};color:${p[2]}">${p[0]}</span>` : ""}${i ? `<span style="color:var(--a-muted)">${I.arrow(12)}</span>` : ""}</div>`).join("")}</div>
+      <div class="home-ind"></div></div>`;
+  },
+  lock: () => `<div class="screen"><div class="lock">${status(true)}
+      <div style="text-align:center;margin-top:30px;font-size:19px;font-weight:600;opacity:.9">Vendredi 9 octobre</div>
+      <div style="text-align:center;font-size:96px;font-weight:700;line-height:1.05;letter-spacing:-2px">12:00</div>
+      <div style="height:330px"></div>
+      <div class="notif"><img src="assets/icon.png" style="width:38px;height:38px;border-radius:9px;flex:none">
+        <div style="flex:1"><div style="display:flex;justify-content:space-between;font-size:15px"><b>La page du jour est arrivée</b><span style="color:#6e6e73;font-size:13px">maintenant</span></div>
+        <div style="font-size:15px;line-height:1.3;margin-top:2px">Une nouvelle page Wikipédia vous attend. Saurez-vous trouver son titre ?</div></div></div>
+      <div class="home-ind" style="background:#fff"></div></div></div>`,
+};
+const phone = (scr, k, style) => `<div class="phone" style="--k:${k}; ${style}"><div class="viewport">${screens[scr]()}</div></div>`;
+const head = c => `<div class="head"><h1>${c[0]}</h1>${c[1] ? `<p>${c[1]}</p>` : ""}</div>`;
+
+/* ---------- Textes marketing ---------- */
+const COPY = {
+  s1: ["Trouve la page<br><em>Wikipédia du jour</em>", "Un mot à la fois,<br>révèle l'article caché"],
+  s2: ["Simple à comprendre,<br><em>dur à trouver</em>", ""],
+  steps: ["Propose un mot", "Il se révèle partout dans la page", "Trouve le titre pour gagner"],
+  s3: ["Plus c'est clair,<br><em>plus c'est proche</em>", "Les mots voisins par le sens<br>s'inscrivent en gris"],
+  s4: ["Une <em>nouvelle page</em><br>chaque jour", "Parmi 10 000 sujets essentiels<br>de Wikipédia"],
+  s5: ["Trouve le titre,<br><em>monte sur le podium</em>", "Ton rang parmi tous<br>les joueurs du jour"],
+  s6: ["Toutes tes parties,<br><em>jour après jour</em>", "Historique, statistiques<br>et pages passées"],
+  s7: ["Un rappel<br><em>chaque midi</em>", "Ne rate plus jamais<br>la page du jour"],
+};
+
+/* Démos des étapes (diapo 2) */
+const demo = [
+  `<span style="display:flex;align-items:center;gap:14px;background:#F6F1E7;border-radius:999px;padding:14px 14px 14px 36px;font-size:46px;font-weight:500">tour<span style="width:70px;height:70px;border-radius:35px;background:var(--ring);color:#fff;display:grid;place-items:center">${I.up(36)}</span></span>`,
+  `<span style="display:flex;gap:10px;align-items:center;font-size:48px"><span style="background:#C8EFC0;border-radius:10px;padding:0 10px">tour</span><span class="box" style="width:150px;height:64px;border-radius:12px"></span></span>`,
+  `<span style="color:var(--ring)">${I.trophy(92)}</span>`,
+];
+
+const MOSAIC = [
+  ["dark", "Jeu. 8 oct.", "Donald Hebb"], ["light", "Mer. 7 oct.", "Nouvelle-Angleterre"], ["mid", "Mar. 6 oct.", "Matériel informatique"],
+  ["light", "Lun. 5 oct.", "Imagerie médicale"], ["mid", "Ven. 9 oct.", null], ["dark", "Dim. 4 oct.", "Jaïnisme"],
+  ["mid", "Sam. 3 oct.", "Passage de Drake"], ["dark", "Mer. 30 sept.", "Échidné"], ["light", "Mar. 29 sept.", "Casablanca"],
+  ["dark", "Lun. 28 sept.", "Feldspath"], ["light", "Dim. 27 sept.", "Mosaïque"], ["mid", "Sam. 26 sept.", "Joan Miró"],
+];
+
+const slides = [
+  // 1 · La promesse
+  () => head(COPY.s1) + phone("early", 2.62, "left:106px; top:960px;"),
+  // 2 · Comment on joue
+  () => head(COPY.s2) + `
+    <div class="ring" style="width:1400px; height:620px; left:-55px; top:1330px; rotate:-14deg;"></div>
+    ${COPY.steps.map((s, i) => `<div class="float step" style="left:${[60, 240, 80][i]}px; top:${[700, 1320, 1940][i]}px; rotate:${[-4, 3, -2][i]}deg;"><span class="num">${i + 1}</span><span class="txt">${s}</span><span class="demo">${demo[i]}</span></div>`).join("")}
+    <div class="ring front" style="width:1400px; height:620px; left:-55px; top:1330px; rotate:-14deg; clip-path: polygon(0 50%, 26% 50%, 26% 100%, 0 100%);"></div>
+    <div style="position:absolute; left:0; right:0; bottom:150px; display:flex; align-items:center; justify-content:center; gap:36px; z-index:5;">
+      <img src="assets/icon.png" alt="" style="width:170px; height:170px; border-radius:40px; box-shadow:0 20px 50px rgb(80 40 10 / .35);">
+      <span style="font-family:var(--display); font-weight:800; font-size:96px; letter-spacing:-0.02em;">Pédantix</span>
+    </div>`,
+  // 3 · Les mots proches
+  () => head(COPY.s3) + `<div class="ring" style="width:1360px; height:520px; left:-40px; top:1760px; rotate:-16deg;"></div>` + phone("close", 2.2, "left:210px; top:940px; rotate:-6deg;") + `<div class="ring front" style="width:1360px; height:520px; left:-40px; top:1760px; rotate:-16deg;"></div>`,
+  // 4 · Une page par jour
+  () => head(COPY.s4) + `<div class="mosaic">${MOSAIC.map(([c, k, v]) => `<div class="mtile ${c}"><span class="k">${k}</span>${v ? `<span class="v">${v}</span>` : `<span class="hid"><i style="width:190px"></i><i style="width:120px"></i><i style="width:150px"></i></span>`}</div>`).join("")}</div>
+    <div class="pill" style="top:1338px;">${I.bell(56)}Nouvelle page à midi</div>`,
+  // 5 · Résultat
+  () => head(COPY.s5) + phone("result", 2.62, "left:106px; top:960px;"),
+  // 6 · Historique
+  () => head(COPY.s6) + `<div class="ring" style="width:1380px; height:500px; left:-45px; top:1820px; rotate:-20deg;"></div>` + phone("history", 2.2, "left:210px; top:960px; rotate:6deg;") + `<div class="ring front" style="width:1380px; height:500px; left:-45px; top:1820px; rotate:-20deg;"></div>`,
+  // 7 · Notification
+  () => head(COPY.s7) + phone("lock", 2.62, "left:106px; top:960px;"),
+];
+
+const root = document.getElementById("root");
+root.innerHTML = slides.map((s, i) => `<div class="holder"><section class="slide" id="s${i + 1}">${s()}</section></div>`).join("");
+
+const n = params.get("n"), w = params.get("w"), h = params.get("h");
+const holders = document.querySelectorAll(".holder");
+if (n) { document.body.className = "single"; holders[Number(n) - 1]?.classList.add("on"); }
+else document.body.className = "gallery";
+if (w || h) {
+  document.body.classList.add("wide");
+  document.querySelectorAll(".slide").forEach(el => {
+    if (w) el.style.width = w + "px";
+    if (h) el.style.height = h + "px";
+    el.style.setProperty("--dx", ((Number(w) || 1290) - 1290) / 2 + "px");
+  });
+}
+</script>
+</body>
+</html>
