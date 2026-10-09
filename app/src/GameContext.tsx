@@ -289,23 +289,6 @@ function useGameState() {
     return true;
   }
 
-  /**
-   * Développement uniquement : déclenche l'écran de victoire sans rien envoyer
-   * au serveur ni sauvegarder (un rechargement rend la vraie partie).
-   */
-  function simulateWin() {
-    if (!__DEV__ || !puzzle) return;
-    if (!secret) {
-      setSecret(["Wikipédia", "Page de test"]);
-      setTurns(countTurns(cells));
-      setRanking(3);
-      setNTries(Math.max(nTries, 42));
-      setWikiImg("");
-    }
-    setWins((w) => w + 1);
-    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-  }
-
   async function loadPage(): Promise<Record<string, string> | null> {
     if (pageWords) return pageWords;
     if (!secret) return null;
@@ -371,7 +354,6 @@ function useGameState() {
     busy,
     feedback,
     submit,
-    simulateWin,
     replay,
     pressCell,
     see,

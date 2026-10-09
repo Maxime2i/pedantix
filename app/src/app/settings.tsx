@@ -2,7 +2,6 @@
 import { Linking, ScrollView, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { useGame } from "../GameContext";
 import { Row, Section, Segmented } from "../components/ui";
 import { SITE_URL } from "../game";
 import type { Mode } from "../game";
@@ -12,7 +11,6 @@ import { useThemeColors } from "../theme";
 export default function SettingsScreen() {
   const t = useThemeColors();
   const { settings, update } = useSettings();
-  const game = useGame();
   return (
     <View style={[styles.flex, { backgroundColor: t.bg }]}>
       <ScrollView contentInsetAdjustmentBehavior="automatic" contentContainerStyle={styles.scroll}>
@@ -31,16 +29,6 @@ export default function SettingsScreen() {
             />
           </View>
         </Section>
-
-        {__DEV__ ? (
-          <Section title="Développement" footer="Visible seulement en développement. Rien n’est enregistré : relancez l’app pour retrouver votre partie.">
-            <Row
-              label={<Text style={{ color: t.accent, fontSize: 17 }}>Simuler une victoire</Text>}
-              onPress={game.simulateWin}
-              last
-            />
-          </Section>
-        ) : null}
 
         <Section title="Aide">
           <Row label="Comment jouer" chevron onPress={() => router.push("/rules")} />
