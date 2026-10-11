@@ -1,0 +1,600 @@
+{
+  "titre": "Un dixième",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements. Données RÉELLES de l'API prod relevées le 11/10/2026 (event 98907, Rallye Terre des Cardabelles - Millau - Aveyron) : classements des ES1–10 (/special-stages/:n/classification), cumuls recalculés en sommant les temps d'ES (identiques au final FFSA sur le podium), classement final /classification/final (source ffsa, provisoire tant que le rallye est « En direct »). Todeschini mène d'un dixième après ES2, de 2,4 s après ES4, 8e après ES5, gagne ES6–7–8 (P7 à +1:36.2), 9e au final. Chatillon gagne, Rumeau à 21,5 s. Cause des pertes de temps de Todeschini INCONNUE : ne pas l'inventer. Logo eWRC non affiché (pas d'accord organisateur). AJOUTS presse (12actu.com, 10 et 11/10/2026) : crevaison de Todeschini « samedi au Camp » (= ES5 Le Camp 2) ; Sarah Rumeau championne de France des Rallyes Terre avec une manche d'avance (classement provisoire). « Première femme » non repris (source unique). Souci ES9 non mentionné (cause seulement probable).",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé. Accroche en suspens : « Un dixième. » bien détaché, puis demi-seconde de silence. Montée de tension sur l'ES quatre, « crevaison » sec et dramatique, chute sur « premier à huitième ». « Trop tard » plus bas, déçu. Fin enthousiaste. Après « deuxième », courte pause, puis « et championne de France ! » avec un vrai enthousiasme."
+  },
+  "dispositionInitiale": "avatar",
+  "poseInitiale": "neutre",
+  "ecranInitial": "rallye",
+  "ecrans": {
+    "rallye": {
+      "nom": "Rallye Terre des Cardabelles - Millau - Aveyron",
+      "drapeau": "🇫🇷",
+      "ville": "Millau",
+      "dates": "10–11 oct. 2026",
+      "championnat": "Championnat de France des Rallyes Terre",
+      "logo": null,
+      "onglet": "classement",
+      "situation": {
+        "live": true
+      },
+      "partants": 95,
+      "distance": "145,10 km",
+      "surface": "terre",
+      "nbES": 10,
+      "organisateur": "ASA Sud Aveyron",
+      "classement": [
+        {
+          "n": 2,
+          "temps": "21:39.2"
+        },
+        {
+          "n": 8,
+          "temps": "21:39.3",
+          "ecart": "+0.1"
+        },
+        {
+          "n": 1,
+          "temps": "21:47.9",
+          "ecart": "+8.7"
+        },
+        {
+          "n": 3,
+          "temps": "21:55.1",
+          "ecart": "+15.9"
+        },
+        {
+          "n": 6,
+          "temps": "21:59.9",
+          "ecart": "+20.7"
+        },
+        {
+          "n": 7,
+          "temps": "22:00.1",
+          "ecart": "+20.9"
+        },
+        {
+          "n": 9,
+          "temps": "22:07.3",
+          "ecart": "+28.1"
+        },
+        {
+          "n": 10,
+          "temps": "22:14.9",
+          "ecart": "+35.7"
+        },
+        {
+          "n": 4,
+          "temps": "22:29.7",
+          "ecart": "+50.5"
+        }
+      ]
+    }
+  },
+  "equipages": {
+    "1": {
+      "pilote": "Sarah Rumeau",
+      "copilote": "Julie Amblard",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "2": {
+      "pilote": "Florent Todeschini",
+      "copilote": "Florian Barral",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "3": {
+      "pilote": "Emmanuel Gascou",
+      "copilote": "Gilles De Turckheim",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "4": {
+      "pilote": "Jean Lavigne",
+      "copilote": "Alexia Desnoyer",
+      "voiture": "Škoda Fabia Rally2 evo",
+      "classe": "Rally2"
+    },
+    "6": {
+      "pilote": "Steven Bossard",
+      "copilote": "Jules Escartefigue",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "7": {
+      "pilote": "Florian Condamines",
+      "copilote": "Damien Jolé",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "8": {
+      "pilote": "Mattéo Chatillon",
+      "copilote": "Loris Pascaud",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "9": {
+      "pilote": "Stephan Barthe",
+      "copilote": "Clémence Favy",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "10": {
+      "pilote": "François-Xavier Blanc",
+      "copilote": "Alexandre Vida",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "11": {
+      "pilote": "Jean-Michel Da Cunha",
+      "copilote": "Bastien Dumas",
+      "voiture": "Citroën C3 Rally2",
+      "classe": "Rally2"
+    },
+    "16": {
+      "pilote": "Louis Baudrand",
+      "copilote": "Cathy Derousseaux",
+      "voiture": "Hyundai i20 N Rally2",
+      "classe": "Rally2"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Un dixième. C'est l'avance de Florent Todeschini, samedi, aux Cardabelles.",
+      "animation": "Avatar face caméra, choqué ; « 0,1 s » géant en orange.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "dixième",
+          "nom": "choque"
+        },
+        {
+          "type": "typo",
+          "ancre": "Un",
+          "texte": "*0,1* s",
+          "sous": "d'avance après l'ES2",
+          "fin": "Florent"
+        },
+        {
+          "type": "pose",
+          "ancre": "Florent",
+          "nom": "neutre"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "tictac",
+          "ancre": "dixième",
+          "gain": 0.3
+        }
+      ]
+    },
+    {
+      "id": "es2",
+      "voix": "Mattéo Chatillon est juste derrière.",
+      "animation": "Classement cumulé après ES2 : Todeschini 1er, Chatillon à +0.1.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Mattéo",
+          "mode": "coin"
+        },
+        {
+          "type": "surligner",
+          "ancre": "derrière",
+          "n": 8,
+          "duree": 2
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "es4",
+      "voix": "Après l'ES quatre, il mène toujours. Deux secondes quatre d'avance.",
+      "animation": "Mise à jour : cumul après ES4, Todeschini 1er, Chatillon à +2.4.",
+      "image": null,
+      "actions": [
+        {
+          "type": "maj",
+          "ancre": "quatre",
+          "classement": [
+            {
+              "n": 2,
+              "temps": "35:59.0"
+            },
+            {
+              "n": 8,
+              "temps": "36:01.4",
+              "ecart": "+2.4"
+            },
+            {
+              "n": 1,
+              "temps": "36:20.5",
+              "ecart": "+21.5"
+            },
+            {
+              "n": 7,
+              "temps": "36:21.6",
+              "ecart": "+22.6"
+            },
+            {
+              "n": 3,
+              "temps": "36:24.7",
+              "ecart": "+25.7"
+            },
+            {
+              "n": 6,
+              "temps": "36:27.3",
+              "ecart": "+28.3"
+            },
+            {
+              "n": 9,
+              "temps": "36:46.7",
+              "ecart": "+47.7"
+            },
+            {
+              "n": 10,
+              "temps": "36:52.8",
+              "ecart": "+53.8"
+            },
+            {
+              "n": 4,
+              "temps": "37:32.5",
+              "ecart": "+1:33.5"
+            }
+          ]
+        },
+        {
+          "type": "zoom",
+          "ancre": "Deux",
+          "cible": "cl-8",
+          "echelle": 1.25,
+          "hauteur": 960
+        },
+        {
+          "type": "surligner",
+          "ancre": "Deux",
+          "n": 2,
+          "duree": 2.5
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "es5",
+      "voix": "Et puis l'ES cinq : crevaison. Il passe de premier à huitième.",
+      "animation": "Tampon rouge « CREVAISON », puis Todeschini glisse en 8e position du cumul.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Et",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "crevaison",
+          "texte": "CREVAISON",
+          "couleur": "rouge",
+          "duree": 1.6
+        },
+        {
+          "type": "pose",
+          "ancre": "crevaison",
+          "nom": "choque"
+        },
+        {
+          "type": "maj",
+          "ancre": "premier",
+          "classement": [
+            {
+              "n": 8,
+              "temps": "50:12.5"
+            },
+            {
+              "n": 1,
+              "temps": "50:37.1",
+              "ecart": "+24.6"
+            },
+            {
+              "n": 3,
+              "temps": "50:45.0",
+              "ecart": "+32.5"
+            },
+            {
+              "n": 6,
+              "temps": "50:45.6",
+              "ecart": "+33.1"
+            },
+            {
+              "n": 7,
+              "temps": "50:49.2",
+              "ecart": "+36.7"
+            },
+            {
+              "n": 9,
+              "temps": "51:07.3",
+              "ecart": "+54.8"
+            },
+            {
+              "n": 11,
+              "temps": "52:22.8",
+              "ecart": "+2:10.3"
+            },
+            {
+              "n": 2,
+              "temps": "52:27.4",
+              "ecart": "+2:14.9"
+            },
+            {
+              "n": 16,
+              "temps": "52:57.8",
+              "ecart": "+2:45.3"
+            }
+          ]
+        },
+        {
+          "type": "defiler",
+          "ancre": "premier",
+          "y": 470
+        },
+        {
+          "type": "surligner",
+          "ancre": "huitième",
+          "n": 2,
+          "duree": 2
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "erreur",
+          "ancre": "crevaison",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "remontee",
+      "voix": "Il gagne les trois spéciales suivantes. Trop tard.",
+      "animation": "Trois notifications réelles « Florent Todeschini gagne ES6 / ES7 / ES8 », puis cumul après ES8 : toujours 7e.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "gagne",
+          "nom": "neutre"
+        },
+        {
+          "type": "notif",
+          "ancre": "gagne",
+          "titre": "Florent Todeschini gagne ES6",
+          "texte": "Rallye Terre des Cardabelles - Millau - Aveyron",
+          "quand": "maintenant",
+          "duree": 1.2
+        },
+        {
+          "type": "notif",
+          "ancre": "trois",
+          "titre": "Florent Todeschini gagne ES7",
+          "texte": "Rallye Terre des Cardabelles - Millau - Aveyron",
+          "quand": "maintenant",
+          "duree": 1.2
+        },
+        {
+          "type": "notif",
+          "ancre": "suivantes",
+          "titre": "Florent Todeschini gagne ES8",
+          "texte": "Rallye Terre des Cardabelles - Millau - Aveyron",
+          "quand": "maintenant",
+          "duree": 1.2
+        },
+        {
+          "type": "maj",
+          "ancre": "Trop",
+          "classement": [
+            {
+              "n": 8,
+              "temps": "1:13:21.1"
+            },
+            {
+              "n": 1,
+              "temps": "1:13:39.8",
+              "ecart": "+18.7"
+            },
+            {
+              "n": 7,
+              "temps": "1:13:50.7",
+              "ecart": "+29.6"
+            },
+            {
+              "n": 3,
+              "temps": "1:14:03.7",
+              "ecart": "+42.6"
+            },
+            {
+              "n": 6,
+              "temps": "1:14:07.8",
+              "ecart": "+46.7"
+            },
+            {
+              "n": 9,
+              "temps": "1:14:26.7",
+              "ecart": "+1:05.6"
+            },
+            {
+              "n": 2,
+              "temps": "1:14:57.3",
+              "ecart": "+1:36.2"
+            },
+            {
+              "n": 11,
+              "temps": "1:16:16.0",
+              "ecart": "+2:54.9"
+            },
+            {
+              "n": 10,
+              "temps": "1:16:20.3",
+              "ecart": "+2:59.2"
+            }
+          ]
+        },
+        {
+          "type": "surligner",
+          "ancre": "Trop",
+          "n": 2,
+          "duree": 2
+        },
+        {
+          "type": "pose",
+          "ancre": "tard",
+          "nom": "decu"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "final",
+      "voix": "Mattéo Chatillon gagne le rallye. Sarah Rumeau, deuxième à vingt et une secondes… et championne de France !",
+      "animation": "Classement final FFSA ; notification réelle « Podium : Mattéo Chatillon gagne ». Rumeau surlignée ; carte « Championne de France », avatar qui célèbre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Mattéo",
+          "nom": "neutre"
+        },
+        {
+          "type": "defiler",
+          "ancre": "Mattéo",
+          "y": 0
+        },
+        {
+          "type": "maj",
+          "ancre": "gagne",
+          "classement": [
+            {
+              "n": 8,
+              "temps": "1:28:43.7"
+            },
+            {
+              "n": 1,
+              "temps": "1:29:05.2",
+              "ecart": "+21.5"
+            },
+            {
+              "n": 7,
+              "temps": "1:29:20.6",
+              "ecart": "+36.9"
+            },
+            {
+              "n": 6,
+              "temps": "1:29:28.1",
+              "ecart": "+44.4"
+            },
+            {
+              "n": 3,
+              "temps": "1:29:28.5",
+              "ecart": "+44.8"
+            },
+            {
+              "n": 9,
+              "temps": "1:29:45.6",
+              "ecart": "+1:01.9"
+            },
+            {
+              "n": 10,
+              "temps": "1:31:59.2",
+              "ecart": "+3:15.5"
+            },
+            {
+              "n": 11,
+              "temps": "1:32:01.3",
+              "ecart": "+3:17.6"
+            },
+            {
+              "n": 2,
+              "temps": "1:33:59.0",
+              "ecart": "+5:15.3"
+            }
+          ]
+        },
+        {
+          "type": "notif",
+          "ancre": "rallye",
+          "titre": "Podium : Mattéo Chatillon gagne",
+          "texte": "Rallye Terre des Cardabelles - Millau - Aveyron",
+          "quand": "maintenant",
+          "duree": 2.5
+        },
+        {
+          "type": "surligner",
+          "ancre": "Sarah",
+          "n": 1,
+          "duree": 2.5
+        },
+        {
+          "type": "titre",
+          "ancre": "championne",
+          "texte": "*Championne* de France",
+          "sous": "Sarah Rumeau · Rallyes Terre",
+          "duree": 2.6
+        },
+        {
+          "type": "pose",
+          "ancre": "championne",
+          "nom": "celebre"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "foule",
+          "ancre": "championne",
+          "gain": 0.35
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Tous les rebondissements, en direct. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin, avatar qui salue.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

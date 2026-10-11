@@ -1,0 +1,561 @@
+{
+  "duree": 35.72,
+  "dureeVoix": 33.92,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.5,
+      "fin": 5.62
+    },
+    {
+      "id": "es2",
+      "debut": 5.62,
+      "finVoix": 7.14,
+      "fin": 8.44
+    },
+    {
+      "id": "es4",
+      "debut": 8.44,
+      "finVoix": 12.0,
+      "fin": 13.1
+    },
+    {
+      "id": "es5",
+      "debut": 13.1,
+      "finVoix": 18.06,
+      "fin": 18.98
+    },
+    {
+      "id": "remontee",
+      "debut": 18.98,
+      "finVoix": 21.74,
+      "fin": 22.26
+    },
+    {
+      "id": "final",
+      "debut": 22.26,
+      "finVoix": 28.56,
+      "fin": 29.16
+    },
+    {
+      "id": "appel",
+      "debut": 29.16,
+      "finVoix": 33.92,
+      "fin": 35.72
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "dixième.",
+      "mot": "dixième",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.92
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.89
+    },
+    {
+      "texte": "l'avance",
+      "mot": "l'avance",
+      "scene": 0,
+      "debut": 1.89,
+      "fin": 2.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.16,
+      "fin": 2.34
+    },
+    {
+      "texte": "Florent",
+      "mot": "Florent",
+      "scene": 0,
+      "debut": 2.34,
+      "fin": 2.72
+    },
+    {
+      "texte": "Todeschini,",
+      "mot": "Todeschini",
+      "scene": 0,
+      "debut": 2.72,
+      "fin": 3.24
+    },
+    {
+      "texte": "samedi,",
+      "mot": "samedi",
+      "scene": 0,
+      "debut": 3.42,
+      "fin": 3.74
+    },
+    {
+      "texte": "aux",
+      "mot": "aux",
+      "scene": 0,
+      "debut": 4.0,
+      "fin": 4.25
+    },
+    {
+      "texte": "Cardabelles.",
+      "mot": "Cardabelles",
+      "scene": 0,
+      "debut": 4.25,
+      "fin": 4.5
+    },
+    {
+      "texte": "Mattéo",
+      "mot": "Mattéo",
+      "scene": 1,
+      "debut": 5.62,
+      "fin": 6.08
+    },
+    {
+      "texte": "Chatillon",
+      "mot": "Chatillon",
+      "scene": 1,
+      "debut": 6.08,
+      "fin": 6.52
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.7
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 1,
+      "debut": 6.7,
+      "fin": 6.88
+    },
+    {
+      "texte": "derrière.",
+      "mot": "derrière",
+      "scene": 1,
+      "debut": 6.88,
+      "fin": 7.14
+    },
+    {
+      "texte": "Après",
+      "mot": "Après",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.7
+    },
+    {
+      "texte": "l'ES",
+      "mot": "l'ES",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 8.84
+    },
+    {
+      "texte": "quatre,",
+      "mot": "quatre",
+      "scene": 2,
+      "debut": 8.84,
+      "fin": 9.26
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 2,
+      "debut": 9.5,
+      "fin": 9.54
+    },
+    {
+      "texte": "mène",
+      "mot": "mène",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.66
+    },
+    {
+      "texte": "toujours.",
+      "mot": "toujours",
+      "scene": 2,
+      "debut": 9.66,
+      "fin": 9.98
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 10.68,
+      "fin": 10.92
+    },
+    {
+      "texte": "secondes",
+      "mot": "secondes",
+      "scene": 2,
+      "debut": 10.92,
+      "fin": 11.24
+    },
+    {
+      "texte": "quatre",
+      "mot": "quatre",
+      "scene": 2,
+      "debut": 11.34,
+      "fin": 11.5
+    },
+    {
+      "texte": "d'avance.",
+      "mot": "d'avance",
+      "scene": 2,
+      "debut": 11.5,
+      "fin": 12.0
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.3
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 3,
+      "debut": 13.3,
+      "fin": 13.42
+    },
+    {
+      "texte": "l'ES",
+      "mot": "l'ES",
+      "scene": 3,
+      "debut": 13.42,
+      "fin": 13.52
+    },
+    {
+      "texte": "cinq :",
+      "mot": "cinq",
+      "scene": 3,
+      "debut": 13.52,
+      "fin": 13.92
+    },
+    {
+      "texte": "crevaison.",
+      "mot": "crevaison",
+      "scene": 3,
+      "debut": 14.64,
+      "fin": 15.04
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 3,
+      "debut": 16.12,
+      "fin": 16.3
+    },
+    {
+      "texte": "passe",
+      "mot": "passe",
+      "scene": 3,
+      "debut": 16.3,
+      "fin": 16.5
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 16.5,
+      "fin": 16.66
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 3,
+      "debut": 16.66,
+      "fin": 17.1
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 17.1,
+      "fin": 17.66
+    },
+    {
+      "texte": "huitième.",
+      "mot": "huitième",
+      "scene": 3,
+      "debut": 17.66,
+      "fin": 18.06
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 4,
+      "debut": 18.98,
+      "fin": 19.24
+    },
+    {
+      "texte": "gagne",
+      "mot": "gagne",
+      "scene": 4,
+      "debut": 19.24,
+      "fin": 19.48
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 4,
+      "debut": 19.48,
+      "fin": 19.48
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 19.48,
+      "fin": 19.76
+    },
+    {
+      "texte": "spéciales",
+      "mot": "spéciales",
+      "scene": 4,
+      "debut": 19.76,
+      "fin": 20.18
+    },
+    {
+      "texte": "suivantes.",
+      "mot": "suivantes",
+      "scene": 4,
+      "debut": 20.18,
+      "fin": 20.5
+    },
+    {
+      "texte": "Trop",
+      "mot": "Trop",
+      "scene": 4,
+      "debut": 21.34,
+      "fin": 21.52
+    },
+    {
+      "texte": "tard.",
+      "mot": "tard",
+      "scene": 4,
+      "debut": 21.52,
+      "fin": 21.74
+    },
+    {
+      "texte": "Mattéo",
+      "mot": "Mattéo",
+      "scene": 5,
+      "debut": 22.26,
+      "fin": 22.68
+    },
+    {
+      "texte": "Chatillon",
+      "mot": "Chatillon",
+      "scene": 5,
+      "debut": 22.68,
+      "fin": 23.1
+    },
+    {
+      "texte": "gagne",
+      "mot": "gagne",
+      "scene": 5,
+      "debut": 23.1,
+      "fin": 23.38
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 23.38,
+      "fin": 23.48
+    },
+    {
+      "texte": "rallye.",
+      "mot": "rallye",
+      "scene": 5,
+      "debut": 23.48,
+      "fin": 23.86
+    },
+    {
+      "texte": "Sarah",
+      "mot": "Sarah",
+      "scene": 5,
+      "debut": 24.62,
+      "fin": 25.0
+    },
+    {
+      "texte": "Rumeau,",
+      "mot": "Rumeau",
+      "scene": 5,
+      "debut": 25.0,
+      "fin": 25.4
+    },
+    {
+      "texte": "deuxième",
+      "mot": "deuxième",
+      "scene": 5,
+      "debut": 25.52,
+      "fin": 25.82
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 5,
+      "debut": 25.82,
+      "fin": 26.18
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 5,
+      "debut": 26.18,
+      "fin": 26.28
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 26.28,
+      "fin": 26.38
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 5,
+      "debut": 26.38,
+      "fin": 26.48
+    },
+    {
+      "texte": "secondes…",
+      "mot": "secondes",
+      "scene": 5,
+      "debut": 26.48,
+      "fin": 27.12
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 27.56,
+      "fin": 27.88
+    },
+    {
+      "texte": "championne",
+      "mot": "championne",
+      "scene": 5,
+      "debut": 27.88,
+      "fin": 28.28
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 28.28,
+      "fin": 28.36
+    },
+    {
+      "texte": "France !",
+      "mot": "France",
+      "scene": 5,
+      "debut": 28.36,
+      "fin": 28.56
+    },
+    {
+      "texte": "Tous",
+      "mot": "Tous",
+      "scene": 6,
+      "debut": 29.16,
+      "fin": 29.76
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 6,
+      "debut": 29.76,
+      "fin": 29.92
+    },
+    {
+      "texte": "rebondissements,",
+      "mot": "rebondissements",
+      "scene": 6,
+      "debut": 29.92,
+      "fin": 30.46
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 6,
+      "debut": 30.46,
+      "fin": 30.76
+    },
+    {
+      "texte": "direct.",
+      "mot": "direct",
+      "scene": 6,
+      "debut": 30.76,
+      "fin": 31.04
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 6,
+      "debut": 31.72,
+      "fin": 32.08
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 6,
+      "debut": 32.08,
+      "fin": 32.32
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 32.6,
+      "fin": 32.94
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 32.94,
+      "fin": 33.26
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 33.26,
+      "fin": 33.48
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 33.48,
+      "fin": 33.68
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 33.68,
+      "fin": 33.92
+    }
+  ]
+}
