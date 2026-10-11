@@ -1,0 +1,176 @@
+{
+  "titre": "5 mots que tu écris mal",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, rythmé et complice. Prononce les fautes comme si on les lisait telles quelles, puis corrige avec malice. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq mots que beaucoup de gens écrivent mal.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Cinq",
+          "texte": "5 mots que tu écris *mal*"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "voix": "Parmis, avec un s ? Non : parmi, sans s.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Parmis",
+          "texte": "parmis"
+        },
+        {
+          "type": "barrer",
+          "ancre": "Non"
+        },
+        {
+          "type": "corriger",
+          "ancre": "parmi",
+          "texte": "parmi"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "m2",
+      "voix": "Language ? En français, c'est langage, sans u.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Language",
+          "texte": "language"
+        },
+        {
+          "type": "barrer",
+          "ancre": "En"
+        },
+        {
+          "type": "corriger",
+          "ancre": "langage",
+          "texte": "langage"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "m3",
+      "voix": "Dilemne ? Non : dilemme, avec deux m.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Dilemne",
+          "texte": "dilemne"
+        },
+        {
+          "type": "barrer",
+          "ancre": "Non"
+        },
+        {
+          "type": "corriger",
+          "ancre": "dilemme",
+          "texte": "dilemme"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "m4",
+      "voix": "Connection ? En français, connexion, avec un x.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Connection",
+          "texte": "connection"
+        },
+        {
+          "type": "barrer",
+          "ancre": "En"
+        },
+        {
+          "type": "corriger",
+          "ancre": "connexion",
+          "texte": "connexion"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "m5",
+      "voix": "Et rénumérer ? Non : rémunérer, comme dans rémunération.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "rénumérer",
+          "texte": "rénumérer"
+        },
+        {
+          "type": "barrer",
+          "ancre": "Non"
+        },
+        {
+          "type": "corriger",
+          "ancre": "rémunérer",
+          "texte": "rémunérer"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien tu en avais ? Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

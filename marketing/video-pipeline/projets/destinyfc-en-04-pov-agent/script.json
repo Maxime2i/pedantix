@@ -1,0 +1,182 @@
+{
+  "titre": "POV: an ambitious agent spotted you",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "English version of destinyfc-04. Player creation with the app's real English lists (Midfielder, Working-class estate, inner circle 'Ambitious agent').",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. POV storytelling, friendly and a bit cheeky about the agent ('and he won't forget his cut' with a wink in the voice)."
+  },
+  "ecranInitial": "creation",
+  "dispositionInitiale": "avatar",
+  "poseInitiale": "neutre",
+  "ecrans": {
+    "creation": {
+      "champs": {
+        "nationalite": "England"
+      }
+    },
+    "clubs": {
+      "potentiel": 3
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "POV: you're sixteen, and an ambitious agent has just spotted you.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "POV",
+          "texte": "POV: you're *16*",
+          "sous": "An agent just spotted you"
+        },
+        {
+          "type": "pose",
+          "ancre": "agent",
+          "nom": "clin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "create",
+      "voix": "I create my player. Jack Turner, midfielder, from a working-class estate.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "create",
+          "mode": "coin"
+        },
+        {
+          "type": "ecran",
+          "ancre": "create",
+          "nom": "creation"
+        },
+        {
+          "type": "pose",
+          "ancre": "create",
+          "nom": "neutre"
+        },
+        {
+          "type": "taper",
+          "ancre": "Jack",
+          "mot": "Jack Turner"
+        },
+        {
+          "type": "feuille",
+          "ancre": "midfielder",
+          "nom": "poste"
+        },
+        {
+          "type": "choisir",
+          "ancre": "from",
+          "valeur": "Midfielder"
+        },
+        {
+          "type": "choisir",
+          "ancre": "estate",
+          "nom": "origine",
+          "valeur": "Working-class estate"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "agent",
+      "voix": "Inner circle: the ambitious agent. He swears he'll take me to the top… and won't forget his cut.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "feuille",
+          "ancre": "Inner",
+          "nom": "entourage"
+        },
+        {
+          "type": "choisir",
+          "ancre": "He",
+          "valeur": "Ambitious agent"
+        },
+        {
+          "type": "choisir",
+          "ancre": "top",
+          "nom": "style",
+          "valeur": "Balanced"
+        },
+        {
+          "type": "attributs",
+          "ancre": "top",
+          "tec": 61,
+          "phy": 50,
+          "men": 58,
+          "cha": 55
+        },
+        {
+          "type": "pose",
+          "ancre": "cut",
+          "nom": "clin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "clubs",
+      "voix": "Result: the scouts have spotted me. Now I pick my club.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "scouts",
+          "nom": "clubs"
+        },
+        {
+          "type": "pose",
+          "ancre": "scouts",
+          "nom": "fier"
+        },
+        {
+          "type": "appui",
+          "ancre": "club",
+          "cible": "cl-4"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "And you, who would you trust with your career? Destiny FC, free on iPhone and Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "you",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

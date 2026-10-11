@@ -1,0 +1,112 @@
+{
+  "titre": "La page la plus dure",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Récit : la page qui a le plus résisté au créateur.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "duo",
+  "ecranInitial": "historique",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "La page la plus dure de mon historique ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "dure",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "voix": "Jaïnisme. Cent douze coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "Jaïnisme.",
+          "cible": "hist-5"
+        },
+        {
+          "type": "pose",
+          "ancre": "Cent",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "essais",
+      "voix": "J'ai tapé bouddhisme, hindouisme, yoga… rien ne venait.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "J'ai",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "J'ai",
+          "nom": "neutre"
+        },
+        {
+          "type": "pose",
+          "ancre": "rien",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "fait",
+      "voix": "C'est une religion de l'Inde, fondée sur la non-violence absolue.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "C'est",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "religion",
+          "texte": "Jaïnisme",
+          "sous": "religion indienne de la non-violence",
+          "fin": "absolue."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Et toi, c'est quoi ta pire page ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "toi,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

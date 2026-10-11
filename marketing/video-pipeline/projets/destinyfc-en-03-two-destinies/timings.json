@@ -1,0 +1,458 @@
+{
+  "duree": 27.32,
+  "dureeVoix": 25.52,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 5.66,
+      "fin": 6.3
+    },
+    {
+      "id": "situation",
+      "debut": 6.3,
+      "finVoix": 10.46,
+      "fin": 11.0
+    },
+    {
+      "id": "destiny1",
+      "debut": 11.0,
+      "finVoix": 16.1,
+      "fin": 16.58
+    },
+    {
+      "id": "destiny2",
+      "debut": 16.58,
+      "finVoix": 20.94,
+      "fin": 21.58
+    },
+    {
+      "id": "cta",
+      "debut": 21.58,
+      "finVoix": 25.52,
+      "fin": 27.32
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Same",
+      "mot": "Same",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "player,",
+      "mot": "player",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.76
+    },
+    {
+      "texte": "same",
+      "mot": "same",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 1.32
+    },
+    {
+      "texte": "age,",
+      "mot": "age",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.7
+    },
+    {
+      "texte": "one",
+      "mot": "one",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.24
+    },
+    {
+      "texte": "single",
+      "mot": "single",
+      "scene": 0,
+      "debut": 2.24,
+      "fin": 2.78
+    },
+    {
+      "texte": "decision…",
+      "mot": "decision",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 3.26
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 0,
+      "debut": 3.64,
+      "fin": 3.84
+    },
+    {
+      "texte": "two",
+      "mot": "two",
+      "scene": 0,
+      "debut": 3.84,
+      "fin": 4.1
+    },
+    {
+      "texte": "completely",
+      "mot": "completely",
+      "scene": 0,
+      "debut": 4.1,
+      "fin": 4.82
+    },
+    {
+      "texte": "different",
+      "mot": "different",
+      "scene": 0,
+      "debut": 4.82,
+      "fin": 5.24
+    },
+    {
+      "texte": "careers.",
+      "mot": "careers",
+      "scene": 0,
+      "debut": 5.24,
+      "fin": 5.66
+    },
+    {
+      "texte": "Sixteen:",
+      "mot": "Sixteen",
+      "scene": 1,
+      "debut": 6.3,
+      "fin": 6.64
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 1,
+      "debut": 7.1,
+      "fin": 7.2
+    },
+    {
+      "texte": "grow",
+      "mot": "grow",
+      "scene": 1,
+      "debut": 7.2,
+      "fin": 7.4
+    },
+    {
+      "texte": "eight",
+      "mot": "eight",
+      "scene": 1,
+      "debut": 7.4,
+      "fin": 7.78
+    },
+    {
+      "texte": "centimetres",
+      "mot": "centimetres",
+      "scene": 1,
+      "debut": 7.78,
+      "fin": 8.06
+    },
+    {
+      "texte": "in",
+      "mot": "in",
+      "scene": 1,
+      "debut": 8.06,
+      "fin": 8.58
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 8.58,
+      "fin": 8.68
+    },
+    {
+      "texte": "year.",
+      "mot": "year",
+      "scene": 1,
+      "debut": 8.68,
+      "fin": 8.92
+    },
+    {
+      "texte": "The",
+      "mot": "The",
+      "scene": 1,
+      "debut": 9.38,
+      "fin": 9.44
+    },
+    {
+      "texte": "medical",
+      "mot": "medical",
+      "scene": 1,
+      "debut": 9.44,
+      "fin": 9.68
+    },
+    {
+      "texte": "staff",
+      "mot": "staff",
+      "scene": 1,
+      "debut": 9.68,
+      "fin": 9.98
+    },
+    {
+      "texte": "are",
+      "mot": "are",
+      "scene": 1,
+      "debut": 9.98,
+      "fin": 10.16
+    },
+    {
+      "texte": "worried.",
+      "mot": "worried",
+      "scene": 1,
+      "debut": 10.16,
+      "fin": 10.46
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 2,
+      "debut": 11.0,
+      "fin": 11.4
+    },
+    {
+      "texte": "one:",
+      "mot": "one",
+      "scene": 2,
+      "debut": 11.4,
+      "fin": 11.72
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 2,
+      "debut": 12.24,
+      "fin": 12.34
+    },
+    {
+      "texte": "follow",
+      "mot": "follow",
+      "scene": 2,
+      "debut": 12.34,
+      "fin": 12.58
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 12.58,
+      "fin": 12.72
+    },
+    {
+      "texte": "protocol.",
+      "mot": "protocol",
+      "scene": 2,
+      "debut": 12.72,
+      "fin": 13.1
+    },
+    {
+      "texte": "Six",
+      "mot": "Six",
+      "scene": 2,
+      "debut": 13.52,
+      "fin": 13.7
+    },
+    {
+      "texte": "months",
+      "mot": "months",
+      "scene": 2,
+      "debut": 13.7,
+      "fin": 13.96
+    },
+    {
+      "texte": "of",
+      "mot": "of",
+      "scene": 2,
+      "debut": 13.96,
+      "fin": 14.18
+    },
+    {
+      "texte": "discipline…",
+      "mot": "discipline",
+      "scene": 2,
+      "debut": 14.18,
+      "fin": 14.56
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 2,
+      "debut": 14.56,
+      "fin": 15.12
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 15.12,
+      "fin": 15.32
+    },
+    {
+      "texte": "brand-new",
+      "mot": "brand-new",
+      "scene": 2,
+      "debut": 15.32,
+      "fin": 15.8
+    },
+    {
+      "texte": "body.",
+      "mot": "body",
+      "scene": 2,
+      "debut": 15.8,
+      "fin": 16.1
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 3,
+      "debut": 16.58,
+      "fin": 17.02
+    },
+    {
+      "texte": "two:",
+      "mot": "two",
+      "scene": 3,
+      "debut": 17.02,
+      "fin": 17.38
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 3,
+      "debut": 17.96,
+      "fin": 18.04
+    },
+    {
+      "texte": "keep",
+      "mot": "keep",
+      "scene": 3,
+      "debut": 18.04,
+      "fin": 18.2
+    },
+    {
+      "texte": "playing.",
+      "mot": "playing",
+      "scene": 3,
+      "debut": 18.2,
+      "fin": 18.5
+    },
+    {
+      "texte": "Groin",
+      "mot": "Groin",
+      "scene": 3,
+      "debut": 19.0,
+      "fin": 19.24
+    },
+    {
+      "texte": "strain.",
+      "mot": "strain",
+      "scene": 3,
+      "debut": 19.24,
+      "fin": 19.6
+    },
+    {
+      "texte": "Eight",
+      "mot": "Eight",
+      "scene": 3,
+      "debut": 20.08,
+      "fin": 20.3
+    },
+    {
+      "texte": "weeks",
+      "mot": "weeks",
+      "scene": 3,
+      "debut": 20.3,
+      "fin": 20.58
+    },
+    {
+      "texte": "out.",
+      "mot": "out",
+      "scene": 3,
+      "debut": 20.58,
+      "fin": 20.94
+    },
+    {
+      "texte": "One",
+      "mot": "One",
+      "scene": 4,
+      "debut": 21.58,
+      "fin": 21.74
+    },
+    {
+      "texte": "decision,",
+      "mot": "decision",
+      "scene": 4,
+      "debut": 21.74,
+      "fin": 22.06
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 22.58,
+      "fin": 22.58
+    },
+    {
+      "texte": "whole",
+      "mot": "whole",
+      "scene": 4,
+      "debut": 22.58,
+      "fin": 22.7
+    },
+    {
+      "texte": "career.",
+      "mot": "career",
+      "scene": 4,
+      "debut": 22.7,
+      "fin": 23.06
+    },
+    {
+      "texte": "In",
+      "mot": "In",
+      "scene": 4,
+      "debut": 23.56,
+      "fin": 23.68
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 23.68,
+      "fin": 23.98
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 23.98,
+      "fin": 24.26
+    },
+    {
+      "texte": "every",
+      "mot": "every",
+      "scene": 4,
+      "debut": 24.7,
+      "fin": 24.98
+    },
+    {
+      "texte": "choice",
+      "mot": "choice",
+      "scene": 4,
+      "debut": 24.98,
+      "fin": 25.22
+    },
+    {
+      "texte": "counts.",
+      "mot": "counts",
+      "scene": 4,
+      "debut": 25.22,
+      "fin": 25.52
+    }
+  ]
+}

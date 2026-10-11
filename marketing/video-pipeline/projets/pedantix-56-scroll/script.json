@@ -1,0 +1,135 @@
+{
+  "titre": "Remplace ton scroll",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Temps d'écran utile : cinq minutes de jeu au lieu de scroller.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Fête",
+    "texte": [
+      "Une fête est une période de réjouissance collective. Une fête est limitée dans le temps. C'est un ensemble de personnes qui se réunissent dans un esprit de célébration. Les funérailles ne sont pas considérées comme une fête. La fête peut devenir un devoir ou une obligation sociale, comme les préceptes catholiques ou les fêtes nationales. Il existe des fêtes publiques, qui engagent une société tout entière, et des fêtes privées limitées à une famille, à une corporation, à des clients, etc."
+    ],
+    "titreMots": [
+      "fête"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mercredi 27 août",
+    "accelere": [
+      "période",
+      "réjouissance",
+      "collective",
+      "limitée",
+      "temps",
+      "ensemble",
+      "personnes",
+      "réunissent",
+      "esprit",
+      "célébration",
+      "funérailles",
+      "considérées",
+      "devoir",
+      "obligation",
+      "sociale",
+      "préceptes",
+      "catholiques",
+      "nationales",
+      "publiques",
+      "société",
+      "privées",
+      "famille"
+    ]
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Ça fait vingt minutes que tu scrolles, non ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "non",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "echange",
+      "voix": "Échange cinq minutes de scroll contre une page Wikipédia.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Échange",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Échange",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "jeu",
+      "voix": "Tu joues, tu apprends un truc, et tu poses ton téléphone.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "joues,",
+          "nom": "neutre"
+        },
+        {
+          "type": "accelere",
+          "ancre": "joues,",
+          "fin": "truc,",
+          "essais": 21
+        },
+        {
+          "type": "pose",
+          "ancre": "poses",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "merci",
+      "voix": "Ton cerveau te dira merci.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Ton",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "merci.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

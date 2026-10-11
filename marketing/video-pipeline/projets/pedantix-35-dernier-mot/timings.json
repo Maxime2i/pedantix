@@ -1,0 +1,303 @@
+{
+  "duree": 16.68,
+  "dureeVoix": 14.88,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 1.96,
+      "fin": 2.86
+    },
+    {
+      "id": "case",
+      "debut": 2.86,
+      "finVoix": 5.82,
+      "fin": 6.64
+    },
+    {
+      "id": "indices",
+      "debut": 6.64,
+      "finVoix": 10.0,
+      "fin": 10.0
+    },
+    {
+      "id": "trouve",
+      "debut": 10.0,
+      "finVoix": 10.68,
+      "fin": 11.14
+    },
+    {
+      "id": "fait",
+      "debut": 11.14,
+      "finVoix": 12.6,
+      "fin": 13.38
+    },
+    {
+      "id": "appel",
+      "debut": 13.38,
+      "finVoix": 14.88,
+      "fin": 16.68
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.46
+    },
+    {
+      "texte": "manque",
+      "mot": "manque",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.72
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 1.16
+    },
+    {
+      "texte": "seul",
+      "mot": "seul",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.42
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.58
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.7
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 1.96
+    },
+    {
+      "texte": "Projection",
+      "mot": "Projection",
+      "scene": 1,
+      "debut": 2.86,
+      "fin": 3.38
+    },
+    {
+      "texte": "de…",
+      "mot": "de",
+      "scene": 1,
+      "debut": 3.38,
+      "fin": 3.9
+    },
+    {
+      "texte": "quelque",
+      "mot": "quelque",
+      "scene": 1,
+      "debut": 3.9,
+      "fin": 4.22
+    },
+    {
+      "texte": "chose.",
+      "mot": "chose",
+      "scene": 1,
+      "debut": 4.22,
+      "fin": 4.48
+    },
+    {
+      "texte": "Huit",
+      "mot": "Huit",
+      "scene": 1,
+      "debut": 5.18,
+      "fin": 5.46
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.82
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 2,
+      "debut": 6.64,
+      "fin": 6.74
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 2,
+      "debut": 6.74,
+      "fin": 6.94
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.12
+    },
+    {
+      "texte": "monde,",
+      "mot": "monde",
+      "scene": 2,
+      "debut": 7.12,
+      "fin": 7.98
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.3
+    },
+    {
+      "texte": "géographe",
+      "mot": "géographe",
+      "scene": 2,
+      "debut": 8.3,
+      "fin": 8.76
+    },
+    {
+      "texte": "flamand…",
+      "mot": "flamand",
+      "scene": 2,
+      "debut": 8.76,
+      "fin": 10.0
+    },
+    {
+      "texte": "Mercator !",
+      "mot": "Mercator",
+      "scene": 3,
+      "debut": 10.0,
+      "fin": 10.68
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 4,
+      "debut": 11.14,
+      "fin": 11.24
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 4,
+      "debut": 11.24,
+      "fin": 11.46
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 4,
+      "debut": 11.46,
+      "fin": 11.56
+    },
+    {
+      "texte": "monde",
+      "mot": "monde",
+      "scene": 4,
+      "debut": 11.56,
+      "fin": 11.72
+    },
+    {
+      "texte": "qu'on",
+      "mot": "qu'on",
+      "scene": 4,
+      "debut": 11.72,
+      "fin": 11.86
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 11.86,
+      "fin": 11.96
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 4,
+      "debut": 11.96,
+      "fin": 12.12
+    },
+    {
+      "texte": "vue",
+      "mot": "vue",
+      "scene": 4,
+      "debut": 12.12,
+      "fin": 12.3
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 12.3,
+      "fin": 12.4
+    },
+    {
+      "texte": "l'école.",
+      "mot": "l'école",
+      "scene": 4,
+      "debut": 12.4,
+      "fin": 12.6
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 13.38,
+      "fin": 13.9
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 14.1,
+      "fin": 14.4
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 14.4,
+      "fin": 14.62
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 14.62,
+      "fin": 14.74
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 14.74,
+      "fin": 14.88
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "duree": 28.5,
+  "dureeVoix": 26.7,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.56,
+      "fin": 5.62
+    },
+    {
+      "id": "q1",
+      "debut": 5.62,
+      "finVoix": 9.56,
+      "fin": 10.22
+    },
+    {
+      "id": "q2",
+      "debut": 10.22,
+      "finVoix": 14.38,
+      "fin": 15.1
+    },
+    {
+      "id": "q3",
+      "debut": 15.1,
+      "finVoix": 20.0,
+      "fin": 20.64
+    },
+    {
+      "id": "appel",
+      "debut": 20.64,
+      "finVoix": 26.7,
+      "fin": 28.5
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Vendredi",
+      "mot": "Vendredi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.78
+    },
+    {
+      "texte": "animaux !",
+      "mot": "animaux",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 1.44
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.08
+    },
+    {
+      "texte": "questions :",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.46
+    },
+    {
+      "texte": "essaie",
+      "mot": "essaie",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 3.06
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.06,
+      "fin": 3.14
+    },
+    {
+      "texte": "répondre",
+      "mot": "répondre",
+      "scene": 0,
+      "debut": 3.14,
+      "fin": 3.4
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 3.4,
+      "fin": 3.6
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 3.6,
+      "fin": 3.82
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 4.22,
+      "fin": 4.32
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 4.32,
+      "fin": 4.56
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 5.62,
+      "fin": 5.74
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.42
+    },
+    {
+      "texte": "femelle",
+      "mot": "femelle",
+      "scene": 1,
+      "debut": 6.42,
+      "fin": 6.78
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 6.78,
+      "fin": 6.92
+    },
+    {
+      "texte": "sanglier ?",
+      "mot": "sanglier",
+      "scene": 1,
+      "debut": 6.92,
+      "fin": 7.34
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 8.66,
+      "fin": 9.22
+    },
+    {
+      "texte": "laie.",
+      "mot": "laie",
+      "scene": 1,
+      "debut": 9.22,
+      "fin": 9.56
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 10.22,
+      "fin": 10.62
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.36
+    },
+    {
+      "texte": "petit",
+      "mot": "petit",
+      "scene": 2,
+      "debut": 11.36,
+      "fin": 11.6
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 11.6,
+      "fin": 11.76
+    },
+    {
+      "texte": "lièvre ?",
+      "mot": "lièvre",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 12.12
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 13.36,
+      "fin": 13.9
+    },
+    {
+      "texte": "levraut.",
+      "mot": "levraut",
+      "scene": 2,
+      "debut": 13.9,
+      "fin": 14.38
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 15.1,
+      "fin": 15.46
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 16.28,
+      "fin": 16.28
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 16.28,
+      "fin": 16.5
+    },
+    {
+      "texte": "grand",
+      "mot": "grand",
+      "scene": 3,
+      "debut": 16.5,
+      "fin": 16.78
+    },
+    {
+      "texte": "animal",
+      "mot": "animal",
+      "scene": 3,
+      "debut": 16.78,
+      "fin": 17.24
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 17.24,
+      "fin": 17.46
+    },
+    {
+      "texte": "monde ?",
+      "mot": "monde",
+      "scene": 3,
+      "debut": 17.46,
+      "fin": 17.72
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 19.02,
+      "fin": 19.52
+    },
+    {
+      "texte": "baleine",
+      "mot": "baleine",
+      "scene": 3,
+      "debut": 19.52,
+      "fin": 19.8
+    },
+    {
+      "texte": "bleue.",
+      "mot": "bleue",
+      "scene": 3,
+      "debut": 19.8,
+      "fin": 20.0
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 20.64,
+      "fin": 21.02
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 21.02,
+      "fin": 21.18
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 21.18,
+      "fin": 21.4
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 21.4,
+      "fin": 22.16
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 22.16,
+      "fin": 22.28
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 22.28,
+      "fin": 22.76
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.76,
+      "fin": 23.18
+    },
+    {
+      "texte": "rendez-vous",
+      "mot": "rendez-vous",
+      "scene": 4,
+      "debut": 23.18,
+      "fin": 23.52
+    },
+    {
+      "texte": "vendredi",
+      "mot": "vendredi",
+      "scene": 4,
+      "debut": 23.52,
+      "fin": 23.86
+    },
+    {
+      "texte": "prochain.",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 23.86,
+      "fin": 24.14
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 24.72,
+      "fin": 25.0
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 25.0,
+      "fin": 25.4
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 25.66,
+      "fin": 25.92
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 25.92,
+      "fin": 26.1
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 26.1,
+      "fin": 26.3
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 26.3,
+      "fin": 26.48
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 26.48,
+      "fin": 26.7
+    }
+  ]
+}

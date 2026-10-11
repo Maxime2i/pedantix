@@ -1,0 +1,428 @@
+{
+  "duree": 27.82,
+  "dureeVoix": 26.02,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.22,
+      "fin": 3.68
+    },
+    {
+      "id": "italie",
+      "debut": 3.68,
+      "finVoix": 5.56,
+      "fin": 7.0
+    },
+    {
+      "id": "deux",
+      "debut": 7.0,
+      "finVoix": 9.88,
+      "fin": 10.9
+    },
+    {
+      "id": "chili",
+      "debut": 10.9,
+      "finVoix": 13.76,
+      "fin": 14.78
+    },
+    {
+      "id": "trois",
+      "debut": 14.78,
+      "finVoix": 17.98,
+      "fin": 19.2
+    },
+    {
+      "id": "islande",
+      "debut": 19.2,
+      "finVoix": 21.56,
+      "fin": 22.16
+    },
+    {
+      "id": "appel",
+      "debut": 22.16,
+      "finVoix": 26.02,
+      "fin": 27.82
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Devine",
+      "mot": "Devine",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.82
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.0
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.32
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.64
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.78
+    },
+    {
+      "texte": "forme.",
+      "mot": "forme",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 2.24
+    },
+    {
+      "texte": "Premier :",
+      "mot": "Premier",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 3.22
+    },
+    {
+      "texte": "Facile,",
+      "mot": "Facile",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 4.06
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 4.52,
+      "fin": 4.54
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.54,
+      "fin": 4.68
+    },
+    {
+      "texte": "botte :",
+      "mot": "botte",
+      "scene": 1,
+      "debut": 4.68,
+      "fin": 5.02
+    },
+    {
+      "texte": "l'Italie.",
+      "mot": "l'Italie",
+      "scene": 1,
+      "debut": 5.22,
+      "fin": 5.56
+    },
+    {
+      "texte": "Deuxième,",
+      "mot": "Deuxième",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.58
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 2,
+      "debut": 8.64,
+      "fin": 8.74
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 8.74,
+      "fin": 9.06
+    },
+    {
+      "texte": "longueur…",
+      "mot": "longueur",
+      "scene": 2,
+      "debut": 9.06,
+      "fin": 9.88
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 10.9,
+      "fin": 11.0
+    },
+    {
+      "texte": "Chili :",
+      "mot": "Chili",
+      "scene": 3,
+      "debut": 11.0,
+      "fin": 11.24
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 11.72,
+      "fin": 11.98
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 11.98,
+      "fin": 12.14
+    },
+    {
+      "texte": "quatre",
+      "mot": "quatre",
+      "scene": 3,
+      "debut": 12.14,
+      "fin": 12.367
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 12.367,
+      "fin": 12.593
+    },
+    {
+      "texte": "kilomètres",
+      "mot": "kilomètres",
+      "scene": 3,
+      "debut": 12.593,
+      "fin": 12.82
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 12.82,
+      "fin": 13.3
+    },
+    {
+      "texte": "nord",
+      "mot": "nord",
+      "scene": 3,
+      "debut": 13.3,
+      "fin": 13.48
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 3,
+      "debut": 13.48,
+      "fin": 13.64
+    },
+    {
+      "texte": "sud.",
+      "mot": "sud",
+      "scene": 3,
+      "debut": 13.64,
+      "fin": 13.76
+    },
+    {
+      "texte": "Dernier,",
+      "mot": "Dernier",
+      "scene": 4,
+      "debut": 14.78,
+      "fin": 15.36
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 4,
+      "debut": 16.04,
+      "fin": 16.28
+    },
+    {
+      "texte": "île",
+      "mot": "île",
+      "scene": 4,
+      "debut": 16.28,
+      "fin": 16.52
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 4,
+      "debut": 16.52,
+      "fin": 16.62
+    },
+    {
+      "texte": "milieu",
+      "mot": "milieu",
+      "scene": 4,
+      "debut": 16.62,
+      "fin": 16.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.86,
+      "fin": 17.06
+    },
+    {
+      "texte": "l'Atlantique",
+      "mot": "l'Atlantique",
+      "scene": 4,
+      "debut": 17.06,
+      "fin": 17.58
+    },
+    {
+      "texte": "nord…",
+      "mot": "nord",
+      "scene": 4,
+      "debut": 17.58,
+      "fin": 17.98
+    },
+    {
+      "texte": "L'Islande !",
+      "mot": "L'Islande",
+      "scene": 5,
+      "debut": 19.2,
+      "fin": 19.9
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 5,
+      "debut": 20.76,
+      "fin": 21.16
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 5,
+      "debut": 21.16,
+      "fin": 21.26
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 5,
+      "debut": 21.26,
+      "fin": 21.36
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 5,
+      "debut": 21.36,
+      "fin": 21.46
+    },
+    {
+      "texte": "eu ?",
+      "mot": "eu",
+      "scene": 5,
+      "debut": 21.46,
+      "fin": 21.56
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 6,
+      "debut": 22.16,
+      "fin": 22.32
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 22.32,
+      "fin": 22.48
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 6,
+      "debut": 22.48,
+      "fin": 22.66
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 6,
+      "debut": 22.66,
+      "fin": 22.84
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 6,
+      "debut": 22.84,
+      "fin": 23.02
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 6,
+      "debut": 23.02,
+      "fin": 23.32
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 23.9,
+      "fin": 24.18
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 24.18,
+      "fin": 24.58
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 24.58,
+      "fin": 25.1
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 25.1,
+      "fin": 25.3
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 25.3,
+      "fin": 25.54
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 25.54,
+      "fin": 25.8
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 25.8,
+      "fin": 26.02
+    }
+  ]
+}

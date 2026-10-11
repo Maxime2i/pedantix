@@ -1,0 +1,310 @@
+{
+  "duree": 17.76,
+  "dureeVoix": 15.96,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.74,
+      "fin": 3.74
+    },
+    {
+      "id": "case",
+      "debut": 3.74,
+      "finVoix": 5.76,
+      "fin": 6.3
+    },
+    {
+      "id": "essais",
+      "debut": 6.3,
+      "finVoix": 8.7,
+      "fin": 9.14
+    },
+    {
+      "id": "reponse",
+      "debut": 9.14,
+      "finVoix": 12.02,
+      "fin": 12.66
+    },
+    {
+      "id": "cta",
+      "debut": 12.66,
+      "finVoix": 13.8,
+      "fin": 14.36
+    },
+    {
+      "id": "appel",
+      "debut": 14.36,
+      "finVoix": 15.96,
+      "fin": 17.76
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "pire",
+      "mot": "pire",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.78
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.92
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.14
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.28
+    },
+    {
+      "texte": "propre",
+      "mot": "propre",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.54
+    },
+    {
+      "texte": "jeu :",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.84
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.58
+    },
+    {
+      "texte": "quatre-vingt-trois",
+      "mot": "quatre-vingt-trois",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 3.02
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 0,
+      "debut": 3.02,
+      "fin": 3.74
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.88
+    },
+    {
+      "texte": "page ?",
+      "mot": "page",
+      "scene": 1,
+      "debut": 3.88,
+      "fin": 4.08
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 1,
+      "debut": 4.54,
+      "fin": 4.7
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 1,
+      "debut": 4.7,
+      "fin": 4.92
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.12
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.36
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 1,
+      "debut": 5.36,
+      "fin": 5.76
+    },
+    {
+      "texte": "J'ai",
+      "mot": "J'ai",
+      "scene": 2,
+      "debut": 6.3,
+      "fin": 6.54
+    },
+    {
+      "texte": "tenté",
+      "mot": "tenté",
+      "scene": 2,
+      "debut": 6.54,
+      "fin": 6.82
+    },
+    {
+      "texte": "médecine,",
+      "mot": "médecine",
+      "scene": 2,
+      "debut": 6.82,
+      "fin": 7.62
+    },
+    {
+      "texte": "oreille,",
+      "mot": "oreille",
+      "scene": 2,
+      "debut": 7.78,
+      "fin": 8.28
+    },
+    {
+      "texte": "gorge…",
+      "mot": "gorge",
+      "scene": 2,
+      "debut": 8.46,
+      "fin": 8.7
+    },
+    {
+      "texte": "Otorhinolaryngologie.",
+      "mot": "Otorhinolaryngologie",
+      "scene": 3,
+      "debut": 9.14,
+      "fin": 10.62
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 11.14,
+      "fin": 11.2
+    },
+    {
+      "texte": "nom",
+      "mot": "nom",
+      "scene": 3,
+      "debut": 11.2,
+      "fin": 11.34
+    },
+    {
+      "texte": "complet",
+      "mot": "complet",
+      "scene": 3,
+      "debut": 11.34,
+      "fin": 11.56
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 11.56,
+      "fin": 11.64
+    },
+    {
+      "texte": "ORL.",
+      "mot": "ORL",
+      "scene": 3,
+      "debut": 11.64,
+      "fin": 12.02
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 12.66,
+      "fin": 12.8
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 4,
+      "debut": 12.8,
+      "fin": 12.9
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 4,
+      "debut": 13.34,
+      "fin": 13.46
+    },
+    {
+      "texte": "pire",
+      "mot": "pire",
+      "scene": 4,
+      "debut": 13.46,
+      "fin": 13.68
+    },
+    {
+      "texte": "score ?",
+      "mot": "score",
+      "scene": 4,
+      "debut": 13.68,
+      "fin": 13.8
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.36,
+      "fin": 14.92
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.32,
+      "fin": 15.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.62,
+      "fin": 15.72
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 15.72,
+      "fin": 15.82
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 15.82,
+      "fin": 15.96
+    }
+  ]
+}

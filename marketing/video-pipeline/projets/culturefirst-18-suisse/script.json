@@ -1,0 +1,165 @@
+{
+  "titre": "La capitale de la Suisse",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Vraie question, « Genève ? » sûr de soi, « Raté. » amusé, puis ton de confidence sur « officiellement, il n'y en a pas ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Quelle est la capitale de la Suisse ? Genève ? Raté. Et en fait… officiellement, il n'y en a pas.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Quelle"
+        },
+        {
+          "type": "zoom",
+          "ancre": "capitale",
+          "cible": "carte"
+        },
+        {
+          "type": "bulle",
+          "ancre": "Genève",
+          "texte": "Genève ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Raté"
+        },
+        {
+          "type": "tampon",
+          "ancre": "officiellement",
+          "texte": "AUCUNE",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Quelle",
+          "gain": 0.4
+        },
+        {
+          "son": "tictac",
+          "ancre": "Suisse",
+          "gain": 0.3
+        }
+      ]
+    },
+    {
+      "id": "berne",
+      "voix": "Berne est la « ville fédérale » : c'est là que siègent le gouvernement et le Parlement.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Berne"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Berne"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "constitution",
+      "voix": "La Constitution suisse ne désigne aucune capitale.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Constitution",
+          "texte": "Capitale officielle",
+          "sous": "aucune dans la Constitution suisse"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Ce genre de détail, Culture First te le fait réviser au bon moment pour qu'il reste.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Ce"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Ce",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "réviser",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales européennes (2)",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Suisse",
+      "reponse": "Berne",
+      "fiche": [
+        [
+          "Statut",
+          "ville fédérale"
+        ],
+        [
+          "Siège",
+          "gouvernement et Parlement"
+        ]
+      ]
+    }
+  ]
+}

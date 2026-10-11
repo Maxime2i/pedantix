@@ -1,0 +1,176 @@
+{
+  "titre": "En tête… et plus rien",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Émotion du rallye en direct. Démo fictive : Moreau en tête (8,3 s d'avance) abandonne dans l'ES8 ; il sort du classement, Marchal prend la tête. Pas de notification d'abandon en direct (l'app n'en envoie pas).",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Tension dramatique : début posé, suspense sur « et plus rien », silence d'une demi-seconde. Puis ton plus grave et énergique pour la suite."
+  },
+  "ecranInitial": "rallye",
+  "ecrans": {
+    "rallye": {
+      "onglet": "classement"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "En tête, à trois spéciales de la fin…",
+      "animation": "Classement : Moreau premier, ligne surlignée.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "En"
+        },
+        {
+          "type": "zoom",
+          "ancre": "tête",
+          "cible": "cl-1",
+          "echelle": 1.25,
+          "hauteur": 960
+        },
+        {
+          "type": "surligner",
+          "ancre": "tête",
+          "n": 1,
+          "duree": 5
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "tictac",
+          "ancre": "trois",
+          "gain": 0.35
+        }
+      ]
+    },
+    {
+      "id": "drame",
+      "voix": "Moreau attaque l'ES huit… et plus rien.",
+      "animation": "Tampon « ES8 ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "rien",
+          "texte": "ES8",
+          "couleur": "rouge",
+          "duree": 1.5
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "moteur",
+          "ancre": "attaque",
+          "gain": 0.5
+        },
+        {
+          "son": "erreur",
+          "ancre": "rien",
+          "gain": 0.45
+        }
+      ]
+    },
+    {
+      "id": "disparait",
+      "voix": "Dans le classement, son nom disparaît. Marchal prend la tête.",
+      "animation": "La ligne de Moreau s'efface ; Marchal passe premier.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Dans",
+          "cible": "aucun"
+        },
+        {
+          "type": "maj",
+          "ancre": "disparaît",
+          "classement": [
+            {
+              "n": 3,
+              "temps": "45:23.0"
+            },
+            {
+              "n": 2,
+              "temps": "45:28.9",
+              "ecart": "+5.9"
+            },
+            {
+              "n": 4,
+              "temps": "46:00.3",
+              "ecart": "+37.3"
+            },
+            {
+              "n": 6,
+              "temps": "46:45.9",
+              "ecart": "+1:22.9"
+            },
+            {
+              "n": 5,
+              "temps": "47:22.8",
+              "ecart": "+1:59.8"
+            },
+            {
+              "n": 7,
+              "temps": "48:47.2",
+              "ecart": "+3:24.2"
+            },
+            {
+              "n": 8,
+              "temps": "48:55.4",
+              "ecart": "+3:32.4"
+            },
+            {
+              "n": 9,
+              "temps": "49:17.2",
+              "ecart": "+3:54.2"
+            }
+          ]
+        },
+        {
+          "type": "surligner",
+          "ancre": "Marchal",
+          "n": 3,
+          "duree": 2.5
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Les drames du rallye, en direct. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

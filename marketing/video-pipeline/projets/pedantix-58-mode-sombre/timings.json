@@ -1,0 +1,332 @@
+{
+  "duree": 16.86,
+  "dureeVoix": 15.06,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 1.48,
+      "fin": 1.92
+    },
+    {
+      "id": "minuit",
+      "debut": 1.92,
+      "finVoix": 5.32,
+      "fin": 5.32
+    },
+    {
+      "id": "reglages",
+      "debut": 5.32,
+      "finVoix": 8.7,
+      "fin": 9.5
+    },
+    {
+      "id": "minuit2",
+      "debut": 9.5,
+      "finVoix": 13.56,
+      "fin": 13.56
+    },
+    {
+      "id": "appel",
+      "debut": 13.56,
+      "finVoix": 15.06,
+      "fin": 16.86
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Pourquoi",
+      "mot": "Pourquoi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.68
+    },
+    {
+      "texte": "ajouté",
+      "mot": "ajouté",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.98
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.06
+    },
+    {
+      "texte": "mode",
+      "mot": "mode",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.14
+    },
+    {
+      "texte": "sombre ?",
+      "mot": "sombre",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.48
+    },
+    {
+      "texte": "Parce",
+      "mot": "Parce",
+      "scene": 1,
+      "debut": 1.92,
+      "fin": 2.16
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 2.16,
+      "fin": 2.32
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 2.32,
+      "fin": 2.44
+    },
+    {
+      "texte": "jouais",
+      "mot": "jouais",
+      "scene": 1,
+      "debut": 2.44,
+      "fin": 2.78
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 2.78,
+      "fin": 3.04
+    },
+    {
+      "texte": "minuit,",
+      "mot": "minuit",
+      "scene": 1,
+      "debut": 3.04,
+      "fin": 3.4
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 3.4,
+      "fin": 3.74
+    },
+    {
+      "texte": "l'écran",
+      "mot": "l'écran",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 4.18
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.36
+    },
+    {
+      "texte": "brûlait",
+      "mot": "brûlait",
+      "scene": 1,
+      "debut": 4.36,
+      "fin": 4.82
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 5.06
+    },
+    {
+      "texte": "yeux.",
+      "mot": "yeux",
+      "scene": 1,
+      "debut": 5.06,
+      "fin": 5.32
+    },
+    {
+      "texte": "Réglages,",
+      "mot": "Réglages",
+      "scene": 2,
+      "debut": 5.32,
+      "fin": 6.84
+    },
+    {
+      "texte": "Sombre…",
+      "mot": "Sombre",
+      "scene": 2,
+      "debut": 7.4,
+      "fin": 7.88
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 8.5,
+      "fin": 8.52
+    },
+    {
+      "texte": "voilà.",
+      "mot": "voilà",
+      "scene": 2,
+      "debut": 8.52,
+      "fin": 8.7
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 3,
+      "debut": 9.5,
+      "fin": 9.5
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 3,
+      "debut": 9.5,
+      "fin": 9.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 9.74
+    },
+    {
+      "texte": "midi",
+      "mot": "midi",
+      "scene": 3,
+      "debut": 9.74,
+      "fin": 10.02
+    },
+    {
+      "texte": "devient",
+      "mot": "devient",
+      "scene": 3,
+      "debut": 10.02,
+      "fin": 10.24
+    },
+    {
+      "texte": "aussi",
+      "mot": "aussi",
+      "scene": 3,
+      "debut": 10.24,
+      "fin": 10.64
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 3,
+      "debut": 10.64,
+      "fin": 10.84
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 3,
+      "debut": 10.84,
+      "fin": 10.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 10.96,
+      "fin": 11.02
+    },
+    {
+      "texte": "minuit.",
+      "mot": "minuit",
+      "scene": 3,
+      "debut": 11.02,
+      "fin": 11.32
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 11.98
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 3,
+      "debut": 11.98,
+      "fin": 12.1
+    },
+    {
+      "texte": "yeux",
+      "mot": "yeux",
+      "scene": 3,
+      "debut": 12.1,
+      "fin": 12.26
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 3,
+      "debut": 12.26,
+      "fin": 12.38
+    },
+    {
+      "texte": "remercient.",
+      "mot": "remercient",
+      "scene": 3,
+      "debut": 12.38,
+      "fin": 13.56
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 13.56,
+      "fin": 14.06
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 14.06,
+      "fin": 14.5
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.5,
+      "fin": 14.78
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.78,
+      "fin": 14.9
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 14.9,
+      "fin": 15.06
+    }
+  ]
+}

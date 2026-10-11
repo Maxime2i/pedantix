@@ -1,0 +1,128 @@
+{
+  "titre": "L'algorithme qui apprend ta mémoire",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton posé et curieux, presque confidentiel au début, convaincu ensuite. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Ta mémoire ne marche pas comme celle des autres.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Ta",
+          "texte": "Ta mémoire est unique"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Ta",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "difference",
+      "voix": "Certains retiennent vite, d'autres ont besoin de plus de révisions.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "ancre": "Certains",
+          "mode": "oubli",
+          "fin": "révisions"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "algo",
+      "voix": "Dans Culture First, l'algorithme personnalisé analyse tes réponses et ajuste les délais à ta mémoire.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Dans"
+        },
+        {
+          "type": "entree",
+          "ancre": "Dans"
+        },
+        {
+          "type": "zoom",
+          "ancre": "personnalisé",
+          "cible": "p-algo",
+          "echelle": 1.35
+        },
+        {
+          "type": "appui",
+          "ancre": "analyse",
+          "cible": "p-algo"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "precis",
+      "voix": "Plus tu révises, plus c'est précis.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Plus",
+          "nom": "profil",
+          "donnees": {
+            "personnalise": true
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "précis",
+          "cible": "p-algo",
+          "echelle": 1.35
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "ecranInitial": "profil"
+}

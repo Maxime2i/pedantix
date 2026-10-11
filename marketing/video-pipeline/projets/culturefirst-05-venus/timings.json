@@ -1,0 +1,486 @@
+{
+  "duree": 23.38,
+  "dureeVoix": 21.58,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.58,
+      "fin": 5.12
+    },
+    {
+      "id": "reponse",
+      "debut": 5.12,
+      "finVoix": 9.58,
+      "fin": 10.2
+    },
+    {
+      "id": "oubli",
+      "debut": 10.2,
+      "finVoix": 12.9,
+      "fin": 13.5
+    },
+    {
+      "id": "app",
+      "debut": 13.5,
+      "finVoix": 16.98,
+      "fin": 17.52
+    },
+    {
+      "id": "appel",
+      "debut": 17.52,
+      "finVoix": 21.58,
+      "fin": 23.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Quelle",
+      "mot": "Quelle",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.38
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.54
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.68
+    },
+    {
+      "texte": "planète",
+      "mot": "planète",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 1.14
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.36
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.6
+    },
+    {
+      "texte": "chaude",
+      "mot": "chaude",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 1.92
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.06
+    },
+    {
+      "texte": "système",
+      "mot": "système",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.34
+    },
+    {
+      "texte": "solaire ?",
+      "mot": "solaire",
+      "scene": 0,
+      "debut": 2.34,
+      "fin": 2.76
+    },
+    {
+      "texte": "Mercure ?",
+      "mot": "Mercure",
+      "scene": 0,
+      "debut": 3.28,
+      "fin": 3.7
+    },
+    {
+      "texte": "Raté.",
+      "mot": "Raté",
+      "scene": 0,
+      "debut": 4.2,
+      "fin": 4.58
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.26
+    },
+    {
+      "texte": "Vénus.",
+      "mot": "Vénus",
+      "scene": 1,
+      "debut": 5.26,
+      "fin": 5.82
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 6.46
+    },
+    {
+      "texte": "loin",
+      "mot": "loin",
+      "scene": 1,
+      "debut": 6.46,
+      "fin": 6.64
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 6.64,
+      "fin": 6.78
+    },
+    {
+      "texte": "Soleil,",
+      "mot": "Soleil",
+      "scene": 1,
+      "debut": 6.78,
+      "fin": 7.12
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 1,
+      "debut": 7.16,
+      "fin": 7.24
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 1,
+      "debut": 7.24,
+      "fin": 7.54
+    },
+    {
+      "texte": "atmosphère",
+      "mot": "atmosphère",
+      "scene": 1,
+      "debut": 7.54,
+      "fin": 8.14
+    },
+    {
+      "texte": "très",
+      "mot": "très",
+      "scene": 1,
+      "debut": 8.14,
+      "fin": 8.34
+    },
+    {
+      "texte": "épaisse",
+      "mot": "épaisse",
+      "scene": 1,
+      "debut": 8.34,
+      "fin": 8.72
+    },
+    {
+      "texte": "piège",
+      "mot": "piège",
+      "scene": 1,
+      "debut": 8.72,
+      "fin": 9.12
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 9.12,
+      "fin": 9.24
+    },
+    {
+      "texte": "chaleur.",
+      "mot": "chaleur",
+      "scene": 1,
+      "debut": 9.24,
+      "fin": 9.58
+    },
+    {
+      "texte": "Ce",
+      "mot": "Ce",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.44
+    },
+    {
+      "texte": "genre",
+      "mot": "genre",
+      "scene": 2,
+      "debut": 10.44,
+      "fin": 10.6
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.6,
+      "fin": 10.7
+    },
+    {
+      "texte": "détail,",
+      "mot": "détail",
+      "scene": 2,
+      "debut": 10.7,
+      "fin": 11.02
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 11.22,
+      "fin": 11.3
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.44
+    },
+    {
+      "texte": "lis",
+      "mot": "lis",
+      "scene": 2,
+      "debut": 11.44,
+      "fin": 11.54
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 2,
+      "debut": 11.54,
+      "fin": 11.74
+    },
+    {
+      "texte": "fois…",
+      "mot": "fois",
+      "scene": 2,
+      "debut": 11.74,
+      "fin": 11.98
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 11.98,
+      "fin": 12.54
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 12.54,
+      "fin": 12.66
+    },
+    {
+      "texte": "l'oublies.",
+      "mot": "l'oublies",
+      "scene": 2,
+      "debut": 12.66,
+      "fin": 12.9
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 13.5,
+      "fin": 13.8
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 3,
+      "debut": 13.8,
+      "fin": 14.18
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 3,
+      "debut": 14.18,
+      "fin": 14.54
+    },
+    {
+      "texte": "repose",
+      "mot": "repose",
+      "scene": 3,
+      "debut": 14.54,
+      "fin": 14.84
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 14.84,
+      "fin": 14.94
+    },
+    {
+      "texte": "question",
+      "mot": "question",
+      "scene": 3,
+      "debut": 14.94,
+      "fin": 15.22
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 3,
+      "debut": 15.22,
+      "fin": 15.38
+    },
+    {
+      "texte": "bon",
+      "mot": "bon",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 15.56
+    },
+    {
+      "texte": "moment,",
+      "mot": "moment",
+      "scene": 3,
+      "debut": 15.56,
+      "fin": 15.84
+    },
+    {
+      "texte": "jusqu'à",
+      "mot": "jusqu'à",
+      "scene": 3,
+      "debut": 16.1,
+      "fin": 16.56
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 3,
+      "debut": 16.56,
+      "fin": 16.62
+    },
+    {
+      "texte": "qu'elle",
+      "mot": "qu'elle",
+      "scene": 3,
+      "debut": 16.62,
+      "fin": 16.72
+    },
+    {
+      "texte": "reste.",
+      "mot": "reste",
+      "scene": 3,
+      "debut": 16.72,
+      "fin": 16.98
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 17.52,
+      "fin": 17.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 17.7,
+      "fin": 17.86
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.86,
+      "fin": 18.047
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 18.047,
+      "fin": 18.233
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 18.233,
+      "fin": 18.42
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 18.42,
+      "fin": 18.74
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 19.28,
+      "fin": 19.64
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 19.64,
+      "fin": 20.04
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 20.04,
+      "fin": 20.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.64,
+      "fin": 20.8
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 20.8,
+      "fin": 21.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 21.04,
+      "fin": 21.36
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 21.36,
+      "fin": 21.58
+    }
+  ]
+}

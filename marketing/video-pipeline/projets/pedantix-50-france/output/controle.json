@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-10T14:54:11.125Z",
+  "video": "video-finale.mp4",
+  "checks": [
+    {
+      "nom": "Durée",
+      "ok": true,
+      "detail": "19.7 s (cible 16 s, plage 15–60 s)"
+    },
+    {
+      "nom": "Synchro voix / images",
+      "ok": true,
+      "detail": "voix 18.4 s, dernier mot à 17.8 s, vidéo 19.7 s"
+    },
+    {
+      "nom": "Sous-titres = script",
+      "ok": true,
+      "detail": "35 mots identiques au script"
+    },
+    {
+      "nom": "Volume",
+      "ok": true,
+      "detail": "-14.4 LUFS (cible -14), crête -2.3 dBFS"
+    },
+    {
+      "nom": "Zones de sécurité",
+      "ok": true,
+      "detail": "tous les textes dans la zone sûre"
+    }
+  ]
+}

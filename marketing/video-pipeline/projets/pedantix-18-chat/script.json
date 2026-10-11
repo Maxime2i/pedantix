@@ -1,0 +1,175 @@
+{
+  "titre": "Quand tu tapes « chat »",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Humour : le mauvais réflexe sur une page de maths.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Fonction continue",
+    "texte": [
+      "En mathématiques, la continuité est une propriété topologique d'une fonction. En première approche, une fonction f est continue si, à des variations infinitésimales de l'antécédent x, correspondent des variations infinitésimales de l'image f.",
+      "La continuité est associée à la notion de continuum dont l'origine est géométrique. Dans un continuum géométrique, comme le plan ou l'espace, un point peut se déplacer continument pour s'approcher à une précision arbitraire d'un autre point. La notion de continuité est définie de manière rigoureuse en mathématiques."
+    ],
+    "titreMots": [
+      "fonction",
+      "continue"
+    ],
+    "revelations": {
+      "chat": [],
+      "chien": []
+    },
+    "proches": {},
+    "dejaTrouves": [
+      "mathématiques",
+      "continuité",
+      "propriété",
+      "topologique",
+      "variations",
+      "image",
+      "notion",
+      "point",
+      "espace",
+      "plan"
+    ],
+    "date": "Mardi 16 septembre"
+  },
+  "dispositionInitiale": "coin",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Moi, plein d'espoir, je tape : chat.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "tape",
+          "mot": "chat",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "chat.",
+          "mot": "chat"
+        },
+        {
+          "type": "pose",
+          "ancre": "chat.",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "maths",
+      "voix": "La page parlait de maths. De maths !",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "maths.",
+          "nom": "choque"
+        },
+        {
+          "type": "pose",
+          "ancre": "De",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "chien",
+      "voix": "Alors je tente chien. Toujours rien.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Alors",
+          "nom": "neutre"
+        },
+        {
+          "type": "taper",
+          "ancre": "tente",
+          "mot": "chien",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Toujours",
+          "mot": "chien"
+        },
+        {
+          "type": "pose",
+          "ancre": "rien.",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Bon. Fonction. Continue. Trouvé !",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Bon.",
+          "nom": "neutre"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Bon.",
+          "cible": "titre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Fonction.",
+          "mot": "fonction"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Continue.",
+          "mot": "continue"
+        },
+        {
+          "type": "pose",
+          "ancre": "Trouvé",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Moralité : lis la page avant de taper chat.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Moralité",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Moralité",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

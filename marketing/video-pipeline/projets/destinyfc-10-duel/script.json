@@ -1,0 +1,185 @@
+{
+  "titre": "J'ai défié mon pote",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements + viralité (mode Amis, réel : « Même départ, mêmes dés, à vos choix près. Le meilleur score gagne. »). Deux carrières fictives au même départ (Sochaux, 16 ans) : lui 142 points, moi 211 points (scores dans la plage réelle du jeu).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de chambrage amical entre potes. « Lui » un peu moqueur, « Moi » fier. Fin en défi lancé au spectateur."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Défie tes <em>amis</em>",
+    "detail": "Même départ, mêmes dés",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "J'ai défié mon pote sur Destiny FC. Même départ, mêmes dés.",
+      "animation": "Avatar, puis accueil et tuile Amis.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "défié",
+          "nom": "clin"
+        },
+        {
+          "type": "disposition",
+          "ancre": "pote",
+          "mode": "duo"
+        },
+        {
+          "type": "appui",
+          "ancre": "Destiny",
+          "cible": "a-amis"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "regle",
+      "voix": "La seule différence entre nous, ce sont nos choix.",
+      "animation": "Carte titre avec la règle du mode.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "seule",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "seule",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "seule",
+          "texte": "Même départ, *mêmes dés*",
+          "sous": "À vos choix près"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "lui",
+      "voix": "Lui, il a joué la sécurité. Carrière correcte, score cent quarante-deux.",
+      "animation": "Frise de sa carrière, score.",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Lui",
+          "titre": "*Lui*"
+        },
+        {
+          "type": "etape",
+          "ancre": "joué",
+          "age": 16,
+          "texte": "Premier contrat",
+          "club": "Sochaux",
+          "niveau": "d2"
+        },
+        {
+          "type": "etape",
+          "ancre": "correcte",
+          "age": 33,
+          "texte": "Retraite",
+          "club": "Nantes",
+          "niveau": "d2"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "score",
+          "valeur": 142,
+          "sous": "son score",
+          "duree": 2.2
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "moi",
+      "voix": "Moi, j'ai tout risqué. Paris, un titre de champion… et deux cent onze points.",
+      "animation": "Frise de ma carrière, score.",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Moi",
+          "titre": "*Moi*"
+        },
+        {
+          "type": "etape",
+          "ancre": "Moi",
+          "age": 16,
+          "texte": "Premier contrat",
+          "club": "Sochaux",
+          "niveau": "d2"
+        },
+        {
+          "type": "etape",
+          "ancre": "Paris",
+          "age": 24,
+          "texte": "Transfert",
+          "club": "Paris",
+          "niveau": "elite"
+        },
+        {
+          "type": "etape",
+          "ancre": "champion",
+          "age": 27,
+          "texte": "Champion",
+          "club": "Paris",
+          "niveau": "elite"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "deux",
+          "valeur": 211,
+          "sous": "mon score",
+          "duree": 2.4
+        },
+        {
+          "type": "pose",
+          "ancre": "deux",
+          "nom": "fier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Le meilleur score gagne. Envoie ce défi à un pote. Destiny FC, gratuit sur iPhone et Android.",
+      "animation": "Tampon, carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "gagne",
+          "texte": "Gagné",
+          "couleur": "or"
+        },
+        {
+          "type": "pose",
+          "ancre": "gagne",
+          "nom": "celebre"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

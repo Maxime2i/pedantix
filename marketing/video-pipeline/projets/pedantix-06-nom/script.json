@@ -1,0 +1,135 @@
+{
+  "titre": "Le nom de l'app",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Humour : autodérision sur le nom Pédantix.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Liverpool",
+    "texte": [
+      "Liverpool est une cité et un district métropolitain du Merseyside dans la région de l'Angleterre du Nord-Ouest sur la rive est et nord de l'estuaire du fleuve Mersey. La ville faisait partie du comté du Lancashire jusqu'en 1974 avant la formation du comté de Merseyside.",
+      "La ville est fondée en 1207 et obtient le statut de cité en 1880. Avec une population de 491 500 habitants en 2017, c'est la sixième ville du Royaume-Uni, et la quatrième d'Angleterre ; l'aire urbaine de Liverpool comprend 864 122 habitants en 2011."
+    ],
+    "titreMots": [
+      "liverpool"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mercredi 1 octobre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Oui, mon jeu s'appelle Pédantix. Oui, c'est assumé.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Oui,",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "mon",
+          "nom": "neutre"
+        },
+        {
+          "type": "pose",
+          "ancre": "assumé.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "definition",
+      "voix": "Un pédant, c'est quelqu'un qui étale sa culture.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Un",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "pédant,",
+          "texte": "Pédant",
+          "sous": "qui étale sa culture",
+          "fin": "culture."
+        }
+      ]
+    },
+    {
+      "id": "toi",
+      "voix": "Et c'est exactement ce que tu deviens en jouant.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "exactement",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "jeu",
+      "voix": "Chaque midi, une page Wikipédia cachée à deviner.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Chaque",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Chaque",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "pose",
+          "ancre": "cachée",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "diner",
+      "voix": "Et le soir, tu ressors tout au dîner.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "soir,",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "dîner.",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

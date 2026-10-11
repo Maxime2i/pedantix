@@ -1,0 +1,682 @@
+{
+  "titre": "Et ton rallye régional ?",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Téléchargements, cible fans de rallyes nationaux et régionaux. Données RÉELLES de l'API relevées le 10/10/2026 : accueil du samedi 3 oct. 2026 ; Rallye Régional du Pays de Montbéliard (Valentigney, 6 ES, 39,90 km, 103 classés), classement final. Libellé de championnat « Francie Cup » (bug eWRC) masqué. « Lithuanie » corrigé en « Lituanie » (coquille de l'API).",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Ton un peu provocateur au début sur « que du WRC ». Puis fier et chaleureux sur « il est là ». Fin énergique."
+  },
+  "ecranInitial": "accueil",
+  "equipages": {
+    "1": {
+      "pilote": "Ludovic Godard",
+      "copilote": "Matthieu Bôle-Richard",
+      "voiture": "Lancia Ypsilon Rally2 HF Integrale",
+      "classe": "Rally2"
+    },
+    "3": {
+      "pilote": "Matthieu Hocquaux",
+      "copilote": "Guillaume Duval",
+      "voiture": "Škoda Fabia RS Rally2",
+      "classe": "Rally2"
+    },
+    "2": {
+      "pilote": "Denis Millet",
+      "copilote": "Romain Blondeau-Toiny",
+      "voiture": "Volkswagen Polo GTI R5",
+      "classe": "Rally2"
+    },
+    "4": {
+      "pilote": "Michaël Burri",
+      "copilote": "Gaëtan Aubry",
+      "voiture": "Toyota GR Yaris Rally2",
+      "classe": "Rally2"
+    },
+    "11": {
+      "pilote": "David Lamarche",
+      "copilote": "Jofrey Courtet",
+      "voiture": "Alpine A110 Rally RGT",
+      "classe": "RGT"
+    },
+    "5": {
+      "pilote": "Antonin Mougin",
+      "copilote": "Isabelle Galmiche",
+      "voiture": "Volkswagen Polo GTI R5",
+      "classe": "Rally2"
+    },
+    "6": {
+      "pilote": "Maxime Mourey",
+      "copilote": "Jonathan Sponem",
+      "voiture": "Škoda Fabia R5",
+      "classe": "Rally2"
+    },
+    "25": {
+      "pilote": "Romain Camus",
+      "copilote": "Justine Cuenin",
+      "voiture": "Peugeot 205 GTI 1.9",
+      "classe": "F2/14"
+    }
+  },
+  "ecrans": {
+    "accueil": {
+      "jours": [
+        "jeu. 1 oct",
+        "ven. 2 oct",
+        "sam. 3 oct",
+        "dim. 4 oct",
+        "lun. 5 oct"
+      ],
+      "jour": 2,
+      "pays": [
+        {
+          "drapeau": "🇿🇦",
+          "nom": "Afrique du Sud",
+          "rallyes": [
+            {
+              "id": "r-104360",
+              "titre": "Rola Ford Caledon Rally",
+              "heure": "09:49"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇩🇪",
+          "nom": "Allemagne",
+          "rallyes": [
+            {
+              "id": "r-100456",
+              "titre": "ADAC Nibelungen Rallyesprint",
+              "heure": "11:16"
+            },
+            {
+              "id": "r-100457",
+              "titre": "ADAC Rallye Bad Emstal",
+              "heure": "11:49"
+            },
+            {
+              "id": "r-104119",
+              "titre": "ADAC Nibelungen Rallyesprint Gentleman Drivers Club",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇦🇷",
+          "nom": "Argentine",
+          "rallyes": [
+            {
+              "id": "r-104005",
+              "titre": "Rally de Entre Ríos - Diamante y Valle María",
+              "heure": "16:23"
+            },
+            {
+              "id": "r-104256",
+              "titre": "Rally Integracion Catriel - 25 de Mayo",
+              "heure": "11:18"
+            },
+            {
+              "id": "r-104280",
+              "titre": "Rally de Coronel Suárez",
+              "heure": "21:00"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇦🇺",
+          "nom": "Australie",
+          "rallyes": [
+            {
+              "id": "r-99919",
+              "titre": "Adelaide Hills Rally - Heat 1",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103146",
+              "titre": "Imbil Rallysprint Double Header I",
+              "heure": "11:23"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇧🇪",
+          "nom": "Belgique",
+          "rallyes": [
+            {
+              "id": "r-99251",
+              "titre": "Critérium Jean-Louis Dumont",
+              "heure": "—"
+            },
+            {
+              "id": "r-99252",
+              "titre": "Critérium Jean-Louis Dumont - Histo Demo",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇧🇴",
+          "nom": "Bolivie",
+          "rallyes": [
+            {
+              "id": "r-104215",
+              "titre": "Rally Valle Abajo",
+              "heure": "—"
+            },
+            {
+              "id": "r-104315",
+              "titre": "Ruta Señor de Lagunas",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇩🇰",
+          "nom": "Danemark",
+          "rallyes": [
+            {
+              "id": "r-99369",
+              "titre": "Rally Stoholm",
+              "heure": "08:11"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇪🇸",
+          "nom": "Espagne",
+          "rallyes": [
+            {
+              "id": "r-99770",
+              "titre": "Rallye de Cáceres",
+              "heure": "09:30"
+            },
+            {
+              "id": "r-99785",
+              "titre": "Rallye Rías Altas Histórico",
+              "heure": "10:55"
+            },
+            {
+              "id": "r-100969",
+              "titre": "Rallysprint de Tierra Quintana y Congosto",
+              "heure": "13:00"
+            },
+            {
+              "id": "r-100978",
+              "titre": "Rallysprint de Lobios",
+              "heure": "14:15"
+            },
+            {
+              "id": "r-103218",
+              "titre": "Rallysprint de Atogo",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103311",
+              "titre": "Rallye Ciutat de Xixona",
+              "heure": "09:13"
+            },
+            {
+              "id": "r-103645",
+              "titre": "Rally Les Masies de Voltregà",
+              "heure": "09:20"
+            },
+            {
+              "id": "r-103950",
+              "titre": "Rallye Ciudad Puerto del Rosario",
+              "heure": "09:10"
+            },
+            {
+              "id": "r-104134",
+              "titre": "Rallysprint Elgoibar",
+              "heure": "—"
+            },
+            {
+              "id": "r-104200",
+              "titre": "Rallycrono Ciudad Castillo de Locubín",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇫🇮",
+          "nom": "Finlande",
+          "rallyes": [
+            {
+              "id": "r-97725",
+              "titre": "Puumala Ralli",
+              "heure": "12:38"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇫🇷",
+          "nom": "France",
+          "rallyes": [
+            {
+              "id": "r-101729",
+              "titre": "Rallye Tout-Terrain Dunes et Marais",
+              "heure": "08:58"
+            },
+            {
+              "id": "r-103089",
+              "titre": "Rallye Régional Le Mans",
+              "heure": "15:38"
+            },
+            {
+              "id": "r-103090",
+              "titre": "Rallye Régional Le Mans VHC",
+              "heure": "15:38"
+            },
+            {
+              "id": "r-103829",
+              "titre": "Rallye Régional des Corbières",
+              "heure": "10:08"
+            },
+            {
+              "id": "r-103830",
+              "titre": "Rallye Régional des Corbières VHC",
+              "heure": "10:08"
+            },
+            {
+              "id": "r-103831",
+              "titre": "Rallye Régional du Pays de Montbéliard",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103832",
+              "titre": "Rallye Régional du Pays de Montbéliard VHC",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103833",
+              "titre": "Rallye National de l'Ardèche",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103834",
+              "titre": "Rallye National de l'Ardèche VHC",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103836",
+              "titre": "Rallye Régional de la Croisette",
+              "heure": "15:18"
+            },
+            {
+              "id": "r-103837",
+              "titre": "Rallye Régional de la Croisette VHC",
+              "heure": "15:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇬🇷",
+          "nom": "Grèce",
+          "rallyes": [
+            {
+              "id": "r-104048",
+              "titre": "Rally Evoikou",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇮🇹",
+          "nom": "Italie",
+          "rallyes": [
+            {
+              "id": "r-96267",
+              "titre": "Rally Italia Sardegna",
+              "heure": "08:01"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇯🇵",
+          "nom": "Japon",
+          "rallyes": [
+            {
+              "id": "r-99840",
+              "titre": "Team if Sangaku Rally in Tsumagoi",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇱🇹",
+          "nom": "Lituanie",
+          "rallyes": [
+            {
+              "id": "r-103080",
+              "titre": "ORLEN Lietuva Rally",
+              "heure": "08:15"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇲🇬",
+          "nom": "Madagascar",
+          "rallyes": [
+            {
+              "id": "r-103328",
+              "titre": "Tour de Tana Sodirex / Orange by ASA Tana",
+              "heure": "09:35"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇲🇦",
+          "nom": "Maroc",
+          "rallyes": [
+            {
+              "id": "r-98100",
+              "titre": "Rallye Ola Energy du Maroc - FIA",
+              "heure": "09:57"
+            },
+            {
+              "id": "r-103983",
+              "titre": "Rallye Ola Energy du Maroc - FIM",
+              "heure": "07:30"
+            },
+            {
+              "id": "r-103984",
+              "titre": "Rallye Ola Energy du Maroc - Open",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇳🇴",
+          "nom": "Norvège",
+          "rallyes": [
+            {
+              "id": "r-100988",
+              "titre": "Rally Trøgstad",
+              "heure": "11:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇳🇿",
+          "nom": "Nouvelle-Zélande",
+          "rallyes": [
+            {
+              "id": "r-104157",
+              "titre": "Waimate Rally",
+              "heure": "10:25"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇵🇹",
+          "nom": "Portugal",
+          "rallyes": [
+            {
+              "id": "r-99024",
+              "titre": "Rallye Casinos do Algarve",
+              "heure": "09:28"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇬🇧",
+          "nom": "Royaume-Uni",
+          "rallyes": [
+            {
+              "id": "r-101092",
+              "titre": "Chris Kelly Rally",
+              "heure": "09:44"
+            },
+            {
+              "id": "r-98759",
+              "titre": "Historic Rally Festival",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇸🇰",
+          "nom": "Slovaquie",
+          "rallyes": [
+            {
+              "id": "r-100577",
+              "titre": "Rally Prešov",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103319",
+              "titre": "Rally Prešov - SRP",
+              "heure": "09:35"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇸🇪",
+          "nom": "Suède",
+          "rallyes": [
+            {
+              "id": "r-99451",
+              "titre": "Rikspokalen",
+              "heure": "—"
+            },
+            {
+              "id": "r-99470",
+              "titre": "Karlskronapokalen",
+              "heure": "10:35"
+            },
+            {
+              "id": "r-99554",
+              "titre": "Eliantorpssprinten",
+              "heure": "—"
+            },
+            {
+              "id": "r-104356",
+              "titre": "Autoexperten 101 Åringen",
+              "heure": "—"
+            },
+            {
+              "id": "r-104357",
+              "titre": "AP-rundan",
+              "heure": "—"
+            },
+            {
+              "id": "r-104361",
+              "titre": "Kulsvängen",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇹🇿",
+          "nom": "Tanzanie",
+          "rallyes": [
+            {
+              "id": "r-102547",
+              "titre": "Serengeti Rally of Tanzania",
+              "heure": "09:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇨🇿",
+          "nom": "Tchéquie",
+          "rallyes": [
+            {
+              "id": "r-99399",
+              "titre": "Carlson-Partr Rally Vsetín",
+              "heure": "08:18"
+            },
+            {
+              "id": "r-104202",
+              "titre": "Podbrdské setkání legend",
+              "heure": "08:04"
+            }
+          ]
+        }
+      ]
+    },
+    "rallye": {
+      "logo": null,
+      "nom": "Rallye Régional du Pays de Montbéliard",
+      "ville": "Valentigney",
+      "dates": "3 oct. 2026",
+      "championnat": "",
+      "situation": {
+        "vainqueur": "Ludovic Godard · Lancia Ypsilon Rally2 HF Integrale"
+      },
+      "partants": null,
+      "classes": 103,
+      "distance": "39,90 km",
+      "surface": "asphalte",
+      "nbES": 6,
+      "organisateur": "ASA Pays de Montbéliard",
+      "classement": [
+        {
+          "n": 1,
+          "temps": "20:21.2"
+        },
+        {
+          "n": 3,
+          "temps": "20:34.7",
+          "ecart": "+13.5"
+        },
+        {
+          "n": 2,
+          "temps": "20:34.8",
+          "ecart": "+13.6"
+        },
+        {
+          "n": 4,
+          "temps": "20:48.3",
+          "ecart": "+27.1"
+        },
+        {
+          "n": 11,
+          "temps": "20:56.9",
+          "ecart": "+35.7"
+        },
+        {
+          "n": 5,
+          "temps": "21:00.2",
+          "ecart": "+39.0"
+        },
+        {
+          "n": 6,
+          "temps": "21:32.3",
+          "ecart": "+1:11.1"
+        },
+        {
+          "n": 25,
+          "temps": "22:03.7",
+          "ecart": "+1:42.5"
+        }
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Les apps de rallye ne parlent que du WRC.",
+      "animation": "Texte géant « Que du WRC ? ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "apps",
+          "texte": "Que du *WRC* ?",
+          "sous": "Et les autres rallyes ?",
+          "fin": "WRC"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "accueil",
+      "voix": "Et ton rallye régional ? Dans Rally Track, il est là.",
+      "animation": "Accueil du samedi 3 octobre : on descend jusqu'à la France ; zoom sur le Rallye Régional du Pays de Montbéliard.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Et"
+        },
+        {
+          "type": "defiler",
+          "ancre": "régional",
+          "cible": "a-pays-9"
+        },
+        {
+          "type": "zoom",
+          "ancre": "là",
+          "cible": "r-103831",
+          "echelle": 1.4,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "classement",
+      "voix": "Montbéliard : tout le classement, spéciale après spéciale.",
+      "animation": "Fiche du rallye, onglet Classement : Godard vainqueur devant Hocquaux et Millet (vraies données).",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "Montbéliard",
+          "cible": "r-103831"
+        },
+        {
+          "type": "ecran",
+          "ancre": "classement",
+          "nom": "rallye",
+          "donnees": {
+            "onglet": "classement"
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "spéciale",
+          "cible": "cl-1",
+          "echelle": 1.25,
+          "hauteur": 1000
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Le WRC, et tous les autres. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

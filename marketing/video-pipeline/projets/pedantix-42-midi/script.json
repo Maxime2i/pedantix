@@ -1,0 +1,121 @@
+{
+  "titre": "Rendez-vous à midi",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Rituel : le compte à rebours de la page de midi.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Cycle de l'eau",
+    "texte": [
+      "Le cycle de l'eau, ou cycle hydrologique, correspond à l'ensemble des transferts d'eau — liquide, solide ou gazeuse — entre les réservoirs d'eau sur Terre. Le « moteur » de ce cycle est l'énergie solaire qui, en favorisant l'évaporation de l'eau, entraîne tous les autres échanges.",
+      "La science qui étudie le cycle de l’eau est l’hydrologie. Elle peut se décomposer en hydrogéologie, hydrologie de surface, hydraulique urbaine, etc."
+    ],
+    "titreMots": [
+      "cycle",
+      "de",
+      "l",
+      "eau"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 8 septembre"
+  },
+  "dispositionInitiale": "duo",
+  "ecranInitial": "verrouillage",
+  "ecrans": {
+    "verrouillage": {
+      "heure": "11:59",
+      "date": "lundi 8 septembre"
+    }
+  },
+  "scenes": [
+    {
+      "id": "attente",
+      "voix": "Il est onze heures cinquante-neuf. Cinq… quatre… trois… deux… un…",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Il",
+          "nom": "tete-main"
+        },
+        {
+          "type": "chrono",
+          "ancre": "Cinq…",
+          "secondes": 5
+        }
+      ]
+    },
+    {
+      "id": "midi",
+      "voix": "Midi. Nouvelle page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Midi.",
+          "nom": "verrouillage",
+          "donnees": {
+            "heure": "12:00"
+          }
+        },
+        {
+          "type": "notif",
+          "ancre": "Midi."
+        },
+        {
+          "type": "pose",
+          "ancre": "Midi.",
+          "nom": "choque"
+        },
+        {
+          "type": "ecran",
+          "ancre": "page.",
+          "nom": "jeu"
+        },
+        {
+          "type": "pose",
+          "ancre": "page.",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "rituel",
+      "voix": "Chaque jour, même heure, une nouvelle page Wikipédia cachée. Active le rappel, et rendez-vous à midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Chaque",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "pose",
+          "ancre": "Rendez-vous",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

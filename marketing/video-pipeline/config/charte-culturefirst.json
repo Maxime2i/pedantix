@@ -1,0 +1,37 @@
+{
+  "nom": "cultureFirst",
+  "logo": "config/logo-culturefirst.png",
+  "couleurs": {
+    "fond": "#1F1029",
+    "fond2": "#2A1636",
+    "encre": "#FFF7E6",
+    "accent": "#F5C518",
+    "creme": "#FFF7E6",
+    "sousTitres": "#120818",
+    "app": {
+      "bg": "#F6F5F1",
+      "surface": "#FFFFFF",
+      "alt": "#EEECE6",
+      "border": "#E3E0D8",
+      "text": "#191917",
+      "muted": "#6A675F",
+      "faint": "#A29E94",
+      "new": "#2F6FED",
+      "learn": "#D9480F",
+      "review": "#2B8A3E",
+      "again": "#E03131",
+      "hard": "#E8590C",
+      "good": "#2B8A3E",
+      "easy": "#1C7ED6"
+    }
+  },
+  "polices": {
+    "titre": "Fraunces",
+    "texte": "DM Sans",
+    "googleFonts": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&display=swap"
+  },
+  "voix": {
+    "modele": "google/gemini-3.8-flash-tts",
+    "voix": "Aoede"
+  }
+}

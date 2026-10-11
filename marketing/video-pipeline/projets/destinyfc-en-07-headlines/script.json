@@ -1,0 +1,311 @@
+{
+  "titre": "My career, told by the papers",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "English version of destinyfc-07. Only real in-game headlines (official English HEADLINES): stalls, held his own, gone up a level, crowned. Stats consistent with each headline.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Press-review tone, a little theatrical: each headline read like a front page. Disappointment first, rising pride, big finish."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "avatar",
+  "cartes": {
+    "s-flop": {
+      "genre": "saison",
+      "tag": "📊 SEASON 2027-28 · PORTSMOUTH",
+      "niveau": "d2",
+      "une": "\"Jack Turner stalls: a season that will leave its mark\"",
+      "stats": [
+        [
+          "24",
+          "Games"
+        ],
+        [
+          "1",
+          "Goals"
+        ],
+        [
+          "2",
+          "Assists"
+        ],
+        [
+          "4.9",
+          "Rating"
+        ]
+      ],
+      "lignes": [
+        "League: 14th",
+        "❌ Club objective: Season rating ≥ 6.5",
+        "💰 +€60k (wages & sponsors)"
+      ]
+    },
+    "s-solid": {
+      "genre": "saison",
+      "tag": "📊 SEASON 2031-32 · LEEDS",
+      "niveau": "d1",
+      "une": "\"Consistent, diligent, decisive: Jack Turner held his own all year\"",
+      "stats": [
+        [
+          "34",
+          "Games"
+        ],
+        [
+          "6",
+          "Goals"
+        ],
+        [
+          "9",
+          "Assists"
+        ],
+        [
+          "6.9",
+          "Rating"
+        ]
+      ],
+      "lignes": [
+        "League: 7th",
+        "✅ Club objective: Season rating ≥ 6.5",
+        "💰 +€0.9m (wages & sponsors)"
+      ]
+    },
+    "s-wonder": {
+      "genre": "saison",
+      "tag": "📊 SEASON 2034-35 · UNITED",
+      "niveau": "elite",
+      "une": "\"Jack Turner has gone up a level this year, full stop\"",
+      "stats": [
+        [
+          "36",
+          "Games"
+        ],
+        [
+          "14",
+          "Goals"
+        ],
+        [
+          "12",
+          "Assists"
+        ],
+        [
+          "8.1",
+          "Rating"
+        ]
+      ],
+      "lignes": [
+        "League: 2nd",
+        "✅ Club objective: Season rating ≥ 7.0",
+        "💰 +€4.6m (wages & sponsors)"
+      ]
+    },
+    "s-trophy": {
+      "genre": "saison",
+      "tag": "📊 SEASON 2037-38 · UNITED",
+      "niveau": "elite",
+      "une": "\"Crowned with United, Jack Turner turns a season into legend\"",
+      "stats": [
+        [
+          "38",
+          "Games"
+        ],
+        [
+          "17",
+          "Goals"
+        ],
+        [
+          "15",
+          "Assists"
+        ],
+        [
+          "8.4",
+          "Rating"
+        ]
+      ],
+      "lignes": [
+        "League: 1st",
+        "✅ Club objective: Season rating ≥ 7.0",
+        "💰 +€6.2m (wages & sponsors)"
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "€50k",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      },
+      "carte": null
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "Here's my career… told only by the newspapers.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "career",
+          "nom": "content"
+        },
+        {
+          "type": "disposition",
+          "ancre": "told",
+          "mode": "telephone"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "flop",
+      "voix": "Seventeen. Jack Turner stalls: a season that will leave its mark.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Seventeen",
+          "id": "s-flop"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Seventeen",
+          "age": 17,
+          "annee": 2027,
+          "note": 58
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "solid",
+      "voix": "Twenty-one. Consistent, diligent, decisive: Jack Turner held his own all year.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Twenty-one",
+          "id": "s-solid"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Twenty-one",
+          "age": 21,
+          "annee": 2031,
+          "note": 71,
+          "argent": "€1.4m",
+          "etoiles": 2,
+          "niveau": "d1",
+          "club": "Leeds",
+          "couleurs": [
+            "#f2f2f2",
+            "#f5c400"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "wonder",
+      "voix": "Twenty-four. Jack Turner has gone up a level this year, full stop.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Twenty-four",
+          "id": "s-wonder"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Twenty-four",
+          "age": 24,
+          "annee": 2034,
+          "note": 80,
+          "argent": "€9m",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "United",
+          "couleurs": [
+            "#e52a1e",
+            "#f2f2f2"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "trophy",
+      "voix": "And at twenty-seven: crowned with United, Jack Turner turns a season into legend.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "twenty-seven",
+          "id": "s-trophy"
+        },
+        {
+          "type": "joueur",
+          "ancre": "twenty-seven",
+          "age": 27,
+          "annee": 2037,
+          "note": 86,
+          "argent": "€31m",
+          "etoiles": 5
+        },
+        {
+          "type": "tampon",
+          "ancre": "legend",
+          "texte": "Champions",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "What headlines will your career make? Destiny FC, free to play.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

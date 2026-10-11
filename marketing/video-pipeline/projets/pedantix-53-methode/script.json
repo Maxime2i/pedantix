@@ -1,0 +1,116 @@
+{
+  "titre": "Ma méthode en 4 étapes",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Tutoriel : méthode complète pour finir vite.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Ma méthode pour finir en moins de cinquante coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Ma",
+          "titre": "Ma méthode en 4 étapes"
+        },
+        {
+          "type": "pose",
+          "ancre": "méthode",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "finir",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "e1",
+      "voix": "Un : les petits mots, pour voir la structure.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "petits",
+          "texte": "Les petits mots"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "voix": "Deux : un mot-détecteur, né, situé ou espèce.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "mot-détecteur,",
+          "texte": "Un mot-détecteur"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "voix": "Trois : le champ lexical, en suivant le gris.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "champ",
+          "texte": "Le champ lexical"
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "voix": "Quatre : seulement là, le titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "seulement",
+          "texte": "Le titre, en dernier"
+        },
+        {
+          "type": "pose",
+          "ancre": "titre.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Teste-la ce midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Teste-la",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

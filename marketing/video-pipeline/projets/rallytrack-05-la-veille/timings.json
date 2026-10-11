@@ -1,0 +1,305 @@
+{
+  "duree": 15.7,
+  "dureeVoix": 13.9,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.46,
+      "fin": 4.16
+    },
+    {
+      "id": "alertes",
+      "debut": 4.16,
+      "finVoix": 8.88,
+      "fin": 9.6
+    },
+    {
+      "id": "prevenu",
+      "debut": 9.6,
+      "finVoix": 11.2,
+      "fin": 11.8
+    },
+    {
+      "id": "appel",
+      "debut": 11.8,
+      "finVoix": 13.9,
+      "fin": 15.7
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "rallye,",
+      "mot": "rallye",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.68
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.06
+    },
+    {
+      "texte": "demain.",
+      "mot": "demain",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.2
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 2.04
+    },
+    {
+      "texte": "vas",
+      "mot": "vas",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.14
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.22
+    },
+    {
+      "texte": "penser…",
+      "mot": "penser",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.44
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.3
+    },
+    {
+      "texte": "pas ?",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 3.3,
+      "fin": 3.46
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.32
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.56
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.8
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 5.06,
+      "fin": 5.18
+    },
+    {
+      "texte": "choisis",
+      "mot": "choisis",
+      "scene": 1,
+      "debut": 5.18,
+      "fin": 5.48
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 1,
+      "debut": 5.48,
+      "fin": 5.6
+    },
+    {
+      "texte": "alertes :",
+      "mot": "alertes",
+      "scene": 1,
+      "debut": 5.6,
+      "fin": 6.12
+    },
+    {
+      "texte": "départ",
+      "mot": "départ",
+      "scene": 1,
+      "debut": 6.32,
+      "fin": 6.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 6.8,
+      "fin": 6.8
+    },
+    {
+      "texte": "direct,",
+      "mot": "direct",
+      "scene": 1,
+      "debut": 6.8,
+      "fin": 7.1
+    },
+    {
+      "texte": "victoire",
+      "mot": "victoire",
+      "scene": 1,
+      "debut": 7.44,
+      "fin": 7.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 7.8,
+      "fin": 7.92
+    },
+    {
+      "texte": "spéciale,",
+      "mot": "spéciale",
+      "scene": 1,
+      "debut": 7.92,
+      "fin": 8.12
+    },
+    {
+      "texte": "podium.",
+      "mot": "podium",
+      "scene": 1,
+      "debut": 8.64,
+      "fin": 8.88
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 9.6,
+      "fin": 9.64
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.64,
+      "fin": 9.74
+    },
+    {
+      "texte": "jour",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 9.74,
+      "fin": 9.88
+    },
+    {
+      "texte": "J,",
+      "mot": "J",
+      "scene": 2,
+      "debut": 9.88,
+      "fin": 10.06
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 10.32,
+      "fin": 10.44
+    },
+    {
+      "texte": "téléphone",
+      "mot": "téléphone",
+      "scene": 2,
+      "debut": 10.44,
+      "fin": 10.72
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 2,
+      "debut": 10.72,
+      "fin": 10.9
+    },
+    {
+      "texte": "prévient.",
+      "mot": "prévient",
+      "scene": 2,
+      "debut": 10.9,
+      "fin": 11.2
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 11.8,
+      "fin": 12.167
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 12.167,
+      "fin": 12.533
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 12.533,
+      "fin": 12.9
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 12.9,
+      "fin": 13.06
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 13.06,
+      "fin": 13.32
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 13.32,
+      "fin": 13.68
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 13.68,
+      "fin": 13.9
+    }
+  ]
+}

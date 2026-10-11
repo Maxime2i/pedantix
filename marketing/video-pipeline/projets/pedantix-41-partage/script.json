@@ -1,0 +1,129 @@
+{
+  "titre": "Partage ton résultat",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Fonctionnalité : partager son score sans spoiler.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Plomb",
+    "texte": [
+      "Le plomb est l'élément chimique de numéro atomique 82, de symbole Pb. Dans les conditions standard, le corps simple plomb est un métal malléable et gris bleuâtre, qui blanchit lentement en s'oxydant. Le mot plomb et le symbole Pb viennent du latin plumbum.",
+      "Le plomb appartient au groupe 14 et à la période 6 du tableau périodique. C'est le plus « lourd » des éléments stables.",
+      "Le plomb est un élément toxique, mutagène et reprotoxique, sans valeur connue d'oligoélément."
+    ],
+    "titreMots": [
+      "plomb"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 9 septembre",
+    "essaisDepart": 39
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Tu as trouvé la page du jour ? Montre-le sans spoiler.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Montre-le",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "spoiler.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "bouton",
+      "voix": "Dans le résultat, touche Partager.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Dans",
+          "mode": "duo"
+        },
+        {
+          "type": "resultat",
+          "ancre": "résultat,",
+          "coups": 39,
+          "rang": 7,
+          "pct": 72
+        },
+        {
+          "type": "pose",
+          "ancre": "Dans",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "appui",
+          "ancre": "Partager.",
+          "cible": "r-partager"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "voix": "Tes amis voient ton score et tes carrés… mais pas le titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Tes",
+          "mode": "avatar"
+        },
+        {
+          "type": "partage",
+          "ancre": "amis",
+          "coups": 39
+        },
+        {
+          "type": "pose",
+          "ancre": "titre.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "defi",
+      "voix": "Le défi est lancé. Qui fera mieux que trente-neuf coups ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Le"
+        },
+        {
+          "type": "pose",
+          "ancre": "défi",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

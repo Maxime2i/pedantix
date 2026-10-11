@@ -1,0 +1,164 @@
+{
+  "titre": "Étudiant : arrête de relire tes fiches",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton direct et complice, comme un grand frère qui donne un bon conseil. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Étudiant ? Arrête de relire tes fiches en boucle.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Étudiant",
+          "texte": "Étudiant ?",
+          "sous": "Arrête de relire tes fiches en boucle"
+        },
+        {
+          "type": "masquer",
+          "ancre": "boucle",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "boucle",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Étudiant",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "tester",
+      "voix": "Pour ta culture G, teste-toi avec des cartes : la question d'abord, la réponse ensuite.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "teste-toi",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "réponse"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "retour",
+      "voix": "Culture First les fait revenir juste avant que tu les oublies. Cinq minutes par jour, entre deux cours.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "revenir",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "oublies",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "themes",
+      "voix": "Histoire, géo, littérature, sciences : de quoi enrichir tes copies.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Histoire",
+          "nom": "catalogue"
+        },
+        {
+          "type": "appui",
+          "ancre": "Histoire",
+          "cible": "c-theme-1"
+        },
+        {
+          "type": "appui",
+          "ancre": "géo",
+          "cible": "c-theme-0"
+        },
+        {
+          "type": "appui",
+          "ancre": "littérature",
+          "cible": "c-theme-3"
+        },
+        {
+          "type": "appui",
+          "ancre": "sciences",
+          "cible": "c-theme-6"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grands auteurs",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a écrit cette œuvre ?",
+      "indiceType": "Conte philosophique",
+      "indice": "Candide",
+      "reponse": "Voltaire",
+      "fiche": [
+        [
+          "Publication",
+          "1759"
+        ]
+      ]
+    }
+  ]
+}

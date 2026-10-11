@@ -1,0 +1,332 @@
+{
+  "duree": 16.18,
+  "dureeVoix": 14.38,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.88,
+      "fin": 3.42
+    },
+    {
+      "id": "bouton",
+      "debut": 3.42,
+      "finVoix": 5.02,
+      "fin": 5.56
+    },
+    {
+      "id": "message",
+      "debut": 5.56,
+      "finVoix": 8.36,
+      "fin": 9.1
+    },
+    {
+      "id": "defi",
+      "debut": 9.1,
+      "finVoix": 12.76,
+      "fin": 12.76
+    },
+    {
+      "id": "appel",
+      "debut": 12.76,
+      "finVoix": 14.38,
+      "fin": 16.18
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.3
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.3,
+      "fin": 0.34
+    },
+    {
+      "texte": "trouvé",
+      "mot": "trouvé",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.56
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.72
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 0.88
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.04
+    },
+    {
+      "texte": "jour ?",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.2
+    },
+    {
+      "texte": "Montre-le",
+      "mot": "Montre-le",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 2.2
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.52
+    },
+    {
+      "texte": "spoiler.",
+      "mot": "spoiler",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 2.88
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 1,
+      "debut": 3.42,
+      "fin": 3.66
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 3.66,
+      "fin": 3.76
+    },
+    {
+      "texte": "résultat,",
+      "mot": "résultat",
+      "scene": 1,
+      "debut": 3.76,
+      "fin": 4.24
+    },
+    {
+      "texte": "touche",
+      "mot": "touche",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.58
+    },
+    {
+      "texte": "Partager.",
+      "mot": "Partager",
+      "scene": 1,
+      "debut": 4.58,
+      "fin": 5.02
+    },
+    {
+      "texte": "Tes",
+      "mot": "Tes",
+      "scene": 2,
+      "debut": 5.56,
+      "fin": 5.66
+    },
+    {
+      "texte": "amis",
+      "mot": "amis",
+      "scene": 2,
+      "debut": 5.66,
+      "fin": 5.9
+    },
+    {
+      "texte": "voient",
+      "mot": "voient",
+      "scene": 2,
+      "debut": 5.9,
+      "fin": 6.18
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 6.18,
+      "fin": 6.28
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 2,
+      "debut": 6.28,
+      "fin": 6.54
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 6.54,
+      "fin": 6.86
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 2,
+      "debut": 6.86,
+      "fin": 6.94
+    },
+    {
+      "texte": "carrés…",
+      "mot": "carrés",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.28
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 2,
+      "debut": 7.68,
+      "fin": 7.8
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 7.8,
+      "fin": 8.1
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.1,
+      "fin": 8.2
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 2,
+      "debut": 8.2,
+      "fin": 8.36
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 9.1,
+      "fin": 9.2
+    },
+    {
+      "texte": "défi",
+      "mot": "défi",
+      "scene": 3,
+      "debut": 9.2,
+      "fin": 9.54
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 3,
+      "debut": 9.54,
+      "fin": 9.66
+    },
+    {
+      "texte": "lancé.",
+      "mot": "lancé",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 10.06
+    },
+    {
+      "texte": "Qui",
+      "mot": "Qui",
+      "scene": 3,
+      "debut": 10.46,
+      "fin": 10.66
+    },
+    {
+      "texte": "fera",
+      "mot": "fera",
+      "scene": 3,
+      "debut": 10.66,
+      "fin": 10.94
+    },
+    {
+      "texte": "mieux",
+      "mot": "mieux",
+      "scene": 3,
+      "debut": 10.94,
+      "fin": 11.2
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 11.2,
+      "fin": 11.34
+    },
+    {
+      "texte": "trente-neuf",
+      "mot": "trente-neuf",
+      "scene": 3,
+      "debut": 11.34,
+      "fin": 11.78
+    },
+    {
+      "texte": "coups ?",
+      "mot": "coups",
+      "scene": 3,
+      "debut": 11.78,
+      "fin": 12.76
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 12.76,
+      "fin": 13.32
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 13.58,
+      "fin": 13.9
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 13.9,
+      "fin": 14.1
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.1,
+      "fin": 14.24
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 14.24,
+      "fin": 14.38
+    }
+  ]
+}

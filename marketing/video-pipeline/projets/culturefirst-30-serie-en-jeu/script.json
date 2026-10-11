@@ -1,0 +1,163 @@
+{
+  "titre": "22 h : ta série est en jeu",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de petite urgence au début, rassurant ensuite, soulagé et fier sur « Série sauvée ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "alerte",
+      "voix": "Vingt-deux heures. Ta série de vingt-trois jours est en jeu.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Vingt-deux"
+        },
+        {
+          "type": "notif",
+          "ancre": "Ta",
+          "titre": "Dernier rappel 🔥",
+          "texte": "Ta série de 23 jours s’arrête ce soir si tu ne révises pas."
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Vingt-deux",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "ouvrir",
+      "voix": "Pas de panique : tu ouvres Culture First, et tu étudies tes cartes du jour, tranquillement, dans ton canapé.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "ouvres",
+          "nom": "accueil"
+        },
+        {
+          "type": "appui",
+          "ancre": "étudies",
+          "cible": "a-etudier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "etude",
+      "voix": "Quelques minutes plus tard…",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Quelques",
+          "nom": "etude"
+        },
+        {
+          "type": "zoom",
+          "ancre": "minutes",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "tard"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "sauvee",
+      "voix": "Série sauvée. Vingt-trois jours, et bientôt le palier des trente.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Série",
+          "cible": "aucun"
+        },
+        {
+          "type": "finSeance",
+          "ancre": "Série",
+          "donnees": {
+            "serie": 23,
+            "prochain": 30
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "Vingt-trois",
+          "cible": "e-badge",
+          "echelle": 1.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Islande",
+      "reponse": "Reykjavik",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ]
+      ]
+    }
+  ],
+  "ecranInitial": "verrouillage",
+  "ecrans": {
+    "verrouillage": {
+      "heure": "22:00"
+    }
+  }
+}

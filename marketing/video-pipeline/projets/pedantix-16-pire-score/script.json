@@ -1,0 +1,180 @@
+{
+  "titre": "Mon pire score",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Autodérision : le pire score du créateur, page piège.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Otorhinolaryngologie",
+    "texte": [
+      "L'otorhinolaryngologie ou ORL représente une branche de la médecine spécialisée dans le diagnostic et le traitement des troubles du nez, de la gorge, de l'oreille, et du cou.",
+      "Elle fait partie des spécialités qui allient la chirurgie et la prise en charge non chirurgicale des patients. Elle peut s'exercer à l'hôpital ou en cabinet. Typiquement, les médecins de cette spécialité sont formés à la prise en charge à la fois des enfants et des adultes.",
+      "Le praticien est appelé otorhinolaryngologiste ou otorhinolaryngologue."
+    ],
+    "titreMots": [
+      "otorhinolaryngologie"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [
+      "branche",
+      "spécialisée",
+      "diagnostic",
+      "traitement",
+      "troubles",
+      "nez",
+      "cou",
+      "chirurgie",
+      "patients",
+      "hôpital",
+      "cabinet",
+      "enfants",
+      "adultes",
+      "spécialités",
+      "spécialité"
+    ],
+    "date": "Mardi 30 septembre",
+    "essaisDepart": 180
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mon pire score sur mon propre jeu : cent quatre-vingt-trois coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "pire",
+          "nom": "decu"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "cent",
+          "valeur": 183,
+          "sous": "coups",
+          "fin": "coups."
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "voix": "La page ? Une case de vingt lettres.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "La",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "La",
+          "cible": "titre"
+        },
+        {
+          "type": "case",
+          "ancre": "vingt",
+          "mot": "otorhinolaryngologie",
+          "dans": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "vingt",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "essais",
+      "voix": "J'ai tenté médecine, oreille, gorge…",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "J'ai",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "J'ai",
+          "nom": "neutre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "médecine,",
+          "mot": "médecine"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "oreille,",
+          "mot": "oreille"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "gorge…",
+          "mot": "gorge"
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Otorhinolaryngologie. Le nom complet des ORL.",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "Otorhinolaryngologie."
+        },
+        {
+          "type": "pose",
+          "ancre": "Otorhinolaryngologie.",
+          "nom": "panique"
+        },
+        {
+          "type": "resultat",
+          "ancre": "complet",
+          "coups": 183,
+          "rang": 0,
+          "pct": 94
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Et toi, ton pire score ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Et",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "toi,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

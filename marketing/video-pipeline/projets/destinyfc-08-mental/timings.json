@@ -1,0 +1,478 @@
+{
+  "duree": 22.24,
+  "dureeVoix": 20.44,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.52,
+      "fin": 3.52
+    },
+    {
+      "id": "jauges",
+      "debut": 3.52,
+      "finVoix": 6.06,
+      "fin": 6.7
+    },
+    {
+      "id": "pression",
+      "debut": 6.7,
+      "finVoix": 8.76,
+      "fin": 9.72
+    },
+    {
+      "id": "routine",
+      "debut": 9.72,
+      "finVoix": 12.98,
+      "fin": 13.92
+    },
+    {
+      "id": "zone",
+      "debut": 13.92,
+      "finVoix": 16.16,
+      "fin": 16.86
+    },
+    {
+      "id": "cta",
+      "debut": 16.86,
+      "finVoix": 20.44,
+      "fin": 22.24
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.52
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.74
+    },
+    {
+      "texte": "foot,",
+      "mot": "foot",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.94
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.42
+    },
+    {
+      "texte": "mental",
+      "mot": "mental",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.78
+    },
+    {
+      "texte": "compte",
+      "mot": "compte",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 2.12
+    },
+    {
+      "texte": "autant",
+      "mot": "autant",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.58
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.7
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 2.76
+    },
+    {
+      "texte": "pieds.",
+      "mot": "pieds",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 3.52
+    },
+    {
+      "texte": "Regarde",
+      "mot": "Regarde",
+      "scene": 1,
+      "debut": 3.52,
+      "fin": 3.84
+    },
+    {
+      "texte": "ces",
+      "mot": "ces",
+      "scene": 1,
+      "debut": 3.84,
+      "fin": 3.96
+    },
+    {
+      "texte": "jauges :",
+      "mot": "jauges",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.14
+    },
+    {
+      "texte": "confiance",
+      "mot": "confiance",
+      "scene": 1,
+      "debut": 4.8,
+      "fin": 5.24
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.62
+    },
+    {
+      "texte": "pression.",
+      "mot": "pression",
+      "scene": 1,
+      "debut": 5.62,
+      "fin": 6.06
+    },
+    {
+      "texte": "Si",
+      "mot": "Si",
+      "scene": 2,
+      "debut": 6.7,
+      "fin": 6.8
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 6.8,
+      "fin": 6.9
+    },
+    {
+      "texte": "pression",
+      "mot": "pression",
+      "scene": 2,
+      "debut": 6.9,
+      "fin": 7.14
+    },
+    {
+      "texte": "monte",
+      "mot": "monte",
+      "scene": 2,
+      "debut": 7.14,
+      "fin": 7.26
+    },
+    {
+      "texte": "trop,",
+      "mot": "trop",
+      "scene": 2,
+      "debut": 7.26,
+      "fin": 7.5
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 7.94
+    },
+    {
+      "texte": "mains",
+      "mot": "mains",
+      "scene": 2,
+      "debut": 7.94,
+      "fin": 8.06
+    },
+    {
+      "texte": "tremblent",
+      "mot": "tremblent",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.4
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 2,
+      "debut": 8.4,
+      "fin": 8.48
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.48,
+      "fin": 8.58
+    },
+    {
+      "texte": "match.",
+      "mot": "match",
+      "scene": 2,
+      "debut": 8.58,
+      "fin": 8.76
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 3,
+      "debut": 9.72,
+      "fin": 10.04
+    },
+    {
+      "texte": "m'appuie",
+      "mot": "m'appuie",
+      "scene": 3,
+      "debut": 10.04,
+      "fin": 10.3
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 10.3,
+      "fin": 10.44
+    },
+    {
+      "texte": "ma",
+      "mot": "ma",
+      "scene": 3,
+      "debut": 10.44,
+      "fin": 10.56
+    },
+    {
+      "texte": "routine…",
+      "mot": "routine",
+      "scene": 3,
+      "debut": 10.56,
+      "fin": 10.82
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 11.76,
+      "fin": 12.14
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 12.14,
+      "fin": 12.38
+    },
+    {
+      "texte": "calme",
+      "mot": "calme",
+      "scene": 3,
+      "debut": 12.38,
+      "fin": 12.64
+    },
+    {
+      "texte": "revient.",
+      "mot": "revient",
+      "scene": 3,
+      "debut": 12.64,
+      "fin": 12.98
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 13.92,
+      "fin": 14.16
+    },
+    {
+      "texte": "quand",
+      "mot": "quand",
+      "scene": 4,
+      "debut": 14.16,
+      "fin": 14.28
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 14.28,
+      "fin": 14.38
+    },
+    {
+      "texte": "confiance",
+      "mot": "confiance",
+      "scene": 4,
+      "debut": 14.38,
+      "fin": 14.6
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 14.6,
+      "fin": 14.8
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 14.9
+    },
+    {
+      "texte": "top,",
+      "mot": "top",
+      "scene": 4,
+      "debut": 14.9,
+      "fin": 15.06
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 15.64,
+      "fin": 15.67
+    },
+    {
+      "texte": "entres",
+      "mot": "entres",
+      "scene": 4,
+      "debut": 15.67,
+      "fin": 15.7
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 4,
+      "debut": 15.7,
+      "fin": 15.86
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 15.86,
+      "fin": 15.96
+    },
+    {
+      "texte": "zone.",
+      "mot": "zone",
+      "scene": 4,
+      "debut": 15.96,
+      "fin": 16.16
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 5,
+      "debut": 16.86,
+      "fin": 16.94
+    },
+    {
+      "texte": "mental,",
+      "mot": "mental",
+      "scene": 5,
+      "debut": 16.94,
+      "fin": 17.16
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 5,
+      "debut": 17.36,
+      "fin": 17.5
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 5,
+      "debut": 17.5,
+      "fin": 17.56
+    },
+    {
+      "texte": "travaille.",
+      "mot": "travaille",
+      "scene": 5,
+      "debut": 17.56,
+      "fin": 17.78
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 18.4,
+      "fin": 18.82
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 18.82,
+      "fin": 19.08
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 19.38,
+      "fin": 19.68
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 19.68,
+      "fin": 19.94
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 19.94,
+      "fin": 20.14
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 20.14,
+      "fin": 20.3
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 20.3,
+      "fin": 20.44
+    }
+  ]
+}

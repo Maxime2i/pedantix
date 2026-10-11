@@ -1,0 +1,127 @@
+{
+  "titre": "POV : ton collègue a trouvé",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Humour POV : le collègue qui a trouvé avant toi.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Néolithique",
+    "texte": [
+      "Le Néolithique est une période de la Préhistoire, qui débute durant le réchauffement climatique de l'Holocène. Défini à l'origine comme un « âge de la pierre polie », il est principalement caractérisé actuellement par la domestication de certaines plantes et animaux, et le début de l’agriculture et de l’élevage. La chasse et la collecte des populations mésolithiques n'ont cependant pas été systématiquement abandonnés.",
+      "Cette période commence plus ou moins tard en fonction des contextes. Elle apparaît d’abord au Moyen-Orient vers 10000 av. -C."
+    ],
+    "titreMots": [
+      "néolithique"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Dimanche 14 septembre",
+    "essaisDepart": 90
+  },
+  "dispositionInitiale": "avatar",
+  "styleImages": "illustration 3D douce style Pixar, couleurs chaudes ocre et terracotta, arrière-plan légèrement flou",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "POV : ton collègue a trouvé la page du jour en dix-huit coups.",
+      "image": "Illustration d'un open space de bureau : bureaux, écrans, plantes, tasse de café au premier plan, lumière de midi, arrière-plan légèrement flou, aucune personne.",
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "POV",
+          "nom": "decu"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "dix-huit",
+          "valeur": 18,
+          "sous": "coups (pas les tiens)",
+          "fin": "coups."
+        }
+      ]
+    },
+    {
+      "id": "parle",
+      "voix": "Et il en parle depuis deux heures.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "parle",
+          "texte": "« Dix-huit coups ! »",
+          "sous": "ton collègue, pour la 12e fois",
+          "fin": "heures."
+        },
+        {
+          "type": "pose",
+          "ancre": "heures.",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "toi",
+      "voix": "Toi, t'es à quatre-vingt-dix… et tu n'as même pas le premier mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Toi,",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Toi,",
+          "cible": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "premier",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "semblant",
+      "voix": "Alors tu fais semblant de travailler, et tu continues.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Alors",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Alors",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "semblant",
+          "nom": "telephone"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

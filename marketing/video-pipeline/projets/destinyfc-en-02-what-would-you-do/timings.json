@@ -1,0 +1,569 @@
+{
+  "duree": 26.36,
+  "dureeVoix": 24.56,
+  "scenes": [
+    {
+      "id": "situation",
+      "debut": 0.0,
+      "finVoix": 3.24,
+      "fin": 3.66
+    },
+    {
+      "id": "question",
+      "debut": 3.66,
+      "finVoix": 5.82,
+      "fin": 6.44
+    },
+    {
+      "id": "options",
+      "debut": 6.44,
+      "finVoix": 12.9,
+      "fin": 13.44
+    },
+    {
+      "id": "countdown",
+      "debut": 13.44,
+      "finVoix": 16.82,
+      "fin": 17.76
+    },
+    {
+      "id": "answer",
+      "debut": 17.76,
+      "finVoix": 20.2,
+      "fin": 21.04
+    },
+    {
+      "id": "cta",
+      "debut": 21.04,
+      "finVoix": 24.56,
+      "fin": 26.36
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cup",
+      "mot": "Cup",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "final.",
+      "mot": "final",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.64
+    },
+    {
+      "texte": "You're",
+      "mot": "You're",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.02
+    },
+    {
+      "texte": "one",
+      "mot": "one",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.24
+    },
+    {
+      "texte": "goal",
+      "mot": "goal",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.42
+    },
+    {
+      "texte": "up,",
+      "mot": "up",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.68
+    },
+    {
+      "texte": "with",
+      "mot": "with",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 1.94
+    },
+    {
+      "texte": "ten",
+      "mot": "ten",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.3
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.48
+    },
+    {
+      "texte": "left",
+      "mot": "left",
+      "scene": 0,
+      "debut": 2.48,
+      "fin": 2.76
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 2.92
+    },
+    {
+      "texte": "hold",
+      "mot": "hold",
+      "scene": 0,
+      "debut": 2.92,
+      "fin": 3.06
+    },
+    {
+      "texte": "on.",
+      "mot": "on",
+      "scene": 0,
+      "debut": 3.06,
+      "fin": 3.24
+    },
+    {
+      "texte": "The",
+      "mot": "The",
+      "scene": 1,
+      "debut": 3.66,
+      "fin": 3.74
+    },
+    {
+      "texte": "coach",
+      "mot": "coach",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.94
+    },
+    {
+      "texte": "wants",
+      "mot": "wants",
+      "scene": 1,
+      "debut": 3.94,
+      "fin": 4.18
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.3
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 1,
+      "debut": 4.3,
+      "fin": 4.36
+    },
+    {
+      "texte": "kill",
+      "mot": "kill",
+      "scene": 1,
+      "debut": 4.36,
+      "fin": 4.56
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.66
+    },
+    {
+      "texte": "game.",
+      "mot": "game",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.86
+    },
+    {
+      "texte": "What",
+      "mot": "What",
+      "scene": 1,
+      "debut": 5.48,
+      "fin": 5.56
+    },
+    {
+      "texte": "do",
+      "mot": "do",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.62
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 1,
+      "debut": 5.62,
+      "fin": 5.68
+    },
+    {
+      "texte": "do?",
+      "mot": "do",
+      "scene": 1,
+      "debut": 5.68,
+      "fin": 5.82
+    },
+    {
+      "texte": "One:",
+      "mot": "One",
+      "scene": 2,
+      "debut": 6.44,
+      "fin": 6.62
+    },
+    {
+      "texte": "waste",
+      "mot": "waste",
+      "scene": 2,
+      "debut": 6.92,
+      "fin": 7.02
+    },
+    {
+      "texte": "time",
+      "mot": "time",
+      "scene": 2,
+      "debut": 7.02,
+      "fin": 7.28
+    },
+    {
+      "texte": "by",
+      "mot": "by",
+      "scene": 2,
+      "debut": 7.28,
+      "fin": 7.44
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.54
+    },
+    {
+      "texte": "corner",
+      "mot": "corner",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.74
+    },
+    {
+      "texte": "flag.",
+      "mot": "flag",
+      "scene": 2,
+      "debut": 7.74,
+      "fin": 7.98
+    },
+    {
+      "texte": "Two:",
+      "mot": "Two",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.58
+    },
+    {
+      "texte": "keep",
+      "mot": "keep",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 8.96
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 8.96,
+      "fin": 9.1
+    },
+    {
+      "texte": "ball.",
+      "mot": "ball",
+      "scene": 2,
+      "debut": 9.1,
+      "fin": 9.26
+    },
+    {
+      "texte": "Three:",
+      "mot": "Three",
+      "scene": 2,
+      "debut": 9.68,
+      "fin": 9.92
+    },
+    {
+      "texte": "go",
+      "mot": "go",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.28
+    },
+    {
+      "texte": "for",
+      "mot": "for",
+      "scene": 2,
+      "debut": 10.28,
+      "fin": 10.42
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 10.42,
+      "fin": 10.52
+    },
+    {
+      "texte": "second",
+      "mot": "second",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.78
+    },
+    {
+      "texte": "goal.",
+      "mot": "goal",
+      "scene": 2,
+      "debut": 10.78,
+      "fin": 11.02
+    },
+    {
+      "texte": "Four:",
+      "mot": "Four",
+      "scene": 2,
+      "debut": 11.44,
+      "fin": 11.72
+    },
+    {
+      "texte": "crafty",
+      "mot": "crafty",
+      "scene": 2,
+      "debut": 12.0,
+      "fin": 12.3
+    },
+    {
+      "texte": "little",
+      "mot": "little",
+      "scene": 2,
+      "debut": 12.3,
+      "fin": 12.46
+    },
+    {
+      "texte": "fouls.",
+      "mot": "fouls",
+      "scene": 2,
+      "debut": 12.46,
+      "fin": 12.9
+    },
+    {
+      "texte": "Think",
+      "mot": "Think",
+      "scene": 3,
+      "debut": 13.44,
+      "fin": 13.68
+    },
+    {
+      "texte": "fast.",
+      "mot": "fast",
+      "scene": 3,
+      "debut": 13.68,
+      "fin": 13.94
+    },
+    {
+      "texte": "Three…",
+      "mot": "Three",
+      "scene": 3,
+      "debut": 14.72,
+      "fin": 15.0
+    },
+    {
+      "texte": "two…",
+      "mot": "two",
+      "scene": 3,
+      "debut": 15.58,
+      "fin": 15.88
+    },
+    {
+      "texte": "one.",
+      "mot": "one",
+      "scene": 3,
+      "debut": 16.52,
+      "fin": 16.82
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 4,
+      "debut": 17.76,
+      "fin": 17.92
+    },
+    {
+      "texte": "kept",
+      "mot": "kept",
+      "scene": 4,
+      "debut": 17.92,
+      "fin": 18.06
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 4,
+      "debut": 18.06,
+      "fin": 18.2
+    },
+    {
+      "texte": "ball.",
+      "mot": "ball",
+      "scene": 4,
+      "debut": 18.2,
+      "fin": 18.38
+    },
+    {
+      "texte": "And",
+      "mot": "And",
+      "scene": 4,
+      "debut": 18.82,
+      "fin": 19.08
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 4,
+      "debut": 19.08,
+      "fin": 19.22
+    },
+    {
+      "texte": "cup",
+      "mot": "cup",
+      "scene": 4,
+      "debut": 19.22,
+      "fin": 19.48
+    },
+    {
+      "texte": "is",
+      "mot": "is",
+      "scene": 4,
+      "debut": 19.48,
+      "fin": 19.76
+    },
+    {
+      "texte": "ours!",
+      "mot": "ours",
+      "scene": 4,
+      "debut": 19.76,
+      "fin": 20.2
+    },
+    {
+      "texte": "What",
+      "mot": "What",
+      "scene": 5,
+      "debut": 21.04,
+      "fin": 21.34
+    },
+    {
+      "texte": "would",
+      "mot": "would",
+      "scene": 5,
+      "debut": 21.34,
+      "fin": 21.46
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 5,
+      "debut": 21.46,
+      "fin": 21.56
+    },
+    {
+      "texte": "have",
+      "mot": "have",
+      "scene": 5,
+      "debut": 21.56,
+      "fin": 21.66
+    },
+    {
+      "texte": "picked?",
+      "mot": "picked",
+      "scene": 5,
+      "debut": 21.66,
+      "fin": 21.86
+    },
+    {
+      "texte": "Tell",
+      "mot": "Tell",
+      "scene": 5,
+      "debut": 22.16,
+      "fin": 22.24
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 5,
+      "debut": 22.24,
+      "fin": 22.34
+    },
+    {
+      "texte": "in",
+      "mot": "in",
+      "scene": 5,
+      "debut": 22.34,
+      "fin": 22.44
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 5,
+      "debut": 22.44,
+      "fin": 22.48
+    },
+    {
+      "texte": "comments.",
+      "mot": "comments",
+      "scene": 5,
+      "debut": 22.48,
+      "fin": 22.74
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 23.36,
+      "fin": 23.52
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 23.52,
+      "fin": 23.86
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 5,
+      "debut": 23.86,
+      "fin": 24.28
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 5,
+      "debut": 24.28,
+      "fin": 24.4
+    },
+    {
+      "texte": "play.",
+      "mot": "play",
+      "scene": 5,
+      "debut": 24.4,
+      "fin": 24.56
+    }
+  ]
+}

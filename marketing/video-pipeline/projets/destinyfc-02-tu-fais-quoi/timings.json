@@ -1,0 +1,534 @@
+{
+  "duree": 26.34,
+  "dureeVoix": 24.54,
+  "scenes": [
+    {
+      "id": "situation",
+      "debut": 0.0,
+      "finVoix": 3.44,
+      "fin": 4.0
+    },
+    {
+      "id": "question",
+      "debut": 4.0,
+      "finVoix": 6.04,
+      "fin": 6.8
+    },
+    {
+      "id": "options",
+      "debut": 6.8,
+      "finVoix": 13.6,
+      "fin": 14.18
+    },
+    {
+      "id": "decompte",
+      "debut": 14.18,
+      "finVoix": 17.64,
+      "fin": 18.32
+    },
+    {
+      "id": "reponse",
+      "debut": 18.32,
+      "finVoix": 20.56,
+      "fin": 21.0
+    },
+    {
+      "id": "cta",
+      "debut": 21.0,
+      "finVoix": 24.54,
+      "fin": 26.34
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Finale",
+      "mot": "Finale",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.64
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.8
+    },
+    {
+      "texte": "coupe.",
+      "mot": "coupe",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.02
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.44
+    },
+    {
+      "texte": "mènes",
+      "mot": "mènes",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.66
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.86
+    },
+    {
+      "texte": "but,",
+      "mot": "but",
+      "scene": 0,
+      "debut": 1.86,
+      "fin": 2.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.58
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.66
+    },
+    {
+      "texte": "reste",
+      "mot": "reste",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.82
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 2.98
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.12
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 3.12,
+      "fin": 3.3
+    },
+    {
+      "texte": "tenir.",
+      "mot": "tenir",
+      "scene": 0,
+      "debut": 3.3,
+      "fin": 3.44
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 4.0,
+      "fin": 4.2
+    },
+    {
+      "texte": "coach",
+      "mot": "coach",
+      "scene": 1,
+      "debut": 4.2,
+      "fin": 4.38
+    },
+    {
+      "texte": "veut",
+      "mot": "veut",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.54
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 4.54,
+      "fin": 4.66
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.76
+    },
+    {
+      "texte": "tues",
+      "mot": "tues",
+      "scene": 1,
+      "debut": 4.76,
+      "fin": 4.94
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.0
+    },
+    {
+      "texte": "match.",
+      "mot": "match",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.14
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.76
+    },
+    {
+      "texte": "fais",
+      "mot": "fais",
+      "scene": 1,
+      "debut": 5.76,
+      "fin": 5.86
+    },
+    {
+      "texte": "quoi ?",
+      "mot": "quoi",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 6.04
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 2,
+      "debut": 6.8,
+      "fin": 6.98
+    },
+    {
+      "texte": "gagner",
+      "mot": "gagner",
+      "scene": 2,
+      "debut": 7.42,
+      "fin": 7.56
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 7.56,
+      "fin": 7.72
+    },
+    {
+      "texte": "temps",
+      "mot": "temps",
+      "scene": 2,
+      "debut": 7.72,
+      "fin": 7.86
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 2,
+      "debut": 7.86,
+      "fin": 7.98
+    },
+    {
+      "texte": "corner.",
+      "mot": "corner",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.14
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.08
+    },
+    {
+      "texte": "garder",
+      "mot": "garder",
+      "scene": 2,
+      "debut": 9.36,
+      "fin": 9.46
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.46,
+      "fin": 9.66
+    },
+    {
+      "texte": "ballon.",
+      "mot": "ballon",
+      "scene": 2,
+      "debut": 9.66,
+      "fin": 9.86
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 2,
+      "debut": 10.36,
+      "fin": 10.76
+    },
+    {
+      "texte": "chercher",
+      "mot": "chercher",
+      "scene": 2,
+      "debut": 11.04,
+      "fin": 11.18
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 11.18,
+      "fin": 11.4
+    },
+    {
+      "texte": "deuxième",
+      "mot": "deuxième",
+      "scene": 2,
+      "debut": 11.4,
+      "fin": 11.6
+    },
+    {
+      "texte": "but.",
+      "mot": "but",
+      "scene": 2,
+      "debut": 11.6,
+      "fin": 11.86
+    },
+    {
+      "texte": "Quatre :",
+      "mot": "Quatre",
+      "scene": 2,
+      "debut": 12.34,
+      "fin": 12.62
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 13.08,
+      "fin": 13.1
+    },
+    {
+      "texte": "fautes",
+      "mot": "fautes",
+      "scene": 2,
+      "debut": 13.1,
+      "fin": 13.32
+    },
+    {
+      "texte": "malines.",
+      "mot": "malines",
+      "scene": 2,
+      "debut": 13.32,
+      "fin": 13.6
+    },
+    {
+      "texte": "Réfléchis",
+      "mot": "Réfléchis",
+      "scene": 3,
+      "debut": 14.18,
+      "fin": 14.44
+    },
+    {
+      "texte": "bien.",
+      "mot": "bien",
+      "scene": 3,
+      "debut": 14.44,
+      "fin": 14.6
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 15.54,
+      "fin": 15.94
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 16.34,
+      "fin": 16.62
+    },
+    {
+      "texte": "un.",
+      "mot": "un",
+      "scene": 3,
+      "debut": 17.34,
+      "fin": 17.64
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 4,
+      "debut": 18.32,
+      "fin": 18.46
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 4,
+      "debut": 18.46,
+      "fin": 18.6
+    },
+    {
+      "texte": "gardé",
+      "mot": "gardé",
+      "scene": 4,
+      "debut": 18.6,
+      "fin": 18.86
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 18.86,
+      "fin": 18.92
+    },
+    {
+      "texte": "ballon.",
+      "mot": "ballon",
+      "scene": 4,
+      "debut": 18.92,
+      "fin": 19.16
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 19.5,
+      "fin": 19.66
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 19.66,
+      "fin": 19.8
+    },
+    {
+      "texte": "coupe",
+      "mot": "coupe",
+      "scene": 4,
+      "debut": 19.8,
+      "fin": 20.02
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 20.02,
+      "fin": 20.22
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 20.22,
+      "fin": 20.34
+    },
+    {
+      "texte": "nous !",
+      "mot": "nous",
+      "scene": 4,
+      "debut": 20.34,
+      "fin": 20.56
+    },
+    {
+      "texte": "Toi,",
+      "mot": "Toi",
+      "scene": 5,
+      "debut": 21.0,
+      "fin": 21.26
+    },
+    {
+      "texte": "t'aurais",
+      "mot": "t'aurais",
+      "scene": 5,
+      "debut": 21.28,
+      "fin": 21.4
+    },
+    {
+      "texte": "choisi",
+      "mot": "choisi",
+      "scene": 5,
+      "debut": 21.4,
+      "fin": 21.64
+    },
+    {
+      "texte": "quoi ?",
+      "mot": "quoi",
+      "scene": 5,
+      "debut": 21.64,
+      "fin": 21.8
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 5,
+      "debut": 21.8,
+      "fin": 22.38
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 5,
+      "debut": 22.38,
+      "fin": 22.46
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 5,
+      "debut": 22.46,
+      "fin": 22.88
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 23.36,
+      "fin": 23.76
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 23.76,
+      "fin": 23.94
+    },
+    {
+      "texte": "gratuit.",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 24.24,
+      "fin": 24.54
+    }
+  ]
+}

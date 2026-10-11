@@ -1,0 +1,175 @@
+{
+  "titre": "Réviser sans réseau",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton détendu et pratique. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Pas de réseau dans l'avion ou dans le métro ? Tu peux quand même réviser.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Pas"
+        },
+        {
+          "type": "zoom",
+          "ancre": "réviser",
+          "cible": "carte"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Pas",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "garde",
+      "voix": "Culture First garde tes réponses bien au chaud sur le téléphone.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "garde",
+          "cible": "offline",
+          "echelle": 1.6,
+          "hauteur": 700
+        },
+        {
+          "type": "reveler",
+          "ancre": "réponses"
+        },
+        {
+          "type": "zoom",
+          "ancre": "téléphone",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "téléphone",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "envoi",
+      "voix": "Et les envoie toutes seules dès que le réseau revient.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "revient",
+          "nom": "etude",
+          "donnees": {
+            "horsConnexion": false
+          }
+        },
+        {
+          "type": "carte",
+          "ancre": "revient",
+          "index": 1
+        },
+        {
+          "type": "zoom",
+          "ancre": "revient",
+          "cible": "carte"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "partout",
+      "voix": "Ta dernière séance du jour reste disponible : métro, avion, plage, tu révises partout.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "reveler",
+          "ancre": "partout"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Corps humain",
+      "theme": "Sciences et Techniques",
+      "compteurs": [
+        7,
+        3,
+        21
+      ],
+      "question": "Combien d'os compte le squelette d'un adulte ?",
+      "indiceType": null,
+      "indice": null,
+      "reponse": "206",
+      "fiche": [
+        [
+          "Le plus petit",
+          "l’étrier, dans l’oreille"
+        ]
+      ]
+    },
+    {
+      "paquet": "Océans et mers",
+      "theme": "Géographie",
+      "compteurs": [
+        6,
+        3,
+        21
+      ],
+      "question": "Quel océan détient ce record ?",
+      "indiceType": "Record",
+      "indice": "Le plus grand océan du monde",
+      "reponse": "Le Pacifique",
+      "fiche": []
+    }
+  ],
+  "ecrans": {
+    "etude": {
+      "horsConnexion": true
+    }
+  }
+}

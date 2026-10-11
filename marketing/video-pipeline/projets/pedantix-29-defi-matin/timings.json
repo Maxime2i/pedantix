@@ -1,0 +1,297 @@
+{
+  "duree": 18.54,
+  "dureeVoix": 16.74,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.52,
+      "fin": 4.64
+    },
+    {
+      "id": "indices",
+      "debut": 4.64,
+      "finVoix": 9.8,
+      "fin": 10.8
+    },
+    {
+      "id": "regle",
+      "debut": 10.8,
+      "finVoix": 13.28,
+      "fin": 13.94
+    },
+    {
+      "id": "soir",
+      "debut": 13.94,
+      "finVoix": 14.68,
+      "fin": 15.32
+    },
+    {
+      "id": "appel",
+      "debut": 15.32,
+      "finVoix": 16.74,
+      "fin": 18.54
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.2
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 0.2,
+      "fin": 0.26
+    },
+    {
+      "texte": "donne",
+      "mot": "donne",
+      "scene": 0,
+      "debut": 0.26,
+      "fin": 0.4
+    },
+    {
+      "texte": "quatre",
+      "mot": "quatre",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.56
+    },
+    {
+      "texte": "indices.",
+      "mot": "indices",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.8
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.52
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 0,
+      "debut": 1.52,
+      "fin": 1.78
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 1.92
+    },
+    {
+      "texte": "trouve",
+      "mot": "trouve",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.08
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.22
+    },
+    {
+      "texte": "page,",
+      "mot": "page",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.46
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 2.98
+    },
+    {
+      "texte": "lui",
+      "mot": "lui",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.04
+    },
+    {
+      "texte": "réponds",
+      "mot": "réponds",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.24
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.32
+    },
+    {
+      "texte": "vidéo.",
+      "mot": "vidéo",
+      "scene": 0,
+      "debut": 3.32,
+      "fin": 3.52
+    },
+    {
+      "texte": "Fruit.",
+      "mot": "Fruit",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 5.02
+    },
+    {
+      "texte": "Arbre.",
+      "mot": "Arbre",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.62
+    },
+    {
+      "texte": "Petite",
+      "mot": "Petite",
+      "scene": 1,
+      "debut": 7.82,
+      "fin": 8.08
+    },
+    {
+      "texte": "taille.",
+      "mot": "taille",
+      "scene": 1,
+      "debut": 8.08,
+      "fin": 8.38
+    },
+    {
+      "texte": "Prunus.",
+      "mot": "Prunus",
+      "scene": 1,
+      "debut": 9.28,
+      "fin": 9.8
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 2,
+      "debut": 10.8,
+      "fin": 11.04
+    },
+    {
+      "texte": "seule",
+      "mot": "seule",
+      "scene": 2,
+      "debut": 11.04,
+      "fin": 11.2
+    },
+    {
+      "texte": "réponse,",
+      "mot": "réponse",
+      "scene": 2,
+      "debut": 11.2,
+      "fin": 11.5
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 11.5,
+      "fin": 11.86
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 2,
+      "debut": 11.86,
+      "fin": 12.24
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 2,
+      "debut": 12.84,
+      "fin": 13.0
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 13.0,
+      "fin": 13.06
+    },
+    {
+      "texte": "triche !",
+      "mot": "triche",
+      "scene": 2,
+      "debut": 13.06,
+      "fin": 13.28
+    },
+    {
+      "texte": "Réponse",
+      "mot": "Réponse",
+      "scene": 3,
+      "debut": 13.94,
+      "fin": 14.34
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 3,
+      "debut": 14.34,
+      "fin": 14.48
+    },
+    {
+      "texte": "soir.",
+      "mot": "soir",
+      "scene": 3,
+      "debut": 14.48,
+      "fin": 14.68
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 15.32,
+      "fin": 15.78
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 16.04,
+      "fin": 16.34
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.48
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 16.48,
+      "fin": 16.61
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 16.61,
+      "fin": 16.74
+    }
+  ]
+}

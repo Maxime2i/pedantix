@@ -1,0 +1,415 @@
+{
+  "duree": 19.52,
+  "dureeVoix": 17.72,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.1,
+      "fin": 3.68
+    },
+    {
+      "id": "cheval",
+      "debut": 3.68,
+      "finVoix": 6.54,
+      "fin": 7.04
+    },
+    {
+      "id": "deduction",
+      "debut": 7.04,
+      "finVoix": 9.9,
+      "fin": 9.9
+    },
+    {
+      "id": "trouve",
+      "debut": 9.9,
+      "finVoix": 12.34,
+      "fin": 13.28
+    },
+    {
+      "id": "morale",
+      "debut": 13.28,
+      "finVoix": 15.58,
+      "fin": 16.3
+    },
+    {
+      "id": "appel",
+      "debut": 16.3,
+      "finVoix": 17.72,
+      "fin": 19.52
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "gris",
+      "mot": "gris",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.66
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.76
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 0.86
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.04
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.3
+    },
+    {
+      "texte": "si",
+      "mot": "si",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.52
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 1.52,
+      "fin": 1.62
+    },
+    {
+      "texte": "chauffes.",
+      "mot": "chauffes",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.94
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 0,
+      "debut": 2.28,
+      "fin": 2.38
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.56
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 0,
+      "debut": 2.56,
+      "fin": 2.74
+    },
+    {
+      "texte": "où.",
+      "mot": "où",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.1
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 3.86
+    },
+    {
+      "texte": "tape",
+      "mot": "tape",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.0
+    },
+    {
+      "texte": "navet :",
+      "mot": "navet",
+      "scene": 1,
+      "debut": 4.24,
+      "fin": 4.48
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 1,
+      "debut": 4.96,
+      "fin": 5.12
+    },
+    {
+      "texte": "s'inscrit",
+      "mot": "s'inscrit",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.44
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 5.44,
+      "fin": 5.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 5.64,
+      "fin": 5.76
+    },
+    {
+      "texte": "première",
+      "mot": "première",
+      "scene": 1,
+      "debut": 5.76,
+      "fin": 6.02
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 1,
+      "debut": 6.02,
+      "fin": 6.24
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.36
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.54
+    },
+    {
+      "texte": "Donc",
+      "mot": "Donc",
+      "scene": 2,
+      "debut": 7.04,
+      "fin": 7.16
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 7.16,
+      "fin": 7.3
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 2,
+      "debut": 7.3,
+      "fin": 7.54
+    },
+    {
+      "texte": "mot,",
+      "mot": "mot",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.72
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 7.8,
+      "fin": 7.98
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.12
+    },
+    {
+      "texte": "légume",
+      "mot": "légume",
+      "scene": 2,
+      "debut": 8.12,
+      "fin": 8.6
+    },
+    {
+      "texte": "proche",
+      "mot": "proche",
+      "scene": 2,
+      "debut": 8.6,
+      "fin": 9.14
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 9.14,
+      "fin": 9.3
+    },
+    {
+      "texte": "navet…",
+      "mot": "navet",
+      "scene": 2,
+      "debut": 9.3,
+      "fin": 9.9
+    },
+    {
+      "texte": "Radis !",
+      "mot": "Radis",
+      "scene": 3,
+      "debut": 9.9,
+      "fin": 10.86
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 11.16,
+      "fin": 11.36
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 11.36,
+      "fin": 11.46
+    },
+    {
+      "texte": "second…",
+      "mot": "second",
+      "scene": 3,
+      "debut": 11.46,
+      "fin": 11.62
+    },
+    {
+      "texte": "blanc.",
+      "mot": "blanc",
+      "scene": 3,
+      "debut": 12.18,
+      "fin": 12.34
+    },
+    {
+      "texte": "Regarde",
+      "mot": "Regarde",
+      "scene": 4,
+      "debut": 13.28,
+      "fin": 13.68
+    },
+    {
+      "texte": "où",
+      "mot": "où",
+      "scene": 4,
+      "debut": 13.68,
+      "fin": 13.92
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 13.92,
+      "fin": 14.18
+    },
+    {
+      "texte": "gris",
+      "mot": "gris",
+      "scene": 4,
+      "debut": 14.18,
+      "fin": 14.4
+    },
+    {
+      "texte": "tombe,",
+      "mot": "tombe",
+      "scene": 4,
+      "debut": 14.4,
+      "fin": 14.66
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 4,
+      "debut": 14.96,
+      "fin": 15.06
+    },
+    {
+      "texte": "seulement",
+      "mot": "seulement",
+      "scene": 4,
+      "debut": 15.06,
+      "fin": 15.28
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 4,
+      "debut": 15.28,
+      "fin": 15.42
+    },
+    {
+      "texte": "couleur.",
+      "mot": "couleur",
+      "scene": 4,
+      "debut": 15.42,
+      "fin": 15.58
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 16.3,
+      "fin": 16.7
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 17.0,
+      "fin": 17.26
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 17.26,
+      "fin": 17.46
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 17.46,
+      "fin": 17.54
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 17.54,
+      "fin": 17.72
+    }
+  ]
+}

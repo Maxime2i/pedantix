@@ -1,0 +1,450 @@
+{
+  "duree": 23.36,
+  "dureeVoix": 21.56,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.94,
+      "fin": 4.9
+    },
+    {
+      "id": "lundi",
+      "debut": 4.9,
+      "finVoix": 7.22,
+      "fin": 7.84
+    },
+    {
+      "id": "mardi",
+      "debut": 7.84,
+      "finVoix": 10.52,
+      "fin": 11.22
+    },
+    {
+      "id": "mercredi",
+      "debut": 11.22,
+      "finVoix": 15.42,
+      "fin": 16.38
+    },
+    {
+      "id": "an",
+      "debut": 16.38,
+      "finVoix": 19.16,
+      "fin": 20.06
+    },
+    {
+      "id": "appel",
+      "debut": 20.06,
+      "finVoix": 21.56,
+      "fin": 23.36
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "vrai",
+      "mot": "vrai",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.92
+    },
+    {
+      "texte": "bonus",
+      "mot": "bonus",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.26
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.44
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.56
+    },
+    {
+      "texte": "jeu :",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.76
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.5
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 0,
+      "debut": 2.5,
+      "fin": 2.66
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.84
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 3.06
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 0,
+      "debut": 3.36,
+      "fin": 3.66
+    },
+    {
+      "texte": "effort.",
+      "mot": "effort",
+      "scene": 0,
+      "debut": 3.66,
+      "fin": 3.94
+    },
+    {
+      "texte": "Lundi :",
+      "mot": "Lundi",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.38
+    },
+    {
+      "texte": "Copenhague",
+      "mot": "Copenhague",
+      "scene": 1,
+      "debut": 5.7,
+      "fin": 6.08
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 6.08,
+      "fin": 6.18
+    },
+    {
+      "texte": "reliée",
+      "mot": "reliée",
+      "scene": 1,
+      "debut": 6.18,
+      "fin": 6.38
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 6.38,
+      "fin": 6.44
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.54
+    },
+    {
+      "texte": "Suède",
+      "mot": "Suède",
+      "scene": 1,
+      "debut": 6.54,
+      "fin": 6.82
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 1,
+      "debut": 6.82,
+      "fin": 6.98
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 6.98,
+      "fin": 7.12
+    },
+    {
+      "texte": "pont.",
+      "mot": "pont",
+      "scene": 1,
+      "debut": 7.12,
+      "fin": 7.22
+    },
+    {
+      "texte": "Mardi :",
+      "mot": "Mardi",
+      "scene": 2,
+      "debut": 7.84,
+      "fin": 8.32
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.94,
+      "fin": 9.08
+    },
+    {
+      "texte": "Scrabble",
+      "mot": "Scrabble",
+      "scene": 2,
+      "debut": 9.08,
+      "fin": 9.44
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 2,
+      "debut": 9.44,
+      "fin": 9.58
+    },
+    {
+      "texte": "vend",
+      "mot": "vend",
+      "scene": 2,
+      "debut": 9.58,
+      "fin": 9.7
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 9.84
+    },
+    {
+      "texte": "trente-six",
+      "mot": "trente-six",
+      "scene": 2,
+      "debut": 9.84,
+      "fin": 10.18
+    },
+    {
+      "texte": "langues.",
+      "mot": "langues",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.52
+    },
+    {
+      "texte": "Mercredi :",
+      "mot": "Mercredi",
+      "scene": 3,
+      "debut": 11.22,
+      "fin": 11.7
+    },
+    {
+      "texte": "l'âne",
+      "mot": "l'âne",
+      "scene": 3,
+      "debut": 12.4,
+      "fin": 12.6
+    },
+    {
+      "texte": "entend",
+      "mot": "entend",
+      "scene": 3,
+      "debut": 12.6,
+      "fin": 12.96
+    },
+    {
+      "texte": "particulièrement",
+      "mot": "particulièrement",
+      "scene": 3,
+      "debut": 12.96,
+      "fin": 13.82
+    },
+    {
+      "texte": "bien,",
+      "mot": "bien",
+      "scene": 3,
+      "debut": 13.82,
+      "fin": 14.1
+    },
+    {
+      "texte": "grâce",
+      "mot": "grâce",
+      "scene": 3,
+      "debut": 14.44,
+      "fin": 14.68
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 14.68,
+      "fin": 14.88
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 3,
+      "debut": 14.88,
+      "fin": 14.96
+    },
+    {
+      "texte": "longues",
+      "mot": "longues",
+      "scene": 3,
+      "debut": 14.96,
+      "fin": 15.16
+    },
+    {
+      "texte": "oreilles.",
+      "mot": "oreilles",
+      "scene": 3,
+      "debut": 15.16,
+      "fin": 15.42
+    },
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 4,
+      "debut": 16.38,
+      "fin": 16.54
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 4,
+      "debut": 16.54,
+      "fin": 16.76
+    },
+    {
+      "texte": "an,",
+      "mot": "an",
+      "scene": 4,
+      "debut": 16.76,
+      "fin": 16.92
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 4,
+      "debut": 17.08,
+      "fin": 17.16
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 4,
+      "debut": 17.16,
+      "fin": 17.28
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 17.28,
+      "fin": 17.5
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 17.5,
+      "fin": 17.72
+    },
+    {
+      "texte": "soixante-cinq",
+      "mot": "soixante-cinq",
+      "scene": 4,
+      "debut": 17.72,
+      "fin": 17.94
+    },
+    {
+      "texte": "trucs",
+      "mot": "trucs",
+      "scene": 4,
+      "debut": 17.94,
+      "fin": 18.46
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 18.46,
+      "fin": 18.6
+    },
+    {
+      "texte": "placer",
+      "mot": "placer",
+      "scene": 4,
+      "debut": 18.6,
+      "fin": 18.86
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 4,
+      "debut": 18.86,
+      "fin": 19.0
+    },
+    {
+      "texte": "dîner.",
+      "mot": "dîner",
+      "scene": 4,
+      "debut": 19.0,
+      "fin": 19.16
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 20.06,
+      "fin": 20.54
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 20.76,
+      "fin": 21.08
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 21.08,
+      "fin": 21.28
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 21.28,
+      "fin": 21.42
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 21.42,
+      "fin": 21.56
+    }
+  ]
+}

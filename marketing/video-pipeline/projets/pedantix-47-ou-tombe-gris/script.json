@@ -1,0 +1,148 @@
+{
+  "titre": "Où tombe le gris",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 22
+  },
+  "objectif": "Astuce avancée : la position du mot proche indique quel mot chercher.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Radis blanc",
+    "texte": [
+      "Les radis blanc ou radis d'hiver, sont un groupe de radis asiatiques à grosse racine blanche, pivotante, longue ou ronde.",
+      "Le radis blanc est un légume essentiel en cuisine d'Extrême-Orient. Il est juteux avec un goût moins piquant que le petit radis ou le radis noir."
+    ],
+    "titreMots": [
+      "radis",
+      "blanc"
+    ],
+    "revelations": {},
+    "proches": {
+      "navet": {
+        "cibles": [
+          "radis"
+        ],
+        "score": 66
+      }
+    },
+    "dejaTrouves": [],
+    "date": "Vendredi 5 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le gris ne dit pas que si tu chauffes. Il te dit où.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "où.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "cheval",
+      "voix": "Je tape navet : il s'inscrit dans la première case du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Je",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Je",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "tape",
+          "mot": "navet",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "s'inscrit",
+          "mot": "navet"
+        }
+      ]
+    },
+    {
+      "id": "deduction",
+      "voix": "Donc le premier mot, c'est un légume proche du navet…",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Donc",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Radis ! Et le second… blanc.",
+      "image": null,
+      "actions": [
+        {
+          "type": "envoyer",
+          "ancre": "Radis",
+          "mot": "radis"
+        },
+        {
+          "type": "taper",
+          "ancre": "second…",
+          "mot": "blanc",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "blanc.",
+          "mot": "blanc"
+        },
+        {
+          "type": "pose",
+          "ancre": "blanc.",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Regarde où le gris tombe, pas seulement sa couleur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Regarde",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Regarde",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

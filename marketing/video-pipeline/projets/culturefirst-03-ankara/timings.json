@@ -1,0 +1,430 @@
+{
+  "duree": 22.18,
+  "dureeVoix": 20.38,
+  "scenes": [
+    {
+      "id": "defi",
+      "debut": 0.0,
+      "finVoix": 6.16,
+      "fin": 6.86
+    },
+    {
+      "id": "fait",
+      "debut": 6.86,
+      "finVoix": 10.54,
+      "fin": 11.4
+    },
+    {
+      "id": "partage",
+      "debut": 11.4,
+      "finVoix": 12.96,
+      "fin": 13.82
+    },
+    {
+      "id": "catalogue",
+      "debut": 13.82,
+      "finVoix": 18.42,
+      "fin": 18.74
+    },
+    {
+      "id": "appel",
+      "debut": 18.74,
+      "finVoix": 20.38,
+      "fin": 22.18
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.19
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.19,
+      "fin": 0.38
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.7
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 1.16
+    },
+    {
+      "texte": "Capitale",
+      "mot": "Capitale",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 2.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.3
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.4
+    },
+    {
+      "texte": "Turquie ?",
+      "mot": "Turquie",
+      "scene": 0,
+      "debut": 2.4,
+      "fin": 2.74
+    },
+    {
+      "texte": "Istanbul ?",
+      "mot": "Istanbul",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 3.74
+    },
+    {
+      "texte": "Raté.",
+      "mot": "Raté",
+      "scene": 0,
+      "debut": 3.74,
+      "fin": 4.71
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 4.71,
+      "fin": 5.68
+    },
+    {
+      "texte": "Ankara.",
+      "mot": "Ankara",
+      "scene": 0,
+      "debut": 5.68,
+      "fin": 6.16
+    },
+    {
+      "texte": "Ankara",
+      "mot": "Ankara",
+      "scene": 1,
+      "debut": 6.86,
+      "fin": 7.42
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 7.42,
+      "fin": 7.6
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 7.6,
+      "fin": 7.72
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 1,
+      "debut": 7.72,
+      "fin": 8.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 8.16,
+      "fin": 8.24
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 8.24,
+      "fin": 8.34
+    },
+    {
+      "texte": "Turquie",
+      "mot": "Turquie",
+      "scene": 1,
+      "debut": 8.34,
+      "fin": 8.66
+    },
+    {
+      "texte": "depuis",
+      "mot": "depuis",
+      "scene": 1,
+      "debut": 8.66,
+      "fin": 8.84
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 8.84,
+      "fin": 9.065
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 1,
+      "debut": 9.065,
+      "fin": 9.29
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 9.29,
+      "fin": 9.515
+    },
+    {
+      "texte": "vingt-trois,",
+      "mot": "vingt-trois",
+      "scene": 1,
+      "debut": 9.515,
+      "fin": 9.74
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 10.08,
+      "fin": 10.2
+    },
+    {
+      "texte": "Istanbul.",
+      "mot": "Istanbul",
+      "scene": 1,
+      "debut": 10.2,
+      "fin": 10.54
+    },
+    {
+      "texte": "Envoie",
+      "mot": "Envoie",
+      "scene": 2,
+      "debut": 11.4,
+      "fin": 11.76
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 11.86
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 2,
+      "debut": 11.86,
+      "fin": 11.94
+    },
+    {
+      "texte": "quelqu'un",
+      "mot": "quelqu'un",
+      "scene": 2,
+      "debut": 11.94,
+      "fin": 12.26
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.36
+    },
+    {
+      "texte": "aurait",
+      "mot": "aurait",
+      "scene": 2,
+      "debut": 12.36,
+      "fin": 12.48
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 2,
+      "debut": 12.48,
+      "fin": 12.64
+    },
+    {
+      "texte": "Istanbul.",
+      "mot": "Istanbul",
+      "scene": 2,
+      "debut": 12.64,
+      "fin": 12.96
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 3,
+      "debut": 13.82,
+      "fin": 14.04
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 14.04,
+      "fin": 14.34
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 3,
+      "debut": 14.34,
+      "fin": 14.74
+    },
+    {
+      "texte": "cherche",
+      "mot": "cherche",
+      "scene": 3,
+      "debut": 15.14,
+      "fin": 15.28
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 15.28,
+      "fin": 15.46
+    },
+    {
+      "texte": "capitales",
+      "mot": "capitales",
+      "scene": 3,
+      "debut": 15.46,
+      "fin": 15.98
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 15.98,
+      "fin": 16.08
+    },
+    {
+      "texte": "monde",
+      "mot": "monde",
+      "scene": 3,
+      "debut": 16.08,
+      "fin": 16.22
+    },
+    {
+      "texte": "entier…",
+      "mot": "entier",
+      "scene": 3,
+      "debut": 16.22,
+      "fin": 16.56
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 16.8,
+      "fin": 16.96
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 16.96,
+      "fin": 17.12
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 17.12,
+      "fin": 17.28
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 17.28,
+      "fin": 17.467
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 17.467,
+      "fin": 17.653
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 17.653,
+      "fin": 17.84
+    },
+    {
+      "texte": "autres",
+      "mot": "autres",
+      "scene": 3,
+      "debut": 17.84,
+      "fin": 18.02
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 3,
+      "debut": 18.02,
+      "fin": 18.42
+    },
+    {
+      "texte": "Gratuit,",
+      "mot": "Gratuit",
+      "scene": 4,
+      "debut": 18.74,
+      "fin": 19.28
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 19.46,
+      "fin": 19.58
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.58,
+      "fin": 19.86
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.86,
+      "fin": 20.14
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.14,
+      "fin": 20.38
+    }
+  ]
+}

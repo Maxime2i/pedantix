@@ -1,0 +1,121 @@
+{
+  "titre": "Sans pub, sans compte",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Promesse : une app propre, sans pub ni compte.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Lactose",
+    "texte": [
+      "Le lactose est un glucide présent dans le lait des mammifères y compris chez les humains, dont il tire son nom ; il est présent dans le lait de vache et de brebis, en moindre quantité dans le lait de chèvre mais bien plus dans le lait maternel humain, un des plus riches qui soient en lactose."
+    ],
+    "titreMots": [
+      "lactose"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 3 octobre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "pub",
+      "voix": "Dans mon jeu, il n'y a pas de pub.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Dans",
+          "titre": "Dans Pédantix"
+        },
+        {
+          "type": "point",
+          "ancre": "pub.",
+          "texte": "Pas de pub"
+        }
+      ]
+    },
+    {
+      "id": "compte",
+      "voix": "Pas de compte à créer.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "compte",
+          "texte": "Pas de compte"
+        }
+      ]
+    },
+    {
+      "id": "abonnement",
+      "voix": "Pas d'abonnement, pas de vies à racheter.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "d'abonnement,",
+          "texte": "Pas d'abonnement"
+        }
+      ]
+    },
+    {
+      "id": "pourquoi",
+      "voix": "Pourquoi ? Parce que je déteste ça, moi aussi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Pourquoi"
+        },
+        {
+          "type": "pose",
+          "ancre": "déteste",
+          "nom": "decu"
+        },
+        {
+          "type": "pose",
+          "ancre": "aussi.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "simple",
+      "voix": "Tu ouvres, tu joues, c'est tout.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Tu",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

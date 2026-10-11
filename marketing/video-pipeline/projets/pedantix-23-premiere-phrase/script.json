@@ -1,0 +1,159 @@
+{
+  "titre": "Vise la première phrase",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Astuce : la première phrase définit le sujet.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Mosaïque",
+    "texte": [
+      "La mosaïque est un art décoratif dans lequel on utilise des fragments de pierre, de pierres colorées, d'émail, de verre, ou encore de céramique, assemblés à l'aide de mastic ou d'enduit, pour former des motifs ou des figures. Quel que soit le matériau utilisé, ces fragments sont appelés des tesselles.",
+      "Très utilisée pendant l'Antiquité romaine, la mosaïque reste en usage tout au long du Moyen Âge, en particulier chez les Byzantins, continuateurs des Grecs et des Romains, et tout au long de la Renaissance.",
+      "On distingue différents types de mosaïques :"
+    ],
+    "titreMots": [
+      "mosaïque"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 19 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mon astuce numéro un : vise la première phrase.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "astuce",
+          "numero": "1",
+          "texte": "Vise la première phrase",
+          "fin": "phrase."
+        }
+      ]
+    },
+    {
+      "id": "pourquoi",
+      "voix": "Sur Wikipédia, elle définit presque toujours le sujet.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "définit",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "exemple",
+      "voix": "Ici : un art décoratif, avec des fragments de pierre et de verre…",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Ici",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Ici",
+          "cible": "article",
+          "echelle": 1.25,
+          "hauteur": 860
+        },
+        {
+          "type": "envoyer",
+          "ancre": "art",
+          "mot": "art"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "décoratif,",
+          "mot": "décoratif"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "fragments",
+          "mot": "fragments"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "pierre",
+          "mot": "pierre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "verre…",
+          "mot": "verre"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Des petits morceaux assemblés… c'est la mosaïque !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Des",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "assemblés…",
+          "mot": "mosaïque",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "mosaïque",
+          "mot": "mosaïque"
+        },
+        {
+          "type": "pose",
+          "ancre": "mosaïque",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Lis le début, le reste suit.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Lis",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Lis",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "duree": 18.38,
+  "dureeVoix": 16.58,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.8,
+      "fin": 2.8
+    },
+    {
+      "id": "mots",
+      "debut": 2.8,
+      "finVoix": 7.18,
+      "fin": 8.16
+    },
+    {
+      "id": "chrono",
+      "debut": 8.16,
+      "finVoix": 10.64,
+      "fin": 11.6
+    },
+    {
+      "id": "reponse",
+      "debut": 11.6,
+      "finVoix": 14.04,
+      "fin": 14.96
+    },
+    {
+      "id": "appel",
+      "debut": 14.96,
+      "finVoix": 16.58,
+      "fin": 18.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.32
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.42
+    },
+    {
+      "texte": "montre",
+      "mot": "montre",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.6
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.92
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.1
+    },
+    {
+      "texte": "adjectifs.",
+      "mot": "adjectifs",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.64
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.52
+    },
+    {
+      "texte": "trouves ?",
+      "mot": "trouves",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 2.8
+    },
+    {
+      "texte": "Herbivores.",
+      "mot": "Herbivores",
+      "scene": 1,
+      "debut": 2.8,
+      "fin": 3.927
+    },
+    {
+      "texte": "Ongulés.",
+      "mot": "Ongulés",
+      "scene": 1,
+      "debut": 3.927,
+      "fin": 5.053
+    },
+    {
+      "texte": "Longues.",
+      "mot": "Longues",
+      "scene": 1,
+      "debut": 5.053,
+      "fin": 6.18
+    },
+    {
+      "texte": "Fine.",
+      "mot": "Fine",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.18
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 2,
+      "debut": 8.16,
+      "fin": 8.68
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 9.2,
+      "fin": 9.64
+    },
+    {
+      "texte": "un…",
+      "mot": "un",
+      "scene": 2,
+      "debut": 10.44,
+      "fin": 10.64
+    },
+    {
+      "texte": "L'âne !",
+      "mot": "L'âne",
+      "scene": 3,
+      "debut": 11.6,
+      "fin": 11.78
+    },
+    {
+      "texte": "Avec",
+      "mot": "Avec",
+      "scene": 3,
+      "debut": 12.44,
+      "fin": 12.66
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 3,
+      "debut": 12.66,
+      "fin": 12.84
+    },
+    {
+      "texte": "longues",
+      "mot": "longues",
+      "scene": 3,
+      "debut": 12.84,
+      "fin": 13.1
+    },
+    {
+      "texte": "oreilles",
+      "mot": "oreilles",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.4
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 13.4,
+      "fin": 13.5
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 3,
+      "debut": 13.5,
+      "fin": 13.62
+    },
+    {
+      "texte": "ouïe",
+      "mot": "ouïe",
+      "scene": 3,
+      "debut": 13.62,
+      "fin": 13.78
+    },
+    {
+      "texte": "fine.",
+      "mot": "fine",
+      "scene": 3,
+      "debut": 13.78,
+      "fin": 14.04
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 14.96,
+      "fin": 15.29
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 15.98,
+      "fin": 16.2
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 16.2,
+      "fin": 16.34
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.42
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 16.42,
+      "fin": 16.58
+    }
+  ]
+}

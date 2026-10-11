@@ -1,0 +1,192 @@
+{
+  "titre": "Dimanche culture classique",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Dimanche culture classique ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Dimanche",
+          "texte": "Dimanche culture classique",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Dimanche",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : qui a peint la Joconde ? Léonard de Vinci.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Léonard"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : qui a écrit Les Misérables ? Victor Hugo.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Victor"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : le roi des dieux dans la mythologie grecque ? Zeus.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Zeus"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous dimanche prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Tableaux célèbres",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a peint ce tableau ?",
+      "indiceType": "Tableau",
+      "indice": "La Joconde",
+      "reponse": "Léonard de Vinci",
+      "fiche": [
+        [
+          "Musée",
+          "Louvre, Paris"
+        ]
+      ]
+    },
+    {
+      "paquet": "Grands romans français",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a écrit ce roman ?",
+      "indiceType": "Roman",
+      "indice": "Les Misérables",
+      "reponse": "Victor Hugo",
+      "fiche": [
+        [
+          "Publication",
+          "1862"
+        ]
+      ]
+    },
+    {
+      "paquet": "Mythologie grecque",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui correspond à cette description ?",
+      "indiceType": "Description",
+      "indice": "Le roi des dieux",
+      "reponse": "Zeus",
+      "fiche": [
+        [
+          "Équivalent romain",
+          "Jupiter"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

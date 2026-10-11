@@ -1,0 +1,195 @@
+{
+  "titre": "The worst decision of my career",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 28
+  },
+  "objectif": "English version of destinyfc-05. Real event (blunder, age 17), option 'Crank up the intensity', real outcome 3-0 defeat. Verified: that option succeeds 55% of the time.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Embarrassed, funny confession at first, then storytelling. 'Three-nil' dropped flatly. Short pause before 'The worst part?'. Light ending."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "avatar",
+  "poseInitiale": "tete-main",
+  "cartes": {
+    "pire": {
+      "genre": "resultat",
+      "tag": "😖 PITCH",
+      "ton": "bad",
+      "texte": "You cough up another mistake and the team goes under: really not your night, a 3-0 defeat.",
+      "effets": [
+        "-8 Form",
+        "-8 Morale",
+        "-5 Coach relationship"
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 17,
+        "annee": 2027,
+        "poste": "milieu",
+        "note": 60,
+        "argent": "€0.1m",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 66,
+          "confiance": 55,
+          "pression": 38
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      },
+      "carte": "bevue"
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "The worst decision of my entire career? Let me show you.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "worst",
+          "texte": "😬",
+          "fin": "career"
+        },
+        {
+          "type": "disposition",
+          "ancre": "show",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "show",
+          "nom": "neutre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "blunder",
+      "voix": "Seventeen. I make a huge mistake, and they score.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "mistake",
+          "id": "bevue"
+        },
+        {
+          "type": "jauges",
+          "ancre": "score",
+          "moral": 58
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choice",
+      "voix": "So I decide to crank up the intensity to make up for it.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "crank",
+          "n": 2
+        },
+        {
+          "type": "pose",
+          "ancre": "crank",
+          "nom": "fier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "result",
+      "voix": "Another blunder. We lose three-nil.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "blunder",
+          "id": "pire"
+        },
+        {
+          "type": "pose",
+          "ancre": "lose",
+          "nom": "tete-main"
+        },
+        {
+          "type": "jauges",
+          "ancre": "lose",
+          "forme": 66,
+          "moral": 50
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "twist",
+      "voix": "The worst part? It had more than a fifty-fifty chance of working.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "worst",
+          "nom": "decu"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "chance",
+          "valeur": 55,
+          "suffixe": " %",
+          "sous": "chance of success",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "In Destiny FC, even a good choice can go wrong. Free on iPhone and Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "In",
+          "nom": "neutre"
+        },
+        {
+          "type": "fin",
+          "ancre": "Free"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

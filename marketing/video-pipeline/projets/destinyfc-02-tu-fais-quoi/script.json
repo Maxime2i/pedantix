@@ -1,0 +1,217 @@
+{
+  "titre": "Tu fais quoi ?",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 28
+  },
+  "objectif": "Engagement (commentaires) puis téléchargements. Moment décisif réel du jeu (finale de coupe nationale, data.js KEY_MOMENTS) : 4 options, compte à rebours, révélation. L'issue est aléatoire dans le jeu : on montre une issue possible (victoire), sans dire que c'était le « bon » choix.",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de défi joueur, complice. Pause marquée après « Tu fais quoi ? ». Les quatre options énumérées vite et clairement. Compte à rebours lent et tendu. Explosion de joie sur « la coupe est à nous »."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 19,
+        "annee": 2029,
+        "poste": "milieu",
+        "note": 66,
+        "argent": "0,6 M€",
+        "etoiles": 2,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Sochaux",
+        "couleurs": [
+          "#f5c400",
+          "#1a4fb5"
+        ]
+      },
+      "carte": {
+        "genre": "moment",
+        "tag": "🎯 MOMENT DÉCISIF",
+        "titre": "Finale de la coupe nationale",
+        "texte": "Finale, 1-0 pour Sochaux, dix dernières minutes à n'en plus finir. Le coach vous somme de tuer le match — reste à trouver la manière.",
+        "options": [
+          {
+            "indice": "Roublard",
+            "texte": "Faire mourir le ballon près du poteau de corner"
+          },
+          {
+            "indice": "Toro",
+            "texte": "Garder le ballon, passe après passe"
+          },
+          {
+            "texte": "Aller chercher le 2-0 pour sceller l'affaire"
+          },
+          {
+            "texte": "Casser le rythme à coups de fautes malines"
+          }
+        ]
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "situation",
+      "voix": "Finale de coupe. Tu mènes d'un but, et il reste dix minutes à tenir.",
+      "animation": "Tableau de score 1–0, 80e.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Finale"
+        },
+        {
+          "type": "tableau",
+          "ancre": "Finale",
+          "titre": "Finale · Coupe nationale",
+          "domicile": {
+            "nom": "Sochaux",
+            "couleurs": [
+              "#f5c400",
+              "#1a4fb5"
+            ]
+          },
+          "exterieur": {
+            "nom": "Nantes",
+            "couleurs": [
+              "#f5c400",
+              "#1e8a3c"
+            ]
+          },
+          "score": [
+            1,
+            0
+          ],
+          "minute": 80
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "question",
+      "voix": "Le coach veut que tu tues le match. Tu fais quoi ?",
+      "animation": "Carte « Moment décisif ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Le"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "options",
+      "voix": "Un : gagner du temps au corner. Deux : garder le ballon. Trois : chercher le deuxième but. Quatre : les fautes malines.",
+      "animation": "Doigt sur chaque option.",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "Un",
+          "cible": "p-opt-1"
+        },
+        {
+          "type": "appui",
+          "ancre": "Deux",
+          "cible": "p-opt-2"
+        },
+        {
+          "type": "appui",
+          "ancre": "Trois",
+          "cible": "p-opt-3"
+        },
+        {
+          "type": "appui",
+          "ancre": "Quatre",
+          "cible": "p-opt-4"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "decompte",
+      "voix": "Réfléchis bien. Trois… deux… un.",
+      "animation": "Compte à rebours.",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "Trois",
+          "valeur": 1,
+          "depart": 3,
+          "montee": 1.6,
+          "sous": "Choisis !",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "reponse",
+      "voix": "Moi, j'ai gardé le ballon. Et la coupe est à nous !",
+      "animation": "Option 2, victoire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "gardé",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "coupe",
+          "id": "finale-gagnee"
+        },
+        {
+          "type": "tampon",
+          "ancre": "nous",
+          "texte": "Champion",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Toi, t'aurais choisi quoi ? Dis-le en commentaire. Destiny FC, gratuit.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Toi",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Toi",
+          "nom": "clin"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

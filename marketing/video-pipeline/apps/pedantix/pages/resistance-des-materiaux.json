@@ -1,0 +1,13 @@
+{
+  "titre": "Résistance des matériaux",
+  "texte": [
+    "La résistance des matériaux est une discipline particulière de la mécanique des milieux continus, permettant le calcul des contraintes et déformations dans les structures des différents matériaux.",
+    "La RDM permet de ramener l'étude du comportement global d'une structure à celle du comportement local des matériaux le composant. L'objectif est de concevoir la structure suivant des critères de résistance, de déformation admissible et de coût financier acceptable.",
+    "Lorsque l'intensité de la contrainte augmente, il y a d'abord déformation élastique, suivie parfois d'une déformation plastique, et enfin rupture."
+  ],
+  "titreMots": [
+    "résistance",
+    "des",
+    "matériaux"
+  ]
+}

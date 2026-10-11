@@ -1,0 +1,131 @@
+{
+  "titre": "Pourquoi on voit toujours la même face de la Lune",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton fasciné et posé, presque contemplatif au début, plus vif sur la révélation. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tu as remarqué ? On voit toujours la même face de la Lune.",
+      "animation": "",
+      "image": "La pleine Lune vue depuis la Terre, très détaillée, cratères et mers lunaires visibles, sur un ciel noir étoilé.",
+      "actions": [
+        {
+          "type": "photo",
+          "ancre": "Tu",
+          "image": "scene-01.png",
+          "legende": "On voit toujours la même face"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "synchrone",
+      "voix": "Elle tourne sur elle-même exactement dans le temps qu'elle met à faire le tour de la Terre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "tourne",
+          "texte": "Rotation synchrone",
+          "sous": "un tour sur elle-même = un tour de la Terre, ≈ 27 jours",
+          "fin": "Terre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cachee",
+      "voix": "Et la face cachée n'est pas sombre : elle est éclairée autant que l'autre.",
+      "animation": "",
+      "image": "La face cachée de la Lune telle que photographiée par une sonde spatiale : disque entièrement éclairé, surface claire et grise couverte de très nombreux cratères, presque aucune mer sombre (pas de grandes taches noires), fond noir.",
+      "actions": [
+        {
+          "type": "photo",
+          "ancre": "Et",
+          "image": "scene-03.png",
+          "legende": "La face cachée… n’est pas sombre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Des faits comme ça, il y en a des milliers dans Culture First.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Des"
+        },
+        {
+          "type": "zoom",
+          "ancre": "faits",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "milliers"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "L'espace",
+      "theme": "Sciences et Techniques",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Pourquoi voit-on toujours la même face de la Lune ?",
+      "indiceType": null,
+      "indice": null,
+      "reponse": "Rotation synchrone",
+      "fiche": [
+        [
+          "Durée",
+          "≈ 27 jours"
+        ]
+      ]
+    }
+  ],
+  "styleImages": "photographie astronomique réaliste, très détaillée"
+}

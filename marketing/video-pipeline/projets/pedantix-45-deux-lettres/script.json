@@ -1,0 +1,142 @@
+{
+  "titre": "Un titre de 2 lettres",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Défi : la page au titre le plus court.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Ob",
+    "texte": [
+      "L'Ob ou Obi est un fleuve de Russie. Il est le plus occidental des trois grands cours d'eau de Sibérie. À l'instar de l'Ienisseï et de la Léna, l'Ob, né dans l'Altaï et se jetant par un vaste estuaire, le golfe de l'Ob, dans la mer de Kara, s'écoule vers l'océan Arctique et arrose des espaces majoritairement caractérisés par les faibles altitudes, notamment lors de son passage dans la péninsule de Yamal."
+    ],
+    "titreMots": [
+      "ob"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Samedi 6 septembre"
+  },
+  "dispositionInitiale": "coin",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le titre fait deux lettres. Bonne chance.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Le",
+          "cible": "titre"
+        },
+        {
+          "type": "case",
+          "ancre": "deux",
+          "mot": "ob",
+          "dans": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "chance.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "indices",
+      "voix": "Un fleuve… en Sibérie… qui finit dans l'océan Arctique…",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "article",
+          "echelle": 1.2,
+          "hauteur": 860
+        },
+        {
+          "type": "envoyer",
+          "ancre": "fleuve…",
+          "mot": "fleuve"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Sibérie…",
+          "mot": "sibérie"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "l'océan",
+          "mot": "océan"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Arctique…",
+          "mot": "arctique"
+        },
+        {
+          "type": "pose",
+          "ancre": "Arctique…",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "C'est l'Ob ! Un des grands fleuves de Russie.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "C'est",
+          "cible": "titre"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "l'Ob"
+        },
+        {
+          "type": "pose",
+          "ancre": "l'Ob",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Deux lettres, et des milliers de kilomètres.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Deux",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Deux",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

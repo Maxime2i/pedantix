@@ -1,0 +1,438 @@
+{
+  "duree": 21.54,
+  "dureeVoix": 19.74,
+  "scenes": [
+    {
+      "id": "pov",
+      "debut": 0.0,
+      "finVoix": 5.32,
+      "fin": 6.06
+    },
+    {
+      "id": "anecdote",
+      "debut": 6.06,
+      "finVoix": 10.98,
+      "fin": 11.8
+    },
+    {
+      "id": "merci",
+      "debut": 11.8,
+      "finVoix": 15.38,
+      "fin": 15.38
+    },
+    {
+      "id": "appel",
+      "debut": 15.38,
+      "finVoix": 19.74,
+      "fin": 21.54
+    }
+  ],
+  "mots": [
+    {
+      "texte": "POV :",
+      "mot": "POV",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.68
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.9
+    },
+    {
+      "texte": "soirée,",
+      "mot": "soirée",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.3
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.72
+    },
+    {
+      "texte": "pote",
+      "mot": "pote",
+      "scene": 0,
+      "debut": 1.72,
+      "fin": 1.94
+    },
+    {
+      "texte": "sort",
+      "mot": "sort",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.1
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 2.1,
+      "fin": 2.26
+    },
+    {
+      "texte": "anecdote…",
+      "mot": "anecdote",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 3.18,
+      "fin": 3.44
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 0,
+      "debut": 3.44,
+      "fin": 3.64
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 4.14,
+      "fin": 4.26
+    },
+    {
+      "texte": "connais",
+      "mot": "connais",
+      "scene": 0,
+      "debut": 4.26,
+      "fin": 4.52
+    },
+    {
+      "texte": "déjà",
+      "mot": "déjà",
+      "scene": 0,
+      "debut": 4.52,
+      "fin": 4.98
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 4.98,
+      "fin": 5.12
+    },
+    {
+      "texte": "suite.",
+      "mot": "suite",
+      "scene": 0,
+      "debut": 5.12,
+      "fin": 5.32
+    },
+    {
+      "texte": "« Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.3
+    },
+    {
+      "texte": "savais",
+      "mot": "savais",
+      "scene": 1,
+      "debut": 6.3,
+      "fin": 6.56
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 6.56,
+      "fin": 6.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.64,
+      "fin": 6.74
+    },
+    {
+      "texte": "pieuvre",
+      "mot": "pieuvre",
+      "scene": 1,
+      "debut": 6.74,
+      "fin": 6.98
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 6.98,
+      "fin": 7.08
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 1,
+      "debut": 7.08,
+      "fin": 7.24
+    },
+    {
+      "texte": "cœurs ? »",
+      "mot": "cœurs",
+      "scene": 1,
+      "debut": 7.24,
+      "fin": 8.18
+    },
+    {
+      "texte": "Oui.",
+      "mot": "Oui",
+      "scene": 1,
+      "debut": 8.18,
+      "fin": 8.42
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 1,
+      "debut": 9.0,
+      "fin": 9.16
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 1,
+      "debut": 9.16,
+      "fin": 9.44
+    },
+    {
+      "texte": "sang",
+      "mot": "sang",
+      "scene": 1,
+      "debut": 9.44,
+      "fin": 9.62
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 9.62,
+      "fin": 9.74
+    },
+    {
+      "texte": "bleu,",
+      "mot": "bleu",
+      "scene": 1,
+      "debut": 9.74,
+      "fin": 10.02
+    },
+    {
+      "texte": "grâce",
+      "mot": "grâce",
+      "scene": 1,
+      "debut": 10.3,
+      "fin": 10.54
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 10.54,
+      "fin": 10.7
+    },
+    {
+      "texte": "cuivre.",
+      "mot": "cuivre",
+      "scene": 1,
+      "debut": 10.7,
+      "fin": 10.98
+    },
+    {
+      "texte": "Merci",
+      "mot": "Merci",
+      "scene": 2,
+      "debut": 11.8,
+      "fin": 12.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 12.02,
+      "fin": 12.36
+    },
+    {
+      "texte": "First :",
+      "mot": "First",
+      "scene": 2,
+      "debut": 12.36,
+      "fin": 12.76
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 2,
+      "debut": 13.3,
+      "fin": 13.46
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 2,
+      "debut": 13.46,
+      "fin": 13.68
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 2,
+      "debut": 13.68,
+      "fin": 13.88
+    },
+    {
+      "texte": "jour",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 13.88,
+      "fin": 14.04
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 2,
+      "debut": 14.04,
+      "fin": 14.16
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 14.16,
+      "fin": 14.24
+    },
+    {
+      "texte": "métro,",
+      "mot": "métro",
+      "scene": 2,
+      "debut": 14.24,
+      "fin": 14.52
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 14.92,
+      "fin": 14.98
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 2,
+      "debut": 14.98,
+      "fin": 15.1
+    },
+    {
+      "texte": "reste.",
+      "mot": "reste",
+      "scene": 2,
+      "debut": 15.1,
+      "fin": 15.38
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 16.0
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 16.0,
+      "fin": 16.16
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 16.16,
+      "fin": 16.34
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 16.34,
+      "fin": 16.52
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 16.52,
+      "fin": 16.7
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 3,
+      "debut": 16.7,
+      "fin": 17.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 17.5,
+      "fin": 17.84
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 3,
+      "debut": 17.84,
+      "fin": 18.26
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 18.52,
+      "fin": 18.94
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 18.94,
+      "fin": 19.12
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 19.12,
+      "fin": 19.32
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 19.32,
+      "fin": 19.5
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 19.5,
+      "fin": 19.74
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pédantix · animation</title>
+<style>
+/*
+  Module d'app Pédantix (1080 × 1920). Ouvrir avec ?projet=<dossier>.
+  Écrans repris du code de l'app (app/src) : jeu (page masquée, saisie, retour,
+  progression), feuille de résultat, historique, réglages, écran verrouillé avec
+  la notification de midi. Avatar sticker de Maxime (poses PNG, synchro labiale),
+  quatre dispositions (avatar, duo, coin, telephone), cartes, tampon, chrono,
+  bulle, liste, chiffre, message partagé, décor par scène.
+  Tout est piloté par renderAt(t). Doc : README.md.
+*/
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #111; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--fond); color: var(--encre); font-family: var(--texte); }
+#stage::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 45% at 50% 55%, rgb(255 255 255 / .38), transparent 70%); }
+#fond { position: absolute; inset: 0; z-index: 1; opacity: 0; background-size: cover; background-position: center; }
+#fond::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgb(242 181 68 / .12), rgb(36 31 26 / .18)); }
+
+/* Marque en haut (sous la zone d'interface de TikTok) */
+#brand { position: absolute; top: 175px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 22px; z-index: 6; }
+#brand img { width: 74px; height: 74px; border-radius: 18px; box-shadow: 0 8px 20px rgb(80 40 10 / .25); }
+#brand span { font-family: var(--titre); font-weight: 800; font-size: 58px; letter-spacing: -0.01em; }
+#brand.sur-fond span { color: var(--creme); text-shadow: 0 4px 18px rgb(0 0 0 / .55); }
+#ff { position: absolute; top: 278px; left: 50%; translate: -50% 0; z-index: 6; background: var(--encre); color: var(--fond); border-radius: 999px; padding: 10px 30px; font-weight: 800; font-size: 34px; letter-spacing: .04em; opacity: 0; }
+
+/* Téléphone : #camera (zooms) > #poste (disposition) > #phone */
+#camera { position: absolute; inset: 0; z-index: 3; transform-origin: 0 0; }
+#poste { position: absolute; inset: 0; transform-origin: 540px 380px; }
+#phone { position: absolute; left: 81px; top: 380px; background: #0B0B0C; padding: 26px; border-radius: 150px; box-shadow: 0 60px 120px rgb(80 40 10 / .45), inset 0 0 0 6px #2B2B2E; }
+#viewport { width: calc(393px * 2.2); height: calc(852px * 2.2); border-radius: 124px; overflow: hidden; position: relative; }
+.screen { width: 393px; height: 852px; transform: scale(2.2); transform-origin: top left; position: relative; overflow: hidden; background: var(--a-bg); color: var(--a-text); font-family: -apple-system, "SF Pro Text", var(--texte); }
+.island { position: absolute; top: 11px; left: 50%; translate: -50% 0; width: 124px; height: 36px; border-radius: 20px; background: #000; z-index: 30; }
+.status { position: absolute; top: 0; left: 0; right: 0; z-index: 29; height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 6px 34px 0 46px; font-size: 17px; font-weight: 600; }
+.status .bars { display: flex; gap: 6px; align-items: center; }
+.status b { display: inline-block; width: 27px; height: 13px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; }
+.status b::after { content: ""; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+.home-ind { position: absolute; bottom: 8px; left: 50%; translate: -50% 0; width: 140px; height: 5px; border-radius: 3px; background: var(--a-text); z-index: 29; }
+.view { position: absolute; inset: 0; padding-top: 54px; background: var(--a-bg); visibility: hidden; }
+svg.ic { display: block; }
+
+/* Jeu (app/src/app/index.tsx) */
+.g-head { display: flex; align-items: center; gap: 10px; padding: 6px 20px 10px; }
+.brandapp { font-family: var(--titre); font-weight: 700; font-size: 30px; line-height: 36px; }
+.meta { font-size: 13px; color: var(--a-muted); }
+.hbtn { width: 38px; height: 38px; border-radius: 19px; background: var(--a-card); border: .5px solid var(--a-soft); display: grid; place-items: center; position: relative; color: var(--a-text); }
+.badge { position: absolute; top: -4px; right: -6px; min-width: 18px; height: 18px; border-radius: 9px; padding: 0 4px; background: var(--a-accent); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+.prog { display: flex; align-items: center; gap: 10px; padding: 0 20px 10px; }
+.bar { flex: 1; height: 6px; border-radius: 3px; background: var(--a-soft); overflow: hidden; display: flex; }
+.bar .g { background: var(--a-green); } .bar .o { background: var(--a-accent); opacity: .75; }
+.pct { font-size: 12px; color: var(--a-muted); min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; }
+.body { padding: 4px 16px 24px; display: flex; flex-direction: column; gap: 14px; }
+.input { height: 48px; border-radius: 24px; background: var(--a-card); display: flex; align-items: center; padding: 0 5px 0 16px; font-size: 17px; }
+.input .val { flex: 1; }
+.input .ph { color: var(--a-muted); }
+.caret { display: inline-block; width: 2px; height: 20px; background: var(--a-accent); vertical-align: -4px; margin-left: 1px; }
+.send { width: 38px; height: 38px; border-radius: 19px; display: grid; place-items: center; }
+.fb { display: flex; align-items: center; gap: 6px; padding: 0 16px; margin-top: -6px; font-size: 14px; min-height: 18px; }
+.solved { display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: 14px; border: .5px solid var(--a-border); background: var(--a-tint); }
+.ptitle { font-family: var(--titre); font-weight: 600; font-size: 28px; line-height: 46px; padding: 0 4px; }
+.article { background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 16px; padding: 16px; font-size: 17px; line-height: 31px; }
+.article p { margin: 0 0 14px; } .article p:last-child { margin: 0; }
+.w { display: inline-block; }
+.box { display: inline-block; vertical-align: -0.24em; height: 1.3em; border-radius: 5px; margin: 0 1px; background: var(--a-blank); text-align: center; font-weight: 600; line-height: 1.3em; white-space: nowrap; overflow: hidden; color: transparent; font-size: .85em; }
+.fresh { background: var(--a-fresh); border-radius: 4px; }
+
+/* Feuille de résultat (app/src/app/result.tsx) */
+#res { position: absolute; inset: 0; z-index: 20; display: none; }
+#res .bg { position: absolute; inset: 0; background: rgb(36 31 26 / .45); }
+#res .sheet { position: absolute; left: 0; right: 0; top: 64px; bottom: 0; background: var(--a-bg); border-radius: 14px 14px 0 0; padding: 8px 0 0; }
+.grab { width: 36px; height: 5px; border-radius: 3px; background: var(--a-border); margin: 0 auto; }
+.hero { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 26px 24px 20px; }
+.trophy { width: 112px; height: 112px; border-radius: 24px; background: var(--a-tint); display: grid; place-items: center; margin-bottom: 10px; color: var(--a-accent); }
+.tiles { display: flex; gap: 10px; padding: 0 16px; }
+.tile { flex: 1; background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 14px; padding: 14px 0; text-align: center; }
+.tile b { display: block; font-family: var(--titre); font-weight: 700; font-size: 24px; }
+.tile span { font-size: 12px; color: var(--a-muted); }
+.pbtn { height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600; font-size: 17px; }
+
+/* Historique et réglages */
+.navtitle { font-size: 34px; font-weight: 700; letter-spacing: -0.4px; padding: 8px 16px 12px; }
+.stats { display: flex; margin: 8px 16px 24px; border-radius: 14px; border: .5px solid var(--a-soft); background: var(--a-card); padding: 14px 0; }
+.stats div { flex: 1; text-align: center; } .stats div + div { border-left: .5px solid var(--a-border); }
+.stats b { display: block; font-family: var(--titre); font-weight: 700; font-size: 26px; } .stats span { font-size: 12px; color: var(--a-muted); }
+.sectitle { font-size: 13px; font-weight: 500; color: var(--a-muted); margin: 0 0 6px 32px; letter-spacing: .3px; text-transform: uppercase; }
+.rows { margin: 0 16px 24px; border-radius: 12px; border: .5px solid var(--a-soft); background: var(--a-card); overflow: hidden; }
+.hrow { display: flex; align-items: center; gap: 12px; padding: 11px 14px; }
+.hrow + .hrow { border-top: .5px solid var(--a-soft); }
+.hrow .t { font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hrow .s { font-size: 13px; color: var(--a-muted); margin-top: 2px; }
+.pill { border-radius: 999px; padding: 4px 10px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.srow { display: flex; align-items: center; gap: 12px; padding: 12px 16px; min-height: 50px; font-size: 17px; }
+.srow + .srow { border-top: .5px solid var(--a-soft); }
+.seg { display: flex; background: var(--a-soft); border-radius: 9px; padding: 2px; margin: 0 16px 14px; }
+.seg span { flex: 1; text-align: center; padding: 6px 0; font-size: 14px; font-weight: 600; border-radius: 7px; color: var(--a-muted); }
+.seg span.on { background: var(--a-card); color: var(--a-text); box-shadow: 0 1px 3px rgb(0 0 0 / .15); }
+.switch { width: 51px; height: 31px; border-radius: 16px; background: var(--a-soft); position: relative; flex: none; }
+.switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; border-radius: 14px; background: #fff; box-shadow: 0 2px 4px rgb(0 0 0 / .2); }
+.switch.on { background: var(--a-green); } .switch.on::after { left: 22px; }
+
+/* Écran verrouillé + notification de midi (app/src/notifications.ts) */
+.wall { position: absolute; inset: 0; background: radial-gradient(120% 70% at 30% 10%, #F6C766, #D9782F 55%, #7A3518); }
+.lock-time { position: absolute; top: 96px; left: 0; right: 0; text-align: center; color: #fff; }
+.lock-time small { display: block; font-size: 19px; font-weight: 600; opacity: .9; }
+.lock-time small::first-letter { text-transform: uppercase; }
+.lock-time b { display: block; font-size: 92px; font-weight: 700; letter-spacing: -2px; line-height: 1.05; }
+#notif { position: absolute; left: 8px; right: 8px; top: 230px; z-index: 18; background: rgb(250 247 242 / .96); border-radius: 22px; padding: 12px 14px; display: none; gap: 10px; align-items: center; box-shadow: 0 10px 30px rgb(0 0 0 / .25); color: #1c1c1e; }
+#notif img { width: 38px; height: 38px; border-radius: 9px; flex: none; }
+#notif .nh { display: flex; justify-content: space-between; font-size: 12px; color: #6d6d72; }
+#notif b { display: block; font-size: 15px; margin-top: 1px; }
+#notif span.nb { font-size: 15px; color: #3c3c43; line-height: 1.25; display: block; }
+.tap { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgb(25 25 23 / .25); border: 2px solid rgb(255 255 255 / .85); pointer-events: none; display: none; z-index: 31; }
+
+/* Avatar (poses PNG 1024², même cadrage) */
+#avatar { position: absolute; left: 0; top: 0; z-index: 4; transform-origin: 50% 100%; pointer-events: none; }
+#avatar img { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Superpositions */
+#bulle { position: absolute; z-index: 6; background: #fff; color: var(--encre); border-radius: 48px; padding: 26px 46px; font-weight: 800; font-size: 60px; line-height: 1.12; box-shadow: 0 24px 60px rgb(60 30 5 / .3); display: none; text-align: center; max-width: 760px; }
+#bulle::after { content: ""; position: absolute; left: var(--queue, 50%); bottom: -20px; width: 44px; height: 44px; margin-left: -22px; background: inherit; rotate: 45deg; border-radius: 6px; }
+#bulle.pensee { border-radius: 70px; }
+#bulle.pensee::after { width: 34px; height: 34px; border-radius: 50%; bottom: -46px; rotate: 0deg; box-shadow: -26px 34px 0 -6px #fff; }
+#titre, #liste { position: absolute; left: 70px; right: 140px; top: 330px; z-index: 5; background: var(--creme); color: var(--encre); border-radius: 56px; padding: 64px 70px 70px; box-shadow: 0 40px 90px rgb(80 40 10 / .35); display: none; flex-direction: column; align-items: center; gap: 26px; text-align: center; }
+#titre .num { min-width: 150px; height: 150px; padding: 0 30px; border-radius: 75px; background: var(--accent); color: var(--creme); display: grid; place-items: center; font-family: var(--titre); font-weight: 800; font-size: 84px; }
+#titre h2, #liste h2 { margin: 0; font-family: var(--titre); font-weight: 800; font-size: 88px; line-height: 1.02; letter-spacing: -0.02em; }
+#titre p { margin: 0; font-size: 48px; font-weight: 700; color: #6F6151; line-height: 1.2; }
+#liste { align-items: stretch; text-align: left; gap: 22px; }
+#liste h2 { font-size: 70px; text-align: center; margin-bottom: 10px; }
+#liste .pt { display: flex; gap: 26px; align-items: center; font-size: 50px; font-weight: 700; line-height: 1.15; }
+#liste .pt i { flex: none; width: 84px; height: 84px; border-radius: 42px; background: var(--accent); color: var(--creme); display: grid; place-items: center; font-style: normal; font-family: var(--titre); font-weight: 800; font-size: 48px; }
+#tampon { position: absolute; left: 500px; top: 760px; z-index: 7; translate: -50% -50%; border: 16px solid; border-radius: 34px; padding: 10px 50px; font-family: var(--texte); font-weight: 800; font-size: 150px; letter-spacing: .04em; display: none; white-space: nowrap; background: rgb(255 255 255 / .92); box-shadow: 0 30px 60px rgb(0 0 0 / .3); }
+#chrono { position: absolute; left: 520px; top: 165px; z-index: 7; width: 230px; height: 230px; translate: -50% 0; display: none; }
+#chrono svg { position: absolute; inset: 0; }
+#chrono b { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--titre); font-weight: 800; font-size: 120px; color: var(--creme); }
+#chiffre { position: absolute; left: 70px; right: 140px; top: 420px; z-index: 5; display: none; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+#chiffre b { white-space: nowrap; font-family: var(--titre); font-weight: 800; font-size: 170px; line-height: 1; color: var(--accent); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+#chiffre b small { font-size: 80px; }
+#chiffre span { font-size: 60px; font-weight: 800; color: var(--encre); line-height: 1.15; }
+#partage { position: absolute; left: 90px; right: 160px; top: 380px; z-index: 6; display: none; flex-direction: column; gap: 14px; }
+#partage .msg { align-self: flex-start; background: #fff; color: #1c1c1e; border-radius: 46px 46px 46px 12px; padding: 30px 40px; font-size: 46px; line-height: 1.3; font-family: -apple-system, var(--texte); box-shadow: 0 20px 50px rgb(0 0 0 / .25); }
+#partage .lien { color: #0A66D8; }
+#partage .carres { font-size: 40px; letter-spacing: 2px; line-height: 1.6; }
+
+/* Sous-titres (zone sûre) */
+#subs { position: absolute; left: 150px; right: 150px; bottom: 395px; z-index: 8; display: flex; justify-content: center; align-items: flex-end; }
+#subs .grp { background: var(--encre); color: var(--creme); border-radius: 28px; padding: 18px 34px; font-family: var(--texte); font-weight: 800; font-size: 62px; line-height: 1.12; text-align: center; box-shadow: 0 20px 50px rgb(40 20 5 / .35); transform-origin: 50% 100%; }
+#subs .now { color: var(--fond); }
+
+/* Carte de fin */
+#end { position: absolute; inset: 0; z-index: 9; background: var(--fond); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding-bottom: 420px; }
+#end::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 35%, rgb(255 255 255 / .45), transparent 70%); }
+#end > * { position: relative; }
+#end img.logo { width: 260px; height: 260px; border-radius: 60px; box-shadow: 0 30px 70px rgb(80 40 10 / .35); }
+#end h1 { margin: 0; font-family: var(--titre); font-weight: 800; font-size: 150px; letter-spacing: -0.02em; line-height: 1; }
+#end p { margin: 0; font-family: var(--titre); font-weight: 700; font-style: italic; font-size: 66px; color: var(--accent); text-align: center; line-height: 1.1; }
+#end .detail { font-size: 44px; font-weight: 700; opacity: .8; }
+#end .pill { background: var(--encre); color: var(--creme); border-radius: 999px; padding: 22px 48px; font-weight: 800; font-size: 46px; display: flex; align-items: center; gap: 18px; }
+#end-av { position: absolute !important; left: -40px; bottom: -30px; width: 560px; height: 560px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="fond"></div>
+  <div id="brand"><img data-logo alt=""><span data-texte>Pédantix</span></div>
+  <div id="ff" data-texte>⏩ ACCÉLÉRÉ</div>
+  <div id="camera"><div id="poste"><div id="phone"><div id="viewport"><div class="screen" id="screen">
+    <div class="island"></div>
+    <div class="status" id="status"><span id="heure"></span><span class="bars"><svg class="ic" width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><b></b></span></div>
+    <div class="view" id="v-jeu"></div>
+    <div class="view" id="v-historique"></div>
+    <div class="view" id="v-reglages"></div>
+    <div class="view" id="v-verrouillage"></div>
+    <div id="res"><div class="bg"></div><div class="sheet" id="sheet"></div></div>
+    <div id="notif"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>PÉDANTIX</span><span>maintenant</span></div><b id="n-titre"></b><span class="nb" id="n-texte"></span></div></div>
+    <div class="tap" id="tap"></div>
+    <div class="home-ind" id="homeind"></div>
+  </div></div></div></div></div>
+  <div id="avatar"><img id="av-img" alt=""><img id="av-bouche" alt="" src="avatar/neutre-bouche-ouverte.png"></div>
+  <div id="titre"><div class="num" id="t-num" data-texte></div><h2 id="t-texte" data-texte></h2><p id="t-sous" data-texte></p></div>
+  <div id="liste"><h2 id="l-titre" data-texte></h2><div id="l-points"></div></div>
+  <div id="chiffre"><b id="ch-n" data-texte></b><span id="ch-sous" data-texte></span></div>
+  <div id="partage"><div class="msg" id="p-msg" data-texte></div></div>
+  <div id="bulle" data-texte></div>
+  <div id="tampon" data-texte></div>
+  <div id="chrono"><svg width="230" height="230"><circle cx="115" cy="115" r="100" fill="rgb(36 31 26 / .9)" stroke="rgb(255 255 255 / .2)" stroke-width="14"/><circle id="c-arc" cx="115" cy="115" r="100" fill="none" stroke="#F2B544" stroke-width="14" stroke-linecap="round" transform="rotate(-90 115 115)"/></svg><b id="c-n" data-texte></b></div>
+  <div id="subs"></div>
+  <div id="end"><img class="logo" data-logo alt=""><h1>Pédantix</h1><p id="promesse"></p><div class="detail" id="detail"></div><div class="pill" id="cta"></div><img id="end-av" alt=""></div>
+</div>
+<script type="module">
+import { appliquerCharte, back, camera, carteFin, chargerProjet, clamp, demarrer, ease, lastAction, lerp, sousTitres, transformCamera } from "/pipeline/scene.js";
+import { gameState } from "/pipeline/moteur.js";
+import { DEMO, POSES, THEMES } from "./demo.js";
+
+const { projet, script, timings, charte, tl } = await chargerProjet();
+const $ = (id) => document.getElementById(id);
+appliquerCharte(charte, $("stage"));
+const fin = { promesse: "Une nouvelle page<br>chaque midi", detail: "", cta: "Gratuit sur l’App Store", pose: "salut", ...script.fin };
+$("promesse").innerHTML = fin.promesse;
+$("detail").textContent = fin.detail;
+$("detail").style.display = fin.detail ? "" : "none";
+$("cta").textContent = fin.cta;
+
+const fusion = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === "object" && !Array.isArray(v) && a?.[k] && typeof a[k] === "object" ? fusion(a[k], v) : v; return o; };
+const DATA = fusion(DEMO, script.ecrans ?? {});
+if (script.page?.date && !script.ecrans?.verrouillage?.date) DATA.verrouillage.date = script.page.date.toLowerCase();
+const fr = (x) => (x ?? "").replace(/ ([?!:;»])/g, " $1").replace(/« /g, "« ");
+const PAGE = { titre: "", texte: [], titreMots: [], revelations: {}, proches: {}, dejaTrouves: [], ...script.page };
+// Petits mots déjà révélés, comme après les premiers essais d'une vraie partie (désactiver : "motsOutils": false).
+const MOTS_OUTILS = ["le", "la", "les", "l", "de", "des", "du", "d", "un", "une", "et", "est", "à", "au", "aux", "en", "qui", "que", "qu", "dans", "par", "pour", "sur", "avec", "son", "sa", "ses", "il", "elle", "ils", "ce", "c", "se", "s", "ou", "plus", "a", "sont", "comme", "y", "ne", "pas", "mais"];
+if (PAGE.motsOutils !== false) PAGE.dejaTrouves = [...new Set([...PAGE.dejaTrouves, ...MOTS_OUTILS.filter((m) => !PAGE.titreMots.includes(m))])];
+const DATE = PAGE.date ?? DATA.jeu.date;
+
+// ---------- Icônes (équivalents SF Symbols) ----------
+const svg = (d, size = 18, extra = "") => `<svg class="ic" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${d}</svg>`;
+const IC = {
+  liste: svg('<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1" fill="currentColor"/><circle cx="4.5" cy="12" r="1" fill="currentColor"/><circle cx="4.5" cy="18" r="1" fill="currentColor"/>'),
+  calendrier: svg('<rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/>'),
+  reglages: svg('<circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/>'),
+  fleche: svg('<path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/>', 18, 'stroke-width="2.6"'),
+  trouve: svg('<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.4"/>', 15),
+  proche: svg('<circle cx="12" cy="12" r="9.5"/><path d="M12 2.5a9.5 9.5 0 0 0 0 19z" fill="currentColor"/>', 15),
+  absent: svg('<circle cx="12" cy="12" r="9.5"/><path d="m8.5 8.5 7 7M15.5 8.5l-7 7"/>', 15),
+  trophee: svg('<path d="M7 4h10v5a5 5 0 0 1-10 0z" fill="currentColor"/><path d="M7 6H4v1.5A3.5 3.5 0 0 0 7.5 11M17 6h3v1.5a3.5 3.5 0 0 1-3.5 3.5M12 14v3.5M8 20.5h8M9.5 17.5h5"/>', 44),
+  partager: svg('<path d="M12 15V3.5M7.5 8 12 3.5 16.5 8"/><path d="M8 11H6.5A1.5 1.5 0 0 0 5 12.5v7A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-7a1.5 1.5 0 0 0-1.5-1.5H16"/>', 18),
+  safari: svg('<circle cx="12" cy="12" r="9.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>', 18),
+  chevron: svg('<path d="m9 5.5 6.5 6.5L9 18.5"/>', 14),
+  sortie: svg('<path d="M8 16 16 8M9.5 8H16v6.5"/>', 12),
+};
+
+// ---------- Écran de jeu : page tokenisée une fois ----------
+const TOK = /[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu;
+const tokens = [];
+const tokHtml = (text, titre) => text.replace(TOK, (w) => { tokens.push({ id: tokens.length, k: w.toLowerCase(), w, titre }); return `<span class="w" id="k${tokens.length - 1}"></span>`; });
+const titreHtml = tokHtml(PAGE.titre, true);
+const texteHtml = PAGE.texte.map((p) => `<p>${tokHtml(p, false)}</p>`).join("");
+$("v-jeu").innerHTML = `
+  <div class="g-head"><div style="flex:1;min-width:0"><div class="brandapp">Pédantix</div><div class="meta">${DATE}</div></div>
+    <span class="hbtn" id="h-essais">${IC.liste}<span class="badge" id="badge"></span></span><span class="hbtn" id="h-historique">${IC.calendrier}</span><span class="hbtn" id="h-reglages">${IC.reglages}</span></div>
+  <div class="prog" id="progression"><div class="bar"><i class="g" id="bar-g"></i><i class="o" id="bar-o"></i><i id="bar-r"></i></div><span class="pct" id="pct"></span></div>
+  <div class="body" id="defile">
+    <div class="input" id="saisie"><span class="val" id="val"></span><span class="send" id="send">${IC.fleche}</span></div>
+    <div class="fb" id="feedback"></div>
+    <div class="solved" id="solved" style="display:none"><span style="color:var(--a-accent)">${IC.trophee.replace('width="44" height="44"', 'width="22" height="22"')}</span><div style="flex:1"><div style="font-size:16px;font-weight:700" id="sv-t"></div><div class="meta" id="sv-s"></div></div><span style="color:var(--a-muted)">${IC.chevron}</span></div>
+    <div class="ptitle" id="ptitle">${titreHtml}</div>
+    <div class="article" id="article">${texteHtml}</div>
+  </div>`;
+const els = tokens.map((t) => $(`k${t.id}`));
+const occurrences = (g) => tokens.filter((t) => (PAGE.revelations[g] ?? [g]).includes(t.k)).length;
+const greyLevel = (score) => Math.max(0, Math.min(255, Math.round((255 * Math.log10(score - 30)) / 2)));
+const largeur = (n) => `${n * 0.55 + 0.5}em`;
+
+// ---------- Autres écrans (construits à la demande) ----------
+const ECRANS = {
+  historique: (d) => `
+    <div class="navtitle">Historique</div>
+    <div class="stats"><div><b>${d.stats.jouees}</b><span>Jouées</span></div><div><b>${d.stats.trouvees}</b><span>Trouvées</span></div><div><b>${d.stats.moyenne ?? "–"}</b><span>Coups en moy.</span></div></div>
+    <div class="sectitle">100 derniers jours</div>
+    <div class="rows">${d.lignes.map((l, i) => `<div class="hrow" id="hist-${i}"><div style="flex:1;min-width:0"><div class="t" style="${l.statut === "en cours" ? "color:var(--a-muted)" : ""}">${l.titre}</div><div class="s">${l.date}</div></div>${
+      l.coups ? `<span class="pill" style="background:var(--a-fresh)">${l.coups} coups</span>` : l.statut === "non trouvée" ? `<span class="pill" style="background:var(--a-soft);color:var(--a-muted)">Non trouvée</span>` : `<span class="pill" style="background:var(--a-tint);color:var(--a-accentDark)">En cours</span>`
+    }${l.statut === "en cours" ? "" : `<span style="color:var(--a-muted)">${IC.sortie}</span>`}</div>`).join("")}</div>`,
+  reglages: (d) => `
+    <div class="navtitle">Réglages</div>
+    <div class="sectitle">Apparence</div>
+    <div class="rows" style="padding-top:12px"><div style="font-size:17px;padding:0 16px 10px">Mode</div><div class="seg" id="reg-mode">${["Auto", "Clair", "Sombre"].map((m) => `<span class="${d.mode === m ? "on" : ""}" id="reg-${m.toLowerCase()}">${m}</span>`).join("")}</div></div>
+    <div class="sectitle">Notifications</div>
+    <div class="rows"><div class="srow"><div style="flex:1"><div>Rappel quotidien</div><div class="meta" style="margin-top:2px">Chaque jour à midi, quand la nouvelle page arrive</div></div><span class="switch ${d.rappel ? "on" : ""}" id="reg-rappel"></span></div></div>
+    <div class="sectitle">Aide</div>
+    <div class="rows"><div class="srow"><span style="flex:1">Comment jouer</span><span style="color:var(--a-muted)">${IC.chevron}</span></div><div class="srow"><span style="flex:1">Questions fréquentes</span><span style="color:var(--a-muted)">${IC.chevron}</span></div></div>`,
+  verrouillage: (d) => `<div class="wall"></div><div class="lock-time"><small>${d.date}</small><b>${d.heure}</b></div>`,
+};
+const cache = {};
+function construire(nom, d) {
+  if (nom === "jeu") return;
+  const html = ECRANS[nom](d);
+  if (cache[nom] !== html) { $(`v-${nom}`).innerHTML = html; cache[nom] = html; }
+}
+
+function feuilleResultat(coups, rang, pct, turns) {
+  const medal = ["", "🥇", "🥈", "🥉"][rang] ?? "";
+  const total = turns[0] + turns[1] + turns[2] || 1;
+  return `<div class="grab"></div>
+    <div class="hero"><div class="trophy">${IC.trophee}</div>
+      <div class="meta" style="font-size:14px">Bravo ! La page du ${DATE.toLowerCase()} était</div>
+      <div style="font-family:var(--titre);font-weight:700;font-size:30px;text-align:center">${PAGE.titre}</div></div>
+    <div class="tiles"><div class="tile" id="r-coups"><b>${coups}</b><span>coups</span></div><div class="tile" id="r-rang"><b>${rang ? `${medal}${rang}${rang === 1 ? "er" : "e"}` : "–"}</b><span>rang du jour</span></div><div class="tile"><b>${pct} %</b><span>page révélée</span></div></div>
+    <div style="padding:18px 20px"><div class="bar" style="height:10px;border-radius:5px"><i class="g" style="flex:${turns[0] / total}"></i><i class="o" style="flex:${turns[1] / total}"></i></div></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding:0 16px">
+      <div class="pbtn" id="r-partager" style="background:var(--a-accent);color:#fff">${IC.partager}Partager mon résultat</div>
+      <div class="pbtn" style="background:var(--a-card);border:1px solid var(--a-border)">${IC.safari}Lire sur Wikipédia</div></div>`;
+}
+
+// ---------- État à l'instant t ----------
+const avant = (t) => tl.actions.filter((a) => a.t <= t);
+function etat(t) {
+  const acts = avant(t);
+  const ecrans = acts.filter((a) => a.type === "ecran");
+  const initial = { nom: script.ecranInitial ?? "jeu", t: -10 };
+  const courant = ecrans.at(-1) ?? initial;
+  const precedent = ecrans.at(-2) ?? (ecrans.length ? initial : null);
+  const s = { courant, precedent, reglages: { ...DATA.reglages }, devoile: null, voirPage: null, flashes: [] };
+  for (const a of acts) {
+    if (a.type === "reglage") { if (a.mode) s.reglages.mode = a.mode; if (a.rappel !== undefined) s.reglages.rappel = a.rappel; }
+    else if (a.type === "devoiler") s.devoile = a;
+    else if (a.type === "voirPage") s.voirPage = a;
+    else if (a.type === "case" && t < a.t + (a.duree ?? 1.8)) s.flashes.push(a);
+  }
+  s.sombre = s.reglages.mode === "Sombre" || (script.sombre && s.reglages.mode !== "Clair");
+  return s;
+}
+
+// Disposition : position du téléphone et de l'avatar, avec transition de 0,6 s.
+const DISPOS = {
+  telephone: { tel: { x: 0, y: 0, s: 1 }, av: { cx: 260, base: 2700, w: 600 } },
+  coin: { tel: { x: 0, y: 0, s: 1 }, av: { cx: 230, base: 1950, w: 560 } },
+  duo: { tel: { x: 150, y: 170, s: 0.62 }, av: { cx: 260, base: 1960, w: 720 } },
+  avatar: { tel: { x: 0, y: 1750, s: 0.9 }, av: { cx: 540, base: 1945, w: 1040 } },
+};
+// Sous-titres : [gauche, droite, bas] — ancrés par le bas pour rester hors de la zone de légende.
+const SUBS = { telephone: [160, 160, 395], coin: [450, 170, 395], duo: [160, 160, 395], avatar: [160, 160, 395] };
+function disposition(t) {
+  let from = script.dispositionInitiale ?? (script.page ? "telephone" : "avatar"), to = from, t0 = -10;
+  for (const a of tl.actions) { if (a.t > t) break; if (a.type === "disposition") { from = to; to = a.mode; t0 = a.t; } }
+  const p = ease(clamp((t - t0) / 0.6));
+  const A = DISPOS[from], B = DISPOS[to];
+  const mix = (a, b) => Object.fromEntries(Object.keys(a).map((k) => [k, lerp(a[k], b[k], p)]));
+  const sa = SUBS[from], sb = SUBS[to];
+  return { mode: to, p, tel: mix(A.tel, B.tel), av: mix(A.av, B.av), subs: sa.map((v, i) => lerp(v, sb[i], p)), avIn: to !== "telephone" && from === "telephone" ? p : null };
+}
+
+// ---------- Caméra : presets, ou id d'un élément de l'écran ----------
+function posEcran(el) {
+  const r = el.getBoundingClientRect(), sr = $("screen").getBoundingClientRect();
+  const k = sr.width / 393;
+  return { x: (r.left - sr.left + r.width / 2) / k, y: (r.top - sr.top + r.height / 2) / k };
+}
+const versScene = (p) => ({ x: 107 + 2.2 * p.x, y: 406 + 2.2 * p.y });
+const REPOS = { s: 1, x: 540, y: 960, cx: 540, cy: 960 };
+const CIBLES = { titre: "ptitle", article: "article", saisie: "saisie", resultat: "r-coups" };
+function cibleCamera(a) {
+  if (a.cible === "aucun") return REPOS;
+  const el = $(CIBLES[a.cible] ?? a.cible);
+  if (!el) return REPOS;
+  const p = versScene(posEcran(el));
+  const haut = a.cible === "article" ? 520 : 0;
+  return { s: a.echelle ?? (a.cible === "titre" ? 1.35 : 1.18), x: p.x, y: a.cible === "article" ? Math.min(p.y, 406 + 2.2 * 300) : p.y + haut, cx: 540, cy: a.hauteur ?? 900 };
+}
+
+// Superposition active : de son action jusqu'à la suivante du même type, masquer, fin, t2 ou durée par défaut.
+function actif(type, t, stops = [], defaut = Infinity) {
+  const a = lastAction(tl, type, t);
+  if (!a) return null;
+  const fins = tl.actions.filter((x) => x.t > a.t && (x.type === type || x.type === "masquer" || x.type === "fin" || stops.includes(x.type))).map((x) => x.t);
+  fins.push(a.t2 ?? a.t + defaut);
+  const stop = Math.min(...fins);
+  if (t >= stop + 0.3) return null;
+  return { a, pIn: clamp((t - a.t) / 0.45), pOut: t > stop ? clamp((t - stop) / 0.3) : 0 };
+}
+
+// ---------- Avatar ----------
+const POSE_SRC = (p) => `avatar/${p}.png`;
+const motCourant = (t) => timings.mots.find((m) => t >= m.debut && t < m.fin);
+function bouchOuverte(t) {
+  const m = motCourant(t);
+  if (!m) return false;
+  const syl = Math.max(1, Math.round(m.mot.length / 3));
+  const ph = (t - m.debut) / Math.max(0.05, m.fin - m.debut);
+  return Math.sin(ph * Math.PI * syl) > 0.3;
+}
+
+const subs = sousTitres(timings);
+const ACTIONS_JEU = ["taper", "envoyer", "accelere", "resultat"];
+
+// ---------- Rendu d'une image à l'instant t (déterministe) ----------
+function renderAt(t) {
+  const s = etat(t);
+  const st = gameState(tl, PAGE, t);
+  const theme = THEMES[s.sombre ? "sombre" : "clair"];
+  for (const [k, v] of Object.entries(theme)) $("screen").style.setProperty(`--a-${k}`, v);
+
+  // Disposition, entrée du téléphone, caméra.
+  const d = disposition(t);
+  const entree = lastAction(tl, "entree", t);
+  const avecEntree = tl.actions.some((a) => a.type === "entree");
+  const pin = !avecEntree ? 1 : entree ? back(clamp((t - entree.t) / 0.7)) : 0;
+  $("poste").style.transform = `translate(${d.tel.x}px, ${d.tel.y + (1 - pin) * 1500}px) scale(${d.tel.s})`;
+  const cam = camera(tl, t, cibleCamera, ["resultat", "disposition"]);
+  $("camera").style.transform = transformCamera(cam);
+  $("brand").style.opacity = clamp(1 - (cam.s - 1) * 8) * (actif("chrono", t) ? 0 : 1);
+
+  // Vues : la courante glisse par-dessus la précédente.
+  const pv = ease(clamp((t - s.courant.t) / 0.35));
+  for (const nom of ["jeu", "historique", "reglages", "verrouillage"]) {
+    const v = $(`v-${nom}`);
+    const estCourant = nom === s.courant.nom, estPrec = s.precedent && nom === s.precedent.nom && pv < 1 && !estCourant;
+    if (estCourant || estPrec) construire(nom, nom === "reglages" ? s.reglages : fusion(DATA[nom] ?? {}, (estCourant ? s.courant : s.precedent).donnees));
+    v.style.visibility = estCourant || estPrec ? "visible" : "hidden";
+    v.style.zIndex = estCourant ? 2 : 1;
+    v.style.transform = estCourant ? `translateX(${(1 - pv) * 60}px)` : "";
+    v.style.opacity = estCourant ? pv : 1;
+  }
+  const verrou = s.courant.nom === "verrouillage";
+  $("status").style.color = verrou ? "#fff" : "";
+  $("homeind").style.background = verrou ? "#fff" : "";
+  $("heure").textContent = verrou ? "" : DATA.jeu.heure;
+
+  // Page : mots trouvés, proches, cases touchées (longueur), titre dévoilé.
+  const found = new Set(st.found);
+  let fresh = st.fresh;
+  if (s.devoile) { PAGE.titreMots.forEach((m) => found.add(m)); if (!fresh || s.devoile.t > fresh.t) fresh = { mots: PAGE.titreMots, t: s.devoile.t }; }
+  const toutVoir = !!s.voirPage;
+  const flashTok = new Map();
+  for (const f of s.flashes) { const tok = tokens.find((x) => x.k === f.mot.toLowerCase() && (f.dans === "article" ? !x.titre : f.dans === "titre" ? x.titre : true)); if (tok) flashTok.set(tok.id, f); }
+  tokens.forEach((tok, i) => {
+    const el = els[i];
+    let html, pop = 1;
+    if (found.has(tok.k) || toutVoir) {
+      const isFresh = fresh?.mots.includes(tok.k) && t - fresh.t < 2.5;
+      pop = isFresh ? 1 + 0.25 * (1 - clamp((t - fresh.t) / 0.3)) : 1;
+      html = isFresh ? `<span class="fresh">${tok.w}</span>` : tok.w;
+    } else if (flashTok.has(tok.id)) {
+      html = `<span class="box" style="width:${largeur(tok.w.length)};color:var(--a-flashLen)">${tok.w.length}</span>`;
+      pop = 1 + 0.15 * Math.sin(Math.PI * clamp((t - flashTok.get(tok.id).t) / 0.3));
+    } else if (st.close[tok.k]) {
+      const [g, score] = st.close[tok.k];
+      const gl = greyLevel(score);
+      const color = st.freshClose?.cibles.includes(tok.k) && t - st.freshClose.t < 2.5 ? `rgb(255,${gl},0)` : `rgb(${gl},${gl},${gl})`;
+      html = `<span class="box" style="width:${largeur(Math.max(tok.w.length, g.length))};color:${color}">${g}</span>`;
+    } else html = `<span class="box" style="width:${largeur(tok.w.length)}"></span>`;
+    if (el._h !== html) { el.innerHTML = html; el._h = html; }
+    el.style.transform = pop !== 1 ? `scale(${pop})` : "";
+  });
+
+  // En-tête, progression, saisie, retour du dernier essai.
+  const shown = tokens.filter((x) => found.has(x.k) || toutVoir).length;
+  const proches = tokens.filter((x) => !found.has(x.k) && st.close[x.k]).length;
+  const pct = Math.round((shown * 100) / (tokens.length || 1));
+  $("badge").textContent = st.essais;
+  $("badge").style.display = st.essais ? "grid" : "none";
+  $("bar-g").style.flex = String(shown);
+  $("bar-o").style.flex = String(toutVoir ? 0 : proches);
+  $("bar-r").style.flex = String(tokens.length - shown - (toutVoir ? 0 : proches));
+  $("pct").textContent = pct + " %";
+  $("val").innerHTML = st.typing ? `${st.typing}<span class="caret"></span>` : `<span class="ph">${st.won || s.devoile ? "Continuer à jouer…" : "Proposer un mot"}</span>`;
+  $("send").style.background = st.typing ? "var(--a-accent)" : "var(--a-soft)";
+  $("send").style.color = st.typing ? "#fff" : "var(--a-muted)";
+  const lg = st.lastGuess;
+  let fb = "";
+  if (lg) {
+    const n = lg.kind === "found" ? occurrences(lg.mot) : 0;
+    fb = lg.kind === "close" ? `<span style="color:var(--a-accent)">${IC.proche}</span>« ${lg.mot} » · proche (${lg.score})`
+      : n ? `<span style="color:var(--a-green)">${IC.trouve}</span>« ${lg.mot} » · ${n} ${n > 1 ? "mots révélés" : "mot révélé"}`
+      : `<span style="color:var(--a-muted)">${IC.absent}</span>« ${lg.mot} » · absent de la page`;
+  }
+  if ($("feedback")._h !== fb) { $("feedback").innerHTML = fb; $("feedback")._h = fb; }
+  $("feedback").style.opacity = lg ? 0.2 + 0.8 * clamp((t - lg.t) / 0.2) : 1;
+  $("ff").style.opacity = st.acceleration != null ? 1 : 0;
+
+  // Défilement de la page (action defiler, en points), remis à zéro à chaque changement d'écran.
+  const def = lastAction(tl, "defiler", t);
+  const dy = def && def.t > s.courant.t ? (def.depart ?? 0) + ((def.y ?? 0) - (def.depart ?? 0)) * ease(clamp((t - def.t) / 0.7)) : 0;
+  $("defile").style.transform = dy ? `translateY(${-dy}px)` : "";
+
+  // Feuille de résultat.
+  const res = actif("resultat", t, ["ecran", "fermer"]);
+  $("res").style.display = res ? "block" : "none";
+  const gagne = st.won || !!s.devoile;
+  $("solved").style.display = gagne && !res ? "flex" : "none";
+  if (res) {
+    const a = res.a;
+    const coups = a.coups ?? st.essais;
+    const html = feuilleResultat(coups, a.rang ?? PAGE.rang ?? 0, a.pct ?? pct, [shown, proches, tokens.length - shown - proches]);
+    if ($("sheet")._h !== html) { $("sheet").innerHTML = html; $("sheet")._h = html; }
+    $("sheet").style.transform = `translateY(${(1 - back(res.pIn)) * 800 + res.pOut * 800}px)`;
+    $("res").querySelector(".bg").style.opacity = res.pIn * (1 - res.pOut);
+  }
+  if (gagne) { $("sv-t").textContent = `Trouvé en ${st.essais} coups`; $("sv-s").textContent = "Voir le résultat"; }
+
+  // Notification de midi.
+  const notif = actif("notif", t, ["ecran"], 4);
+  $("notif").style.display = notif ? "flex" : "none";
+  if (notif) {
+    $("n-titre").textContent = notif.a.titre ?? "La page du jour est arrivée";
+    $("n-texte").textContent = notif.a.texte ?? "Une nouvelle page Wikipédia vous attend. Saurez-vous trouver son titre ?";
+    const q = back(notif.pIn);
+    $("notif").style.transform = `translateY(${(1 - q) * -260 - notif.pOut * 260}px) scale(${0.9 + 0.1 * q})`;
+  }
+
+  // Appui (rond) : case, appui, et envoi (bouton flèche).
+  const tap = $("tap");
+  tap.style.display = "none";
+  const appuis = tl.actions.filter((a) => ["case", "appui", "envoyer", "reglage"].includes(a.type));
+  const ap = appuis.find((a) => t >= a.t && t < a.t + 0.45);
+  if (ap) {
+    const id = ap.type === "case" ? (() => { const tok = tokens.find((x) => x.k === ap.mot.toLowerCase() && (ap.dans === "article" ? !x.titre : ap.dans === "titre" ? x.titre : true)); return tok ? `k${tok.id}` : null; })()
+      : ap.type === "envoyer" ? "send" : ap.type === "reglage" ? (ap.mode ? `reg-${ap.mode.toLowerCase()}` : "reg-rappel") : ap.cible;
+    const el = id && $(id);
+    if (el && el.offsetParent !== null) {
+      const p = posEcran(el), q = clamp((t - ap.t) / 0.45);
+      Object.assign(tap.style, { display: "block", left: `${p.x}px`, top: `${p.y}px`, opacity: 1 - q, transform: `scale(${0.6 + 0.8 * q})` });
+    }
+  }
+
+  // Décor de scène (images/scene-XX.png si la scène a une image).
+  const si = timings.scenes.findIndex((sc) => t >= sc.debut && t < sc.fin);
+  const scImg = si >= 0 && script.scenes[si]?.image ? `url(/projets/${projet}/images/scene-${String(si + 1).padStart(2, "0")}.png)` : null;
+  if (scImg) { $("fond").style.backgroundImage = scImg; $("fond").style.opacity = clamp((t - timings.scenes[si].debut) / 0.3); }
+  else $("fond").style.opacity = 0;
+  $("brand").classList.toggle("sur-fond", !!scImg);
+
+  // Avatar : disposition, pose, respiration, rebond sur les mots, bouche.
+  const av = d.av;
+  const poseA = lastAction(tl, "pose", t);
+  const pose = poseA?.nom ?? script.poseInitiale ?? "neutre";
+  const img = $("av-img");
+  if (img._p !== pose) { img.src = POSE_SRC(pose); img._p = pose; }
+  const pp = poseA ? clamp((t - poseA.t) / 0.28) : 1;
+  const sc = poseA ? 0.9 + 0.1 * back(pp) : 1;
+  const k = av.w / 1000;
+  const m = motCourant(t);
+  const rebond = m ? -10 * k * Math.max(0, 1 - (t - m.debut) / 0.16) : 0;
+  const respire = Math.sin((2 * Math.PI * t) / 2.6) * 6 * k;
+  const balance = Math.sin((2 * Math.PI * t) / 3.4) * 1.2;
+  const avEl = $("avatar");
+  Object.assign(avEl.style, { width: `${av.w}px`, height: `${av.w}px`, left: `${av.cx - av.w / 2}px`, top: `${av.base - av.w}px` });
+  avEl.style.transform = `translateY(${respire + rebond}px) rotate(${balance}deg) scale(${sc})`;
+  avEl.style.display = av.base - av.w > 1900 ? "none" : "block";
+  $("av-bouche").style.display = pose === "neutre" && bouchOuverte(t) ? "block" : "none";
+
+  // Sous-titres (position selon la disposition).
+  const [sl, sr, stp] = d.subs;
+  Object.assign($("subs").style, { left: `${sl}px`, right: `${sr}px`, bottom: `${stp}px` });
+  subs($("subs"), t);
+  // Mot trop long pour la largeur disponible (ex. « Otorhinolaryngologie ») : police réduite.
+  const grp = $("subs").firstElementChild;
+  if (grp) { const dispo = 1080 - sl - sr; if (grp.offsetWidth > dispo) grp.style.fontSize = `${Math.floor(62 * dispo / grp.offsetWidth)}px`; }
+
+  // Bulle au-dessus de la tête de l'avatar.
+  const bulle = actif("bulle", t, ["disposition"], 2.5);
+  $("bulle").style.display = bulle ? "block" : "none";
+  if (bulle) {
+    const b = $("bulle");
+    if (b._t !== bulle.a.texte) { b.innerHTML = fr(bulle.a.texte); b._t = bulle.a.texte; }
+    b.className = bulle.a.style === "pensee" ? "pensee" : "";
+    const w = b.offsetWidth, h = b.offsetHeight;
+    const teteX = av.cx + av.w * 0.05, haut = av.base - av.w * 0.97;
+    const x = Math.min(Math.max(teteX + w * 0.15, 90 + w / 2), 910 - w / 2);
+    b.style.left = `${x - w / 2}px`;
+    b.style.top = `${Math.max(330, haut - h - 30)}px`;
+    b.style.setProperty("--queue", `${clamp((teteX - (x - w / 2)) / w, 0.15, 0.85) * 100}%`);
+    const q = back(bulle.pIn);
+    b.style.transform = `scale(${(0.6 + 0.4 * q) * (1 - bulle.pOut)})`;
+    b.style.transformOrigin = `${clamp((teteX - (x - w / 2)) / w, 0.15, 0.85) * 100}% 120%`;
+  }
+
+  // Carte titre (série, niveau, question).
+  const titre = actif("titre", t, ["liste", "disposition"]);
+  $("titre").style.display = titre ? "flex" : "none";
+  if (titre) {
+    $("t-num").style.display = titre.a.numero ? "grid" : "none";
+    $("t-num").textContent = titre.a.numero ?? "";
+    $("t-texte").innerHTML = fr(titre.a.texte ?? "");
+    $("t-sous").innerHTML = fr(titre.a.sous ?? "");
+    $("t-sous").style.display = titre.a.sous ? "block" : "none";
+    const q = back(titre.pIn);
+    $("titre").style.transform = `translateY(${(1 - q) * 120 - titre.pOut * 120}px) scale(${0.9 + 0.1 * q})`;
+    $("titre").style.opacity = clamp(titre.pIn * 2) * (1 - titre.pOut);
+  }
+
+  // Liste : carte ouverte par `liste`, points ajoutés par `point`.
+  const liste = actif("liste", t, ["titre", "disposition"]);
+  $("liste").style.display = liste ? "flex" : "none";
+  if (liste) {
+    $("l-titre").innerHTML = fr(liste.a.titre ?? "");
+    const pts = tl.actions.filter((a) => a.type === "point" && a.t >= liste.a.t && a.t <= t);
+    const html = pts.map((p, i) => `<div class="pt" data-texte><i>${i + 1}</i><span>${fr(p.texte)}</span></div>`).join("");
+    if ($("l-points")._h !== html) { $("l-points").innerHTML = html; $("l-points")._h = html; }
+    [...$("l-points").children].forEach((el, i) => { const q = back(clamp((t - pts[i].t) / 0.35)); el.style.transform = `translateX(${(1 - q) * -80}px)`; el.style.opacity = clamp(q); });
+    const q = back(liste.pIn);
+    $("liste").style.transform = `translateY(${(1 - q) * 120 - liste.pOut * 120}px)`;
+    $("liste").style.opacity = clamp(liste.pIn * 2) * (1 - liste.pOut);
+  }
+
+  // Grand chiffre qui monte.
+  const ch = actif("chiffre", t, ["titre", "liste"]);
+  $("chiffre").style.display = ch ? "flex" : "none";
+  if (ch) {
+    const a = ch.a, v0 = a.depart ?? 0, mt = a.montee ?? 1.2;
+    const v = Math.round(lerp(v0, a.valeur, ease(clamp((t - a.t) / mt))));
+    $("ch-n").innerHTML = `${a.prefixe ?? ""}${String(v).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}${a.suffixe ? `<small>${a.suffixe}</small>` : ""}`;
+    $("ch-sous").innerHTML = fr(a.sous ?? "");
+    const q = back(ch.pIn);
+    $("chiffre").style.transform = `scale(${0.8 + 0.2 * q})`;
+    $("chiffre").style.opacity = clamp(ch.pIn * 2) * (1 - ch.pOut);
+  }
+
+  // Message partagé (texte de partage de l'app).
+  const pa = actif("partage", t, ["titre"], 4);
+  $("partage").style.display = pa ? "flex" : "none";
+  if (pa) {
+    const a = pa.a, n = a.coups ?? st.essais, carres = a.carres ?? "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟥🟥🟥🟥";
+    $("p-msg").innerHTML = `J'ai trouvé le #pedantix du ${DATE.toLowerCase()} en ${n} coups !<br><span class="carres">${carres}</span><br><span class="lien">pedantix.vercel.app</span>`;
+    const q = back(pa.pIn);
+    $("partage").style.transform = `translateY(${(1 - q) * 160}px) scale(${(0.85 + 0.15 * q) * (1 - pa.pOut)})`;
+  }
+
+  // Tampon.
+  const tp = actif("tampon", t, [], 3);
+  $("tampon").style.display = tp ? "block" : "none";
+  if (tp) {
+    const col = { rouge: "#B3261E", vert: "#3E7C4F", or: "#C05621" }[tp.a.couleur ?? "rouge"];
+    Object.assign($("tampon").style, { color: col, borderColor: col });
+    if ($("tampon")._t !== tp.a.texte) { $("tampon").textContent = tp.a.texte; $("tampon")._t = tp.a.texte; $("tampon").style.transform = "none"; $("tampon")._k = Math.min(1, 640 / $("tampon").offsetWidth); }
+    const q = clamp((t - tp.a.t) / 0.2);
+    // Taille ajustée pour rester dans la zone sûre, même incliné ; entrée « coup de tampon » courte.
+    $("tampon").style.transform = `rotate(-9deg) scale(${$("tampon")._k * (1.15 - 0.15 * ease(q)) * (1 - tp.pOut)})`;
+    $("tampon").style.opacity = clamp(q * 3) * (1 - tp.pOut);
+  }
+
+  // Compte à rebours (dure vraiment `secondes`).
+  const chrono = lastAction(tl, "chrono", t);
+  const enChrono = chrono && t < chrono.t + chrono.secondes + 0.3 && !tl.actions.some((x) => x.t > chrono.t && x.t <= t && x.type === "masquer");
+  $("chrono").style.display = enChrono ? "block" : "none";
+  if (enChrono) {
+    const e = t - chrono.t, reste = Math.max(0, chrono.secondes - e);
+    $("c-n").textContent = Math.ceil(reste - 1e-6) || "0";
+    const L = 2 * Math.PI * 100;
+    $("c-arc").setAttribute("stroke-dasharray", `${L * (reste / chrono.secondes)} ${L}`);
+    $("chrono").style.transform = `scale(${0.7 + 0.3 * back(clamp(e / 0.35))})`;
+    $("chrono").style.opacity = clamp((chrono.secondes + 0.3 - e) / 0.3);
+  }
+
+  // Carte de fin (avec l'avatar qui salue).
+  carteFin(tl, $("end"), t);
+  const endAv = $("end-av");
+  if (endAv._p !== fin.pose) { endAv.src = POSE_SRC(fin.pose); endAv._p = fin.pose; }
+}
+
+// Toutes les poses chargées avant le premier rendu.
+await Promise.all([...POSES.map(POSE_SRC), "avatar/neutre-bouche-ouverte.png"].map((src) => { const i = new Image(); i.src = src; return i.decode().catch(() => { throw new Error(`Image manquante : ${src}`); }); }));
+document.querySelectorAll("img[data-logo]").forEach((img) => (img.src = "/" + charte.logo));
+await demarrer(tl, renderAt);
+</script>
+</body>
+</html>

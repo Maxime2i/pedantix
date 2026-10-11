@@ -1,0 +1,338 @@
+{
+  "duree": 18.16,
+  "dureeVoix": 16.36,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.4,
+      "fin": 2.92
+    },
+    {
+      "id": "case",
+      "debut": 2.92,
+      "finVoix": 5.38,
+      "fin": 5.92
+    },
+    {
+      "id": "indices",
+      "debut": 5.92,
+      "finVoix": 10.02,
+      "fin": 10.56
+    },
+    {
+      "id": "trouve",
+      "debut": 10.56,
+      "finVoix": 11.98,
+      "fin": 12.88
+    },
+    {
+      "id": "morale",
+      "debut": 12.88,
+      "finVoix": 14.14,
+      "fin": 14.78
+    },
+    {
+      "id": "appel",
+      "debut": 14.78,
+      "finVoix": 16.36,
+      "fin": 18.16
+    }
+  ],
+  "mots": [
+    {
+      "texte": "L'astuce",
+      "mot": "L'astuce",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.74
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.96
+    },
+    {
+      "texte": "personne",
+      "mot": "personne",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.44
+    },
+    {
+      "texte": "n'utilise",
+      "mot": "n'utilise",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 2.0
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 2.0,
+      "fin": 2.1
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 2.1,
+      "fin": 2.22
+    },
+    {
+      "texte": "jeu.",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.4
+    },
+    {
+      "texte": "Touche",
+      "mot": "Touche",
+      "scene": 1,
+      "debut": 2.92,
+      "fin": 3.24
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 3.24,
+      "fin": 3.34
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 1,
+      "debut": 3.34,
+      "fin": 3.5
+    },
+    {
+      "texte": "cachée :",
+      "mot": "cachée",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.8
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 1,
+      "debut": 4.26,
+      "fin": 4.34
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 1,
+      "debut": 4.34,
+      "fin": 4.46
+    },
+    {
+      "texte": "donne",
+      "mot": "donne",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.6
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.72
+    },
+    {
+      "texte": "longueur",
+      "mot": "longueur",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 5.14
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 5.14,
+      "fin": 5.24
+    },
+    {
+      "texte": "mot.",
+      "mot": "mot",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.38
+    },
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 2,
+      "debut": 5.92,
+      "fin": 6.24
+    },
+    {
+      "texte": "lettres,",
+      "mot": "lettres",
+      "scene": 2,
+      "debut": 6.24,
+      "fin": 6.42
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 2,
+      "debut": 6.68,
+      "fin": 6.74
+    },
+    {
+      "texte": "six.",
+      "mot": "six",
+      "scene": 2,
+      "debut": 6.74,
+      "fin": 6.92
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 7.74,
+      "fin": 7.88
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 7.88,
+      "fin": 8.06
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.44
+    },
+    {
+      "texte": "parle",
+      "mot": "parle",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.74
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 2,
+      "debut": 8.74,
+      "fin": 9.0
+    },
+    {
+      "texte": "président",
+      "mot": "président",
+      "scene": 2,
+      "debut": 9.0,
+      "fin": 9.4
+    },
+    {
+      "texte": "américain…",
+      "mot": "américain",
+      "scene": 2,
+      "debut": 9.4,
+      "fin": 10.02
+    },
+    {
+      "texte": "Jimmy…",
+      "mot": "Jimmy",
+      "scene": 3,
+      "debut": 10.56,
+      "fin": 11.08
+    },
+    {
+      "texte": "Carter !",
+      "mot": "Carter",
+      "scene": 3,
+      "debut": 11.7,
+      "fin": 11.98
+    },
+    {
+      "texte": "Touche",
+      "mot": "Touche",
+      "scene": 4,
+      "debut": 12.88,
+      "fin": 13.18
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 4,
+      "debut": 13.18,
+      "fin": 13.28
+    },
+    {
+      "texte": "cases,",
+      "mot": "cases",
+      "scene": 4,
+      "debut": 13.28,
+      "fin": 13.44
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 4,
+      "debut": 13.74,
+      "fin": 13.82
+    },
+    {
+      "texte": "change",
+      "mot": "change",
+      "scene": 4,
+      "debut": 13.82,
+      "fin": 14.0
+    },
+    {
+      "texte": "tout.",
+      "mot": "tout",
+      "scene": 4,
+      "debut": 14.0,
+      "fin": 14.14
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.78,
+      "fin": 15.3
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.66,
+      "fin": 15.96
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.96,
+      "fin": 16.1
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.1,
+      "fin": 16.18
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.18,
+      "fin": 16.36
+    }
+  ]
+}

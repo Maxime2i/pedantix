@@ -1,0 +1,243 @@
+{
+  "titre": "A whole career in 30 seconds",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "English version of destinyfc-01. Downloads, football fans 16–35. Same story: Portsmouth at 16 (2026), cup final won with Leeds at 19, United at 24, retirement at 35 (2045), World star card, score 223.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Fast montage rhythm. Each age announced with punch, short pause after. Smiling, curious ending."
+  },
+  "ecranInitial": "partie",
+  "cartes": {
+    "mercato-paris": {
+      "genre": "mercato",
+      "tag": "🪟 TRANSFER WINDOW · 24 YRS",
+      "texte": "Your name is starting to circulate on the transfer market.",
+      "offres": [
+        {
+          "niveau": "elite",
+          "club": "United",
+          "couleurs": [
+            "#e52a1e",
+            "#f2f2f2"
+          ],
+          "pays": "angleterre",
+          "detail": "€4.2m/yr · fee €38m"
+        },
+        {
+          "niveau": "elite",
+          "club": "City",
+          "couleurs": [
+            "#1a4fb5",
+            "#f2f2f2"
+          ],
+          "pays": "angleterre",
+          "detail": "€3.6m/yr · fee €31m"
+        }
+      ],
+      "bouton": "STAY / RENEW"
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "€50k",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      },
+      "carte": "croissance"
+    },
+    "fiche": {
+      "nom": "Jack Turner",
+      "clubs": "United · 2026–2045 · 19 seasons",
+      "score": 223
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "I played a whole football career, start to finish, in thirty seconds. From sixteen… to retirement.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "played",
+          "texte": "From *16* to retirement",
+          "fin": "retirement"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "start",
+      "voix": "At sixteen, I sign my very first pro contract, with Portsmouth.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "sixteen"
+        },
+        {
+          "type": "zoom",
+          "ancre": "sign",
+          "cible": "p-tete",
+          "echelle": 1.25,
+          "hauteur": 820
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "final",
+      "voix": "Nineteen: the cup final… and I win it.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Nineteen",
+          "cible": "aucun"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Nineteen",
+          "age": 19,
+          "annee": 2029,
+          "note": 68,
+          "argent": "€0.9m",
+          "etoiles": 2,
+          "niveau": "d1",
+          "club": "Leeds",
+          "couleurs": [
+            "#f2f2f2",
+            "#f5c400"
+          ]
+        },
+        {
+          "type": "carte",
+          "ancre": "final",
+          "id": "finale",
+          "texte": "Final, 1-0 to Leeds, ten last minutes that never end. The coach screams at you to kill the game — how is up to you to work out."
+        },
+        {
+          "type": "option",
+          "ancre": "and",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "win",
+          "id": "finale-gagnee",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "paris",
+      "voix": "Twenty-four: United come calling. I sign.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Twenty-four",
+          "id": "mercato-paris"
+        },
+        {
+          "type": "option",
+          "ancre": "calling",
+          "n": 1
+        },
+        {
+          "type": "joueur",
+          "ancre": "sign",
+          "age": 24,
+          "annee": 2034,
+          "note": 81,
+          "argent": "€12m",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "United",
+          "couleurs": [
+            "#e52a1e",
+            "#f2f2f2"
+          ]
+        },
+        {
+          "type": "tampon",
+          "ancre": "sign",
+          "texte": "Signed",
+          "couleur": "menthe",
+          "duree": 1.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "retire",
+      "voix": "Thirty-five: I retire. Final score… two hundred and twenty-three.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "retire",
+          "nom": "fiche"
+        },
+        {
+          "type": "zoom",
+          "ancre": "score",
+          "cible": "f-score",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "So, what legend would you write? Destiny FC, free to play.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

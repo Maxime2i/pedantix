@@ -1,0 +1,136 @@
+{
+  "titre": "Les 5 types de joueurs",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Humour : les profils de joueurs, identification et commentaires.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Il y a cinq types de joueurs de Pédantix.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Il",
+          "titre": "Les 5 types de joueurs"
+        }
+      ]
+    },
+    {
+      "id": "methodique",
+      "voix": "Le méthodique, qui commence toujours par les mêmes mots.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "méthodique,",
+          "texte": "Le méthodique"
+        },
+        {
+          "type": "pose",
+          "ancre": "méthodique,",
+          "nom": "reflechit"
+        },
+        {
+          "type": "pose",
+          "ancre": "toujours",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "chanceux",
+      "voix": "Le chanceux, qui trouve en douze coups sans comprendre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "chanceux,",
+          "texte": "Le chanceux"
+        },
+        {
+          "type": "pose",
+          "ancre": "comprendre.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "tetu",
+      "voix": "Le têtu, qui tape le même mot dix fois.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "têtu,",
+          "texte": "Le têtu"
+        },
+        {
+          "type": "pose",
+          "ancre": "fois.",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "guetteur",
+      "voix": "Celui qui attend midi pile, le doigt sur la notif.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "attend",
+          "texte": "Le guetteur de midi"
+        },
+        {
+          "type": "pose",
+          "ancre": "attend",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "pedant",
+      "voix": "Et le pédant, qui le raconte à tout le monde.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "pédant,",
+          "texte": "Le pédant"
+        },
+        {
+          "type": "pose",
+          "ancre": "raconte",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Toi, t'es lequel ? Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Toi,",
+          "nom": "clin"
+        },
+        {
+          "type": "fin",
+          "ancre": "Pédantix,"
+        }
+      ]
+    }
+  ]
+}

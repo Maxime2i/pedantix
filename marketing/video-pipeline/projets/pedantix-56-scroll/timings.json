@@ -1,0 +1,304 @@
+{
+  "duree": 15.5,
+  "dureeVoix": 13.22,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 1.88,
+      "fin": 2.62
+    },
+    {
+      "id": "echange",
+      "debut": 2.62,
+      "finVoix": 5.48,
+      "fin": 5.94
+    },
+    {
+      "id": "jeu",
+      "debut": 5.94,
+      "finVoix": 8.96,
+      "fin": 9.72
+    },
+    {
+      "id": "merci",
+      "debut": 9.72,
+      "finVoix": 10.9,
+      "fin": 11.74
+    },
+    {
+      "id": "appel",
+      "debut": 11.74,
+      "finVoix": 13.22,
+      "fin": 15.5
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ça",
+      "mot": "Ça",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.68
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.9
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.14
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.32
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.42
+    },
+    {
+      "texte": "scrolles,",
+      "mot": "scrolles",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.68
+    },
+    {
+      "texte": "non ?",
+      "mot": "non",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 1.88
+    },
+    {
+      "texte": "Échange",
+      "mot": "Échange",
+      "scene": 1,
+      "debut": 2.62,
+      "fin": 3.0
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 1,
+      "debut": 3.0,
+      "fin": 3.38
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 1,
+      "debut": 3.38,
+      "fin": 3.6
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 3.6,
+      "fin": 3.76
+    },
+    {
+      "texte": "scroll",
+      "mot": "scroll",
+      "scene": 1,
+      "debut": 3.76,
+      "fin": 4.42
+    },
+    {
+      "texte": "contre",
+      "mot": "contre",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.5
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 4.5,
+      "fin": 4.66
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.86
+    },
+    {
+      "texte": "Wikipédia.",
+      "mot": "Wikipédia",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 5.48
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 2,
+      "debut": 5.94,
+      "fin": 6.22
+    },
+    {
+      "texte": "joues,",
+      "mot": "joues",
+      "scene": 2,
+      "debut": 6.22,
+      "fin": 6.76
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.1
+    },
+    {
+      "texte": "apprends",
+      "mot": "apprends",
+      "scene": 2,
+      "debut": 7.1,
+      "fin": 7.36
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.36,
+      "fin": 7.38
+    },
+    {
+      "texte": "truc,",
+      "mot": "truc",
+      "scene": 2,
+      "debut": 7.38,
+      "fin": 7.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 8.32
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 8.32,
+      "fin": 8.44
+    },
+    {
+      "texte": "poses",
+      "mot": "poses",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.6
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 8.6,
+      "fin": 8.68
+    },
+    {
+      "texte": "téléphone.",
+      "mot": "téléphone",
+      "scene": 2,
+      "debut": 8.68,
+      "fin": 8.96
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 3,
+      "debut": 9.72,
+      "fin": 9.98
+    },
+    {
+      "texte": "cerveau",
+      "mot": "cerveau",
+      "scene": 3,
+      "debut": 9.98,
+      "fin": 10.4
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 3,
+      "debut": 10.4,
+      "fin": 10.48
+    },
+    {
+      "texte": "dira",
+      "mot": "dira",
+      "scene": 3,
+      "debut": 10.48,
+      "fin": 10.62
+    },
+    {
+      "texte": "merci.",
+      "mot": "merci",
+      "scene": 3,
+      "debut": 10.62,
+      "fin": 10.9
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 11.74,
+      "fin": 12.2
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 12.2,
+      "fin": 12.66
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 12.66,
+      "fin": 12.92
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 12.92,
+      "fin": 13.06
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 13.06,
+      "fin": 13.22
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "titre": "Continuité (mathématiques)",
+  "texte": [
+    "En mathématiques, la continuité est une propriété topologique d'une fonction. En première approche, une fonction f est continue si, à des variations infinitésimales de l'antécédent x, correspondent des variations infinitésimales de l'image f.",
+    "La continuité est associée à la notion de continuum dont l'origine est géométrique. Dans un continuum géométrique, comme le plan ou l'espace, un point peut se déplacer continument pour s'approcher à une précision arbitraire d'un autre point. La notion de continuité est définie de manière rigoureuse en mathématiques."
+  ],
+  "titreMots": [
+    "continuité",
+    "mathématiques"
+  ]
+}

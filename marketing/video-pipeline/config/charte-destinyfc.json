@@ -1,0 +1,44 @@
+{
+  "nom": "Destiny FC",
+  "logo": "config/logo-destinyfc.png",
+  "couleurs": {
+    "fond": "#062E35",
+    "fond2": "#143840",
+    "encre": "#FFFFFF",
+    "accent": "#5DD0C0",
+    "accent2": "#D4A017",
+    "creme": "#F2F8F8",
+    "sousTitres": "#04232A",
+    "vert": "#22C55E",
+    "app": {
+      "primary": "#0B6F7C",
+      "primaryDark": "#085560",
+      "primaryLight": "#0E8A9A",
+      "mint": "#5DD0C0",
+      "bg": "#0A3A42",
+      "bgDeep": "#062E35",
+      "bgCard": "#143840",
+      "surface": "rgba(20, 56, 64, 0.92)",
+      "ink": "#F2F8F8",
+      "inkMuted": "#A4B8BC",
+      "gold": "#D4A017",
+      "good": "#22C55E",
+      "warn": "#F59E0B",
+      "bad": "#EF4444",
+      "great": "#2BB89A",
+      "regional": "#6E858A",
+      "d2": "#2E86C1",
+      "d1": "#8A5FD0",
+      "elite": "#D4A017"
+    }
+  },
+  "polices": {
+    "titre": "Oswald",
+    "texte": "Plus Jakarta Sans",
+    "googleFonts": "https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+  },
+  "voix": {
+    "modele": "google/gemini-3.8-flash-tts",
+    "voix": "Puck"
+  }
+}

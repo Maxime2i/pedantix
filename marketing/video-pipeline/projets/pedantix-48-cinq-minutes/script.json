@@ -1,0 +1,147 @@
+{
+  "titre": "5 minutes par jour",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Routine : le rituel de midi, calme et court.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Glissement de terrain",
+    "texte": [
+      "Un glissement de terrain est un phénomène d'origine sismique, géologique ou géophysique où une masse de terre descend sur une pente, autrement dit un plan de glissement, qui peut être plus ou moins continu, et plus ou moins incurvé. Les conséquences d'un glissement peuvent être considérables, incluant des pertes en vies humaines, la destruction des infrastructures, des dommages causés aux terres et la perte de ressources naturelles.",
+      "Après la mise en mouvement, la masse conserve globalement sa consistance et sa physionomie.",
+      "Le glissement de terrain est un type de mouvement gravitaire."
+    ],
+    "titreMots": [
+      "glissement",
+      "de",
+      "terrain"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Jeudi 4 septembre",
+    "accelere": [
+      "phénomène",
+      "origine",
+      "sismique",
+      "géologique",
+      "masse",
+      "terre",
+      "pente",
+      "plan",
+      "conséquences",
+      "pertes",
+      "vies",
+      "destruction",
+      "infrastructures",
+      "dommages",
+      "ressources",
+      "mouvement",
+      "gravitaire",
+      "type"
+    ]
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mon rituel de midi tient en cinq minutes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "rituel",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "voix": "Un café, mon téléphone, et la page du jour.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Un",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "téléphone,",
+          "nom": "telephone"
+        }
+      ]
+    },
+    {
+      "id": "jeu",
+      "voix": "Je propose quelques mots, je réfléchis, je trouve… ou pas.",
+      "image": null,
+      "actions": [
+        {
+          "type": "accelere",
+          "ancre": "propose",
+          "fin": "trouve…",
+          "essais": 19
+        },
+        {
+          "type": "pose",
+          "ancre": "réfléchis,",
+          "nom": "reflechit"
+        },
+        {
+          "type": "pose",
+          "ancre": "pas.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "retour",
+      "voix": "Et je retourne travailler avec un truc appris.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Et",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "appris.",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "promis",
+      "voix": "Cinq minutes, pas plus. Promis.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Promis.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

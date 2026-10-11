@@ -1,0 +1,242 @@
+{
+  "titre": "Le rallye en vingt secondes",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 21
+  },
+  "objectif": "Grand public, toi (avatar) en pédagogue. Démo fictive cohérente avec la vidéo 01 : Marchal gagne l'ES5 en 5:09.4 (0,7 s devant Moreau) et passe en tête du cumul de 0,3 s.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. C'est Maxime qui parle, chaleureux et pédagogue, comme à un ami. Débit posé. Petite fierté sur la fin."
+  },
+  "dispositionInitiale": "avatar",
+  "ecranInitial": "rallye",
+  "ecrans": {
+    "rallye": {
+      "onglet": "classement",
+      "classement": [
+        {
+          "n": 1,
+          "temps": "38:12.6"
+        },
+        {
+          "n": 3,
+          "temps": "38:13.0",
+          "ecart": "+0.4"
+        },
+        {
+          "n": 2,
+          "temps": "38:24.1",
+          "ecart": "+11.5"
+        },
+        {
+          "n": 4,
+          "temps": "38:51.0",
+          "ecart": "+38.4"
+        },
+        {
+          "n": 6,
+          "temps": "39:30.7",
+          "ecart": "+1:18.1"
+        },
+        {
+          "n": 5,
+          "temps": "40:02.2",
+          "ecart": "+1:49.6"
+        },
+        {
+          "n": 7,
+          "temps": "41:15.8",
+          "ecart": "+3:03.2"
+        },
+        {
+          "n": 8,
+          "temps": "41:22.4",
+          "ecart": "+3:09.8"
+        },
+        {
+          "n": 9,
+          "temps": "41:40.3",
+          "ecart": "+3:27.7"
+        }
+      ]
+    }
+  },
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Tu n'as jamais suivi un rallye ? Je t'explique en vingt secondes.",
+      "animation": "Avatar face caméra.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "salut"
+        },
+        {
+          "type": "pose",
+          "ancre": "t'explique",
+          "nom": "neutre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "speciale",
+      "voix": "Une spéciale, c'est une route fermée, et un chrono.",
+      "animation": "Avatar en coin ; chrono de l'ES qui se fige.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "spéciale",
+          "mode": "coin"
+        },
+        {
+          "type": "chrono",
+          "ancre": "route",
+          "titre": "ES5 · COL DE LA CROIX 2",
+          "depart": "5:07.0",
+          "arret": "5:09.4",
+          "sous": "Voiture 3 en piste…",
+          "sousFin": "Hugo Marchal"
+        },
+        {
+          "type": "arreter",
+          "ancre": "chrono",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "moteur",
+          "ancre": "route",
+          "gain": 0.45
+        }
+      ]
+    },
+    {
+      "id": "cumul",
+      "voix": "On additionne les temps de chaque spéciale : le plus rapide au total gagne.",
+      "animation": "Le téléphone arrive sur le classement ; après l'ES5, Marchal passe en tête.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "On"
+        },
+        {
+          "type": "entree",
+          "ancre": "On"
+        },
+        {
+          "type": "maj",
+          "ancre": "total",
+          "classement": [
+            {
+              "n": 3,
+              "temps": "43:22.4"
+            },
+            {
+              "n": 1,
+              "temps": "43:22.7",
+              "ecart": "+0.3"
+            },
+            {
+              "n": 2,
+              "temps": "43:36.0",
+              "ecart": "+13.6"
+            },
+            {
+              "n": 4,
+              "temps": "44:05.6",
+              "ecart": "+43.2"
+            },
+            {
+              "n": 6,
+              "temps": "44:49.7",
+              "ecart": "+1:27.3"
+            },
+            {
+              "n": 5,
+              "temps": "45:33.4",
+              "ecart": "+2:11.0"
+            },
+            {
+              "n": 7,
+              "temps": "46:56.3",
+              "ecart": "+3:33.9"
+            },
+            {
+              "n": 8,
+              "temps": "47:04.2",
+              "ecart": "+3:41.8"
+            },
+            {
+              "n": 9,
+              "temps": "47:24.3",
+              "ecart": "+4:01.9"
+            }
+          ]
+        },
+        {
+          "type": "surligner",
+          "ancre": "total",
+          "n": 3,
+          "duree": 2.5
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "alerte",
+      "voix": "Et Rally Track te prévient de chaque victoire en spéciale.",
+      "animation": "Notification réelle.",
+      "image": null,
+      "actions": [
+        {
+          "type": "notif",
+          "ancre": "prévient",
+          "titre": "Hugo Marchal gagne ES5",
+          "texte": "Rallye des Hautes Combes",
+          "duree": 3.5
+        },
+        {
+          "type": "pose",
+          "ancre": "victoire",
+          "nom": "content"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Gratuit, sur iPhone et Android.",
+      "animation": "Carte de fin, l'avatar salue.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Gratuit"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "Gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "nom": "Pédantix",
+  "logo": "config/logo-pedantix.png",
+  "couleurs": {
+    "fond": "#F2B544",
+    "encre": "#241F1A",
+    "accent": "#A3401A",
+    "terracotta": "#C05621",
+    "creme": "#FFF7EA",
+    "app": {
+      "bg": "#F6F1E7",
+      "card": "#FFFDF6",
+      "text": "#3B3226",
+      "muted": "#7A6F5D",
+      "accent": "#C05621",
+      "tint": "#FBEEDA",
+      "green": "#3E7C4F",
+      "fresh": "#C8EFC0",
+      "border": "#E0D5BD",
+      "soft": "#E8DCC6",
+      "blank": "#241F1A"
+    }
+  },
+  "polices": {
+    "titre": "Fraunces",
+    "texte": "DM Sans",
+    "googleFonts": "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,700;1,9..144,800&family=DM+Sans:opsz,wght@9..40,500;9..40,700;9..40,800&display=swap"
+  },
+  "voix": {
+    "modele": "google/gemini-3.8-flash-tts",
+    "voix": "Puck"
+  }
+}

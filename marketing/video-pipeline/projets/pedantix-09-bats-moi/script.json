@@ -1,0 +1,122 @@
+{
+  "titre": "Bats mon score",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Défi : battre le score de l'avatar, réponses en commentaire.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Plomb",
+    "texte": [
+      "Le plomb est l'élément chimique de numéro atomique 82, de symbole Pb. Dans les conditions standard, le corps simple plomb est un métal malléable et gris bleuâtre, qui blanchit lentement en s'oxydant. Le mot plomb et le symbole Pb viennent du latin plumbum.",
+      "Le plomb appartient au groupe 14 et à la période 6 du tableau périodique. C'est le plus « lourd » des éléments stables.",
+      "Le plomb est un élément toxique, mutagène et reprotoxique, sans valeur connue d'oligoélément."
+    ],
+    "titreMots": [
+      "plomb"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 6 octobre",
+    "essaisDepart": 47
+  },
+  "dispositionInitiale": "coin",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Hier, j'ai trouvé la page en quarante-sept coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "resultat",
+          "ancre": "quarante-sept",
+          "coups": 47,
+          "rang": 5,
+          "pct": 81
+        },
+        {
+          "type": "pose",
+          "ancre": "Hier,",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "voix": "C'était Plomb, l'élément chimique.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "C'était",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "defi",
+      "voix": "Toi, tu fais mieux ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Toi,",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Toi,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Joue la page du jour à midi, et mets ton score en commentaire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Joue",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "score",
+          "texte": "Ton score ?"
+        }
+      ]
+    },
+    {
+      "id": "promesse",
+      "voix": "Je réponds à ceux qui me battent.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "battent.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

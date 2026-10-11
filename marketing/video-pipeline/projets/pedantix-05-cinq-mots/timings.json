@@ -1,0 +1,289 @@
+{
+  "duree": 25.2,
+  "dureeVoix": 23.4,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.46,
+      "fin": 3.06
+    },
+    {
+      "id": "mots",
+      "debut": 3.06,
+      "finVoix": 11.6,
+      "fin": 12.48
+    },
+    {
+      "id": "chrono",
+      "debut": 12.48,
+      "finVoix": 17.355,
+      "fin": 17.355
+    },
+    {
+      "id": "reponse",
+      "debut": 17.355,
+      "finVoix": 18.88,
+      "fin": 19.3
+    },
+    {
+      "id": "cta",
+      "debut": 19.3,
+      "finVoix": 21.26,
+      "fin": 21.9
+    },
+    {
+      "id": "appel",
+      "debut": 21.9,
+      "finVoix": 23.4,
+      "fin": 25.2
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.36
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 0.36,
+      "fin": 0.44
+    },
+    {
+      "texte": "montre",
+      "mot": "montre",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.66
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.96
+    },
+    {
+      "texte": "mots.",
+      "mot": "mots",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.2
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.48
+    },
+    {
+      "texte": "trouves",
+      "mot": "trouves",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.7
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 1.8
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 1.94
+    },
+    {
+      "texte": "Wikipédia ?",
+      "mot": "Wikipédia",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.46
+    },
+    {
+      "texte": "Provence.",
+      "mot": "Provence",
+      "scene": 1,
+      "debut": 3.06,
+      "fin": 4.22
+    },
+    {
+      "texte": "Méditerranée.",
+      "mot": "Méditerranée",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.96
+    },
+    {
+      "texte": "Paris.",
+      "mot": "Paris",
+      "scene": 1,
+      "debut": 6.84,
+      "fin": 7.34
+    },
+    {
+      "texte": "Lyon.",
+      "mot": "Lyon",
+      "scene": 1,
+      "debut": 8.4,
+      "fin": 9.0
+    },
+    {
+      "texte": "Et…",
+      "mot": "Et",
+      "scene": 1,
+      "debut": 9.0,
+      "fin": 10.16
+    },
+    {
+      "texte": "deuxième.",
+      "mot": "deuxième",
+      "scene": 1,
+      "debut": 10.16,
+      "fin": 11.6
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 2,
+      "debut": 12.48,
+      "fin": 12.82
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 2,
+      "debut": 12.82,
+      "fin": 12.88
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 2,
+      "debut": 12.88,
+      "fin": 13.04
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 2,
+      "debut": 13.04,
+      "fin": 13.4
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 2,
+      "debut": 14.22,
+      "fin": 15.265
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 15.265,
+      "fin": 16.31
+    },
+    {
+      "texte": "un…",
+      "mot": "un",
+      "scene": 2,
+      "debut": 16.31,
+      "fin": 17.355
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 17.355,
+      "fin": 18.4
+    },
+    {
+      "texte": "Marseille !",
+      "mot": "Marseille",
+      "scene": 3,
+      "debut": 18.4,
+      "fin": 18.88
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 4,
+      "debut": 19.3,
+      "fin": 19.62
+    },
+    {
+      "texte": "l'avais ?",
+      "mot": "l'avais",
+      "scene": 4,
+      "debut": 19.62,
+      "fin": 20.21
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 20.21,
+      "fin": 20.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 20.8,
+      "fin": 20.86
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 20.86,
+      "fin": 21.26
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 21.9,
+      "fin": 22.5
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 22.68,
+      "fin": 22.9
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 22.9,
+      "fin": 23.14
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 23.14,
+      "fin": 23.26
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 23.26,
+      "fin": 23.4
+    }
+  ]
+}

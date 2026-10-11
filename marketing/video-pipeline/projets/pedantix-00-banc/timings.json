@@ -1,0 +1,712 @@
+{
+  "duree": 42.32,
+  "dureeVoix": 40.52,
+  "scenes": [
+    {
+      "id": "avatar",
+      "debut": 0.0,
+      "finVoix": 2.56,
+      "fin": 3.2
+    },
+    {
+      "id": "carte",
+      "debut": 3.2,
+      "finVoix": 6.26,
+      "fin": 6.66
+    },
+    {
+      "id": "duo",
+      "debut": 6.66,
+      "finVoix": 9.44,
+      "fin": 10.16
+    },
+    {
+      "id": "jeu",
+      "debut": 10.16,
+      "finVoix": 19.38,
+      "fin": 20.02
+    },
+    {
+      "id": "accelere",
+      "debut": 20.02,
+      "finVoix": 23.72,
+      "fin": 24.22
+    },
+    {
+      "id": "partage",
+      "debut": 24.22,
+      "finVoix": 25.28,
+      "fin": 26.04
+    },
+    {
+      "id": "ecrans",
+      "debut": 26.04,
+      "finVoix": 29.48,
+      "fin": 30.18
+    },
+    {
+      "id": "liste",
+      "debut": 30.18,
+      "finVoix": 34.1,
+      "fin": 35.04
+    },
+    {
+      "id": "chiffres",
+      "debut": 35.04,
+      "finVoix": 38.24,
+      "fin": 38.94
+    },
+    {
+      "id": "appel",
+      "debut": 38.94,
+      "finVoix": 40.52,
+      "fin": 42.32
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Salut,",
+      "mot": "Salut",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "moi",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.94
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.1
+    },
+    {
+      "texte": "Maxime,",
+      "mot": "Maxime",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 1.8
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 1.96
+    },
+    {
+      "texte": "créé",
+      "mot": "créé",
+      "scene": 0,
+      "debut": 1.96,
+      "fin": 2.22
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.38
+    },
+    {
+      "texte": "jeu.",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.56
+    },
+    {
+      "texte": "Série :",
+      "mot": "Série",
+      "scene": 1,
+      "debut": 3.2,
+      "fin": 3.5
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.96
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.32
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.48
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 4.48,
+      "fin": 4.64
+    },
+    {
+      "texte": "dure.",
+      "mot": "dure",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.94
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 6.1
+    },
+    {
+      "texte": "trois.",
+      "mot": "trois",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.26
+    },
+    {
+      "texte": "Regarde,",
+      "mot": "Regarde",
+      "scene": 2,
+      "debut": 6.66,
+      "fin": 6.94
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.6
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 2,
+      "debut": 7.6,
+      "fin": 7.78
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 2,
+      "debut": 7.78,
+      "fin": 7.86
+    },
+    {
+      "texte": "cachée,",
+      "mot": "cachée",
+      "scene": 2,
+      "debut": 7.86,
+      "fin": 8.14
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 2,
+      "debut": 8.48,
+      "fin": 8.56
+    },
+    {
+      "texte": "faut",
+      "mot": "faut",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.7
+    },
+    {
+      "texte": "deviner",
+      "mot": "deviner",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.04
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 2,
+      "debut": 9.04,
+      "fin": 9.24
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 2,
+      "debut": 9.24,
+      "fin": 9.44
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 3,
+      "debut": 10.16,
+      "fin": 10.3
+    },
+    {
+      "texte": "tape",
+      "mot": "tape",
+      "scene": 3,
+      "debut": 10.3,
+      "fin": 10.54
+    },
+    {
+      "texte": "mammifère,",
+      "mot": "mammifère",
+      "scene": 3,
+      "debut": 11.32,
+      "fin": 11.66
+    },
+    {
+      "texte": "trouvé.",
+      "mot": "trouvé",
+      "scene": 3,
+      "debut": 12.36,
+      "fin": 12.46
+    },
+    {
+      "texte": "Tigre,",
+      "mot": "Tigre",
+      "scene": 3,
+      "debut": 13.42,
+      "fin": 13.7
+    },
+    {
+      "texte": "absent.",
+      "mot": "absent",
+      "scene": 3,
+      "debut": 14.44,
+      "fin": 14.6
+    },
+    {
+      "texte": "Hérisson,",
+      "mot": "Hérisson",
+      "scene": 3,
+      "debut": 15.58,
+      "fin": 15.88
+    },
+    {
+      "texte": "presque.",
+      "mot": "presque",
+      "scene": 3,
+      "debut": 16.62,
+      "fin": 16.96
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 17.76,
+      "fin": 17.9
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 17.9,
+      "fin": 18.02
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 3,
+      "debut": 18.02,
+      "fin": 18.26
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 3,
+      "debut": 18.26,
+      "fin": 18.62
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 3,
+      "debut": 18.62,
+      "fin": 19.06
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 3,
+      "debut": 19.06,
+      "fin": 19.38
+    },
+    {
+      "texte": "On",
+      "mot": "On",
+      "scene": 4,
+      "debut": 20.02,
+      "fin": 20.18
+    },
+    {
+      "texte": "accélère,",
+      "mot": "accélère",
+      "scene": 4,
+      "debut": 20.18,
+      "fin": 20.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 20.58,
+      "fin": 20.84
+    },
+    {
+      "texte": "là,",
+      "mot": "là",
+      "scene": 4,
+      "debut": 20.84,
+      "fin": 20.96
+    },
+    {
+      "texte": "échidné !",
+      "mot": "échidné",
+      "scene": 4,
+      "debut": 21.52,
+      "fin": 21.97
+    },
+    {
+      "texte": "Gagné",
+      "mot": "Gagné",
+      "scene": 4,
+      "debut": 21.97,
+      "fin": 22.42
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 22.42,
+      "fin": 22.87
+    },
+    {
+      "texte": "quarante-sept",
+      "mot": "quarante-sept",
+      "scene": 4,
+      "debut": 22.87,
+      "fin": 23.32
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 4,
+      "debut": 23.32,
+      "fin": 23.72
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 5,
+      "debut": 24.22,
+      "fin": 24.32
+    },
+    {
+      "texte": "partage",
+      "mot": "partage",
+      "scene": 5,
+      "debut": 24.32,
+      "fin": 24.58
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 5,
+      "debut": 24.58,
+      "fin": 24.68
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 5,
+      "debut": 24.68,
+      "fin": 24.78
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 5,
+      "debut": 24.78,
+      "fin": 24.92
+    },
+    {
+      "texte": "mes",
+      "mot": "mes",
+      "scene": 5,
+      "debut": 24.92,
+      "fin": 25.0
+    },
+    {
+      "texte": "potes.",
+      "mot": "potes",
+      "scene": 5,
+      "debut": 25.0,
+      "fin": 25.28
+    },
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 6,
+      "debut": 26.04,
+      "fin": 26.24
+    },
+    {
+      "texte": "historique,",
+      "mot": "historique",
+      "scene": 6,
+      "debut": 26.24,
+      "fin": 26.92
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 6,
+      "debut": 27.42,
+      "fin": 27.58
+    },
+    {
+      "texte": "mode",
+      "mot": "mode",
+      "scene": 6,
+      "debut": 27.58,
+      "fin": 27.72
+    },
+    {
+      "texte": "sombre,",
+      "mot": "sombre",
+      "scene": 6,
+      "debut": 27.72,
+      "fin": 28.18
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 28.18,
+      "fin": 28.94
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 6,
+      "debut": 28.94,
+      "fin": 29.02
+    },
+    {
+      "texte": "rappel",
+      "mot": "rappel",
+      "scene": 6,
+      "debut": 29.02,
+      "fin": 29.18
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 29.18,
+      "fin": 29.3
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 6,
+      "debut": 29.3,
+      "fin": 29.48
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 7,
+      "debut": 30.18,
+      "fin": 30.7
+    },
+    {
+      "texte": "astuces :",
+      "mot": "astuces",
+      "scene": 7,
+      "debut": 30.7,
+      "fin": 31.04
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 7,
+      "debut": 31.38,
+      "fin": 31.52
+    },
+    {
+      "texte": "première",
+      "mot": "première",
+      "scene": 7,
+      "debut": 31.52,
+      "fin": 31.76
+    },
+    {
+      "texte": "phrase,",
+      "mot": "phrase",
+      "scene": 7,
+      "debut": 31.76,
+      "fin": 32.08
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 7,
+      "debut": 32.44,
+      "fin": 32.76
+    },
+    {
+      "texte": "gris,",
+      "mot": "gris",
+      "scene": 7,
+      "debut": 32.76,
+      "fin": 33.02
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 7,
+      "debut": 33.54,
+      "fin": 33.8
+    },
+    {
+      "texte": "petits",
+      "mot": "petits",
+      "scene": 7,
+      "debut": 33.8,
+      "fin": 33.94
+    },
+    {
+      "texte": "mots.",
+      "mot": "mots",
+      "scene": 7,
+      "debut": 33.94,
+      "fin": 34.1
+    },
+    {
+      "texte": "Dix",
+      "mot": "Dix",
+      "scene": 8,
+      "debut": 35.04,
+      "fin": 35.22
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 8,
+      "debut": 35.22,
+      "fin": 35.32
+    },
+    {
+      "texte": "pages.",
+      "mot": "pages",
+      "scene": 8,
+      "debut": 35.32,
+      "fin": 35.56
+    },
+    {
+      "texte": "Vrai !",
+      "mot": "Vrai",
+      "scene": 8,
+      "debut": 36.28,
+      "fin": 36.66
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 8,
+      "debut": 37.3,
+      "fin": 37.44
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 8,
+      "debut": 37.44,
+      "fin": 37.54
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 8,
+      "debut": 37.54,
+      "fin": 37.74
+    },
+    {
+      "texte": "secondes",
+      "mot": "secondes",
+      "scene": 8,
+      "debut": 37.74,
+      "fin": 37.96
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 8,
+      "debut": 37.96,
+      "fin": 38.04
+    },
+    {
+      "texte": "trouver.",
+      "mot": "trouver",
+      "scene": 8,
+      "debut": 38.04,
+      "fin": 38.24
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 9,
+      "debut": 38.94,
+      "fin": 39.46
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 9,
+      "debut": 39.8,
+      "fin": 40.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 9,
+      "debut": 40.18,
+      "fin": 40.28
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 9,
+      "debut": 40.28,
+      "fin": 40.4
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 9,
+      "debut": 40.4,
+      "fin": 40.52
+    }
+  ]
+}

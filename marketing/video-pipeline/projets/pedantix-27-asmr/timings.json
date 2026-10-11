@@ -1,0 +1,214 @@
+{
+  "duree": 25.64,
+  "dureeVoix": 23.84,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 7.08,
+      "fin": 8.16
+    },
+    {
+      "id": "mots",
+      "debut": 8.16,
+      "finVoix": 16.72,
+      "fin": 17.52
+    },
+    {
+      "id": "titre",
+      "debut": 17.52,
+      "finVoix": 19.7,
+      "fin": 21.02
+    },
+    {
+      "id": "appel",
+      "debut": 21.02,
+      "finVoix": 23.84,
+      "fin": 25.64
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Chut…",
+      "mot": "Chut",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 1.0
+    },
+    {
+      "texte": "écoute",
+      "mot": "écoute",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 2.36
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.9
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.9,
+      "fin": 3.26
+    },
+    {
+      "texte": "bruit",
+      "mot": "bruit",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.72
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 0,
+      "debut": 3.72,
+      "fin": 4.06
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 0,
+      "debut": 4.06,
+      "fin": 4.46
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 4.46,
+      "fin": 5.02
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 0,
+      "debut": 5.02,
+      "fin": 5.22
+    },
+    {
+      "texte": "dévoilent,",
+      "mot": "dévoilent",
+      "scene": 0,
+      "debut": 5.22,
+      "fin": 6.26
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 6.26,
+      "fin": 6.46
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 6.46,
+      "fin": 6.78
+    },
+    {
+      "texte": "un.",
+      "mot": "un",
+      "scene": 0,
+      "debut": 6.78,
+      "fin": 7.08
+    },
+    {
+      "texte": "Océan.",
+      "mot": "Océan",
+      "scene": 1,
+      "debut": 8.16,
+      "fin": 9.28
+    },
+    {
+      "texte": "Pacifique.",
+      "mot": "Pacifique",
+      "scene": 1,
+      "debut": 10.42,
+      "fin": 11.14
+    },
+    {
+      "texte": "Chine.",
+      "mot": "Chine",
+      "scene": 1,
+      "debut": 12.28,
+      "fin": 13.14
+    },
+    {
+      "texte": "Corée.",
+      "mot": "Corée",
+      "scene": 1,
+      "debut": 14.24,
+      "fin": 14.88
+    },
+    {
+      "texte": "Soleil.",
+      "mot": "Soleil",
+      "scene": 1,
+      "debut": 16.26,
+      "fin": 16.72
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 17.52,
+      "fin": 17.86
+    },
+    {
+      "texte": "enfin…",
+      "mot": "enfin",
+      "scene": 2,
+      "debut": 17.86,
+      "fin": 18.28
+    },
+    {
+      "texte": "Japon.",
+      "mot": "Japon",
+      "scene": 2,
+      "debut": 19.12,
+      "fin": 19.7
+    },
+    {
+      "texte": "Pédantix.",
+      "mot": "Pédantix",
+      "scene": 3,
+      "debut": 21.02,
+      "fin": 21.88
+    },
+    {
+      "texte": "Gratuit",
+      "mot": "Gratuit",
+      "scene": 3,
+      "debut": 22.64,
+      "fin": 23.2
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 23.2,
+      "fin": 23.38
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 3,
+      "debut": 23.38,
+      "fin": 23.48
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 3,
+      "debut": 23.48,
+      "fin": 23.84
+    }
+  ]
+}

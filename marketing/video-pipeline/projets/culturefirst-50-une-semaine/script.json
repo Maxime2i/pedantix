@@ -1,0 +1,165 @@
+{
+  "titre": "5 minutes par jour pendant 7 jours",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de récit, rythmé par les jours de la semaine, fier sur « sept jours d'affilée ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq minutes par jour pendant une semaine. Voilà ce que ça donne.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Cinq",
+          "texte": "5 minutes par jour",
+          "sous": "pendant 7 jours"
+        },
+        {
+          "type": "masquer",
+          "ancre": "donne",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "donne",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "debut",
+      "voix": "Lundi, tu commences. Mardi, les premières cartes reviennent déjà, juste avant que tu les oublies.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Lundi",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "reviennent"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "fin-semaine",
+      "voix": "Mercredi, tu t'en souviens mieux. Dimanche, sept jours d'affilée.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Dimanche",
+          "cible": "aucun"
+        },
+        {
+          "type": "finSeance",
+          "ancre": "Dimanche",
+          "donnees": {
+            "serie": 7,
+            "palier": 7
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "sept",
+          "cible": "e-badge",
+          "echelle": 1.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "stats",
+      "voix": "Et dans tes stats, la série s'allume jour après jour.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "stats",
+          "nom": "stats",
+          "donnees": {
+            "serie": 7,
+            "record": 7,
+            "faits": 7,
+            "palier": 14
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "série",
+          "cible": "s-serie",
+          "echelle": 1.3
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Japon",
+      "reponse": "Tokyo",
+      "fiche": [
+        [
+          "Continent",
+          "Asie"
+        ]
+      ]
+    }
+  ]
+}

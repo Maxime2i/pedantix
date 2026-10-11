@@ -1,0 +1,310 @@
+{
+  "duree": 19.04,
+  "dureeVoix": 17.24,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.8,
+      "fin": 3.8
+    },
+    {
+      "id": "date",
+      "debut": 3.8,
+      "finVoix": 6.92,
+      "fin": 7.96
+    },
+    {
+      "id": "chrono",
+      "debut": 7.96,
+      "finVoix": 10.04,
+      "fin": 10.82
+    },
+    {
+      "id": "reponse",
+      "debut": 10.82,
+      "finVoix": 12.06,
+      "fin": 12.8
+    },
+    {
+      "id": "cta",
+      "debut": 12.8,
+      "finVoix": 15.12,
+      "fin": 15.8
+    },
+    {
+      "id": "appel",
+      "debut": 15.8,
+      "finVoix": 17.24,
+      "fin": 19.04
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "seule",
+      "mot": "seule",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.68
+    },
+    {
+      "texte": "date,",
+      "mot": "date",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.94
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.6
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 1.92
+    },
+    {
+      "texte": "titre",
+      "mot": "titre",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.22
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.4
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 0,
+      "debut": 2.4,
+      "fin": 2.64
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 0,
+      "debut": 2.64,
+      "fin": 2.86
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 3.28,
+      "fin": 3.46
+    },
+    {
+      "texte": "trouves ?",
+      "mot": "trouves",
+      "scene": 0,
+      "debut": 3.46,
+      "fin": 3.8
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 3.8,
+      "fin": 4.7
+    },
+    {
+      "texte": "nuit",
+      "mot": "nuit",
+      "scene": 1,
+      "debut": 4.7,
+      "fin": 4.88
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.06
+    },
+    {
+      "texte": "trente-et-un",
+      "mot": "trente-et-un",
+      "scene": 1,
+      "debut": 5.06,
+      "fin": 5.48
+    },
+    {
+      "texte": "octobre",
+      "mot": "octobre",
+      "scene": 1,
+      "debut": 5.48,
+      "fin": 6.1
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.2
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 1,
+      "debut": 6.2,
+      "fin": 6.54
+    },
+    {
+      "texte": "novembre.",
+      "mot": "novembre",
+      "scene": 1,
+      "debut": 6.54,
+      "fin": 6.92
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 2,
+      "debut": 7.96,
+      "fin": 8.58
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.08
+    },
+    {
+      "texte": "un…",
+      "mot": "un",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 10.04
+    },
+    {
+      "texte": "Halloween,",
+      "mot": "Halloween",
+      "scene": 3,
+      "debut": 10.82,
+      "fin": 11.32
+    },
+    {
+      "texte": "évidemment !",
+      "mot": "évidemment",
+      "scene": 3,
+      "debut": 11.72,
+      "fin": 12.06
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 4,
+      "debut": 12.8,
+      "fin": 13.06
+    },
+    {
+      "texte": "veux",
+      "mot": "veux",
+      "scene": 4,
+      "debut": 13.06,
+      "fin": 13.16
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 4,
+      "debut": 13.16,
+      "fin": 13.28
+    },
+    {
+      "texte": "version",
+      "mot": "version",
+      "scene": 4,
+      "debut": 13.28,
+      "fin": 13.48
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 4,
+      "debut": 13.48,
+      "fin": 13.64
+    },
+    {
+      "texte": "dure ?",
+      "mot": "dure",
+      "scene": 4,
+      "debut": 13.64,
+      "fin": 13.84
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 13.84,
+      "fin": 14.64
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 14.64,
+      "fin": 14.74
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 14.74,
+      "fin": 15.12
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 15.8,
+      "fin": 16.28
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 16.48,
+      "fin": 16.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 16.78,
+      "fin": 16.98
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.98,
+      "fin": 17.1
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 17.1,
+      "fin": 17.24
+    }
+  ]
+}

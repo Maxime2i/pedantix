@@ -1,0 +1,196 @@
+{
+  "titre": "Moi dans le métro",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton détendu et rythmé, phrases courtes bien détachées au début. Satisfait sur « c'est fait ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Moi dans le métro, au lieu de scroller.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Moi",
+          "texte": "Moi dans le métro",
+          "sous": "au lieu de scroller"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Moi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "cartes",
+      "voix": "Une carte. Je réfléchis. La réponse. Correct. Suivante.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Une"
+        },
+        {
+          "type": "entree",
+          "ancre": "Une"
+        },
+        {
+          "type": "zoom",
+          "ancre": "réfléchis",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "réponse"
+        },
+        {
+          "type": "zoom",
+          "ancre": "réponse",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "Correct",
+          "bouton": "correct"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Suivante",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Suivante",
+          "index": 1
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "fait",
+      "voix": "Deux minutes, et c'est fait. Même sans réseau : tes réponses sont envoyées plus tard.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "reveler",
+          "ancre": "Deux"
+        },
+        {
+          "type": "zoom",
+          "ancre": "réseau",
+          "cible": "aucun"
+        },
+        {
+          "type": "finSeance",
+          "ancre": "fait",
+          "donnees": {
+            "cartes": 12,
+            "minutes": 2,
+            "serie": 23,
+            "prochain": 30
+          }
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "serie",
+      "voix": "Ta série continue, ta culture G grandit, et ton pouce se repose.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "série",
+          "cible": "e-badge",
+          "echelle": 1.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grands romans français",
+      "theme": "Culture classique",
+      "compteurs": [
+        7,
+        3,
+        21
+      ],
+      "question": "Qui a écrit ce roman ?",
+      "indiceType": "Roman",
+      "indice": "Les Misérables",
+      "reponse": "Victor Hugo",
+      "fiche": [
+        [
+          "Publication",
+          "1862"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tableaux célèbres",
+      "theme": "Culture classique",
+      "compteurs": [
+        6,
+        3,
+        21
+      ],
+      "question": "Qui a peint ce tableau ?",
+      "indiceType": "Tableau",
+      "indice": "La Joconde",
+      "reponse": "Léonard de Vinci",
+      "fiche": [
+        [
+          "Musée",
+          "Louvre, Paris"
+        ]
+      ]
+    }
+  ],
+  "ecrans": {
+    "etude": {
+      "horsConnexion": true
+    }
+  }
+}

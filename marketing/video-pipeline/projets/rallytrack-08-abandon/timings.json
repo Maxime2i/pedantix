@@ -1,0 +1,298 @@
+{
+  "duree": 17.28,
+  "dureeVoix": 15.48,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.12,
+      "fin": 2.9
+    },
+    {
+      "id": "drame",
+      "debut": 2.9,
+      "finVoix": 6.42,
+      "fin": 7.2
+    },
+    {
+      "id": "disparait",
+      "debut": 7.2,
+      "finVoix": 10.58,
+      "fin": 11.46
+    },
+    {
+      "id": "appel",
+      "debut": 11.46,
+      "finVoix": 15.48,
+      "fin": 17.28
+    }
+  ],
+  "mots": [
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "tête,",
+      "mot": "tête",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.68
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 1.02
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.26
+    },
+    {
+      "texte": "spéciales",
+      "mot": "spéciales",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.74
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 1.82
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 1.82,
+      "fin": 1.92
+    },
+    {
+      "texte": "fin…",
+      "mot": "fin",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.12
+    },
+    {
+      "texte": "Moreau",
+      "mot": "Moreau",
+      "scene": 1,
+      "debut": 2.9,
+      "fin": 3.42
+    },
+    {
+      "texte": "attaque",
+      "mot": "attaque",
+      "scene": 1,
+      "debut": 3.42,
+      "fin": 3.82
+    },
+    {
+      "texte": "l'ES",
+      "mot": "l'ES",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 3.96
+    },
+    {
+      "texte": "huit…",
+      "mot": "huit",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.28
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 4.28,
+      "fin": 6.12
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 6.12,
+      "fin": 6.18
+    },
+    {
+      "texte": "rien.",
+      "mot": "rien",
+      "scene": 1,
+      "debut": 6.18,
+      "fin": 6.42
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 2,
+      "debut": 7.2,
+      "fin": 7.44
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.54
+    },
+    {
+      "texte": "classement,",
+      "mot": "classement",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.88
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 2,
+      "debut": 7.88,
+      "fin": 8.06
+    },
+    {
+      "texte": "nom",
+      "mot": "nom",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.2
+    },
+    {
+      "texte": "disparaît.",
+      "mot": "disparaît",
+      "scene": 2,
+      "debut": 8.2,
+      "fin": 8.7
+    },
+    {
+      "texte": "Marchal",
+      "mot": "Marchal",
+      "scene": 2,
+      "debut": 9.6,
+      "fin": 10.06
+    },
+    {
+      "texte": "prend",
+      "mot": "prend",
+      "scene": 2,
+      "debut": 10.06,
+      "fin": 10.28
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 10.28,
+      "fin": 10.4
+    },
+    {
+      "texte": "tête.",
+      "mot": "tête",
+      "scene": 2,
+      "debut": 10.4,
+      "fin": 10.58
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 3,
+      "debut": 11.46,
+      "fin": 11.54
+    },
+    {
+      "texte": "drames",
+      "mot": "drames",
+      "scene": 3,
+      "debut": 11.54,
+      "fin": 11.96
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 11.96,
+      "fin": 12.12
+    },
+    {
+      "texte": "rallye,",
+      "mot": "rallye",
+      "scene": 3,
+      "debut": 12.12,
+      "fin": 12.5
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 12.5,
+      "fin": 12.58
+    },
+    {
+      "texte": "direct.",
+      "mot": "direct",
+      "scene": 3,
+      "debut": 12.58,
+      "fin": 12.86
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 13.54,
+      "fin": 13.88
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 13.88,
+      "fin": 14.14
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 14.46,
+      "fin": 14.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 14.64,
+      "fin": 14.88
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 14.88,
+      "fin": 15.06
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 15.06,
+      "fin": 15.26
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 15.26,
+      "fin": 15.48
+    }
+  ]
+}

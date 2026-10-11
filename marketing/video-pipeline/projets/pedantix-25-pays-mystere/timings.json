@@ -1,0 +1,317 @@
+{
+  "duree": 16.06,
+  "dureeVoix": 14.26,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.56,
+      "fin": 3.16
+    },
+    {
+      "id": "i1",
+      "debut": 3.16,
+      "finVoix": 5.66,
+      "fin": 6.02
+    },
+    {
+      "id": "i2",
+      "debut": 6.02,
+      "finVoix": 8.73,
+      "fin": 8.73
+    },
+    {
+      "id": "reponse",
+      "debut": 8.73,
+      "finVoix": 10.14,
+      "fin": 10.66
+    },
+    {
+      "id": "cta",
+      "debut": 10.66,
+      "finVoix": 12.3,
+      "fin": 12.72
+    },
+    {
+      "id": "appel",
+      "debut": 12.72,
+      "finVoix": 14.26,
+      "fin": 16.06
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.36
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 0,
+      "debut": 0.36,
+      "fin": 0.6
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.8
+    },
+    {
+      "texte": "caché",
+      "mot": "caché",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.16
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.26
+    },
+    {
+      "texte": "cette",
+      "mot": "cette",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.42
+    },
+    {
+      "texte": "page.",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.7
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.2
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.32
+    },
+    {
+      "texte": "trouves ?",
+      "mot": "trouves",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.56
+    },
+    {
+      "texte": "Indice",
+      "mot": "Indice",
+      "scene": 1,
+      "debut": 3.16,
+      "fin": 3.52
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.52,
+      "fin": 3.74
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.2
+    },
+    {
+      "texte": "péninsule",
+      "mot": "péninsule",
+      "scene": 1,
+      "debut": 4.2,
+      "fin": 4.92
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.12
+    },
+    {
+      "texte": "Asie",
+      "mot": "Asie",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.38,
+      "fin": 5.46
+    },
+    {
+      "texte": "l'Est.",
+      "mot": "l'Est",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.66
+    },
+    {
+      "texte": "Indice",
+      "mot": "Indice",
+      "scene": 2,
+      "debut": 6.02,
+      "fin": 6.54
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 6.54,
+      "fin": 6.68
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.16
+    },
+    {
+      "texte": "capitale,",
+      "mot": "capitale",
+      "scene": 2,
+      "debut": 7.16,
+      "fin": 7.68
+    },
+    {
+      "texte": "Pyongyang.",
+      "mot": "Pyongyang",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.73
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 8.73,
+      "fin": 9.38
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 9.38,
+      "fin": 9.5
+    },
+    {
+      "texte": "Corée",
+      "mot": "Corée",
+      "scene": 3,
+      "debut": 9.5,
+      "fin": 9.88
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 9.88,
+      "fin": 9.96
+    },
+    {
+      "texte": "Nord !",
+      "mot": "Nord",
+      "scene": 3,
+      "debut": 9.96,
+      "fin": 10.14
+    },
+    {
+      "texte": "Trop",
+      "mot": "Trop",
+      "scene": 4,
+      "debut": 10.66,
+      "fin": 10.76
+    },
+    {
+      "texte": "facile ?",
+      "mot": "facile",
+      "scene": 4,
+      "debut": 10.76,
+      "fin": 11.02
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 11.46,
+      "fin": 11.56
+    },
+    {
+      "texte": "prochain",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 11.56,
+      "fin": 11.84
+    },
+    {
+      "texte": "sera",
+      "mot": "sera",
+      "scene": 4,
+      "debut": 11.84,
+      "fin": 12.04
+    },
+    {
+      "texte": "pire.",
+      "mot": "pire",
+      "scene": 4,
+      "debut": 12.04,
+      "fin": 12.3
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 12.72,
+      "fin": 13.24
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 13.44,
+      "fin": 13.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 13.78,
+      "fin": 14.0
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 14.0,
+      "fin": 14.08
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 14.08,
+      "fin": 14.26
+    }
+  ]
+}

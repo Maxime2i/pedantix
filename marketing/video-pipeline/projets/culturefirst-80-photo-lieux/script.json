@@ -1,0 +1,129 @@
+{
+  "titre": "3 lieux : devine le pays",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, rythmé et complice. Petit suspense sur chaque « tu as trouvé ? », réponse enthousiaste avec un ton de carte postale. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "l1",
+      "voix": "Trois lieux, devine le pays. Premier… tu as trouvé ?",
+      "animation": "",
+      "image": "Village aux maisons blanches et dômes bleus perché sur une falaise volcanique au-dessus d'une mer bleu profond, coucher de soleil, mer Égée.",
+      "actions": [
+        {
+          "type": "photo",
+          "ancre": "Trois",
+          "image": "scene-01.png",
+          "legende": "Lieu n°1"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "r1",
+      "voix": "La Grèce : l'île de Santorin, avec ses maisons blanches et ses dômes bleus.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "Grèce",
+          "nom": "Grèce"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "l2",
+      "voix": "Deuxième… alors ?",
+      "animation": "",
+      "image": "Ruines d'une cité inca en pierre sur une crête de montagne verdoyante, pics andins dans la brume du matin.",
+      "actions": [
+        {
+          "type": "photo",
+          "ancre": "Deuxième",
+          "image": "scene-03.png",
+          "legende": "Lieu n°2"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "r2",
+      "voix": "Le Pérou : le Machu Picchu, la cité inca perchée dans les Andes.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "Pérou",
+          "nom": "Pérou"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "l3",
+      "voix": "Dernier… celui-là est plus dur.",
+      "animation": "",
+      "image": "Baie aux eaux émeraude parsemée de centaines de pitons calcaires couverts de végétation, bateaux traditionnels au loin, lumière douce.",
+      "actions": [
+        {
+          "type": "photo",
+          "ancre": "Dernier",
+          "image": "scene-05.png",
+          "legende": "Lieu n°3"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "r3",
+      "voix": "Le Vietnam : la baie d'Halong et ses près de deux mille îlots.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "Vietnam",
+          "nom": "Vietnam"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien tu en as eu ? Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "styleImages": "photo de voyage réaliste, lumière naturelle, sans personne"
+}

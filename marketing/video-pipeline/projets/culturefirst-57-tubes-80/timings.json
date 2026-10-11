@@ -1,0 +1,463 @@
+{
+  "duree": 30.46,
+  "dureeVoix": 28.66,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 5.04,
+      "fin": 5.04
+    },
+    {
+      "id": "t1",
+      "debut": 5.04,
+      "finVoix": 8.86,
+      "fin": 8.86
+    },
+    {
+      "id": "t2",
+      "debut": 8.86,
+      "finVoix": 12.16,
+      "fin": 12.7
+    },
+    {
+      "id": "t3",
+      "debut": 12.7,
+      "finVoix": 15.6,
+      "fin": 16.16
+    },
+    {
+      "id": "t4",
+      "debut": 16.16,
+      "finVoix": 19.04,
+      "fin": 19.52
+    },
+    {
+      "id": "t5",
+      "debut": 19.52,
+      "finVoix": 24.02,
+      "fin": 24.76
+    },
+    {
+      "id": "appel",
+      "debut": 24.76,
+      "finVoix": 28.66,
+      "fin": 30.46
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tubes",
+      "mot": "Tubes",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.54
+    },
+    {
+      "texte": "français",
+      "mot": "français",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.94
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.2
+    },
+    {
+      "texte": "années",
+      "mot": "années",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 1.44
+    },
+    {
+      "texte": "quatre-vingt :",
+      "mot": "quatre-vingt",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.84
+    },
+    {
+      "texte": "trouve",
+      "mot": "trouve",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.44
+    },
+    {
+      "texte": "l'artiste",
+      "mot": "l'artiste",
+      "scene": 0,
+      "debut": 2.44,
+      "fin": 2.78
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 2.98
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.22
+    },
+    {
+      "texte": "Attention,",
+      "mot": "Attention",
+      "scene": 0,
+      "debut": 3.72,
+      "fin": 4.12
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 0,
+      "debut": 4.56,
+      "fin": 4.66
+    },
+    {
+      "texte": "va",
+      "mot": "va",
+      "scene": 0,
+      "debut": 4.66,
+      "fin": 4.76
+    },
+    {
+      "texte": "chanter.",
+      "mot": "chanter",
+      "scene": 0,
+      "debut": 4.76,
+      "fin": 5.04
+    },
+    {
+      "texte": "Un : «",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 5.04,
+      "fin": 6.0
+    },
+    {
+      "texte": "Voyage,",
+      "mot": "Voyage",
+      "scene": 1,
+      "debut": 6.58,
+      "fin": 6.72
+    },
+    {
+      "texte": "voyage » ?",
+      "mot": "voyage",
+      "scene": 1,
+      "debut": 6.72,
+      "fin": 6.92
+    },
+    {
+      "texte": "Desireless.",
+      "mot": "Desireless",
+      "scene": 1,
+      "debut": 8.04,
+      "fin": 8.86
+    },
+    {
+      "texte": "Deux : «",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 9.68
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 2,
+      "debut": 10.16,
+      "fin": 10.18
+    },
+    {
+      "texte": "Démons",
+      "mot": "Démons",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.42
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.42,
+      "fin": 10.52
+    },
+    {
+      "texte": "minuit » ?",
+      "mot": "minuit",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.74
+    },
+    {
+      "texte": "Images.",
+      "mot": "Images",
+      "scene": 2,
+      "debut": 11.62,
+      "fin": 12.16
+    },
+    {
+      "texte": "Trois : «",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 12.7,
+      "fin": 13.23
+    },
+    {
+      "texte": "Ella,",
+      "mot": "Ella",
+      "scene": 3,
+      "debut": 13.23,
+      "fin": 13.76
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 3,
+      "debut": 13.76,
+      "fin": 14.1
+    },
+    {
+      "texte": "l'a » ?",
+      "mot": "l'a",
+      "scene": 3,
+      "debut": 14.1,
+      "fin": 14.28
+    },
+    {
+      "texte": "France",
+      "mot": "France",
+      "scene": 3,
+      "debut": 15.0,
+      "fin": 15.36
+    },
+    {
+      "texte": "Gall.",
+      "mot": "Gall",
+      "scene": 3,
+      "debut": 15.36,
+      "fin": 15.6
+    },
+    {
+      "texte": "Quatre : «",
+      "mot": "Quatre",
+      "scene": 4,
+      "debut": 16.16,
+      "fin": 16.5
+    },
+    {
+      "texte": "Femme",
+      "mot": "Femme",
+      "scene": 4,
+      "debut": 17.16,
+      "fin": 17.26
+    },
+    {
+      "texte": "libérée » ?",
+      "mot": "libérée",
+      "scene": 4,
+      "debut": 17.26,
+      "fin": 17.6
+    },
+    {
+      "texte": "Cookie",
+      "mot": "Cookie",
+      "scene": 4,
+      "debut": 18.38,
+      "fin": 18.56
+    },
+    {
+      "texte": "Dingler.",
+      "mot": "Dingler",
+      "scene": 4,
+      "debut": 18.56,
+      "fin": 19.04
+    },
+    {
+      "texte": "Cinq : «",
+      "mot": "Cinq",
+      "scene": 5,
+      "debut": 19.52,
+      "fin": 19.92
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 5,
+      "debut": 20.52,
+      "fin": 20.58
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 5,
+      "debut": 20.58,
+      "fin": 20.72
+    },
+    {
+      "texte": "donne »,",
+      "mot": "donne",
+      "scene": 5,
+      "debut": 20.72,
+      "fin": 20.96
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 5,
+      "debut": 21.26,
+      "fin": 21.44
+    },
+    {
+      "texte": "duo ?",
+      "mot": "duo",
+      "scene": 5,
+      "debut": 21.44,
+      "fin": 21.6
+    },
+    {
+      "texte": "Jean-Jacques",
+      "mot": "Jean-Jacques",
+      "scene": 5,
+      "debut": 22.38,
+      "fin": 23.06
+    },
+    {
+      "texte": "Goldman",
+      "mot": "Goldman",
+      "scene": 5,
+      "debut": 23.06,
+      "fin": 23.28
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 23.28,
+      "fin": 23.48
+    },
+    {
+      "texte": "Michael",
+      "mot": "Michael",
+      "scene": 5,
+      "debut": 23.48,
+      "fin": 23.64
+    },
+    {
+      "texte": "Jones.",
+      "mot": "Jones",
+      "scene": 5,
+      "debut": 23.64,
+      "fin": 24.02
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 6,
+      "debut": 24.76,
+      "fin": 25.02
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 6,
+      "debut": 25.02,
+      "fin": 25.16
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 6,
+      "debut": 25.16,
+      "fin": 25.32
+    },
+    {
+      "texte": "chantées",
+      "mot": "chantées",
+      "scene": 6,
+      "debut": 25.32,
+      "fin": 25.64
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 6,
+      "debut": 25.64,
+      "fin": 25.76
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 6,
+      "debut": 25.76,
+      "fin": 25.88
+    },
+    {
+      "texte": "tête ?",
+      "mot": "tête",
+      "scene": 6,
+      "debut": 25.88,
+      "fin": 26.08
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 26.66,
+      "fin": 26.84
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 26.84,
+      "fin": 27.2
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 27.42,
+      "fin": 27.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 27.62,
+      "fin": 27.86
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 27.86,
+      "fin": 28.1
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 28.1,
+      "fin": 28.44
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 28.44,
+      "fin": 28.66
+    }
+  ]
+}

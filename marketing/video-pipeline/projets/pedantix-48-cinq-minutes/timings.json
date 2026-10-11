@@ -1,0 +1,359 @@
+{
+  "duree": 18.64,
+  "dureeVoix": 16.84,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.22,
+      "fin": 2.4
+    },
+    {
+      "id": "cafe",
+      "debut": 2.4,
+      "finVoix": 5.44,
+      "fin": 6.0
+    },
+    {
+      "id": "jeu",
+      "debut": 6.0,
+      "finVoix": 9.8,
+      "fin": 10.48
+    },
+    {
+      "id": "retour",
+      "debut": 10.48,
+      "finVoix": 12.23,
+      "fin": 12.23
+    },
+    {
+      "id": "promis",
+      "debut": 12.23,
+      "finVoix": 14.42,
+      "fin": 15.12
+    },
+    {
+      "id": "appel",
+      "debut": 15.12,
+      "finVoix": 16.84,
+      "fin": 18.64
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "rituel",
+      "mot": "rituel",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.74
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.9
+    },
+    {
+      "texte": "midi",
+      "mot": "midi",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.22
+    },
+    {
+      "texte": "tient",
+      "mot": "tient",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.62
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.72
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 1.72,
+      "fin": 1.92
+    },
+    {
+      "texte": "minutes.",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.22
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 2.4,
+      "fin": 2.92
+    },
+    {
+      "texte": "café,",
+      "mot": "café",
+      "scene": 1,
+      "debut": 2.92,
+      "fin": 3.16
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.86
+    },
+    {
+      "texte": "téléphone,",
+      "mot": "téléphone",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.16
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.86
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 4.96
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 4.96,
+      "fin": 5.12
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.26
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 1,
+      "debut": 5.26,
+      "fin": 5.44
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 2,
+      "debut": 6.0,
+      "fin": 6.16
+    },
+    {
+      "texte": "propose",
+      "mot": "propose",
+      "scene": 2,
+      "debut": 6.16,
+      "fin": 6.34
+    },
+    {
+      "texte": "quelques",
+      "mot": "quelques",
+      "scene": 2,
+      "debut": 6.34,
+      "fin": 6.56
+    },
+    {
+      "texte": "mots,",
+      "mot": "mots",
+      "scene": 2,
+      "debut": 6.56,
+      "fin": 6.8
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 7.4,
+      "fin": 7.46
+    },
+    {
+      "texte": "réfléchis,",
+      "mot": "réfléchis",
+      "scene": 2,
+      "debut": 7.46,
+      "fin": 7.88
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 8.46,
+      "fin": 8.6
+    },
+    {
+      "texte": "trouve…",
+      "mot": "trouve",
+      "scene": 2,
+      "debut": 8.6,
+      "fin": 8.82
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 2,
+      "debut": 9.44,
+      "fin": 9.62
+    },
+    {
+      "texte": "pas.",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 9.62,
+      "fin": 9.8
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 10.48,
+      "fin": 10.6
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 10.6,
+      "fin": 10.68
+    },
+    {
+      "texte": "retourne",
+      "mot": "retourne",
+      "scene": 3,
+      "debut": 10.68,
+      "fin": 10.9
+    },
+    {
+      "texte": "travailler",
+      "mot": "travailler",
+      "scene": 3,
+      "debut": 10.9,
+      "fin": 11.18
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 3,
+      "debut": 11.18,
+      "fin": 11.4
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 11.4,
+      "fin": 11.56
+    },
+    {
+      "texte": "truc",
+      "mot": "truc",
+      "scene": 3,
+      "debut": 11.56,
+      "fin": 11.62
+    },
+    {
+      "texte": "appris.",
+      "mot": "appris",
+      "scene": 3,
+      "debut": 11.62,
+      "fin": 12.23
+    },
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 4,
+      "debut": 12.23,
+      "fin": 12.84
+    },
+    {
+      "texte": "minutes,",
+      "mot": "minutes",
+      "scene": 4,
+      "debut": 12.84,
+      "fin": 13.08
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 4,
+      "debut": 13.24,
+      "fin": 13.3
+    },
+    {
+      "texte": "plus.",
+      "mot": "plus",
+      "scene": 4,
+      "debut": 13.3,
+      "fin": 13.52
+    },
+    {
+      "texte": "Promis.",
+      "mot": "Promis",
+      "scene": 4,
+      "debut": 14.08,
+      "fin": 14.42
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 15.12,
+      "fin": 15.56
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 16.0,
+      "fin": 16.34
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 16.34,
+      "fin": 16.5
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.5,
+      "fin": 16.58
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.58,
+      "fin": 16.84
+    }
+  ]
+}

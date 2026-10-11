@@ -1,0 +1,211 @@
+{
+  "titre": "Your mind matters as much as your feet",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "English version of destinyfc-08. Real events ev_pressure_choke_risk (Pressure ≥ 62) and ev_in_the_zone (Confidence ≥ 72, Pressure ≤ 35); gauges respect those conditions. Real effects +4 Confidence, -12 Pressure.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Explaining like a coach, but lively. Tension on 'your hands start shaking', relief on 'calm comes back', excitement on 'you're in the zone'."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "duo",
+  "cartes": {
+    "choke": {
+      "genre": "evenement",
+      "tag": "😰 DRESSING ROOM · 25 YRS",
+      "texte": "The pressure peaks before the big game. Your hands shake slightly during the warm-up — your body is talking.",
+      "options": [
+        {
+          "texte": "Lean on your routine and your breathing"
+        },
+        {
+          "texte": "Charge in head-down so you don't overthink"
+        }
+      ]
+    },
+    "calme": {
+      "genre": "resultat",
+      "tag": "😰 DRESSING ROOM",
+      "ton": "great",
+      "texte": "The ritual grounds you: calm returns just in time.",
+      "effets": [
+        "+4 Confidence",
+        "-12 Pressure"
+      ]
+    },
+    "zone": {
+      "genre": "evenement",
+      "tag": "🔥 PITCH · 25 YRS",
+      "texte": "Everything is clicking right now. The ball sticks to your feet, time slows down — you're in the zone.",
+      "options": [
+        {
+          "texte": "Try the moves you never dared before"
+        },
+        {
+          "texte": "Keep it simple to make the hot streak last"
+        }
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 25,
+        "annee": 2035,
+        "poste": "milieu",
+        "note": 79,
+        "argent": "€14m",
+        "etoiles": 4,
+        "jauges": {
+          "forme": 76,
+          "moral": 68,
+          "confiance": 55,
+          "pression": 48
+        },
+        "niveau": "elite",
+        "club": "United",
+        "couleurs": [
+          "#e52a1e",
+          "#f2f2f2"
+        ]
+      },
+      "carte": null
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "In my football game, your mind matters as much as your feet.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "mind",
+          "nom": "montre-droite"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "gauges",
+      "voix": "Look at these gauges: confidence and pressure.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Look",
+          "mode": "telephone"
+        },
+        {
+          "type": "zoom",
+          "ancre": "gauges",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pressure",
+      "voix": "If the pressure gets too high, your hands start shaking before the match.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jauges",
+          "ancre": "pressure",
+          "pression": 70,
+          "confiance": 44
+        },
+        {
+          "type": "zoom",
+          "ancre": "hands",
+          "cible": "p-carte",
+          "echelle": 1.2,
+          "hauteur": 960
+        },
+        {
+          "type": "carte",
+          "ancre": "hands",
+          "id": "choke"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "routine",
+      "voix": "I lean on my routine… and the calm comes back.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "routine",
+          "n": 1
+        },
+        {
+          "type": "carte",
+          "ancre": "calm",
+          "id": "calme"
+        },
+        {
+          "type": "jauges",
+          "ancre": "back",
+          "pression": 58,
+          "confiance": 48
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "zone",
+      "voix": "And when your confidence is sky-high, you're in the zone.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jauges",
+          "ancre": "confidence",
+          "confiance": 78,
+          "pression": 30
+        },
+        {
+          "type": "carte",
+          "ancre": "zone",
+          "id": "zone"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Your mindset can be trained. Destiny FC, free on iPhone and Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

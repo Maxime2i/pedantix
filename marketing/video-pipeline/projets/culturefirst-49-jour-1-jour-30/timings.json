@@ -1,0 +1,450 @@
+{
+  "duree": 24.42,
+  "dureeVoix": 22.62,
+  "scenes": [
+    {
+      "id": "j1",
+      "debut": 0.0,
+      "finVoix": 2.5,
+      "fin": 2.98
+    },
+    {
+      "id": "j1-detail",
+      "debut": 2.98,
+      "finVoix": 6.66,
+      "fin": 7.44
+    },
+    {
+      "id": "j30",
+      "debut": 7.44,
+      "finVoix": 8.06,
+      "fin": 8.7
+    },
+    {
+      "id": "j30-detail",
+      "debut": 8.7,
+      "finVoix": 13.82,
+      "fin": 14.7
+    },
+    {
+      "id": "difference",
+      "debut": 14.7,
+      "finVoix": 17.56,
+      "fin": 18.2
+    },
+    {
+      "id": "appel",
+      "debut": 18.2,
+      "finVoix": 22.62,
+      "fin": 24.42
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Jour",
+      "mot": "Jour",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.7
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 1.04
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.28
+    },
+    {
+      "texte": "First.",
+      "mot": "First",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.64
+    },
+    {
+      "texte": "Tout",
+      "mot": "Tout",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.18
+    },
+    {
+      "texte": "commence.",
+      "mot": "commence",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.5
+    },
+    {
+      "texte": "Dix",
+      "mot": "Dix",
+      "scene": 1,
+      "debut": 2.98,
+      "fin": 3.2
+    },
+    {
+      "texte": "nouvelles",
+      "mot": "nouvelles",
+      "scene": 1,
+      "debut": 3.2,
+      "fin": 3.38
+    },
+    {
+      "texte": "cartes,",
+      "mot": "cartes",
+      "scene": 1,
+      "debut": 3.38,
+      "fin": 3.94
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.32
+    },
+    {
+      "texte": "série",
+      "mot": "série",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.52
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 1,
+      "debut": 4.52,
+      "fin": 4.74
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 4.94
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.62
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 1,
+      "debut": 5.62,
+      "fin": 5.84
+    },
+    {
+      "texte": "premiers",
+      "mot": "premiers",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 6.08
+    },
+    {
+      "texte": "thèmes",
+      "mot": "thèmes",
+      "scene": 1,
+      "debut": 6.08,
+      "fin": 6.3
+    },
+    {
+      "texte": "ajoutés.",
+      "mot": "ajoutés",
+      "scene": 1,
+      "debut": 6.3,
+      "fin": 6.66
+    },
+    {
+      "texte": "Jour",
+      "mot": "Jour",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.64
+    },
+    {
+      "texte": "trente.",
+      "mot": "trente",
+      "scene": 2,
+      "debut": 7.64,
+      "fin": 8.06
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 3,
+      "debut": 8.7,
+      "fin": 8.9
+    },
+    {
+      "texte": "série",
+      "mot": "série",
+      "scene": 3,
+      "debut": 8.9,
+      "fin": 9.12
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 9.12,
+      "fin": 9.34
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 3,
+      "debut": 9.34,
+      "fin": 9.68
+    },
+    {
+      "texte": "jours,",
+      "mot": "jours",
+      "scene": 3,
+      "debut": 9.68,
+      "fin": 10.0
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 10.54,
+      "fin": 10.74
+    },
+    {
+      "texte": "centaines",
+      "mot": "centaines",
+      "scene": 3,
+      "debut": 10.74,
+      "fin": 11.3
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 11.3,
+      "fin": 11.46
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 3,
+      "debut": 11.46,
+      "fin": 11.82
+    },
+    {
+      "texte": "déjà",
+      "mot": "déjà",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 12.1
+    },
+    {
+      "texte": "vues,",
+      "mot": "vues",
+      "scene": 3,
+      "debut": 12.1,
+      "fin": 12.36
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 12.36,
+      "fin": 12.92
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 12.92,
+      "fin": 13.04
+    },
+    {
+      "texte": "révisions",
+      "mot": "révisions",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.38
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 3,
+      "debut": 13.38,
+      "fin": 13.52
+    },
+    {
+      "texte": "s'espacent.",
+      "mot": "s'espacent",
+      "scene": 3,
+      "debut": 13.52,
+      "fin": 13.82
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 4,
+      "debut": 14.7,
+      "fin": 14.84
+    },
+    {
+      "texte": "différence ?",
+      "mot": "différence",
+      "scene": 4,
+      "debut": 14.84,
+      "fin": 15.1
+    },
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 4,
+      "debut": 15.1,
+      "fin": 16.18
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 4,
+      "debut": 16.18,
+      "fin": 16.4
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 4,
+      "debut": 16.4,
+      "fin": 16.62
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 4,
+      "debut": 16.62,
+      "fin": 16.86
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 4,
+      "debut": 16.86,
+      "fin": 17.22
+    },
+    {
+      "texte": "forcer.",
+      "mot": "forcer",
+      "scene": 4,
+      "debut": 17.22,
+      "fin": 17.56
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 5,
+      "debut": 18.2,
+      "fin": 18.42
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 18.42,
+      "fin": 18.64
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 18.64,
+      "fin": 18.807
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 5,
+      "debut": 18.807,
+      "fin": 18.973
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 18.973,
+      "fin": 19.14
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 5,
+      "debut": 19.14,
+      "fin": 19.48
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 20.24,
+      "fin": 20.64
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 20.64,
+      "fin": 21.06
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 21.46,
+      "fin": 21.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 21.78,
+      "fin": 21.98
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 21.98,
+      "fin": 22.18
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 22.18,
+      "fin": 22.36
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 22.36,
+      "fin": 22.62
+    }
+  ]
+}

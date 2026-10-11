@@ -1,0 +1,144 @@
+{
+  "titre": "Vrai ou faux Wikipédia",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 23
+  },
+  "objectif": "Quiz : trois affirmations tirées de pages passées.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Vrai ou faux, version Wikipédia. Trois affirmations.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Vrai",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : le Scrabble est vendu dans plus de cent pays. Vrai ! Cent vingt et un pays.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Un",
+          "numero": "1",
+          "texte": "Le Scrabble est vendu dans plus de 100 pays"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Vrai",
+          "texte": "VRAI",
+          "couleur": "vert"
+        },
+        {
+          "type": "pose",
+          "ancre": "Vrai",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : Héra est la déesse de la guerre. Faux ! Celle du mariage.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Deux",
+          "numero": "2",
+          "texte": "Héra est la déesse de la guerre"
+        },
+        {
+          "type": "pose",
+          "ancre": "Deux",
+          "nom": "neutre"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Faux",
+          "texte": "FAUX",
+          "couleur": "rouge"
+        },
+        {
+          "type": "pose",
+          "ancre": "Faux",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : le symbole du plomb, c'est Pb. Vrai, du latin plumbum.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Trois",
+          "numero": "3",
+          "texte": "Le symbole du plomb, c'est Pb"
+        },
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "neutre"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Vrai,",
+          "texte": "VRAI",
+          "couleur": "vert"
+        },
+        {
+          "type": "pose",
+          "ancre": "plumbum.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Combien t'en as eu ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Combien"
+        },
+        {
+          "type": "pose",
+          "ancre": "Combien",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

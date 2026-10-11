@@ -1,0 +1,127 @@
+{
+  "titre": "Fort en histoire ou en géo ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton curieux et taquin au début, clair ensuite. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tu es plutôt fort en histoire, ou en géo ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Tu",
+          "texte": "Plutôt histoire ou géo ?"
+        },
+        {
+          "type": "masquer",
+          "ancre": "géo",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "géo"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tu",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "barres",
+      "voix": "Dans tes statistiques, tout en bas, chaque thème a sa barre de progression.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "defiler",
+          "ancre": "statistiques",
+          "y": 430
+        },
+        {
+          "type": "zoom",
+          "ancre": "barre",
+          "cible": "s-themes",
+          "echelle": 1.2
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "detail",
+      "voix": "Les cartes acquises, et ton taux de réussite sur trente jours.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "acquises",
+          "cible": "s-theme-0",
+          "echelle": 1.28
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "progres",
+      "voix": "Tu vois tout de suite où tu progresses… et où il faut t'y remettre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "progresses",
+          "cible": "s-themes",
+          "echelle": 1.2
+        },
+        {
+          "type": "zoom",
+          "ancre": "t'y",
+          "cible": "s-theme-2",
+          "echelle": 1.28
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "ecranInitial": "stats"
+}

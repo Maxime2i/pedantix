@@ -1,0 +1,323 @@
+{
+  "duree": 15.5,
+  "dureeVoix": 13.28,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.62,
+      "fin": 4.16
+    },
+    {
+      "id": "radis",
+      "debut": 4.16,
+      "finVoix": 4.7,
+      "fin": 5.24
+    },
+    {
+      "id": "ane",
+      "debut": 5.24,
+      "finVoix": 5.82,
+      "fin": 6.4
+    },
+    {
+      "id": "pub",
+      "debut": 6.4,
+      "finVoix": 7.78,
+      "fin": 8.26
+    },
+    {
+      "id": "carte",
+      "debut": 8.26,
+      "finVoix": 9.28,
+      "fin": 9.88
+    },
+    {
+      "id": "cta",
+      "debut": 9.88,
+      "finVoix": 11.3,
+      "fin": 11.88
+    },
+    {
+      "id": "appel",
+      "debut": 11.88,
+      "finVoix": 13.28,
+      "fin": 15.5
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Environ",
+      "mot": "Environ",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.6
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 1.04
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.3
+    },
+    {
+      "texte": "sujets",
+      "mot": "sujets",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.68
+    },
+    {
+      "texte": "possibles…",
+      "mot": "possibles",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 2.16
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.64
+    },
+    {
+      "texte": "voilà",
+      "mot": "voilà",
+      "scene": 0,
+      "debut": 2.64,
+      "fin": 2.78
+    },
+    {
+      "texte": "ceux",
+      "mot": "ceux",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 2.94
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 2.94,
+      "fin": 3.06
+    },
+    {
+      "texte": "sont",
+      "mot": "sont",
+      "scene": 0,
+      "debut": 3.06,
+      "fin": 3.18
+    },
+    {
+      "texte": "déjà",
+      "mot": "déjà",
+      "scene": 0,
+      "debut": 3.18,
+      "fin": 3.34
+    },
+    {
+      "texte": "tombés.",
+      "mot": "tombés",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 3.62
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.24
+    },
+    {
+      "texte": "radis",
+      "mot": "radis",
+      "scene": 1,
+      "debut": 4.24,
+      "fin": 4.44
+    },
+    {
+      "texte": "blanc.",
+      "mot": "blanc",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.7
+    },
+    {
+      "texte": "L'âne",
+      "mot": "L'âne",
+      "scene": 2,
+      "debut": 5.24,
+      "fin": 5.62
+    },
+    {
+      "texte": "commun.",
+      "mot": "commun",
+      "scene": 2,
+      "debut": 5.62,
+      "fin": 5.82
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 6.4,
+      "fin": 6.6
+    },
+    {
+      "texte": "pub,",
+      "mot": "pub",
+      "scene": 3,
+      "debut": 6.6,
+      "fin": 6.82
+    },
+    {
+      "texte": "oui,",
+      "mot": "oui",
+      "scene": 3,
+      "debut": 7.08,
+      "fin": 7.16
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 7.16,
+      "fin": 7.32
+    },
+    {
+      "texte": "bar",
+      "mot": "bar",
+      "scene": 3,
+      "debut": 7.32,
+      "fin": 7.44
+    },
+    {
+      "texte": "anglais.",
+      "mot": "anglais",
+      "scene": 3,
+      "debut": 7.44,
+      "fin": 7.78
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 8.26,
+      "fin": 8.36
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 8.36,
+      "fin": 8.64
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 4,
+      "debut": 8.64,
+      "fin": 8.86
+    },
+    {
+      "texte": "mémoire.",
+      "mot": "mémoire",
+      "scene": 4,
+      "debut": 8.86,
+      "fin": 9.28
+    },
+    {
+      "texte": "Demain,",
+      "mot": "Demain",
+      "scene": 5,
+      "debut": 9.88,
+      "fin": 10.14
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 5,
+      "debut": 10.22,
+      "fin": 10.26
+    },
+    {
+      "texte": "sera",
+      "mot": "sera",
+      "scene": 5,
+      "debut": 10.26,
+      "fin": 10.4
+    },
+    {
+      "texte": "peut-être",
+      "mot": "peut-être",
+      "scene": 5,
+      "debut": 10.4,
+      "fin": 10.58
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 5,
+      "debut": 10.58,
+      "fin": 10.7
+    },
+    {
+      "texte": "sujet",
+      "mot": "sujet",
+      "scene": 5,
+      "debut": 10.7,
+      "fin": 10.88
+    },
+    {
+      "texte": "préféré.",
+      "mot": "préféré",
+      "scene": 5,
+      "debut": 10.88,
+      "fin": 11.3
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 6,
+      "debut": 11.88,
+      "fin": 12.32
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 12.32,
+      "fin": 12.72
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 12.72,
+      "fin": 12.98
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 6,
+      "debut": 12.98,
+      "fin": 13.12
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 6,
+      "debut": 13.12,
+      "fin": 13.28
+    }
+  ]
+}

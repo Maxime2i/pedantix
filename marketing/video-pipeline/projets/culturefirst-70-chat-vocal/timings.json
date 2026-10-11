@@ -1,0 +1,408 @@
+{
+  "duree": 19.84,
+  "dureeVoix": 18.04,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.32,
+      "fin": 3.04
+    },
+    {
+      "id": "contenu",
+      "debut": 3.04,
+      "finVoix": 6.2,
+      "fin": 6.9
+    },
+    {
+      "id": "moi",
+      "debut": 6.9,
+      "finVoix": 8.16,
+      "fin": 8.46
+    },
+    {
+      "id": "preuve",
+      "debut": 8.46,
+      "finVoix": 11.94,
+      "fin": 12.64
+    },
+    {
+      "id": "fin-chat",
+      "debut": 12.64,
+      "finVoix": 13.9,
+      "fin": 14.6
+    },
+    {
+      "id": "appel",
+      "debut": 14.6,
+      "finVoix": 18.04,
+      "fin": 19.84
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ma",
+      "mot": "Ma",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "pote",
+      "mot": "pote",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.72
+    },
+    {
+      "texte": "m'envoie",
+      "mot": "m'envoie",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 1.06
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.14
+    },
+    {
+      "texte": "vocal,",
+      "mot": "vocal",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.56
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.74
+    },
+    {
+      "texte": "dimanche",
+      "mot": "dimanche",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 2.02
+    },
+    {
+      "texte": "matin…",
+      "mot": "matin",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.32
+    },
+    {
+      "texte": "« Les",
+      "mot": "Les",
+      "scene": 1,
+      "debut": 3.04,
+      "fin": 3.28
+    },
+    {
+      "texte": "chauves-souris",
+      "mot": "chauves-souris",
+      "scene": 1,
+      "debut": 3.28,
+      "fin": 3.82
+    },
+    {
+      "texte": "sont",
+      "mot": "sont",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 3.98
+    },
+    {
+      "texte": "aveugles,",
+      "mot": "aveugles",
+      "scene": 1,
+      "debut": 3.98,
+      "fin": 4.38
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.82
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 4.94
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.08
+    },
+    {
+      "texte": "qu'elles",
+      "mot": "qu'elles",
+      "scene": 1,
+      "debut": 5.08,
+      "fin": 5.24
+    },
+    {
+      "texte": "utilisent",
+      "mot": "utilisent",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.66
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.76
+    },
+    {
+      "texte": "ultrasons. »",
+      "mot": "ultrasons",
+      "scene": 1,
+      "debut": 5.76,
+      "fin": 6.2
+    },
+    {
+      "texte": "Moi :",
+      "mot": "Moi",
+      "scene": 2,
+      "debut": 6.9,
+      "fin": 7.14
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 7.76,
+      "fin": 7.92
+    },
+    {
+      "texte": "fait…",
+      "mot": "fait",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 8.16
+    },
+    {
+      "texte": "Elles",
+      "mot": "Elles",
+      "scene": 3,
+      "debut": 8.46,
+      "fin": 8.56
+    },
+    {
+      "texte": "voient,",
+      "mot": "voient",
+      "scene": 3,
+      "debut": 8.56,
+      "fin": 8.96
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 8.96,
+      "fin": 9.56
+    },
+    {
+      "texte": "beaucoup",
+      "mot": "beaucoup",
+      "scene": 3,
+      "debut": 9.56,
+      "fin": 9.88
+    },
+    {
+      "texte": "utilisent",
+      "mot": "utilisent",
+      "scene": 3,
+      "debut": 9.88,
+      "fin": 10.34
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 10.34,
+      "fin": 10.4
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 10.4,
+      "fin": 10.6
+    },
+    {
+      "texte": "l'écholocation",
+      "mot": "l'écholocation",
+      "scene": 3,
+      "debut": 10.6,
+      "fin": 11.28
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 3,
+      "debut": 11.28,
+      "fin": 11.44
+    },
+    {
+      "texte": "chasser",
+      "mot": "chasser",
+      "scene": 3,
+      "debut": 11.44,
+      "fin": 11.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 11.64,
+      "fin": 11.8
+    },
+    {
+      "texte": "nuit.",
+      "mot": "nuit",
+      "scene": 3,
+      "debut": 11.8,
+      "fin": 11.94
+    },
+    {
+      "texte": "Elle : «",
+      "mot": "Elle",
+      "scene": 4,
+      "debut": 12.64,
+      "fin": 13.32
+    },
+    {
+      "texte": "ok,",
+      "mot": "ok",
+      "scene": 4,
+      "debut": 13.32,
+      "fin": 13.54
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 4,
+      "debut": 13.66,
+      "fin": 13.68
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 4,
+      "debut": 13.68,
+      "fin": 13.76
+    },
+    {
+      "texte": "tais ».",
+      "mot": "tais",
+      "scene": 4,
+      "debut": 13.76,
+      "fin": 13.9
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 5,
+      "debut": 14.6,
+      "fin": 14.84
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 14.84,
+      "fin": 14.98
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 14.98,
+      "fin": 15.127
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 5,
+      "debut": 15.127,
+      "fin": 15.273
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 15.273,
+      "fin": 15.42
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 5,
+      "debut": 15.42,
+      "fin": 15.8
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 16.12,
+      "fin": 16.3
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 16.3,
+      "fin": 16.7
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 16.96,
+      "fin": 17.26
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 17.26,
+      "fin": 17.44
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 17.44,
+      "fin": 17.66
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 17.66,
+      "fin": 17.84
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 17.84,
+      "fin": 18.04
+    }
+  ]
+}

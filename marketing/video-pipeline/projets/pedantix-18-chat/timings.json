@@ -1,0 +1,296 @@
+{
+  "duree": 18.12,
+  "dureeVoix": 16.32,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.06,
+      "fin": 2.72
+    },
+    {
+      "id": "maths",
+      "debut": 2.72,
+      "finVoix": 4.4,
+      "fin": 4.98
+    },
+    {
+      "id": "chien",
+      "debut": 4.98,
+      "finVoix": 6.8,
+      "fin": 7.48
+    },
+    {
+      "id": "trouve",
+      "debut": 7.48,
+      "finVoix": 10.86,
+      "fin": 11.98
+    },
+    {
+      "id": "morale",
+      "debut": 11.98,
+      "finVoix": 14.06,
+      "fin": 14.9
+    },
+    {
+      "id": "appel",
+      "debut": 14.9,
+      "finVoix": 16.32,
+      "fin": 18.12
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.6
+    },
+    {
+      "texte": "plein",
+      "mot": "plein",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 0.9
+    },
+    {
+      "texte": "d'espoir,",
+      "mot": "d'espoir",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.42
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.54
+    },
+    {
+      "texte": "tape :",
+      "mot": "tape",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.68
+    },
+    {
+      "texte": "chat.",
+      "mot": "chat",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 2.06
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 2.72,
+      "fin": 2.78
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 2.78,
+      "fin": 2.92
+    },
+    {
+      "texte": "parlait",
+      "mot": "parlait",
+      "scene": 1,
+      "debut": 2.92,
+      "fin": 3.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 3.16,
+      "fin": 3.28
+    },
+    {
+      "texte": "maths.",
+      "mot": "maths",
+      "scene": 1,
+      "debut": 3.28,
+      "fin": 3.4
+    },
+    {
+      "texte": "De",
+      "mot": "De",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.04
+    },
+    {
+      "texte": "maths !",
+      "mot": "maths",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.4
+    },
+    {
+      "texte": "Alors",
+      "mot": "Alors",
+      "scene": 2,
+      "debut": 4.98,
+      "fin": 5.1
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 5.18,
+      "fin": 5.22
+    },
+    {
+      "texte": "tente",
+      "mot": "tente",
+      "scene": 2,
+      "debut": 5.22,
+      "fin": 5.4
+    },
+    {
+      "texte": "chien.",
+      "mot": "chien",
+      "scene": 2,
+      "debut": 5.4,
+      "fin": 5.56
+    },
+    {
+      "texte": "Toujours",
+      "mot": "Toujours",
+      "scene": 2,
+      "debut": 6.36,
+      "fin": 6.62
+    },
+    {
+      "texte": "rien.",
+      "mot": "rien",
+      "scene": 2,
+      "debut": 6.62,
+      "fin": 6.8
+    },
+    {
+      "texte": "Bon.",
+      "mot": "Bon",
+      "scene": 3,
+      "debut": 7.48,
+      "fin": 7.84
+    },
+    {
+      "texte": "Fonction.",
+      "mot": "Fonction",
+      "scene": 3,
+      "debut": 8.36,
+      "fin": 8.7
+    },
+    {
+      "texte": "Continue.",
+      "mot": "Continue",
+      "scene": 3,
+      "debut": 9.3,
+      "fin": 9.66
+    },
+    {
+      "texte": "Trouvé !",
+      "mot": "Trouvé",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 10.86
+    },
+    {
+      "texte": "Moralité :",
+      "mot": "Moralité",
+      "scene": 4,
+      "debut": 11.98,
+      "fin": 12.34
+    },
+    {
+      "texte": "lis",
+      "mot": "lis",
+      "scene": 4,
+      "debut": 12.76,
+      "fin": 12.95
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 12.95,
+      "fin": 13.14
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 4,
+      "debut": 13.14,
+      "fin": 13.38
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 4,
+      "debut": 13.38,
+      "fin": 13.5
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 13.5,
+      "fin": 13.64
+    },
+    {
+      "texte": "taper",
+      "mot": "taper",
+      "scene": 4,
+      "debut": 13.64,
+      "fin": 13.78
+    },
+    {
+      "texte": "chat.",
+      "mot": "chat",
+      "scene": 4,
+      "debut": 13.78,
+      "fin": 14.06
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.9,
+      "fin": 15.26
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.54,
+      "fin": 15.8
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.8,
+      "fin": 16.02
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.02,
+      "fin": 16.16
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.16,
+      "fin": 16.32
+    }
+  ]
+}

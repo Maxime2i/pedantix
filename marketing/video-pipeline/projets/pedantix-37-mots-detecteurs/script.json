@@ -1,0 +1,135 @@
+{
+  "titre": "Les mots-détecteurs",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Astuce : des mots qui révèlent la nature de la page.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Joan Miró",
+    "texte": [
+      "Joan Miró, né à Barcelone le 20 avril 1893 et mort à Palma de Majorque le 25 décembre 1983, est un peintre, sculpteur, graveur et céramiste catalan. Se définissant avant tout comme « Catalan international », il est l'un des principaux représentants du mouvement surréaliste.",
+      "Son œuvre reflète son attrait pour le subconscient, pour l'« esprit enfantin » et pour son pays. À ses débuts, il montre de fortes influences fauvistes, cubistes et expressionnistes, avant d'évoluer dans de la peinture plane avec un certain côté naïf."
+    ],
+    "titreMots": [
+      "joan",
+      "miró"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Jeudi 11 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Ces mots marchent sur presque toutes les pages.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Ces",
+          "titre": "Les mots-détecteurs"
+        },
+        {
+          "type": "pose",
+          "ancre": "marchent",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "presque",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "ne",
+      "voix": "Né : si ça s'allume, c'est une personne.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "Né",
+          "texte": "né → une personne"
+        }
+      ]
+    },
+    {
+      "id": "situe",
+      "voix": "Situé : c'est un lieu. Espèce : un animal ou une plante.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "Situé",
+          "texte": "situé → un lieu"
+        },
+        {
+          "type": "point",
+          "ancre": "Espèce",
+          "texte": "espèce → un être vivant"
+        }
+      ]
+    },
+    {
+      "id": "exemple",
+      "voix": "Exemple : né, à Barcelone… peintre… c'est Joan Miró !",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Exemple"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Exemple",
+          "mode": "coin"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "né,",
+          "mot": "né"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Barcelone…",
+          "mot": "barcelone"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "peintre…",
+          "mot": "peintre"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "Miró"
+        },
+        {
+          "type": "pose",
+          "ancre": "Miró",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

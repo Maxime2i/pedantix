@@ -1,0 +1,175 @@
+{
+  "titre": "Encore, difficile, correct, facile",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton clair et rythmé, une petite pause après chaque nom de bouton. Sincère sur « Sois honnête ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Encore, difficile, correct ou facile : ton choix change tout.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Encore"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Encore"
+        },
+        {
+          "type": "zoom",
+          "ancre": "difficile",
+          "cible": "bar",
+          "echelle": 1.22,
+          "hauteur": 1000
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Encore",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "encore",
+      "voix": "Encore : la carte revient dans une minute.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "noter",
+          "ancre": "Encore",
+          "bouton": "encore"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "difficile",
+      "voix": "Difficile : dans six minutes.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "noter",
+          "ancre": "Difficile",
+          "bouton": "difficile"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "correct",
+      "voix": "Correct : dans dix minutes.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "noter",
+          "ancre": "Correct",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "facile",
+      "voix": "Facile : dans quatre jours. Elle t'a semblé évidente, donc elle s'éloigne.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "noter",
+          "ancre": "Facile",
+          "bouton": "facile"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "honnete",
+      "voix": "Sois honnête : c'est toi qui en profites.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Sois",
+          "nom": "onboarding"
+        },
+        {
+          "type": "zoom",
+          "ancre": "honnête",
+          "cible": "aucun"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales européennes (1)",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "De quel pays la ville suivante est-elle la capitale ?",
+      "indiceType": "Capitale",
+      "indice": "Zagreb",
+      "reponse": "Croatie",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ],
+        [
+          "Langue",
+          "Croate"
+        ],
+        [
+          "Monnaie",
+          "Euro"
+        ]
+      ]
+    }
+  ]
+}

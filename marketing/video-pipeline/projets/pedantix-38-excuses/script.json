@@ -1,0 +1,126 @@
+{
+  "titre": "5 excuses pour jouer au travail",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 21
+  },
+  "objectif": "Humour : excuses pour jouer pendant la journée.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq excuses pour jouer à Pédantix au travail.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Cinq",
+          "titre": "Excuses validées ✅"
+        },
+        {
+          "type": "pose",
+          "ancre": "excuses",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "jouer",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "e1",
+      "voix": "C'est de la veille documentaire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "veille",
+          "texte": "C'est de la veille documentaire"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "voix": "Je révise Wikipédia, c'est de la formation.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "révise",
+          "texte": "C'est de la formation continue"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "voix": "Je teste une app française, je soutiens l'économie.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "teste",
+          "texte": "Je soutiens une app française"
+        },
+        {
+          "type": "pose",
+          "ancre": "soutiens",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "voix": "Il est midi, c'est ma pause.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "midi,",
+          "texte": "C'est ma pause de midi"
+        },
+        {
+          "type": "pose",
+          "ancre": "pause.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "voix": "Et la cinquième : je n'ai pas besoin d'excuse.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "cinquième",
+          "texte": "Pas besoin d'excuse"
+        },
+        {
+          "type": "pose",
+          "ancre": "besoin",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

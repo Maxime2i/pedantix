@@ -1,0 +1,131 @@
+{
+  "titre": "Pas besoin de compte pour commencer",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton simple et rassurant. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Pas envie de créer un compte ? Pas besoin.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Pas",
+          "texte": "Créer un compte ?",
+          "sous": "Pas besoin pour commencer"
+        },
+        {
+          "type": "masquer",
+          "ancre": "besoin",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "besoin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Pas",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "invite",
+      "voix": "Tu commences en invité, sans mot de passe, et tu révises tout de suite.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "révises",
+          "cible": "a-etudier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "compte",
+      "voix": "Le jour où tu veux, tu crées ton compte : ta progression est gardée.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "jour",
+          "nom": "profil"
+        },
+        {
+          "type": "zoom",
+          "ancre": "crées",
+          "cible": "p-compte",
+          "echelle": 1.4
+        },
+        {
+          "type": "appui",
+          "ancre": "compte",
+          "cible": "p-compte"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "rien",
+      "voix": "Ta série, tes cartes, tes statistiques : rien n'est perdu, tout te suit.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "série",
+          "nom": "stats"
+        },
+        {
+          "type": "zoom",
+          "ancre": "série",
+          "cible": "s-serie",
+          "echelle": 1.25
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "ecranInitial": "accueil"
+}

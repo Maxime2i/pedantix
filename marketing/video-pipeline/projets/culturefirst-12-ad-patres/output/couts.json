@@ -1,0 +1,17 @@
+{
+  "lignes": [
+    {
+      "etape": "voix",
+      "detail": "google/gemini-3.8-flash-tts 25.3 s",
+      "dollars": 0.00573,
+      "date": "2026-10-10T11:12:16.779Z"
+    },
+    {
+      "etape": "bruitages",
+      "detail": "synthèse locale ffmpeg",
+      "dollars": 0,
+      "date": "2026-10-10T12:37:35.881Z"
+    }
+  ],
+  "total": 0.00573
+}

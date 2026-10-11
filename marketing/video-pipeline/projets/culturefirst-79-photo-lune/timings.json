@@ -1,0 +1,472 @@
+{
+  "duree": 21.26,
+  "dureeVoix": 19.46,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.56,
+      "fin": 4.38
+    },
+    {
+      "id": "synchrone",
+      "debut": 4.38,
+      "finVoix": 8.82,
+      "fin": 9.7
+    },
+    {
+      "id": "cachee",
+      "debut": 9.7,
+      "finVoix": 12.96,
+      "fin": 13.82
+    },
+    {
+      "id": "app",
+      "debut": 13.82,
+      "finVoix": 16.66,
+      "fin": 17.24
+    },
+    {
+      "id": "appel",
+      "debut": 17.24,
+      "finVoix": 19.46,
+      "fin": 21.26
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.42
+    },
+    {
+      "texte": "remarqué ?",
+      "mot": "remarqué",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.8
+    },
+    {
+      "texte": "On",
+      "mot": "On",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.66
+    },
+    {
+      "texte": "voit",
+      "mot": "voit",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.84
+    },
+    {
+      "texte": "toujours",
+      "mot": "toujours",
+      "scene": 0,
+      "debut": 1.84,
+      "fin": 2.18
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.4
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 0,
+      "debut": 2.4,
+      "fin": 2.7
+    },
+    {
+      "texte": "face",
+      "mot": "face",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 3.04
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.22
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 3.22,
+      "fin": 3.32
+    },
+    {
+      "texte": "Lune.",
+      "mot": "Lune",
+      "scene": 0,
+      "debut": 3.32,
+      "fin": 3.56
+    },
+    {
+      "texte": "Elle",
+      "mot": "Elle",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.78
+    },
+    {
+      "texte": "tourne",
+      "mot": "tourne",
+      "scene": 1,
+      "debut": 4.78,
+      "fin": 5.2
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 1,
+      "debut": 5.2,
+      "fin": 5.36
+    },
+    {
+      "texte": "elle-même",
+      "mot": "elle-même",
+      "scene": 1,
+      "debut": 5.36,
+      "fin": 5.8
+    },
+    {
+      "texte": "exactement",
+      "mot": "exactement",
+      "scene": 1,
+      "debut": 5.8,
+      "fin": 6.54
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 6.54,
+      "fin": 7.0
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 7.0,
+      "fin": 7.12
+    },
+    {
+      "texte": "temps",
+      "mot": "temps",
+      "scene": 1,
+      "debut": 7.12,
+      "fin": 7.32
+    },
+    {
+      "texte": "qu'elle",
+      "mot": "qu'elle",
+      "scene": 1,
+      "debut": 7.32,
+      "fin": 7.54
+    },
+    {
+      "texte": "met",
+      "mot": "met",
+      "scene": 1,
+      "debut": 7.54,
+      "fin": 7.72
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 7.72,
+      "fin": 7.98
+    },
+    {
+      "texte": "faire",
+      "mot": "faire",
+      "scene": 1,
+      "debut": 7.98,
+      "fin": 8.12
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 8.12,
+      "fin": 8.26
+    },
+    {
+      "texte": "tour",
+      "mot": "tour",
+      "scene": 1,
+      "debut": 8.26,
+      "fin": 8.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 8.38,
+      "fin": 8.48
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 8.48,
+      "fin": 8.62
+    },
+    {
+      "texte": "Terre.",
+      "mot": "Terre",
+      "scene": 1,
+      "debut": 8.62,
+      "fin": 8.82
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 9.96
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 9.96,
+      "fin": 10.1
+    },
+    {
+      "texte": "face",
+      "mot": "face",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.24
+    },
+    {
+      "texte": "cachée",
+      "mot": "cachée",
+      "scene": 2,
+      "debut": 10.24,
+      "fin": 10.56
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 2,
+      "debut": 10.56,
+      "fin": 10.66
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 10.66,
+      "fin": 10.78
+    },
+    {
+      "texte": "sombre :",
+      "mot": "sombre",
+      "scene": 2,
+      "debut": 10.78,
+      "fin": 11.08
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 2,
+      "debut": 11.62,
+      "fin": 11.72
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 2,
+      "debut": 11.72,
+      "fin": 11.82
+    },
+    {
+      "texte": "éclairée",
+      "mot": "éclairée",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 12.26
+    },
+    {
+      "texte": "autant",
+      "mot": "autant",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.58
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 12.58,
+      "fin": 12.74
+    },
+    {
+      "texte": "l'autre.",
+      "mot": "l'autre",
+      "scene": 2,
+      "debut": 12.74,
+      "fin": 12.96
+    },
+    {
+      "texte": "Des",
+      "mot": "Des",
+      "scene": 3,
+      "debut": 13.82,
+      "fin": 14.06
+    },
+    {
+      "texte": "faits",
+      "mot": "faits",
+      "scene": 3,
+      "debut": 14.06,
+      "fin": 14.28
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 3,
+      "debut": 14.28,
+      "fin": 14.38
+    },
+    {
+      "texte": "ça,",
+      "mot": "ça",
+      "scene": 3,
+      "debut": 14.38,
+      "fin": 14.6
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 3,
+      "debut": 14.98,
+      "fin": 15.0
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 3,
+      "debut": 15.0,
+      "fin": 15.06
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 15.06,
+      "fin": 15.06
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 15.06,
+      "fin": 15.2
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 15.2,
+      "fin": 15.3
+    },
+    {
+      "texte": "milliers",
+      "mot": "milliers",
+      "scene": 3,
+      "debut": 15.3,
+      "fin": 15.8
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 15.8,
+      "fin": 16.1
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 16.1,
+      "fin": 16.36
+    },
+    {
+      "texte": "First.",
+      "mot": "First",
+      "scene": 3,
+      "debut": 16.36,
+      "fin": 16.66
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 17.24,
+      "fin": 17.58
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 17.58,
+      "fin": 18.02
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 18.34,
+      "fin": 18.72
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 18.72,
+      "fin": 18.86
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 18.86,
+      "fin": 19.1
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.1,
+      "fin": 19.26
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 19.26,
+      "fin": 19.46
+    }
+  ]
+}

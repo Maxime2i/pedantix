@@ -1,0 +1,415 @@
+{
+  "duree": 24.24,
+  "dureeVoix": 22.44,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.1,
+      "fin": 3.68
+    },
+    {
+      "id": "tonton",
+      "debut": 3.68,
+      "finVoix": 7.02,
+      "fin": 7.72
+    },
+    {
+      "id": "mamie",
+      "debut": 7.72,
+      "finVoix": 9.84,
+      "fin": 10.62
+    },
+    {
+      "id": "moi",
+      "debut": 10.62,
+      "finVoix": 13.56,
+      "fin": 14.0
+    },
+    {
+      "id": "raison",
+      "debut": 14.0,
+      "finVoix": 17.66,
+      "fin": 18.22
+    },
+    {
+      "id": "appel",
+      "debut": 18.22,
+      "finVoix": 22.44,
+      "fin": 24.24
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.36
+    },
+    {
+      "texte": "groupe",
+      "mot": "groupe",
+      "scene": 0,
+      "debut": 0.36,
+      "fin": 0.56
+    },
+    {
+      "texte": "famille,",
+      "mot": "famille",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.9
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.48
+    },
+    {
+      "texte": "dimanche",
+      "mot": "dimanche",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.8
+    },
+    {
+      "texte": "soir,",
+      "mot": "soir",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 2.12
+    },
+    {
+      "texte": "après",
+      "mot": "après",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.66
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.8
+    },
+    {
+      "texte": "repas.",
+      "mot": "repas",
+      "scene": 0,
+      "debut": 2.8,
+      "fin": 3.1
+    },
+    {
+      "texte": "Tonton : «",
+      "mot": "Tonton",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 4.04
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.82
+    },
+    {
+      "texte": "Révolution",
+      "mot": "Révolution",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 5.24
+    },
+    {
+      "texte": "française,",
+      "mot": "française",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.9
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 6.0,
+      "fin": 6.204
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 6.204,
+      "fin": 6.408
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 1,
+      "debut": 6.408,
+      "fin": 6.612
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 6.612,
+      "fin": 6.816
+    },
+    {
+      "texte": "quatre-vingt-dix-huit. »",
+      "mot": "quatre-vingt-dix-huit",
+      "scene": 1,
+      "debut": 6.816,
+      "fin": 7.02
+    },
+    {
+      "texte": "Mamie : «",
+      "mot": "Mamie",
+      "scene": 2,
+      "debut": 7.72,
+      "fin": 8.32
+    },
+    {
+      "texte": "Non,",
+      "mot": "Non",
+      "scene": 2,
+      "debut": 8.88,
+      "fin": 9.12
+    },
+    {
+      "texte": "quatre-vingt-neuf ! »",
+      "mot": "quatre-vingt-neuf",
+      "scene": 2,
+      "debut": 9.46,
+      "fin": 9.84
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 3,
+      "debut": 10.62,
+      "fin": 10.9
+    },
+    {
+      "texte": "j'envoie",
+      "mot": "j'envoie",
+      "scene": 3,
+      "debut": 11.36,
+      "fin": 11.66
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 11.66,
+      "fin": 11.78
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 3,
+      "debut": 11.78,
+      "fin": 12.02
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 12.02,
+      "fin": 12.24
+    },
+    {
+      "texte": "l'appli,",
+      "mot": "l'appli",
+      "scene": 3,
+      "debut": 12.24,
+      "fin": 12.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 12.58,
+      "fin": 13.04
+    },
+    {
+      "texte": "j'attends.",
+      "mot": "j'attends",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.56
+    },
+    {
+      "texte": "Mamie",
+      "mot": "Mamie",
+      "scene": 4,
+      "debut": 14.0,
+      "fin": 14.4
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 14.48,
+      "fin": 14.5
+    },
+    {
+      "texte": "raison :",
+      "mot": "raison",
+      "scene": 4,
+      "debut": 14.5,
+      "fin": 14.74
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 15.2,
+      "fin": 15.495
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 4,
+      "debut": 15.495,
+      "fin": 15.79
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 15.79,
+      "fin": 16.085
+    },
+    {
+      "texte": "quatre-vingt-neuf,",
+      "mot": "quatre-vingt-neuf",
+      "scene": 4,
+      "debut": 16.085,
+      "fin": 16.38
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 16.7,
+      "fin": 16.78
+    },
+    {
+      "texte": "prise",
+      "mot": "prise",
+      "scene": 4,
+      "debut": 16.78,
+      "fin": 17.02
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 17.02,
+      "fin": 17.18
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 17.18,
+      "fin": 17.28
+    },
+    {
+      "texte": "Bastille.",
+      "mot": "Bastille",
+      "scene": 4,
+      "debut": 17.28,
+      "fin": 17.66
+    },
+    {
+      "texte": "Tonton,",
+      "mot": "Tonton",
+      "scene": 5,
+      "debut": 18.22,
+      "fin": 18.6
+    },
+    {
+      "texte": "si",
+      "mot": "si",
+      "scene": 5,
+      "debut": 19.1,
+      "fin": 19.16
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 5,
+      "debut": 19.16,
+      "fin": 19.28
+    },
+    {
+      "texte": "nous",
+      "mot": "nous",
+      "scene": 5,
+      "debut": 19.28,
+      "fin": 19.38
+    },
+    {
+      "texte": "regardes…",
+      "mot": "regardes",
+      "scene": 5,
+      "debut": 19.38,
+      "fin": 19.86
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 20.16,
+      "fin": 20.48
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 20.48,
+      "fin": 20.9
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 21.14,
+      "fin": 21.5
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 21.5,
+      "fin": 21.7
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 21.7,
+      "fin": 22.0
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 22.0,
+      "fin": 22.16
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 22.16,
+      "fin": 22.44
+    }
+  ]
+}

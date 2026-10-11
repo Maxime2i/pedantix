@@ -1,0 +1,505 @@
+{
+  "duree": 32.96,
+  "dureeVoix": 31.16,
+  "scenes": [
+    {
+      "id": "l1",
+      "debut": 0.0,
+      "finVoix": 5.4,
+      "fin": 6.5
+    },
+    {
+      "id": "r1",
+      "debut": 6.5,
+      "finVoix": 10.38,
+      "fin": 11.52
+    },
+    {
+      "id": "l2",
+      "debut": 11.52,
+      "finVoix": 14.78,
+      "fin": 15.34
+    },
+    {
+      "id": "r2",
+      "debut": 15.34,
+      "finVoix": 18.96,
+      "fin": 19.98
+    },
+    {
+      "id": "l3",
+      "debut": 19.98,
+      "finVoix": 22.1,
+      "fin": 23.52
+    },
+    {
+      "id": "r3",
+      "debut": 23.52,
+      "finVoix": 26.54,
+      "fin": 27.34
+    },
+    {
+      "id": "appel",
+      "debut": 27.34,
+      "finVoix": 31.16,
+      "fin": 32.96
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "lieux,",
+      "mot": "lieux",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.78
+    },
+    {
+      "texte": "devine",
+      "mot": "devine",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 1.32
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.5
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 0,
+      "debut": 1.5,
+      "fin": 1.68
+    },
+    {
+      "texte": "Premier…",
+      "mot": "Premier",
+      "scene": 0,
+      "debut": 3.16,
+      "fin": 3.52
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 4.68,
+      "fin": 5.16
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 5.16,
+      "fin": 5.18
+    },
+    {
+      "texte": "trouvé ?",
+      "mot": "trouvé",
+      "scene": 0,
+      "debut": 5.18,
+      "fin": 5.4
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 6.5,
+      "fin": 6.6
+    },
+    {
+      "texte": "Grèce :",
+      "mot": "Grèce",
+      "scene": 1,
+      "debut": 6.6,
+      "fin": 7.06
+    },
+    {
+      "texte": "l'île",
+      "mot": "l'île",
+      "scene": 1,
+      "debut": 7.42,
+      "fin": 7.72
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 7.72,
+      "fin": 7.86
+    },
+    {
+      "texte": "Santorin,",
+      "mot": "Santorin",
+      "scene": 1,
+      "debut": 7.86,
+      "fin": 8.36
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 1,
+      "debut": 8.58,
+      "fin": 8.8
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 1,
+      "debut": 8.8,
+      "fin": 9.02
+    },
+    {
+      "texte": "maisons",
+      "mot": "maisons",
+      "scene": 1,
+      "debut": 9.02,
+      "fin": 9.32
+    },
+    {
+      "texte": "blanches",
+      "mot": "blanches",
+      "scene": 1,
+      "debut": 9.32,
+      "fin": 9.74
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 9.74,
+      "fin": 9.86
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 1,
+      "debut": 9.86,
+      "fin": 9.98
+    },
+    {
+      "texte": "dômes",
+      "mot": "dômes",
+      "scene": 1,
+      "debut": 9.98,
+      "fin": 10.1
+    },
+    {
+      "texte": "bleus.",
+      "mot": "bleus",
+      "scene": 1,
+      "debut": 10.1,
+      "fin": 10.38
+    },
+    {
+      "texte": "Deuxième…",
+      "mot": "Deuxième",
+      "scene": 2,
+      "debut": 11.52,
+      "fin": 12.08
+    },
+    {
+      "texte": "alors ?",
+      "mot": "alors",
+      "scene": 2,
+      "debut": 14.22,
+      "fin": 14.78
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 15.34,
+      "fin": 15.42
+    },
+    {
+      "texte": "Pérou :",
+      "mot": "Pérou",
+      "scene": 3,
+      "debut": 15.42,
+      "fin": 15.76
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 16.18,
+      "fin": 16.32
+    },
+    {
+      "texte": "Machu",
+      "mot": "Machu",
+      "scene": 3,
+      "debut": 16.32,
+      "fin": 16.64
+    },
+    {
+      "texte": "Picchu,",
+      "mot": "Picchu",
+      "scene": 3,
+      "debut": 16.64,
+      "fin": 17.0
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 17.34,
+      "fin": 17.52
+    },
+    {
+      "texte": "cité",
+      "mot": "cité",
+      "scene": 3,
+      "debut": 17.52,
+      "fin": 17.84
+    },
+    {
+      "texte": "inca",
+      "mot": "inca",
+      "scene": 3,
+      "debut": 17.84,
+      "fin": 18.11
+    },
+    {
+      "texte": "perchée",
+      "mot": "perchée",
+      "scene": 3,
+      "debut": 18.11,
+      "fin": 18.38
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 18.38,
+      "fin": 18.54
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 18.54,
+      "fin": 18.66
+    },
+    {
+      "texte": "Andes.",
+      "mot": "Andes",
+      "scene": 3,
+      "debut": 18.66,
+      "fin": 18.96
+    },
+    {
+      "texte": "Dernier…",
+      "mot": "Dernier",
+      "scene": 4,
+      "debut": 19.98,
+      "fin": 20.54
+    },
+    {
+      "texte": "celui-là",
+      "mot": "celui-là",
+      "scene": 4,
+      "debut": 21.38,
+      "fin": 21.74
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 21.74,
+      "fin": 21.82
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 4,
+      "debut": 21.82,
+      "fin": 21.92
+    },
+    {
+      "texte": "dur.",
+      "mot": "dur",
+      "scene": 4,
+      "debut": 21.92,
+      "fin": 22.1
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 5,
+      "debut": 23.52,
+      "fin": 23.64
+    },
+    {
+      "texte": "Vietnam :",
+      "mot": "Vietnam",
+      "scene": 5,
+      "debut": 23.64,
+      "fin": 23.96
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 5,
+      "debut": 24.54,
+      "fin": 24.76
+    },
+    {
+      "texte": "baie",
+      "mot": "baie",
+      "scene": 5,
+      "debut": 24.76,
+      "fin": 25.04
+    },
+    {
+      "texte": "d'Halong",
+      "mot": "d'Halong",
+      "scene": 5,
+      "debut": 25.04,
+      "fin": 25.32
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 25.32,
+      "fin": 25.44
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 5,
+      "debut": 25.44,
+      "fin": 25.54
+    },
+    {
+      "texte": "près",
+      "mot": "près",
+      "scene": 5,
+      "debut": 25.54,
+      "fin": 25.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 25.7,
+      "fin": 25.84
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 25.84,
+      "fin": 26.14
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 26.14,
+      "fin": 26.34
+    },
+    {
+      "texte": "îlots.",
+      "mot": "îlots",
+      "scene": 5,
+      "debut": 26.34,
+      "fin": 26.54
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 6,
+      "debut": 27.34,
+      "fin": 27.64
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 6,
+      "debut": 27.64,
+      "fin": 27.74
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 6,
+      "debut": 27.74,
+      "fin": 27.78
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 6,
+      "debut": 27.78,
+      "fin": 27.92
+    },
+    {
+      "texte": "eu ?",
+      "mot": "eu",
+      "scene": 6,
+      "debut": 27.92,
+      "fin": 28.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 28.74,
+      "fin": 29.32
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 29.32,
+      "fin": 29.66
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 29.92,
+      "fin": 30.34
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 30.34,
+      "fin": 30.5
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 30.5,
+      "fin": 30.7
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 30.7,
+      "fin": 30.88
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 30.88,
+      "fin": 31.16
+    }
+  ]
+}

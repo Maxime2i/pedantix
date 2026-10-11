@@ -1,0 +1,514 @@
+{
+  "duree": 23.3,
+  "dureeVoix": 21.5,
+  "scenes": [
+    {
+      "id": "mythe",
+      "debut": 0.0,
+      "finVoix": 3.12,
+      "fin": 3.7
+    },
+    {
+      "id": "explication",
+      "debut": 3.7,
+      "finVoix": 8.06,
+      "fin": 8.78
+    },
+    {
+      "id": "preuve",
+      "debut": 8.78,
+      "finVoix": 11.72,
+      "fin": 12.7
+    },
+    {
+      "id": "app",
+      "debut": 12.7,
+      "finVoix": 16.82,
+      "fin": 17.52
+    },
+    {
+      "id": "appel",
+      "debut": 17.52,
+      "finVoix": 21.5,
+      "fin": 23.3
+    }
+  ],
+  "mots": [
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.36
+    },
+    {
+      "texte": "Grande",
+      "mot": "Grande",
+      "scene": 0,
+      "debut": 0.36,
+      "fin": 0.6
+    },
+    {
+      "texte": "Muraille",
+      "mot": "Muraille",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.92
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.0
+    },
+    {
+      "texte": "Chine",
+      "mot": "Chine",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.22
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.38
+    },
+    {
+      "texte": "voit",
+      "mot": "voit",
+      "scene": 0,
+      "debut": 1.38,
+      "fin": 1.48
+    },
+    {
+      "texte": "depuis",
+      "mot": "depuis",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.68
+    },
+    {
+      "texte": "l'espace ?",
+      "mot": "l'espace",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 2.92
+    },
+    {
+      "texte": "Faux.",
+      "mot": "Faux",
+      "scene": 0,
+      "debut": 2.92,
+      "fin": 3.12
+    },
+    {
+      "texte": "Elle",
+      "mot": "Elle",
+      "scene": 1,
+      "debut": 3.7,
+      "fin": 3.8
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 3.8,
+      "fin": 3.92
+    },
+    {
+      "texte": "très",
+      "mot": "très",
+      "scene": 1,
+      "debut": 3.92,
+      "fin": 4.12
+    },
+    {
+      "texte": "longue,",
+      "mot": "longue",
+      "scene": 1,
+      "debut": 4.12,
+      "fin": 4.36
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 1,
+      "debut": 4.68,
+      "fin": 4.84
+    },
+    {
+      "texte": "trop",
+      "mot": "trop",
+      "scene": 1,
+      "debut": 4.84,
+      "fin": 5.12
+    },
+    {
+      "texte": "étroite :",
+      "mot": "étroite",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.58
+    },
+    {
+      "texte": "depuis",
+      "mot": "depuis",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.42
+    },
+    {
+      "texte": "l'orbite,",
+      "mot": "l'orbite",
+      "scene": 1,
+      "debut": 6.42,
+      "fin": 6.8
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 1,
+      "debut": 7.0,
+      "fin": 7.06
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.14
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 7.14,
+      "fin": 7.18
+    },
+    {
+      "texte": "distingue",
+      "mot": "distingue",
+      "scene": 1,
+      "debut": 7.18,
+      "fin": 7.54
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 7.54,
+      "fin": 7.68
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 7.68,
+      "fin": 7.78
+    },
+    {
+      "texte": "l'œil",
+      "mot": "l'œil",
+      "scene": 1,
+      "debut": 7.78,
+      "fin": 7.92
+    },
+    {
+      "texte": "nu.",
+      "mot": "nu",
+      "scene": 1,
+      "debut": 7.92,
+      "fin": 8.06
+    },
+    {
+      "texte": "Même",
+      "mot": "Même",
+      "scene": 2,
+      "debut": 8.78,
+      "fin": 9.12
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.12,
+      "fin": 9.32
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 2,
+      "debut": 9.32,
+      "fin": 9.68
+    },
+    {
+      "texte": "astronaute",
+      "mot": "astronaute",
+      "scene": 2,
+      "debut": 9.68,
+      "fin": 10.2
+    },
+    {
+      "texte": "chinois",
+      "mot": "chinois",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.5
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 10.5,
+      "fin": 10.8
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 2,
+      "debut": 10.8,
+      "fin": 10.9
+    },
+    {
+      "texte": "qu'il",
+      "mot": "qu'il",
+      "scene": 2,
+      "debut": 10.9,
+      "fin": 11.04
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 2,
+      "debut": 11.04,
+      "fin": 11.14
+    },
+    {
+      "texte": "l'avait",
+      "mot": "l'avait",
+      "scene": 2,
+      "debut": 11.14,
+      "fin": 11.32
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 11.32,
+      "fin": 11.54
+    },
+    {
+      "texte": "vue.",
+      "mot": "vue",
+      "scene": 2,
+      "debut": 11.54,
+      "fin": 11.72
+    },
+    {
+      "texte": "Des",
+      "mot": "Des",
+      "scene": 3,
+      "debut": 12.7,
+      "fin": 12.9
+    },
+    {
+      "texte": "idées",
+      "mot": "idées",
+      "scene": 3,
+      "debut": 12.9,
+      "fin": 13.12
+    },
+    {
+      "texte": "reçues",
+      "mot": "reçues",
+      "scene": 3,
+      "debut": 13.12,
+      "fin": 13.38
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 3,
+      "debut": 13.38,
+      "fin": 13.54
+    },
+    {
+      "texte": "ça,",
+      "mot": "ça",
+      "scene": 3,
+      "debut": 13.54,
+      "fin": 13.74
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.36
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 3,
+      "debut": 14.36,
+      "fin": 14.76
+    },
+    {
+      "texte": "t'aide",
+      "mot": "t'aide",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 15.04
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 15.04,
+      "fin": 15.2
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 15.2,
+      "fin": 15.28
+    },
+    {
+      "texte": "démonter,",
+      "mot": "démonter",
+      "scene": 3,
+      "debut": 15.28,
+      "fin": 15.7
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 3,
+      "debut": 16.08,
+      "fin": 16.22
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 3,
+      "debut": 16.22,
+      "fin": 16.46
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 16.46,
+      "fin": 16.6
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 16.6,
+      "fin": 16.66
+    },
+    {
+      "texte": "fois.",
+      "mot": "fois",
+      "scene": 3,
+      "debut": 16.66,
+      "fin": 16.82
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 17.52,
+      "fin": 17.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 17.7,
+      "fin": 17.84
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.84,
+      "fin": 18.0
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 18.0,
+      "fin": 18.16
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 18.16,
+      "fin": 18.32
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 18.32,
+      "fin": 18.6
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 19.24,
+      "fin": 19.54
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 19.54,
+      "fin": 19.96
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 20.22,
+      "fin": 20.68
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.68,
+      "fin": 20.86
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 20.86,
+      "fin": 21.08
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 21.08,
+      "fin": 21.28
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 21.28,
+      "fin": 21.5
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "titre": "Ce que j'ai appris en créant un jeu",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Clôture du mois : leçons de développeur indépendant.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Créer un jeu tout seul m'a appris trois choses.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Créer",
+          "titre": "Ce que j'ai appris"
+        },
+        {
+          "type": "pose",
+          "ancre": "appris",
+          "nom": "reflechit"
+        },
+        {
+          "type": "pose",
+          "ancre": "choses.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "l1",
+      "voix": "Un : le plus dur, ce n'est pas le code, c'est de finir.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "dur,",
+          "texte": "Finir, c'est le plus dur"
+        }
+      ]
+    },
+    {
+      "id": "l2",
+      "voix": "Deux : les gens trouvent toujours le bug que tu n'as pas vu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "gens",
+          "texte": "Le bug que tu n'as pas vu"
+        },
+        {
+          "type": "pose",
+          "ancre": "bug",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "voix": "Trois : faire un truc simple, c'est très compliqué.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "neutre"
+        },
+        {
+          "type": "point",
+          "ancre": "simple,",
+          "texte": "Simple = compliqué"
+        }
+      ]
+    },
+    {
+      "id": "merci",
+      "voix": "Merci d'avoir suivi ce mois avec moi. Rendez-vous demain, à midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Merci"
+        },
+        {
+          "type": "pose",
+          "ancre": "Merci",
+          "nom": "salut"
+        },
+        {
+          "type": "pose",
+          "ancre": "Rendez-vous",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

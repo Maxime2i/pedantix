@@ -1,0 +1,30 @@
+{
+  "titre": "Brasília : raté deux fois",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": { "largeur": 1080, "hauteur": 1920, "fps": 30, "dureeCible": 25 },
+  "objectif": "Téléchargements : on oublie vite, l'app te le rappelle (widget, notification du soir).",
+  "voix": { "instructions": "Voix française jeune et complice, façon TikTok, débit posé. Vraie question, « Rio ? » sûr de soi, « Raté. » amusé, « São Paulo ? » hésitant, « Raté aussi. » encore plus amusé. Ton de confidence sur « Le problème… », convaincu ensuite, énergique sur la fin." },
+  "scenes": [
+    { "id": "accroche", "voix": "Capitale du Brésil ? Rio ? Raté. São Paulo ? Raté aussi.", "image": null,
+      "animation": "Carte « Brésil » ; bulle « Rio ? » barrée, puis bulle « São Paulo ? » barrée.",
+      "actions": [ { "type": "entree", "ancre": "Capitale" }, { "type": "zoom", "cible": "carte", "ancre": "Brésil" }, { "type": "bulle", "texte": "Rio ?", "ancre": "Rio" }, { "type": "rate", "ancre": "Raté" }, { "type": "bulle", "texte": "São Paulo ?", "ancre": "São" }, { "type": "rate", "ancre": "aussi" } ],
+      "bruitages": [ { "son": "whoosh", "ancre": "Capitale", "gain": 0.4 }, { "son": "tictac", "ancre": "Brésil", "gain": 0.3 } ] },
+    { "id": "reponse", "voix": "C'est Brasília, construite exprès pour devenir la capitale.", "image": null,
+      "animation": "Réponse Brasília avec sa fiche.",
+      "actions": [ { "type": "reveler", "ancre": "C'est" } ], "bruitages": [] },
+    { "id": "oubli", "voix": "Le problème, c'est que demain, tu l'auras oublié.", "image": null,
+      "animation": "Courbe de la mémoire qui chute.",
+      "actions": [ { "type": "courbe", "mode": "oubli", "ancre": "demain", "fin": "oublié" } ], "bruitages": [] },
+    { "id": "rappel", "voix": "Alors Culture First te la repose au bon moment. Un widget sur ton écran, un petit rappel le soir.", "image": null,
+      "animation": "Écran d'accueil du téléphone avec les widgets, puis écran verrouillé à 20 h avec la notification « Ta série de 23 jours est en jeu ».",
+      "actions": [ { "type": "masquer", "ancre": "Alors" }, { "type": "zoom", "cible": "aucun", "ancre": "Alors" }, { "type": "ecran", "nom": "springboard", "ancre": "widget" }, { "type": "zoom", "cible": "w-cartes", "echelle": 1.25, "ancre": "écran" }, { "type": "ecran", "nom": "verrouillage", "ancre": "petit" }, { "type": "notif", "titre": "Ta série de 23 jours est en jeu 🔥", "texte": "34 cartes t’attendent. Quelques minutes suffisent.", "ancre": "soir" } ], "bruitages": [] },
+    { "id": "appel", "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.", "image": null,
+      "animation": "Carte de fin.",
+      "actions": [ { "type": "fin", "ancre": "Plus" } ],
+      "bruitages": [ { "son": "whoosh", "ancre": "Plus", "gain": 0.4 }, { "son": "victoire", "ancre": "gratuit", "gain": 0.35 } ] }
+  ],
+  "cartes": [
+    { "paquet": "Capitales du monde", "theme": "Géographie", "compteurs": [12, 8, 34], "question": "Quelle est la capitale de ce pays ?", "indiceType": "Pays", "indice": "Brésil", "reponse": "Brasília", "fiche": [["Continent", "Amérique"], ["Langue", "Portugais"]] }
+  ]
+}

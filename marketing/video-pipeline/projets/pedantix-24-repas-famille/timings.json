@@ -1,0 +1,352 @@
+{
+  "duree": 17.86,
+  "dureeVoix": 16.06,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.36,
+      "fin": 2.84
+    },
+    {
+      "id": "defi",
+      "debut": 2.84,
+      "finVoix": 5.9,
+      "fin": 6.44
+    },
+    {
+      "id": "oncle",
+      "debut": 6.44,
+      "finVoix": 8.42,
+      "fin": 9.08
+    },
+    {
+      "id": "reponse",
+      "debut": 9.08,
+      "finVoix": 11.74,
+      "fin": 12.3
+    },
+    {
+      "id": "depuis",
+      "debut": 12.3,
+      "finVoix": 13.64,
+      "fin": 14.84
+    },
+    {
+      "id": "appel",
+      "debut": 14.84,
+      "finVoix": 16.06,
+      "fin": 17.86
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Repas",
+      "mot": "Repas",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.58
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.58,
+      "fin": 0.62
+    },
+    {
+      "texte": "famille.",
+      "mot": "famille",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.84
+    },
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.42
+    },
+    {
+      "texte": "oncle",
+      "mot": "oncle",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.66
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.82
+    },
+    {
+      "texte": "qu'il",
+      "mot": "qu'il",
+      "scene": 0,
+      "debut": 1.82,
+      "fin": 2.02
+    },
+    {
+      "texte": "sait",
+      "mot": "sait",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.16
+    },
+    {
+      "texte": "tout.",
+      "mot": "tout",
+      "scene": 0,
+      "debut": 2.16,
+      "fin": 2.36
+    },
+    {
+      "texte": "Alors",
+      "mot": "Alors",
+      "scene": 1,
+      "debut": 2.84,
+      "fin": 3.04
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 3.04,
+      "fin": 3.18
+    },
+    {
+      "texte": "sors",
+      "mot": "sors",
+      "scene": 1,
+      "debut": 3.18,
+      "fin": 3.26
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 1,
+      "debut": 3.26,
+      "fin": 3.4
+    },
+    {
+      "texte": "jeu :",
+      "mot": "jeu",
+      "scene": 1,
+      "debut": 3.4,
+      "fin": 3.56
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 4.1,
+      "fin": 4.24
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 4.24,
+      "fin": 4.44
+    },
+    {
+      "texte": "d'hier,",
+      "mot": "d'hier",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.72
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 1,
+      "debut": 5.44,
+      "fin": 5.56
+    },
+    {
+      "texte": "Ménines.",
+      "mot": "Ménines",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.9
+    },
+    {
+      "texte": "Lui :",
+      "mot": "Lui",
+      "scene": 2,
+      "debut": 6.44,
+      "fin": 6.84
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.64
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.64,
+      "fin": 7.72
+    },
+    {
+      "texte": "fromage",
+      "mot": "fromage",
+      "scene": 2,
+      "debut": 7.72,
+      "fin": 8.02
+    },
+    {
+      "texte": "espagnol.",
+      "mot": "espagnol",
+      "scene": 2,
+      "debut": 8.02,
+      "fin": 8.42
+    },
+    {
+      "texte": "Non.",
+      "mot": "Non",
+      "scene": 3,
+      "debut": 9.08,
+      "fin": 9.48
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 9.92,
+      "fin": 10.12
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 10.12,
+      "fin": 10.2
+    },
+    {
+      "texte": "tableau",
+      "mot": "tableau",
+      "scene": 3,
+      "debut": 10.2,
+      "fin": 10.54
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 10.54,
+      "fin": 10.62
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 10.62,
+      "fin": 10.8
+    },
+    {
+      "texte": "célèbre",
+      "mot": "célèbre",
+      "scene": 3,
+      "debut": 10.8,
+      "fin": 11.24
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 11.24,
+      "fin": 11.4
+    },
+    {
+      "texte": "Vélasquez.",
+      "mot": "Vélasquez",
+      "scene": 3,
+      "debut": 11.4,
+      "fin": 11.74
+    },
+    {
+      "texte": "Depuis,",
+      "mot": "Depuis",
+      "scene": 4,
+      "debut": 12.3,
+      "fin": 12.7
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 4,
+      "debut": 13.0,
+      "fin": 13.12
+    },
+    {
+      "texte": "joue",
+      "mot": "joue",
+      "scene": 4,
+      "debut": 13.12,
+      "fin": 13.2
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 4,
+      "debut": 13.2,
+      "fin": 13.36
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 4,
+      "debut": 13.36,
+      "fin": 13.46
+    },
+    {
+      "texte": "midis.",
+      "mot": "midis",
+      "scene": 4,
+      "debut": 13.46,
+      "fin": 13.64
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.84,
+      "fin": 15.24
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.24,
+      "fin": 15.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.64,
+      "fin": 15.76
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 15.76,
+      "fin": 15.86
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 15.86,
+      "fin": 16.06
+    }
+  ]
+}

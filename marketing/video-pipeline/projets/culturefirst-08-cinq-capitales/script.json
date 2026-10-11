@@ -1,0 +1,264 @@
+{
+  "titre": "5 capitales, 10 secondes",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de défi au début. Pendant la liste, rythme vif : le pays, une micro-pause, la capitale. Taquin sur « Respect », énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "defi",
+      "voix": "Cinq capitales, dix secondes. Compte tes bonnes réponses.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Cinq",
+          "texte": "5 capitales,<br>10 secondes",
+          "sous": "Compte tes bonnes réponses"
+        },
+        {
+          "type": "masquer",
+          "ancre": "Compte",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "Compte"
+        },
+        {
+          "type": "chrono",
+          "ancre": "Compte",
+          "secondes": 10
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "liste",
+      "voix": "Le Maroc ? Rabat. Le Nigeria ? Abuja. La Suisse ? Berne. La Nouvelle-Zélande ? Wellington. Le Vietnam ? Hanoï.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Maroc",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Rabat"
+        },
+        {
+          "type": "carte",
+          "ancre": "Nigeria",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Abuja"
+        },
+        {
+          "type": "carte",
+          "ancre": "Suisse",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Berne"
+        },
+        {
+          "type": "carte",
+          "ancre": "Nouvelle-Zélande",
+          "index": 3
+        },
+        {
+          "type": "reveler",
+          "ancre": "Wellington"
+        },
+        {
+          "type": "carte",
+          "ancre": "Vietnam",
+          "index": 4
+        },
+        {
+          "type": "reveler",
+          "ancre": "Hanoï"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "score",
+      "voix": "Cinq sur cinq ? Respect. Sinon, pas de souci : Culture First te les fait réviser jusqu'à ce qu'elles restent.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Cinq",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Cinq",
+          "texte": "5/5 ?",
+          "couleur": "or"
+        },
+        {
+          "type": "masquer",
+          "ancre": "Sinon"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Culture",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "réviser",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Dis ton score en commentaire. Plus de deux cent mille questions, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Dis"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Dis",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Maroc",
+      "reponse": "Rabat",
+      "fiche": [
+        [
+          "Continent",
+          "Afrique"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Nigeria",
+      "reponse": "Abuja",
+      "fiche": [
+        [
+          "Continent",
+          "Afrique"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Suisse",
+      "reponse": "Berne",
+      "fiche": [
+        [
+          "Statut",
+          "ville fédérale"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Nouvelle-Zélande",
+      "reponse": "Wellington",
+      "fiche": [
+        [
+          "Continent",
+          "Océanie"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Vietnam",
+      "reponse": "Hanoï",
+      "fiche": [
+        [
+          "Continent",
+          "Asie"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

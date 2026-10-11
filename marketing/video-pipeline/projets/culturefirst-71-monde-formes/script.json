@@ -1,0 +1,155 @@
+{
+  "titre": "Devine le pays à sa forme",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, rythmé et complice. Petit suspense avant chaque réponse, réponse triomphante. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Devine le pays à sa forme. Premier :",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "monde",
+          "ancre": "Devine",
+          "titre": "Devine le pays à sa forme",
+          "vue": {
+            "centre": [
+              10,
+              40
+            ],
+            "largeur": 120
+          }
+        },
+        {
+          "type": "silhouette",
+          "ancre": "Premier",
+          "pays": "Italy"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Devine",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "italie",
+      "voix": "Facile, c'est la botte : l'Italie.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "l'Italie",
+          "nom": "Italie",
+          "vue": {
+            "pays": "Italy",
+            "marge": 1.2
+          }
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "deux",
+      "voix": "Deuxième, tout en longueur…",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "silhouette",
+          "ancre": "Deuxième",
+          "pays": "Chile"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "chili",
+      "voix": "Le Chili : plus de quatre mille kilomètres du nord au sud.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "Chili",
+          "nom": "Chili",
+          "vue": {
+            "pays": "Chile",
+            "marge": 0.5
+          }
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "trois",
+      "voix": "Dernier, une île au milieu de l'Atlantique nord…",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "silhouette",
+          "ancre": "Dernier",
+          "pays": "Iceland"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "islande",
+      "voix": "L'Islande ! Combien tu en as eu ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "devoiler",
+          "ancre": "L'Islande",
+          "nom": "Islande",
+          "vue": {
+            "pays": "Iceland",
+            "marge": 1.5
+          }
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

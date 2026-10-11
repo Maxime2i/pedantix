@@ -1,0 +1,465 @@
+{
+  "duree": 21.84,
+  "dureeVoix": 20.04,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 3.56,
+      "fin": 3.9
+    },
+    {
+      "id": "rule",
+      "debut": 3.9,
+      "finVoix": 5.64,
+      "fin": 6.16
+    },
+    {
+      "id": "him",
+      "debut": 6.16,
+      "finVoix": 9.4,
+      "fin": 9.84
+    },
+    {
+      "id": "me",
+      "debut": 9.84,
+      "finVoix": 15.1,
+      "fin": 15.62
+    },
+    {
+      "id": "cta",
+      "debut": 15.62,
+      "finVoix": 20.04,
+      "fin": 21.84
+    }
+  ],
+  "mots": [
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "challenged",
+      "mot": "challenged",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.66
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.88
+    },
+    {
+      "texte": "mate",
+      "mot": "mate",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.08
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.22
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.54
+    },
+    {
+      "texte": "FC.",
+      "mot": "FC",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.9
+    },
+    {
+      "texte": "Same",
+      "mot": "Same",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.54
+    },
+    {
+      "texte": "start,",
+      "mot": "start",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.8
+    },
+    {
+      "texte": "same",
+      "mot": "same",
+      "scene": 0,
+      "debut": 3.12,
+      "fin": 3.3
+    },
+    {
+      "texte": "dice.",
+      "mot": "dice",
+      "scene": 0,
+      "debut": 3.3,
+      "fin": 3.56
+    },
+    {
+      "texte": "The",
+      "mot": "The",
+      "scene": 1,
+      "debut": 3.9,
+      "fin": 3.96
+    },
+    {
+      "texte": "only",
+      "mot": "only",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.1
+    },
+    {
+      "texte": "difference",
+      "mot": "difference",
+      "scene": 1,
+      "debut": 4.1,
+      "fin": 4.32
+    },
+    {
+      "texte": "between",
+      "mot": "between",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.64
+    },
+    {
+      "texte": "us:",
+      "mot": "us",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.92
+    },
+    {
+      "texte": "our",
+      "mot": "our",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.18
+    },
+    {
+      "texte": "choices.",
+      "mot": "choices",
+      "scene": 1,
+      "debut": 5.18,
+      "fin": 5.64
+    },
+    {
+      "texte": "Him?",
+      "mot": "Him",
+      "scene": 2,
+      "debut": 6.16,
+      "fin": 6.36
+    },
+    {
+      "texte": "He",
+      "mot": "He",
+      "scene": 2,
+      "debut": 6.54,
+      "fin": 6.64
+    },
+    {
+      "texte": "played",
+      "mot": "played",
+      "scene": 2,
+      "debut": 6.64,
+      "fin": 6.9
+    },
+    {
+      "texte": "it",
+      "mot": "it",
+      "scene": 2,
+      "debut": 6.9,
+      "fin": 7.04
+    },
+    {
+      "texte": "safe.",
+      "mot": "safe",
+      "scene": 2,
+      "debut": 7.04,
+      "fin": 7.26
+    },
+    {
+      "texte": "Decent",
+      "mot": "Decent",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 7.82
+    },
+    {
+      "texte": "career,",
+      "mot": "career",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 8.16
+    },
+    {
+      "texte": "score:",
+      "mot": "score",
+      "scene": 2,
+      "debut": 8.16,
+      "fin": 8.54
+    },
+    {
+      "texte": "one",
+      "mot": "one",
+      "scene": 2,
+      "debut": 8.54,
+      "fin": 8.755
+    },
+    {
+      "texte": "hundred",
+      "mot": "hundred",
+      "scene": 2,
+      "debut": 8.755,
+      "fin": 8.97
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 2,
+      "debut": 8.97,
+      "fin": 9.185
+    },
+    {
+      "texte": "forty-two.",
+      "mot": "forty-two",
+      "scene": 2,
+      "debut": 9.185,
+      "fin": 9.4
+    },
+    {
+      "texte": "Me?",
+      "mot": "Me",
+      "scene": 3,
+      "debut": 9.84,
+      "fin": 10.06
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 3,
+      "debut": 10.42,
+      "fin": 10.54
+    },
+    {
+      "texte": "risked",
+      "mot": "risked",
+      "scene": 3,
+      "debut": 10.54,
+      "fin": 10.9
+    },
+    {
+      "texte": "it",
+      "mot": "it",
+      "scene": 3,
+      "debut": 10.9,
+      "fin": 10.92
+    },
+    {
+      "texte": "all.",
+      "mot": "all",
+      "scene": 3,
+      "debut": 10.92,
+      "fin": 11.26
+    },
+    {
+      "texte": "United,",
+      "mot": "United",
+      "scene": 3,
+      "debut": 11.52,
+      "fin": 11.82
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 12.16,
+      "fin": 12.3
+    },
+    {
+      "texte": "league",
+      "mot": "league",
+      "scene": 3,
+      "debut": 12.3,
+      "fin": 12.44
+    },
+    {
+      "texte": "title…",
+      "mot": "title",
+      "scene": 3,
+      "debut": 12.44,
+      "fin": 12.8
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.34
+    },
+    {
+      "texte": "two",
+      "mot": "two",
+      "scene": 3,
+      "debut": 13.34,
+      "fin": 13.69
+    },
+    {
+      "texte": "hundred",
+      "mot": "hundred",
+      "scene": 3,
+      "debut": 13.69,
+      "fin": 14.04
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 3,
+      "debut": 14.04,
+      "fin": 14.39
+    },
+    {
+      "texte": "eleven",
+      "mot": "eleven",
+      "scene": 3,
+      "debut": 14.39,
+      "fin": 14.74
+    },
+    {
+      "texte": "points.",
+      "mot": "points",
+      "scene": 3,
+      "debut": 14.74,
+      "fin": 15.1
+    },
+    {
+      "texte": "Highest",
+      "mot": "Highest",
+      "scene": 4,
+      "debut": 15.62,
+      "fin": 15.92
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 4,
+      "debut": 15.92,
+      "fin": 16.1
+    },
+    {
+      "texte": "wins.",
+      "mot": "wins",
+      "scene": 4,
+      "debut": 16.1,
+      "fin": 16.34
+    },
+    {
+      "texte": "Send",
+      "mot": "Send",
+      "scene": 4,
+      "debut": 16.82,
+      "fin": 17.0
+    },
+    {
+      "texte": "this",
+      "mot": "this",
+      "scene": 4,
+      "debut": 17.0,
+      "fin": 17.14
+    },
+    {
+      "texte": "challenge",
+      "mot": "challenge",
+      "scene": 4,
+      "debut": 17.14,
+      "fin": 17.44
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 4,
+      "debut": 17.44,
+      "fin": 17.64
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 17.64,
+      "fin": 17.74
+    },
+    {
+      "texte": "mate.",
+      "mot": "mate",
+      "scene": 4,
+      "debut": 17.74,
+      "fin": 17.86
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 18.1,
+      "fin": 18.4
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 18.4,
+      "fin": 18.78
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 4,
+      "debut": 18.98,
+      "fin": 19.16
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 4,
+      "debut": 19.16,
+      "fin": 19.3
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.3,
+      "fin": 19.58
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 4,
+      "debut": 19.58,
+      "fin": 19.76
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 19.76,
+      "fin": 20.04
+    }
+  ]
+}

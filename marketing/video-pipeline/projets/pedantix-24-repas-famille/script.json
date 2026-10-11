@@ -1,0 +1,145 @@
+{
+  "titre": "Repas de famille",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Humour : battre l'oncle qui sait tout au repas de famille.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Les Ménines",
+    "texte": [
+      "Les Ménines ou La Famille de Philippe IV, est le portrait le plus célèbre de Diego Vélasquez, peint en 1656. Le tableau est exposé au musée du Prado à Madrid. La composition complexe et énigmatique de la toile interroge le lien entre la réalité et l’illusion et crée une relation incertaine entre celui qui regarde la toile et les personnages qui y sont dépeints. Cette complexité a été la source de nombreuses analyses qui font de cette toile l'une des plus commentées de l'histoire de la peinture occidentale."
+    ],
+    "titreMots": [
+      "les",
+      "ménines"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Jeudi 18 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "styleImages": "illustration 3D douce style Pixar, couleurs chaudes ocre et terracotta, arrière-plan légèrement flou",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Repas de famille. Mon oncle dit qu'il sait tout.",
+      "image": "Illustration d'une table de repas de famille vue de face : plats, verres, nappe, bougies, lumière chaude du soir, arrière-plan légèrement flou, aucune personne.",
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Repas",
+          "nom": "tete-main"
+        },
+        {
+          "type": "bulle",
+          "ancre": "tout.",
+          "texte": "Ah oui ?",
+          "style": "pensee"
+        }
+      ]
+    },
+    {
+      "id": "defi",
+      "voix": "Alors je sors mon jeu : une page d'hier, Les Ménines.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Alors",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Alors",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "voirPage",
+          "ancre": "Ménines."
+        }
+      ]
+    },
+    {
+      "id": "oncle",
+      "voix": "Lui : c'est un fromage espagnol.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Lui",
+          "nom": "neutre"
+        },
+        {
+          "type": "tampon",
+          "ancre": "espagnol.",
+          "texte": "FAUX",
+          "couleur": "rouge"
+        },
+        {
+          "type": "pose",
+          "ancre": "espagnol.",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Non. C'est le tableau le plus célèbre de Vélasquez.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Non.",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Non.",
+          "nom": "fier"
+        },
+        {
+          "type": "titre",
+          "ancre": "tableau",
+          "texte": "Les Ménines",
+          "sous": "Diego Vélasquez, 1656"
+        }
+      ]
+    },
+    {
+      "id": "depuis",
+      "voix": "Depuis, il joue tous les midis.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Depuis,"
+        },
+        {
+          "type": "pose",
+          "ancre": "Depuis,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

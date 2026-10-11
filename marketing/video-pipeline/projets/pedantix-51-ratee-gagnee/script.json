@@ -1,0 +1,163 @@
+{
+  "titre": "Partie ratée, partie gagnée",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Méthode : même joueur, autre méthode, autre score.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Jeûne",
+    "texte": [
+      "Le jeûne est la privation, volontaire ou non, de nourriture, accompagnée ou pas d'une privation de boisson. Le jeûne partiel fait partie intégrante de la pratique de certaines religions. D'un point de vue médical et physiologique, on considère que la période de jeûne commence à partir de la sixième heure après le dernier repas. Le jeûne met en marche des mécanismes d'adaptation physiologique hérités du lent processus de l'évolution."
+    ],
+    "titreMots": [
+      "jeûne"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 1 septembre",
+    "accelere": [
+      "privation",
+      "volontaire",
+      "nourriture",
+      "accompagnée",
+      "boisson",
+      "partiel",
+      "pratique",
+      "religions",
+      "médical",
+      "physiologique",
+      "période",
+      "sixième",
+      "heure",
+      "dernier",
+      "repas",
+      "mécanismes",
+      "adaptation",
+      "évolution"
+    ]
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Hier : cent douze coups. Aujourd'hui : trente et un.",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "Hier",
+          "valeur": 112,
+          "sous": "coups hier",
+          "fin": "coups."
+        },
+        {
+          "type": "pose",
+          "ancre": "Hier",
+          "nom": "decu"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "Aujourd'hui",
+          "valeur": 31,
+          "depart": 112,
+          "montee": 0.9,
+          "sous": "coups aujourd'hui"
+        },
+        {
+          "type": "pose",
+          "ancre": "Aujourd'hui",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "hier",
+      "voix": "La différence ? Hier, je tapais des titres au hasard.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "La"
+        },
+        {
+          "type": "titre",
+          "ancre": "Hier,",
+          "texte": "Hier",
+          "sous": "des titres au hasard",
+          "fin": "hasard."
+        },
+        {
+          "type": "pose",
+          "ancre": "hasard.",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "aujourdhui",
+      "voix": "Aujourd'hui, j'ai suivi le gris, mot après mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Aujourd'hui,",
+          "mode": "coin"
+        },
+        {
+          "type": "accelere",
+          "ancre": "j'ai",
+          "fin": "mot.",
+          "essais": 31
+        },
+        {
+          "type": "devoiler",
+          "ancre": "mot."
+        },
+        {
+          "type": "resultat",
+          "ancre": "mot.",
+          "coups": 31,
+          "rang": 4,
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Même jeu, même cerveau, autre méthode.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Même",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "méthode.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

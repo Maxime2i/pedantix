@@ -1,0 +1,146 @@
+{
+  "titre": "Une date, un titre",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "Défi spectateur : trouver la page avec une seule date.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Halloween",
+    "texte": [
+      "Halloween est une fête folklorique originaire des îles anglo-celtes célébrée dans la nuit du 31 octobre au 1er novembre, jour de la fête catholique de la Toussaint. Son nom est une contraction de l'anglais All Hallows' Eve qui signifie the eve of All Hallows' Day en anglais contemporain et peut se traduire comme « la veille de tous les saints » ou « la veillée de la Toussaint ».",
+      "La fête d'Halloween est introduite aux États-Unis et au Canada après l'arrivée massive d'émigrants irlandais et écossais notamment à la suite de la Grande famine irlandaise."
+    ],
+    "titreMots": [
+      "halloween"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 31 octobre",
+    "motsOutils": false
+  },
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Une seule date, et un titre de neuf lettres. Tu trouves ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Une",
+          "cible": "titre"
+        },
+        {
+          "type": "case",
+          "ancre": "neuf",
+          "mot": "halloween",
+          "dans": "titre"
+        }
+      ]
+    },
+    {
+      "id": "date",
+      "voix": "La nuit du trente-et-un octobre au premier novembre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "La",
+          "cible": "article",
+          "echelle": 1.3,
+          "hauteur": 820
+        },
+        {
+          "type": "envoyer",
+          "ancre": "trente-et-un",
+          "mot": "31"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "octobre",
+          "mot": "octobre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "premier",
+          "mot": "1er"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "novembre.",
+          "mot": "novembre"
+        }
+      ]
+    },
+    {
+      "id": "chrono",
+      "voix": "Trois… deux… un…",
+      "image": null,
+      "actions": [
+        {
+          "type": "chrono",
+          "ancre": "Trois…",
+          "secondes": 3
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Halloween, évidemment !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Halloween,",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Halloween,",
+          "mode": "coin"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "Halloween,"
+        },
+        {
+          "type": "pose",
+          "ancre": "Halloween,",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Tu veux une version plus dure ? Dis-le en commentaire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "duree": 20.8,
+  "dureeVoix": 19.0,
+  "scenes": [
+    {
+      "id": "pov",
+      "debut": 0.0,
+      "finVoix": 4.32,
+      "fin": 5.0
+    },
+    {
+      "id": "aucun",
+      "debut": 5.0,
+      "finVoix": 7.32,
+      "fin": 7.92
+    },
+    {
+      "id": "opera",
+      "debut": 7.92,
+      "finVoix": 10.98,
+      "fin": 11.9
+    },
+    {
+      "id": "app",
+      "debut": 11.9,
+      "finVoix": 14.48,
+      "fin": 15.26
+    },
+    {
+      "id": "appel",
+      "debut": 15.26,
+      "finVoix": 19.0,
+      "fin": 20.8
+    }
+  ],
+  "mots": [
+    {
+      "texte": "POV :",
+      "mot": "POV",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.72
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.9
+    },
+    {
+      "texte": "découvres",
+      "mot": "découvres",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.36
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.46
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.6
+    },
+    {
+      "texte": "Vikings…",
+      "mot": "Vikings",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 2.04
+    },
+    {
+      "texte": "n'avaient",
+      "mot": "n'avaient",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.84
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 3.08
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.08,
+      "fin": 3.24
+    },
+    {
+      "texte": "cornes",
+      "mot": "cornes",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.6
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 0,
+      "debut": 3.6,
+      "fin": 3.82
+    },
+    {
+      "texte": "leurs",
+      "mot": "leurs",
+      "scene": 0,
+      "debut": 3.82,
+      "fin": 3.94
+    },
+    {
+      "texte": "casques.",
+      "mot": "casques",
+      "scene": 0,
+      "debut": 3.94,
+      "fin": 4.32
+    },
+    {
+      "texte": "Aucun",
+      "mot": "Aucun",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.48
+    },
+    {
+      "texte": "casque",
+      "mot": "casque",
+      "scene": 1,
+      "debut": 5.48,
+      "fin": 5.82
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 5.82,
+      "fin": 5.92
+    },
+    {
+      "texte": "cornes",
+      "mot": "cornes",
+      "scene": 1,
+      "debut": 5.92,
+      "fin": 6.14
+    },
+    {
+      "texte": "n'a",
+      "mot": "n'a",
+      "scene": 1,
+      "debut": 6.14,
+      "fin": 6.24
+    },
+    {
+      "texte": "été",
+      "mot": "été",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.34
+    },
+    {
+      "texte": "retrouvé",
+      "mot": "retrouvé",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 6.72
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.72,
+      "fin": 6.8
+    },
+    {
+      "texte": "l'époque",
+      "mot": "l'époque",
+      "scene": 1,
+      "debut": 6.8,
+      "fin": 7.0
+    },
+    {
+      "texte": "viking.",
+      "mot": "viking",
+      "scene": 1,
+      "debut": 7.0,
+      "fin": 7.32
+    },
+    {
+      "texte": "L'image",
+      "mot": "L'image",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 8.24
+    },
+    {
+      "texte": "vient",
+      "mot": "vient",
+      "scene": 2,
+      "debut": 8.24,
+      "fin": 8.42
+    },
+    {
+      "texte": "surtout",
+      "mot": "surtout",
+      "scene": 2,
+      "debut": 8.42,
+      "fin": 8.64
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 8.64,
+      "fin": 8.86
+    },
+    {
+      "texte": "costumes",
+      "mot": "costumes",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 9.06
+    },
+    {
+      "texte": "d'opéra",
+      "mot": "d'opéra",
+      "scene": 2,
+      "debut": 9.06,
+      "fin": 9.54
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.7
+    },
+    {
+      "texte": "dix-neuvième",
+      "mot": "dix-neuvième",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 10.16
+    },
+    {
+      "texte": "siècle,",
+      "mot": "siècle",
+      "scene": 2,
+      "debut": 10.16,
+      "fin": 10.42
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 2,
+      "debut": 10.42,
+      "fin": 10.72
+    },
+    {
+      "texte": "Wagner.",
+      "mot": "Wagner",
+      "scene": 2,
+      "debut": 10.72,
+      "fin": 10.98
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 11.9,
+      "fin": 12.3
+    },
+    {
+      "texte": "prochaine",
+      "mot": "prochaine",
+      "scene": 3,
+      "debut": 12.3,
+      "fin": 12.62
+    },
+    {
+      "texte": "fois",
+      "mot": "fois",
+      "scene": 3,
+      "debut": 12.62,
+      "fin": 12.88
+    },
+    {
+      "texte": "qu'on",
+      "mot": "qu'on",
+      "scene": 3,
+      "debut": 12.88,
+      "fin": 13.04
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.12
+    },
+    {
+      "texte": "sort",
+      "mot": "sort",
+      "scene": 3,
+      "debut": 13.12,
+      "fin": 13.22
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 13.22,
+      "fin": 13.38
+    },
+    {
+      "texte": "cornes,",
+      "mot": "cornes",
+      "scene": 3,
+      "debut": 13.38,
+      "fin": 13.72
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 14.04,
+      "fin": 14.16
+    },
+    {
+      "texte": "sauras.",
+      "mot": "sauras",
+      "scene": 3,
+      "debut": 14.16,
+      "fin": 14.48
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 15.26,
+      "fin": 15.48
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 15.48,
+      "fin": 15.68
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 15.68,
+      "fin": 15.847
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 15.847,
+      "fin": 16.013
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 16.013,
+      "fin": 16.18
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 16.18,
+      "fin": 16.5
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 17.04,
+      "fin": 17.28
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 17.28,
+      "fin": 17.64
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 17.88,
+      "fin": 18.24
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 18.24,
+      "fin": 18.42
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 18.42,
+      "fin": 18.6
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 18.6,
+      "fin": 18.78
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 18.78,
+      "fin": 19.0
+    }
+  ]
+}

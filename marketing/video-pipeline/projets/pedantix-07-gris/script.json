@@ -1,0 +1,171 @@
+{
+  "titre": "Le gris qui brûle",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Astuce : comprendre le gris (proximité de sens).",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Renard",
+    "texte": [
+      "Renard est un nom vernaculaire ambigu en français désignant des mammifères carnivores de la famille des canidés. L’espèce nominale au sens strict de cette dénomination est le renard roux, mais désigne le plus souvent les différentes espèces du genre Vulpes, et dans un sens encore plus large, des canidés y ressemblant physiquement, comme les genres Atelocynus, Cerdocyon, Otocyon, Lycalopex et Urocyon.",
+      "Dans la culture populaire, le renard est un personnage symbolique et littéraire qui représente l'intelligence et surtout la ruse."
+    ],
+    "titreMots": [
+      "renard"
+    ],
+    "revelations": {},
+    "proches": {
+      "animal": {
+        "cibles": [
+          "renard"
+        ],
+        "score": 45
+      },
+      "chien": {
+        "cibles": [
+          "renard"
+        ],
+        "score": 58
+      },
+      "loup": {
+        "cibles": [
+          "renard"
+        ],
+        "score": 71
+      }
+    },
+    "dejaTrouves": [],
+    "date": "Jeudi 25 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Dans mon jeu, le gris, c'est ton meilleur indice.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "gris,",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "c'est",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "loin",
+      "voix": "Je tape animal : gris foncé, je suis loin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Je",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Je",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "tape",
+          "mot": "animal",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "gris",
+          "mot": "animal"
+        }
+      ]
+    },
+    {
+      "id": "chaud",
+      "voix": "Chien : plus clair, ça chauffe.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Chien",
+          "mot": "chien",
+          "duree": 0.25
+        },
+        {
+          "type": "envoyer",
+          "ancre": "plus",
+          "mot": "chien"
+        }
+      ]
+    },
+    {
+      "id": "brule",
+      "voix": "Loup : presque blanc, je brûle !",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Loup",
+          "mot": "loup",
+          "duree": 0.25
+        },
+        {
+          "type": "envoyer",
+          "ancre": "presque",
+          "mot": "loup"
+        },
+        {
+          "type": "pose",
+          "ancre": "brûle",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Et voilà : renard !",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "voilà",
+          "mot": "renard",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "renard",
+          "mot": "renard"
+        },
+        {
+          "type": "pose",
+          "ancre": "renard",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Plus c'est clair, plus t'es proche. Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix,"
+        }
+      ]
+    }
+  ]
+}

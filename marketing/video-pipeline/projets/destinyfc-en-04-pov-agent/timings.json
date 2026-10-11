@@ -1,0 +1,507 @@
+{
+  "duree": 24.3,
+  "dureeVoix": 22.5,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 4.02,
+      "fin": 4.6
+    },
+    {
+      "id": "create",
+      "debut": 4.6,
+      "finVoix": 8.26,
+      "fin": 8.78
+    },
+    {
+      "id": "agent",
+      "debut": 8.78,
+      "finVoix": 14.18,
+      "fin": 14.86
+    },
+    {
+      "id": "clubs",
+      "debut": 14.86,
+      "finVoix": 17.9,
+      "fin": 18.38
+    },
+    {
+      "id": "cta",
+      "debut": 18.38,
+      "finVoix": 22.5,
+      "fin": 24.3
+    }
+  ],
+  "mots": [
+    {
+      "texte": "POV:",
+      "mot": "POV",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.86
+    },
+    {
+      "texte": "you're",
+      "mot": "you're",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.12
+    },
+    {
+      "texte": "sixteen,",
+      "mot": "sixteen",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.62
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 2.08
+    },
+    {
+      "texte": "an",
+      "mot": "an",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.2
+    },
+    {
+      "texte": "ambitious",
+      "mot": "ambitious",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.52
+    },
+    {
+      "texte": "agent",
+      "mot": "agent",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 3.0
+    },
+    {
+      "texte": "has",
+      "mot": "has",
+      "scene": 0,
+      "debut": 3.0,
+      "fin": 3.18
+    },
+    {
+      "texte": "just",
+      "mot": "just",
+      "scene": 0,
+      "debut": 3.18,
+      "fin": 3.34
+    },
+    {
+      "texte": "spotted",
+      "mot": "spotted",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 3.76
+    },
+    {
+      "texte": "you.",
+      "mot": "you",
+      "scene": 0,
+      "debut": 3.76,
+      "fin": 4.02
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.66
+    },
+    {
+      "texte": "create",
+      "mot": "create",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.92
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.06
+    },
+    {
+      "texte": "player.",
+      "mot": "player",
+      "scene": 1,
+      "debut": 5.06,
+      "fin": 5.32
+    },
+    {
+      "texte": "Jack",
+      "mot": "Jack",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.84
+    },
+    {
+      "texte": "Turner,",
+      "mot": "Turner",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 6.14
+    },
+    {
+      "texte": "midfielder,",
+      "mot": "midfielder",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.98
+    },
+    {
+      "texte": "from",
+      "mot": "from",
+      "scene": 1,
+      "debut": 6.98,
+      "fin": 7.28
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 7.28,
+      "fin": 7.4
+    },
+    {
+      "texte": "working-class",
+      "mot": "working-class",
+      "scene": 1,
+      "debut": 7.4,
+      "fin": 7.92
+    },
+    {
+      "texte": "estate.",
+      "mot": "estate",
+      "scene": 1,
+      "debut": 7.92,
+      "fin": 8.26
+    },
+    {
+      "texte": "Inner",
+      "mot": "Inner",
+      "scene": 2,
+      "debut": 8.78,
+      "fin": 8.9
+    },
+    {
+      "texte": "circle:",
+      "mot": "circle",
+      "scene": 2,
+      "debut": 8.9,
+      "fin": 9.22
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 9.6,
+      "fin": 9.7
+    },
+    {
+      "texte": "ambitious",
+      "mot": "ambitious",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 10.18
+    },
+    {
+      "texte": "agent.",
+      "mot": "agent",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.68
+    },
+    {
+      "texte": "He",
+      "mot": "He",
+      "scene": 2,
+      "debut": 11.12,
+      "fin": 11.22
+    },
+    {
+      "texte": "swears",
+      "mot": "swears",
+      "scene": 2,
+      "debut": 11.22,
+      "fin": 11.7
+    },
+    {
+      "texte": "he'll",
+      "mot": "he'll",
+      "scene": 2,
+      "debut": 11.7,
+      "fin": 11.84
+    },
+    {
+      "texte": "take",
+      "mot": "take",
+      "scene": 2,
+      "debut": 11.84,
+      "fin": 12.0
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 2,
+      "debut": 12.0,
+      "fin": 12.14
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 2,
+      "debut": 12.14,
+      "fin": 12.22
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 12.22,
+      "fin": 12.3
+    },
+    {
+      "texte": "top…",
+      "mot": "top",
+      "scene": 2,
+      "debut": 12.3,
+      "fin": 12.56
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 2,
+      "debut": 12.56,
+      "fin": 13.12
+    },
+    {
+      "texte": "won't",
+      "mot": "won't",
+      "scene": 2,
+      "debut": 13.12,
+      "fin": 13.6
+    },
+    {
+      "texte": "forget",
+      "mot": "forget",
+      "scene": 2,
+      "debut": 13.6,
+      "fin": 13.82
+    },
+    {
+      "texte": "his",
+      "mot": "his",
+      "scene": 2,
+      "debut": 13.82,
+      "fin": 13.98
+    },
+    {
+      "texte": "cut.",
+      "mot": "cut",
+      "scene": 2,
+      "debut": 13.98,
+      "fin": 14.18
+    },
+    {
+      "texte": "Result:",
+      "mot": "Result",
+      "scene": 3,
+      "debut": 14.86,
+      "fin": 15.22
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 3,
+      "debut": 15.58,
+      "fin": 15.7
+    },
+    {
+      "texte": "scouts",
+      "mot": "scouts",
+      "scene": 3,
+      "debut": 15.7,
+      "fin": 16.0
+    },
+    {
+      "texte": "have",
+      "mot": "have",
+      "scene": 3,
+      "debut": 16.0,
+      "fin": 16.12
+    },
+    {
+      "texte": "spotted",
+      "mot": "spotted",
+      "scene": 3,
+      "debut": 16.12,
+      "fin": 16.46
+    },
+    {
+      "texte": "me.",
+      "mot": "me",
+      "scene": 3,
+      "debut": 16.46,
+      "fin": 16.72
+    },
+    {
+      "texte": "Now",
+      "mot": "Now",
+      "scene": 3,
+      "debut": 17.06,
+      "fin": 17.2
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 3,
+      "debut": 17.2,
+      "fin": 17.38
+    },
+    {
+      "texte": "pick",
+      "mot": "pick",
+      "scene": 3,
+      "debut": 17.38,
+      "fin": 17.56
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 3,
+      "debut": 17.56,
+      "fin": 17.7
+    },
+    {
+      "texte": "club.",
+      "mot": "club",
+      "scene": 3,
+      "debut": 17.7,
+      "fin": 17.9
+    },
+    {
+      "texte": "And",
+      "mot": "And",
+      "scene": 4,
+      "debut": 18.38,
+      "fin": 18.5
+    },
+    {
+      "texte": "you,",
+      "mot": "you",
+      "scene": 4,
+      "debut": 18.5,
+      "fin": 18.66
+    },
+    {
+      "texte": "who",
+      "mot": "who",
+      "scene": 4,
+      "debut": 18.96,
+      "fin": 19.04
+    },
+    {
+      "texte": "would",
+      "mot": "would",
+      "scene": 4,
+      "debut": 19.04,
+      "fin": 19.16
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 4,
+      "debut": 19.16,
+      "fin": 19.28
+    },
+    {
+      "texte": "trust",
+      "mot": "trust",
+      "scene": 4,
+      "debut": 19.28,
+      "fin": 19.52
+    },
+    {
+      "texte": "with",
+      "mot": "with",
+      "scene": 4,
+      "debut": 19.52,
+      "fin": 19.68
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 4,
+      "debut": 19.68,
+      "fin": 19.78
+    },
+    {
+      "texte": "career?",
+      "mot": "career",
+      "scene": 4,
+      "debut": 19.78,
+      "fin": 20.04
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 20.52,
+      "fin": 20.76
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 20.76,
+      "fin": 21.08
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 4,
+      "debut": 21.36,
+      "fin": 21.6
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 4,
+      "debut": 21.6,
+      "fin": 21.8
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 21.8,
+      "fin": 22.1
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 4,
+      "debut": 22.1,
+      "fin": 22.26
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 22.26,
+      "fin": 22.5
+    }
+  ]
+}

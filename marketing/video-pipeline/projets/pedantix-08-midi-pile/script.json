@@ -1,0 +1,138 @@
+{
+  "titre": "POV : midi pile",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Humour POV : l'attente de la page de midi.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Abricot",
+    "texte": [
+      "L'abricot est le fruit d'un arbre généralement de petite taille appelé abricotier, de la famille des Rosaceae. Le nom scientifique de l'abricotier est Prunus armeniaca. Il appartient au sous-genre des Prunus, section Armeniaca avec les quatre autres abricotiers du monde."
+    ],
+    "titreMots": [
+      "abricot"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 7 octobre"
+  },
+  "dispositionInitiale": "duo",
+  "ecranInitial": "verrouillage",
+  "ecrans": {
+    "verrouillage": {
+      "heure": "11:59",
+      "date": "mardi 7 octobre"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "POV : il est onze heures cinquante-neuf, et tu fixes ton téléphone.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "POV",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "reunion",
+      "voix": "Ta réunion parle de budget… tu n'écoutes plus.",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "budget…",
+          "texte": "… et le budget du trimestre…",
+          "style": "pensee",
+          "fin": "plus."
+        },
+        {
+          "type": "pose",
+          "ancre": "n'écoutes",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "midi",
+      "voix": "Midi. La notif tombe.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Midi.",
+          "nom": "verrouillage",
+          "donnees": {
+            "heure": "12:00"
+          }
+        },
+        {
+          "type": "notif",
+          "ancre": "notif"
+        },
+        {
+          "type": "pose",
+          "ancre": "tombe.",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "voix": "La nouvelle page Wikipédia est là.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "nouvelle",
+          "nom": "jeu"
+        },
+        {
+          "type": "pose",
+          "ancre": "La",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "plus-rien",
+      "voix": "Plus rien n'existe.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Plus",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Plus",
+          "nom": "telephone"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, une nouvelle page chaque midi, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix,"
+        }
+      ]
+    }
+  ]
+}

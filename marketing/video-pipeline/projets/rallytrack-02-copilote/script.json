@@ -1,0 +1,126 @@
+{
+  "titre": "L'écart avec le deuxième",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Téléchargements, cible spectateurs : l'écart exact, au dixième. Démo fictive : Moreau devant Marchal de 8,3 s ; ES5 en cours, Marchal reprend 0,7 s.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Accroche moqueuse et complice, pause après « Et toi… ». Ton assuré et précis sur « huit secondes trois »."
+  },
+  "ecranInitial": "rallye",
+  "ecrans": {
+    "rallye": {
+      "onglet": "classement"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Ton pote te demande l'écart avec le deuxième. Et toi… aucune idée.",
+      "animation": "Photo de deux spectateurs ; tampon rouge « AUCUNE IDÉE ».",
+      "image": "Photographie réaliste, cadrage vertical : deux amis de dos en doudounes au bord d'une route de rallye en forêt, l'un pointe la route du doigt, rubalise, automne, brume légère. Aucun visage reconnaissable, aucun texte, aucune marque.",
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "aucune",
+          "texte": "AUCUNE IDÉE",
+          "couleur": "rouge",
+          "fin": "idée"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "moteur",
+          "ancre": "pote",
+          "gain": 0.45
+        }
+      ]
+    },
+    {
+      "id": "classement",
+      "voix": "Tu ouvres Rally Track : huit secondes trois, au dixième près.",
+      "animation": "Fiche rallye sur le classement ; zoom sur Marchal, 2e à +8.3.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "ouvres"
+        },
+        {
+          "type": "zoom",
+          "ancre": "huit",
+          "cible": "cl-3",
+          "echelle": 1.45,
+          "hauteur": 980
+        },
+        {
+          "type": "surligner",
+          "ancre": "huit",
+          "n": 3,
+          "fin": "près"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "speciale",
+      "voix": "Et sur la spéciale en cours, Marchal en reprend sept dixièmes.",
+      "animation": "Onglet Spéciales, feuille de l'ES5 : Marchal premier, Moreau à +0.7.",
+      "image": null,
+      "actions": [
+        {
+          "type": "onglet",
+          "ancre": "spéciale",
+          "nom": "speciales"
+        },
+        {
+          "type": "feuille",
+          "ancre": "Marchal",
+          "nom": "speciale"
+        },
+        {
+          "type": "zoom",
+          "ancre": "sept",
+          "cible": "sp-1",
+          "echelle": 1.35,
+          "hauteur": 980
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Ton pote va t'adorer. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

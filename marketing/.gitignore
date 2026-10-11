@@ -1,0 +1,9 @@
+# Régénérables (pipeline vidéo) : ne pas versionner
+video-pipeline/node_modules/
+video-pipeline/projets/*/frames/
+video-pipeline/projets/*/audio/sfx/
+video-pipeline/projets/*/output/mix.wav
+video-pipeline/projets/*/output/video-finale.mp4
+video-pipeline/projets/*/output/apercu-*.jpg
+video-pipeline/projets/*/output/*.log
+.DS_Store

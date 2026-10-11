@@ -1,0 +1,128 @@
+{
+  "titre": "Réponse au défi",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Suite du défi du matin : la réponse et un fait.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Abricot",
+    "texte": [
+      "L'abricot est le fruit d'un arbre généralement de petite taille appelé abricotier, de la famille des Rosaceae. Le nom scientifique de l'abricotier est Prunus armeniaca. Il appartient au sous-genre des Prunus, section Armeniaca avec les quatre autres abricotiers du monde."
+    ],
+    "titreMots": [
+      "abricot"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [
+      "fruit",
+      "arbre",
+      "petite",
+      "taille",
+      "prunus"
+    ],
+    "date": "Lundi 15 septembre",
+    "motsOutils": false
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Ce matin, je t'ai lancé un défi. Voici la réponse.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "défi.",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Voici",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Fruit, arbre, Prunus… c'était l'abricot !",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Fruit,",
+          "mode": "coin"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "l'abricot"
+        },
+        {
+          "type": "pose",
+          "ancre": "l'abricot",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "fait",
+      "voix": "Le nom scientifique de l'abricotier, c'est Prunus armeniaca.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Le",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Le",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "scientifique",
+          "texte": "Prunus armeniaca",
+          "sous": "le nom savant de l'abricotier",
+          "fin": "armeniaca."
+        }
+      ]
+    },
+    {
+      "id": "bravo",
+      "voix": "Bravo à ceux qui avaient trouvé. Demain, plus dur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Bravo",
+          "nom": "fier"
+        },
+        {
+          "type": "pose",
+          "ancre": "Demain,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

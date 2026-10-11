@@ -1,0 +1,450 @@
+{
+  "duree": 23.94,
+  "dureeVoix": 22.14,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 3.4,
+      "fin": 3.78
+    },
+    {
+      "id": "ecole",
+      "debut": 3.78,
+      "finVoix": 5.5,
+      "fin": 5.96
+    },
+    {
+      "id": "mais",
+      "debut": 5.96,
+      "finVoix": 9.98,
+      "fin": 10.82
+    },
+    {
+      "id": "verdict",
+      "debut": 10.82,
+      "finVoix": 14.64,
+      "fin": 15.24
+    },
+    {
+      "id": "app",
+      "debut": 15.24,
+      "finVoix": 19.52,
+      "fin": 20.02
+    },
+    {
+      "id": "appel",
+      "debut": 20.02,
+      "finVoix": 22.14,
+      "fin": 23.94
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.76
+    },
+    {
+      "texte": "long",
+      "mot": "long",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 0.94
+    },
+    {
+      "texte": "fleuve",
+      "mot": "fleuve",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.24
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.38
+    },
+    {
+      "texte": "monde :",
+      "mot": "monde",
+      "scene": 0,
+      "debut": 1.38,
+      "fin": 1.6
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.12
+    },
+    {
+      "texte": "Nil",
+      "mot": "Nil",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.44
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 2.44,
+      "fin": 2.84
+    },
+    {
+      "texte": "l'Amazone ?",
+      "mot": "l'Amazone",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 3.4
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 1,
+      "debut": 3.78,
+      "fin": 3.96
+    },
+    {
+      "texte": "l'école,",
+      "mot": "l'école",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.26
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 1,
+      "debut": 4.48,
+      "fin": 4.58
+    },
+    {
+      "texte": "t'a",
+      "mot": "t'a",
+      "scene": 1,
+      "debut": 4.58,
+      "fin": 4.74
+    },
+    {
+      "texte": "appris :",
+      "mot": "appris",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.02
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.28
+    },
+    {
+      "texte": "Nil.",
+      "mot": "Nil",
+      "scene": 1,
+      "debut": 5.28,
+      "fin": 5.5
+    },
+    {
+      "texte": "Mais",
+      "mot": "Mais",
+      "scene": 2,
+      "debut": 5.96,
+      "fin": 6.26
+    },
+    {
+      "texte": "selon",
+      "mot": "selon",
+      "scene": 2,
+      "debut": 6.26,
+      "fin": 6.84
+    },
+    {
+      "texte": "l'endroit",
+      "mot": "l'endroit",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.3
+    },
+    {
+      "texte": "où",
+      "mot": "où",
+      "scene": 2,
+      "debut": 7.3,
+      "fin": 7.46
+    },
+    {
+      "texte": "l'on",
+      "mot": "l'on",
+      "scene": 2,
+      "debut": 7.46,
+      "fin": 7.54
+    },
+    {
+      "texte": "place",
+      "mot": "place",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.74
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 7.74,
+      "fin": 7.92
+    },
+    {
+      "texte": "source,",
+      "mot": "source",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 8.16
+    },
+    {
+      "texte": "l'Amazone",
+      "mot": "l'Amazone",
+      "scene": 2,
+      "debut": 8.74,
+      "fin": 9.08
+    },
+    {
+      "texte": "peut",
+      "mot": "peut",
+      "scene": 2,
+      "debut": 9.08,
+      "fin": 9.26
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.26,
+      "fin": 9.38
+    },
+    {
+      "texte": "dépasser.",
+      "mot": "dépasser",
+      "scene": 2,
+      "debut": 9.38,
+      "fin": 9.98
+    },
+    {
+      "texte": "Verdict :",
+      "mot": "Verdict",
+      "scene": 3,
+      "debut": 10.82,
+      "fin": 11.28
+    },
+    {
+      "texte": "égalité.",
+      "mot": "égalité",
+      "scene": 3,
+      "debut": 11.84,
+      "fin": 12.44
+    },
+    {
+      "texte": "Même",
+      "mot": "Même",
+      "scene": 3,
+      "debut": 13.18,
+      "fin": 13.44
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 13.44,
+      "fin": 13.6
+    },
+    {
+      "texte": "géographes",
+      "mot": "géographes",
+      "scene": 3,
+      "debut": 13.6,
+      "fin": 14.06
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 3,
+      "debut": 14.06,
+      "fin": 14.14
+    },
+    {
+      "texte": "sont",
+      "mot": "sont",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.26
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 3,
+      "debut": 14.26,
+      "fin": 14.38
+    },
+    {
+      "texte": "d'accord.",
+      "mot": "d'accord",
+      "scene": 3,
+      "debut": 14.38,
+      "fin": 14.64
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 4,
+      "debut": 15.24,
+      "fin": 15.44
+    },
+    {
+      "texte": "vraies",
+      "mot": "vraies",
+      "scene": 4,
+      "debut": 15.44,
+      "fin": 15.74
+    },
+    {
+      "texte": "questions",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 15.74,
+      "fin": 16.08
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.08,
+      "fin": 16.24
+    },
+    {
+      "texte": "culture",
+      "mot": "culture",
+      "scene": 4,
+      "debut": 16.24,
+      "fin": 16.48
+    },
+    {
+      "texte": "G,",
+      "mot": "G",
+      "scene": 4,
+      "debut": 16.48,
+      "fin": 16.78
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 4,
+      "debut": 17.16,
+      "fin": 17.38
+    },
+    {
+      "texte": "leurs",
+      "mot": "leurs",
+      "scene": 4,
+      "debut": 17.38,
+      "fin": 17.58
+    },
+    {
+      "texte": "nuances,",
+      "mot": "nuances",
+      "scene": 4,
+      "debut": 17.58,
+      "fin": 17.96
+    },
+    {
+      "texte": "sont",
+      "mot": "sont",
+      "scene": 4,
+      "debut": 18.38,
+      "fin": 18.64
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 4,
+      "debut": 18.64,
+      "fin": 18.84
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.84,
+      "fin": 19.16
+    },
+    {
+      "texte": "First.",
+      "mot": "First",
+      "scene": 4,
+      "debut": 19.16,
+      "fin": 19.52
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 20.02,
+      "fin": 20.32
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 20.32,
+      "fin": 20.76
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 20.76,
+      "fin": 21.06
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 21.06,
+      "fin": 21.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 21.32,
+      "fin": 21.62
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 21.62,
+      "fin": 21.88
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 21.88,
+      "fin": 22.14
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "titre": "Mardi histoire",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Mardi histoire ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Mardi",
+          "texte": "Mardi histoire",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Mardi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : la chute du mur de Berlin ? Mille neuf cent quatre-vingt-neuf.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : le premier empereur romain ? Auguste.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Auguste"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : la ville où Jeanne d'Arc a été brûlée ? Rouen.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Rouen"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous mardi prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grandes dates du XXe siècle",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Chute du mur de Berlin",
+      "reponse": "1989",
+      "fiche": [
+        [
+          "Date",
+          "9 novembre 1989"
+        ]
+      ]
+    },
+    {
+      "paquet": "Rome antique",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui correspond à cette description ?",
+      "indiceType": "Description",
+      "indice": "Le premier empereur romain",
+      "reponse": "Auguste",
+      "fiche": [
+        [
+          "Règne",
+          "27 av. J.-C. – 14"
+        ]
+      ]
+    },
+    {
+      "paquet": "Moyen Âge",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Dans quelle ville a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Jeanne d'Arc est brûlée",
+      "reponse": "Rouen",
+      "fiche": [
+        [
+          "Année",
+          "1431"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

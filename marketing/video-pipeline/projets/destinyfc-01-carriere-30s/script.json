@@ -1,0 +1,242 @@
+{
+  "titre": "Une carrière entière en 30 secondes",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements, fans de foot 16–35 ans. Montrer la promesse « de 16 ans à la retraite » en accéléré : contrat à Sochaux (D2) à 16 ans, finale de coupe gagnée à 19 ans avec Lens, transfert à Paris à 24 ans, retraite à 35 ans (2045) avec la fiche « Star mondiale », score 223. Âges et années cohérents (16 ans = 2026).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Rythme rapide, comme un montage accéléré. Chaque âge est annoncé avec punch, petite pause après. Fin interrogative, sourire dans la voix."
+  },
+  "ecranInitial": "partie",
+  "cartes": {
+    "mercato-paris": {
+      "genre": "mercato",
+      "tag": "🪟 MERCATO · 24 ANS",
+      "texte": "Votre nom commence à circuler sur le marché des transferts.",
+      "offres": [
+        {
+          "niveau": "elite",
+          "club": "Paris",
+          "couleurs": [
+            "#e52a1e",
+            "#1a4fb5"
+          ],
+          "pays": "france",
+          "detail": "4,2 M€/an · indemnité 38 M€"
+        },
+        {
+          "niveau": "elite",
+          "club": "Marseille",
+          "couleurs": [
+            "#1a4fb5",
+            "#f2f2f2"
+          ],
+          "pays": "france",
+          "detail": "3,6 M€/an · indemnité 31 M€"
+        }
+      ],
+      "bouton": "RESTER / RECONDUIRE"
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "50 k€",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Sochaux",
+        "couleurs": [
+          "#f5c400",
+          "#1a4fb5"
+        ]
+      },
+      "carte": "croissance"
+    },
+    "fiche": {
+      "nom": "Lucas Morel",
+      "clubs": "Paris · 2026–2045 · 19 saisons",
+      "score": 223
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "J'ai joué une carrière entière de footballeur, en trente secondes. De seize ans… à la retraite.",
+      "animation": "Texte géant mot à mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "joué",
+          "texte": "De *16 ans* à la retraite",
+          "fin": "retraite"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "debut",
+      "voix": "À seize ans, je signe mon tout premier contrat pro, à Sochaux.",
+      "animation": "Le téléphone monte sur l'écran de jeu ; zoom sur l'en-tête (16 ans · 2026, D2 Sochaux).",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "seize"
+        },
+        {
+          "type": "zoom",
+          "ancre": "signe",
+          "cible": "p-tete",
+          "echelle": 1.25,
+          "hauteur": 820
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "finale",
+      "voix": "Dix-neuf ans : finale de coupe… et je la gagne.",
+      "animation": "Moment décisif de la finale, option « Toro », la coupe.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Dix-neuf",
+          "cible": "aucun"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Dix-neuf",
+          "age": 19,
+          "annee": 2029,
+          "note": 68,
+          "argent": "0,9 M€",
+          "etoiles": 2,
+          "niveau": "d1",
+          "club": "Lens",
+          "couleurs": [
+            "#e52a1e",
+            "#f5c400"
+          ]
+        },
+        {
+          "type": "carte",
+          "ancre": "finale",
+          "id": "finale",
+          "texte": "Finale, 1-0 pour Lens, dix dernières minutes à n'en plus finir. Le coach vous somme de tuer le match — reste à trouver la manière."
+        },
+        {
+          "type": "option",
+          "ancre": "et",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "gagne",
+          "id": "finale-gagnee",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "paris",
+      "voix": "Vingt-quatre ans : Paris m'appelle. Je signe.",
+      "animation": "Mercato : Paris (Élite) ; tampon « Signé ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Vingt-quatre",
+          "id": "mercato-paris"
+        },
+        {
+          "type": "option",
+          "ancre": "Je",
+          "n": 1
+        },
+        {
+          "type": "joueur",
+          "ancre": "signe",
+          "age": 24,
+          "annee": 2034,
+          "note": 81,
+          "argent": "12 M€",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "Paris",
+          "couleurs": [
+            "#e52a1e",
+            "#1a4fb5"
+          ]
+        },
+        {
+          "type": "tampon",
+          "ancre": "signe",
+          "texte": "Signé",
+          "couleur": "menthe",
+          "duree": 1.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "retraite",
+      "voix": "Trente-cinq ans : la retraite. Score final… deux cent vingt-trois.",
+      "animation": "Fiche de fin de carrière, zoom sur le score.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "retraite",
+          "nom": "fiche"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Score",
+          "cible": "f-score",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Et toi, tu écrirais quelle légende ? Destiny FC, gratuit.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

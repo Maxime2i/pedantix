@@ -1,0 +1,430 @@
+{
+  "duree": 27.7,
+  "dureeVoix": 25.9,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.64,
+      "fin": 5.66
+    },
+    {
+      "id": "q1",
+      "debut": 5.66,
+      "finVoix": 9.98,
+      "fin": 10.64
+    },
+    {
+      "id": "q2",
+      "debut": 10.64,
+      "finVoix": 14.64,
+      "fin": 15.38
+    },
+    {
+      "id": "q3",
+      "debut": 15.38,
+      "finVoix": 19.6,
+      "fin": 20.36
+    },
+    {
+      "id": "appel",
+      "debut": 20.36,
+      "finVoix": 25.9,
+      "fin": 27.7
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dimanche",
+      "mot": "Dimanche",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.68
+    },
+    {
+      "texte": "culture",
+      "mot": "culture",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.96
+    },
+    {
+      "texte": "classique !",
+      "mot": "classique",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.7
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.36
+    },
+    {
+      "texte": "questions :",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.66
+    },
+    {
+      "texte": "essaie",
+      "mot": "essaie",
+      "scene": 0,
+      "debut": 2.94,
+      "fin": 3.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.16,
+      "fin": 3.3
+    },
+    {
+      "texte": "répondre",
+      "mot": "répondre",
+      "scene": 0,
+      "debut": 3.3,
+      "fin": 3.46
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 3.46,
+      "fin": 3.66
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 3.66,
+      "fin": 3.88
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 4.34,
+      "fin": 4.44
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 4.44,
+      "fin": 4.64
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.8
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.48
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.62
+    },
+    {
+      "texte": "peint",
+      "mot": "peint",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.76
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.76,
+      "fin": 6.9
+    },
+    {
+      "texte": "Joconde ?",
+      "mot": "Joconde",
+      "scene": 1,
+      "debut": 6.9,
+      "fin": 7.3
+    },
+    {
+      "texte": "Léonard",
+      "mot": "Léonard",
+      "scene": 1,
+      "debut": 9.08,
+      "fin": 9.56
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 9.56,
+      "fin": 9.7
+    },
+    {
+      "texte": "Vinci.",
+      "mot": "Vinci",
+      "scene": 1,
+      "debut": 9.7,
+      "fin": 9.98
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 10.64,
+      "fin": 11.04
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 11.52,
+      "fin": 11.62
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 11.62,
+      "fin": 11.72
+    },
+    {
+      "texte": "écrit",
+      "mot": "écrit",
+      "scene": 2,
+      "debut": 11.72,
+      "fin": 11.94
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 2,
+      "debut": 11.94,
+      "fin": 12.08
+    },
+    {
+      "texte": "Misérables ?",
+      "mot": "Misérables",
+      "scene": 2,
+      "debut": 12.08,
+      "fin": 12.62
+    },
+    {
+      "texte": "Victor",
+      "mot": "Victor",
+      "scene": 2,
+      "debut": 14.1,
+      "fin": 14.36
+    },
+    {
+      "texte": "Hugo.",
+      "mot": "Hugo",
+      "scene": 2,
+      "debut": 14.36,
+      "fin": 14.64
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 15.86
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 16.26,
+      "fin": 16.34
+    },
+    {
+      "texte": "roi",
+      "mot": "roi",
+      "scene": 3,
+      "debut": 16.34,
+      "fin": 16.64
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 16.64,
+      "fin": 16.72
+    },
+    {
+      "texte": "dieux",
+      "mot": "dieux",
+      "scene": 3,
+      "debut": 16.72,
+      "fin": 16.94
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 16.94,
+      "fin": 17.08
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 17.08,
+      "fin": 17.18
+    },
+    {
+      "texte": "mythologie",
+      "mot": "mythologie",
+      "scene": 3,
+      "debut": 17.18,
+      "fin": 17.6
+    },
+    {
+      "texte": "grecque ?",
+      "mot": "grecque",
+      "scene": 3,
+      "debut": 17.6,
+      "fin": 18.16
+    },
+    {
+      "texte": "Zeus.",
+      "mot": "Zeus",
+      "scene": 3,
+      "debut": 19.24,
+      "fin": 19.6
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 20.36,
+      "fin": 20.7
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.7,
+      "fin": 20.84
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 20.84,
+      "fin": 21.08
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 21.08,
+      "fin": 21.56
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.56,
+      "fin": 21.62
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 21.62,
+      "fin": 22.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.44,
+      "fin": 22.5
+    },
+    {
+      "texte": "rendez-vous",
+      "mot": "rendez-vous",
+      "scene": 4,
+      "debut": 22.5,
+      "fin": 22.88
+    },
+    {
+      "texte": "dimanche",
+      "mot": "dimanche",
+      "scene": 4,
+      "debut": 22.88,
+      "fin": 23.18
+    },
+    {
+      "texte": "prochain.",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 23.18,
+      "fin": 23.46
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 24.06,
+      "fin": 24.28
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 24.28,
+      "fin": 24.64
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 24.84,
+      "fin": 25.12
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 25.12,
+      "fin": 25.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 25.32,
+      "fin": 25.5
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 25.5,
+      "fin": 25.68
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 25.68,
+      "fin": 25.9
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "titre": "Banc d'essai de la bibliothèque",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 60
+  },
+  "objectif": "Test : chaque écran et chaque superposition de la bibliothèque.",
+  "voix": {
+    "instructions": "Test."
+  },
+  "ecranInitial": "accueil",
+  "scenes": [
+    {
+      "id": "accueil",
+      "voix": "Voici ton accueil avec tes cartes du jour, puis on appuie sur étudier.",
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Voici"
+        },
+        {
+          "type": "zoom",
+          "cible": "a-carte",
+          "echelle": 1.25,
+          "ancre": "cartes"
+        },
+        {
+          "type": "appui",
+          "cible": "a-etudier",
+          "ancre": "étudier"
+        }
+      ]
+    },
+    {
+      "id": "etude",
+      "voix": "Première carte. Réponse. Deuxième carte, la réponse, et c'est noté facile.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "etude",
+          "ancre": "Première"
+        },
+        {
+          "type": "zoom",
+          "cible": "carte",
+          "ancre": "Première"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Réponse"
+        },
+        {
+          "type": "carte",
+          "index": 1,
+          "ancre": "Deuxième"
+        },
+        {
+          "type": "reveler",
+          "ancre": "la"
+        },
+        {
+          "type": "zoom",
+          "cible": "boutons",
+          "ancre": "la"
+        },
+        {
+          "type": "noter",
+          "bouton": "facile",
+          "ancre": "facile"
+        }
+      ]
+    },
+    {
+      "id": "fin",
+      "voix": "Fin de séance avec un palier de trente jours.",
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "aucun",
+          "ancre": "Fin"
+        },
+        {
+          "type": "finSeance",
+          "donnees": {
+            "serie": 30,
+            "palier": 30
+          },
+          "ancre": "Fin"
+        }
+      ]
+    },
+    {
+      "id": "catalogue",
+      "voix": "Le catalogue, on cherche capitales, on ouvre le pack et on l'ajoute.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "catalogue",
+          "ancre": "catalogue"
+        },
+        {
+          "type": "saisir",
+          "texte": "capitales",
+          "ancre": "cherche",
+          "fin": "capitales"
+        },
+        {
+          "type": "appui",
+          "cible": "c-res-2",
+          "ancre": "ouvre"
+        },
+        {
+          "type": "ecran",
+          "nom": "deck",
+          "ancre": "pack"
+        },
+        {
+          "type": "ajouter",
+          "ancre": "l'ajoute"
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "voix": "Les statistiques et ta série de vingt-trois jours.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "stats",
+          "ancre": "statistiques"
+        },
+        {
+          "type": "zoom",
+          "cible": "s-serie",
+          "echelle": 1.3,
+          "ancre": "série"
+        }
+      ]
+    },
+    {
+      "id": "onboarding",
+      "voix": "L'onboarding : bienvenue, tes thèmes histoire et sport, ton rythme, ton rappel.",
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "aucun",
+          "ancre": "L'onboarding"
+        },
+        {
+          "type": "ecran",
+          "nom": "onboarding",
+          "ancre": "L'onboarding"
+        },
+        {
+          "type": "etape",
+          "n": 1,
+          "ancre": "tes"
+        },
+        {
+          "type": "choisir",
+          "valeur": "Histoire",
+          "ancre": "histoire"
+        },
+        {
+          "type": "choisir",
+          "valeur": "Sport",
+          "ancre": "sport"
+        },
+        {
+          "type": "etape",
+          "n": 2,
+          "ancre": "rythme"
+        },
+        {
+          "type": "choisir",
+          "valeur": 20,
+          "ancre": "rythme"
+        },
+        {
+          "type": "etape",
+          "n": 3,
+          "ancre": "rappel"
+        }
+      ]
+    },
+    {
+      "id": "widgets",
+      "voix": "Les widgets sur l'écran d'accueil du téléphone.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "springboard",
+          "ancre": "widgets"
+        },
+        {
+          "type": "zoom",
+          "cible": "w-resume",
+          "echelle": 1.2,
+          "ancre": "téléphone"
+        }
+      ]
+    },
+    {
+      "id": "notif",
+      "voix": "Le soir, une notification sur l'écran verrouillé.",
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "aucun",
+          "ancre": "Le"
+        },
+        {
+          "type": "ecran",
+          "nom": "verrouillage",
+          "ancre": "Le"
+        },
+        {
+          "type": "notif",
+          "titre": "Ta série de 23 jours est en jeu 🔥",
+          "texte": "34 cartes t’attendent. Quelques minutes suffisent.",
+          "ancre": "notification"
+        }
+      ]
+    },
+    {
+      "id": "profil",
+      "voix": "Le profil, en invité, avec l'algorithme personnalisé.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "profil",
+          "ancre": "profil"
+        },
+        {
+          "type": "zoom",
+          "cible": "p-algo",
+          "echelle": 1.3,
+          "ancre": "l'algorithme"
+        }
+      ]
+    },
+    {
+      "id": "plus",
+      "voix": "Réviser plus, revoir mes erreurs du jour.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "accueil",
+          "ancre": "Réviser"
+        },
+        {
+          "type": "feuille",
+          "nom": "reviserPlus",
+          "ancre": "plus"
+        },
+        {
+          "type": "appui",
+          "cible": "f-erreurs",
+          "ancre": "erreurs"
+        }
+      ]
+    },
+    {
+      "id": "superpositions",
+      "voix": "Un titre numéro un. Un tampon faux. Trois secondes de chrono. Deux cent mille questions.",
+      "actions": [
+        {
+          "type": "titre",
+          "numero": "1",
+          "texte": "Napoléon était petit ?",
+          "sous": "Idée reçue",
+          "ancre": "titre"
+        },
+        {
+          "type": "masquer",
+          "ancre": "tampon"
+        },
+        {
+          "type": "tampon",
+          "texte": "FAUX",
+          "couleur": "rouge",
+          "ancre": "faux"
+        },
+        {
+          "type": "chrono",
+          "secondes": 3,
+          "ancre": "Trois"
+        },
+        {
+          "type": "chiffre",
+          "valeur": 200000,
+          "prefixe": "+ de ",
+          "sous": "questions de culture G",
+          "ancre": "Deux"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Culture First, gratuit.",
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "États d'Océanie",
+      "couleur": "#4DB6A8",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Australie",
+      "reponse": "Canberra",
+      "fiche": [
+        [
+          "Continent",
+          "Océanie"
+        ],
+        [
+          "Langue",
+          "Anglais"
+        ]
+      ]
+    },
+    {
+      "paquet": "Grands peintres",
+      "theme": "Culture classique",
+      "compteurs": [
+        11,
+        8,
+        34
+      ],
+      "question": "Qui a peint ce tableau ?",
+      "indiceType": "Tableau",
+      "indice": "La Jeune Fille à la perle",
+      "reponse": "Johannes Vermeer",
+      "fiche": [
+        [
+          "Date",
+          "vers 1665"
+        ],
+        [
+          "Musée",
+          "Mauritshuis"
+        ]
+      ],
+      "intervalles": {
+        "encore": "1 min",
+        "difficile": "6 min",
+        "correct": "10 min",
+        "facile": "4 j"
+      }
+    }
+  ]
+}

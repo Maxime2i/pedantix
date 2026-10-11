@@ -1,0 +1,402 @@
+{
+  "duree": 20.62,
+  "dureeVoix": 18.82,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 4.08,
+      "fin": 4.44
+    },
+    {
+      "id": "countdown",
+      "debut": 4.44,
+      "finVoix": 8.74,
+      "fin": 9.54
+    },
+    {
+      "id": "choice",
+      "debut": 9.54,
+      "finVoix": 11.66,
+      "fin": 11.96
+    },
+    {
+      "id": "pressure",
+      "debut": 11.96,
+      "finVoix": 14.72,
+      "fin": 15.32
+    },
+    {
+      "id": "cta",
+      "debut": 15.32,
+      "finVoix": 18.82,
+      "fin": 20.62
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Summer",
+      "mot": "Summer",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "transfer",
+      "mot": "transfer",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.84
+    },
+    {
+      "texte": "window.",
+      "mot": "window",
+      "scene": 0,
+      "debut": 0.84,
+      "fin": 1.12
+    },
+    {
+      "texte": "Three",
+      "mot": "Three",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.84
+    },
+    {
+      "texte": "clubs",
+      "mot": "clubs",
+      "scene": 0,
+      "debut": 1.84,
+      "fin": 2.14
+    },
+    {
+      "texte": "want",
+      "mot": "want",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.38
+    },
+    {
+      "texte": "you,",
+      "mot": "you",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.56
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 0,
+      "debut": 2.56,
+      "fin": 2.76
+    },
+    {
+      "texte": "you've",
+      "mot": "you've",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 2.9
+    },
+    {
+      "texte": "got",
+      "mot": "got",
+      "scene": 0,
+      "debut": 2.9,
+      "fin": 3.02
+    },
+    {
+      "texte": "three",
+      "mot": "three",
+      "scene": 0,
+      "debut": 3.02,
+      "fin": 3.3
+    },
+    {
+      "texte": "seconds",
+      "mot": "seconds",
+      "scene": 0,
+      "debut": 3.3,
+      "fin": 3.7
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 0,
+      "debut": 3.7,
+      "fin": 3.9
+    },
+    {
+      "texte": "choose.",
+      "mot": "choose",
+      "scene": 0,
+      "debut": 3.9,
+      "fin": 4.08
+    },
+    {
+      "texte": "United,",
+      "mot": "United",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.7
+    },
+    {
+      "texte": "Brighton",
+      "mot": "Brighton",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.46
+    },
+    {
+      "texte": "or",
+      "mot": "or",
+      "scene": 1,
+      "debut": 5.64,
+      "fin": 5.7
+    },
+    {
+      "texte": "City?",
+      "mot": "City",
+      "scene": 1,
+      "debut": 5.7,
+      "fin": 5.92
+    },
+    {
+      "texte": "Three…",
+      "mot": "Three",
+      "scene": 1,
+      "debut": 6.5,
+      "fin": 6.98
+    },
+    {
+      "texte": "two…",
+      "mot": "two",
+      "scene": 1,
+      "debut": 7.54,
+      "fin": 7.8
+    },
+    {
+      "texte": "one…",
+      "mot": "one",
+      "scene": 1,
+      "debut": 8.52,
+      "fin": 8.74
+    },
+    {
+      "texte": "Me?",
+      "mot": "Me",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.8
+    },
+    {
+      "texte": "I'm",
+      "mot": "I'm",
+      "scene": 2,
+      "debut": 10.08,
+      "fin": 10.22
+    },
+    {
+      "texte": "off",
+      "mot": "off",
+      "scene": 2,
+      "debut": 10.22,
+      "fin": 10.36
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 2,
+      "debut": 10.36,
+      "fin": 10.46
+    },
+    {
+      "texte": "United.",
+      "mot": "United",
+      "scene": 2,
+      "debut": 10.46,
+      "fin": 10.64
+    },
+    {
+      "texte": "Signed.",
+      "mot": "Signed",
+      "scene": 2,
+      "debut": 11.34,
+      "fin": 11.66
+    },
+    {
+      "texte": "New",
+      "mot": "New",
+      "scene": 3,
+      "debut": 11.96,
+      "fin": 12.18
+    },
+    {
+      "texte": "club,",
+      "mot": "club",
+      "scene": 3,
+      "debut": 12.18,
+      "fin": 12.48
+    },
+    {
+      "texte": "more",
+      "mot": "more",
+      "scene": 3,
+      "debut": 12.7,
+      "fin": 12.88
+    },
+    {
+      "texte": "money…",
+      "mot": "money",
+      "scene": 3,
+      "debut": 12.88,
+      "fin": 13.22
+    },
+    {
+      "texte": "but",
+      "mot": "but",
+      "scene": 3,
+      "debut": 13.4,
+      "fin": 13.5
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 13.5,
+      "fin": 13.68
+    },
+    {
+      "texte": "whole",
+      "mot": "whole",
+      "scene": 3,
+      "debut": 13.68,
+      "fin": 13.96
+    },
+    {
+      "texte": "lot",
+      "mot": "lot",
+      "scene": 3,
+      "debut": 13.96,
+      "fin": 14.28
+    },
+    {
+      "texte": "more",
+      "mot": "more",
+      "scene": 3,
+      "debut": 14.28,
+      "fin": 14.42
+    },
+    {
+      "texte": "pressure.",
+      "mot": "pressure",
+      "scene": 3,
+      "debut": 14.42,
+      "fin": 14.72
+    },
+    {
+      "texte": "Where",
+      "mot": "Where",
+      "scene": 4,
+      "debut": 15.32,
+      "fin": 15.52
+    },
+    {
+      "texte": "would",
+      "mot": "would",
+      "scene": 4,
+      "debut": 15.52,
+      "fin": 15.64
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 4,
+      "debut": 15.64,
+      "fin": 15.76
+    },
+    {
+      "texte": "have",
+      "mot": "have",
+      "scene": 4,
+      "debut": 15.76,
+      "fin": 15.86
+    },
+    {
+      "texte": "signed?",
+      "mot": "signed",
+      "scene": 4,
+      "debut": 15.86,
+      "fin": 16.08
+    },
+    {
+      "texte": "Tell",
+      "mot": "Tell",
+      "scene": 4,
+      "debut": 16.42,
+      "fin": 16.5
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 4,
+      "debut": 16.5,
+      "fin": 16.6
+    },
+    {
+      "texte": "in",
+      "mot": "in",
+      "scene": 4,
+      "debut": 16.6,
+      "fin": 16.68
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 4,
+      "debut": 16.68,
+      "fin": 16.72
+    },
+    {
+      "texte": "comments.",
+      "mot": "comments",
+      "scene": 4,
+      "debut": 16.72,
+      "fin": 16.94
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 17.4,
+      "fin": 17.78
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 17.78,
+      "fin": 18.08
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 4,
+      "debut": 18.3,
+      "fin": 18.54
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 4,
+      "debut": 18.54,
+      "fin": 18.66
+    },
+    {
+      "texte": "play.",
+      "mot": "play",
+      "scene": 4,
+      "debut": 18.66,
+      "fin": 18.82
+    }
+  ]
+}

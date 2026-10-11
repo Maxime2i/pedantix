@@ -1,0 +1,152 @@
+{
+  "titre": "La plus longue frontière de la France",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, rythmé et complice. Vraie question, les mauvaises réponses dites comme des évidences, révélation surprise sur « le Brésil ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "question",
+      "voix": "Avec quel pays la France partage-t-elle sa plus longue frontière ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "monde",
+          "ancre": "Avec",
+          "titre": "La plus longue frontière de la France ?",
+          "vue": {
+            "pays": "France",
+            "marge": 1.2
+          }
+        },
+        {
+          "type": "surligner",
+          "ancre": "France",
+          "pays": [
+            "France"
+          ],
+          "couleur": "bleu"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Avec",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "rate",
+      "voix": "L'Espagne ? La Belgique ? Raté, ce n'est même pas en Europe.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "surligner",
+          "ancre": "L'Espagne",
+          "pays": [
+            "Spain"
+          ],
+          "couleur": "rouge"
+        },
+        {
+          "type": "surligner",
+          "ancre": "Belgique",
+          "pays": [
+            "Belgium"
+          ],
+          "couleur": "rouge"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Raté",
+          "texte": "RATÉ",
+          "couleur": "rouge"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "bresil",
+      "voix": "C'est le Brésil, grâce à la Guyane.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "C'est",
+          "vue": {
+            "centre": [
+              -56,
+              0
+            ],
+            "largeur": 40
+          }
+        },
+        {
+          "type": "surligner",
+          "ancre": "Brésil",
+          "pays": [
+            "Brazil"
+          ],
+          "couleur": "or"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "Guyane",
+          "nom": "Brésil"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "km",
+      "voix": "Environ sept cent trente kilomètres de frontière, plus qu'avec l'Espagne ou la Belgique.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "sept",
+          "texte": "730 KM",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

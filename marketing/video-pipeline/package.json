@@ -1,0 +1,12 @@
+{
+  "name": "video-pipeline",
+  "private": true,
+  "type": "module",
+  "description": "Pipeline de vidéos marketing courtes : script → voix → timings → animation HTML → rendu → montage.",
+  "scripts": {
+    "video": "node pipeline/run.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^25.13.0"
+  }
+}

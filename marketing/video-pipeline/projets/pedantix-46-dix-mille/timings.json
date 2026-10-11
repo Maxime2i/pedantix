@@ -1,0 +1,359 @@
+{
+  "duree": 16.7,
+  "dureeVoix": 14.9,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 1.76,
+      "fin": 2.3
+    },
+    {
+      "id": "liste",
+      "debut": 2.3,
+      "finVoix": 4.92,
+      "fin": 5.3
+    },
+    {
+      "id": "pioche",
+      "debut": 5.3,
+      "finVoix": 7.54,
+      "fin": 8.06
+    },
+    {
+      "id": "themes",
+      "debut": 8.06,
+      "finVoix": 10.9,
+      "fin": 11.32
+    },
+    {
+      "id": "rythme",
+      "debut": 11.32,
+      "finVoix": 13.08,
+      "fin": 13.56
+    },
+    {
+      "id": "appel",
+      "debut": 13.56,
+      "finVoix": 14.9,
+      "fin": 16.7
+    }
+  ],
+  "mots": [
+    {
+      "texte": "D'où",
+      "mot": "D'où",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "viennent",
+      "mot": "viennent",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.68
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.82
+    },
+    {
+      "texte": "pages",
+      "mot": "pages",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.04
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.16
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.34
+    },
+    {
+      "texte": "jeu ?",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.76
+    },
+    {
+      "texte": "Wikipédia",
+      "mot": "Wikipédia",
+      "scene": 1,
+      "debut": 2.3,
+      "fin": 2.74
+    },
+    {
+      "texte": "tient",
+      "mot": "tient",
+      "scene": 1,
+      "debut": 2.74,
+      "fin": 2.9
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 2.9,
+      "fin": 3.06
+    },
+    {
+      "texte": "liste",
+      "mot": "liste",
+      "scene": 1,
+      "debut": 3.06,
+      "fin": 3.3
+    },
+    {
+      "texte": "d'environ",
+      "mot": "d'environ",
+      "scene": 1,
+      "debut": 3.3,
+      "fin": 3.573
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 1,
+      "debut": 3.573,
+      "fin": 3.847
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 3.847,
+      "fin": 4.12
+    },
+    {
+      "texte": "articles",
+      "mot": "articles",
+      "scene": 1,
+      "debut": 4.12,
+      "fin": 4.4
+    },
+    {
+      "texte": "essentiels.",
+      "mot": "essentiels",
+      "scene": 1,
+      "debut": 4.4,
+      "fin": 4.92
+    },
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 2,
+      "debut": 5.3,
+      "fin": 5.5
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 2,
+      "debut": 5.5,
+      "fin": 5.7
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 5.7,
+      "fin": 5.9
+    },
+    {
+      "texte": "pioche",
+      "mot": "pioche",
+      "scene": 2,
+      "debut": 5.9,
+      "fin": 6.16
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 6.16,
+      "fin": 6.36
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 2,
+      "debut": 6.36,
+      "fin": 6.6
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 6.6,
+      "fin": 6.84
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 2,
+      "debut": 7.22,
+      "fin": 7.32
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 2,
+      "debut": 7.32,
+      "fin": 7.54
+    },
+    {
+      "texte": "Sciences,",
+      "mot": "Sciences",
+      "scene": 3,
+      "debut": 8.06,
+      "fin": 8.36
+    },
+    {
+      "texte": "histoire,",
+      "mot": "histoire",
+      "scene": 3,
+      "debut": 8.74,
+      "fin": 9.06
+    },
+    {
+      "texte": "géographie,",
+      "mot": "géographie",
+      "scene": 3,
+      "debut": 9.32,
+      "fin": 9.94
+    },
+    {
+      "texte": "arts,",
+      "mot": "arts",
+      "scene": 3,
+      "debut": 10.18,
+      "fin": 10.32
+    },
+    {
+      "texte": "personnalités…",
+      "mot": "personnalités",
+      "scene": 3,
+      "debut": 10.42,
+      "fin": 10.9
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 4,
+      "debut": 11.32,
+      "fin": 11.54
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 4,
+      "debut": 11.54,
+      "fin": 11.64
+    },
+    {
+      "texte": "rythme,",
+      "mot": "rythme",
+      "scene": 4,
+      "debut": 11.64,
+      "fin": 11.92
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 4,
+      "debut": 12.04,
+      "fin": 12.2
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 4,
+      "debut": 12.2,
+      "fin": 12.24
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 12.24,
+      "fin": 12.26
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 12.26,
+      "fin": 12.4
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 4,
+      "debut": 12.4,
+      "fin": 12.5
+    },
+    {
+      "texte": "vingt-sept",
+      "mot": "vingt-sept",
+      "scene": 4,
+      "debut": 12.5,
+      "fin": 12.86
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 4,
+      "debut": 12.86,
+      "fin": 13.08
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 13.56,
+      "fin": 14.0
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 14.28,
+      "fin": 14.54
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 14.54,
+      "fin": 14.66
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 14.66,
+      "fin": 14.74
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 14.74,
+      "fin": 14.9
+    }
+  ]
+}

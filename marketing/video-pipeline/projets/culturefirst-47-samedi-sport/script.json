@@ -1,0 +1,187 @@
+{
+  "titre": "Samedi sport",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Samedi sport ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Samedi",
+          "texte": "Samedi sport",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Samedi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : la première Coupe du monde gagnée par la France ? Mille neuf cent quatre-vingt-dix-huit.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : l'année du premier Tour de France ? Mille neuf cent trois.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : la ville des premiers Jeux olympiques modernes ? Athènes.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Athènes"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous samedi prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Football",
+      "theme": "Sport",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Première Coupe du monde gagnée par la France",
+      "reponse": "1998",
+      "fiche": [
+        [
+          "Finale",
+          "France 3 – 0 Brésil"
+        ]
+      ]
+    },
+    {
+      "paquet": "Cyclisme",
+      "theme": "Sport",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Premier Tour de France",
+      "reponse": "1903",
+      "fiche": []
+    },
+    {
+      "paquet": "Jeux olympiques",
+      "theme": "Sport",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Dans quelle ville a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Premiers Jeux olympiques modernes",
+      "reponse": "Athènes",
+      "fiche": [
+        [
+          "Année",
+          "1896"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

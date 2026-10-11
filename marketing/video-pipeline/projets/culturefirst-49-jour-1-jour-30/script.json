@@ -1,0 +1,253 @@
+{
+  "titre": "Jour 1 contre jour 30",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de comparaison, posé sur « Jour un », plus fier sur « Jour trente ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "j1",
+      "voix": "Jour un sur Culture First. Tout commence.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Jour"
+        },
+        {
+          "type": "tampon",
+          "ancre": "un",
+          "texte": "JOUR 1",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Jour",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "j1-detail",
+      "voix": "Dix nouvelles cartes, une série d'un jour, et deux premiers thèmes ajoutés.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Dix"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Dix",
+          "cible": "a-carte",
+          "echelle": 1.25
+        },
+        {
+          "type": "zoom",
+          "ancre": "série",
+          "cible": "a-serie",
+          "echelle": 1.6
+        },
+        {
+          "type": "zoom",
+          "ancre": "thèmes",
+          "cible": "a-themes",
+          "echelle": 1.25
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "j30",
+      "voix": "Jour trente.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Jour",
+          "nom": "accueil",
+          "donnees": {
+            "serie": 30,
+            "compteurs": [
+              10,
+              8,
+              34
+            ],
+            "etudiees": 0,
+            "themes": [
+              {
+                "nom": "Géographie",
+                "decks": 4,
+                "cartes": 312,
+                "compteurs": [
+                  5,
+                  3,
+                  14
+                ]
+              },
+              {
+                "nom": "Histoire",
+                "decks": 3,
+                "cartes": 186,
+                "compteurs": [
+                  4,
+                  2,
+                  9
+                ]
+              },
+              {
+                "nom": "Culture moderne",
+                "decks": 2,
+                "cartes": 140,
+                "compteurs": [
+                  3,
+                  2,
+                  7
+                ]
+              },
+              {
+                "nom": "Culture classique",
+                "decks": 2,
+                "cartes": 98,
+                "compteurs": [
+                  0,
+                  1,
+                  4
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "tampon",
+          "ancre": "trente",
+          "texte": "JOUR 30",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "j30-detail",
+      "voix": "Une série de trente jours, des centaines de cartes déjà vues, et des révisions qui s'espacent.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Une"
+        },
+        {
+          "type": "zoom",
+          "ancre": "série",
+          "cible": "a-serie",
+          "echelle": 1.6
+        },
+        {
+          "type": "zoom",
+          "ancre": "centaines",
+          "cible": "a-themes",
+          "echelle": 1.25
+        },
+        {
+          "type": "zoom",
+          "ancre": "révisions",
+          "cible": "a-carte",
+          "echelle": 1.25
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "difference",
+      "voix": "La différence ? Cinq minutes par jour, sans forcer.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "La",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Cinq",
+          "texte": "5 MIN / JOUR",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "ecranInitial": "accueil",
+  "ecrans": {
+    "accueil": {
+      "serie": 1,
+      "compteurs": [
+        10,
+        0,
+        0
+      ],
+      "etudiees": 0,
+      "themes": [
+        {
+          "nom": "Géographie",
+          "decks": 1,
+          "cartes": 25,
+          "compteurs": [
+            5,
+            0,
+            0
+          ]
+        },
+        {
+          "nom": "Histoire",
+          "decks": 1,
+          "cartes": 20,
+          "compteurs": [
+            5,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

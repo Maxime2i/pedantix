@@ -1,0 +1,195 @@
+{
+  "titre": "Moi le lundi vs moi le vendredi",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Humour : progression du joueur au fil de la semaine.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Fable",
+    "texte": [
+      "La fable est un court récit en vers ou en prose qui vise à illustrer de façon plaisante une leçon de vie. Elle se caractérise souvent par un récit fictif de composition naïve et allégorique mettant en scène des animaux qui parlent, des êtres humains ou d’autres entités à l'aspect animal, mais personnifiés. Une morale est exprimée à la fin ou au début de la fable. Celle-ci est parfois implicite, le lecteur doit la dégager lui-même."
+    ],
+    "titreMots": [
+      "fable"
+    ],
+    "revelations": {
+      "banane": [],
+      "voiture": [],
+      "fromage": []
+    },
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 12 septembre",
+    "accelere": [
+      "court",
+      "récit",
+      "vers",
+      "prose",
+      "illustrer",
+      "plaisante",
+      "leçon",
+      "vie",
+      "fictif",
+      "composition",
+      "naïve",
+      "allégorique",
+      "scène",
+      "animaux",
+      "parlent",
+      "êtres",
+      "humains",
+      "entités",
+      "aspect",
+      "animal",
+      "personnifiés",
+      "morale",
+      "exprimée",
+      "fin",
+      "début",
+      "implicite",
+      "lecteur",
+      "dégager"
+    ]
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "lundi",
+      "voix": "Moi, le lundi midi : je tape n'importe quoi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Moi,",
+          "texte": "Lundi midi",
+          "fin": "midi"
+        },
+        {
+          "type": "pose",
+          "ancre": "Moi,",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "absents",
+      "voix": "Banane. Voiture. Fromage. Rien.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Banane.",
+          "mode": "coin"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Banane.",
+          "mot": "banane"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Voiture.",
+          "mot": "voiture"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Fromage.",
+          "mot": "fromage"
+        },
+        {
+          "type": "pose",
+          "ancre": "Rien.",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "vendredi",
+      "voix": "Moi, le vendredi midi : la machine.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Moi,",
+          "mode": "avatar"
+        },
+        {
+          "type": "titre",
+          "ancre": "Moi,",
+          "texte": "Vendredi midi",
+          "fin": "midi"
+        },
+        {
+          "type": "pose",
+          "ancre": "machine.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "partie",
+      "voix": "Première phrase, gris, longueur des cases… trouvé en vingt-huit coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Première",
+          "mode": "coin"
+        },
+        {
+          "type": "accelere",
+          "ancre": "Première",
+          "fin": "cases…",
+          "essais": 24
+        },
+        {
+          "type": "envoyer",
+          "ancre": "trouvé",
+          "mot": "fable"
+        },
+        {
+          "type": "resultat",
+          "ancre": "vingt-huit",
+          "coups": 28,
+          "rang": 2
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "On progresse tous. Même moi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "On",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Même",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

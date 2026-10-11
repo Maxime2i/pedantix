@@ -1,0 +1,317 @@
+{
+  "duree": 18.06,
+  "dureeVoix": 16.26,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.08,
+      "fin": 2.56
+    },
+    {
+      "id": "page",
+      "debut": 2.56,
+      "finVoix": 4.72,
+      "fin": 5.08
+    },
+    {
+      "id": "fait",
+      "debut": 5.08,
+      "finVoix": 8.16,
+      "fin": 8.2
+    },
+    {
+      "id": "explication",
+      "debut": 8.2,
+      "finVoix": 10.3,
+      "fin": 11.2
+    },
+    {
+      "id": "cta",
+      "debut": 11.2,
+      "finVoix": 14.02,
+      "fin": 14.56
+    },
+    {
+      "id": "appel",
+      "debut": 14.56,
+      "finVoix": 16.26,
+      "fin": 18.06
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Hier,",
+      "mot": "Hier",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 0.8
+    },
+    {
+      "texte": "propre",
+      "mot": "propre",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.08
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.42
+    },
+    {
+      "texte": "m'a",
+      "mot": "m'a",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.58
+    },
+    {
+      "texte": "appris",
+      "mot": "appris",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.8
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 1.9
+    },
+    {
+      "texte": "truc.",
+      "mot": "truc",
+      "scene": 0,
+      "debut": 1.9,
+      "fin": 2.08
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 2.56,
+      "fin": 2.74
+    },
+    {
+      "texte": "page,",
+      "mot": "page",
+      "scene": 1,
+      "debut": 2.74,
+      "fin": 3.12
+    },
+    {
+      "texte": "c'était",
+      "mot": "c'était",
+      "scene": 1,
+      "debut": 3.36,
+      "fin": 4.04
+    },
+    {
+      "texte": "l'échidné.",
+      "mot": "l'échidné",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.72
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 2,
+      "debut": 5.08,
+      "fin": 5.46
+    },
+    {
+      "texte": "mammifère…",
+      "mot": "mammifère",
+      "scene": 2,
+      "debut": 5.46,
+      "fin": 6.04
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 6.04,
+      "fin": 6.96
+    },
+    {
+      "texte": "pond",
+      "mot": "pond",
+      "scene": 2,
+      "debut": 6.96,
+      "fin": 7.26
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 7.26,
+      "fin": 7.52
+    },
+    {
+      "texte": "œufs !",
+      "mot": "œufs",
+      "scene": 2,
+      "debut": 7.52,
+      "fin": 8.16
+    },
+    {
+      "texte": "Comme",
+      "mot": "Comme",
+      "scene": 3,
+      "debut": 8.2,
+      "fin": 8.52
+    },
+    {
+      "texte": "l'ornithorynque,",
+      "mot": "l'ornithorynque",
+      "scene": 3,
+      "debut": 8.52,
+      "fin": 8.99
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 8.99,
+      "fin": 9.46
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 9.46,
+      "fin": 9.58
+    },
+    {
+      "texte": "monotrème.",
+      "mot": "monotrème",
+      "scene": 3,
+      "debut": 9.58,
+      "fin": 10.3
+    },
+    {
+      "texte": "Chaque",
+      "mot": "Chaque",
+      "scene": 4,
+      "debut": 11.2,
+      "fin": 11.48
+    },
+    {
+      "texte": "midi,",
+      "mot": "midi",
+      "scene": 4,
+      "debut": 11.48,
+      "fin": 11.74
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 4,
+      "debut": 11.98,
+      "fin": 12.12
+    },
+    {
+      "texte": "page,",
+      "mot": "page",
+      "scene": 4,
+      "debut": 12.12,
+      "fin": 12.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 12.42,
+      "fin": 12.72
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 12.72,
+      "fin": 12.82
+    },
+    {
+      "texte": "deviens",
+      "mot": "deviens",
+      "scene": 4,
+      "debut": 12.82,
+      "fin": 13.12
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 4,
+      "debut": 13.12,
+      "fin": 13.38
+    },
+    {
+      "texte": "peu",
+      "mot": "peu",
+      "scene": 4,
+      "debut": 13.38,
+      "fin": 13.56
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 4,
+      "debut": 13.56,
+      "fin": 13.76
+    },
+    {
+      "texte": "pédant.",
+      "mot": "pédant",
+      "scene": 4,
+      "debut": 13.76,
+      "fin": 14.02
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.56,
+      "fin": 15.08
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.4,
+      "fin": 15.8
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.8,
+      "fin": 15.98
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 15.98,
+      "fin": 16.1
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.1,
+      "fin": 16.26
+    }
+  ]
+}

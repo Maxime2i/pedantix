@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Destiny FC · animation</title>
+<style>
+/*
+  Module d'app Destiny FC (1080 × 1920). Ouvrir avec ?projet=<dossier>.
+  Écrans repris du code de l'app publiée (destiny-eleven, branche main : HomeScreen,
+  SetupScreen, GameScreen, GrassBackground) et de captures réelles, textes exacts.
+  Avatar sticker de Maxime aux couleurs Destiny FC (avatar/), quatre dispositions.
+  Superpositions : bulle, titre, liste, chiffre, frise de carrière, tableau de score, typo, tampon.
+  Tout est piloté par renderAt(t). Doc : README.md.
+*/
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #111; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--fond); color: var(--encre); font-family: var(--texte); }
+#decor { position: absolute; inset: 0; background:
+  radial-gradient(70% 38% at 50% 8%, rgb(93 208 192 / .20), transparent 70%),
+  radial-gradient(60% 40% at 50% 62%, rgb(11 111 124 / .35), transparent 70%),
+  repeating-linear-gradient(108deg, rgb(255 255 255 / .035) 0 64px, transparent 64px 132px); }
+#fond { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; }
+#fond::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgb(6 46 53 / .6), rgb(6 46 53 / .15) 35%, rgb(6 46 53 / .25) 60%, rgb(6 46 53 / .85)); }
+.oswald { font-family: var(--titre); font-weight: 600; }
+
+/* Marque en haut */
+#brand { position: absolute; top: 175px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 24px; z-index: 6; }
+#brand img { width: 84px; height: 84px; border-radius: 21px; box-shadow: 0 8px 24px rgb(93 208 192 / .3); }
+#brand span { font-family: var(--titre); font-weight: 600; font-size: 66px; letter-spacing: .02em; text-transform: uppercase; color: #fff; }
+
+/* Téléphone : #camera (zooms) > #poste (disposition) > #phone */
+#camera { position: absolute; inset: 0; z-index: 3; transform-origin: 0 0; }
+#poste { position: absolute; inset: 0; transform-origin: 540px 380px; }
+#phone { position: absolute; left: 81px; top: 380px; background: #0B0B0C; padding: 26px; border-radius: 150px; box-shadow: 0 60px 140px rgb(0 0 0 / .65), 0 0 120px rgb(93 208 192 / .14), inset 0 0 0 6px #2B2B2E; }
+#viewport { width: calc(393px * 2.2); height: calc(852px * 2.2); border-radius: 124px; overflow: hidden; position: relative; }
+.screen { width: 393px; height: 852px; transform: scale(2.2); transform-origin: top left; color: #fff; font-family: var(--texte); font-weight: 400; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--a-bgDeep), var(--a-primaryDark) 35%, var(--a-bg) 68%, var(--a-bgDeep)); }
+.rayures { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.rayures i { position: absolute; top: -100px; bottom: -100px; width: 28px; background: #fff; transform: rotate(18deg); }
+.island { position: absolute; top: 11px; left: 50%; translate: -50% 0; width: 124px; height: 36px; border-radius: 20px; background: #000; z-index: 30; }
+.status { position: absolute; top: 0; left: 0; right: 0; z-index: 29; height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 6px 34px 0 46px; font-family: -apple-system, "SF Pro Text", sans-serif; font-size: 17px; font-weight: 600; color: #fff; }
+.status .bars { display: flex; gap: 6px; align-items: center; }
+.status b { display: inline-block; width: 27px; height: 13px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; }
+.status b::after { content: ""; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+.status .sig { display: flex; gap: 2px; align-items: flex-end; height: 12px; }
+.status .sig i { width: 3px; background: currentColor; border-radius: 1px; }
+.home-ind { position: absolute; bottom: 8px; left: 50%; translate: -50% 0; width: 140px; height: 5px; border-radius: 3px; background: #fff; z-index: 29; }
+.view { position: absolute; inset: 0; padding-top: 54px; visibility: hidden; overflow: hidden; }
+.tap { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgb(93 208 192 / .3); border: 2px solid rgb(255 255 255 / .9); pointer-events: none; display: none; z-index: 31; }
+.flag { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; vertical-align: -3px; flex: none; }
+.ballon { width: 13px; height: 13px; border-radius: 50%; display: inline-block; flex: none; box-shadow: inset -2px -3px 4px rgb(0 0 0 / .35), inset 2px 2px 3px rgb(255 255 255 / .45); }
+.semi { font-weight: 600; }
+
+/* Accueil (HomeScreen, version publiée) */
+.home { padding: 10px 16px 20px; display: flex; flex-direction: column; height: 100%; }
+.topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.topbar img { width: 36px; height: 36px; border-radius: 9px; }
+.topbar .brand { font-family: var(--titre); font-weight: 600; font-size: 18px; letter-spacing: .6px; text-transform: uppercase; flex: 1; }
+.chip { background: rgb(0 0 0 / .28); border-radius: 999px; padding: 4px 9px; font-weight: 600; font-size: 12px; }
+.help { width: 32px; height: 32px; border-radius: 16px; background: rgb(255 255 255 / .16); display: grid; place-items: center; font-weight: 600; font-size: 16px; }
+.hero { height: 240px; border-radius: 18px; overflow: hidden; border: 1px solid var(--a-mint); position: relative; margin-bottom: 12px; background: var(--a-primary); }
+.hero img, .hero .ov { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero .ov { background: rgb(6 46 53 / .5); }
+.hero .cp { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px; }
+.kick { font-weight: 600; color: var(--a-mint); font-size: 11px; letter-spacing: .6px; text-transform: uppercase; margin-bottom: 3px; }
+.hero h3 { margin: 0; font-family: var(--titre); font-weight: 600; font-size: 25px; line-height: 29px; }
+.hero p { margin: 3px 0 0; color: rgb(255 255 255 / .88); font-size: 13px; line-height: 18px; }
+.modes { display: flex; gap: 8px; margin-bottom: 12px; }
+.tile { flex: 1; background: var(--a-surface); border: 1px solid rgb(255 255 255 / .14); border-radius: 14px; overflow: hidden; }
+.tile img { width: 100%; height: 64px; object-fit: cover; display: block; }
+.tile .cp { padding: 8px; }
+.tile .k { font-weight: 600; color: var(--a-mint); font-size: 9px; line-height: 11px; min-height: 22px; letter-spacing: .4px; text-transform: uppercase; margin-bottom: 2px; }
+.tile .t { font-family: var(--titre); font-weight: 600; font-size: 13px; line-height: 16px; }
+.strip { display: flex; align-items: center; justify-content: space-between; background: var(--a-surface); border: 1px solid rgb(255 255 255 / .14); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; font-weight: 600; font-size: 13px; }
+.strip span:last-child { color: var(--a-mint); font-size: 22px; line-height: 22px; }
+.icons { display: flex; justify-content: space-between; }
+.icons div { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; font-weight: 600; font-size: 10px; color: rgb(255 255 255 / .88); }
+.icons div span:first-child { font-size: 22px; }
+.icons small { color: var(--a-mint); font-size: 9px; font-weight: 600; }
+.foot { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 6px; padding-bottom: 14px; }
+.foot span:first-child { color: rgb(255 255 255 / .7); font-size: 12px; }
+.foot span:last-child { font-weight: 600; font-size: 13px; color: rgb(255 255 255 / .9); text-decoration: underline; }
+
+/* Écrans de mise en place (SetupScreen) */
+.setup { padding: 10px 16px 0; height: 100%; display: flex; flex-direction: column; }
+.retour { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; font-weight: 600; font-size: 13px; }
+.jeton { border: 1px solid rgb(212 160 23 / .5); background: rgb(212 160 23 / .14); color: var(--a-gold); border-radius: 999px; padding: 5px 12px; font-weight: 600; font-size: 13px; }
+.setup h2 { margin: 0; font-family: var(--titre); font-weight: 600; font-size: 29px; line-height: 34px; text-transform: uppercase; }
+.setup .sub { color: rgb(255 255 255 / .82); font-size: 13.5px; margin: 6px 0 14px; }
+.fiche { border: 1px solid rgb(93 208 192 / .55); background: rgb(11 111 124 / .28); border-radius: 18px; padding: 14px; display: flex; gap: 12px; margin-bottom: 12px; }
+.fiche .av { width: 60px; height: 60px; border-radius: 13px; background: rgb(0 0 0 / .25); display: grid; place-items: center; font-size: 30px; flex: none; }
+.fiche .x { flex: 1; min-width: 0; }
+.fiche .nm { font-family: var(--titre); font-weight: 600; font-size: 18px; line-height: 24px; border-bottom: 1px solid rgb(255 255 255 / .2); padding-bottom: 2px; min-height: 27px; }
+.fiche .nm.vide { color: rgb(255 255 255 / .3); }
+.fiche .nm .curseur { display: inline-block; width: 2px; height: 18px; background: var(--a-mint); vertical-align: -3px; margin-left: 1px; }
+.fiche .hint { font-size: 9.5px; color: rgb(255 255 255 / .45); margin: 4px 0 3px; }
+.fiche .nat { font-size: 12px; display: flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+.attr { display: flex; align-items: center; gap: 10px; height: 21px; }
+.attr small { width: 26px; font-weight: 600; font-size: 9px; color: rgb(255 255 255 / .65); }
+.attr .tr { flex: 1; height: 4px; border-radius: 2px; background: rgb(0 0 0 / .3); position: relative; }
+.attr .tr i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; background: var(--a-mint); min-width: 4px; }
+.attr b { width: 24px; text-align: right; font-weight: 600; font-size: 12px; }
+.champ { display: flex; align-items: center; justify-content: space-between; background: rgb(4 30 36 / .55); border: 1px solid rgb(255 255 255 / .08); border-radius: 14px; height: 52px; padding: 0 14px; margin-bottom: 9px; font-size: 13.5px; }
+.champ .l { color: rgb(255 255 255 / .82); font-weight: 600; }
+.champ .v { display: flex; align-items: center; gap: 7px; font-weight: 600; }
+.champ .v.vide { color: var(--a-mint); }
+.champ .v em { font-style: normal; color: rgb(255 255 255 / .6); font-size: 16px; }
+.champ.dim { opacity: .55; }
+.champ.dim .v { color: var(--a-gold); }
+.primaire { background: var(--a-primary); border-radius: 12px; height: 48px; display: grid; place-items: center; font-weight: 600; font-size: 14px; margin-top: auto; margin-bottom: 34px; }
+.etoiles { color: var(--a-gold); font-weight: 600; font-size: 14px; margin: 4px 0 12px; }
+.club { background: var(--a-surface); border: 1px solid rgb(255 255 255 / .1); border-radius: 16px; height: 96px; display: flex; align-items: center; gap: 8px; padding: 0 18px; margin-bottom: 12px; }
+.club .bl { display: flex; flex-direction: column; gap: 9px; }
+.club .bl .ballon { width: 27px; height: 27px; }
+.club .nm { font-weight: 600; font-size: 17px; }
+.club .ps { display: flex; align-items: center; gap: 5px; font-size: 12.5px; color: rgb(255 255 255 / .8); margin-top: 4px; }
+
+/* Feuille de choix */
+#sheet-bg { position: absolute; inset: 0; background: rgb(0 0 0 / .55); z-index: 24; display: none; }
+#sheet { position: absolute; left: 0; right: 0; bottom: 0; background: var(--a-bg); border-radius: 20px 20px 0 0; z-index: 25; display: none; flex-direction: column; padding: 8px 16px 30px; }
+#sheet .grab { width: 40px; height: 4px; border-radius: 2px; background: rgb(255 255 255 / .3); align-self: center; margin-bottom: 14px; }
+#sheet h4 { margin: 0 0 14px; font-family: var(--titre); font-weight: 600; font-size: 21px; text-transform: uppercase; }
+.opt-f { background: var(--a-surface); border: 1px solid rgb(255 255 255 / .14); border-radius: 14px; padding: 12px 14px; display: flex; gap: 14px; align-items: center; margin-bottom: 9px; }
+.opt-f .ic { font-size: 22px; width: 30px; text-align: center; flex: none; }
+.opt-f .flag { width: 30px; height: 30px; }
+.opt-f b { display: block; font-weight: 600; font-size: 16px; }
+.opt-f small { display: block; font-size: 11.5px; line-height: 16px; color: rgb(255 255 255 / .8); margin-top: 2px; }
+.opt-f.on { border-color: var(--a-mint); background: rgb(93 208 192 / .16); }
+
+/* Partie (GameScreen) */
+.jeu { padding: 8px 12px 8px; height: 100%; display: flex; flex-direction: column; }
+.dcard { background: var(--a-surface); border: 1px solid rgb(255 255 255 / .12); border-radius: 16px; padding: 16px; position: relative; overflow: hidden; }
+.tete { padding: 12px; margin-bottom: 6px; }
+.tete .r1 { display: flex; justify-content: space-between; align-items: center; }
+.tete .nm { display: flex; align-items: center; gap: 6px; font-family: var(--titre); font-weight: 600; font-size: 18px; }
+.tete .nm .flag { width: 20px; height: 20px; }
+.tete .btn { background: rgb(255 255 255 / .14); border-radius: 8px; padding: 6px 10px; font-weight: 600; font-size: 12px; }
+.tete .age { color: rgb(255 255 255 / .6); font-size: 12px; margin-top: 2px; }
+.tete .cl { display: flex; align-items: center; gap: 5px; margin-top: 4px; font-size: 13px; color: rgb(255 255 255 / .85); }
+.niv { border-radius: 6px; padding: 2px 6px; font-weight: 600; font-size: 10px; color: #fff; }
+.pills { display: flex; gap: 6px; margin: 10px 0 4px; align-items: center; }
+.pill { background: rgb(255 255 255 / .1); border-radius: 999px; padding: 4px 10px; font-weight: 600; font-size: 12px; }
+.pill.or { background: rgb(212 160 23 / .18); color: var(--a-gold); }
+.pill.prof { margin-left: auto; background: rgb(255 255 255 / .16); width: 34px; height: 26px; padding: 0; display: grid; place-items: center; }
+.jauges { display: flex; gap: 8px; margin-top: 10px; }
+.jauges div { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.jauges small { font-weight: 600; font-size: 9px; color: rgb(255 255 255 / .6); }
+.jauges .tr { height: 6px; background: rgb(0 0 0 / .3); border-radius: 3px; overflow: hidden; }
+.jauges .tr i { display: block; height: 100%; border-radius: 3px; }
+.jauges .tr.flash { box-shadow: 0 0 0 1.5px rgb(255 255 255 / .8); }
+.aire { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 14px 0; position: relative; }
+.carte { will-change: transform; }
+.carte.great { border-left: 4px solid var(--a-great); } .carte.bad { border-left: 4px solid #C1473B; }
+.tag { font-weight: 600; color: var(--a-mint); font-size: 12px; margin-bottom: 10px; letter-spacing: .3px; text-transform: uppercase; }
+.carte h3 { margin: 0 0 8px; font-family: var(--titre); font-weight: 600; font-size: 22px; text-transform: uppercase; line-height: 28px; }
+.corps { color: rgb(255 255 255 / .92); font-size: 15px; line-height: 22px; }
+.une { font-style: italic; color: rgb(255 255 255 / .7); font-size: 14px; line-height: 20px; margin-bottom: 12px; }
+.opts { margin-top: 12px; }
+.opt { background: rgb(255 255 255 / .06); border: 1px solid rgb(255 255 255 / .14); border-radius: 12px; padding: 14px; margin-bottom: 8px; font-weight: 600; font-size: 14px; line-height: 20px; }
+.opt.on { border-color: var(--a-mint); background: rgb(93 208 192 / .16); }
+.opt.off { opacity: .45; }
+.indice { display: inline-block; background: rgb(93 208 192 / .18); color: var(--a-mint); border-radius: 999px; padding: 2px 8px; font-weight: 600; font-size: 10px; text-transform: uppercase; margin-bottom: 6px; }
+.effets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.effets span { border-radius: 999px; padding: 5px 10px; font-weight: 600; font-size: 12px; }
+.effets .good { background: rgb(93 208 192 / .18); color: #86efac; }
+.effets .bad { background: rgb(239 68 68 / .2); color: #fca5a5; }
+.effets .neutre { background: rgb(255 255 255 / .12); color: #bfdbfe; }
+.continuer { margin-top: 16px; background: var(--a-primary); border-radius: 12px; padding: 14px 0; text-align: center; font-weight: 600; font-size: 14px; letter-spacing: 1px; }
+.treve { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgb(93 208 192 / .18); }
+.treve b { font-weight: 600; font-size: 12px; letter-spacing: .3px; text-transform: uppercase; }
+.treve span { color: var(--a-inkMuted); font-size: 12px; }
+.treve em { font-style: normal; font-weight: 600; font-size: 11px; padding: 2px 7px; border-radius: 8px; }
+.treve em.bad { background: rgb(239 68 68 / .18); color: #f87171; } .treve em.good { background: rgb(34 197 94 / .18); color: #4ade80; } .treve em.neutre { background: rgb(255 255 255 / .1); color: #ddd; }
+.recap { display: flex; gap: 6px; margin-bottom: 12px; }
+.recap div { flex: 1; border: 1px solid rgb(255 255 255 / .15); border-radius: 10px; padding: 8px 0; text-align: center; }
+.recap b { display: block; font-family: var(--titre); font-weight: 600; font-size: 18px; }
+.recap small { display: block; font-size: 9px; color: rgb(255 255 255 / .6); margin-top: 2px; }
+.ligne { color: rgb(255 255 255 / .85); font-size: 13px; margin-bottom: 5px; line-height: 18px; }
+.offre { background: rgb(255 255 255 / .06); border: 1px solid rgb(255 255 255 / .14); border-radius: 12px; padding: 10px 14px; margin-bottom: 8px; font-weight: 600; font-size: 14px; line-height: 20px; }
+.offre .niv { display: inline-block; margin-bottom: 4px; background: rgb(255 255 255 / .1); }
+.offre .l { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.offre.on { border-color: var(--a-mint); background: rgb(93 208 192 / .16); }
+.prep { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.prep .ic { font-size: 22px; }
+.prep .x { flex: 1; } .prep .x b { display: block; font-weight: 600; font-size: 14px; } .prep .x small { display: block; font-size: 11px; color: rgb(255 255 255 / .6); margin-top: 1px; }
+.prep .pb { width: 34px; height: 34px; border-radius: 17px; background: var(--a-primary); display: grid; place-items: center; font-weight: 600; font-size: 20px; }
+.prep .pb.off { opacity: .3; }
+.prep .v { width: 22px; text-align: center; font-weight: 600; font-size: 16px; }
+.points { font-weight: 600; color: var(--a-mint); font-size: 13px; margin: 4px 0 10px; }
+
+/* Fiche de fin de carrière */
+#v-fiche { background: linear-gradient(180deg, #061F24, #0A3A42 55%, #12402C); }
+#v-fiche .rayures { display: none; }
+.fiche-c { margin: 22px 16px 0; border: 2px solid var(--tier); border-radius: 24px; background: rgb(6 40 46 / .92); padding: 20px 18px 16px; }
+.fiche-c .h { display: flex; justify-content: space-between; align-items: center; }
+.fiche-c .h b { font-family: var(--titre); font-weight: 600; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--tier); }
+.fiche-c .h span { font-size: 12px; color: rgb(255 255 255 / .6); }
+.fiche-c h3 { margin: 6px 0 14px; font-family: var(--titre); font-weight: 600; font-size: 27px; }
+.fiche-c h4 { margin: 0 0 4px; font-family: var(--titre); font-weight: 600; font-size: 23px; }
+.fiche-c .l1 { font-size: 13px; color: rgb(255 255 255 / .75); display: flex; align-items: center; gap: 5px; }
+.fiche-c .l2 { font-size: 13px; color: #9FE5DA; margin-top: 2px; }
+.fiche-c .sc { font-weight: 600; font-size: 13px; color: var(--a-gold); margin-top: 2px; }
+.fiche-c .sn { font-family: var(--titre); font-weight: 600; font-style: italic; font-size: 22px; color: #E3C25A; margin: 18px 0 4px; }
+.fiche-c .gr { font-size: 12px; color: rgb(255 255 255 / .45); line-height: 22px; }
+.fiche-c .rc { font-size: 12.5px; line-height: 19px; color: rgb(255 255 255 / .82); margin-top: 6px; }
+.fiche-c .st { font-family: var(--titre); font-weight: 600; font-size: 15px; color: var(--a-mint); margin: 16px 0 8px; }
+.fiche-c .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.fiche-c .grid div { background: rgb(255 255 255 / .08); border-radius: 10px; text-align: center; padding: 8px 0; }
+.fiche-c .grid b { display: block; font-family: var(--titre); font-weight: 600; font-size: 16px; }
+.fiche-c .grid small { font-size: 10px; color: rgb(255 255 255 / .5); }
+.fiche-c .ch { display: flex; flex-wrap: wrap; gap: 6px; }
+.fiche-c .ch span { background: rgb(255 255 255 / .1); border-radius: 999px; padding: 5px 10px; font-weight: 600; font-size: 11.5px; }
+.fiche-c .ft { font-family: var(--titre); font-weight: 600; font-size: 12px; letter-spacing: 3px; color: var(--a-mint); margin-top: 16px; }
+.discours { margin: 14px 16px 0; border: 1px solid rgb(212 160 23 / .45); border-radius: 18px; background: rgb(212 160 23 / .08); padding: 14px 16px; }
+.discours b { display: block; font-family: var(--titre); font-weight: 600; font-size: 15px; color: var(--a-gold); margin-bottom: 6px; }
+.discours span { font-size: 13px; font-style: italic; line-height: 19px; color: rgb(255 255 255 / .85); }
+
+/* Verrouillage + notification */
+#v-verrouillage { background: linear-gradient(160deg, #0B4650, #062E35 55%, #02171B); }
+.lock { text-align: center; padding-top: 50px; }
+.lock small { font-family: -apple-system, sans-serif; font-size: 20px; font-weight: 600; opacity: .9; }
+.lock b { display: block; font-family: -apple-system, sans-serif; font-size: 92px; font-weight: 700; letter-spacing: -2px; line-height: 1; margin-top: 4px; }
+.notif { position: absolute; left: 8px; right: 8px; z-index: 26; background: rgb(250 248 245 / .97); border-radius: 22px; padding: 12px 14px; display: none; gap: 10px; align-items: center; box-shadow: 0 10px 30px rgb(0 0 0 / .28); color: #1c1c1e; font-family: -apple-system, "SF Pro Text", sans-serif; }
+.notif img { width: 38px; height: 38px; border-radius: 9px; flex: none; }
+.notif .nh { display: flex; justify-content: space-between; font-size: 12px; color: #6d6d72; }
+.notif b { display: block; font-size: 15px; margin-top: 1px; }
+.notif span.nb { font-size: 15px; color: #3c3c43; line-height: 1.25; display: block; }
+
+/* Avatar (poses PNG 1024², même cadrage) */
+#avatar { position: absolute; left: 0; top: 0; z-index: 4; transform-origin: 50% 100%; pointer-events: none; }
+#avatar img { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Superpositions (vidéo) */
+#bulle { position: absolute; z-index: 6; background: #fff; color: #062E35; border-radius: 48px; padding: 26px 46px; font-weight: 800; font-size: 60px; line-height: 1.12; box-shadow: 0 24px 60px rgb(0 0 0 / .45); display: none; text-align: center; max-width: 760px; }
+#bulle::after { content: ""; position: absolute; left: var(--queue, 50%); bottom: -20px; width: 44px; height: 44px; margin-left: -22px; background: inherit; rotate: 45deg; border-radius: 6px; }
+#bulle.pensee { border-radius: 70px; }
+#bulle.pensee::after { width: 34px; height: 34px; border-radius: 50%; bottom: -46px; rotate: 0deg; box-shadow: -26px 34px 0 -6px #fff; }
+#titre, #liste, #frise { position: absolute; left: 70px; right: 140px; top: 330px; z-index: 5; background: var(--fond2); color: #fff; border: 2px solid rgb(255 255 255 / .08); border-radius: 56px; padding: 64px 70px 70px; box-shadow: 0 40px 90px rgb(0 0 0 / .55); display: none; flex-direction: column; align-items: center; gap: 26px; text-align: center; }
+#titre::before, #liste::before, #frise::before { content: ""; position: absolute; left: 70px; right: 70px; top: 0; height: 8px; border-radius: 0 0 8px 8px; background: var(--accent); }
+#titre .num { min-width: 150px; height: 150px; padding: 0 30px; border-radius: 75px; background: var(--a-primary); color: #fff; display: grid; place-items: center; font-family: var(--titre); font-weight: 600; font-size: 84px; }
+#titre h2, #liste h2, #frise h2 { margin: 0; font-family: var(--titre); font-weight: 600; font-size: 96px; line-height: 1.04; text-transform: uppercase; }
+#titre h2 em, #liste h2 em, #frise h2 em, #typo em { font-style: normal; color: var(--accent); }
+#titre p { margin: 0; font-size: 48px; font-weight: 600; color: var(--a-inkMuted); line-height: 1.2; }
+#liste { align-items: stretch; text-align: left; gap: 22px; }
+#liste h2 { font-size: 76px; text-align: center; margin-bottom: 10px; }
+#liste .pt { display: flex; gap: 26px; align-items: center; font-size: 50px; font-weight: 600; line-height: 1.15; }
+#liste .pt i { flex: none; width: 84px; height: 84px; border-radius: 42px; background: var(--a-primary); border: 3px solid var(--accent); color: #fff; display: grid; place-items: center; font-style: normal; font-family: var(--titre); font-weight: 600; font-size: 48px; }
+#frise { align-items: stretch; text-align: left; gap: 0; padding: 60px 64px 50px; }
+#frise h2 { font-size: 72px; text-align: center; margin-bottom: 30px; }
+#frise .et { display: flex; gap: 30px; align-items: center; position: relative; padding: 16px 0; }
+#frise .et .ag { flex: none; width: 150px; height: 150px; border-radius: 75px; background: var(--a-primary); border: 4px solid var(--accent); display: grid; place-items: center; font-family: var(--titre); font-weight: 600; font-size: 60px; line-height: 1; text-align: center; position: relative; z-index: 1; }
+#frise .et .ag small { display: block; font-family: var(--texte); font-size: 24px; font-weight: 600; color: var(--a-inkMuted); }
+#frise .et .tx b { display: block; font-family: var(--titre); font-weight: 600; font-size: 60px; line-height: 1.05; }
+#frise .et .tx span { display: flex; align-items: center; gap: 12px; font-size: 38px; font-weight: 600; color: var(--a-inkMuted); margin-top: 6px; }
+#frise .et .tx .niv { font-size: 30px; padding: 4px 14px; border-radius: 12px; }
+#frise .et::before { content: ""; position: absolute; left: 73px; top: -20px; bottom: -20px; width: 4px; background: rgb(93 208 192 / .35); }
+#frise .et:first-of-type::before { top: 50%; } #frise .et:last-child::before { bottom: 50%; }
+#chiffre { position: absolute; left: 70px; right: 140px; top: 520px; z-index: 5; display: none; flex-direction: column; align-items: center; gap: 10px; text-align: center; background: var(--fond2); border: 2px solid rgb(255 255 255 / .08); border-radius: 56px; padding: 50px 40px 60px; box-shadow: 0 40px 90px rgb(0 0 0 / .55); }
+#ch-n { font-family: var(--titre); font-weight: 600; font-size: 260px; line-height: 1; color: var(--accent); text-shadow: 0 20px 60px rgb(0 0 0 / .5); }
+#ch-n small { font-size: 120px; }
+#ch-sous { font-weight: 800; font-size: 62px; line-height: 1.1; color: #fff; }
+#tableau { position: absolute; left: 90px; right: 150px; top: 470px; z-index: 5; display: none; flex-direction: column; align-items: stretch; gap: 26px; background: var(--fond2); border-radius: 56px; padding: 44px 40px 50px; border: 2px solid rgb(255 255 255 / .08); box-shadow: 0 40px 90px rgb(0 0 0 / .55); }
+#tableau .k { font-weight: 800; font-size: 38px; color: var(--accent); letter-spacing: .06em; text-align: center; text-transform: uppercase; }
+#tableau .sc { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+#tableau .eq { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 14px; font-family: var(--titre); font-weight: 600; font-size: 50px; text-transform: uppercase; text-align: center; line-height: 1.05; }
+#tableau .eq .bl { display: flex; gap: 10px; } #tableau .eq .ballon { width: 46px; height: 46px; }
+#tableau .n { font-family: var(--titre); font-weight: 600; font-size: 170px; line-height: 1; min-width: 300px; text-align: center; }
+#tableau .mn { align-self: center; background: rgb(0 0 0 / .35); border-radius: 999px; padding: 10px 34px; font-weight: 800; font-size: 46px; font-variant-numeric: tabular-nums; }
+#tableau .s { font-weight: 600; font-size: 44px; color: var(--a-inkMuted); text-align: center; }
+#tampon { position: absolute; left: 500px; top: 760px; z-index: 7; translate: -50% -50%; border: 16px solid; border-radius: 34px; padding: 10px 50px; font-family: var(--titre); font-weight: 600; font-size: 150px; letter-spacing: .04em; text-transform: uppercase; display: none; white-space: nowrap; background: rgb(6 46 53 / .92); box-shadow: 0 30px 60px rgb(0 0 0 / .4); }
+#typo { position: absolute; inset: 0; z-index: 5; display: none; background: var(--fond); }
+#typo::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(108deg, rgb(255 255 255 / .035) 0 64px, transparent 64px 132px); }
+#ty-txt { position: absolute; left: 90px; right: 150px; top: 380px; font-family: var(--titre); font-weight: 600; font-size: 140px; line-height: 1.06; text-transform: uppercase; color: #fff; }
+#ty-txt span { display: inline-block; }
+#ty-sous { position: absolute; left: 90px; right: 150px; top: 1200px; font-weight: 600; font-size: 52px; line-height: 1.2; color: var(--a-inkMuted); }
+
+/* Sous-titres (zone sûre) */
+#subs { position: absolute; left: 150px; right: 150px; bottom: 395px; z-index: 8; display: flex; justify-content: center; align-items: flex-end; }
+#subs .grp { transform-origin: 50% 100%; background: var(--sousTitres); color: #fff; border-radius: 28px; padding: 18px 34px; font-weight: 800; font-size: 62px; line-height: 1.12; text-align: center; box-shadow: 0 20px 50px rgb(0 0 0 / .5); border: 2px solid rgb(93 208 192 / .18); }
+#subs .now { color: var(--accent); }
+
+/* Carte de fin */
+#end { position: absolute; inset: 0; z-index: 7; background: var(--fond); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding-bottom: 300px; }
+#end::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 38%, rgb(93 208 192 / .22), transparent 70%), repeating-linear-gradient(108deg, rgb(255 255 255 / .035) 0 64px, transparent 64px 132px); }
+#end > * { position: relative; }
+#end img.logo { width: 260px; height: 260px; border-radius: 60px; box-shadow: 0 30px 80px rgb(93 208 192 / .3); }
+#end h1 { margin: 0; font-family: var(--titre); font-weight: 600; font-size: 140px; letter-spacing: .02em; text-transform: uppercase; color: #fff; line-height: 1; }
+#end p { margin: 0; font-weight: 800; font-size: 76px; text-align: center; line-height: 1.04; letter-spacing: -0.02em; max-width: 800px; }
+#end p em { font-style: normal; color: var(--accent); }
+#end .detail { font-size: 46px; font-weight: 600; color: var(--a-inkMuted); text-align: center; max-width: 780px; }
+#end .pill { background: var(--a-primary); border: 3px solid var(--accent); color: #fff; border-radius: 999px; padding: 22px 48px; font-weight: 800; font-size: 46px; }
+#end-av { position: absolute !important; width: 560px; height: 560px; left: 260px; bottom: 300px; display: none; }
+#end.avec-av { padding-bottom: 700px; gap: 26px; }
+#end.avec-av img.logo { width: 190px; height: 190px; border-radius: 44px; }
+#end.avec-av h1 { font-size: 120px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="decor"></div>
+  <div id="fond"></div>
+  <div id="brand"><img data-logo alt=""><span>Destiny FC</span></div>
+  <div id="camera"><div id="poste"><div id="phone"><div id="viewport"><div class="screen" id="screen">
+    <div class="rayures" id="rayures"></div>
+    <div class="island"></div>
+    <div class="status" id="status"><span id="heure">19:42</span><span class="bars"><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i></span><b></b></span></div>
+    <div class="view" id="v-accueil"></div>
+    <div class="view" id="v-creation"></div>
+    <div class="view" id="v-clubs"></div>
+    <div class="view" id="v-partie"></div>
+    <div class="view" id="v-fiche"></div>
+    <div class="view" id="v-verrouillage"></div>
+    <div id="sheet-bg"></div><div id="sheet"></div>
+    <div class="notif" id="notif"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>DESTINY FC</span><span id="n-quand">maintenant</span></div><b id="n-titre"></b><span class="nb" id="n-texte"></span></div></div>
+    <div class="notif" id="notif2"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>DESTINY FC</span><span id="n2-quand">maintenant</span></div><b id="n2-titre"></b><span class="nb" id="n2-texte"></span></div></div>
+    <div class="tap" id="tap"></div>
+    <div class="home-ind" id="homeind"></div>
+  </div></div></div></div></div>
+  <div id="avatar"><img id="av-img" alt=""><img id="av-bouche" alt="" src="avatar/neutre-bouche-ouverte.png"></div>
+  <div id="bulle" data-texte></div>
+  <div id="titre"><div class="num" id="t-num" data-texte></div><h2 id="t-texte" data-texte></h2><p id="t-sous" data-texte></p></div>
+  <div id="liste"><h2 id="l-titre" data-texte></h2><div id="l-points" style="display:flex;flex-direction:column;gap:22px"></div></div>
+  <div id="frise"><h2 id="fz-titre" data-texte></h2><div id="fz-etapes"></div></div>
+  <div id="chiffre"><b id="ch-n" data-texte></b><span id="ch-sous" data-texte></span></div>
+  <div id="tableau"><div class="k" id="tb-k" data-texte></div><div class="sc"><div class="eq" id="tb-dom" data-texte></div><div class="n" id="tb-n" data-texte></div><div class="eq" id="tb-ext" data-texte></div></div><div class="mn" id="tb-mn" data-texte></div><div class="s" id="tb-s" data-texte></div></div>
+  <div id="tampon" data-texte></div>
+  <div id="typo"><div id="ty-txt" data-texte></div><div id="ty-sous" data-texte></div></div>
+  <div id="subs"></div>
+  <div id="end"><img class="logo" data-logo alt=""><h1>Destiny FC</h1><p id="promesse"></p><div class="detail" id="detail"></div><div class="pill" id="cta"></div><img id="end-av" alt=""></div>
+</div>
+<script type="module">
+import { appliquerCharte, back, camera, carteFin, chargerProjet, clamp, demarrer, ease, lastAction, lerp, sousTitres, transformCamera } from "/pipeline/scene.js";
+import * as D from "./demo.js";
+
+const { projet, script, timings, charte, tl } = await chargerProjet();
+const $ = (id) => document.getElementById(id);
+appliquerCharte(charte, $("stage"));
+// ---------- Langue (script.langue : "fr" par défaut, "en") ----------
+const EN = script.langue === "en";
+const TXT = {
+  fr: { carriere: "Carrière", reprendre: "Reprendre · {nom}", ecrire: "Écrire sa légende", reprendreCorps: "{age} ans, saison en cours · {club}",
+    corpsCarriere: "De 16 ans à la retraite : forme, mental et identité de jeu — chaque choix compte.", quotidien: "Rendez-vous quotidien", legendes: "Légendes", legendesT: "Légendes à réécrire",
+    amis: "Amis", amisT: "Défie tes amis", quetes: "Quêtes du jour", boutique: "Boutique", badges: "Badges", pantheon: "Panthéon", classement: "Classement", reglages: "Réglages",
+    stats: "{c} carrières · meilleur {b}", apropos: "À propos", retour: "Retour", creeTitre: "Crée ton joueur", creeSous: "Façonne son identité, dans l'ordre que tu veux.",
+    nouveau: "Nouveau joueur", nomHint: "Laisse vide pour un nom généré", choisir: "Choisir", aleatoire: "Tout aléatoire", choisirClub: "Choisir mon club",
+    clubsTitre: "Les clubs vous ont repéré", clubsSous: "Les recruteurs ont observé votre profil.", potentiel: "Potentiel estimé : {s}", accueil: "Accueil", age: "{age} ans · {annee}",
+    forme: "Forme", moral: "Moral", confiance: "Confiance", pression: "Pression", continuer: "CONTINUER", rester: "RESTER / RECONDUIRE", energie: "Énergie à répartir : {n} point(s)", lancer: "Lancer la saison",
+    carte: "Carte · {t}", trajectoire: "Trajectoire", signature: "Signature", statsF: "Statistiques", palmares: "Palmarès", distinctions: "Distinctions", discours: "Discours d'intronisation", score: "Score {s}",
+    minute: "{m}e", ans: "ans", lockDate: "samedi 10 octobre",
+    fin: { promesse: "De 16 ans à la retraite,<br>écris ta <em>légende</em>", detail: "Chaque choix compte", cta: "Gratuit · iPhone et Android" } },
+  en: { carriere: "Career", reprendre: "Resume · {nom}", ecrire: "Write your legend", reprendreCorps: "{age} years old, season in progress · {club}",
+    corpsCarriere: "From 16 to retirement: form, mind and play identity — every choice counts.", quotidien: "Daily Rendezvous", legendes: "Legends", legendesT: "Legends to rewrite",
+    amis: "Friends", amisT: "Challenge friends", quetes: "Daily quests", boutique: "Shop", badges: "Badges", pantheon: "Hall of Fame", classement: "Ranking", reglages: "Settings",
+    stats: "{c} careers · best {b}", apropos: "About", retour: "Back", creeTitre: "Create your player", creeSous: "Shape his identity, in any order you like.",
+    nouveau: "New player", nomHint: "Leave blank to auto-generate", choisir: "Choose", aleatoire: "Randomise all", choisirClub: "Choose my club",
+    clubsTitre: "Clubs have spotted you", clubsSous: "Scouts have been watching your profile.", potentiel: "Estimated potential: {s}", accueil: "Home", age: "{age} yrs · {annee}",
+    forme: "Form", moral: "Morale", confiance: "Confidence", pression: "Pressure", continuer: "CONTINUE", rester: "STAY / RENEW", energie: "Energy to spend: {n} point(s)", lancer: "Start the season",
+    carte: "Card · {t}", trajectoire: "Path", signature: "Signature", statsF: "Stats", palmares: "Honours", distinctions: "Awards", discours: "Hall of Fame speech", score: "Score {s}",
+    minute: "{m}'", ans: "yrs", lockDate: "Saturday, October 10",
+    fin: { promesse: "From 16 to retirement,<br>write your <em>legend</em>", detail: "Every choice counts", cta: "Free · iPhone & Android" } },
+}[EN ? "en" : "fr"];
+const T = (k, v = {}) => TXT[k].replace(/\{(\w+)\}/g, (_, x) => v[x] ?? "");
+const POSTES = EN ? D.POSTES_EN : D.POSTES, FEUILLES = EN ? D.FEUILLES_EN : D.FEUILLES, CHAMPS = EN ? D.CHAMPS_EN : D.CHAMPS;
+const NIVEAUX = EN ? { ...D.NIVEAUX, reg: ["Reg.", "regional"], elite: ["Elite", "elite"] } : D.NIVEAUX;
+function fusionL(a, b) { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === "object" && !Array.isArray(v) && a?.[k] && typeof a[k] === "object" && !Array.isArray(a[k]) ? fusionL(a[k], v) : v; return o; }
+const DEMO = EN ? fusionL(D.DEMO, D.DEMO_EN) : D.DEMO;
+if (EN) DEMO.clubs = { ...DEMO.clubs, liste: DEMO.clubs.liste.map((c) => ({ ...c, paysNom: D.PAYS_EN[c.paysNom] ?? c.paysNom })) };
+// L'avatar ne salue sur la carte de fin que s'il apparaît dans la vidéo (sinon forcer avec "avatarFin": true).
+const avatarVisible = (script.dispositionInitiale ?? "telephone") !== "telephone" || script.scenes.some((sc) => (sc.actions ?? []).some((a) => a.type === "disposition" && a.mode !== "telephone"));
+const fin = { ...TXT.fin, pose: null, ...script.fin };
+if (!avatarVisible && !script.avatarFin) fin.pose = null;
+$("promesse").innerHTML = fin.promesse;
+$("detail").innerHTML = fin.detail;
+$("detail").style.display = fin.detail ? "block" : "none";
+$("cta").textContent = fin.cta;
+$("rayures").innerHTML = Array.from({ length: 14 }, (_, i) => `<i style="left:${i * 48 - 80}px;opacity:${i % 2 ? 0.03 : 0.06}"></i>`).join("");
+
+// ---------- Données : démo par défaut < script.ecrans < donnees de l'action ecran ----------
+const fusion = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === "object" && !Array.isArray(v) && a?.[k] && typeof a[k] === "object" && !Array.isArray(a[k]) ? fusion(a[k], v) : v; return o; };
+const DATA = fusion(DEMO, script.ecrans ?? {});
+const CARTES = { ...DATA.cartes, ...(script.cartes ?? {}) };
+const fr = (x) => EN ? String(x ?? "") : String(x ?? "").replace(/ ([?!:;»])/g, " $1").replace(/« /g, "« ");
+const flag = (p, st = "") => p ? `<img class="flag" src="drapeaux/${p}.png" style="${st}" alt="">` : "";
+const ballons = (c = []) => c.map((x) => `<span class="ballon" style="background:${x}"></span>`).join("");
+const niveau = (k, st = "") => { const [l, c] = NIVEAUX[k] ?? [k, "regional"]; return `<span class="niv" style="background:var(--a-${c});${st}">${l}</span>`; };
+const nivTexte = (k) => { const [l, c] = NIVEAUX[k] ?? [k, "regional"]; return `<span style="color:var(--a-${c})">${l}</span>`; };
+const etoiles = (n) => "★".repeat(n) + "☆".repeat(5 - n);
+const optionFeuille = (nom, valeur) => FEUILLES[nom]?.options.find((o) => o.titre === valeur) ?? { titre: valeur };
+
+// ---------- Écrans ----------
+const ECRANS = {
+  accueil: (d) => `<div class="home">
+      <div class="topbar"><img data-logo alt=""><span class="brand">Destiny FC</span><span class="chip" id="a-jetons">🪙 ${d.jetons}</span><span class="chip">🔥 ${d.serie}</span><span class="help">?</span></div>
+      <div class="hero" id="a-carriere"><img src="images/mode-career.jpg" alt=""><div class="ov"></div><div class="cp"><div class="kick">${T("carriere")}</div>
+        <h3>${d.reprendre ? T("reprendre", d.reprendre) : T("ecrire")}</h3>
+        <p>${d.reprendre ? T("reprendreCorps", d.reprendre) : T("corpsCarriere")}</p></div></div>
+      <div class="modes">
+        <div class="tile" id="a-quotidien"><img src="images/mode-daily.jpg" alt=""><div class="cp"><div class="k">${T("quotidien")}</div><div class="t">${d.jour}</div></div></div>
+        <div class="tile" id="a-legendes"><img src="images/mode-story.jpg" alt=""><div class="cp"><div class="k">${T("legendes")}</div><div class="t">${T("legendesT")}</div></div></div>
+        <div class="tile" id="a-amis"><img src="images/mode-duel.jpg" alt=""><div class="cp"><div class="k">${T("amis")}</div><div class="t">${T("amisT")}</div></div></div></div>
+      <div class="strip" id="a-quetes"><span>⭐ ${T("quetes")} · ${d.quetes[0]}/${d.quetes[1]}</span><span>›</span></div>
+      <div class="icons"><div id="a-boutique"><span>🪙</span><span>${T("boutique")}</span></div><div id="a-badges"><span>🏅</span><span>Badges</span><small>${d.badges[0]}/${d.badges[1]}</small></div>
+        <div id="a-pantheon"><span>🏛</span><span>${T("pantheon")}</span></div><div id="a-classement"><span>📊</span><span>${T("classement")}</span></div><div id="a-reglages"><span>⚙️</span><span>${T("reglages")}</span></div></div>
+      <div class="foot"><span>${T("stats", { c: d.carrieres, b: d.meilleur })}</span><span>${T("apropos")}</span></div></div>`,
+
+  creation: (d, s) => {
+    const c = s.creation;
+    const poste = c.champs.poste ? Object.values(POSTES).find((p) => p[1] === c.champs.poste) : null;
+    const nat = c.champs.nationalite ? optionFeuille("nationalite", c.champs.nationalite) : null;
+    const nomAffiche = c.nom || T("nouveau");
+    return `<div class="setup">
+      <div class="retour"><span>${T("retour")}</span><span class="jeton">${d.jetons} 🪙</span></div>
+      <h2>${T("creeTitre")}</h2><div class="sub">${T("creeSous")}</div>
+      <div class="fiche" id="cr-fiche"><div class="av">${poste ? poste[0] : "👤"}</div><div class="x">
+        <div class="nm ${c.nom ? "" : "vide"}" id="cr-nom">${nomAffiche}${c.curseur ? '<span class="curseur"></span>' : ""}</div>
+        <div class="hint">${T("nomHint")}</div>
+        <div class="nat">${nat ? flag(nat.drapeau, "width:14px;height:14px") : "🏳️"} ${[c.champs.nationalite ?? CHAMPS[0][1], c.champs.poste].filter(Boolean).join(" · ")}</div>
+        ${["tec", "phy", "men", "cha"].map((k) => `<div class="attr" id="cr-${k}"><small>${k.toUpperCase()}</small><span class="tr"><i data-attr="${k}"></i></span><b data-attrv="${k}">—</b></div>`).join("")}
+      </div></div>
+      ${CHAMPS.map(([k, l]) => { const v = c.champs[k]; const o = v ? optionFeuille(k, v) : null;
+        return `<div class="champ" id="cr-champ-${k}"><span class="l">${l}</span><span class="v ${v ? "" : "vide"}">${v ? `${o.drapeau ? flag(o.drapeau) : o.icone ?? ""} ${v}` : T("choisir")} <em>›</em></span></div>`; }).join("")}
+      <div class="champ dim" id="cr-aleatoire"><span class="l">${T("aleatoire")}</span><span class="v">10 🪙</span></div>
+      <div class="primaire" id="cr-club">${T("choisirClub")}</div></div>`;
+  },
+
+  clubs: (d) => `<div class="setup">
+      <div class="retour"><span>${T("retour")}</span><span class="jeton">${DATA.creation.jetons} 🪙</span></div>
+      <h2>${T("clubsTitre")}</h2><div class="sub">${T("clubsSous")}</div>
+      <div class="etoiles">${T("potentiel", { s: etoiles(d.potentiel) })}</div>
+      ${d.liste.map((c, i) => `<div class="club" id="cl-${i}"><div class="bl">${ballons(c.couleurs)}</div><div><div class="nm">${nivTexte(c.niveau)} ${c.nom}</div><div class="ps">${flag(c.pays)}${c.paysNom}</div></div></div>`).join("")}
+    </div>`,
+
+  partie: (d, s) => {
+    const j = s.joueur;
+    return `<div class="jeu">
+      <div class="dcard tete" id="p-tete"><div class="r1"><span class="nm">${flag(j.pays)}${j.nom}</span><span class="btn">${T("accueil")}</span></div>
+        <div class="age" id="p-age">${T("age", j)}</div>
+        <div class="cl" id="p-club">${niveau(j.niveau)} ${j.club} ${ballons(j.couleurs)} ${flag(j.pays, "width:14px;height:14px")}</div>
+        <div class="pills"><span class="pill" id="p-note">${POSTES[j.poste]?.[0] ?? "⚽"} <span data-note>${j.note}</span></span><span class="pill or" id="p-argent">${j.argent}</span><span class="pill" id="p-etoiles">${etoiles(j.etoiles)}</span><span class="pill prof">📊</span></div>
+        <div class="jauges" id="p-jauges">${["forme", "moral", "confiance", "pression"].map((k) => [k, T(k)]).map(([k, l]) => `<div><small>${l}</small><span class="tr" data-jtr="${k}"><i data-jauge="${k}"></i></span></div>`).join("")}</div></div>
+      <div class="aire" id="p-aire"><div class="dcard carte" id="p-carte"></div></div></div>`;
+  },
+
+  fiche: (d) => `<div style="--tier:${d.couleur}"><div class="fiche-c" id="f-carte">
+      <div class="h"><b>${T("carte", { t: d.carte })}</b><span>${d.statut}</span></div><h3 id="f-titre">${d.titre}</h3>
+      <h4>${d.nom}</h4><div class="l1">${flag(d.pays, "width:14px;height:14px")} ${d.paysNom} · ${d.poste}</div><div class="l2">${d.clubs}</div><div class="sc" id="f-score">${T("score", { s: d.score })}</div>
+      <div class="sn" id="f-surnom">${EN ? `“${d.surnom}”` : `« ${d.surnom} »`}</div><div class="gr">${T("trajectoire")} · ${d.trajectoire}<br>${T("signature")} · ${d.signature}</div><div class="rc">${fr(d.recit)}</div>
+      <div class="st">${T("statsF")}</div><div class="grid" id="f-stats">${d.stats.map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join("")}</div>
+      <div class="st">${T("palmares")}</div><div class="ch" id="f-palmares">${d.palmares.map((x) => `<span>${x}</span>`).join("")}</div>
+      <div class="st">${T("distinctions")}</div><div class="ch" id="f-distinctions">${d.distinctions.map((x) => `<span>${x}</span>`).join("")}</div>
+      <div class="ft">Destiny FC</div></div>
+      <div class="discours" id="f-discours"><b>${T("discours")}</b><span>${fr(d.discours)}</span></div></div>`,
+
+  verrouillage: (d) => `<div class="lock"><small>${d.date ?? T("lockDate")}</small><b>${d.heure ?? "19:00"}</b></div>`,
+};
+
+// Carte centrale de l'écran de jeu.
+const CARTE = {
+  evenement: (c, s) => `${c.treve ? `<div class="treve"><b>${c.treve.libelle}</b><span>${c.treve.stats}</span>${c.treve.zone ? `<em class="${c.treve.zone[1]}">${c.treve.zone[0]}</em>` : ""}</div>` : ""}
+    <div class="tag">${fr(c.tag)}</div><div class="corps">${fr(c.texte)}</div>${options(c, s)}`,
+  moment: (c, s) => `<div class="tag">${fr(c.tag)}</div><h3>${fr(c.titre)}</h3><div class="corps">${fr(c.texte)}</div>${options(c, s)}`,
+  resultat: (c) => `<div class="tag">${fr(c.tag)}</div><div class="corps">${fr(c.texte)}</div>
+    ${c.effets?.length ? `<div class="effets">${c.effets.map((e) => { const x = typeof e === "string" ? { texte: e } : e; const ton = x.ton ?? (/^\+/.test(x.texte) ? "good" : /^[-−🩹⛔]/u.test(x.texte) ? "bad" : "neutre"); return `<span class="${ton}">${fr(x.texte)}</span>`; }).join("")}</div>` : ""}
+    <div class="continuer" id="p-continuer">${c.bouton ?? T("continuer")}</div>`,
+  saison: (c) => `<div class="tag">${fr(c.tag)} ${c.niveau ? nivTexte(c.niveau) : ""}</div>${c.une ? `<div class="une">📰 ${fr(c.une)}</div>` : ""}
+    <div class="recap">${c.stats.map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join("")}</div>
+    ${(c.lignes ?? []).map((l) => `<div class="ligne">${fr(l)}</div>`).join("")}<div class="continuer" id="p-continuer">${c.bouton ?? T("continuer")}</div>`,
+  mercato: (c, s) => `<div class="tag">${fr(c.tag)}</div><div class="corps" style="margin-bottom:10px">${fr(c.texte)}</div>
+    ${c.offres.map((o, i) => `<div class="offre ${s.option === i + 1 ? "on" : ""}" id="p-opt-${i + 1}">${niveau(o.niveau)}<div class="l">${o.club} ${ballons(o.couleurs)} ${flag(o.pays, "width:14px;height:14px")} — ${fr(o.detail)}</div></div>`).join("")}
+    <div class="continuer" id="p-continuer">${c.bouton ?? T("rester")}</div>`,
+  preparation: (c, s) => { const rep = s.repartition, reste = c.points - rep.reduce((a, b) => a + b, 0);
+    return `<div class="tag">${fr(c.tag)}</div><div class="corps">${fr(c.texte)}</div><div class="points">${T("energie", { n: reste })}</div>
+    ${c.postes.map(([ic, l, h], i) => `<div class="prep" id="p-prep-${i + 1}"><span class="ic">${ic}</span><div class="x"><b>${l}</b><small>${fr(h)}</small></div><span class="pb ${rep[i] ? "" : "off"}">−</span><span class="v">${rep[i]}</span><span class="pb ${reste ? "" : "off"}" id="p-plus-${i + 1}">+</span></div>`).join("")}
+    <div class="continuer" id="p-continuer">${c.bouton ?? T("lancer")}</div>`; },
+};
+function options(c, s) {
+  return `<div class="opts">${(c.options ?? []).map((o, i) => `<div class="opt ${s.option === i + 1 ? "on" : s.option ? "off" : ""}" id="p-opt-${i + 1}">${o.indice ? `<span class="indice">${o.indice}</span><br>` : ""}${fr(o.texte)}</div>`).join("")}</div>`;
+}
+
+// ---------- État de l'écran à l'instant t ----------
+const avant = (t) => tl.actions.filter((a) => a.t <= t);
+const carteDe = (a) => fusion(a.id ? CARTES[a.id] ?? (() => { throw new Error(`Carte inconnue : ${a.id}`); })() : {}, Object.fromEntries(Object.entries(a).filter(([k]) => !["type", "t", "t2", "scene", "ancre", "fin", "position", "id"].includes(k))));
+function etat(t) {
+  const acts = avant(t);
+  const ecrans = acts.filter((a) => a.type === "ecran");
+  const initial = { nom: script.ecranInitial ?? "accueil", t: -10 };
+  const courant = ecrans.at(-1) ?? initial;
+  const precedent = ecrans.at(-2) ?? (ecrans.length ? initial : null);
+  const cr = structuredClone(DATA.creation);
+  const s = { courant, precedent, creation: { nom: cr.nom, champs: { ...cr.champs }, attributs: cr.attributs, attrPrec: null, attrT: -10, curseur: false },
+    joueur: structuredClone(DATA.partie.joueur), joueurPrec: null, joueurT: -10,
+    carte: DATA.partie.carte ? (typeof DATA.partie.carte === "string" ? { ...(CARTES[DATA.partie.carte] ?? (() => { throw new Error(`Carte inconnue : ${DATA.partie.carte}`); })()) } : DATA.partie.carte) : null, carteT: -10, cartePrec: null,
+    option: 0, optionT: -10, repartition: [0, 0, 0, 0], feuille: null };
+  for (const a of acts) {
+    if (a.type === "ecran" && a.donnees && a.nom === "partie" && a.donnees.joueur) s.joueur = fusion(s.joueur, a.donnees.joueur);
+    else if (a.type === "taper") { const p = clamp((t - a.t) / Math.max(0.01, a.t2 - a.t)); s.creation.nom = a.mot.slice(0, Math.ceil(p * a.mot.length)); s.creation.curseur = p < 1 || t < a.t2 + 0.6; }
+    else if (a.type === "feuille") s.feuille = { nom: a.nom, t: a.t, choix: null };
+    else if (a.type === "choisir") {
+      const nom = s.feuille?.nom ?? a.nom;
+      if (s.feuille) s.feuille.choix = a.valeur;
+      if (t >= a.t + 0.35 || !s.feuille) { s.creation.champs[nom] = a.valeur; s.feuille = null; }
+    }
+    else if (a.type === "attributs") { s.creation.attrPrec = s.creation.attributs; s.creation.attributs = { tec: a.tec, phy: a.phy, men: a.men, cha: a.cha }; s.creation.attrT = a.t; }
+    else if (a.type === "aleatoire") { const p = t - a.t; if (a.champs) CHAMPS.forEach(([k], i) => { if (a.champs[k] && p >= 0.3 + i * 0.12) s.creation.champs[k] = a.champs[k]; }); if (a.nom && p >= 0.3) s.creation.nom = a.nom; if (a.attributs && p >= 0.3) { s.creation.attrPrec = s.creation.attributs; s.creation.attributs = a.attributs; s.creation.attrT = a.t + 0.3; } }
+    else if (a.type === "joueur") { s.joueurPrec = structuredClone(s.joueur); s.joueur = fusion(s.joueur, Object.fromEntries(Object.entries(a).filter(([k]) => !["type", "t", "t2", "scene", "ancre", "fin", "position"].includes(k)))); s.joueurT = a.t; }
+    else if (a.type === "jauges") { s.joueurPrec = structuredClone(s.joueur); s.joueur.jauges = { ...s.joueur.jauges, ...Object.fromEntries(["forme", "moral", "confiance", "pression"].filter((k) => a[k] !== undefined).map((k) => [k, a[k]])) }; s.joueurT = a.t; }
+    else if (a.type === "carte") { s.cartePrec = s.carte; s.carte = carteDe(a); s.carteT = a.t; s.option = 0; s.repartition = [0, 0, 0, 0]; }
+    else if (a.type === "option") { s.option = a.n; s.optionT = a.t; }
+    else if (a.type === "repartir") s.repartition[a.poste - 1] = a.valeur ?? s.repartition[a.poste - 1] + 1;
+  }
+  return s;
+}
+
+// Rendu d'une vue (reconstruit seulement quand son HTML change).
+const cache = {};
+function construire(nom, ecranAction, s) {
+  const d = fusion(DATA[nom] ?? {}, ecranAction?.donnees);
+  const html = ECRANS[nom](d, s);
+  if (cache[nom] !== html) {
+    $(`v-${nom}`).innerHTML = html;
+    $(`v-${nom}`).querySelectorAll("img[data-logo]").forEach((img) => (img.src = "/" + charte.logo));
+    cache[nom] = html;
+  }
+}
+
+// Position d'un élément de l'écran, en points d'écran (indépendante de la caméra).
+function posEcran(el) {
+  const r = el.getBoundingClientRect(), sr = $("screen").getBoundingClientRect();
+  const k = sr.width / 393;
+  return { x: (r.left - sr.left + r.width / 2) / k, y: (r.top - sr.top + r.height / 2) / k };
+}
+const versScene = (p) => ({ x: 107 + 2.2 * p.x, y: 406 + 2.2 * p.y });
+
+// ---------- Caméra : presets, ou id d'un élément de l'écran ----------
+const PRESETS = {
+  aucun: { s: 1, x: 540, y: 960, cx: 540, cy: 960 },
+  entier: { s: 0.8, x: 540, y: 1343, cx: 540, cy: 1060 },
+  haut: { s: 1.3, x: 540, y: 640, cx: 540, cy: 760 },
+  contenu: { s: 1.18, x: 540, y: 1200, cx: 540, cy: 980 },
+};
+function cibleCamera(a) {
+  if (PRESETS[a.cible]) return PRESETS[a.cible];
+  const el = $(a.cible);
+  if (!el || el.offsetParent === null) return PRESETS.aucun;
+  const p = versScene(posEcran(el));
+  return { s: a.echelle ?? 1.3, x: p.x, y: p.y, cx: 540, cy: a.hauteur ?? 900 };
+}
+
+// Superposition active : de son action jusqu'à la suivante du même type, masquer, fin, t2 ou durée par défaut.
+function actif(type, t, stops = [], defaut = Infinity) {
+  const a = lastAction(tl, type, t);
+  if (!a) return null;
+  const fins = tl.actions.filter((x) => x.t > a.t && (x.type === type || x.type === "masquer" || x.type === "fin" || stops.includes(x.type))).map((x) => x.t);
+  fins.push(a.t2 ?? a.t + defaut);
+  const stop = Math.min(...fins);
+  if (t >= stop + 0.3) return null;
+  return { a, pIn: clamp((t - a.t) / 0.45), pOut: t > stop ? clamp((t - stop) / 0.3) : 0 };
+}
+
+// ---------- Dispositions (téléphone / avatar) ----------
+const DISPOS = {
+  telephone: { tel: { x: 0, y: 0, s: 1 }, av: { cx: 260, base: 2700, w: 600 } },
+  coin: { tel: { x: 0, y: 0, s: 1 }, av: { cx: 185, base: 1965, w: 450 } },
+  duo: { tel: { x: 150, y: 170, s: 0.62 }, av: { cx: 260, base: 1960, w: 720 } },
+  avatar: { tel: { x: 0, y: 1750, s: 0.9 }, av: { cx: 540, base: 1945, w: 1040 } },
+};
+const SUBS = { telephone: [160, 160, 395], coin: [390, 160, 395], duo: [160, 160, 395], avatar: [160, 160, 395] };
+function disposition(t) {
+  let from = script.dispositionInitiale ?? "telephone", to = from, t0 = -10;
+  for (const a of tl.actions) { if (a.t > t) break; if (a.type === "disposition") { from = to; to = a.mode; t0 = a.t; } }
+  const p = ease(clamp((t - t0) / 0.6));
+  const A = DISPOS[from], B = DISPOS[to];
+  const mix = (a, b) => Object.fromEntries(Object.keys(a).map((k) => [k, lerp(a[k], b[k], p)]));
+  return { mode: to, p, tel: mix(A.tel, B.tel), av: mix(A.av, B.av), subs: SUBS[from].map((v, i) => lerp(v, SUBS[to][i], p)) };
+}
+const POSES = ["neutre", "parle", "salut", "content", "choque", "reflechit", "panique", "fier", "montre-droite", "montre-gauche", "telephone", "clin", "decu", "celebre", "tete-main"];
+const POSE_SRC = (p) => `avatar/${p}.png`;
+const motCourant = (t) => timings.mots.find((m) => t >= m.debut && t < m.fin);
+function boucheOuverte(t) {
+  const m = motCourant(t);
+  if (!m) return false;
+  const syl = Math.max(1, Math.round(m.mot.length / 3));
+  return Math.sin(((t - m.debut) / Math.max(0.05, m.fin - m.debut)) * Math.PI * syl) > 0.3;
+}
+
+const subs = sousTitres(timings);
+const VUES = Object.keys(ECRANS);
+const ARRETS_FORMATS = ["titre", "liste", "chiffre", "frise", "tableau", "typo", "disposition"];
+const couleurJauge = (k, v) => (k === "pression" ? (v < 50 ? "var(--a-good)" : "var(--a-bad)") : v >= 50 ? "var(--a-good)" : "var(--a-warn)");
+const formatNombre = (v) => String(v).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+// Feuille de choix (écran « Crée ton joueur »).
+function feuille(s, t) {
+  const f = s.feuille;
+  const lst = FEUILLES[f.nom];
+  const html = `<div class="grab"></div><h4>${lst.titre}</h4>${lst.options.map((o, i) => `<div class="opt-f ${f.choix === o.titre ? "on" : ""}" id="f-opt-${i}" data-v="${o.titre}">${o.drapeau ? flag(o.drapeau) : `<span class="ic">${o.icone}</span>`}<div><b>${o.titre}</b>${o.texte ? `<small>${fr(o.texte)}</small>` : ""}</div></div>`).join("")}`;
+  if ($("sheet")._h !== html) { $("sheet").innerHTML = html; $("sheet")._h = html; }
+}
+
+// ---------- Rendu d'une image à l'instant t (déterministe) ----------
+function renderAt(t) {
+  const s = etat(t);
+
+  // Vues : la courante glisse par-dessus la précédente.
+  const pv = ease(clamp((t - s.courant.t) / 0.35));
+  for (const nom of VUES) {
+    const v = $(`v-${nom}`);
+    const estCourant = nom === s.courant.nom, estPrec = s.precedent && nom === s.precedent.nom && pv < 1 && !estCourant;
+    if (estCourant || estPrec || !cache[nom]) construire(nom, estCourant ? s.courant : estPrec ? s.precedent : null, s);
+    v.style.visibility = estCourant || estPrec ? "visible" : "hidden";
+    v.style.zIndex = estCourant ? 2 : 1;
+    v.style.transform = estCourant ? `translateX(${(1 - pv) * 60}px)` : "";
+    v.style.opacity = estCourant ? pv : 1;
+  }
+  const vue = $(`v-${s.courant.nom}`);
+
+  // Défilement (action defiler, en points d'écran), remis à zéro à chaque changement d'écran.
+  const def = lastAction(tl, "defiler", t);
+  const dy = def && def.t > s.courant.t ? (def.depart ?? 0) + ((def.y ?? 0) - (def.depart ?? 0)) * ease(clamp((t - def.t) / 0.7)) : 0;
+  const corps = vue.firstElementChild;
+  if (corps) corps.style.transform = dy ? `translateY(${-dy}px)` : "";
+
+  // Création : barres d'attributs (montée en 0,8 s).
+  if (s.courant.nom === "creation" || s.precedent?.nom === "creation") {
+    const c = s.creation, p = ease(clamp((t - c.attrT) / 0.8));
+    for (const k of ["tec", "phy", "men", "cha"]) {
+      const v = c.attributs ? lerp(c.attrPrec?.[k] ?? 0, c.attributs[k], p) : 0;
+      const bar = $("v-creation").querySelector(`[data-attr="${k}"]`), val = $("v-creation").querySelector(`[data-attrv="${k}"]`);
+      if (bar) bar.style.width = `${v}%`;
+      if (val) val.textContent = c.attributs ? Math.round(v) : "—";
+    }
+  }
+
+  // Partie : carte centrale, en-tête animé.
+  if (s.courant.nom === "partie" || s.precedent?.nom === "partie") {
+    const carte = $("p-carte");
+    const html = s.carte ? CARTE[s.carte.genre](s.carte, s) : "";
+    if (carte._h !== html) { carte.innerHTML = html; carte._h = html; carte.className = `dcard carte ${s.carte?.ton ?? ""}`; carte.style.display = s.carte ? "block" : "none"; }
+    const pc = clamp((t - s.carteT) / 0.4);
+    carte.style.opacity = s.carteT > 0 ? ease(pc) : 1;
+    carte.style.transform = s.carteT > 0 ? `translateY(${(1 - back(pc)) * 40}px)` : "";
+    const j = s.joueur, jp = s.joueurPrec ?? j, pj = ease(clamp((t - s.joueurT) / 0.8));
+    for (const k of ["forme", "moral", "confiance", "pression"]) {
+      const v = lerp(jp.jauges[k], j.jauges[k], pj);
+      const el = $("v-partie").querySelector(`[data-jauge="${k}"]`);
+      if (el) { el.style.width = `${Math.max(4, Math.min(100, v))}%`; el.style.background = couleurJauge(k, v); }
+      const tr = $("v-partie").querySelector(`[data-jtr="${k}"]`);
+      if (tr) tr.classList.toggle("flash", jp.jauges[k] !== j.jauges[k] && t - s.joueurT < 1.2);
+    }
+    const n = $("v-partie").querySelector("[data-note]");
+    if (n) n.textContent = Math.round(lerp(jp.note, j.note, pj));
+    const pillNote = $("p-note");
+    if (pillNote) pillNote.style.transform = jp.note !== j.note && t - s.joueurT < 0.9 ? `scale(${1 + 0.18 * Math.sin(Math.PI * clamp((t - s.joueurT) / 0.9))})` : "";
+  }
+
+  const sombre = s.courant.nom === "verrouillage";
+  $("heure").textContent = sombre ? "" : DATA.heure;
+
+  // Feuille de choix.
+  const f = s.feuille;
+  const fermeture = !f ? tl.actions.filter((a) => a.type === "choisir" && a.t <= t && t < a.t + 0.65).at(-1) : null;
+  const ouvert = f || fermeture;
+  $("sheet-bg").style.display = $("sheet").style.display = ouvert ? "flex" : "none";
+  if (f) {
+    feuille(s, t);
+    const p = ease(clamp((t - f.t) / 0.4));
+    $("sheet").style.transform = `translateY(${(1 - p) * 640}px)`;
+    $("sheet-bg").style.opacity = p;
+  } else if (fermeture) {
+    const p = 1 - ease(clamp((t - fermeture.t - 0.35) / 0.3));
+    $("sheet").style.transform = `translateY(${(1 - p) * 640}px)`;
+    $("sheet-bg").style.opacity = p;
+  }
+
+  // Notifications (deux au plus, empilées sur l'écran verrouillé).
+  const notifs = tl.actions.filter((a) => a.type === "notif" && a.t <= t);
+  const actives = notifs.filter((a) => actif2(a, t)).slice(-2);
+  for (const [k, id] of [[0, "notif"], [1, "notif2"]]) {
+    const a = actives[actives.length - 1 - k];
+    const el = $(id);
+    el.style.display = a ? "flex" : "none";
+    if (!a) continue;
+    const pre = id === "notif" ? "n" : "n2";
+    $(`${pre}-titre`).textContent = a.titre;
+    $(`${pre}-texte`).textContent = a.texte;
+    $(`${pre}-quand`).textContent = a.quand ?? "maintenant";
+    const st = actif2(a, t);
+    const p = back(clamp((t - a.t) / 0.5)) * (1 - st.pOut);
+    el.style.top = `${s.courant.nom === "verrouillage" ? 230 + k * 92 : 60}px`;
+    el.style.transform = `translateY(${(1 - p) * -140}px)`;
+    el.style.opacity = k && s.courant.nom !== "verrouillage" ? 0 : 1;
+  }
+
+  // Appui (rond) : appui, option, continuer, choisir, repartir, aleatoire.
+  const tap = $("tap");
+  tap.style.display = "none";
+  const appuis = tl.actions.filter((a) => ["appui", "option", "continuer", "choisir", "repartir", "aleatoire", "feuille"].includes(a.type));
+  const ap = appuis.find((a) => t >= a.t - 0.25 && t < a.t + 0.35);
+  if (ap) {
+    let el = null;
+    if (ap.type === "appui") el = $(ap.cible);
+    else if (ap.type === "option") el = $(`p-opt-${ap.n}`);
+    else if (ap.type === "continuer") el = $("p-continuer");
+    else if (ap.type === "repartir") el = $(`p-plus-${ap.poste}`);
+    else if (ap.type === "aleatoire") el = $("cr-aleatoire");
+    else if (ap.type === "feuille") el = $(`cr-champ-${ap.nom}`);
+    else if (ap.type === "choisir") el = [...$("sheet").querySelectorAll(".opt-f")].find((x) => x.dataset.v === ap.valeur) ?? $(`cr-champ-${ap.nom}`);
+    if (el && el.offsetParent !== null) {
+      const p = posEcran(el);
+      const q = t < ap.t ? 1 - (ap.t - t) / 0.25 : 1 - clamp((t - ap.t) / 0.35);
+      Object.assign(tap.style, { display: "block", left: `${p.x}px`, top: `${p.y}px`, opacity: q, transform: `scale(${0.7 + 0.5 * q})` });
+      if (t >= ap.t) el.style.transform = `scale(${1 - 0.04 * Math.sin(Math.PI * clamp((t - ap.t) / 0.3))})`;
+    }
+  }
+
+  // Disposition, entrée du téléphone, caméra.
+  const d = disposition(t);
+  const entree = lastAction(tl, "entree", t);
+  const avecEntree = tl.actions.some((a) => a.type === "entree");
+  const pin = !avecEntree ? 1 : entree ? back(clamp((t - entree.t) / 0.7)) : 0;
+  $("poste").style.transform = `translate(${d.tel.x}px, ${d.tel.y + (1 - pin) * 1950}px) scale(${d.tel.s})`;
+  const cam = camera(tl, t, cibleCamera, ["ecran", "disposition"]);
+  $("camera").style.transform = transformCamera(cam);
+  const formatVisible = ARRETS_FORMATS.slice(0, 6).some((k) => actif(k, t, ARRETS_FORMATS));
+  $("brand").style.opacity = clamp(1 - (cam.s - 1) * 8) * (formatVisible || (d.tel.s < 0.95 && d.mode === "duo") ? 0 : 1);
+
+  // Décor de scène (images/scene-XX.png si la scène a une image).
+  const si = timings.scenes.findIndex((sc) => t >= sc.debut && t < sc.fin);
+  const scImg = si >= 0 && script.scenes[si]?.image ? `url(/projets/${projet}/images/scene-${String(si + 1).padStart(2, "0")}.png)` : null;
+  if (scImg) { $("fond").style.backgroundImage = scImg; $("fond").style.opacity = clamp((t - timings.scenes[si].debut) / 0.3); }
+  else $("fond").style.opacity = 0;
+
+  // Avatar : disposition, pose, respiration, rebond sur les mots, bouche.
+  const av = d.av;
+  const poseA = lastAction(tl, "pose", t);
+  const pose = poseA?.nom ?? script.poseInitiale ?? "neutre";
+  const img = $("av-img");
+  if (img._p !== pose) { img.src = POSE_SRC(pose); img._p = pose; }
+  const pp = poseA ? clamp((t - poseA.t) / 0.28) : 1;
+  const k = av.w / 1000, m = motCourant(t);
+  const rebond = m ? -10 * k * Math.max(0, 1 - (t - m.debut) / 0.16) : 0;
+  const avEl = $("avatar");
+  Object.assign(avEl.style, { width: `${av.w}px`, height: `${av.w}px`, left: `${av.cx - av.w / 2}px`, top: `${av.base - av.w}px`, display: av.base - av.w > 1900 ? "none" : "block" });
+  avEl.style.transform = `translateY(${Math.sin((2 * Math.PI * t) / 2.6) * 6 * k + rebond}px) rotate(${Math.sin((2 * Math.PI * t) / 3.4) * 1.2}deg) scale(${poseA ? 0.9 + 0.1 * back(pp) : 1})`;
+  $("av-bouche").style.display = pose === "neutre" && boucheOuverte(t) ? "block" : "none";
+
+  // Sous-titres (position selon la disposition).
+  let [sl, sr, sb] = d.subs;
+  // Écran de jeu : si la carte centrale passe sous les sous-titres, ceux-ci montent dans l'espace libre au-dessus d'elle.
+  if (s.courant.nom === "partie" && ["telephone", "coin"].includes(d.mode) && d.p === 1 && !lastAction(tl, "fin", t)) {
+    const st = $("stage").getBoundingClientRect(), rc = $("p-carte").getBoundingClientRect(), rh = $("p-tete").getBoundingClientRect();
+    const haut = rc.top - st.top, bas = rc.bottom - st.top, tete = rh.bottom - st.top;
+    if (bas > 1920 - sb - 130 && haut - Math.max(tete, 330) >= 140) sb = Math.min(1920 - 480, Math.max(sb, 1920 - haut + 22));
+  }
+  Object.assign($("subs").style, { left: `${sl}px`, right: `${sr}px`, bottom: `${sb}px` });
+  subs($("subs"), t);
+  const grp = $("subs").firstElementChild;
+  if (grp) { const dispo = 1080 - sl - sr; if (grp.offsetWidth > dispo) grp.style.fontSize = `${Math.floor(62 * dispo / grp.offsetWidth)}px`; }
+
+  // Bulle au-dessus de la tête de l'avatar.
+  const bulle = actif("bulle", t, ["disposition"], 2.5);
+  $("bulle").style.display = bulle ? "block" : "none";
+  if (bulle) {
+    const b = $("bulle");
+    if (b._t !== bulle.a.texte) { b.innerHTML = fr(bulle.a.texte); b._t = bulle.a.texte; }
+    b.className = bulle.a.style === "pensee" ? "pensee" : "";
+    const w = b.offsetWidth, h = b.offsetHeight;
+    const teteX = av.cx + av.w * 0.05, haut = av.base - av.w * 0.97;
+    const x = Math.min(Math.max(teteX + w * 0.15, 90 + w / 2), 910 - w / 2);
+    const queue = clamp((teteX - (x - w / 2)) / w, 0.15, 0.85) * 100;
+    Object.assign(b.style, { left: `${x - w / 2}px`, top: `${Math.max(330, haut - h - 30)}px`, transformOrigin: `${queue}% 120%` });
+    b.style.setProperty("--queue", `${queue}%`);
+    b.style.transform = `scale(${(0.6 + 0.4 * back(bulle.pIn)) * (1 - bulle.pOut)})`;
+  }
+
+  // Carte titre.
+  const titre = actif("titre", t, ["liste", "disposition", "chiffre", "frise", "tableau", "typo"]);
+  $("titre").style.display = titre ? "flex" : "none";
+  if (titre) {
+    $("t-num").style.display = titre.a.numero ? "grid" : "none";
+    $("t-num").textContent = titre.a.numero ?? "";
+    $("t-texte").innerHTML = fr(titre.a.texte ?? "").replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    $("t-sous").innerHTML = fr(titre.a.sous ?? "");
+    $("t-sous").style.display = titre.a.sous ? "block" : "none";
+    const q = back(titre.pIn);
+    $("titre").style.transform = `translateY(${(1 - q) * 120 - titre.pOut * 120}px) scale(${0.9 + 0.1 * q})`;
+    $("titre").style.opacity = clamp(titre.pIn * 2) * (1 - titre.pOut);
+  }
+
+  // Liste : carte ouverte par `liste`, points ajoutés par `point`.
+  const liste = actif("liste", t, ["titre", "disposition", "chiffre", "frise", "tableau", "typo"]);
+  $("liste").style.display = liste ? "flex" : "none";
+  if (liste) {
+    $("l-titre").innerHTML = fr(liste.a.titre ?? "").replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    const pts = tl.actions.filter((a) => a.type === "point" && a.t >= liste.a.t && a.t <= t);
+    const html = pts.map((p, i) => `<div class="pt" data-texte><i>${i + 1}</i><span>${fr(p.texte)}</span></div>`).join("");
+    if ($("l-points")._h !== html) { $("l-points").innerHTML = html; $("l-points")._h = html; }
+    [...$("l-points").children].forEach((el, i) => { const q = back(clamp((t - pts[i].t) / 0.35)); el.style.transform = `translateX(${(1 - q) * -80}px)`; el.style.opacity = clamp(q); });
+    const q = back(liste.pIn);
+    $("liste").style.transform = `translateY(${(1 - q) * 120 - liste.pOut * 120}px)`;
+    $("liste").style.opacity = clamp(liste.pIn * 2) * (1 - liste.pOut);
+  }
+
+  // Frise de carrière : carte ouverte par `frise`, étapes ajoutées par `etape` (âge, club, niveau).
+  const fz = actif("frise", t, ["titre", "liste", "disposition", "chiffre", "tableau", "typo"]);
+  $("frise").style.display = fz ? "flex" : "none";
+  if (fz) {
+    $("fz-titre").innerHTML = fr(fz.a.titre ?? "").replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    $("fz-titre").style.display = fz.a.titre ? "block" : "none";
+    const ets = tl.actions.filter((a) => a.type === "etape" && a.t >= fz.a.t && a.t <= t).slice(-(fz.a.max ?? 4));
+    const html = ets.map((e) => `<div class="et" data-texte><span class="ag">${e.age}<small>${T("ans")}</small></span><div class="tx"><b>${fr(e.texte)}</b>${e.club ? `<span>${e.niveau ? niveau(e.niveau) : ""}${e.club}</span>` : ""}</div></div>`).join("");
+    if ($("fz-etapes")._h !== html) { $("fz-etapes").innerHTML = html; $("fz-etapes")._h = html; }
+    [...$("fz-etapes").children].forEach((el, i) => { const q = back(clamp((t - ets[i].t) / 0.4)); el.style.transform = `translateY(${(1 - q) * 60}px)`; el.style.opacity = clamp(q); });
+    const q = back(fz.pIn);
+    $("frise").style.transform = `translateY(${(1 - q) * 120 - fz.pOut * 120}px)`;
+    $("frise").style.opacity = clamp(fz.pIn * 2) * (1 - fz.pOut);
+  }
+
+  // Grand chiffre qui monte.
+  const ch = actif("chiffre", t, ["titre", "liste", "frise", "tableau", "typo"]);
+  $("chiffre").style.display = ch ? "flex" : "none";
+  if (ch) {
+    const a = ch.a, v0 = a.depart ?? 0, mt = a.montee ?? 1.2;
+    const v = Math.round(lerp(v0, a.valeur, ease(clamp((t - a.t) / mt))));
+    $("ch-n").innerHTML = `${a.prefixe ?? ""}${formatNombre(v)}${a.suffixe ? `<small>${a.suffixe}</small>` : ""}`;
+    $("ch-sous").innerHTML = fr(a.sous ?? "");
+    $("chiffre").style.transform = `scale(${0.8 + 0.2 * back(ch.pIn)})`;
+    $("chiffre").style.opacity = clamp(ch.pIn * 2) * (1 - ch.pOut);
+  }
+
+  // Tableau de score : la minute défile de `minute` à `minuteFin` jusqu'au mot `fin` ; `but` ajoute un but.
+  const tb = actif("tableau", t, ["titre", "liste", "chiffre", "frise", "typo"]);
+  $("tableau").style.display = tb ? "flex" : "none";
+  if (tb) {
+    const a = tb.a, buts = tl.actions.filter((x) => x.type === "but" && x.t >= a.t && x.t <= t);
+    const sc = [...(a.score ?? [0, 0])];
+    for (const b of buts) sc[b.equipe === "ext" ? 1 : 0]++;
+    const dernier = buts.at(-1);
+    const mn = a.minuteFin !== undefined ? Math.round(lerp(a.minute ?? 0, a.minuteFin, clamp((t - a.t) / (a.minuteDuree ?? 3)))) : a.minute;
+    const eq = (e) => `<span class="bl">${ballons(e.couleurs ?? [])}</span>${e.nom}`;
+    $("tb-k").textContent = a.titre ?? "";
+    $("tb-dom").innerHTML = eq(a.domicile ?? { nom: "" });
+    $("tb-ext").innerHTML = eq(a.exterieur ?? { nom: "" });
+    // Noms longs (« Sheffield », « Middlesbrough ») : police réduite pour rester dans la zone sûre.
+    for (const [id, e] of [["tb-dom", a.domicile], ["tb-ext", a.exterieur]]) { const n = (e?.nom ?? "").length; $(id).style.fontSize = n > 11 ? "32px" : n > 7 ? "38px" : ""; }
+    $("tb-n").textContent = `${sc[0]}–${sc[1]}`;
+    $("tb-n").style.color = dernier && t - dernier.t < 1.2 ? "var(--accent)" : "#fff";
+    $("tb-n").style.transform = dernier ? `scale(${1 + 0.25 * Math.max(0, 1 - (t - dernier.t) / 0.35)})` : "";
+    $("tb-mn").textContent = mn !== undefined ? (String(mn).includes("+") ? String(mn) : T("minute", { m: mn })) : "";
+    $("tb-mn").style.display = mn !== undefined ? "block" : "none";
+    $("tb-s").innerHTML = fr(dernier?.texte ?? a.sous ?? "");
+    $("tableau").style.transform = `translateY(${(1 - back(tb.pIn)) * 120}px)`;
+    $("tableau").style.opacity = clamp(tb.pIn * 2) * (1 - tb.pOut);
+  }
+
+  // Typographie plein écran, mot à mot (`*mot*` en menthe).
+  const ty = actif("typo", t, ["titre", "liste", "chiffre", "frise", "tableau", "ecran", "entree", "disposition"]);
+  $("typo").style.display = ty ? "block" : "none";
+  if (ty) {
+    const mots = fr(ty.a.texte).replace(/\*([^*]+)\*/g, (_, g) => g.split(" ").map((w) => `*${w}*`).join(" ")).split(" ");
+    const fin2 = ty.a.t2 ?? ty.a.t + 0.25 * mots.length;
+    const n = Math.max(1, Math.ceil(clamp((t - ty.a.t) / Math.max(0.2, (fin2 - ty.a.t) * 0.8)) * mots.length));
+    const html = mots.slice(0, n).map((w) => `<span>${w.replace(/\*([^*]+)\*/g, "<em>$1</em>")}</span>`).join(" ");
+    if ($("ty-txt")._h !== html) { $("ty-txt").innerHTML = html; $("ty-txt")._h = html; }
+    if (ty.a.taille) $("ty-txt").style.fontSize = `${ty.a.taille}px`;
+    $("ty-sous").innerHTML = fr(ty.a.sous ?? "");
+    $("ty-sous").style.opacity = n >= mots.length ? clamp((t - fin2 * 0.9) / 0.4 + 0.5) : 0;
+    $("typo").style.opacity = clamp(ty.pIn * 3) * (1 - ty.pOut);
+  }
+
+  // Tampon.
+  const tp = actif("tampon", t, [], 3);
+  $("tampon").style.display = tp ? "block" : "none";
+  if (tp) {
+    const col = { menthe: "#5DD0C0", or: "#D4A017", vert: "#22C55E", rouge: "#EF4444" }[tp.a.couleur ?? "menthe"];
+    Object.assign($("tampon").style, { color: col, borderColor: col });
+    if ($("tampon")._t !== tp.a.texte) { $("tampon").textContent = tp.a.texte; $("tampon")._t = tp.a.texte; $("tampon").style.transform = "none"; $("tampon")._k = Math.min(1, 640 / $("tampon").offsetWidth); }
+    const q = clamp((t - tp.a.t) / 0.2);
+    $("tampon").style.transform = `rotate(-9deg) scale(${$("tampon")._k * (1.15 - 0.15 * ease(q)) * (1 - tp.pOut)})`;
+    $("tampon").style.opacity = clamp(q * 3) * (1 - tp.pOut);
+  }
+
+  // Carte de fin (avatar qui salue si `fin.pose`).
+  carteFin(tl, $("end"), t);
+  const endAv = $("end-av");
+  endAv.style.display = fin.pose ? "block" : "none";
+  $("end").classList.toggle("avec-av", !!fin.pose);
+  if (fin.pose && endAv._p !== fin.pose) { endAv.src = POSE_SRC(fin.pose); endAv._p = fin.pose; }
+}
+
+// Notification : visible 4 s (ou jusqu'à `fin`), ou jusqu'à `masquer` / `fin`.
+function actif2(a, t) {
+  const fins = tl.actions.filter((x) => x.t > a.t && (x.type === "masquer" || x.type === "fin")).map((x) => x.t);
+  fins.push(a.t2 ?? a.t + (a.duree ?? 4));
+  const stop = Math.min(...fins);
+  if (t >= stop + 0.3) return null;
+  return { pOut: t > stop ? clamp((t - stop) / 0.3) : 0 };
+}
+
+// Contrôles de cohérence : cartes et écrans connus (une erreur = rendu invalide).
+for (const a of tl.actions) {
+  if (a.type === "carte") { const c = carteDe(a); if (!CARTE[c.genre]) throw new Error(`Genre de carte inconnu : ${c.genre}`); }
+  if (a.type === "ecran" && !ECRANS[a.nom]) throw new Error(`Écran inconnu : ${a.nom}`);
+  if (a.type === "feuille" && !FEUILLES[a.nom]) throw new Error(`Feuille inconnue : ${a.nom}`);
+}
+
+// Toutes les images chargées avant le premier rendu.
+const DRAPEAUX = new Set([...JSON.stringify(DATA).matchAll(/"(?:pays|drapeau)":"([a-z-]+)"/g)].map((m) => m[1]));
+await Promise.all([...POSES.map(POSE_SRC), "avatar/neutre-bouche-ouverte.png", ...["career", "daily", "story", "duel"].map((m) => `images/mode-${m}.jpg`), ...[...DRAPEAUX].map((p) => `drapeaux/${p}.png`)]
+  .map((src) => { const i = new Image(); i.src = src; return i.decode().catch(() => { throw new Error(`Image manquante : ${src}`); }); }));
+document.querySelectorAll("img[data-logo]").forEach((img) => (img.src = "/" + charte.logo));
+await demarrer(tl, renderAt);
+</script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+{
+  "duree": 19.44,
+  "dureeVoix": 17.64,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.18,
+      "fin": 3.88
+    },
+    {
+      "id": "pourquoi",
+      "debut": 3.88,
+      "finVoix": 6.26,
+      "fin": 6.94
+    },
+    {
+      "id": "exemple",
+      "debut": 6.94,
+      "finVoix": 11.64,
+      "fin": 11.66
+    },
+    {
+      "id": "trouve",
+      "debut": 11.66,
+      "finVoix": 13.66,
+      "fin": 14.04
+    },
+    {
+      "id": "morale",
+      "debut": 14.04,
+      "finVoix": 15.6,
+      "fin": 16.1
+    },
+    {
+      "id": "appel",
+      "debut": 16.1,
+      "finVoix": 17.64,
+      "fin": 19.44
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mon",
+      "mot": "Mon",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "astuce",
+      "mot": "astuce",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.9
+    },
+    {
+      "texte": "numéro",
+      "mot": "numéro",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.08
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.58
+    },
+    {
+      "texte": "vise",
+      "mot": "vise",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 2.34
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.34,
+      "fin": 2.58
+    },
+    {
+      "texte": "première",
+      "mot": "première",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.88
+    },
+    {
+      "texte": "phrase.",
+      "mot": "phrase",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.18
+    },
+    {
+      "texte": "Sur",
+      "mot": "Sur",
+      "scene": 1,
+      "debut": 3.88,
+      "fin": 3.9
+    },
+    {
+      "texte": "Wikipédia,",
+      "mot": "Wikipédia",
+      "scene": 1,
+      "debut": 3.9,
+      "fin": 4.26
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.74
+    },
+    {
+      "texte": "définit",
+      "mot": "définit",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.14
+    },
+    {
+      "texte": "presque",
+      "mot": "presque",
+      "scene": 1,
+      "debut": 5.14,
+      "fin": 5.38
+    },
+    {
+      "texte": "toujours",
+      "mot": "toujours",
+      "scene": 1,
+      "debut": 5.38,
+      "fin": 5.88
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.04
+    },
+    {
+      "texte": "sujet.",
+      "mot": "sujet",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.26
+    },
+    {
+      "texte": "Ici :",
+      "mot": "Ici",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.26
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.6,
+      "fin": 7.8
+    },
+    {
+      "texte": "art",
+      "mot": "art",
+      "scene": 2,
+      "debut": 7.8,
+      "fin": 8.04
+    },
+    {
+      "texte": "décoratif,",
+      "mot": "décoratif",
+      "scene": 2,
+      "debut": 8.04,
+      "fin": 8.66
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 2,
+      "debut": 9.2,
+      "fin": 9.5
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 9.5,
+      "fin": 9.66
+    },
+    {
+      "texte": "fragments",
+      "mot": "fragments",
+      "scene": 2,
+      "debut": 9.66,
+      "fin": 9.92
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 9.92,
+      "fin": 10.18
+    },
+    {
+      "texte": "pierre",
+      "mot": "pierre",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.56
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 10.56,
+      "fin": 10.64
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.64,
+      "fin": 10.78
+    },
+    {
+      "texte": "verre…",
+      "mot": "verre",
+      "scene": 2,
+      "debut": 10.78,
+      "fin": 11.64
+    },
+    {
+      "texte": "Des",
+      "mot": "Des",
+      "scene": 3,
+      "debut": 11.66,
+      "fin": 11.82
+    },
+    {
+      "texte": "petits",
+      "mot": "petits",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 11.96
+    },
+    {
+      "texte": "morceaux",
+      "mot": "morceaux",
+      "scene": 3,
+      "debut": 11.96,
+      "fin": 12.24
+    },
+    {
+      "texte": "assemblés…",
+      "mot": "assemblés",
+      "scene": 3,
+      "debut": 12.24,
+      "fin": 12.58
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.22
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 13.22,
+      "fin": 13.3
+    },
+    {
+      "texte": "mosaïque !",
+      "mot": "mosaïque",
+      "scene": 3,
+      "debut": 13.3,
+      "fin": 13.66
+    },
+    {
+      "texte": "Lis",
+      "mot": "Lis",
+      "scene": 4,
+      "debut": 14.04,
+      "fin": 14.24
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 14.24,
+      "fin": 14.38
+    },
+    {
+      "texte": "début,",
+      "mot": "début",
+      "scene": 4,
+      "debut": 14.38,
+      "fin": 14.6
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 14.84,
+      "fin": 15.1
+    },
+    {
+      "texte": "reste",
+      "mot": "reste",
+      "scene": 4,
+      "debut": 15.1,
+      "fin": 15.28
+    },
+    {
+      "texte": "suit.",
+      "mot": "suit",
+      "scene": 4,
+      "debut": 15.28,
+      "fin": 15.6
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 16.1,
+      "fin": 16.6
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 16.9,
+      "fin": 17.2
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 17.2,
+      "fin": 17.4
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 17.4,
+      "fin": 17.5
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 17.5,
+      "fin": 17.64
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "titre": "Seulement les adjectifs",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 22
+  },
+  "objectif": "Défi spectateur : deviner la page avec quatre adjectifs.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Âne commun",
+    "texte": [
+      "L'Âne commun, appelé plus communément « Âne », est une espèce de mammifères herbivores et ongulés appartenant à la famille des équidés. Souvent comparé au cheval, l'âne a des caractéristiques morphologiques propres qui le différencient clairement de son cousin, ses longues oreilles étant son attribut le plus facilement identifiable. Ces dernières lui offrent une ouïe particulièrement fine, et qui, complétée par un large champ de vision et un odorat fort développé, lui permettent une bonne perception du monde qui l'entoure. Baudet est le nom donné au mâle reproducteur."
+    ],
+    "titreMots": [
+      "âne",
+      "commun"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mercredi 10 septembre",
+    "motsOutils": false
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Je ne te montre que les adjectifs. Tu trouves ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "adjectifs.",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "mots",
+      "voix": "Herbivores. Ongulés. Longues. Fine.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Herbivores.",
+          "mode": "telephone"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Herbivores.",
+          "cible": "article",
+          "echelle": 1.3,
+          "hauteur": 820
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Herbivores.",
+          "mot": "herbivores"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Ongulés.",
+          "mot": "ongulés"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Longues.",
+          "mot": "longues"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Fine.",
+          "mot": "fine"
+        }
+      ]
+    },
+    {
+      "id": "chrono",
+      "voix": "Trois… deux… un…",
+      "image": null,
+      "actions": [
+        {
+          "type": "chrono",
+          "ancre": "Trois…",
+          "secondes": 3
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "L'âne ! Avec ses longues oreilles et son ouïe fine.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "L'âne",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "L'âne",
+          "mode": "coin"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "L'âne"
+        },
+        {
+          "type": "pose",
+          "ancre": "L'âne",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

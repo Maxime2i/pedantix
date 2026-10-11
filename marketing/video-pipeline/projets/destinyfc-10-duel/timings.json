@@ -1,0 +1,472 @@
+{
+  "duree": 22.04,
+  "dureeVoix": 20.24,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.48,
+      "fin": 4.02
+    },
+    {
+      "id": "regle",
+      "debut": 4.02,
+      "finVoix": 5.72,
+      "fin": 6.3
+    },
+    {
+      "id": "lui",
+      "debut": 6.3,
+      "finVoix": 9.9,
+      "fin": 10.38
+    },
+    {
+      "id": "moi",
+      "debut": 10.38,
+      "finVoix": 14.78,
+      "fin": 15.34
+    },
+    {
+      "id": "cta",
+      "debut": 15.34,
+      "finVoix": 20.24,
+      "fin": 22.04
+    }
+  ],
+  "mots": [
+    {
+      "texte": "J'ai",
+      "mot": "J'ai",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "défié",
+      "mot": "défié",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.66
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.78
+    },
+    {
+      "texte": "pote",
+      "mot": "pote",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.94
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.1
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.46
+    },
+    {
+      "texte": "FC.",
+      "mot": "FC",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.76
+    },
+    {
+      "texte": "Même",
+      "mot": "Même",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.56
+    },
+    {
+      "texte": "départ,",
+      "mot": "départ",
+      "scene": 0,
+      "debut": 2.56,
+      "fin": 2.84
+    },
+    {
+      "texte": "mêmes",
+      "mot": "mêmes",
+      "scene": 0,
+      "debut": 3.14,
+      "fin": 3.34
+    },
+    {
+      "texte": "dés.",
+      "mot": "dés",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 3.48
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 4.02,
+      "fin": 4.14
+    },
+    {
+      "texte": "seule",
+      "mot": "seule",
+      "scene": 1,
+      "debut": 4.14,
+      "fin": 4.32
+    },
+    {
+      "texte": "différence",
+      "mot": "différence",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.64
+    },
+    {
+      "texte": "entre",
+      "mot": "entre",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.86
+    },
+    {
+      "texte": "nous,",
+      "mot": "nous",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 5.1
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 1,
+      "debut": 5.22,
+      "fin": 5.3
+    },
+    {
+      "texte": "sont",
+      "mot": "sont",
+      "scene": 1,
+      "debut": 5.3,
+      "fin": 5.46
+    },
+    {
+      "texte": "nos",
+      "mot": "nos",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.56
+    },
+    {
+      "texte": "choix.",
+      "mot": "choix",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.72
+    },
+    {
+      "texte": "Lui,",
+      "mot": "Lui",
+      "scene": 2,
+      "debut": 6.3,
+      "fin": 6.52
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 2,
+      "debut": 6.6,
+      "fin": 6.74
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 6.74,
+      "fin": 6.84
+    },
+    {
+      "texte": "joué",
+      "mot": "joué",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.06
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 7.06,
+      "fin": 7.16
+    },
+    {
+      "texte": "sécurité.",
+      "mot": "sécurité",
+      "scene": 2,
+      "debut": 7.16,
+      "fin": 7.56
+    },
+    {
+      "texte": "Carrière",
+      "mot": "Carrière",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.26
+    },
+    {
+      "texte": "correcte,",
+      "mot": "correcte",
+      "scene": 2,
+      "debut": 8.26,
+      "fin": 8.78
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 2,
+      "debut": 8.82,
+      "fin": 9.04
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 9.04,
+      "fin": 9.47
+    },
+    {
+      "texte": "quarante-deux.",
+      "mot": "quarante-deux",
+      "scene": 2,
+      "debut": 9.47,
+      "fin": 9.9
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 3,
+      "debut": 10.38,
+      "fin": 10.64
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 3,
+      "debut": 10.68,
+      "fin": 10.76
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 3,
+      "debut": 10.76,
+      "fin": 10.82
+    },
+    {
+      "texte": "risqué.",
+      "mot": "risqué",
+      "scene": 3,
+      "debut": 10.82,
+      "fin": 11.1
+    },
+    {
+      "texte": "Paris,",
+      "mot": "Paris",
+      "scene": 3,
+      "debut": 11.74,
+      "fin": 12.12
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 12.52,
+      "fin": 12.62
+    },
+    {
+      "texte": "titre",
+      "mot": "titre",
+      "scene": 3,
+      "debut": 12.62,
+      "fin": 12.76
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 12.76,
+      "fin": 12.94
+    },
+    {
+      "texte": "champion…",
+      "mot": "champion",
+      "scene": 3,
+      "debut": 12.94,
+      "fin": 13.2
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 13.66,
+      "fin": 13.74
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 13.74,
+      "fin": 14.02
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 14.02,
+      "fin": 14.3
+    },
+    {
+      "texte": "onze",
+      "mot": "onze",
+      "scene": 3,
+      "debut": 14.3,
+      "fin": 14.58
+    },
+    {
+      "texte": "points.",
+      "mot": "points",
+      "scene": 3,
+      "debut": 14.58,
+      "fin": 14.78
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 15.34,
+      "fin": 15.44
+    },
+    {
+      "texte": "meilleur",
+      "mot": "meilleur",
+      "scene": 4,
+      "debut": 15.44,
+      "fin": 15.72
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 4,
+      "debut": 15.72,
+      "fin": 15.92
+    },
+    {
+      "texte": "gagne.",
+      "mot": "gagne",
+      "scene": 4,
+      "debut": 15.92,
+      "fin": 16.22
+    },
+    {
+      "texte": "Envoie",
+      "mot": "Envoie",
+      "scene": 4,
+      "debut": 16.84,
+      "fin": 17.1
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 4,
+      "debut": 17.1,
+      "fin": 17.2
+    },
+    {
+      "texte": "défi",
+      "mot": "défi",
+      "scene": 4,
+      "debut": 17.2,
+      "fin": 17.3
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 17.3,
+      "fin": 17.4
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 4,
+      "debut": 17.4,
+      "fin": 17.52
+    },
+    {
+      "texte": "pote.",
+      "mot": "pote",
+      "scene": 4,
+      "debut": 17.52,
+      "fin": 17.7
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 18.16,
+      "fin": 18.58
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 18.58,
+      "fin": 18.88
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 19.1,
+      "fin": 19.42
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 19.42,
+      "fin": 19.72
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.72,
+      "fin": 19.9
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.9,
+      "fin": 20.04
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.04,
+      "fin": 20.24
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "duree": 20.28,
+  "dureeVoix": 18.48,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.68,
+      "fin": 3.26
+    },
+    {
+      "id": "e1",
+      "debut": 3.26,
+      "finVoix": 4.3,
+      "fin": 5.16
+    },
+    {
+      "id": "e2",
+      "debut": 5.16,
+      "finVoix": 7.3,
+      "fin": 8.42
+    },
+    {
+      "id": "e3",
+      "debut": 8.42,
+      "finVoix": 10.52,
+      "fin": 11.46
+    },
+    {
+      "id": "e4",
+      "debut": 11.46,
+      "finVoix": 12.74,
+      "fin": 13.46
+    },
+    {
+      "id": "e5",
+      "debut": 13.46,
+      "finVoix": 15.98,
+      "fin": 16.62
+    },
+    {
+      "id": "appel",
+      "debut": 16.62,
+      "finVoix": 18.48,
+      "fin": 20.28
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "excuses",
+      "mot": "excuses",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.8
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.12
+    },
+    {
+      "texte": "jouer",
+      "mot": "jouer",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.3
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.44
+    },
+    {
+      "texte": "Pédantix",
+      "mot": "Pédantix",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 2.1
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 0,
+      "debut": 2.1,
+      "fin": 2.32
+    },
+    {
+      "texte": "travail.",
+      "mot": "travail",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.68
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 1,
+      "debut": 3.26,
+      "fin": 3.58
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 3.58,
+      "fin": 3.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 3.64,
+      "fin": 3.72
+    },
+    {
+      "texte": "veille",
+      "mot": "veille",
+      "scene": 1,
+      "debut": 3.72,
+      "fin": 3.82
+    },
+    {
+      "texte": "documentaire.",
+      "mot": "documentaire",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 4.3
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 2,
+      "debut": 5.16,
+      "fin": 5.56
+    },
+    {
+      "texte": "révise",
+      "mot": "révise",
+      "scene": 2,
+      "debut": 5.56,
+      "fin": 5.84
+    },
+    {
+      "texte": "Wikipédia,",
+      "mot": "Wikipédia",
+      "scene": 2,
+      "debut": 5.84,
+      "fin": 6.28
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 6.76,
+      "fin": 6.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 6.96,
+      "fin": 7.02
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 7.02,
+      "fin": 7.08
+    },
+    {
+      "texte": "formation.",
+      "mot": "formation",
+      "scene": 2,
+      "debut": 7.08,
+      "fin": 7.3
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 3,
+      "debut": 8.42,
+      "fin": 8.58
+    },
+    {
+      "texte": "teste",
+      "mot": "teste",
+      "scene": 3,
+      "debut": 8.58,
+      "fin": 8.74
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 3,
+      "debut": 8.74,
+      "fin": 8.9
+    },
+    {
+      "texte": "app",
+      "mot": "app",
+      "scene": 3,
+      "debut": 8.9,
+      "fin": 8.98
+    },
+    {
+      "texte": "française,",
+      "mot": "française",
+      "scene": 3,
+      "debut": 8.98,
+      "fin": 9.26
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 9.86,
+      "fin": 9.9
+    },
+    {
+      "texte": "soutiens",
+      "mot": "soutiens",
+      "scene": 3,
+      "debut": 9.9,
+      "fin": 10.14
+    },
+    {
+      "texte": "l'économie.",
+      "mot": "l'économie",
+      "scene": 3,
+      "debut": 10.14,
+      "fin": 10.52
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 4,
+      "debut": 11.46,
+      "fin": 11.58
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 11.58,
+      "fin": 11.66
+    },
+    {
+      "texte": "midi,",
+      "mot": "midi",
+      "scene": 4,
+      "debut": 11.66,
+      "fin": 11.82
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 4,
+      "debut": 12.34,
+      "fin": 12.48
+    },
+    {
+      "texte": "ma",
+      "mot": "ma",
+      "scene": 4,
+      "debut": 12.48,
+      "fin": 12.54
+    },
+    {
+      "texte": "pause.",
+      "mot": "pause",
+      "scene": 4,
+      "debut": 12.54,
+      "fin": 12.74
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 13.46,
+      "fin": 13.52
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 5,
+      "debut": 13.52,
+      "fin": 13.62
+    },
+    {
+      "texte": "cinquième :",
+      "mot": "cinquième",
+      "scene": 5,
+      "debut": 13.62,
+      "fin": 13.96
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 5,
+      "debut": 14.6,
+      "fin": 14.72
+    },
+    {
+      "texte": "n'ai",
+      "mot": "n'ai",
+      "scene": 5,
+      "debut": 14.72,
+      "fin": 14.9
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 5,
+      "debut": 14.9,
+      "fin": 15.16
+    },
+    {
+      "texte": "besoin",
+      "mot": "besoin",
+      "scene": 5,
+      "debut": 15.16,
+      "fin": 15.36
+    },
+    {
+      "texte": "d'excuse.",
+      "mot": "d'excuse",
+      "scene": 5,
+      "debut": 15.36,
+      "fin": 15.98
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 6,
+      "debut": 16.62,
+      "fin": 17.02
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 17.68,
+      "fin": 18.08
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 18.08,
+      "fin": 18.2
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 6,
+      "debut": 18.2,
+      "fin": 18.3
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 6,
+      "debut": 18.3,
+      "fin": 18.48
+    }
+  ]
+}

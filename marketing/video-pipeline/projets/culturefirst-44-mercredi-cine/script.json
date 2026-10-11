@@ -1,0 +1,192 @@
+{
+  "titre": "Mercredi ciné & musique",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Mercredi ciné et musique ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Mercredi",
+          "texte": "Mercredi ciné & musique",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Mercredi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : qui a réalisé Titanic ? James Cameron.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Cameron"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : quel groupe chante Bohemian Rhapsody ? Queen.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Queen"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : qui a réalisé Le Fabuleux Destin d'Amélie Poulain ? Jean-Pierre Jeunet.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Jeunet"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous mercredi prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Films cultes",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a réalisé ce film ?",
+      "indiceType": "Film",
+      "indice": "Titanic",
+      "reponse": "James Cameron",
+      "fiche": [
+        [
+          "Sortie",
+          "1997"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tubes internationaux",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Bohemian Rhapsody",
+      "reponse": "Queen",
+      "fiche": [
+        [
+          "Sortie",
+          "1975"
+        ]
+      ]
+    },
+    {
+      "paquet": "Cinéma français",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a réalisé ce film ?",
+      "indiceType": "Film",
+      "indice": "Le Fabuleux Destin d'Amélie Poulain",
+      "reponse": "Jean-Pierre Jeunet",
+      "fiche": [
+        [
+          "Sortie",
+          "2001"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "Le mot qu'on retrouve partout",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Culture / astuce : le mot présent sur toutes les pages.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "J'ai analysé quarante-sept pages récentes de mon jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "quarante-sept",
+          "valeur": 47,
+          "sous": "pages analysées",
+          "fin": "jeu."
+        },
+        {
+          "type": "pose",
+          "ancre": "analysé",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "de",
+      "voix": "Le mot le plus fréquent ? De. Sans surprise.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Le"
+        },
+        {
+          "type": "tampon",
+          "ancre": "De.",
+          "texte": "« DE »",
+          "couleur": "or"
+        },
+        {
+          "type": "pose",
+          "ancre": "surprise.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "est",
+      "voix": "Mais un mot apparaît au début de toutes : est.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "toutes",
+          "texte": "« est »",
+          "sous": "au début des 47 pages",
+          "fin": "est."
+        }
+      ]
+    },
+    {
+      "id": "pourquoi",
+      "voix": "Parce que chaque article commence par dire ce que le sujet est.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Parce"
+        },
+        {
+          "type": "pose",
+          "ancre": "Parce",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Ton premier mot de demain est tout trouvé.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "trouvé.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "duree": 28.28,
+  "dureeVoix": 26.48,
+  "scenes": [
+    {
+      "id": "defi",
+      "debut": 0.0,
+      "finVoix": 3.68,
+      "fin": 4.66
+    },
+    {
+      "id": "un",
+      "debut": 4.66,
+      "finVoix": 9.152,
+      "fin": 9.152
+    },
+    {
+      "id": "deux",
+      "debut": 9.152,
+      "finVoix": 14.6,
+      "fin": 15.6
+    },
+    {
+      "id": "trois",
+      "debut": 15.6,
+      "finVoix": 19.64,
+      "fin": 19.64
+    },
+    {
+      "id": "appel",
+      "debut": 19.64,
+      "finVoix": 26.48,
+      "fin": 28.28
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Seuls",
+      "mot": "Seuls",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.58
+    },
+    {
+      "texte": "ceux",
+      "mot": "ceux",
+      "scene": 0,
+      "debut": 0.58,
+      "fin": 0.82
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 0.98
+    },
+    {
+      "texte": "écoutaient",
+      "mot": "écoutaient",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.3
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.44
+    },
+    {
+      "texte": "cours",
+      "mot": "cours",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.62
+    },
+    {
+      "texte": "d'histoire",
+      "mot": "d'histoire",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 2.02
+    },
+    {
+      "texte": "trouvent",
+      "mot": "trouvent",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.56
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 2.56,
+      "fin": 2.68
+    },
+    {
+      "texte": "trois.",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 2.68,
+      "fin": 2.86
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 3.42,
+      "fin": 3.44
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 3.44,
+      "fin": 3.68
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 4.78
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 5.78
+    },
+    {
+      "texte": "prise",
+      "mot": "prise",
+      "scene": 1,
+      "debut": 5.78,
+      "fin": 5.94
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.94,
+      "fin": 6.06
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.16
+    },
+    {
+      "texte": "Bastille ?",
+      "mot": "Bastille",
+      "scene": 1,
+      "debut": 6.16,
+      "fin": 6.48
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 7.148
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 1,
+      "debut": 7.148,
+      "fin": 7.816
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 7.816,
+      "fin": 8.484
+    },
+    {
+      "texte": "quatre-vingt-neuf.",
+      "mot": "quatre-vingt-neuf",
+      "scene": 1,
+      "debut": 8.484,
+      "fin": 9.152
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 9.152,
+      "fin": 9.82
+    },
+    {
+      "texte": "combien",
+      "mot": "combien",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.74
+    },
+    {
+      "texte": "d'années",
+      "mot": "d'années",
+      "scene": 2,
+      "debut": 10.74,
+      "fin": 11.0
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 11.0,
+      "fin": 11.1
+    },
+    {
+      "texte": "régné",
+      "mot": "régné",
+      "scene": 2,
+      "debut": 11.1,
+      "fin": 11.3
+    },
+    {
+      "texte": "Louis",
+      "mot": "Louis",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.46
+    },
+    {
+      "texte": "XIV ?",
+      "mot": "XIV",
+      "scene": 2,
+      "debut": 11.46,
+      "fin": 11.8
+    },
+    {
+      "texte": "Soixante-douze",
+      "mot": "Soixante-douze",
+      "scene": 2,
+      "debut": 11.8,
+      "fin": 13.44
+    },
+    {
+      "texte": "ans,",
+      "mot": "ans",
+      "scene": 2,
+      "debut": 13.44,
+      "fin": 13.92
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 14.34,
+      "fin": 14.4
+    },
+    {
+      "texte": "record.",
+      "mot": "record",
+      "scene": 2,
+      "debut": 14.4,
+      "fin": 14.6
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 15.6,
+      "fin": 16.08
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 16.76,
+      "fin": 16.82
+    },
+    {
+      "texte": "sacre",
+      "mot": "sacre",
+      "scene": 3,
+      "debut": 16.82,
+      "fin": 17.1
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 17.1,
+      "fin": 17.2
+    },
+    {
+      "texte": "Napoléon ?",
+      "mot": "Napoléon",
+      "scene": 3,
+      "debut": 17.2,
+      "fin": 17.64
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 3,
+      "debut": 17.64,
+      "fin": 18.14
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 3,
+      "debut": 18.14,
+      "fin": 18.64
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 18.64,
+      "fin": 19.14
+    },
+    {
+      "texte": "quatre.",
+      "mot": "quatre",
+      "scene": 3,
+      "debut": 19.14,
+      "fin": 19.64
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 4,
+      "debut": 19.64,
+      "fin": 20.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.14,
+      "fin": 20.26
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.82
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 20.82,
+      "fin": 21.38
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.38,
+      "fin": 21.48
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 21.48,
+      "fin": 21.94
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 22.7,
+      "fin": 22.9
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 4,
+      "debut": 22.9,
+      "fin": 23.14
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 4,
+      "debut": 23.14,
+      "fin": 23.38
+    },
+    {
+      "texte": "retenir :",
+      "mot": "retenir",
+      "scene": 4,
+      "debut": 23.38,
+      "fin": 23.9
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 24.36,
+      "fin": 24.52
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 24.52,
+      "fin": 24.88
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 25.32,
+      "fin": 25.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 25.62,
+      "fin": 25.86
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 25.86,
+      "fin": 26.06
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 26.06,
+      "fin": 26.24
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 26.24,
+      "fin": 26.48
+    }
+  ]
+}

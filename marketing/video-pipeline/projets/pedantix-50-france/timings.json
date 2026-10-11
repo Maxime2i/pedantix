@@ -1,0 +1,289 @@
+{
+  "duree": 19.64,
+  "dureeVoix": 17.84,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.04,
+      "fin": 2.68
+    },
+    {
+      "id": "absent",
+      "debut": 2.68,
+      "finVoix": 5.08,
+      "fin": 5.68
+    },
+    {
+      "id": "elargir",
+      "debut": 5.68,
+      "finVoix": 9.0,
+      "fin": 9.8
+    },
+    {
+      "id": "trouve",
+      "debut": 9.8,
+      "finVoix": 12.72,
+      "fin": 13.7
+    },
+    {
+      "id": "morale",
+      "debut": 13.7,
+      "finVoix": 15.62,
+      "fin": 16.22
+    },
+    {
+      "id": "appel",
+      "debut": 16.22,
+      "finVoix": 17.84,
+      "fin": 19.64
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tout",
+      "mot": "Tout",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.56
+    },
+    {
+      "texte": "monde",
+      "mot": "monde",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.74
+    },
+    {
+      "texte": "commence",
+      "mot": "commence",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 1.0
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.24
+    },
+    {
+      "texte": "taper",
+      "mot": "taper",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.5
+    },
+    {
+      "texte": "France.",
+      "mot": "France",
+      "scene": 0,
+      "debut": 1.5,
+      "fin": 2.04
+    },
+    {
+      "texte": "Absent.",
+      "mot": "Absent",
+      "scene": 1,
+      "debut": 2.68,
+      "fin": 3.24
+    },
+    {
+      "texte": "Normal,",
+      "mot": "Normal",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 4.1
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.34,
+      "fin": 4.44
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.62
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 1,
+      "debut": 4.62,
+      "fin": 4.72
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.82
+    },
+    {
+      "texte": "française.",
+      "mot": "française",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 5.08
+    },
+    {
+      "texte": "Alors",
+      "mot": "Alors",
+      "scene": 2,
+      "debut": 5.68,
+      "fin": 6.08
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 2,
+      "debut": 6.08,
+      "fin": 6.24
+    },
+    {
+      "texte": "élargit :",
+      "mot": "élargit",
+      "scene": 2,
+      "debut": 6.24,
+      "fin": 6.58
+    },
+    {
+      "texte": "Angleterre.",
+      "mot": "Angleterre",
+      "scene": 2,
+      "debut": 7.84,
+      "fin": 8.44
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 8.58,
+      "fin": 8.88
+    },
+    {
+      "texte": "fois !",
+      "mot": "fois",
+      "scene": 2,
+      "debut": 8.88,
+      "fin": 9.0
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 3,
+      "debut": 9.8,
+      "fin": 10.02
+    },
+    {
+      "texte": "fleuve,",
+      "mot": "fleuve",
+      "scene": 3,
+      "debut": 10.02,
+      "fin": 10.52
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 11.04,
+      "fin": 11.3
+    },
+    {
+      "texte": "Mersey…",
+      "mot": "Mersey",
+      "scene": 3,
+      "debut": 11.3,
+      "fin": 11.9
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 11.9,
+      "fin": 12.5
+    },
+    {
+      "texte": "Liverpool !",
+      "mot": "Liverpool",
+      "scene": 3,
+      "debut": 12.5,
+      "fin": 12.72
+    },
+    {
+      "texte": "Commence",
+      "mot": "Commence",
+      "scene": 4,
+      "debut": 13.7,
+      "fin": 14.3
+    },
+    {
+      "texte": "large,",
+      "mot": "large",
+      "scene": 4,
+      "debut": 14.3,
+      "fin": 14.6
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 4,
+      "debut": 14.6,
+      "fin": 14.98
+    },
+    {
+      "texte": "resserre.",
+      "mot": "resserre",
+      "scene": 4,
+      "debut": 14.98,
+      "fin": 15.62
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 16.22,
+      "fin": 16.7
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 17.08,
+      "fin": 17.46
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 17.46,
+      "fin": 17.58
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 17.58,
+      "fin": 17.72
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 17.72,
+      "fin": 17.84
+    }
+  ]
+}

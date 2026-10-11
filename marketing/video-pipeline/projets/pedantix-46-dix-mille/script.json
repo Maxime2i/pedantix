@@ -1,0 +1,133 @@
+{
+  "titre": "10 000 sujets",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Coulisses : d'où viennent les pages du jeu.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "D'où viennent les pages de mon jeu ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "D'où",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "liste",
+      "voix": "Wikipédia tient une liste d'environ dix mille articles essentiels.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Wikipédia",
+          "nom": "neutre"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "dix",
+          "valeur": 10000,
+          "prefixe": "≈ ",
+          "sous": "articles essentiels",
+          "fin": "essentiels."
+        }
+      ]
+    },
+    {
+      "id": "pioche",
+      "voix": "Mon jeu en pioche un chaque jour, à midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "pioche",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "themes",
+      "voix": "Sciences, histoire, géographie, arts, personnalités…",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Sciences,",
+          "titre": "Au menu"
+        },
+        {
+          "type": "point",
+          "ancre": "Sciences,",
+          "texte": "Sciences"
+        },
+        {
+          "type": "point",
+          "ancre": "histoire,",
+          "texte": "Histoire"
+        },
+        {
+          "type": "point",
+          "ancre": "géographie,",
+          "texte": "Géographie"
+        },
+        {
+          "type": "point",
+          "ancre": "arts,",
+          "texte": "Arts"
+        },
+        {
+          "type": "point",
+          "ancre": "personnalités…",
+          "texte": "Personnalités"
+        }
+      ]
+    },
+    {
+      "id": "rythme",
+      "voix": "À ce rythme, il y en a pour vingt-sept ans.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "À"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "vingt-sept",
+          "valeur": 27,
+          "suffixe": " ans",
+          "sous": "de pages à jouer"
+        },
+        {
+          "type": "pose",
+          "ancre": "vingt-sept",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

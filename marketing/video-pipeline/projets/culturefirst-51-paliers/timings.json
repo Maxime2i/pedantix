@@ -1,0 +1,430 @@
+{
+  "duree": 25.38,
+  "dureeVoix": 23.58,
+  "scenes": [
+    {
+      "id": "paliers",
+      "debut": 0.0,
+      "finVoix": 5.48,
+      "fin": 5.88
+    },
+    {
+      "id": "message",
+      "debut": 5.88,
+      "finVoix": 9.5,
+      "fin": 10.14
+    },
+    {
+      "id": "ensuite",
+      "debut": 10.14,
+      "finVoix": 15.41,
+      "fin": 15.41
+    },
+    {
+      "id": "toi",
+      "debut": 15.41,
+      "finVoix": 18.52,
+      "fin": 19.42
+    },
+    {
+      "id": "appel",
+      "debut": 19.42,
+      "finVoix": 23.58,
+      "fin": 25.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.64
+    },
+    {
+      "texte": "jours,",
+      "mot": "jours",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.84
+    },
+    {
+      "texte": "sept,",
+      "mot": "sept",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 1.56
+    },
+    {
+      "texte": "quatorze,",
+      "mot": "quatorze",
+      "scene": 0,
+      "debut": 2.0,
+      "fin": 2.58
+    },
+    {
+      "texte": "trente…",
+      "mot": "trente",
+      "scene": 0,
+      "debut": 2.92,
+      "fin": 3.14
+    },
+    {
+      "texte": "Chaque",
+      "mot": "Chaque",
+      "scene": 0,
+      "debut": 3.74,
+      "fin": 3.98
+    },
+    {
+      "texte": "palier",
+      "mot": "palier",
+      "scene": 0,
+      "debut": 3.98,
+      "fin": 4.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 4.38,
+      "fin": 4.5
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 0,
+      "debut": 4.5,
+      "fin": 4.66
+    },
+    {
+      "texte": "série",
+      "mot": "série",
+      "scene": 0,
+      "debut": 4.66,
+      "fin": 4.94
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 4.94,
+      "fin": 5.16
+    },
+    {
+      "texte": "fêté.",
+      "mot": "fêté",
+      "scene": 0,
+      "debut": 5.16,
+      "fin": 5.48
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.06
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.14
+    },
+    {
+      "texte": "fin",
+      "mot": "fin",
+      "scene": 1,
+      "debut": 6.14,
+      "fin": 6.36
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.42
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 1,
+      "debut": 6.42,
+      "fin": 6.52
+    },
+    {
+      "texte": "séance : «",
+      "mot": "séance",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.92
+    },
+    {
+      "texte": "Palier",
+      "mot": "Palier",
+      "scene": 1,
+      "debut": 7.4,
+      "fin": 7.64
+    },
+    {
+      "texte": "atteint :",
+      "mot": "atteint",
+      "scene": 1,
+      "debut": 7.64,
+      "fin": 8.04
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 1,
+      "debut": 8.04,
+      "fin": 8.64
+    },
+    {
+      "texte": "jours",
+      "mot": "jours",
+      "scene": 1,
+      "debut": 8.64,
+      "fin": 8.94
+    },
+    {
+      "texte": "d'affilée ! »",
+      "mot": "d'affilée",
+      "scene": 1,
+      "debut": 8.94,
+      "fin": 9.5
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.18
+    },
+    {
+      "texte": "ensuite",
+      "mot": "ensuite",
+      "scene": 2,
+      "debut": 10.18,
+      "fin": 10.48
+    },
+    {
+      "texte": "cinquante,",
+      "mot": "cinquante",
+      "scene": 2,
+      "debut": 10.88,
+      "fin": 11.38
+    },
+    {
+      "texte": "cent,",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 11.68,
+      "fin": 12.02
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 12.56,
+      "fin": 12.7
+    },
+    {
+      "texte": "cents…",
+      "mot": "cents",
+      "scene": 2,
+      "debut": 12.7,
+      "fin": 13.25
+    },
+    {
+      "texte": "jusqu'à",
+      "mot": "jusqu'à",
+      "scene": 2,
+      "debut": 13.25,
+      "fin": 13.8
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 13.8,
+      "fin": 14.52
+    },
+    {
+      "texte": "jours",
+      "mot": "jours",
+      "scene": 2,
+      "debut": 14.52,
+      "fin": 14.7
+    },
+    {
+      "texte": "d'affilée.",
+      "mot": "d'affilée",
+      "scene": 2,
+      "debut": 14.7,
+      "fin": 15.41
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 3,
+      "debut": 15.41,
+      "fin": 16.12
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 16.12,
+      "fin": 16.16
+    },
+    {
+      "texte": "es",
+      "mot": "es",
+      "scene": 3,
+      "debut": 16.16,
+      "fin": 16.3
+    },
+    {
+      "texte": "où,",
+      "mot": "où",
+      "scene": 3,
+      "debut": 16.3,
+      "fin": 16.48
+    },
+    {
+      "texte": "toi ?",
+      "mot": "toi",
+      "scene": 3,
+      "debut": 16.48,
+      "fin": 16.68
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 3,
+      "debut": 16.68,
+      "fin": 17.4
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 17.4,
+      "fin": 17.46
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 3,
+      "debut": 17.46,
+      "fin": 17.96
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 3,
+      "debut": 18.1,
+      "fin": 18.16
+    },
+    {
+      "texte": "compare.",
+      "mot": "compare",
+      "scene": 3,
+      "debut": 18.16,
+      "fin": 18.52
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 19.42,
+      "fin": 19.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 19.66,
+      "fin": 19.84
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 19.84,
+      "fin": 20.14
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 20.14,
+      "fin": 20.32
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 20.32,
+      "fin": 20.56
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 20.56,
+      "fin": 20.82
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 21.36,
+      "fin": 21.6
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 21.6,
+      "fin": 22.0
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 22.0,
+      "fin": 22.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 22.64,
+      "fin": 22.86
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 22.86,
+      "fin": 23.06
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 23.06,
+      "fin": 23.3
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 23.3,
+      "fin": 23.58
+    }
+  ]
+}

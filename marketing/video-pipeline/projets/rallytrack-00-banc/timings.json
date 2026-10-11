@@ -1,0 +1,775 @@
+{
+  "factice": true,
+  "duree": 51.3,
+  "dureeVoix": 49.5,
+  "scenes": [
+    {
+      "id": "accueil",
+      "debut": 0.3,
+      "finVoix": 5.195,
+      "fin": 5.695
+    },
+    {
+      "id": "apercu",
+      "debut": 5.695,
+      "finVoix": 9.81,
+      "fin": 10.31
+    },
+    {
+      "id": "classement",
+      "debut": 10.31,
+      "finVoix": 15.32,
+      "fin": 15.82
+    },
+    {
+      "id": "speciales",
+      "debut": 15.82,
+      "finVoix": 19.8,
+      "fin": 20.3
+    },
+    {
+      "id": "engages",
+      "debut": 20.3,
+      "finVoix": 22.77,
+      "fin": 23.27
+    },
+    {
+      "id": "pilote",
+      "debut": 23.27,
+      "finVoix": 27.79,
+      "fin": 28.29
+    },
+    {
+      "id": "alertes",
+      "debut": 28.29,
+      "finVoix": 31.21,
+      "fin": 31.71
+    },
+    {
+      "id": "verrou",
+      "debut": 31.71,
+      "finVoix": 35.08,
+      "fin": 35.58
+    },
+    {
+      "id": "avatar",
+      "debut": 35.58,
+      "finVoix": 39.475,
+      "fin": 39.665
+    },
+    {
+      "id": "formats",
+      "debut": 39.665,
+      "finVoix": 45.845,
+      "fin": 46.345
+    },
+    {
+      "id": "typo",
+      "debut": 46.345,
+      "finVoix": 49.5,
+      "fin": 51.3
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Voici",
+      "mot": "Voici",
+      "scene": 0,
+      "debut": 0.3,
+      "fin": 0.705
+    },
+    {
+      "texte": "l'accueil,",
+      "mot": "l'accueil",
+      "scene": 0,
+      "debut": 0.745,
+      "fin": 1.33
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.84
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.195
+    },
+    {
+      "texte": "rallyes",
+      "mot": "rallyes",
+      "scene": 0,
+      "debut": 2.235,
+      "fin": 2.73
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 2.77,
+      "fin": 3.04
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 3.08,
+      "fin": 3.44
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 3.59,
+      "fin": 3.86
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 0,
+      "debut": 3.9,
+      "fin": 4.17
+    },
+    {
+      "texte": "ouvre",
+      "mot": "ouvre",
+      "scene": 0,
+      "debut": 4.21,
+      "fin": 4.615
+    },
+    {
+      "texte": "celui-ci.",
+      "mot": "celui-ci",
+      "scene": 0,
+      "debut": 4.655,
+      "fin": 5.195
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 5.695,
+      "fin": 5.965
+    },
+    {
+      "texte": "fiche",
+      "mot": "fiche",
+      "scene": 1,
+      "debut": 6.005,
+      "fin": 6.41
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 6.45,
+      "fin": 6.72
+    },
+    {
+      "texte": "rallye,",
+      "mot": "rallye",
+      "scene": 1,
+      "debut": 6.76,
+      "fin": 7.21
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 7.36,
+      "fin": 7.63
+    },
+    {
+      "texte": "direct.",
+      "mot": "direct",
+      "scene": 1,
+      "debut": 7.67,
+      "fin": 8.12
+    },
+    {
+      "texte": "J'active",
+      "mot": "J'active",
+      "scene": 1,
+      "debut": 8.47,
+      "fin": 9.01
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 9.05,
+      "fin": 9.32
+    },
+    {
+      "texte": "cloche.",
+      "mot": "cloche",
+      "scene": 1,
+      "debut": 9.36,
+      "fin": 9.81
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 10.31,
+      "fin": 10.58
+    },
+    {
+      "texte": "classement",
+      "mot": "classement",
+      "scene": 2,
+      "debut": 10.62,
+      "fin": 11.25
+    },
+    {
+      "texte": "bouge :",
+      "mot": "bouge",
+      "scene": 2,
+      "debut": 11.29,
+      "fin": 11.695
+    },
+    {
+      "texte": "Marchal",
+      "mot": "Marchal",
+      "scene": 2,
+      "debut": 11.735,
+      "fin": 12.23
+    },
+    {
+      "texte": "passe",
+      "mot": "passe",
+      "scene": 2,
+      "debut": 12.27,
+      "fin": 12.675
+    },
+    {
+      "texte": "devant",
+      "mot": "devant",
+      "scene": 2,
+      "debut": 12.715,
+      "fin": 13.165
+    },
+    {
+      "texte": "Brunet,",
+      "mot": "Brunet",
+      "scene": 2,
+      "debut": 13.205,
+      "fin": 13.655
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 2,
+      "debut": 13.805,
+      "fin": 14.165
+    },
+    {
+      "texte": "prend",
+      "mot": "prend",
+      "scene": 2,
+      "debut": 14.205,
+      "fin": 14.61
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 14.65,
+      "fin": 14.92
+    },
+    {
+      "texte": "tête.",
+      "mot": "tête",
+      "scene": 2,
+      "debut": 14.96,
+      "fin": 15.32
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 3,
+      "debut": 15.82,
+      "fin": 16.135
+    },
+    {
+      "texte": "spéciales,",
+      "mot": "spéciales",
+      "scene": 3,
+      "debut": 16.175,
+      "fin": 16.76
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 16.91,
+      "fin": 17.18
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 17.22,
+      "fin": 17.49
+    },
+    {
+      "texte": "scratch",
+      "mot": "scratch",
+      "scene": 3,
+      "debut": 17.53,
+      "fin": 18.025
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 18.065,
+      "fin": 18.335
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 18.375,
+      "fin": 18.645
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 3,
+      "debut": 18.685,
+      "fin": 19.045
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 19.085,
+      "fin": 19.355
+    },
+    {
+      "texte": "cumul.",
+      "mot": "cumul",
+      "scene": 3,
+      "debut": 19.395,
+      "fin": 19.8
+    },
+    {
+      "texte": "On",
+      "mot": "On",
+      "scene": 4,
+      "debut": 20.3,
+      "fin": 20.57
+    },
+    {
+      "texte": "ferme,",
+      "mot": "ferme",
+      "scene": 4,
+      "debut": 20.61,
+      "fin": 21.015
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 21.165,
+      "fin": 21.435
+    },
+    {
+      "texte": "voici",
+      "mot": "voici",
+      "scene": 4,
+      "debut": 21.475,
+      "fin": 21.88
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 4,
+      "debut": 21.92,
+      "fin": 22.235
+    },
+    {
+      "texte": "engagés.",
+      "mot": "engagés",
+      "scene": 4,
+      "debut": 22.275,
+      "fin": 22.77
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 5,
+      "debut": 23.27,
+      "fin": 23.54
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 5,
+      "debut": 23.58,
+      "fin": 23.94
+    },
+    {
+      "texte": "pilote,",
+      "mot": "pilote",
+      "scene": 5,
+      "debut": 23.98,
+      "fin": 24.43
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 5,
+      "debut": 24.58,
+      "fin": 24.94
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 5,
+      "debut": 24.98,
+      "fin": 25.295
+    },
+    {
+      "texte": "dernier",
+      "mot": "dernier",
+      "scene": 5,
+      "debut": 25.335,
+      "fin": 25.83
+    },
+    {
+      "texte": "résultat",
+      "mot": "résultat",
+      "scene": 5,
+      "debut": 25.87,
+      "fin": 26.41
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 26.45,
+      "fin": 26.72
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 5,
+      "debut": 26.76,
+      "fin": 27.075
+    },
+    {
+      "texte": "championnat.",
+      "mot": "championnat",
+      "scene": 5,
+      "debut": 27.115,
+      "fin": 27.79
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 6,
+      "debut": 28.29,
+      "fin": 28.605
+    },
+    {
+      "texte": "alertes :",
+      "mot": "alertes",
+      "scene": 6,
+      "debut": 28.645,
+      "fin": 29.14
+    },
+    {
+      "texte": "victoire",
+      "mot": "victoire",
+      "scene": 6,
+      "debut": 29.18,
+      "fin": 29.72
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 6,
+      "debut": 29.76,
+      "fin": 30.03
+    },
+    {
+      "texte": "spéciale,",
+      "mot": "spéciale",
+      "scene": 6,
+      "debut": 30.07,
+      "fin": 30.61
+    },
+    {
+      "texte": "cochée.",
+      "mot": "cochée",
+      "scene": 6,
+      "debut": 30.76,
+      "fin": 31.21
+    },
+    {
+      "texte": "Téléphone",
+      "mot": "Téléphone",
+      "scene": 7,
+      "debut": 31.71,
+      "fin": 32.295
+    },
+    {
+      "texte": "verrouillé,",
+      "mot": "verrouillé",
+      "scene": 7,
+      "debut": 32.335,
+      "fin": 32.965
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 7,
+      "debut": 33.115,
+      "fin": 33.385
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 7,
+      "debut": 33.425,
+      "fin": 33.74
+    },
+    {
+      "texte": "notifications",
+      "mot": "notifications",
+      "scene": 7,
+      "debut": 33.78,
+      "fin": 34.545
+    },
+    {
+      "texte": "tombent.",
+      "mot": "tombent",
+      "scene": 7,
+      "debut": 34.585,
+      "fin": 35.08
+    },
+    {
+      "texte": "Moi",
+      "mot": "Moi",
+      "scene": 8,
+      "debut": 35.58,
+      "fin": 35.895
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 8,
+      "debut": 35.935,
+      "fin": 36.34
+    },
+    {
+      "texte": "Maxime,",
+      "mot": "Maxime",
+      "scene": 8,
+      "debut": 36.38,
+      "fin": 36.83
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 8,
+      "debut": 36.98,
+      "fin": 37.25
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 8,
+      "debut": 37.29,
+      "fin": 37.56
+    },
+    {
+      "texte": "montre",
+      "mot": "montre",
+      "scene": 8,
+      "debut": 37.6,
+      "fin": 38.05
+    },
+    {
+      "texte": "l'appli.",
+      "mot": "l'appli",
+      "scene": 8,
+      "debut": 38.09,
+      "fin": 38.585
+    },
+    {
+      "texte": "Surprise !",
+      "mot": "Surprise",
+      "scene": 8,
+      "debut": 38.935,
+      "fin": 39.475
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 9,
+      "debut": 39.665,
+      "fin": 39.935
+    },
+    {
+      "texte": "titre,",
+      "mot": "titre",
+      "scene": 9,
+      "debut": 39.975,
+      "fin": 40.38
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 9,
+      "debut": 40.53,
+      "fin": 40.845
+    },
+    {
+      "texte": "liste",
+      "mot": "liste",
+      "scene": 9,
+      "debut": 40.885,
+      "fin": 41.29
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 9,
+      "debut": 41.33,
+      "fin": 41.6
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 9,
+      "debut": 41.64,
+      "fin": 42
+    },
+    {
+      "texte": "points,",
+      "mot": "points",
+      "scene": 9,
+      "debut": 42.04,
+      "fin": 42.49
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 9,
+      "debut": 42.64,
+      "fin": 42.91
+    },
+    {
+      "texte": "chiffre",
+      "mot": "chiffre",
+      "scene": 9,
+      "debut": 42.95,
+      "fin": 43.445
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 9,
+      "debut": 43.485,
+      "fin": 43.755
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 9,
+      "debut": 43.795,
+      "fin": 44.065
+    },
+    {
+      "texte": "chrono",
+      "mot": "chrono",
+      "scene": 9,
+      "debut": 44.105,
+      "fin": 44.555
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 9,
+      "debut": 44.595,
+      "fin": 44.91
+    },
+    {
+      "texte": "s'arrête",
+      "mot": "s'arrête",
+      "scene": 9,
+      "debut": 44.95,
+      "fin": 45.49
+    },
+    {
+      "texte": "net.",
+      "mot": "net",
+      "scene": 9,
+      "debut": 45.53,
+      "fin": 45.845
+    },
+    {
+      "texte": "Du",
+      "mot": "Du",
+      "scene": 10,
+      "debut": 46.345,
+      "fin": 46.615
+    },
+    {
+      "texte": "texte",
+      "mot": "texte",
+      "scene": 10,
+      "debut": 46.655,
+      "fin": 47.06
+    },
+    {
+      "texte": "géant,",
+      "mot": "géant",
+      "scene": 10,
+      "debut": 47.1,
+      "fin": 47.505
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 10,
+      "debut": 47.655,
+      "fin": 47.925
+    },
+    {
+      "texte": "tampon,",
+      "mot": "tampon",
+      "scene": 10,
+      "debut": 47.965,
+      "fin": 48.415
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 10,
+      "debut": 48.565,
+      "fin": 48.835
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 10,
+      "debut": 48.875,
+      "fin": 49.145
+    },
+    {
+      "texte": "fin.",
+      "mot": "fin",
+      "scene": 10,
+      "debut": 49.185,
+      "fin": 49.5
+    }
+  ]
+}

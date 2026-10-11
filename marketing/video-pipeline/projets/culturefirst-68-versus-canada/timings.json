@@ -1,0 +1,416 @@
+{
+  "duree": 25.92,
+  "dureeVoix": 24.12,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 3.24,
+      "fin": 3.9
+    },
+    {
+      "id": "immense",
+      "debut": 3.9,
+      "finVoix": 7.04,
+      "fin": 7.7
+    },
+    {
+      "id": "reponse",
+      "debut": 7.7,
+      "finVoix": 14.9,
+      "fin": 15.44
+    },
+    {
+      "id": "bonus",
+      "debut": 15.44,
+      "finVoix": 19.08,
+      "fin": 19.82
+    },
+    {
+      "id": "appel",
+      "debut": 19.82,
+      "finVoix": 24.12,
+      "fin": 25.92
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "peuplé :",
+      "mot": "peuplé",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.84
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.62
+    },
+    {
+      "texte": "Canada,",
+      "mot": "Canada",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.98
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 1.98,
+      "fin": 2.5
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.5,
+      "fin": 2.62
+    },
+    {
+      "texte": "Californie ?",
+      "mot": "Californie",
+      "scene": 0,
+      "debut": 2.62,
+      "fin": 3.24
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 3.9,
+      "fin": 3.94
+    },
+    {
+      "texte": "Canada",
+      "mot": "Canada",
+      "scene": 1,
+      "debut": 3.94,
+      "fin": 4.3
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 4.3,
+      "fin": 4.74
+    },
+    {
+      "texte": "immense…",
+      "mot": "immense",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.52
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.34
+    },
+    {
+      "texte": "très",
+      "mot": "très",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 6.52
+    },
+    {
+      "texte": "peu",
+      "mot": "peu",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.52
+    },
+    {
+      "texte": "peuplé.",
+      "mot": "peuplé",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 7.04
+    },
+    {
+      "texte": "Réponse :",
+      "mot": "Réponse",
+      "scene": 2,
+      "debut": 7.7,
+      "fin": 8.3
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.18,
+      "fin": 9.22
+    },
+    {
+      "texte": "Canada,",
+      "mot": "Canada",
+      "scene": 2,
+      "debut": 9.22,
+      "fin": 9.68
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 9.68,
+      "fin": 10.16
+    },
+    {
+      "texte": "justesse.",
+      "mot": "justesse",
+      "scene": 2,
+      "debut": 10.16,
+      "fin": 10.54
+    },
+    {
+      "texte": "Environ",
+      "mot": "Environ",
+      "scene": 2,
+      "debut": 11.24,
+      "fin": 11.6
+    },
+    {
+      "texte": "quarante",
+      "mot": "quarante",
+      "scene": 2,
+      "debut": 11.6,
+      "fin": 11.807
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 11.807,
+      "fin": 12.013
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 12.013,
+      "fin": 12.22
+    },
+    {
+      "texte": "millions",
+      "mot": "millions",
+      "scene": 2,
+      "debut": 12.22,
+      "fin": 12.54
+    },
+    {
+      "texte": "d'habitants,",
+      "mot": "d'habitants",
+      "scene": 2,
+      "debut": 12.54,
+      "fin": 13.04
+    },
+    {
+      "texte": "contre",
+      "mot": "contre",
+      "scene": 2,
+      "debut": 13.32,
+      "fin": 13.58
+    },
+    {
+      "texte": "trente-neuf",
+      "mot": "trente-neuf",
+      "scene": 2,
+      "debut": 13.58,
+      "fin": 14.02
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 2,
+      "debut": 14.02,
+      "fin": 14.24
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 14.24,
+      "fin": 14.34
+    },
+    {
+      "texte": "Californie.",
+      "mot": "Californie",
+      "scene": 2,
+      "debut": 14.34,
+      "fin": 14.9
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 3,
+      "debut": 15.44,
+      "fin": 15.76
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 3,
+      "debut": 15.76,
+      "fin": 16.0
+    },
+    {
+      "texte": "entier,",
+      "mot": "entier",
+      "scene": 3,
+      "debut": 16.0,
+      "fin": 16.72
+    },
+    {
+      "texte": "presque",
+      "mot": "presque",
+      "scene": 3,
+      "debut": 16.72,
+      "fin": 17.16
+    },
+    {
+      "texte": "égal",
+      "mot": "égal",
+      "scene": 3,
+      "debut": 17.16,
+      "fin": 17.46
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 17.46,
+      "fin": 17.66
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 17.66,
+      "fin": 18.0
+    },
+    {
+      "texte": "seul",
+      "mot": "seul",
+      "scene": 3,
+      "debut": 18.0,
+      "fin": 18.32
+    },
+    {
+      "texte": "État",
+      "mot": "État",
+      "scene": 3,
+      "debut": 18.32,
+      "fin": 18.58
+    },
+    {
+      "texte": "américain.",
+      "mot": "américain",
+      "scene": 3,
+      "debut": 18.58,
+      "fin": 19.08
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 19.82,
+      "fin": 20.04
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 20.04,
+      "fin": 20.26
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.44
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 20.44,
+      "fin": 20.62
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 20.62,
+      "fin": 20.8
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 20.8,
+      "fin": 21.18
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 21.76,
+      "fin": 22.02
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 22.02,
+      "fin": 22.46
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 22.72,
+      "fin": 23.04
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 23.04,
+      "fin": 23.24
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 23.24,
+      "fin": 23.54
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 23.54,
+      "fin": 23.9
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 23.9,
+      "fin": 24.12
+    }
+  ]
+}

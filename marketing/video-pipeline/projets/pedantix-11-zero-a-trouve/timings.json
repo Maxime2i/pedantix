@@ -1,0 +1,276 @@
+{
+  "duree": 16.44,
+  "dureeVoix": 14.64,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.58,
+      "fin": 2.76
+    },
+    {
+      "id": "partie",
+      "debut": 2.76,
+      "finVoix": 7.98,
+      "fin": 8.08
+    },
+    {
+      "id": "titre",
+      "debut": 8.08,
+      "finVoix": 10.58,
+      "fin": 10.58
+    },
+    {
+      "id": "score",
+      "debut": 10.58,
+      "finVoix": 12.6,
+      "fin": 13.08
+    },
+    {
+      "id": "appel",
+      "debut": 13.08,
+      "finVoix": 14.64,
+      "fin": 16.44
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Page",
+      "mot": "Page",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "vide.",
+      "mot": "vide",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.66
+    },
+    {
+      "texte": "Aucun",
+      "mot": "Aucun",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.42
+    },
+    {
+      "texte": "indice.",
+      "mot": "indice",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.9
+    },
+    {
+      "texte": "Regarde.",
+      "mot": "Regarde",
+      "scene": 0,
+      "debut": 2.28,
+      "fin": 2.58
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 2.76,
+      "fin": 2.84
+    },
+    {
+      "texte": "commence",
+      "mot": "commence",
+      "scene": 1,
+      "debut": 2.84,
+      "fin": 3.0
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 1,
+      "debut": 3.0,
+      "fin": 3.18
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 3.18,
+      "fin": 3.3
+    },
+    {
+      "texte": "petits",
+      "mot": "petits",
+      "scene": 1,
+      "debut": 3.3,
+      "fin": 3.44
+    },
+    {
+      "texte": "mots,",
+      "mot": "mots",
+      "scene": 1,
+      "debut": 3.44,
+      "fin": 3.66
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.32
+    },
+    {
+      "texte": "Danemark,",
+      "mot": "Danemark",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 5.08
+    },
+    {
+      "texte": "Suède,",
+      "mot": "Suède",
+      "scene": 1,
+      "debut": 5.26,
+      "fin": 5.84
+    },
+    {
+      "texte": "île…",
+      "mot": "île",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.8
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 1,
+      "debut": 7.1,
+      "fin": 7.16
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 1,
+      "debut": 7.16,
+      "fin": 7.3
+    },
+    {
+      "texte": "précise.",
+      "mot": "précise",
+      "scene": 1,
+      "debut": 7.3,
+      "fin": 7.98
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.2
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 2,
+      "debut": 8.2,
+      "fin": 8.74
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 8.74,
+      "fin": 8.86
+    },
+    {
+      "texte": "Nord…",
+      "mot": "Nord",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 9.08
+    },
+    {
+      "texte": "Copenhague !",
+      "mot": "Copenhague",
+      "scene": 2,
+      "debut": 10.08,
+      "fin": 10.58
+    },
+    {
+      "texte": "Cinquante-quatre",
+      "mot": "Cinquante-quatre",
+      "scene": 3,
+      "debut": 10.58,
+      "fin": 11.08
+    },
+    {
+      "texte": "coups,",
+      "mot": "coups",
+      "scene": 3,
+      "debut": 11.08,
+      "fin": 11.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 11.7,
+      "fin": 11.78
+    },
+    {
+      "texte": "zéro",
+      "mot": "zéro",
+      "scene": 3,
+      "debut": 11.78,
+      "fin": 12.16
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 12.16,
+      "fin": 12.38
+    },
+    {
+      "texte": "trouvé.",
+      "mot": "trouvé",
+      "scene": 3,
+      "debut": 12.38,
+      "fin": 12.6
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 13.08,
+      "fin": 13.58
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 13.86,
+      "fin": 14.16
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.16,
+      "fin": 14.38
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.38,
+      "fin": 14.5
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 14.5,
+      "fin": 14.64
+    }
+  ]
+}

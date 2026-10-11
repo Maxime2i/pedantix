@@ -1,0 +1,464 @@
+{
+  "duree": 25.68,
+  "dureeVoix": 23.88,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.24,
+      "fin": 4.8
+    },
+    {
+      "id": "fax",
+      "debut": 4.8,
+      "finVoix": 6.94,
+      "fin": 7.6
+    },
+    {
+      "id": "telephone",
+      "debut": 7.6,
+      "finVoix": 9.788,
+      "fin": 9.788
+    },
+    {
+      "id": "suite",
+      "debut": 9.788,
+      "finVoix": 16.14,
+      "fin": 16.14
+    },
+    {
+      "id": "ecart",
+      "debut": 16.14,
+      "finVoix": 18.4,
+      "fin": 19.24
+    },
+    {
+      "id": "appel",
+      "debut": 19.24,
+      "finVoix": 23.88,
+      "fin": 25.68
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "fax",
+      "mot": "fax",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 1.0
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.34
+    },
+    {
+      "texte": "été",
+      "mot": "été",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.56
+    },
+    {
+      "texte": "inventé",
+      "mot": "inventé",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 2.12
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.58
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.88
+    },
+    {
+      "texte": "téléphone.",
+      "mot": "téléphone",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.24
+    },
+    {
+      "texte": "Si,",
+      "mot": "Si",
+      "scene": 0,
+      "debut": 3.84,
+      "fin": 4.06
+    },
+    {
+      "texte": "si.",
+      "mot": "si",
+      "scene": 0,
+      "debut": 4.06,
+      "fin": 4.24
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 4.8,
+      "fin": 5.04
+    },
+    {
+      "texte": "fax :",
+      "mot": "fax",
+      "scene": 1,
+      "debut": 5.04,
+      "fin": 5.44
+    },
+    {
+      "texte": "brevet",
+      "mot": "brevet",
+      "scene": 1,
+      "debut": 5.44,
+      "fin": 6.02
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 6.02,
+      "fin": 6.12
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 6.12,
+      "fin": 6.325
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 1,
+      "debut": 6.325,
+      "fin": 6.53
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 6.53,
+      "fin": 6.735
+    },
+    {
+      "texte": "quarante-trois.",
+      "mot": "quarante-trois",
+      "scene": 1,
+      "debut": 6.735,
+      "fin": 6.94
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 7.6,
+      "fin": 7.66
+    },
+    {
+      "texte": "téléphone :",
+      "mot": "téléphone",
+      "scene": 2,
+      "debut": 7.66,
+      "fin": 8.06
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.492
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 2,
+      "debut": 8.492,
+      "fin": 8.924
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 8.924,
+      "fin": 9.356
+    },
+    {
+      "texte": "soixante-seize.",
+      "mot": "soixante-seize",
+      "scene": 2,
+      "debut": 9.356,
+      "fin": 9.788
+    },
+    {
+      "texte": "L'ampoule",
+      "mot": "L'ampoule",
+      "scene": 3,
+      "debut": 9.788,
+      "fin": 10.22
+    },
+    {
+      "texte": "d'Edison :",
+      "mot": "d'Edison",
+      "scene": 3,
+      "debut": 10.22,
+      "fin": 10.652
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 10.652,
+      "fin": 11.084
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 3,
+      "debut": 11.084,
+      "fin": 11.516
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 11.516,
+      "fin": 11.948
+    },
+    {
+      "texte": "soixante-dix-neuf.",
+      "mot": "soixante-dix-neuf",
+      "scene": 3,
+      "debut": 11.948,
+      "fin": 12.38
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 13.22,
+      "fin": 13.28
+    },
+    {
+      "texte": "voiture",
+      "mot": "voiture",
+      "scene": 3,
+      "debut": 13.28,
+      "fin": 13.46
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 13.46,
+      "fin": 13.64
+    },
+    {
+      "texte": "Benz :",
+      "mot": "Benz",
+      "scene": 3,
+      "debut": 13.64,
+      "fin": 13.92
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 14.22,
+      "fin": 14.7
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 3,
+      "debut": 14.7,
+      "fin": 15.18
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 15.18,
+      "fin": 15.66
+    },
+    {
+      "texte": "quatre-vingt-six.",
+      "mot": "quatre-vingt-six",
+      "scene": 3,
+      "debut": 15.66,
+      "fin": 16.14
+    },
+    {
+      "texte": "Trente-trois",
+      "mot": "Trente-trois",
+      "scene": 4,
+      "debut": 16.14,
+      "fin": 16.62
+    },
+    {
+      "texte": "ans",
+      "mot": "ans",
+      "scene": 4,
+      "debut": 16.62,
+      "fin": 16.86
+    },
+    {
+      "texte": "d'écart",
+      "mot": "d'écart",
+      "scene": 4,
+      "debut": 16.86,
+      "fin": 17.26
+    },
+    {
+      "texte": "entre",
+      "mot": "entre",
+      "scene": 4,
+      "debut": 17.26,
+      "fin": 17.56
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 17.56,
+      "fin": 17.7
+    },
+    {
+      "texte": "fax",
+      "mot": "fax",
+      "scene": 4,
+      "debut": 17.7,
+      "fin": 17.94
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 17.94,
+      "fin": 18.06
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 18.06,
+      "fin": 18.12
+    },
+    {
+      "texte": "téléphone.",
+      "mot": "téléphone",
+      "scene": 4,
+      "debut": 18.12,
+      "fin": 18.4
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 5,
+      "debut": 19.24,
+      "fin": 19.48
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 19.48,
+      "fin": 19.66
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 19.66,
+      "fin": 19.88
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 5,
+      "debut": 19.88,
+      "fin": 20.1
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 20.1,
+      "fin": 20.32
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 5,
+      "debut": 20.32,
+      "fin": 20.7
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 21.38,
+      "fin": 21.62
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 21.62,
+      "fin": 21.96
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 22.26,
+      "fin": 22.74
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 22.74,
+      "fin": 22.98
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 22.98,
+      "fin": 23.34
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 23.34,
+      "fin": 23.62
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 23.62,
+      "fin": 23.88
+    }
+  ]
+}

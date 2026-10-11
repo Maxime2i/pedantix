@@ -1,0 +1,386 @@
+{
+  "duree": 21.5,
+  "dureeVoix": 19.7,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.98,
+      "fin": 4.46
+    },
+    {
+      "id": "principe",
+      "debut": 4.46,
+      "finVoix": 7.44,
+      "fin": 7.58
+    },
+    {
+      "id": "chauffe",
+      "debut": 7.58,
+      "finVoix": 9.84,
+      "fin": 10.54
+    },
+    {
+      "id": "accelere",
+      "debut": 10.54,
+      "finVoix": 11.34,
+      "fin": 11.34
+    },
+    {
+      "id": "declic",
+      "debut": 11.34,
+      "finVoix": 13.38,
+      "fin": 14.1
+    },
+    {
+      "id": "score",
+      "debut": 14.1,
+      "finVoix": 15.9,
+      "fin": 16.46
+    },
+    {
+      "id": "appel",
+      "debut": 16.46,
+      "finVoix": 19.7,
+      "fin": 21.5
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ce",
+      "mot": "Ce",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.64
+    },
+    {
+      "texte": "cache",
+      "mot": "cache",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.88
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.06
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.32
+    },
+    {
+      "texte": "Wikipédia",
+      "mot": "Wikipédia",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 2.02
+    },
+    {
+      "texte": "entière…",
+      "mot": "entière",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.7
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 3.16
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 0,
+      "debut": 3.16,
+      "fin": 3.28
+    },
+    {
+      "texte": "dois",
+      "mot": "dois",
+      "scene": 0,
+      "debut": 3.28,
+      "fin": 3.38
+    },
+    {
+      "texte": "trouver",
+      "mot": "trouver",
+      "scene": 0,
+      "debut": 3.38,
+      "fin": 3.62
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 0,
+      "debut": 3.62,
+      "fin": 3.78
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 0,
+      "debut": 3.78,
+      "fin": 3.98
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.76
+    },
+    {
+      "texte": "tape",
+      "mot": "tape",
+      "scene": 1,
+      "debut": 4.76,
+      "fin": 4.88
+    },
+    {
+      "texte": "fête :",
+      "mot": "fête",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.28
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 1,
+      "debut": 5.44,
+      "fin": 6.22
+    },
+    {
+      "texte": "fois",
+      "mot": "fois",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.48
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.66
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 6.66,
+      "fin": 6.74
+    },
+    {
+      "texte": "texte !",
+      "mot": "texte",
+      "scene": 1,
+      "debut": 6.74,
+      "fin": 7.44
+    },
+    {
+      "texte": "Citrouille ?",
+      "mot": "Citrouille",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 8.22
+    },
+    {
+      "texte": "Presque…",
+      "mot": "Presque",
+      "scene": 2,
+      "debut": 8.74,
+      "fin": 9.14
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 9.52,
+      "fin": 9.56
+    },
+    {
+      "texte": "brûle.",
+      "mot": "brûle",
+      "scene": 2,
+      "debut": 9.56,
+      "fin": 9.84
+    },
+    {
+      "texte": "J'accélère",
+      "mot": "J'accélère",
+      "scene": 3,
+      "debut": 10.54,
+      "fin": 11.06
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 11.06,
+      "fin": 11.2
+    },
+    {
+      "texte": "peu…",
+      "mot": "peu",
+      "scene": 3,
+      "debut": 11.2,
+      "fin": 11.34
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 11.34,
+      "fin": 11.92
+    },
+    {
+      "texte": "là,",
+      "mot": "là",
+      "scene": 4,
+      "debut": 11.92,
+      "fin": 12.02
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 4,
+      "debut": 12.12,
+      "fin": 12.18
+    },
+    {
+      "texte": "tente…",
+      "mot": "tente",
+      "scene": 4,
+      "debut": 12.18,
+      "fin": 12.4
+    },
+    {
+      "texte": "Halloween !",
+      "mot": "Halloween",
+      "scene": 4,
+      "debut": 12.4,
+      "fin": 13.38
+    },
+    {
+      "texte": "Trente-cinq",
+      "mot": "Trente-cinq",
+      "scene": 5,
+      "debut": 14.1,
+      "fin": 14.52
+    },
+    {
+      "texte": "coups,",
+      "mot": "coups",
+      "scene": 5,
+      "debut": 14.52,
+      "fin": 14.92
+    },
+    {
+      "texte": "troisième",
+      "mot": "troisième",
+      "scene": 5,
+      "debut": 15.18,
+      "fin": 15.48
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 5,
+      "debut": 15.48,
+      "fin": 15.72
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 5,
+      "debut": 15.72,
+      "fin": 15.9
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 6,
+      "debut": 16.46,
+      "fin": 16.58
+    },
+    {
+      "texte": "nouvelle",
+      "mot": "nouvelle",
+      "scene": 6,
+      "debut": 16.58,
+      "fin": 16.76
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 6,
+      "debut": 16.76,
+      "fin": 17.12
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 6,
+      "debut": 17.12,
+      "fin": 17.42
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 6,
+      "debut": 17.42,
+      "fin": 17.74
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 6,
+      "debut": 18.3,
+      "fin": 18.76
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 18.76,
+      "fin": 19.24
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 19.24,
+      "fin": 19.46
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 6,
+      "debut": 19.46,
+      "fin": 19.58
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 6,
+      "debut": 19.58,
+      "fin": 19.7
+    }
+  ]
+}

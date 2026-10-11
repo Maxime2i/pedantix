@@ -1,0 +1,204 @@
+{
+  "titre": "Transfer window: 3 seconds to choose",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "English version of destinyfc-06. Age 22, 3 stars, rating 74 at Leeds: offers United, Brighton, City. After the move: Elite club, higher wage, Pressure gauge up.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Playful urgency, fast delivery. Tense countdown. 'Signed' snapped. Challenge at the end."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 22,
+        "annee": 2032,
+        "poste": "milieu",
+        "note": 74,
+        "argent": "€3.1m",
+        "etoiles": 3,
+        "jauges": {
+          "forme": 78,
+          "moral": 72,
+          "confiance": 64,
+          "pression": 34
+        },
+        "niveau": "d1",
+        "club": "Leeds",
+        "couleurs": [
+          "#f2f2f2",
+          "#f5c400"
+        ]
+      },
+      "carte": {
+        "genre": "mercato",
+        "tag": "🪟 TRANSFER WINDOW · 22 YRS",
+        "texte": "Your name is starting to circulate on the transfer market.",
+        "offres": [
+          {
+            "niveau": "elite",
+            "club": "United",
+            "couleurs": [
+              "#e52a1e",
+              "#f2f2f2"
+            ],
+            "pays": "angleterre",
+            "detail": "€4.2m/yr · fee €38m"
+          },
+          {
+            "niveau": "d1",
+            "club": "Brighton",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ],
+            "pays": "angleterre",
+            "detail": "€1.8m/yr · fee €22m"
+          },
+          {
+            "niveau": "elite",
+            "club": "City",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ],
+            "pays": "angleterre",
+            "detail": "€3.6m/yr · fee €31m"
+          }
+        ],
+        "bouton": "STAY / RENEW"
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "Summer transfer window. Three clubs want you, and you've got three seconds to choose.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Summer"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "countdown",
+      "voix": "United, Brighton or City? Three… two… one…",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "United",
+          "cible": "p-opt-1"
+        },
+        {
+          "type": "appui",
+          "ancre": "Brighton",
+          "cible": "p-opt-2"
+        },
+        {
+          "type": "appui",
+          "ancre": "City",
+          "cible": "p-opt-3"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "Three",
+          "valeur": 1,
+          "depart": 3,
+          "montee": 1.4,
+          "sous": "Choose!",
+          "duree": 2.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choice",
+      "voix": "Me? I'm off to United. Signed.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "off",
+          "n": 1
+        },
+        {
+          "type": "tampon",
+          "ancre": "Signed",
+          "texte": "Signed",
+          "couleur": "menthe"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Signed",
+          "age": 22,
+          "annee": 2032,
+          "note": 76,
+          "argent": "€5.8m",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "United",
+          "couleurs": [
+            "#e52a1e",
+            "#f2f2f2"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pressure",
+      "voix": "New club, more money… but a whole lot more pressure.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "New",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        },
+        {
+          "type": "jauges",
+          "ancre": "pressure",
+          "pression": 64
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Where would you have signed? Tell me in the comments. Destiny FC, free to play.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "titre": "Le déclic",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements : montrer le moment où une partie se débloque.",
+  "voix": {
+    "instructions": "Voix française jeune et enjouée, rythme rapide de vidéo TikTok, ton complice comme si on parlait à un ami. Petit suspense avant le mot « tour », vraie joie sur « Eiffel ! »."
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Ce jeu cache une page Wikipédia entière… et tu dois trouver son titre.",
+      "animation": "Arrivée de l'écran de jeu entièrement masqué, gros plan sur les cases du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Ce"
+        },
+        {
+          "type": "zoom",
+          "cible": "titre",
+          "ancre": "titre"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Ce"
+        }
+      ]
+    },
+    {
+      "id": "principe",
+      "voix": "Chaque mot que tu proposes apparaît partout dans le texte.",
+      "animation": "On tape « de » : le mot se révèle d'un coup à plusieurs endroits de l'article.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "article",
+          "ancre": "Chaque"
+        },
+        {
+          "type": "taper",
+          "mot": "de",
+          "ancre": "mot",
+          "fin": "proposes"
+        },
+        {
+          "type": "envoyer",
+          "mot": "de",
+          "ancre": "apparaît"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "recherche",
+      "voix": "Paris ? Trouvé. Clocher ? Presque… je chauffe.",
+      "animation": "Partie en accéléré : « paris » se révèle en vert, « clocher » s'inscrit en orange dans les cases de « tour », le compteur d'essais défile.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "mot": "paris",
+          "ancre": "Paris",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "mot": "paris",
+          "ancre": "Trouvé"
+        },
+        {
+          "type": "taper",
+          "mot": "clocher",
+          "ancre": "Clocher",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "mot": "clocher",
+          "ancre": "Presque"
+        },
+        {
+          "type": "accelere",
+          "ancre": "je",
+          "fin": "chauffe",
+          "essais": 37
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "declic",
+      "voix": "Et là, je tente… tour.",
+      "animation": "Suspense : « tour » tapé lettre par lettre, puis envoi : les cases du titre et de l'article s'ouvrent.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "titre",
+          "ancre": "Et"
+        },
+        {
+          "type": "taper",
+          "mot": "tour",
+          "ancre": "tente",
+          "fin": "tour"
+        },
+        {
+          "type": "envoyer",
+          "mot": "tour",
+          "ancre": "tour",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "victoire",
+      "voix": "Eiffel ! Le titre est révélé. Quarante-deux coups, troisième du jour.",
+      "animation": "« eiffel » complète le titre, la feuille de résultat monte avec le rang 🥉 3e.",
+      "image": null,
+      "actions": [
+        {
+          "type": "envoyer",
+          "mot": "eiffel",
+          "ancre": "Eiffel"
+        },
+        {
+          "type": "resultat",
+          "ancre": "Quarante-deux"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Une nouvelle page chaque midi. Pédantix, gratuit.",
+      "animation": "Carte de fin : logo, nom, « Une nouvelle page chaque midi », « Gratuit · iPhone et Android ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Une"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Une"
+        }
+      ]
+    }
+  ],
+  "page": {
+    "titre": "Tour Eiffel",
+    "texte": [
+      "La tour Eiffel est une tour métallique construite à Paris pour l'Exposition universelle de 1889. Haute de 330 mètres, elle se dresse au bord de la Seine, au bout du Champ-de-Mars.",
+      "Conçue par l'entreprise de Gustave Eiffel, elle fut longtemps le plus haut monument du monde. Elle attire aujourd'hui des millions de visiteurs chaque année et symbolise la France à l'étranger."
+    ],
+    "titreMots": [
+      "tour",
+      "eiffel"
+    ],
+    "revelations": {
+      "de": [
+        "de"
+      ],
+      "paris": [
+        "paris"
+      ],
+      "tour": [
+        "tour"
+      ],
+      "eiffel": [
+        "eiffel"
+      ]
+    },
+    "proches": {
+      "clocher": {
+        "cibles": [
+          "tour"
+        ],
+        "score": 58
+      }
+    },
+    "accelere": [
+      "la",
+      "le",
+      "l",
+      "est",
+      "une",
+      "à",
+      "au",
+      "du",
+      "et",
+      "elle",
+      "pour",
+      "par",
+      "des",
+      "d",
+      "construite",
+      "haute",
+      "mètres",
+      "se",
+      "dresse",
+      "bord",
+      "seine",
+      "bout",
+      "fut",
+      "longtemps",
+      "plus",
+      "haut",
+      "monument",
+      "monde",
+      "attire",
+      "aujourd",
+      "hui",
+      "millions",
+      "visiteurs",
+      "chaque",
+      "année",
+      "symbolise",
+      "france",
+      "étranger",
+      "conçue",
+      "entreprise",
+      "1889",
+      "330"
+    ],
+    "essaisDepart": 0
+  }
+}

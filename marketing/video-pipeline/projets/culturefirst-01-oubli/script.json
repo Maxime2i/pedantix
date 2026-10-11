@@ -1,0 +1,209 @@
+{
+  "titre": "Tu l'as déjà oublié",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements : montrer qu'on oublie ce qu'on ne revoit pas, et que l'app repose la question au bon moment.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, mais sans se presser : débit posé, articulé. Vraie question au début, courte pause après « l'Australie ? », hésitation sur « Sydney ? », pause, puis « Raté. » sec et amusé. Pause après « école… ». Ton convaincu sur la répétition, en marquant chaque étape : « dans dix minutes… puis demain… puis dans un mois ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Quelle est la capitale de l'Australie ? Sydney ? Raté.",
+      "animation": "Le téléphone arrive sur la carte « Australie », gros plan ; une bulle « Sydney ? » apparaît puis est barrée en rouge ; la réponse Canberra s'affiche.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Quelle"
+        },
+        {
+          "type": "zoom",
+          "cible": "carte",
+          "ancre": "capitale"
+        },
+        {
+          "type": "bulle",
+          "texte": "Sydney ?",
+          "ancre": "Sydney"
+        },
+        {
+          "type": "rate",
+          "ancre": "Raté"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Raté",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Quelle",
+          "gain": 0.4
+        },
+        {
+          "son": "tictac",
+          "ancre": "capitale",
+          "gain": 0.35
+        }
+      ]
+    },
+    {
+      "id": "oubli",
+      "voix": "Tu l'as appris à l'école… et ton cerveau l'a effacé.",
+      "animation": "Une carte « Ta mémoire » passe devant le téléphone : la courbe du souvenir chute jusqu'en bas.",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "mode": "oubli",
+          "ancre": "appris",
+          "fin": "effacé"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "principe",
+      "voix": "Culture First te repose la question juste avant que tu l'oublies.",
+      "animation": "Retour au téléphone : la carte revient côté question, la réponse est révélée, on appuie sur « Correct · 10 min ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Culture"
+        },
+        {
+          "type": "zoom",
+          "cible": "carte",
+          "ancre": "Culture"
+        },
+        {
+          "type": "recto",
+          "ancre": "repose"
+        },
+        {
+          "type": "reveler",
+          "ancre": "avant"
+        },
+        {
+          "type": "zoom",
+          "cible": "boutons",
+          "ancre": "avant"
+        },
+        {
+          "type": "noter",
+          "bouton": "correct",
+          "ancre": "l'oublies"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.35
+        }
+      ]
+    },
+    {
+      "id": "espacement",
+      "voix": "Dans dix minutes, puis demain, puis dans un mois. À chaque fois, ça s'ancre un peu plus.",
+      "animation": "La courbe revient : à chaque révision (10 min, 1 j, 1 mois) le souvenir remonte et retombe de moins en moins vite.",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "mode": "revisions",
+          "ancre": "Dans"
+        },
+        {
+          "type": "revision",
+          "label": "10 min",
+          "ancre": "dix"
+        },
+        {
+          "type": "revision",
+          "label": "1 j",
+          "ancre": "demain"
+        },
+        {
+          "type": "revision",
+          "label": "1 mois",
+          "ancre": "mois"
+        },
+        {
+          "type": "ancrage",
+          "ancre": "chaque",
+          "fin": "plus"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin : logo, « cultureFirst », « Retiens enfin ta culture G », « + de 200 000 questions », « Gratuit · iPhone et Android ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "carte": {
+    "paquet": "États d'Océanie",
+    "couleur": "#4DB6A8",
+    "compteurs": [
+      12,
+      8,
+      34
+    ],
+    "question": "Quelle est la capitale de ce pays ?",
+    "indiceType": "Pays",
+    "indice": "Australie",
+    "reponse": "Canberra",
+    "fiche": [
+      [
+        "Continent",
+        "Océanie"
+      ],
+      [
+        "Langue",
+        "Anglais"
+      ]
+    ],
+    "intervalles": {
+      "encore": "1 min",
+      "difficile": "6 min",
+      "correct": "10 min",
+      "facile": "4 j"
+    }
+  },
+  "fin": {
+    "promesse": "Retiens enfin<br>ta culture G",
+    "detail": "+ de 200 000 questions",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

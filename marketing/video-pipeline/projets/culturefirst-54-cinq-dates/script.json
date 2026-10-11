@@ -1,0 +1,252 @@
+{
+  "titre": "5 dates à connaître absolument",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton clair et rythmé, l'événement puis une micro-pause avant chaque date, dite avec assurance. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq dates à connaître absolument. Dans l'ordre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Cinq",
+          "texte": "5 dates",
+          "sous": "à connaître absolument"
+        },
+        {
+          "type": "masquer",
+          "ancre": "l'ordre",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "l'ordre",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "d1",
+      "voix": "Christophe Colomb atteint l'Amérique : mille quatre cent quatre-vingt-douze.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Christophe",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Christophe",
+          "index": 0
+        },
+        {
+          "type": "reveler",
+          "ancre": "mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "d2",
+      "voix": "La Révolution française : mille sept cent quatre-vingt-neuf.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Révolution",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "d3",
+      "voix": "Le début de la Première Guerre mondiale : mille neuf cent quatorze.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "début",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "d4",
+      "voix": "La fin de la Seconde Guerre mondiale : mille neuf cent quarante-cinq.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "fin",
+          "index": 3
+        },
+        {
+          "type": "reveler",
+          "ancre": "mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "d5",
+      "voix": "Le premier pas sur la Lune : mille neuf cent soixante-neuf.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "premier",
+          "index": 4
+        },
+        {
+          "type": "reveler",
+          "ancre": "mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grandes dates de l'histoire",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Christophe Colomb atteint l'Amérique",
+      "reponse": "1492",
+      "fiche": []
+    },
+    {
+      "paquet": "Grandes dates de l'histoire",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Révolution française",
+      "reponse": "1789",
+      "fiche": [
+        [
+          "Symbole",
+          "prise de la Bastille"
+        ]
+      ]
+    },
+    {
+      "paquet": "Grandes dates de l'histoire",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Début de la Première Guerre mondiale",
+      "reponse": "1914",
+      "fiche": []
+    },
+    {
+      "paquet": "Grandes dates de l'histoire",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Fin de la Seconde Guerre mondiale",
+      "reponse": "1945",
+      "fiche": []
+    },
+    {
+      "paquet": "Grandes dates de l'histoire",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Premier pas sur la Lune",
+      "reponse": "1969",
+      "fiche": [
+        [
+          "Astronaute",
+          "Neil Armstrong"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

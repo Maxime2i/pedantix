@@ -1,0 +1,158 @@
+{
+  "titre": "Mozart ou Napoléon : qui est né en premier ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu télé, suspense sur la question, petite tension sur l'indice. Révélation enthousiaste sur « Mozart ». Étonné sur « vingt-deux ans ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "question",
+      "voix": "Qui est né en premier : Mozart ou Napoléon ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "versus",
+          "ancre": "Qui",
+          "question": "Qui est né en premier ?",
+          "gauche": {
+            "emoji": "🎹",
+            "titre": "Mozart",
+            "sous": "compositeur",
+            "info": "né en 1756"
+          },
+          "droite": {
+            "emoji": "🎖️",
+            "titre": "Napoléon",
+            "sous": "empereur",
+            "info": "né en 1769"
+          }
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Qui",
+          "gain": 0.4
+        },
+        {
+          "son": "tictac",
+          "ancre": "Mozart",
+          "gain": 0.3
+        }
+      ]
+    },
+    {
+      "id": "indice",
+      "voix": "Réfléchis bien… Indice : l'un des deux est mort très jeune.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chrono",
+          "ancre": "Réfléchis",
+          "secondes": 3
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "reponse",
+      "voix": "Réponse : Mozart, né en mille sept cent cinquante-six. Napoléon arrive treize ans plus tard, en mille sept cent soixante-neuf.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "verdict",
+          "ancre": "Mozart",
+          "cote": "gauche"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "bonus",
+      "voix": "Quand Mozart meurt, Napoléon n'a que vingt-deux ans.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "vingt-deux",
+          "texte": "22 ANS",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Des questions comme ça, il y en a des milliers dans Culture First. Gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Des"
+        },
+        {
+          "type": "entree",
+          "ancre": "Des"
+        },
+        {
+          "type": "zoom",
+          "ancre": "questions",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "milliers"
+        },
+        {
+          "type": "fin",
+          "ancre": "Gratuit"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "Gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grands personnages",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui est né en premier ?",
+      "indiceType": "Duel",
+      "indice": "Mozart ou Napoléon",
+      "reponse": "Mozart",
+      "fiche": [
+        [
+          "Mozart",
+          "né en 1756"
+        ],
+        [
+          "Napoléon",
+          "né en 1769"
+        ]
+      ]
+    }
+  ]
+}

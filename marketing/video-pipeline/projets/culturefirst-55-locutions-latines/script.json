@@ -1,0 +1,193 @@
+{
+  "titre": "3 locutions latines pour briller",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton complice et un peu chic, chaque locution dite lentement puis traduite. Amusé sur « Merci César ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Trois locutions latines pour briller en soirée, ou au bureau.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Trois",
+          "texte": "3 locutions latines",
+          "sous": "pour briller en soirée"
+        },
+        {
+          "type": "masquer",
+          "ancre": "bureau",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "bureau",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Trois",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "l1",
+      "voix": "Carpe diem : cueille le jour, profite du moment présent, comme dit Horace.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Carpe",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Carpe",
+          "index": 0
+        },
+        {
+          "type": "reveler",
+          "ancre": "cueille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "l2",
+      "voix": "Alea jacta est : le sort en est jeté. Merci César.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Alea",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "sort"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "l3",
+      "voix": "Ad patres : auprès des ancêtres. Envoyer quelqu'un ad patres, c'est le tuer.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Ad",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "auprès"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tu en connaissais combien ? Dis-le en commentaire. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Locutions latines",
+      "theme": "Culture générale",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Que signifie cette locution latine ?",
+      "indiceType": "Locution",
+      "indice": "Carpe diem",
+      "reponse": "Cueille le jour",
+      "fiche": [
+        [
+          "Auteur",
+          "Horace"
+        ]
+      ]
+    },
+    {
+      "paquet": "Locutions latines",
+      "theme": "Culture générale",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Que signifie cette locution latine ?",
+      "indiceType": "Locution",
+      "indice": "Alea jacta est",
+      "reponse": "Le sort en est jeté",
+      "fiche": [
+        [
+          "Attribuée à",
+          "Jules César"
+        ]
+      ]
+    },
+    {
+      "paquet": "Locutions latines",
+      "theme": "Culture générale",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Que signifie cette locution latine ?",
+      "indiceType": "Locution",
+      "indice": "Ad patres",
+      "reponse": "Auprès des ancêtres",
+      "fiche": [
+        [
+          "Sens",
+          "envoyer quelqu’un ad patres : le tuer"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

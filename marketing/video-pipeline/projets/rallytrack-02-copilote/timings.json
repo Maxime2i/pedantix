@@ -1,0 +1,340 @@
+{
+  "duree": 17.66,
+  "dureeVoix": 15.86,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.02,
+      "fin": 4.64
+    },
+    {
+      "id": "classement",
+      "debut": 4.64,
+      "finVoix": 7.72,
+      "fin": 8.42
+    },
+    {
+      "id": "speciale",
+      "debut": 8.42,
+      "finVoix": 11.5,
+      "fin": 11.94
+    },
+    {
+      "id": "appel",
+      "debut": 11.94,
+      "finVoix": 15.86,
+      "fin": 17.66
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "pote",
+      "mot": "pote",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.52
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.68
+    },
+    {
+      "texte": "demande",
+      "mot": "demande",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.84
+    },
+    {
+      "texte": "l'écart",
+      "mot": "l'écart",
+      "scene": 0,
+      "debut": 0.84,
+      "fin": 1.28
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.42
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.58
+    },
+    {
+      "texte": "deuxième.",
+      "mot": "deuxième",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.8
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.48
+    },
+    {
+      "texte": "toi…",
+      "mot": "toi",
+      "scene": 0,
+      "debut": 2.48,
+      "fin": 2.64
+    },
+    {
+      "texte": "aucune",
+      "mot": "aucune",
+      "scene": 0,
+      "debut": 3.22,
+      "fin": 3.68
+    },
+    {
+      "texte": "idée.",
+      "mot": "idée",
+      "scene": 0,
+      "debut": 3.68,
+      "fin": 4.02
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.76
+    },
+    {
+      "texte": "ouvres",
+      "mot": "ouvres",
+      "scene": 1,
+      "debut": 4.76,
+      "fin": 5.02
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.427
+    },
+    {
+      "texte": "Track :",
+      "mot": "Track",
+      "scene": 1,
+      "debut": 5.427,
+      "fin": 5.833
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 1,
+      "debut": 5.833,
+      "fin": 6.24
+    },
+    {
+      "texte": "secondes",
+      "mot": "secondes",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.48
+    },
+    {
+      "texte": "trois,",
+      "mot": "trois",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.66
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 7.0,
+      "fin": 7.12
+    },
+    {
+      "texte": "dixième",
+      "mot": "dixième",
+      "scene": 1,
+      "debut": 7.12,
+      "fin": 7.52
+    },
+    {
+      "texte": "près.",
+      "mot": "près",
+      "scene": 1,
+      "debut": 7.52,
+      "fin": 7.72
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 8.42,
+      "fin": 8.5
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 2,
+      "debut": 8.5,
+      "fin": 8.72
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 8.72,
+      "fin": 8.84
+    },
+    {
+      "texte": "spéciale",
+      "mot": "spéciale",
+      "scene": 2,
+      "debut": 8.84,
+      "fin": 9.26
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 9.26,
+      "fin": 9.28
+    },
+    {
+      "texte": "cours,",
+      "mot": "cours",
+      "scene": 2,
+      "debut": 9.28,
+      "fin": 9.46
+    },
+    {
+      "texte": "Marchal",
+      "mot": "Marchal",
+      "scene": 2,
+      "debut": 9.86,
+      "fin": 10.2
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.48
+    },
+    {
+      "texte": "reprend",
+      "mot": "reprend",
+      "scene": 2,
+      "debut": 10.48,
+      "fin": 10.82
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 2,
+      "debut": 10.82,
+      "fin": 11.08
+    },
+    {
+      "texte": "dixièmes.",
+      "mot": "dixièmes",
+      "scene": 2,
+      "debut": 11.08,
+      "fin": 11.5
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 3,
+      "debut": 11.94,
+      "fin": 12.2
+    },
+    {
+      "texte": "pote",
+      "mot": "pote",
+      "scene": 3,
+      "debut": 12.2,
+      "fin": 12.48
+    },
+    {
+      "texte": "va",
+      "mot": "va",
+      "scene": 3,
+      "debut": 12.48,
+      "fin": 12.66
+    },
+    {
+      "texte": "t'adorer.",
+      "mot": "t'adorer",
+      "scene": 3,
+      "debut": 12.66,
+      "fin": 12.76
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 12.76,
+      "fin": 13.12
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 13.64,
+      "fin": 14.16
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 14.46,
+      "fin": 14.76
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 15.14
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 15.14,
+      "fin": 15.4
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 15.4,
+      "fin": 15.64
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 15.64,
+      "fin": 15.86
+    }
+  ]
+}

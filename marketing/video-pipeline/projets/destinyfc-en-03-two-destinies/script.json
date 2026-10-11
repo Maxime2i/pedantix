@@ -1,0 +1,183 @@
+{
+  "titre": "Same player, two destinies",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "English version of destinyfc-03. One real decision (growth spurt at 16) and its two real outcomes.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Intriguing narrator. 'Destiny one' and 'Destiny two' clearly separated. Relief on 'a brand-new body', wince on 'groin strain'. Calm, convinced ending."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "€50k",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      },
+      "carte": "croissance"
+    }
+  },
+  "fin": {
+    "promesse": "One decision,<br>a whole <em>career</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "Same player, same age, one single decision… and two completely different careers.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Same",
+          "texte": "One *single* decision",
+          "sous": "Two destinies",
+          "fin": "careers"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "situation",
+      "voix": "Sixteen: I grow eight centimetres in a year. The medical staff are worried.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Sixteen"
+        },
+        {
+          "type": "zoom",
+          "ancre": "grow",
+          "cible": "p-carte",
+          "echelle": 1.2,
+          "hauteur": 960
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "destiny1",
+      "voix": "Destiny one: I follow the protocol. Six months of discipline… and a brand-new body.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "Destiny",
+          "texte": "Destiny 1",
+          "couleur": "menthe",
+          "duree": 1.4
+        },
+        {
+          "type": "option",
+          "ancre": "follow",
+          "n": 1
+        },
+        {
+          "type": "carte",
+          "ancre": "discipline",
+          "id": "croissance-ok"
+        },
+        {
+          "type": "joueur",
+          "ancre": "body",
+          "note": 59
+        },
+        {
+          "type": "jauges",
+          "ancre": "body",
+          "forme": 80
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "destiny2",
+      "voix": "Destiny two: I keep playing. Groin strain. Eight weeks out.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Destiny",
+          "id": "croissance"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Destiny",
+          "note": 56
+        },
+        {
+          "type": "jauges",
+          "ancre": "Destiny",
+          "forme": 74
+        },
+        {
+          "type": "tampon",
+          "ancre": "Destiny",
+          "texte": "Destiny 2",
+          "couleur": "rouge",
+          "duree": 1.4
+        },
+        {
+          "type": "option",
+          "ancre": "keep",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "Groin",
+          "id": "croissance-pubalgie"
+        },
+        {
+          "type": "jauges",
+          "ancre": "Eight",
+          "moral": 66
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "One decision, a whole career. In Destiny FC, every choice counts.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "In"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "duree": 20.64,
+  "dureeVoix": 18.84,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.36,
+      "fin": 2.52
+    },
+    {
+      "id": "un",
+      "debut": 2.52,
+      "finVoix": 6.4,
+      "fin": 6.94
+    },
+    {
+      "id": "deux",
+      "debut": 6.94,
+      "finVoix": 11.02,
+      "fin": 11.5
+    },
+    {
+      "id": "trois",
+      "debut": 11.5,
+      "finVoix": 13.98,
+      "fin": 14.44
+    },
+    {
+      "id": "gagner",
+      "debut": 14.44,
+      "finVoix": 16.56,
+      "fin": 17.46
+    },
+    {
+      "id": "appel",
+      "debut": 17.46,
+      "finVoix": 18.84,
+      "fin": 20.64
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.3
+    },
+    {
+      "texte": "règles",
+      "mot": "règles",
+      "scene": 0,
+      "debut": 0.3,
+      "fin": 0.52
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.62
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.74
+    },
+    {
+      "texte": "jeu,",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.92
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.3
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.44
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 2.36
+    },
+    {
+      "texte": "Un.",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 2.52,
+      "fin": 2.62
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 3.1,
+      "fin": 3.16
+    },
+    {
+      "texte": "proposes",
+      "mot": "proposes",
+      "scene": 1,
+      "debut": 3.16,
+      "fin": 3.52
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.52,
+      "fin": 3.62
+    },
+    {
+      "texte": "mot :",
+      "mot": "mot",
+      "scene": 1,
+      "debut": 3.62,
+      "fin": 3.74
+    },
+    {
+      "texte": "équipe.",
+      "mot": "équipe",
+      "scene": 1,
+      "debut": 4.2,
+      "fin": 4.58
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 1,
+      "debut": 4.98,
+      "fin": 5.1
+    },
+    {
+      "texte": "apparaît",
+      "mot": "apparaît",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.5
+    },
+    {
+      "texte": "partout",
+      "mot": "partout",
+      "scene": 1,
+      "debut": 5.5,
+      "fin": 5.9
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 5.9,
+      "fin": 6.12
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.12,
+      "fin": 6.22
+    },
+    {
+      "texte": "page.",
+      "mot": "page",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.4
+    },
+    {
+      "texte": "Deux.",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.38
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.14
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 2,
+      "debut": 8.14,
+      "fin": 8.26
+    },
+    {
+      "texte": "proche",
+      "mot": "proche",
+      "scene": 2,
+      "debut": 8.26,
+      "fin": 8.56
+    },
+    {
+      "texte": "s'écrit",
+      "mot": "s'écrit",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 8.8,
+      "fin": 8.94
+    },
+    {
+      "texte": "gris :",
+      "mot": "gris",
+      "scene": 2,
+      "debut": 8.94,
+      "fin": 9.16
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 9.34,
+      "fin": 9.6
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 9.6,
+      "fin": 9.78
+    },
+    {
+      "texte": "clair,",
+      "mot": "clair",
+      "scene": 2,
+      "debut": 9.78,
+      "fin": 9.96
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 10.34,
+      "fin": 10.5
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 10.5,
+      "fin": 10.62
+    },
+    {
+      "texte": "chauffes.",
+      "mot": "chauffes",
+      "scene": 2,
+      "debut": 10.62,
+      "fin": 11.02
+    },
+    {
+      "texte": "Trois.",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 11.5,
+      "fin": 11.88
+    },
+    {
+      "texte": "Touche",
+      "mot": "Touche",
+      "scene": 3,
+      "debut": 12.66,
+      "fin": 12.78
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 3,
+      "debut": 12.78,
+      "fin": 12.9
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 3,
+      "debut": 12.9,
+      "fin": 13.06
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 3,
+      "debut": 13.06,
+      "fin": 13.26
+    },
+    {
+      "texte": "connaître",
+      "mot": "connaître",
+      "scene": 3,
+      "debut": 13.26,
+      "fin": 13.5
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 3,
+      "debut": 13.5,
+      "fin": 13.6
+    },
+    {
+      "texte": "longueur.",
+      "mot": "longueur",
+      "scene": 3,
+      "debut": 13.6,
+      "fin": 13.98
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 14.44,
+      "fin": 14.68
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 4,
+      "debut": 14.68,
+      "fin": 14.86
+    },
+    {
+      "texte": "gagner,",
+      "mot": "gagner",
+      "scene": 4,
+      "debut": 14.86,
+      "fin": 15.12
+    },
+    {
+      "texte": "trouve",
+      "mot": "trouve",
+      "scene": 4,
+      "debut": 15.36,
+      "fin": 15.72
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 4,
+      "debut": 15.72,
+      "fin": 16.02
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 4,
+      "debut": 16.02,
+      "fin": 16.14
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 4,
+      "debut": 16.14,
+      "fin": 16.26
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 4,
+      "debut": 16.26,
+      "fin": 16.34
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.56
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 17.46,
+      "fin": 17.9
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 17.9,
+      "fin": 18.34
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 18.34,
+      "fin": 18.58
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 18.58,
+      "fin": 18.7
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 18.7,
+      "fin": 18.84
+    }
+  ]
+}

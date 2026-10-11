@@ -1,0 +1,123 @@
+{
+  "titre": "Après ton jeu du matin",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 21
+  },
+  "objectif": "Positionnement : le jeu de mots de midi, dans la routine.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Néolithique",
+    "texte": [
+      "Le Néolithique est une période de la Préhistoire, qui débute durant le réchauffement climatique de l'Holocène. Défini à l'origine comme un « âge de la pierre polie », il est principalement caractérisé actuellement par la domestication de certaines plantes et animaux, et le début de l’agriculture et de l’élevage. La chasse et la collecte des populations mésolithiques n'ont cependant pas été systématiquement abandonnés.",
+      "Cette période commence plus ou moins tard en fonction des contextes. Elle apparaît d’abord au Moyen-Orient vers 10000 av. -C."
+    ],
+    "titreMots": [
+      "néolithique"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Samedi 20 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Tu as déjà fini ton petit jeu de mots du matin ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "petit",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "moi",
+      "voix": "Moi aussi. Alors j'ai créé celui de midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "créé",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "voix": "Une page Wikipédia entière, cachée, à retrouver mot après mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Une",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Une",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "pose",
+          "ancre": "retrouver",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "duree",
+      "voix": "Une partie, c'est cinq à dix minutes. Parfait pour la pause déj.",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "Parfait",
+          "texte": "Pause déj ✓"
+        }
+      ]
+    },
+    {
+      "id": "routine",
+      "voix": "Ajoute-le à ta routine.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Ajoute-le",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Ajoute-le",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

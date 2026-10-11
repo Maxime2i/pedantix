@@ -1,0 +1,479 @@
+{
+  "duree": 26.16,
+  "dureeVoix": 24.36,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 5.28,
+      "fin": 6.28
+    },
+    {
+      "id": "situation",
+      "debut": 6.28,
+      "finVoix": 9.66,
+      "fin": 10.46
+    },
+    {
+      "id": "destin1",
+      "debut": 10.46,
+      "finVoix": 14.4,
+      "fin": 15.02
+    },
+    {
+      "id": "destin2",
+      "debut": 15.02,
+      "finVoix": 18.84,
+      "fin": 19.76
+    },
+    {
+      "id": "cta",
+      "debut": 19.76,
+      "finVoix": 24.36,
+      "fin": 26.16
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Même",
+      "mot": "Même",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "joueur,",
+      "mot": "joueur",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.88
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.34
+    },
+    {
+      "texte": "âge,",
+      "mot": "âge",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.66
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 2.0,
+      "fin": 2.16
+    },
+    {
+      "texte": "seule",
+      "mot": "seule",
+      "scene": 0,
+      "debut": 2.16,
+      "fin": 2.36
+    },
+    {
+      "texte": "décision…",
+      "mot": "décision",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.88
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 3.32,
+      "fin": 3.6
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 0,
+      "debut": 3.6,
+      "fin": 3.9
+    },
+    {
+      "texte": "carrières",
+      "mot": "carrières",
+      "scene": 0,
+      "debut": 3.9,
+      "fin": 4.38
+    },
+    {
+      "texte": "complètement",
+      "mot": "complètement",
+      "scene": 0,
+      "debut": 4.38,
+      "fin": 4.86
+    },
+    {
+      "texte": "différentes.",
+      "mot": "différentes",
+      "scene": 0,
+      "debut": 4.86,
+      "fin": 5.28
+    },
+    {
+      "texte": "Seize",
+      "mot": "Seize",
+      "scene": 1,
+      "debut": 6.28,
+      "fin": 6.54
+    },
+    {
+      "texte": "ans :",
+      "mot": "ans",
+      "scene": 1,
+      "debut": 6.54,
+      "fin": 6.66
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 7.24,
+      "fin": 7.34
+    },
+    {
+      "texte": "grandis",
+      "mot": "grandis",
+      "scene": 1,
+      "debut": 7.34,
+      "fin": 7.62
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 7.62,
+      "fin": 7.72
+    },
+    {
+      "texte": "huit",
+      "mot": "huit",
+      "scene": 1,
+      "debut": 7.72,
+      "fin": 7.96
+    },
+    {
+      "texte": "centimètres.",
+      "mot": "centimètres",
+      "scene": 1,
+      "debut": 7.96,
+      "fin": 8.22
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 8.76,
+      "fin": 8.86
+    },
+    {
+      "texte": "staff",
+      "mot": "staff",
+      "scene": 1,
+      "debut": 8.86,
+      "fin": 9.0
+    },
+    {
+      "texte": "médical",
+      "mot": "médical",
+      "scene": 1,
+      "debut": 9.0,
+      "fin": 9.34
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 9.34,
+      "fin": 9.44
+    },
+    {
+      "texte": "inquiet.",
+      "mot": "inquiet",
+      "scene": 1,
+      "debut": 9.44,
+      "fin": 9.66
+    },
+    {
+      "texte": "Destin",
+      "mot": "Destin",
+      "scene": 2,
+      "debut": 10.46,
+      "fin": 10.84
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 2,
+      "debut": 10.84,
+      "fin": 11.06
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 11.44,
+      "fin": 11.52
+    },
+    {
+      "texte": "respecte",
+      "mot": "respecte",
+      "scene": 2,
+      "debut": 11.52,
+      "fin": 11.82
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 11.88
+    },
+    {
+      "texte": "protocole.",
+      "mot": "protocole",
+      "scene": 2,
+      "debut": 11.88,
+      "fin": 12.3
+    },
+    {
+      "texte": "Six",
+      "mot": "Six",
+      "scene": 2,
+      "debut": 12.68,
+      "fin": 12.86
+    },
+    {
+      "texte": "mois",
+      "mot": "mois",
+      "scene": 2,
+      "debut": 12.86,
+      "fin": 12.98
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 12.98,
+      "fin": 13.08
+    },
+    {
+      "texte": "rigueur…",
+      "mot": "rigueur",
+      "scene": 2,
+      "debut": 13.08,
+      "fin": 13.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 13.42,
+      "fin": 13.76
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 13.76,
+      "fin": 13.9
+    },
+    {
+      "texte": "corps",
+      "mot": "corps",
+      "scene": 2,
+      "debut": 13.9,
+      "fin": 14.04
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 2,
+      "debut": 14.04,
+      "fin": 14.16
+    },
+    {
+      "texte": "neuf.",
+      "mot": "neuf",
+      "scene": 2,
+      "debut": 14.16,
+      "fin": 14.4
+    },
+    {
+      "texte": "Destin",
+      "mot": "Destin",
+      "scene": 3,
+      "debut": 15.02,
+      "fin": 15.54
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 15.54,
+      "fin": 15.72
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 16.04,
+      "fin": 16.12
+    },
+    {
+      "texte": "continue",
+      "mot": "continue",
+      "scene": 3,
+      "debut": 16.12,
+      "fin": 16.36
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 16.36,
+      "fin": 16.5
+    },
+    {
+      "texte": "jouer.",
+      "mot": "jouer",
+      "scene": 3,
+      "debut": 16.5,
+      "fin": 16.64
+    },
+    {
+      "texte": "Pubalgie.",
+      "mot": "Pubalgie",
+      "scene": 3,
+      "debut": 17.12,
+      "fin": 17.58
+    },
+    {
+      "texte": "Huit",
+      "mot": "Huit",
+      "scene": 3,
+      "debut": 18.0,
+      "fin": 18.18
+    },
+    {
+      "texte": "semaines",
+      "mot": "semaines",
+      "scene": 3,
+      "debut": 18.18,
+      "fin": 18.36
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 18.36,
+      "fin": 18.54
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 18.54,
+      "fin": 18.66
+    },
+    {
+      "texte": "flanc.",
+      "mot": "flanc",
+      "scene": 3,
+      "debut": 18.66,
+      "fin": 18.84
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 4,
+      "debut": 19.76,
+      "fin": 19.98
+    },
+    {
+      "texte": "seule",
+      "mot": "seule",
+      "scene": 4,
+      "debut": 19.98,
+      "fin": 20.18
+    },
+    {
+      "texte": "décision,",
+      "mot": "décision",
+      "scene": 4,
+      "debut": 20.18,
+      "fin": 20.68
+    },
+    {
+      "texte": "toute",
+      "mot": "toute",
+      "scene": 4,
+      "debut": 21.02,
+      "fin": 21.2
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 4,
+      "debut": 21.2,
+      "fin": 21.36
+    },
+    {
+      "texte": "carrière.",
+      "mot": "carrière",
+      "scene": 4,
+      "debut": 21.36,
+      "fin": 21.68
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 4,
+      "debut": 22.46,
+      "fin": 22.64
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 22.64,
+      "fin": 23.0
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 23.0,
+      "fin": 23.26
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 4,
+      "debut": 23.7,
+      "fin": 23.94
+    },
+    {
+      "texte": "choix",
+      "mot": "choix",
+      "scene": 4,
+      "debut": 23.94,
+      "fin": 24.12
+    },
+    {
+      "texte": "compte.",
+      "mot": "compte",
+      "scene": 4,
+      "debut": 24.12,
+      "fin": 24.36
+    }
+  ]
+}

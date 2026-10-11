@@ -1,0 +1,150 @@
+{
+  "titre": "Comment l'app sait que c'est proche",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "Coulisses : vulgariser la proximité de sens.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Renard",
+    "texte": [
+      "Renard est un nom vernaculaire ambigu en français désignant des mammifères carnivores de la famille des canidés. L’espèce nominale au sens strict de cette dénomination est le renard roux, mais désigne le plus souvent les différentes espèces du genre Vulpes, et dans un sens encore plus large, des canidés y ressemblant physiquement, comme les genres Atelocynus, Cerdocyon, Otocyon, Lycalopex et Urocyon.",
+      "Dans la culture populaire, le renard est un personnage symbolique et littéraire qui représente l'intelligence et surtout la ruse."
+    ],
+    "titreMots": [
+      "renard"
+    ],
+    "revelations": {},
+    "proches": {
+      "chien": {
+        "cibles": [
+          "renard"
+        ],
+        "score": 58
+      },
+      "loup": {
+        "cibles": [
+          "renard"
+        ],
+        "score": 71
+      }
+    },
+    "dejaTrouves": [],
+    "date": "Jeudi 25 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Comment mon jeu sait que loup est proche de chien ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Comment",
+          "nom": "reflechit"
+        },
+        {
+          "type": "pose",
+          "ancre": "loup",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "modele",
+      "voix": "Il utilise un modèle qui a lu plus d'un milliard de mots en français.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "modèle",
+          "texte": "+ d'1 milliard de mots",
+          "sous": "lus en français",
+          "fin": "français."
+        }
+      ]
+    },
+    {
+      "id": "principe",
+      "voix": "Les mots qui apparaissent dans les mêmes phrases finissent proches.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Les",
+          "texte": "Loup ≈ chien",
+          "sous": "mêmes phrases, sens proche",
+          "fin": "proches."
+        }
+      ]
+    },
+    {
+      "id": "cases",
+      "voix": "Plus le score est haut, plus la case devient claire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Plus",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Plus",
+          "cible": "titre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "score",
+          "mot": "chien"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "claire.",
+          "mot": "loup"
+        }
+      ]
+    },
+    {
+      "id": "intuition",
+      "voix": "C'est des maths… mais ça ressemble à de l'intuition.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "C'est",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "C'est",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "l'intuition.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

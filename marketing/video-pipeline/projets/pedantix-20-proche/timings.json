@@ -1,0 +1,450 @@
+{
+  "duree": 20.22,
+  "dureeVoix": 18.42,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.6,
+      "fin": 3.5
+    },
+    {
+      "id": "modele",
+      "debut": 3.5,
+      "finVoix": 6.34,
+      "fin": 7.14
+    },
+    {
+      "id": "principe",
+      "debut": 7.14,
+      "finVoix": 9.64,
+      "fin": 10.42
+    },
+    {
+      "id": "cases",
+      "debut": 10.42,
+      "finVoix": 12.52,
+      "fin": 13.16
+    },
+    {
+      "id": "intuition",
+      "debut": 13.16,
+      "finVoix": 15.64,
+      "fin": 16.64
+    },
+    {
+      "id": "appel",
+      "debut": 16.64,
+      "finVoix": 18.42,
+      "fin": 20.22
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Comment",
+      "mot": "Comment",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.68
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.86
+    },
+    {
+      "texte": "sait",
+      "mot": "sait",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.08
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.28
+    },
+    {
+      "texte": "loup",
+      "mot": "loup",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.58
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.96
+    },
+    {
+      "texte": "proche",
+      "mot": "proche",
+      "scene": 0,
+      "debut": 1.96,
+      "fin": 2.24
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.24,
+      "fin": 2.38
+    },
+    {
+      "texte": "chien ?",
+      "mot": "chien",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.6
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.58
+    },
+    {
+      "texte": "utilise",
+      "mot": "utilise",
+      "scene": 1,
+      "debut": 3.58,
+      "fin": 3.86
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.08
+    },
+    {
+      "texte": "modèle",
+      "mot": "modèle",
+      "scene": 1,
+      "debut": 4.08,
+      "fin": 4.3
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 4.3,
+      "fin": 4.54
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 4.54,
+      "fin": 4.58
+    },
+    {
+      "texte": "lu",
+      "mot": "lu",
+      "scene": 1,
+      "debut": 4.58,
+      "fin": 4.7
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 4.7,
+      "fin": 4.92
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.12
+    },
+    {
+      "texte": "milliard",
+      "mot": "milliard",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.6
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.6,
+      "fin": 5.8
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 1,
+      "debut": 5.8,
+      "fin": 5.94
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 5.94,
+      "fin": 6.06
+    },
+    {
+      "texte": "français.",
+      "mot": "français",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.34
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 2,
+      "debut": 7.14,
+      "fin": 7.4
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 2,
+      "debut": 7.4,
+      "fin": 7.52
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 7.52,
+      "fin": 7.66
+    },
+    {
+      "texte": "apparaissent",
+      "mot": "apparaissent",
+      "scene": 2,
+      "debut": 7.66,
+      "fin": 7.98
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.08
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.18
+    },
+    {
+      "texte": "mêmes",
+      "mot": "mêmes",
+      "scene": 2,
+      "debut": 8.18,
+      "fin": 8.3
+    },
+    {
+      "texte": "phrases",
+      "mot": "phrases",
+      "scene": 2,
+      "debut": 8.3,
+      "fin": 8.62
+    },
+    {
+      "texte": "finissent",
+      "mot": "finissent",
+      "scene": 2,
+      "debut": 8.62,
+      "fin": 9.24
+    },
+    {
+      "texte": "proches.",
+      "mot": "proches",
+      "scene": 2,
+      "debut": 9.24,
+      "fin": 9.64
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 10.42,
+      "fin": 10.7
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 10.7,
+      "fin": 10.86
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 3,
+      "debut": 10.86,
+      "fin": 11.04
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 3,
+      "debut": 11.04,
+      "fin": 11.22
+    },
+    {
+      "texte": "haut,",
+      "mot": "haut",
+      "scene": 3,
+      "debut": 11.22,
+      "fin": 11.34
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 11.76,
+      "fin": 11.82
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 11.94
+    },
+    {
+      "texte": "case",
+      "mot": "case",
+      "scene": 3,
+      "debut": 11.94,
+      "fin": 12.1
+    },
+    {
+      "texte": "devient",
+      "mot": "devient",
+      "scene": 3,
+      "debut": 12.1,
+      "fin": 12.22
+    },
+    {
+      "texte": "claire.",
+      "mot": "claire",
+      "scene": 3,
+      "debut": 12.22,
+      "fin": 12.52
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 4,
+      "debut": 13.16,
+      "fin": 13.44
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 4,
+      "debut": 13.44,
+      "fin": 13.56
+    },
+    {
+      "texte": "maths…",
+      "mot": "maths",
+      "scene": 4,
+      "debut": 13.56,
+      "fin": 13.74
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 4,
+      "debut": 14.36,
+      "fin": 14.72
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 4,
+      "debut": 14.72,
+      "fin": 14.88
+    },
+    {
+      "texte": "ressemble",
+      "mot": "ressemble",
+      "scene": 4,
+      "debut": 14.88,
+      "fin": 15.14
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 15.14,
+      "fin": 15.24
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 15.24,
+      "fin": 15.3
+    },
+    {
+      "texte": "l'intuition.",
+      "mot": "l'intuition",
+      "scene": 4,
+      "debut": 15.3,
+      "fin": 15.64
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 16.64,
+      "fin": 17.04
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 17.64,
+      "fin": 18.04
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 18.04,
+      "fin": 18.16
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 18.16,
+      "fin": 18.28
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 18.28,
+      "fin": 18.42
+    }
+  ]
+}

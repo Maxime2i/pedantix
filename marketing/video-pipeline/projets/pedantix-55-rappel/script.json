@@ -1,0 +1,110 @@
+{
+  "titre": "Le rappel de midi",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Fonctionnalité : la notification quotidienne.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "ecranInitial": "reglages",
+  "ecrans": {
+    "reglages": {
+      "rappel": false
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Tu oublies de jouer ? Moi aussi, au début.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "oublies",
+          "nom": "decu"
+        },
+        {
+          "type": "pose",
+          "ancre": "Moi",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "reglage",
+      "voix": "Alors j'ai ajouté un rappel, chaque jour à midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Alors",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Alors",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "reglage",
+          "ancre": "rappel,",
+          "rappel": true
+        }
+      ]
+    },
+    {
+      "id": "ding",
+      "voix": "Ding : la page du jour est arrivée.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Ding",
+          "nom": "verrouillage",
+          "donnees": {
+            "heure": "12:00"
+          }
+        },
+        {
+          "type": "notif",
+          "ancre": "Ding"
+        },
+        {
+          "type": "pose",
+          "ancre": "arrivée.",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "couper",
+      "voix": "Et si ça te saoule, tu le coupes dans les réglages. Mais franchement, garde-le : c'est le meilleur moment de la journée.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "saoule,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

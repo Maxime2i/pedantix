@@ -1,0 +1,170 @@
+{
+  "titre": "Le dernier mot",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Suspense : il ne manque qu'un mot au titre.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Projection de Mercator",
+    "texte": [
+      "La projection de Mercator ou projection Mercator est une projection cartographique de la Terre, dite « cylindrique », tangente à l'équateur du globe terrestre sur une carte plane formalisée par le géographe flamand Gerardus Mercator, en 1569.",
+      "Elle s'est imposée comme le planisphère de référence dans le monde grâce à sa précision pour les voyages marins du fait de la conservation des angles qu'elle permet, essentielle pour prévoir les routes de navigation.",
+      "La projection de Mercator est une projection conforme, c’est-à-dire qu'elle conserve les angles."
+    ],
+    "titreMots": [
+      "projection",
+      "de",
+      "mercator"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [
+      "projection",
+      "cylindrique",
+      "terre",
+      "équateur",
+      "globe",
+      "terrestre",
+      "plane",
+      "planisphère",
+      "référence",
+      "monde",
+      "angles",
+      "navigation",
+      "routes",
+      "voyages",
+      "marins",
+      "conforme",
+      "1569",
+      "de"
+    ],
+    "date": "Samedi 13 septembre"
+  },
+  "dispositionInitiale": "coin",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Il me manque un seul mot du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Il",
+          "cible": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "seul",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "voix": "Projection de… quelque chose. Huit lettres.",
+      "image": null,
+      "actions": [
+        {
+          "type": "case",
+          "ancre": "Huit",
+          "mot": "mercator",
+          "dans": "titre"
+        }
+      ]
+    },
+    {
+      "id": "indices",
+      "voix": "Une carte du monde, un géographe flamand…",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Une",
+          "cible": "article",
+          "echelle": 1.2,
+          "hauteur": 860
+        },
+        {
+          "type": "envoyer",
+          "ancre": "carte",
+          "mot": "carte"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "géographe",
+          "mot": "géographe"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "flamand…",
+          "mot": "flamand"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Mercator !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Mercator",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "Mercator",
+          "mot": "mercator",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Mercator",
+          "mot": "mercator",
+          "position": "fin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Mercator",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "fait",
+      "voix": "La carte du monde qu'on a tous vue à l'école.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "La",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "tous",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

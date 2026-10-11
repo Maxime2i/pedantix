@@ -1,0 +1,149 @@
+{
+  "titre": "Mes 3 premiers mots",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Astuce : les trois mots d'ouverture.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Cycle de l'eau",
+    "texte": [
+      "Le cycle de l'eau, ou cycle hydrologique, correspond à l'ensemble des transferts d'eau — liquide, solide ou gazeuse — entre les réservoirs d'eau sur Terre. Le « moteur » de ce cycle est l'énergie solaire qui, en favorisant l'évaporation de l'eau, entraîne tous les autres échanges.",
+      "La science qui étudie le cycle de l’eau est l’hydrologie. Elle peut se décomposer en hydrogéologie, hydrologie de surface, hydraulique urbaine, etc."
+    ],
+    "titreMots": [
+      "cycle",
+      "de",
+      "l",
+      "eau"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Dimanche 7 septembre",
+    "motsOutils": false
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mes trois premiers mots sont toujours les mêmes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "toujours",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "mêmes.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "mots",
+      "voix": "Le. De. Est.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Le.",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Le.",
+          "cible": "article",
+          "echelle": 1.2,
+          "hauteur": 860
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Le.",
+          "mot": "le"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "De.",
+          "mot": "de"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Est.",
+          "mot": "est"
+        }
+      ]
+    },
+    {
+      "id": "forme",
+      "voix": "Et regarde : la page a déjà sa forme.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Et",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "regarde",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "titre",
+      "voix": "Ici, de est même dans le titre : quelque chose de quelque chose.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Ici,",
+          "cible": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "titre",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "gratuit",
+      "voix": "Trois mots gratuits, zéro risque.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Trois",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

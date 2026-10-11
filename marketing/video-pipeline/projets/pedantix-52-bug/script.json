@@ -1,0 +1,125 @@
+{
+  "titre": "Le bug le plus drôle",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Coulisses : anecdote de bug avant la sortie.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Pub (établissement)",
+    "texte": [
+      "Un pub est un établissement où l'on consomme des boissons généralement alcoolisées qui se trouve en grand nombre en Grande-Bretagne, en Irlande, et en Bretagne mais qui s’est également exporté dans d’autres pays anglo-saxons comme l'Australie. Il fait partie de la tradition de vie britannique, où il est d’usage de se rendre au pub en soirée afin de boire un verre entre amis. Il est également possible d’y manger : la plupart des pubs servent également des repas chauds."
+    ],
+    "titreMots": [
+      "pub",
+      "établissement"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Dimanche 31 août",
+    "essaisDepart": 1
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le bug le plus drôle de mon jeu ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "bug",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "bug",
+      "voix": "La veille de la sortie, taper un simple espace dévoilait toute la page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "La",
+          "mode": "coin"
+        },
+        {
+          "type": "voirPage",
+          "ancre": "dévoilait"
+        },
+        {
+          "type": "pose",
+          "ancre": "dévoilait",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "testeur",
+      "voix": "Mon premier testeur a gagné en un coup. Il se croyait génie.",
+      "image": null,
+      "actions": [
+        {
+          "type": "resultat",
+          "ancre": "gagné",
+          "coups": 1,
+          "rang": 1,
+          "pct": 100
+        },
+        {
+          "type": "pose",
+          "ancre": "génie.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "nuit",
+      "voix": "Corrigé à deux heures du matin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Corrigé",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Corrigé",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "aujourdhui",
+      "voix": "Aujourd'hui, il faut vraiment chercher.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "vraiment",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

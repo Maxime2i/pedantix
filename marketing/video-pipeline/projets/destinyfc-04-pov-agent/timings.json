@@ -1,0 +1,479 @@
+{
+  "duree": 25.98,
+  "dureeVoix": 24.18,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.52,
+      "fin": 4.08
+    },
+    {
+      "id": "creation",
+      "debut": 4.08,
+      "finVoix": 9.56,
+      "fin": 10.2
+    },
+    {
+      "id": "agent",
+      "debut": 10.2,
+      "finVoix": 14.72,
+      "fin": 15.98
+    },
+    {
+      "id": "clubs",
+      "debut": 15.98,
+      "finVoix": 19.78,
+      "fin": 20.22
+    },
+    {
+      "id": "cta",
+      "debut": 20.22,
+      "finVoix": 24.18,
+      "fin": 25.98
+    }
+  ],
+  "mots": [
+    {
+      "texte": "POV :",
+      "mot": "POV",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.92
+    },
+    {
+      "texte": "t'as",
+      "mot": "t'as",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.32
+    },
+    {
+      "texte": "seize",
+      "mot": "seize",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.54
+    },
+    {
+      "texte": "ans,",
+      "mot": "ans",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.7
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 2.0
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.0,
+      "fin": 2.16
+    },
+    {
+      "texte": "agent",
+      "mot": "agent",
+      "scene": 0,
+      "debut": 2.16,
+      "fin": 2.36
+    },
+    {
+      "texte": "affamé",
+      "mot": "affamé",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.96
+    },
+    {
+      "texte": "vient",
+      "mot": "vient",
+      "scene": 0,
+      "debut": 2.96,
+      "fin": 3.1
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.1
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.24
+    },
+    {
+      "texte": "repérer.",
+      "mot": "repérer",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.52
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 4.08,
+      "fin": 4.38
+    },
+    {
+      "texte": "crée",
+      "mot": "crée",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.5
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 1,
+      "debut": 4.5,
+      "fin": 4.62
+    },
+    {
+      "texte": "joueur.",
+      "mot": "joueur",
+      "scene": 1,
+      "debut": 4.62,
+      "fin": 4.88
+    },
+    {
+      "texte": "Lucas",
+      "mot": "Lucas",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.2
+    },
+    {
+      "texte": "Morel,",
+      "mot": "Morel",
+      "scene": 1,
+      "debut": 6.2,
+      "fin": 6.6
+    },
+    {
+      "texte": "milieu,",
+      "mot": "milieu",
+      "scene": 1,
+      "debut": 7.28,
+      "fin": 7.74
+    },
+    {
+      "texte": "né",
+      "mot": "né",
+      "scene": 1,
+      "debut": 8.52,
+      "fin": 8.62
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 8.62,
+      "fin": 8.78
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 8.78,
+      "fin": 8.92
+    },
+    {
+      "texte": "quartier",
+      "mot": "quartier",
+      "scene": 1,
+      "debut": 8.92,
+      "fin": 9.16
+    },
+    {
+      "texte": "populaire.",
+      "mot": "populaire",
+      "scene": 1,
+      "debut": 9.16,
+      "fin": 9.56
+    },
+    {
+      "texte": "Entourage :",
+      "mot": "Entourage",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.6
+    },
+    {
+      "texte": "l'agent",
+      "mot": "l'agent",
+      "scene": 2,
+      "debut": 10.6,
+      "fin": 11.3
+    },
+    {
+      "texte": "affamé.",
+      "mot": "affamé",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.82
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 2,
+      "debut": 12.2,
+      "fin": 12.3
+    },
+    {
+      "texte": "jure",
+      "mot": "jure",
+      "scene": 2,
+      "debut": 12.3,
+      "fin": 12.64
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 12.64,
+      "fin": 12.78
+    },
+    {
+      "texte": "m'emmener",
+      "mot": "m'emmener",
+      "scene": 2,
+      "debut": 12.78,
+      "fin": 13.0
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 2,
+      "debut": 13.0,
+      "fin": 13.12
+    },
+    {
+      "texte": "sommet…",
+      "mot": "sommet",
+      "scene": 2,
+      "debut": 13.12,
+      "fin": 13.4
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 13.4,
+      "fin": 14.0
+    },
+    {
+      "texte": "n'oublie",
+      "mot": "n'oublie",
+      "scene": 2,
+      "debut": 14.0,
+      "fin": 14.28
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 14.28,
+      "fin": 14.36
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 14.36,
+      "fin": 14.48
+    },
+    {
+      "texte": "commission.",
+      "mot": "commission",
+      "scene": 2,
+      "debut": 14.48,
+      "fin": 14.72
+    },
+    {
+      "texte": "Résultat :",
+      "mot": "Résultat",
+      "scene": 3,
+      "debut": 15.98,
+      "fin": 16.46
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 17.04,
+      "fin": 17.14
+    },
+    {
+      "texte": "recruteurs",
+      "mot": "recruteurs",
+      "scene": 3,
+      "debut": 17.14,
+      "fin": 17.58
+    },
+    {
+      "texte": "m'ont",
+      "mot": "m'ont",
+      "scene": 3,
+      "debut": 17.58,
+      "fin": 17.72
+    },
+    {
+      "texte": "repéré.",
+      "mot": "repéré",
+      "scene": 3,
+      "debut": 17.72,
+      "fin": 17.98
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 3,
+      "debut": 18.68,
+      "fin": 18.86
+    },
+    {
+      "texte": "moi",
+      "mot": "moi",
+      "scene": 3,
+      "debut": 18.86,
+      "fin": 19.06
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 19.06,
+      "fin": 19.2
+    },
+    {
+      "texte": "choisir",
+      "mot": "choisir",
+      "scene": 3,
+      "debut": 19.2,
+      "fin": 19.46
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 3,
+      "debut": 19.46,
+      "fin": 19.56
+    },
+    {
+      "texte": "club.",
+      "mot": "club",
+      "scene": 3,
+      "debut": 19.56,
+      "fin": 19.78
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 20.22,
+      "fin": 20.26
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.38
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 20.58,
+      "fin": 20.64
+    },
+    {
+      "texte": "partirais",
+      "mot": "partirais",
+      "scene": 4,
+      "debut": 20.64,
+      "fin": 20.98
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 4,
+      "debut": 20.98,
+      "fin": 21.08
+    },
+    {
+      "texte": "quel",
+      "mot": "quel",
+      "scene": 4,
+      "debut": 21.08,
+      "fin": 21.22
+    },
+    {
+      "texte": "entourage ?",
+      "mot": "entourage",
+      "scene": 4,
+      "debut": 21.22,
+      "fin": 21.48
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 22.16,
+      "fin": 22.54
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 22.54,
+      "fin": 22.8
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 23.14,
+      "fin": 23.4
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 23.4,
+      "fin": 23.64
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 23.64,
+      "fin": 23.82
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 23.82,
+      "fin": 23.96
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 23.96,
+      "fin": 24.18
+    }
+  ]
+}

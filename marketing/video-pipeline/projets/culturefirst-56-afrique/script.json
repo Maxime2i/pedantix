@@ -1,0 +1,311 @@
+{
+  "titre": "5 capitales africaines",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de défi, la mauvaise réponse dite comme une évidence puis la bonne avec malice. Impressionné sur l'Afrique du Sud. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq pays d'Afrique, cinq capitales que peu de gens connaissent. On y va ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Cinq",
+          "texte": "5 capitales africaines",
+          "sous": "que peu de gens connaissent"
+        },
+        {
+          "type": "masquer",
+          "ancre": "va",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "va",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "voix": "Le Nigeria ? Pas Lagos : Abuja.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Nigeria",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Nigeria",
+          "index": 0
+        },
+        {
+          "type": "bulle",
+          "ancre": "Lagos",
+          "texte": "Lagos ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Abuja"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Abuja",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "a2",
+      "voix": "La Côte d'Ivoire ? Pas Abidjan : Yamoussoukro.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Côte",
+          "index": 1
+        },
+        {
+          "type": "bulle",
+          "ancre": "Abidjan",
+          "texte": "Abidjan ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Yamoussoukro"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Yamoussoukro",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "a3",
+      "voix": "La Tanzanie ? Pas Dar es Salaam : Dodoma.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Tanzanie",
+          "index": 2
+        },
+        {
+          "type": "bulle",
+          "ancre": "Dar",
+          "texte": "Dar es Salaam ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Dodoma"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Dodoma",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "a4",
+      "voix": "Le Bénin ? Pas Cotonou : Porto-Novo.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Bénin",
+          "index": 3
+        },
+        {
+          "type": "bulle",
+          "ancre": "Cotonou",
+          "texte": "Cotonou ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Porto-Novo"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Porto-Novo",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "a5",
+      "voix": "Et l'Afrique du Sud ? Trois capitales : Pretoria, Le Cap et Bloemfontein.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "l'Afrique",
+          "index": 4
+        },
+        {
+          "type": "reveler",
+          "ancre": "Pretoria"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Trois",
+          "texte": "× 3",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "L'Afrique compte cinquante-quatre pays. Révise-les tous sur Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "L'Afrique"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "L'Afrique",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Nigeria",
+      "reponse": "Abuja",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Côte d'Ivoire",
+      "reponse": "Yamoussoukro",
+      "fiche": [
+        [
+          "Ville économique",
+          "Abidjan"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Tanzanie",
+      "reponse": "Dodoma",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Bénin",
+      "reponse": "Porto-Novo",
+      "fiche": [
+        [
+          "Siège du gouvernement",
+          "Cotonou"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Afrique du Sud",
+      "reponse": "Pretoria, Le Cap, Bloemfontein",
+      "fiche": [
+        [
+          "Pretoria",
+          "exécutif"
+        ],
+        [
+          "Le Cap",
+          "législatif"
+        ],
+        [
+          "Bloemfontein",
+          "judiciaire"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

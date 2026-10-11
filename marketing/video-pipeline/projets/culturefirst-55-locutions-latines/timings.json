@@ -1,0 +1,444 @@
+{
+  "duree": 26.96,
+  "dureeVoix": 25.16,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.28,
+      "fin": 4.18
+    },
+    {
+      "id": "l1",
+      "debut": 4.18,
+      "finVoix": 8.78,
+      "fin": 9.48
+    },
+    {
+      "id": "l2",
+      "debut": 9.48,
+      "finVoix": 13.74,
+      "fin": 14.38
+    },
+    {
+      "id": "l3",
+      "debut": 14.38,
+      "finVoix": 19.22,
+      "fin": 19.7
+    },
+    {
+      "id": "appel",
+      "debut": 19.7,
+      "finVoix": 25.16,
+      "fin": 26.96
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.54
+    },
+    {
+      "texte": "locutions",
+      "mot": "locutions",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.96
+    },
+    {
+      "texte": "latines",
+      "mot": "latines",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.46
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.68
+    },
+    {
+      "texte": "briller",
+      "mot": "briller",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 2.08
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.2
+    },
+    {
+      "texte": "soirée,",
+      "mot": "soirée",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.6
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 2.6,
+      "fin": 2.98
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.1
+    },
+    {
+      "texte": "bureau.",
+      "mot": "bureau",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.28
+    },
+    {
+      "texte": "Carpe",
+      "mot": "Carpe",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.64
+    },
+    {
+      "texte": "diem :",
+      "mot": "diem",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 5.0
+    },
+    {
+      "texte": "cueille",
+      "mot": "cueille",
+      "scene": 1,
+      "debut": 5.54,
+      "fin": 5.86
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 5.98
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 1,
+      "debut": 5.98,
+      "fin": 6.24
+    },
+    {
+      "texte": "profite",
+      "mot": "profite",
+      "scene": 1,
+      "debut": 6.58,
+      "fin": 7.06
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.2
+    },
+    {
+      "texte": "moment",
+      "mot": "moment",
+      "scene": 1,
+      "debut": 7.2,
+      "fin": 7.36
+    },
+    {
+      "texte": "présent,",
+      "mot": "présent",
+      "scene": 1,
+      "debut": 7.36,
+      "fin": 7.7
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 1,
+      "debut": 8.16,
+      "fin": 8.24
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 1,
+      "debut": 8.24,
+      "fin": 8.38
+    },
+    {
+      "texte": "Horace.",
+      "mot": "Horace",
+      "scene": 1,
+      "debut": 8.38,
+      "fin": 8.78
+    },
+    {
+      "texte": "Alea",
+      "mot": "Alea",
+      "scene": 2,
+      "debut": 9.48,
+      "fin": 9.92
+    },
+    {
+      "texte": "jacta",
+      "mot": "jacta",
+      "scene": 2,
+      "debut": 9.92,
+      "fin": 10.58
+    },
+    {
+      "texte": "est :",
+      "mot": "est",
+      "scene": 2,
+      "debut": 10.58,
+      "fin": 10.98
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 11.26,
+      "fin": 11.76
+    },
+    {
+      "texte": "sort",
+      "mot": "sort",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 12.04
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 12.04,
+      "fin": 12.2
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 2,
+      "debut": 12.2,
+      "fin": 12.3
+    },
+    {
+      "texte": "jeté.",
+      "mot": "jeté",
+      "scene": 2,
+      "debut": 12.3,
+      "fin": 12.62
+    },
+    {
+      "texte": "Merci",
+      "mot": "Merci",
+      "scene": 2,
+      "debut": 13.12,
+      "fin": 13.28
+    },
+    {
+      "texte": "César.",
+      "mot": "César",
+      "scene": 2,
+      "debut": 13.28,
+      "fin": 13.74
+    },
+    {
+      "texte": "Ad",
+      "mot": "Ad",
+      "scene": 3,
+      "debut": 14.38,
+      "fin": 14.48
+    },
+    {
+      "texte": "patres :",
+      "mot": "patres",
+      "scene": 3,
+      "debut": 14.48,
+      "fin": 15.04
+    },
+    {
+      "texte": "auprès",
+      "mot": "auprès",
+      "scene": 3,
+      "debut": 15.5,
+      "fin": 15.84
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 15.84,
+      "fin": 15.98
+    },
+    {
+      "texte": "ancêtres.",
+      "mot": "ancêtres",
+      "scene": 3,
+      "debut": 15.98,
+      "fin": 16.46
+    },
+    {
+      "texte": "Envoyer",
+      "mot": "Envoyer",
+      "scene": 3,
+      "debut": 16.86,
+      "fin": 17.22
+    },
+    {
+      "texte": "quelqu'un",
+      "mot": "quelqu'un",
+      "scene": 3,
+      "debut": 17.22,
+      "fin": 17.625
+    },
+    {
+      "texte": "ad",
+      "mot": "ad",
+      "scene": 3,
+      "debut": 17.625,
+      "fin": 18.03
+    },
+    {
+      "texte": "patres,",
+      "mot": "patres",
+      "scene": 3,
+      "debut": 18.03,
+      "fin": 18.435
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 18.435,
+      "fin": 18.84
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 18.84,
+      "fin": 18.94
+    },
+    {
+      "texte": "tuer.",
+      "mot": "tuer",
+      "scene": 3,
+      "debut": 18.94,
+      "fin": 19.22
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 4,
+      "debut": 19.7,
+      "fin": 19.72
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 19.72,
+      "fin": 19.82
+    },
+    {
+      "texte": "connaissais",
+      "mot": "connaissais",
+      "scene": 4,
+      "debut": 19.82,
+      "fin": 20.16
+    },
+    {
+      "texte": "combien ?",
+      "mot": "combien",
+      "scene": 4,
+      "debut": 20.16,
+      "fin": 20.4
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 20.4,
+      "fin": 21.24
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.24,
+      "fin": 21.38
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 21.38,
+      "fin": 21.9
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 22.56,
+      "fin": 22.8
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 22.8,
+      "fin": 23.28
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 23.54,
+      "fin": 24.04
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 24.04,
+      "fin": 24.26
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 24.26,
+      "fin": 24.54
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 24.54,
+      "fin": 24.94
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 24.94,
+      "fin": 25.16
+    }
+  ]
+}

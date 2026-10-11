@@ -1,0 +1,157 @@
+{
+  "titre": "Je crée un jeu de foot tout seul",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 26
+  },
+  "objectif": "Notoriété + téléchargements, format coulisses de développeur indépendant. Chiffre réel : 260 événements dans EVENTS (data.js, compté le 10/10/2026). Ne pas évoquer l'origine du projet ni de concurrent.",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton sincère et enthousiaste de dev indé qui parle à sa communauté, sourire dans la voix. Fin chaleureuse, invitation à donner son avis."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Mon jeu de foot,<br>fait <em>tout seul</em>",
+    "detail": "Destiny FC",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Salut ! Je suis développeur, et je crée tout seul un jeu de carrière de foot.",
+      "animation": "Avatar face caméra.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "développeur",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "seul",
+          "texte": "👨‍💻 Solo dev",
+          "fin": "foot"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "principe",
+      "voix": "Le principe : tu commences à seize ans, et tu joues jusqu'à ta retraite, saison après saison.",
+      "animation": "Accueil puis création du joueur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "principe",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "principe",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "appui",
+          "ancre": "commences",
+          "cible": "a-carriere"
+        },
+        {
+          "type": "ecran",
+          "ancre": "seize",
+          "nom": "creation"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choix",
+      "voix": "À chaque saison, des choix. Deux cent soixante situations différentes.",
+      "animation": "Écran de jeu, chiffre réel.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "chaque",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "chaque",
+          "nom": "neutre"
+        },
+        {
+          "type": "ecran",
+          "ancre": "choix",
+          "nom": "partie"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "Deux",
+          "valeur": 260,
+          "depart": 0,
+          "montee": 1.4,
+          "sous": "situations différentes",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "contenu",
+      "voix": "Des moments décisifs, des transferts, des blessures, et ton mental à gérer.",
+      "animation": "Moment décisif, mercato, jauges.",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "moments",
+          "id": "finale"
+        },
+        {
+          "type": "carte",
+          "ancre": "transferts",
+          "id": "mercato",
+          "tag": "🪟 MERCATO · 16 ANS"
+        },
+        {
+          "type": "zoom",
+          "ancre": "mental",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Il est gratuit, sur iPhone et Android. Dis-moi ce que t'en penses !",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Il",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Il",
+          "nom": "salut"
+        },
+        {
+          "type": "fin",
+          "ancre": "Dis-moi"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

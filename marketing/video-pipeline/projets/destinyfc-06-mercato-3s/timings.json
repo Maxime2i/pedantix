@@ -1,0 +1,374 @@
+{
+  "duree": 18.7,
+  "dureeVoix": 16.9,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.78,
+      "fin": 4.18
+    },
+    {
+      "id": "decompte",
+      "debut": 4.18,
+      "finVoix": 7.32,
+      "fin": 8.06
+    },
+    {
+      "id": "choix",
+      "debut": 8.06,
+      "finVoix": 9.2,
+      "fin": 9.7
+    },
+    {
+      "id": "pression",
+      "debut": 9.7,
+      "finVoix": 12.84,
+      "fin": 13.32
+    },
+    {
+      "id": "cta",
+      "debut": 13.32,
+      "finVoix": 16.9,
+      "fin": 18.7
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mercato",
+      "mot": "Mercato",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.62
+    },
+    {
+      "texte": "d'été.",
+      "mot": "d'été",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.86
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.58
+    },
+    {
+      "texte": "clubs",
+      "mot": "clubs",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.74
+    },
+    {
+      "texte": "veulent",
+      "mot": "veulent",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 1.953
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 0,
+      "debut": 1.953,
+      "fin": 2.167
+    },
+    {
+      "texte": "recruter,",
+      "mot": "recruter",
+      "scene": 0,
+      "debut": 2.167,
+      "fin": 2.38
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.68
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 2.68,
+      "fin": 2.76
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 2.8
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 2.8,
+      "fin": 3.08
+    },
+    {
+      "texte": "secondes",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 3.08,
+      "fin": 3.36
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 3.36,
+      "fin": 3.44
+    },
+    {
+      "texte": "choisir.",
+      "mot": "choisir",
+      "scene": 0,
+      "debut": 3.44,
+      "fin": 3.78
+    },
+    {
+      "texte": "Paris,",
+      "mot": "Paris",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.4
+    },
+    {
+      "texte": "Brighton",
+      "mot": "Brighton",
+      "scene": 1,
+      "debut": 4.58,
+      "fin": 4.88
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.1
+    },
+    {
+      "texte": "Marseille ?",
+      "mot": "Marseille",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.4
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 6.12
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.66
+    },
+    {
+      "texte": "un…",
+      "mot": "un",
+      "scene": 1,
+      "debut": 7.18,
+      "fin": 7.32
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.16
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 8.16,
+      "fin": 8.24
+    },
+    {
+      "texte": "fonce",
+      "mot": "fonce",
+      "scene": 2,
+      "debut": 8.24,
+      "fin": 8.34
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 2,
+      "debut": 8.34,
+      "fin": 8.44
+    },
+    {
+      "texte": "Paris.",
+      "mot": "Paris",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.62
+    },
+    {
+      "texte": "Signé.",
+      "mot": "Signé",
+      "scene": 2,
+      "debut": 8.96,
+      "fin": 9.2
+    },
+    {
+      "texte": "Nouveau",
+      "mot": "Nouveau",
+      "scene": 3,
+      "debut": 9.7,
+      "fin": 10.0
+    },
+    {
+      "texte": "club,",
+      "mot": "club",
+      "scene": 3,
+      "debut": 10.0,
+      "fin": 10.2
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 10.38,
+      "fin": 10.52
+    },
+    {
+      "texte": "d'argent…",
+      "mot": "d'argent",
+      "scene": 3,
+      "debut": 10.52,
+      "fin": 10.82
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 3,
+      "debut": 11.48,
+      "fin": 11.6
+    },
+    {
+      "texte": "aussi",
+      "mot": "aussi",
+      "scene": 3,
+      "debut": 11.6,
+      "fin": 11.82
+    },
+    {
+      "texte": "beaucoup",
+      "mot": "beaucoup",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 12.14
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 12.14,
+      "fin": 12.4
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 12.4,
+      "fin": 12.5
+    },
+    {
+      "texte": "pression.",
+      "mot": "pression",
+      "scene": 3,
+      "debut": 12.5,
+      "fin": 12.84
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 13.32,
+      "fin": 13.46
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 4,
+      "debut": 13.46,
+      "fin": 13.58
+    },
+    {
+      "texte": "t'aurais",
+      "mot": "t'aurais",
+      "scene": 4,
+      "debut": 13.9,
+      "fin": 14.06
+    },
+    {
+      "texte": "signé",
+      "mot": "signé",
+      "scene": 4,
+      "debut": 14.06,
+      "fin": 14.3
+    },
+    {
+      "texte": "où ?",
+      "mot": "où",
+      "scene": 4,
+      "debut": 14.3,
+      "fin": 14.4
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 14.4,
+      "fin": 15.08
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 15.08,
+      "fin": 15.16
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 15.16,
+      "fin": 15.52
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 16.04,
+      "fin": 16.38
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 16.38,
+      "fin": 16.52
+    },
+    {
+      "texte": "gratuit.",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 16.72,
+      "fin": 16.9
+    }
+  ]
+}

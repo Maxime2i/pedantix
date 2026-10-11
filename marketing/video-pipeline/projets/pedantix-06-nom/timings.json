@@ -1,0 +1,366 @@
+{
+  "duree": 15.98,
+  "dureeVoix": 14.18,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.22,
+      "fin": 3.54
+    },
+    {
+      "id": "definition",
+      "debut": 3.54,
+      "finVoix": 5.1,
+      "fin": 5.54
+    },
+    {
+      "id": "toi",
+      "debut": 5.54,
+      "finVoix": 7.74,
+      "fin": 8.16
+    },
+    {
+      "id": "jeu",
+      "debut": 8.16,
+      "finVoix": 10.64,
+      "fin": 11.06
+    },
+    {
+      "id": "diner",
+      "debut": 11.06,
+      "finVoix": 12.18,
+      "fin": 12.74
+    },
+    {
+      "id": "appel",
+      "debut": 12.74,
+      "finVoix": 14.18,
+      "fin": 15.98
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Oui,",
+      "mot": "Oui",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.74
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.92
+    },
+    {
+      "texte": "s'appelle",
+      "mot": "s'appelle",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.3
+    },
+    {
+      "texte": "Pédantix.",
+      "mot": "Pédantix",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 2.0
+    },
+    {
+      "texte": "Oui,",
+      "mot": "Oui",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.46
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 2.88
+    },
+    {
+      "texte": "assumé.",
+      "mot": "assumé",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.22
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 3.54,
+      "fin": 3.64
+    },
+    {
+      "texte": "pédant,",
+      "mot": "pédant",
+      "scene": 1,
+      "debut": 3.64,
+      "fin": 3.96
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.23
+    },
+    {
+      "texte": "quelqu'un",
+      "mot": "quelqu'un",
+      "scene": 1,
+      "debut": 4.23,
+      "fin": 4.42
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.52
+    },
+    {
+      "texte": "étale",
+      "mot": "étale",
+      "scene": 1,
+      "debut": 4.52,
+      "fin": 4.72
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.86
+    },
+    {
+      "texte": "culture.",
+      "mot": "culture",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 5.1
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 5.54,
+      "fin": 5.7
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 5.7,
+      "fin": 5.92
+    },
+    {
+      "texte": "exactement",
+      "mot": "exactement",
+      "scene": 2,
+      "debut": 5.92,
+      "fin": 6.46
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 2,
+      "debut": 6.46,
+      "fin": 6.9
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 6.9,
+      "fin": 7.0
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.12
+    },
+    {
+      "texte": "deviens",
+      "mot": "deviens",
+      "scene": 2,
+      "debut": 7.12,
+      "fin": 7.4
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 7.4,
+      "fin": 7.54
+    },
+    {
+      "texte": "jouant.",
+      "mot": "jouant",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.74
+    },
+    {
+      "texte": "Chaque",
+      "mot": "Chaque",
+      "scene": 3,
+      "debut": 8.16,
+      "fin": 8.48
+    },
+    {
+      "texte": "midi,",
+      "mot": "midi",
+      "scene": 3,
+      "debut": 8.48,
+      "fin": 8.78
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 3,
+      "debut": 9.16,
+      "fin": 9.3
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 3,
+      "debut": 9.3,
+      "fin": 9.48
+    },
+    {
+      "texte": "Wikipédia",
+      "mot": "Wikipédia",
+      "scene": 3,
+      "debut": 9.48,
+      "fin": 9.84
+    },
+    {
+      "texte": "cachée",
+      "mot": "cachée",
+      "scene": 3,
+      "debut": 9.84,
+      "fin": 10.28
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 10.28,
+      "fin": 10.32
+    },
+    {
+      "texte": "deviner.",
+      "mot": "deviner",
+      "scene": 3,
+      "debut": 10.32,
+      "fin": 10.64
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 11.06,
+      "fin": 11.18
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 11.18,
+      "fin": 11.24
+    },
+    {
+      "texte": "soir,",
+      "mot": "soir",
+      "scene": 4,
+      "debut": 11.24,
+      "fin": 11.36
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 11.5,
+      "fin": 11.56
+    },
+    {
+      "texte": "ressors",
+      "mot": "ressors",
+      "scene": 4,
+      "debut": 11.56,
+      "fin": 11.74
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 4,
+      "debut": 11.74,
+      "fin": 11.88
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 4,
+      "debut": 11.88,
+      "fin": 11.98
+    },
+    {
+      "texte": "dîner.",
+      "mot": "dîner",
+      "scene": 4,
+      "debut": 11.98,
+      "fin": 12.18
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 12.74,
+      "fin": 13.1
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 13.4,
+      "fin": 13.72
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 13.72,
+      "fin": 13.92
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 13.92,
+      "fin": 14.04
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 14.04,
+      "fin": 14.18
+    }
+  ]
+}

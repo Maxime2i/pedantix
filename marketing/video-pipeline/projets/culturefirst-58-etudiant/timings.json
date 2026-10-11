@@ -1,0 +1,472 @@
+{
+  "duree": 24.92,
+  "dureeVoix": 23.12,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.86,
+      "fin": 3.18
+    },
+    {
+      "id": "tester",
+      "debut": 3.18,
+      "finVoix": 7.86,
+      "fin": 8.56
+    },
+    {
+      "id": "retour",
+      "debut": 8.56,
+      "finVoix": 13.54,
+      "fin": 14.06
+    },
+    {
+      "id": "themes",
+      "debut": 14.06,
+      "finVoix": 18.1,
+      "fin": 18.8
+    },
+    {
+      "id": "appel",
+      "debut": 18.8,
+      "finVoix": 23.12,
+      "fin": 24.92
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Étudiant ?",
+      "mot": "Étudiant",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.68
+    },
+    {
+      "texte": "Arrête",
+      "mot": "Arrête",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.58
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.58,
+      "fin": 1.74
+    },
+    {
+      "texte": "relire",
+      "mot": "relire",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 2.1
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 0,
+      "debut": 2.1,
+      "fin": 2.2
+    },
+    {
+      "texte": "fiches",
+      "mot": "fiches",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.46
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 2.46,
+      "fin": 2.58
+    },
+    {
+      "texte": "boucle.",
+      "mot": "boucle",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.86
+    },
+    {
+      "texte": "Pour",
+      "mot": "Pour",
+      "scene": 1,
+      "debut": 3.18,
+      "fin": 3.36
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 1,
+      "debut": 3.36,
+      "fin": 3.5
+    },
+    {
+      "texte": "culture",
+      "mot": "culture",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.8
+    },
+    {
+      "texte": "G,",
+      "mot": "G",
+      "scene": 1,
+      "debut": 3.8,
+      "fin": 4.14
+    },
+    {
+      "texte": "teste-toi",
+      "mot": "teste-toi",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 5.0
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.16
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.32
+    },
+    {
+      "texte": "cartes :",
+      "mot": "cartes",
+      "scene": 1,
+      "debut": 5.32,
+      "fin": 5.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.14
+    },
+    {
+      "texte": "question",
+      "mot": "question",
+      "scene": 1,
+      "debut": 6.14,
+      "fin": 6.4
+    },
+    {
+      "texte": "d'abord,",
+      "mot": "d'abord",
+      "scene": 1,
+      "debut": 6.4,
+      "fin": 6.74
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 7.22,
+      "fin": 7.32
+    },
+    {
+      "texte": "réponse",
+      "mot": "réponse",
+      "scene": 1,
+      "debut": 7.32,
+      "fin": 7.52
+    },
+    {
+      "texte": "ensuite.",
+      "mot": "ensuite",
+      "scene": 1,
+      "debut": 7.52,
+      "fin": 7.86
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.88
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 2,
+      "debut": 8.88,
+      "fin": 9.28
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 9.28,
+      "fin": 9.54
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.66
+    },
+    {
+      "texte": "revenir",
+      "mot": "revenir",
+      "scene": 2,
+      "debut": 9.66,
+      "fin": 10.0
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 2,
+      "debut": 10.0,
+      "fin": 10.52
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.74
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 10.74,
+      "fin": 10.9
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 10.9,
+      "fin": 10.9
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 10.9,
+      "fin": 11.04
+    },
+    {
+      "texte": "oublies.",
+      "mot": "oublies",
+      "scene": 2,
+      "debut": 11.04,
+      "fin": 11.3
+    },
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 2,
+      "debut": 11.9,
+      "fin": 12.14
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 2,
+      "debut": 12.14,
+      "fin": 12.36
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 2,
+      "debut": 12.36,
+      "fin": 12.56
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 12.56,
+      "fin": 12.82
+    },
+    {
+      "texte": "entre",
+      "mot": "entre",
+      "scene": 2,
+      "debut": 12.98,
+      "fin": 13.2
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 13.2,
+      "fin": 13.4
+    },
+    {
+      "texte": "cours.",
+      "mot": "cours",
+      "scene": 2,
+      "debut": 13.4,
+      "fin": 13.54
+    },
+    {
+      "texte": "Histoire,",
+      "mot": "Histoire",
+      "scene": 3,
+      "debut": 14.06,
+      "fin": 14.58
+    },
+    {
+      "texte": "géo,",
+      "mot": "géo",
+      "scene": 3,
+      "debut": 14.84,
+      "fin": 15.18
+    },
+    {
+      "texte": "littérature,",
+      "mot": "littérature",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 15.9
+    },
+    {
+      "texte": "sciences :",
+      "mot": "sciences",
+      "scene": 3,
+      "debut": 16.12,
+      "fin": 16.32
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 16.94,
+      "fin": 17.12
+    },
+    {
+      "texte": "quoi",
+      "mot": "quoi",
+      "scene": 3,
+      "debut": 17.12,
+      "fin": 17.26
+    },
+    {
+      "texte": "enrichir",
+      "mot": "enrichir",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.8
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 3,
+      "debut": 17.8,
+      "fin": 17.9
+    },
+    {
+      "texte": "copies.",
+      "mot": "copies",
+      "scene": 3,
+      "debut": 17.9,
+      "fin": 18.1
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 18.8,
+      "fin": 18.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 18.96,
+      "fin": 19.14
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 19.14,
+      "fin": 19.34
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 19.34,
+      "fin": 19.54
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 19.54,
+      "fin": 19.74
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 19.74,
+      "fin": 20.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 20.66,
+      "fin": 20.98
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 20.98,
+      "fin": 21.36
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 21.6,
+      "fin": 22.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 22.14,
+      "fin": 22.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 22.32,
+      "fin": 22.62
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.62,
+      "fin": 22.88
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 22.88,
+      "fin": 23.12
+    }
+  ]
+}

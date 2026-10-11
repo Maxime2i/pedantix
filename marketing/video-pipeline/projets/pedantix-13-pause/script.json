@@ -1,0 +1,149 @@
+{
+  "titre": "Mets la vidéo en pause",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Défi spectateur : mettre pause dès qu'on reconnaît la page.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Héra",
+    "texte": [
+      "Héra ou Héré est une déesse grecque antique et une des principales divinités des panthéons grecs. Fille du roi des Titans Cronos et de Rhéa, sœur et épouse de Zeus, elle est la reine des dieux et la déesse du mariage.",
+      "Son rôle dans les cultes et la mythologie se définit en grande partie en relation avec son époux.",
+      "Son équivalent dans la mythologie romaine est Junon, qui a des attributions similaires. À l'époque moderne, elle est connue par le biais de sa contrepartie romaine, et comme la déesse irascible des mythes grecs."
+    ],
+    "titreMots": [
+      "héra"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Samedi 27 septembre",
+    "accelere": [
+      "grecque",
+      "antique",
+      "principales",
+      "divinités",
+      "panthéons",
+      "déesse",
+      "grecs",
+      "fille",
+      "roi",
+      "titans",
+      "cronos",
+      "rhéa",
+      "sœur",
+      "épouse",
+      "zeus",
+      "reine",
+      "dieux",
+      "mariage",
+      "mythologie",
+      "romaine",
+      "junon",
+      "époux",
+      "mythes"
+    ]
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mets la vidéo en pause dès que tu sais quelle page c'est.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "pause",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "sais",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "devoile",
+      "voix": "Je dévoile la page petit à petit… grecque, déesse, Zeus, mariage…",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Je",
+          "mode": "telephone"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Je",
+          "cible": "article",
+          "echelle": 1.3,
+          "hauteur": 820
+        },
+        {
+          "type": "accelere",
+          "ancre": "dévoile",
+          "fin": "mariage…",
+          "essais": 28
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Tu l'as ? C'est Héra, la reine des dieux.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Tu",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Tu",
+          "mode": "coin"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "Héra,"
+        },
+        {
+          "type": "pose",
+          "ancre": "Héra,",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Dis-moi en commentaire à quel mot tu as su.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Dis-moi",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

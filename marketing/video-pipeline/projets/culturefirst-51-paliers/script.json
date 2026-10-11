@@ -1,0 +1,143 @@
+{
+  "titre": "Les paliers de série",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de fête qui monte à chaque palier, impressionné sur « mille jours ». Complice sur la question. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "paliers",
+      "voix": "Trois jours, sept, quatorze, trente… Chaque palier de ta série est fêté.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Trois"
+        },
+        {
+          "type": "finSeance",
+          "ancre": "Trois",
+          "donnees": {
+            "serie": 3,
+            "palier": 3
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "Trois",
+          "cible": "e-badge",
+          "echelle": 1.4
+        },
+        {
+          "type": "finSeance",
+          "ancre": "sept",
+          "donnees": {
+            "serie": 7,
+            "palier": 7
+          }
+        },
+        {
+          "type": "finSeance",
+          "ancre": "quatorze",
+          "donnees": {
+            "serie": 14,
+            "palier": 14
+          }
+        },
+        {
+          "type": "finSeance",
+          "ancre": "trente",
+          "donnees": {
+            "serie": 30,
+            "palier": 30
+          }
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Trois",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "voix": "À la fin de ta séance : « Palier atteint : trente jours d'affilée ! »",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "fin",
+          "cible": "aucun"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "ensuite",
+      "voix": "Et ensuite cinquante, cent, deux cents… jusqu'à mille jours d'affilée.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "cinquante",
+          "valeur": 1000,
+          "depart": 50,
+          "montee": 2.2,
+          "suffixe": " jours",
+          "sous": "le dernier palier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "toi",
+      "voix": "Tu en es où, toi ? Dis-le en commentaire, on compare.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Tu"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

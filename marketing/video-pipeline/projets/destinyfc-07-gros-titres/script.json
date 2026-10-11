@@ -1,0 +1,310 @@
+{
+  "titre": "Ma carrière racontée par les journaux",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements. Uniquement des titres de presse réels du jeu (data.js HEADLINES : flop, solid, wonder, trophy), avec {name}=Lucas Morel et {club}. Statistiques de chaque bilan cohérentes avec le titre (note 4,9 en panne → 8,1 changé de dimension).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de revue de presse, un peu théâtral : chaque titre lu comme une manchette. Dépit au début, fierté qui monte, apothéose à la fin."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "avatar",
+  "cartes": {
+    "s-flop": {
+      "genre": "saison",
+      "tag": "📊 SAISON 2027-28 · SOCHAUX",
+      "niveau": "d2",
+      "une": "« Lucas Morel en panne : une saison qui laissera des traces »",
+      "stats": [
+        [
+          "24",
+          "Matchs"
+        ],
+        [
+          "1",
+          "Buts"
+        ],
+        [
+          "2",
+          "Passes déc."
+        ],
+        [
+          "4.9",
+          "Note"
+        ]
+      ],
+      "lignes": [
+        "Championnat : 14ᵉ",
+        "❌ Objectif du club : Note de saison ≥ 6.5",
+        "💰 +60 k€ (salaire & sponsors)"
+      ]
+    },
+    "s-solid": {
+      "genre": "saison",
+      "tag": "📊 SAISON 2031-32 · LENS",
+      "niveau": "d1",
+      "une": "« Constant, appliqué, décisif : Lucas Morel a tenu son rang toute l'année »",
+      "stats": [
+        [
+          "34",
+          "Matchs"
+        ],
+        [
+          "6",
+          "Buts"
+        ],
+        [
+          "9",
+          "Passes déc."
+        ],
+        [
+          "6.9",
+          "Note"
+        ]
+      ],
+      "lignes": [
+        "Championnat : 7ᵉ",
+        "✅ Objectif du club : Note de saison ≥ 6.5",
+        "💰 +0,9 M€ (salaire & sponsors)"
+      ]
+    },
+    "s-wonder": {
+      "genre": "saison",
+      "tag": "📊 SAISON 2034-35 · PARIS",
+      "niveau": "elite",
+      "une": "« Lucas Morel a changé de dimension cette année, point final »",
+      "stats": [
+        [
+          "36",
+          "Matchs"
+        ],
+        [
+          "14",
+          "Buts"
+        ],
+        [
+          "12",
+          "Passes déc."
+        ],
+        [
+          "8.1",
+          "Note"
+        ]
+      ],
+      "lignes": [
+        "Championnat : 2ᵉ",
+        "✅ Objectif du club : Note de saison ≥ 7.0",
+        "💰 +4,6 M€ (salaire & sponsors)"
+      ]
+    },
+    "s-trophy": {
+      "genre": "saison",
+      "tag": "📊 SAISON 2037-38 · PARIS",
+      "niveau": "elite",
+      "une": "« Sacré avec Paris, Lucas Morel transforme une saison en légende »",
+      "stats": [
+        [
+          "38",
+          "Matchs"
+        ],
+        [
+          "17",
+          "Buts"
+        ],
+        [
+          "15",
+          "Passes déc."
+        ],
+        [
+          "8.4",
+          "Note"
+        ]
+      ],
+      "lignes": [
+        "Championnat : 1ᵉ",
+        "✅ Objectif du club : Note de saison ≥ 7.0",
+        "💰 +6,2 M€ (salaire & sponsors)"
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "50 k€",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Sochaux",
+        "couleurs": [
+          "#f5c400",
+          "#1a4fb5"
+        ]
+      },
+      "carte": null
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Voici ma carrière… racontée uniquement par les journaux.",
+      "animation": "Avatar puis téléphone.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Voici",
+          "nom": "content"
+        },
+        {
+          "type": "disposition",
+          "ancre": "racontée",
+          "mode": "telephone"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "flop",
+      "voix": "Dix-sept ans. Lucas Morel en panne : une saison qui laissera des traces.",
+      "animation": "Bilan de saison, titre « en panne ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Dix-sept",
+          "id": "s-flop"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Dix-sept",
+          "age": 17,
+          "annee": 2027,
+          "note": 58
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "solid",
+      "voix": "Vingt et un ans. Constant, appliqué, décisif : Lucas Morel a tenu son rang toute l'année.",
+      "animation": "Titre « tenu son rang ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Vingt",
+          "id": "s-solid"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Vingt",
+          "age": 21,
+          "annee": 2031,
+          "note": 71,
+          "argent": "1,4 M€",
+          "etoiles": 2,
+          "niveau": "d1",
+          "club": "Lens",
+          "couleurs": [
+            "#e52a1e",
+            "#f5c400"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "wonder",
+      "voix": "Vingt-quatre ans. Lucas Morel a changé de dimension cette année, point final.",
+      "animation": "Titre « changé de dimension ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Vingt-quatre",
+          "id": "s-wonder"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Vingt-quatre",
+          "age": 24,
+          "annee": 2034,
+          "note": 80,
+          "argent": "9 M€",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "Paris",
+          "couleurs": [
+            "#e52a1e",
+            "#1a4fb5"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "trophy",
+      "voix": "Et à vingt-sept ans : sacré avec Paris, Lucas Morel transforme une saison en légende.",
+      "animation": "Titre de champion.",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "vingt-sept",
+          "id": "s-trophy"
+        },
+        {
+          "type": "joueur",
+          "ancre": "vingt-sept",
+          "age": 27,
+          "annee": 2037,
+          "note": 86,
+          "argent": "31 M€",
+          "etoiles": 5
+        },
+        {
+          "type": "tampon",
+          "ancre": "légende",
+          "texte": "Champion",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Ta carrière fera quels gros titres ? Destiny FC, gratuit.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

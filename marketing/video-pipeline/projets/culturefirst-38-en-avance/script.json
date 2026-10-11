@@ -1,0 +1,155 @@
+{
+  "titre": "Réviser en avance avant un voyage",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton pratique et détendu. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tu pars en week-end et tu n'auras pas le temps de réviser ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Tu"
+        },
+        {
+          "type": "titre",
+          "ancre": "Tu",
+          "texte": "Tu pars en week-end ?",
+          "sous": "et pas le temps de réviser"
+        },
+        {
+          "type": "masquer",
+          "ancre": "réviser",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tu",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "plus",
+      "voix": "Avant de partir, ouvre « Réviser plus aujourd'hui ».",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "ouvre",
+          "cible": "a-plus"
+        },
+        {
+          "type": "feuille",
+          "ancre": "aujourd'hui",
+          "nom": "reviserPlus"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "avance",
+      "voix": "Et choisis « Réviser en avance » : les cartes prévues dans les trois prochains jours.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "choisis",
+          "cible": "f-avance",
+          "echelle": 1.35
+        },
+        {
+          "type": "appui",
+          "ancre": "avance",
+          "cible": "f-avance"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "tranquille",
+      "voix": "Tu prends un peu d'avance sur tes cartes, et tu pars l'esprit tranquille.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "prends",
+          "nom": "etude"
+        },
+        {
+          "type": "zoom",
+          "ancre": "prends",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "tranquille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grands romans français",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a écrit ce roman ?",
+      "indiceType": "Roman",
+      "indice": "Le Petit Prince",
+      "reponse": "Antoine de Saint-Exupéry",
+      "fiche": [
+        [
+          "Publication",
+          "1943"
+        ]
+      ]
+    }
+  ],
+  "ecranInitial": "accueil"
+}

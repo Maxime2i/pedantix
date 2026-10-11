@@ -1,0 +1,187 @@
+{
+  "titre": "I challenged my mate",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 26
+  },
+  "objectif": "English version of destinyfc-10. Friends mode (real: 'Same start, same dice. Highest score wins.'). Two fictional careers from the same start: 142 vs 211 points.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Friendly banter between mates. 'Him' a bit mocking, 'Me' proud. Ends on a challenge to the viewer."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Challenge<br>your <em>friends</em>",
+    "detail": "Same start, same dice",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "voix": "I challenged my mate on Destiny FC. Same start, same dice.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "challenged",
+          "nom": "clin"
+        },
+        {
+          "type": "disposition",
+          "ancre": "mate",
+          "mode": "duo"
+        },
+        {
+          "type": "appui",
+          "ancre": "Destiny",
+          "cible": "a-amis"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "rule",
+      "voix": "The only difference between us: our choices.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "only",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "only",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "only",
+          "texte": "Same start, *same dice*",
+          "sous": "Only your choices differ"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "him",
+      "voix": "Him? He played it safe. Decent career, score: one hundred and forty-two.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Him",
+          "titre": "*Him*"
+        },
+        {
+          "type": "etape",
+          "ancre": "played",
+          "age": 16,
+          "texte": "First contract",
+          "club": "Portsmouth",
+          "niveau": "d2"
+        },
+        {
+          "type": "etape",
+          "ancre": "Decent",
+          "age": 33,
+          "texte": "Retirement",
+          "club": "Sheffield",
+          "niveau": "d2"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "score",
+          "valeur": 142,
+          "sous": "his score",
+          "duree": 2.2
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "me",
+      "voix": "Me? I risked it all. United, a league title… and two hundred and eleven points.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Me",
+          "titre": "*Me*"
+        },
+        {
+          "type": "etape",
+          "ancre": "Me",
+          "age": 16,
+          "texte": "First contract",
+          "club": "Portsmouth",
+          "niveau": "d2"
+        },
+        {
+          "type": "etape",
+          "ancre": "United",
+          "age": 24,
+          "texte": "Transfer",
+          "club": "United",
+          "niveau": "elite"
+        },
+        {
+          "type": "etape",
+          "ancre": "league",
+          "age": 27,
+          "texte": "Champions",
+          "club": "United",
+          "niveau": "elite"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "two",
+          "valeur": 211,
+          "sous": "my score",
+          "duree": 2.4
+        },
+        {
+          "type": "pose",
+          "ancre": "two",
+          "nom": "fier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Highest score wins. Send this challenge to a mate. Destiny FC, free on iPhone and Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "wins",
+          "texte": "Winner",
+          "couleur": "or"
+        },
+        {
+          "type": "pose",
+          "ancre": "wins",
+          "nom": "celebre"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "ecrans": {}
+}

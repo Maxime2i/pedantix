@@ -1,0 +1,443 @@
+{
+  "duree": 19.38,
+  "dureeVoix": 17.58,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.34,
+      "fin": 2.78
+    },
+    {
+      "id": "l1",
+      "debut": 2.78,
+      "finVoix": 5.16,
+      "fin": 5.7
+    },
+    {
+      "id": "l2",
+      "debut": 5.7,
+      "finVoix": 8.42,
+      "fin": 9.06
+    },
+    {
+      "id": "l3",
+      "debut": 9.06,
+      "finVoix": 11.6,
+      "fin": 12.32
+    },
+    {
+      "id": "merci",
+      "debut": 12.32,
+      "finVoix": 15.6,
+      "fin": 16.06
+    },
+    {
+      "id": "appel",
+      "debut": 16.06,
+      "finVoix": 17.58,
+      "fin": 19.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Créer",
+      "mot": "Créer",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.54
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.62
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.76
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 0.88
+    },
+    {
+      "texte": "seul",
+      "mot": "seul",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.1
+    },
+    {
+      "texte": "m'a",
+      "mot": "m'a",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.32
+    },
+    {
+      "texte": "appris",
+      "mot": "appris",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.62
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.96
+    },
+    {
+      "texte": "choses.",
+      "mot": "choses",
+      "scene": 0,
+      "debut": 1.96,
+      "fin": 2.34
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 2.78,
+      "fin": 2.98
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 3.32,
+      "fin": 3.38
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 3.38,
+      "fin": 3.54
+    },
+    {
+      "texte": "dur,",
+      "mot": "dur",
+      "scene": 1,
+      "debut": 3.54,
+      "fin": 3.74
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 1,
+      "debut": 3.92,
+      "fin": 4.0
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 1,
+      "debut": 4.0,
+      "fin": 4.1
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 4.1,
+      "fin": 4.18
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 4.18,
+      "fin": 4.24
+    },
+    {
+      "texte": "code,",
+      "mot": "code",
+      "scene": 1,
+      "debut": 4.24,
+      "fin": 4.4
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 4.84
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 4.84,
+      "fin": 4.9
+    },
+    {
+      "texte": "finir.",
+      "mot": "finir",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.16
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 5.7,
+      "fin": 6.1
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 6.52,
+      "fin": 6.6
+    },
+    {
+      "texte": "gens",
+      "mot": "gens",
+      "scene": 2,
+      "debut": 6.6,
+      "fin": 6.72
+    },
+    {
+      "texte": "trouvent",
+      "mot": "trouvent",
+      "scene": 2,
+      "debut": 6.72,
+      "fin": 7.0
+    },
+    {
+      "texte": "toujours",
+      "mot": "toujours",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.36
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 7.36,
+      "fin": 7.66
+    },
+    {
+      "texte": "bug",
+      "mot": "bug",
+      "scene": 2,
+      "debut": 7.66,
+      "fin": 7.82
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 8.0
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 8.0,
+      "fin": 8.08
+    },
+    {
+      "texte": "n'as",
+      "mot": "n'as",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.14
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 8.14,
+      "fin": 8.24
+    },
+    {
+      "texte": "vu.",
+      "mot": "vu",
+      "scene": 2,
+      "debut": 8.24,
+      "fin": 8.42
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 9.06,
+      "fin": 9.46
+    },
+    {
+      "texte": "faire",
+      "mot": "faire",
+      "scene": 3,
+      "debut": 9.76,
+      "fin": 9.84
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 9.84,
+      "fin": 9.98
+    },
+    {
+      "texte": "truc",
+      "mot": "truc",
+      "scene": 3,
+      "debut": 9.98,
+      "fin": 10.12
+    },
+    {
+      "texte": "simple,",
+      "mot": "simple",
+      "scene": 3,
+      "debut": 10.12,
+      "fin": 10.4
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 10.6,
+      "fin": 10.8
+    },
+    {
+      "texte": "très",
+      "mot": "très",
+      "scene": 3,
+      "debut": 10.8,
+      "fin": 11.16
+    },
+    {
+      "texte": "compliqué.",
+      "mot": "compliqué",
+      "scene": 3,
+      "debut": 11.16,
+      "fin": 11.6
+    },
+    {
+      "texte": "Merci",
+      "mot": "Merci",
+      "scene": 4,
+      "debut": 12.32,
+      "fin": 12.62
+    },
+    {
+      "texte": "d'avoir",
+      "mot": "d'avoir",
+      "scene": 4,
+      "debut": 12.62,
+      "fin": 12.92
+    },
+    {
+      "texte": "suivi",
+      "mot": "suivi",
+      "scene": 4,
+      "debut": 12.92,
+      "fin": 13.24
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 4,
+      "debut": 13.24,
+      "fin": 13.28
+    },
+    {
+      "texte": "mois",
+      "mot": "mois",
+      "scene": 4,
+      "debut": 13.28,
+      "fin": 13.4
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 4,
+      "debut": 13.4,
+      "fin": 13.56
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 4,
+      "debut": 13.56,
+      "fin": 13.76
+    },
+    {
+      "texte": "Rendez-vous",
+      "mot": "Rendez-vous",
+      "scene": 4,
+      "debut": 14.24,
+      "fin": 14.64
+    },
+    {
+      "texte": "demain,",
+      "mot": "demain",
+      "scene": 4,
+      "debut": 14.64,
+      "fin": 14.9
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 14.9,
+      "fin": 15.32
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 4,
+      "debut": 15.32,
+      "fin": 15.6
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 16.06,
+      "fin": 16.62
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 16.84,
+      "fin": 17.12
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 17.12,
+      "fin": 17.32
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 17.32,
+      "fin": 17.44
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 17.44,
+      "fin": 17.58
+    }
+  ]
+}

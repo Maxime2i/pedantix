@@ -1,0 +1,498 @@
+{
+  "duree": 20.76,
+  "dureeVoix": 18.96,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.26,
+      "fin": 2.62
+    },
+    {
+      "id": "methodique",
+      "debut": 2.62,
+      "finVoix": 4.84,
+      "fin": 5.46
+    },
+    {
+      "id": "chanceux",
+      "debut": 5.46,
+      "finVoix": 7.54,
+      "fin": 8.22
+    },
+    {
+      "id": "tetu",
+      "debut": 8.22,
+      "finVoix": 10.26,
+      "fin": 10.96
+    },
+    {
+      "id": "guetteur",
+      "debut": 10.96,
+      "finVoix": 13.36,
+      "fin": 13.74
+    },
+    {
+      "id": "pedant",
+      "debut": 13.74,
+      "finVoix": 15.46,
+      "fin": 16.04
+    },
+    {
+      "id": "appel",
+      "debut": 16.04,
+      "finVoix": 18.96,
+      "fin": 20.76
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.46
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.54
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.9
+    },
+    {
+      "texte": "types",
+      "mot": "types",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 1.42
+    },
+    {
+      "texte": "joueurs",
+      "mot": "joueurs",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.68
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 1.8
+    },
+    {
+      "texte": "Pédantix.",
+      "mot": "Pédantix",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 2.26
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 2.62,
+      "fin": 2.96
+    },
+    {
+      "texte": "méthodique,",
+      "mot": "méthodique",
+      "scene": 1,
+      "debut": 2.96,
+      "fin": 3.44
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 3.44,
+      "fin": 3.84
+    },
+    {
+      "texte": "commence",
+      "mot": "commence",
+      "scene": 1,
+      "debut": 3.84,
+      "fin": 4.04
+    },
+    {
+      "texte": "toujours",
+      "mot": "toujours",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.3
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 1,
+      "debut": 4.3,
+      "fin": 4.46
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.56
+    },
+    {
+      "texte": "mêmes",
+      "mot": "mêmes",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.72
+    },
+    {
+      "texte": "mots.",
+      "mot": "mots",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.84
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 5.46,
+      "fin": 5.56
+    },
+    {
+      "texte": "chanceux,",
+      "mot": "chanceux",
+      "scene": 2,
+      "debut": 5.56,
+      "fin": 5.96
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 5.96,
+      "fin": 6.28
+    },
+    {
+      "texte": "trouve",
+      "mot": "trouve",
+      "scene": 2,
+      "debut": 6.28,
+      "fin": 6.48
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 6.48,
+      "fin": 6.58
+    },
+    {
+      "texte": "douze",
+      "mot": "douze",
+      "scene": 2,
+      "debut": 6.58,
+      "fin": 6.84
+    },
+    {
+      "texte": "coups",
+      "mot": "coups",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.14
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 2,
+      "debut": 7.14,
+      "fin": 7.2
+    },
+    {
+      "texte": "comprendre.",
+      "mot": "comprendre",
+      "scene": 2,
+      "debut": 7.2,
+      "fin": 7.54
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 8.22,
+      "fin": 8.48
+    },
+    {
+      "texte": "têtu,",
+      "mot": "têtu",
+      "scene": 3,
+      "debut": 8.48,
+      "fin": 8.86
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 3,
+      "debut": 8.86,
+      "fin": 9.24
+    },
+    {
+      "texte": "tape",
+      "mot": "tape",
+      "scene": 3,
+      "debut": 9.24,
+      "fin": 9.4
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 9.4,
+      "fin": 9.56
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 3,
+      "debut": 9.56,
+      "fin": 9.66
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 9.84
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 3,
+      "debut": 9.84,
+      "fin": 10.06
+    },
+    {
+      "texte": "fois.",
+      "mot": "fois",
+      "scene": 3,
+      "debut": 10.06,
+      "fin": 10.26
+    },
+    {
+      "texte": "Celui",
+      "mot": "Celui",
+      "scene": 4,
+      "debut": 10.96,
+      "fin": 11.28
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 4,
+      "debut": 11.28,
+      "fin": 11.38
+    },
+    {
+      "texte": "attend",
+      "mot": "attend",
+      "scene": 4,
+      "debut": 11.38,
+      "fin": 11.5
+    },
+    {
+      "texte": "midi",
+      "mot": "midi",
+      "scene": 4,
+      "debut": 11.5,
+      "fin": 11.96
+    },
+    {
+      "texte": "pile,",
+      "mot": "pile",
+      "scene": 4,
+      "debut": 11.96,
+      "fin": 12.3
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 12.3,
+      "fin": 12.58
+    },
+    {
+      "texte": "doigt",
+      "mot": "doigt",
+      "scene": 4,
+      "debut": 12.58,
+      "fin": 12.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 12.78,
+      "fin": 12.88
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 12.88,
+      "fin": 12.98
+    },
+    {
+      "texte": "notif.",
+      "mot": "notif",
+      "scene": 4,
+      "debut": 12.98,
+      "fin": 13.36
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 13.74,
+      "fin": 14.1
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 14.1,
+      "fin": 14.26
+    },
+    {
+      "texte": "pédant,",
+      "mot": "pédant",
+      "scene": 5,
+      "debut": 14.26,
+      "fin": 14.54
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 5,
+      "debut": 14.54,
+      "fin": 14.74
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 14.74,
+      "fin": 14.82
+    },
+    {
+      "texte": "raconte",
+      "mot": "raconte",
+      "scene": 5,
+      "debut": 14.82,
+      "fin": 15.06
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 5,
+      "debut": 15.06,
+      "fin": 15.14
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 5,
+      "debut": 15.14,
+      "fin": 15.26
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 15.26,
+      "fin": 15.32
+    },
+    {
+      "texte": "monde.",
+      "mot": "monde",
+      "scene": 5,
+      "debut": 15.32,
+      "fin": 15.46
+    },
+    {
+      "texte": "Toi,",
+      "mot": "Toi",
+      "scene": 6,
+      "debut": 16.04,
+      "fin": 16.26
+    },
+    {
+      "texte": "t'es",
+      "mot": "t'es",
+      "scene": 6,
+      "debut": 16.26,
+      "fin": 16.34
+    },
+    {
+      "texte": "lequel ?",
+      "mot": "lequel",
+      "scene": 6,
+      "debut": 16.34,
+      "fin": 16.5
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 6,
+      "debut": 16.5,
+      "fin": 17.9
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 17.9,
+      "fin": 18.46
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 18.46,
+      "fin": 18.72
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 6,
+      "debut": 18.72,
+      "fin": 18.84
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 6,
+      "debut": 18.84,
+      "fin": 18.96
+    }
+  ]
+}

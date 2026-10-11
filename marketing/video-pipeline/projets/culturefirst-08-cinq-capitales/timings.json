@@ -1,0 +1,431 @@
+{
+  "duree": 30.0,
+  "dureeVoix": 28.2,
+  "scenes": [
+    {
+      "id": "defi",
+      "debut": 0.0,
+      "finVoix": 3.34,
+      "fin": 4.06
+    },
+    {
+      "id": "liste",
+      "debut": 4.06,
+      "finVoix": 16.52,
+      "fin": 17.12
+    },
+    {
+      "id": "score",
+      "debut": 17.12,
+      "finVoix": 23.232,
+      "fin": 23.232
+    },
+    {
+      "id": "appel",
+      "debut": 23.232,
+      "finVoix": 28.2,
+      "fin": 30.0
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.56
+    },
+    {
+      "texte": "capitales,",
+      "mot": "capitales",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 1.16
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.5
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 1.5,
+      "fin": 1.9
+    },
+    {
+      "texte": "Compte",
+      "mot": "Compte",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.66
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.76
+    },
+    {
+      "texte": "bonnes",
+      "mot": "bonnes",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 2.94
+    },
+    {
+      "texte": "réponses.",
+      "mot": "réponses",
+      "scene": 0,
+      "debut": 2.94,
+      "fin": 3.34
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 4.06,
+      "fin": 4.12
+    },
+    {
+      "texte": "Maroc ?",
+      "mot": "Maroc",
+      "scene": 1,
+      "debut": 4.12,
+      "fin": 4.44
+    },
+    {
+      "texte": "Rabat.",
+      "mot": "Rabat",
+      "scene": 1,
+      "debut": 5.08,
+      "fin": 5.62
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 6.32,
+      "fin": 6.56
+    },
+    {
+      "texte": "Nigeria ?",
+      "mot": "Nigeria",
+      "scene": 1,
+      "debut": 6.56,
+      "fin": 6.78
+    },
+    {
+      "texte": "Abuja.",
+      "mot": "Abuja",
+      "scene": 1,
+      "debut": 7.9,
+      "fin": 8.54
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 9.18,
+      "fin": 9.44
+    },
+    {
+      "texte": "Suisse ?",
+      "mot": "Suisse",
+      "scene": 1,
+      "debut": 9.44,
+      "fin": 9.74
+    },
+    {
+      "texte": "Berne.",
+      "mot": "Berne",
+      "scene": 1,
+      "debut": 10.48,
+      "fin": 11.0
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 11.72,
+      "fin": 12.04
+    },
+    {
+      "texte": "Nouvelle-Zélande ?",
+      "mot": "Nouvelle-Zélande",
+      "scene": 1,
+      "debut": 12.04,
+      "fin": 13.28
+    },
+    {
+      "texte": "Wellington.",
+      "mot": "Wellington",
+      "scene": 1,
+      "debut": 13.28,
+      "fin": 13.8
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 14.74,
+      "fin": 15.04
+    },
+    {
+      "texte": "Vietnam ?",
+      "mot": "Vietnam",
+      "scene": 1,
+      "debut": 15.04,
+      "fin": 15.24
+    },
+    {
+      "texte": "Hanoï.",
+      "mot": "Hanoï",
+      "scene": 1,
+      "debut": 16.14,
+      "fin": 16.52
+    },
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 2,
+      "debut": 17.12,
+      "fin": 17.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 2,
+      "debut": 17.62,
+      "fin": 17.74
+    },
+    {
+      "texte": "cinq ?",
+      "mot": "cinq",
+      "scene": 2,
+      "debut": 17.74,
+      "fin": 17.98
+    },
+    {
+      "texte": "Respect.",
+      "mot": "Respect",
+      "scene": 2,
+      "debut": 18.44,
+      "fin": 18.82
+    },
+    {
+      "texte": "Sinon,",
+      "mot": "Sinon",
+      "scene": 2,
+      "debut": 19.42,
+      "fin": 19.86
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 20.0,
+      "fin": 20.1
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 20.1,
+      "fin": 20.18
+    },
+    {
+      "texte": "souci :",
+      "mot": "souci",
+      "scene": 2,
+      "debut": 20.18,
+      "fin": 20.42
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 20.72,
+      "fin": 20.9
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 2,
+      "debut": 20.9,
+      "fin": 21.22
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 2,
+      "debut": 21.22,
+      "fin": 21.33
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 21.33,
+      "fin": 21.44
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 2,
+      "debut": 21.44,
+      "fin": 21.58
+    },
+    {
+      "texte": "réviser",
+      "mot": "réviser",
+      "scene": 2,
+      "debut": 21.58,
+      "fin": 22.02
+    },
+    {
+      "texte": "jusqu'à",
+      "mot": "jusqu'à",
+      "scene": 2,
+      "debut": 22.02,
+      "fin": 22.46
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 2,
+      "debut": 22.46,
+      "fin": 22.52
+    },
+    {
+      "texte": "qu'elles",
+      "mot": "qu'elles",
+      "scene": 2,
+      "debut": 22.52,
+      "fin": 22.876
+    },
+    {
+      "texte": "restent.",
+      "mot": "restent",
+      "scene": 2,
+      "debut": 22.876,
+      "fin": 23.232
+    },
+    {
+      "texte": "Dis",
+      "mot": "Dis",
+      "scene": 3,
+      "debut": 23.232,
+      "fin": 23.588
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 3,
+      "debut": 23.588,
+      "fin": 23.944
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 3,
+      "debut": 23.944,
+      "fin": 24.3
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 24.3,
+      "fin": 24.4
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 3,
+      "debut": 24.4,
+      "fin": 24.82
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 25.3,
+      "fin": 25.46
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 25.46,
+      "fin": 25.64
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 25.64,
+      "fin": 25.813
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 25.813,
+      "fin": 25.987
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 25.987,
+      "fin": 26.16
+    },
+    {
+      "texte": "questions,",
+      "mot": "questions",
+      "scene": 3,
+      "debut": 26.16,
+      "fin": 26.54
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 26.9,
+      "fin": 27.24
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 27.24,
+      "fin": 27.42
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 27.42,
+      "fin": 27.72
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 27.72,
+      "fin": 27.98
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 27.98,
+      "fin": 28.2
+    }
+  ]
+}

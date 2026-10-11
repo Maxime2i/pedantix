@@ -1,0 +1,290 @@
+{
+  "duree": 17.0,
+  "dureeVoix": 15.2,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.42,
+      "fin": 3.28
+    },
+    {
+      "id": "indices",
+      "debut": 3.28,
+      "finVoix": 7.56,
+      "fin": 8.1
+    },
+    {
+      "id": "reponse",
+      "debut": 8.1,
+      "finVoix": 10.72,
+      "fin": 11.3
+    },
+    {
+      "id": "cta",
+      "debut": 11.3,
+      "finVoix": 13.06,
+      "fin": 13.58
+    },
+    {
+      "id": "appel",
+      "debut": 13.58,
+      "finVoix": 15.2,
+      "fin": 17.0
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "titre",
+      "mot": "titre",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.62
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 1.0
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.32
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.6
+    },
+    {
+      "texte": "Bonne",
+      "mot": "Bonne",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.26
+    },
+    {
+      "texte": "chance.",
+      "mot": "chance",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.42
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 3.28,
+      "fin": 3.66
+    },
+    {
+      "texte": "fleuve…",
+      "mot": "fleuve",
+      "scene": 1,
+      "debut": 3.66,
+      "fin": 4.46
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.94
+    },
+    {
+      "texte": "Sibérie…",
+      "mot": "Sibérie",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.7
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 5.7,
+      "fin": 6.36
+    },
+    {
+      "texte": "finit",
+      "mot": "finit",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.74
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 6.74,
+      "fin": 6.86
+    },
+    {
+      "texte": "l'océan",
+      "mot": "l'océan",
+      "scene": 1,
+      "debut": 6.86,
+      "fin": 7.2
+    },
+    {
+      "texte": "Arctique…",
+      "mot": "Arctique",
+      "scene": 1,
+      "debut": 7.2,
+      "fin": 7.56
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 2,
+      "debut": 8.1,
+      "fin": 8.58
+    },
+    {
+      "texte": "l'Ob !",
+      "mot": "l'Ob",
+      "scene": 2,
+      "debut": 8.58,
+      "fin": 9.06
+    },
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 2,
+      "debut": 9.58,
+      "fin": 9.78
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 9.78,
+      "fin": 9.86
+    },
+    {
+      "texte": "grands",
+      "mot": "grands",
+      "scene": 2,
+      "debut": 9.86,
+      "fin": 10.04
+    },
+    {
+      "texte": "fleuves",
+      "mot": "fleuves",
+      "scene": 2,
+      "debut": 10.04,
+      "fin": 10.28
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.28,
+      "fin": 10.4
+    },
+    {
+      "texte": "Russie.",
+      "mot": "Russie",
+      "scene": 2,
+      "debut": 10.4,
+      "fin": 10.72
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 3,
+      "debut": 11.3,
+      "fin": 11.52
+    },
+    {
+      "texte": "lettres,",
+      "mot": "lettres",
+      "scene": 3,
+      "debut": 11.52,
+      "fin": 11.84
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 11.84,
+      "fin": 12.08
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 12.08,
+      "fin": 12.22
+    },
+    {
+      "texte": "milliers",
+      "mot": "milliers",
+      "scene": 3,
+      "debut": 12.22,
+      "fin": 12.62
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 12.62,
+      "fin": 12.68
+    },
+    {
+      "texte": "kilomètres.",
+      "mot": "kilomètres",
+      "scene": 3,
+      "debut": 12.68,
+      "fin": 13.06
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 13.58,
+      "fin": 14.1
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 14.44,
+      "fin": 14.82
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.82,
+      "fin": 14.94
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.94,
+      "fin": 15.02
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 15.02,
+      "fin": 15.2
+    }
+  ]
+}

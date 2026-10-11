@@ -1,0 +1,353 @@
+{
+  "duree": 18.32,
+  "dureeVoix": 16.52,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.32,
+      "fin": 2.64
+    },
+    {
+      "id": "devoile",
+      "debut": 2.64,
+      "finVoix": 9.26,
+      "fin": 9.8
+    },
+    {
+      "id": "reponse",
+      "debut": 9.8,
+      "finVoix": 12.2,
+      "fin": 12.78
+    },
+    {
+      "id": "cta",
+      "debut": 12.78,
+      "finVoix": 14.14,
+      "fin": 15.16
+    },
+    {
+      "id": "appel",
+      "debut": 15.16,
+      "finVoix": 16.52,
+      "fin": 18.32
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mets",
+      "mot": "Mets",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.5
+    },
+    {
+      "texte": "vidéo",
+      "mot": "vidéo",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.7
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 0.86
+    },
+    {
+      "texte": "pause",
+      "mot": "pause",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.1
+    },
+    {
+      "texte": "dès",
+      "mot": "dès",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.4
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.5
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 1.5,
+      "fin": 1.6
+    },
+    {
+      "texte": "sais",
+      "mot": "sais",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 1.74
+    },
+    {
+      "texte": "quelle",
+      "mot": "quelle",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 1.88
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.02
+    },
+    {
+      "texte": "c'est.",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.32
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 2.64,
+      "fin": 2.86
+    },
+    {
+      "texte": "dévoile",
+      "mot": "dévoile",
+      "scene": 1,
+      "debut": 2.86,
+      "fin": 3.08
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 3.08,
+      "fin": 3.16
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 1,
+      "debut": 3.16,
+      "fin": 3.36
+    },
+    {
+      "texte": "petit",
+      "mot": "petit",
+      "scene": 1,
+      "debut": 3.36,
+      "fin": 3.62
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 3.62,
+      "fin": 3.8
+    },
+    {
+      "texte": "petit…",
+      "mot": "petit",
+      "scene": 1,
+      "debut": 3.8,
+      "fin": 4.0
+    },
+    {
+      "texte": "grecque,",
+      "mot": "grecque",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.32
+    },
+    {
+      "texte": "déesse,",
+      "mot": "déesse",
+      "scene": 1,
+      "debut": 6.12,
+      "fin": 6.52
+    },
+    {
+      "texte": "Zeus,",
+      "mot": "Zeus",
+      "scene": 1,
+      "debut": 7.48,
+      "fin": 7.88
+    },
+    {
+      "texte": "mariage…",
+      "mot": "mariage",
+      "scene": 1,
+      "debut": 8.86,
+      "fin": 9.26
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 9.9
+    },
+    {
+      "texte": "l'as ?",
+      "mot": "l'as",
+      "scene": 2,
+      "debut": 9.9,
+      "fin": 10.43
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 2,
+      "debut": 10.43,
+      "fin": 10.96
+    },
+    {
+      "texte": "Héra,",
+      "mot": "Héra",
+      "scene": 2,
+      "debut": 10.96,
+      "fin": 11.26
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 11.62,
+      "fin": 11.7
+    },
+    {
+      "texte": "reine",
+      "mot": "reine",
+      "scene": 2,
+      "debut": 11.7,
+      "fin": 11.88
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 11.88,
+      "fin": 12.0
+    },
+    {
+      "texte": "dieux.",
+      "mot": "dieux",
+      "scene": 2,
+      "debut": 12.0,
+      "fin": 12.2
+    },
+    {
+      "texte": "Dis-moi",
+      "mot": "Dis-moi",
+      "scene": 3,
+      "debut": 12.78,
+      "fin": 13.1
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.18
+    },
+    {
+      "texte": "commentaire",
+      "mot": "commentaire",
+      "scene": 3,
+      "debut": 13.18,
+      "fin": 13.54
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 13.54,
+      "fin": 13.64
+    },
+    {
+      "texte": "quel",
+      "mot": "quel",
+      "scene": 3,
+      "debut": 13.64,
+      "fin": 13.72
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 3,
+      "debut": 13.72,
+      "fin": 13.86
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 13.86,
+      "fin": 13.96
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 3,
+      "debut": 13.96,
+      "fin": 14.02
+    },
+    {
+      "texte": "su.",
+      "mot": "su",
+      "scene": 3,
+      "debut": 14.02,
+      "fin": 14.14
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 15.16,
+      "fin": 15.56
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 15.56,
+      "fin": 15.96
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 15.96,
+      "fin": 16.22
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 16.22,
+      "fin": 16.32
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 16.32,
+      "fin": 16.52
+    }
+  ]
+}

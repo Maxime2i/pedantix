@@ -1,0 +1,184 @@
+{
+  "titre": "I'm making a football game on my own",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 26
+  },
+  "objectif": "English version of destinyfc-09. Real figure: 260 events in EVENTS (data.js, counted 10/10/2026). No mention of the project's origins or competitors.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Sincere, enthusiastic indie dev talking to his community, smile in the voice. Warm ending, inviting feedback."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "avatar",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "€50k",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      }
+    }
+  },
+  "fin": {
+    "promesse": "My football game,<br>made <em>solo</em>",
+    "detail": "Destiny FC",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Hi! I'm a developer, and I'm making a football career game all on my own.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "developer",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "own",
+          "texte": "👨‍💻 Solo dev",
+          "fin": "own"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "concept",
+      "voix": "The idea: you start at sixteen, and you play all the way to retirement, season after season.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "idea",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "idea",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "appui",
+          "ancre": "start",
+          "cible": "a-carriere"
+        },
+        {
+          "type": "ecran",
+          "ancre": "sixteen",
+          "nom": "creation"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choices",
+      "voix": "Every season, you make choices. Two hundred and sixty different situations.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Every",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Every",
+          "nom": "neutre"
+        },
+        {
+          "type": "ecran",
+          "ancre": "choices",
+          "nom": "partie"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "Two",
+          "valeur": 260,
+          "depart": 0,
+          "montee": 1.4,
+          "sous": "different situations",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "content",
+      "voix": "Decisive moments, transfers, injuries, and your mindset to manage.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Decisive",
+          "id": "finale"
+        },
+        {
+          "type": "carte",
+          "ancre": "transfers",
+          "id": "mercato",
+          "tag": "🪟 TRANSFER WINDOW · 16 YRS"
+        },
+        {
+          "type": "zoom",
+          "ancre": "mindset",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "It's free, on iPhone and Android. Tell me what you think!",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "free",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "free",
+          "nom": "salut"
+        },
+        {
+          "type": "fin",
+          "ancre": "Tell"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

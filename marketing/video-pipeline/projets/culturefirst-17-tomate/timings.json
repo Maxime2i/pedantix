@@ -1,0 +1,465 @@
+{
+  "duree": 24.26,
+  "dureeVoix": 22.46,
+  "scenes": [
+    {
+      "id": "mythe",
+      "debut": 0.0,
+      "finVoix": 3.94,
+      "fin": 4.42
+    },
+    {
+      "id": "explication",
+      "debut": 4.42,
+      "finVoix": 8.14,
+      "fin": 8.5
+    },
+    {
+      "id": "aussi",
+      "debut": 8.5,
+      "finVoix": 11.84,
+      "fin": 12.46
+    },
+    {
+      "id": "question",
+      "debut": 12.46,
+      "finVoix": 17.62,
+      "fin": 18.36
+    },
+    {
+      "id": "appel",
+      "debut": 18.36,
+      "finVoix": 22.46,
+      "fin": 24.26
+    }
+  ],
+  "mots": [
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "tomate,",
+      "mot": "tomate",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 1.08
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.44
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.54
+    },
+    {
+      "texte": "légume ?",
+      "mot": "légume",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 2.02
+    },
+    {
+      "texte": "Pour",
+      "mot": "Pour",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.72
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.72,
+      "fin": 2.86
+    },
+    {
+      "texte": "botaniste,",
+      "mot": "botaniste",
+      "scene": 0,
+      "debut": 2.86,
+      "fin": 3.46
+    },
+    {
+      "texte": "non.",
+      "mot": "non",
+      "scene": 0,
+      "debut": 3.62,
+      "fin": 3.94
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.6
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.7
+    },
+    {
+      "texte": "fruit :",
+      "mot": "fruit",
+      "scene": 1,
+      "debut": 4.7,
+      "fin": 4.9
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 1,
+      "debut": 5.54,
+      "fin": 5.66
+    },
+    {
+      "texte": "se",
+      "mot": "se",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.84
+    },
+    {
+      "texte": "forme",
+      "mot": "forme",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 6.02
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 6.02,
+      "fin": 6.14
+    },
+    {
+      "texte": "partir",
+      "mot": "partir",
+      "scene": 1,
+      "debut": 6.14,
+      "fin": 6.44
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.62
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.74
+    },
+    {
+      "texte": "fleur",
+      "mot": "fleur",
+      "scene": 1,
+      "debut": 6.74,
+      "fin": 7.14
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 7.14,
+      "fin": 7.34
+    },
+    {
+      "texte": "contient",
+      "mot": "contient",
+      "scene": 1,
+      "debut": 7.34,
+      "fin": 7.7
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 7.7,
+      "fin": 7.84
+    },
+    {
+      "texte": "graines.",
+      "mot": "graines",
+      "scene": 1,
+      "debut": 7.84,
+      "fin": 8.14
+    },
+    {
+      "texte": "Comme",
+      "mot": "Comme",
+      "scene": 2,
+      "debut": 8.5,
+      "fin": 8.84
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.84,
+      "fin": 9.04
+    },
+    {
+      "texte": "concombre,",
+      "mot": "concombre",
+      "scene": 2,
+      "debut": 9.04,
+      "fin": 9.58
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 9.94,
+      "fin": 10.1
+    },
+    {
+      "texte": "courgette…",
+      "mot": "courgette",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.64
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 10.64,
+      "fin": 11.08
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 2,
+      "debut": 11.08,
+      "fin": 11.3
+    },
+    {
+      "texte": "l'avocat.",
+      "mot": "l'avocat",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.84
+    },
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 3,
+      "debut": 12.46,
+      "fin": 12.6
+    },
+    {
+      "texte": "cuisine,",
+      "mot": "cuisine",
+      "scene": 3,
+      "debut": 12.6,
+      "fin": 12.86
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 3,
+      "debut": 13.46,
+      "fin": 13.56
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 3,
+      "debut": 13.56,
+      "fin": 13.7
+    },
+    {
+      "texte": "légume.",
+      "mot": "légume",
+      "scene": 3,
+      "debut": 13.7,
+      "fin": 14.08
+    },
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 3,
+      "debut": 14.56,
+      "fin": 14.66
+    },
+    {
+      "texte": "culture",
+      "mot": "culture",
+      "scene": 3,
+      "debut": 14.66,
+      "fin": 15.0
+    },
+    {
+      "texte": "G,",
+      "mot": "G",
+      "scene": 3,
+      "debut": 15.0,
+      "fin": 15.28
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 3,
+      "debut": 15.6,
+      "fin": 15.74
+    },
+    {
+      "texte": "dit",
+      "mot": "dit",
+      "scene": 3,
+      "debut": 15.74,
+      "fin": 15.88
+    },
+    {
+      "texte": "fruit.",
+      "mot": "fruit",
+      "scene": 3,
+      "debut": 15.88,
+      "fin": 16.04
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 16.66,
+      "fin": 16.76
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 3,
+      "debut": 16.76,
+      "fin": 16.9
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 17.2,
+      "fin": 17.26
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.36
+    },
+    {
+      "texte": "savais ?",
+      "mot": "savais",
+      "scene": 3,
+      "debut": 17.36,
+      "fin": 17.62
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 18.36,
+      "fin": 18.5
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 18.5,
+      "fin": 18.66
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 18.66,
+      "fin": 18.84
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 18.84,
+      "fin": 19.02
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 19.02,
+      "fin": 19.2
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 19.2,
+      "fin": 19.52
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 20.0,
+      "fin": 20.26
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.64
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 20.9,
+      "fin": 21.32
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 21.32,
+      "fin": 21.5
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 21.5,
+      "fin": 21.86
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 21.86,
+      "fin": 22.18
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 22.18,
+      "fin": 22.46
+    }
+  ]
+}

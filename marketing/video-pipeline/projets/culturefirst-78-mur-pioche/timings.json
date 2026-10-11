@@ -1,0 +1,415 @@
+{
+  "duree": 23.58,
+  "dureeVoix": 21.78,
+  "scenes": [
+    {
+      "id": "pioche",
+      "debut": 0.0,
+      "finVoix": 2.98,
+      "fin": 4.08
+    },
+    {
+      "id": "question",
+      "debut": 4.08,
+      "finVoix": 6.26,
+      "fin": 6.26
+    },
+    {
+      "id": "compte",
+      "debut": 6.26,
+      "finVoix": 9.88,
+      "fin": 10.82
+    },
+    {
+      "id": "reponse",
+      "debut": 10.82,
+      "finVoix": 13.4,
+      "fin": 14.16
+    },
+    {
+      "id": "suite",
+      "debut": 14.16,
+      "finVoix": 16.94,
+      "fin": 17.7
+    },
+    {
+      "id": "appel",
+      "debut": 17.7,
+      "finVoix": 21.78,
+      "fin": 23.58
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "pioche",
+      "mot": "pioche",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.64
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.8
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 0.98
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.14
+    },
+    {
+      "texte": "hasard,",
+      "mot": "hasard",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.52
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.0,
+      "fin": 2.22
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.32
+    },
+    {
+      "texte": "répond",
+      "mot": "répond",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.54
+    },
+    {
+      "texte": "ensemble.",
+      "mot": "ensemble",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.98
+    },
+    {
+      "texte": "Quel",
+      "mot": "Quel",
+      "scene": 1,
+      "debut": 4.08,
+      "fin": 4.42
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.74
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.2
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 5.2,
+      "fin": 5.42
+    },
+    {
+      "texte": "petit",
+      "mot": "petit",
+      "scene": 1,
+      "debut": 5.42,
+      "fin": 5.64
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 1,
+      "debut": 5.64,
+      "fin": 5.9
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 5.9,
+      "fin": 6.04
+    },
+    {
+      "texte": "monde ?",
+      "mot": "monde",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.26
+    },
+    {
+      "texte": "Trois…",
+      "mot": "Trois",
+      "scene": 2,
+      "debut": 6.26,
+      "fin": 7.467
+    },
+    {
+      "texte": "deux…",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 7.467,
+      "fin": 8.673
+    },
+    {
+      "texte": "un…",
+      "mot": "un",
+      "scene": 2,
+      "debut": 8.673,
+      "fin": 9.88
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 10.82,
+      "fin": 10.86
+    },
+    {
+      "texte": "Vatican !",
+      "mot": "Vatican",
+      "scene": 3,
+      "debut": 10.86,
+      "fin": 11.2
+    },
+    {
+      "texte": "Moins",
+      "mot": "Moins",
+      "scene": 3,
+      "debut": 11.94,
+      "fin": 12.26
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 3,
+      "debut": 12.26,
+      "fin": 12.67
+    },
+    {
+      "texte": "demi-kilomètre",
+      "mot": "demi-kilomètre",
+      "scene": 3,
+      "debut": 12.67,
+      "fin": 13.08
+    },
+    {
+      "texte": "carré.",
+      "mot": "carré",
+      "scene": 3,
+      "debut": 13.08,
+      "fin": 13.4
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 4,
+      "debut": 14.16,
+      "fin": 14.36
+    },
+    {
+      "texte": "veux",
+      "mot": "veux",
+      "scene": 4,
+      "debut": 14.36,
+      "fin": 14.46
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 4,
+      "debut": 14.46,
+      "fin": 14.52
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 4,
+      "debut": 14.52,
+      "fin": 14.6
+    },
+    {
+      "texte": "pioche",
+      "mot": "pioche",
+      "scene": 4,
+      "debut": 14.6,
+      "fin": 14.8
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 14.9
+    },
+    {
+      "texte": "suivante ?",
+      "mot": "suivante",
+      "scene": 4,
+      "debut": 14.9,
+      "fin": 15.24
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 15.24,
+      "fin": 16.12
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 16.12,
+      "fin": 16.22
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 16.22,
+      "fin": 16.62
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 4,
+      "debut": 16.64,
+      "fin": 16.7
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 16.7,
+      "fin": 16.82
+    },
+    {
+      "texte": "fais.",
+      "mot": "fais",
+      "scene": 4,
+      "debut": 16.82,
+      "fin": 16.94
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 5,
+      "debut": 17.7,
+      "fin": 17.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 17.96,
+      "fin": 18.12
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 18.12,
+      "fin": 18.307
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 5,
+      "debut": 18.307,
+      "fin": 18.493
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 18.493,
+      "fin": 18.68
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 5,
+      "debut": 18.68,
+      "fin": 19.0
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 5,
+      "debut": 19.62,
+      "fin": 19.86
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 5,
+      "debut": 19.86,
+      "fin": 20.26
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 20.46,
+      "fin": 20.8
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 20.8,
+      "fin": 20.98
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 20.98,
+      "fin": 21.22
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 21.22,
+      "fin": 21.52
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 21.52,
+      "fin": 21.78
+    }
+  ]
+}

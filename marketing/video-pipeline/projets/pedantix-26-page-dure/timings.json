@@ -1,0 +1,338 @@
+{
+  "duree": 17.12,
+  "dureeVoix": 15.32,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 1.78,
+      "fin": 2.3
+    },
+    {
+      "id": "page",
+      "debut": 2.3,
+      "finVoix": 4.54,
+      "fin": 4.54
+    },
+    {
+      "id": "essais",
+      "debut": 4.54,
+      "finVoix": 7.84,
+      "fin": 8.26
+    },
+    {
+      "id": "fait",
+      "debut": 8.26,
+      "finVoix": 10.94,
+      "fin": 11.6
+    },
+    {
+      "id": "cta",
+      "debut": 11.6,
+      "finVoix": 12.92,
+      "fin": 13.88
+    },
+    {
+      "id": "appel",
+      "debut": 13.88,
+      "finVoix": 15.32,
+      "fin": 17.12
+    }
+  ],
+  "mots": [
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.38
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.64
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.78
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.92
+    },
+    {
+      "texte": "dure",
+      "mot": "dure",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.14
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.24
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.34
+    },
+    {
+      "texte": "historique ?",
+      "mot": "historique",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.78
+    },
+    {
+      "texte": "Jaïnisme.",
+      "mot": "Jaïnisme",
+      "scene": 1,
+      "debut": 2.3,
+      "fin": 3.0
+    },
+    {
+      "texte": "Cent",
+      "mot": "Cent",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.94
+    },
+    {
+      "texte": "douze",
+      "mot": "douze",
+      "scene": 1,
+      "debut": 3.94,
+      "fin": 4.14
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 1,
+      "debut": 4.14,
+      "fin": 4.54
+    },
+    {
+      "texte": "J'ai",
+      "mot": "J'ai",
+      "scene": 2,
+      "debut": 4.54,
+      "fin": 4.74
+    },
+    {
+      "texte": "tapé",
+      "mot": "tapé",
+      "scene": 2,
+      "debut": 4.74,
+      "fin": 5.02
+    },
+    {
+      "texte": "bouddhisme,",
+      "mot": "bouddhisme",
+      "scene": 2,
+      "debut": 5.02,
+      "fin": 5.66
+    },
+    {
+      "texte": "hindouisme,",
+      "mot": "hindouisme",
+      "scene": 2,
+      "debut": 5.86,
+      "fin": 6.36
+    },
+    {
+      "texte": "yoga…",
+      "mot": "yoga",
+      "scene": 2,
+      "debut": 6.5,
+      "fin": 6.66
+    },
+    {
+      "texte": "rien",
+      "mot": "rien",
+      "scene": 2,
+      "debut": 7.22,
+      "fin": 7.5
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 2,
+      "debut": 7.5,
+      "fin": 7.62
+    },
+    {
+      "texte": "venait.",
+      "mot": "venait",
+      "scene": 2,
+      "debut": 7.62,
+      "fin": 7.84
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 8.26,
+      "fin": 8.44
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 3,
+      "debut": 8.44,
+      "fin": 8.52
+    },
+    {
+      "texte": "religion",
+      "mot": "religion",
+      "scene": 3,
+      "debut": 8.52,
+      "fin": 8.8
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 8.8,
+      "fin": 8.96
+    },
+    {
+      "texte": "l'Inde,",
+      "mot": "l'Inde",
+      "scene": 3,
+      "debut": 8.96,
+      "fin": 9.14
+    },
+    {
+      "texte": "fondée",
+      "mot": "fondée",
+      "scene": 3,
+      "debut": 9.32,
+      "fin": 9.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 9.62,
+      "fin": 9.74
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 9.74,
+      "fin": 9.86
+    },
+    {
+      "texte": "non-violence",
+      "mot": "non-violence",
+      "scene": 3,
+      "debut": 9.86,
+      "fin": 10.44
+    },
+    {
+      "texte": "absolue.",
+      "mot": "absolue",
+      "scene": 3,
+      "debut": 10.44,
+      "fin": 10.94
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 11.6,
+      "fin": 11.76
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 4,
+      "debut": 11.76,
+      "fin": 11.86
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 4,
+      "debut": 12.3,
+      "fin": 12.44
+    },
+    {
+      "texte": "quoi",
+      "mot": "quoi",
+      "scene": 4,
+      "debut": 12.44,
+      "fin": 12.48
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 4,
+      "debut": 12.48,
+      "fin": 12.62
+    },
+    {
+      "texte": "pire",
+      "mot": "pire",
+      "scene": 4,
+      "debut": 12.62,
+      "fin": 12.82
+    },
+    {
+      "texte": "page ?",
+      "mot": "page",
+      "scene": 4,
+      "debut": 12.82,
+      "fin": 12.92
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 13.88,
+      "fin": 14.28
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 14.6,
+      "fin": 14.92
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 14.92,
+      "fin": 15.06
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 15.06,
+      "fin": 15.12
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 15.12,
+      "fin": 15.32
+    }
+  ]
+}

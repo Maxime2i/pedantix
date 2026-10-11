@@ -1,0 +1,260 @@
+{
+  "titre": "Le Mont-Blanc 2016",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 23
+  },
+  "objectif": "Historique des éditions. Données RÉELLES de l'API relevées le 10/10/2026 : Rallye Mont-Blanc Morzine, 78 éditions (1947 → 2026) ; 2016 : Yoann Bonato / Benjamin Boulloud (Citroën DS3 R5) en 1:57:59.7, +57.1 sur Lionel Baud ; 2026 : Yoann Bonato vainqueur (Lancia Ypsilon Rally2 HF Integrale).",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Question de quiz au début, pause. Révélation du nom avec plaisir. Clin d'œil amusé sur « Encore lui »."
+  },
+  "ecranInitial": "rallye",
+  "equipages": {
+    "5": {
+      "pilote": "Yoann Bonato",
+      "copilote": "Benjamin Boulloud",
+      "voiture": "Citroën DS3 R5",
+      "classe": "R5"
+    },
+    "19": {
+      "pilote": "Lionel Baud",
+      "copilote": "Lucie Baud",
+      "voiture": "Ford Fiesta RS WRC",
+      "classe": "A8W"
+    },
+    "2": {
+      "pilote": "Pierre Roché",
+      "copilote": "Julie Pellier",
+      "voiture": "Škoda Fabia R5",
+      "classe": "R5"
+    }
+  },
+  "ecrans": {
+    "rallye": {
+      "logo": null,
+      "nom": "Rallye Mont-Blanc Morzine",
+      "ville": "Morzine",
+      "dates": "4–5 sept. 2026",
+      "championnat": "France Tarmac",
+      "situation": {
+        "vainqueur": "Yoann Bonato · Lancia Ypsilon Rally2 HF Integrale"
+      },
+      "partants": 199,
+      "classes": 150,
+      "distance": "184,48 km",
+      "surface": "asphalte",
+      "nbES": 12,
+      "organisateur": "ASAC Mont-Blanc",
+      "cartes": [
+        "situation",
+        "lieu",
+        "championnat",
+        "editions"
+      ],
+      "editions": {
+        "total": 78,
+        "liste": [
+          {
+            "annee": 2026,
+            "titre": "Rallye Mont-Blanc Morzine",
+            "courante": true
+          },
+          {
+            "annee": 2025,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2024,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2023,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2022,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2021,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2020,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2019,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2018,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2017,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2016,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2015,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2014,
+            "titre": "Rallye Mont-Blanc Morzine"
+          },
+          {
+            "annee": 2013,
+            "titre": "Rallye Mont-Blanc Morzine"
+          }
+        ]
+      },
+      "classement": []
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le Rallye du Mont-Blanc, en deux mille seize : qui l'a gagné ?",
+      "animation": "Fiche du Mont-Blanc 2026 ; on descend jusqu'à la carte Éditions.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Le"
+        },
+        {
+          "type": "defiler",
+          "ancre": "seize",
+          "cible": "ra-editions",
+          "marge": 60
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "editions",
+      "voix": "Dans Rally Track, chaque rallye garde toutes ses éditions. Soixante-dix-huit pour celui-ci.",
+      "animation": "Appui sur « Voir 75 éditions de plus » : la liste se déplie jusqu'à 2016.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "toutes",
+          "cible": "ra-editions",
+          "echelle": 1.2,
+          "hauteur": 900
+        },
+        {
+          "type": "editions",
+          "ancre": "Soixante-dix-huit"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "reponse",
+      "voix": "Deux mille seize : Yoann Bonato, avec cinquante-sept secondes d'avance. Et en deux mille vingt-six ? Encore lui.",
+      "animation": "Fiche 2016 : vainqueur Bonato, podium (+57.1). Puis retour sur 2026 : vainqueur Bonato.",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "Deux",
+          "cible": "ed-2016"
+        },
+        {
+          "type": "ecran",
+          "ancre": "Yoann",
+          "nom": "rallye",
+          "donnees": {
+            "dates": "2–3 sept. 2016",
+            "championnat": "",
+            "situation": {
+              "vainqueur": "Yoann Bonato · Citroën DS3 R5"
+            },
+            "partants": null,
+            "classes": 106,
+            "classement": [
+              {
+                "n": 5,
+                "temps": "1:57:59.7"
+              },
+              {
+                "n": 19,
+                "temps": "1:58:56.8",
+                "ecart": "+57.1"
+              },
+              {
+                "n": 2,
+                "temps": "2:00:12.0",
+                "ecart": "+2:12.3"
+              }
+            ],
+            "cartes": [
+              "situation",
+              "podium"
+            ]
+          }
+        },
+        {
+          "type": "zoom",
+          "ancre": "cinquante-sept",
+          "cible": "ra-podium",
+          "echelle": 1.3,
+          "hauteur": 950
+        },
+        {
+          "type": "ecran",
+          "ancre": "Encore",
+          "nom": "rallye"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Encore",
+          "cible": "ra-situation",
+          "echelle": 1.35,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tout l'historique, dans ta poche. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

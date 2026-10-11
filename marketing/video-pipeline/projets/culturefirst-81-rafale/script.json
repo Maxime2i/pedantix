@@ -1,0 +1,253 @@
+{
+  "titre": "10 questions en rafale",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 32
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de présentateur de jeu télé très rythmé : questions vives, réponses claquées, aucune pause inutile. Triomphant sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Dix questions, trente secondes. Compte tes points. Top !",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "rafale",
+          "ancre": "Dix",
+          "titre": "Questions en rafale",
+          "total": 10,
+          "accroche": "Prêt ?"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Dix",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Capitale de l'Espagne ? Madrid.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Capitale",
+          "texte": "Capitale de l’Espagne ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Madrid",
+          "texte": "Madrid"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Le plus grand océan ? Le Pacifique.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Le",
+          "texte": "Le plus grand océan ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Pacifique",
+          "texte": "Le Pacifique"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "L'auteur des Misérables ? Victor Hugo.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "L'auteur",
+          "texte": "L’auteur des Misérables ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Victor",
+          "texte": "Victor Hugo"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q4",
+      "voix": "La planète rouge ? Mars.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "La",
+          "texte": "La planète rouge ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Mars",
+          "texte": "Mars"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q5",
+      "voix": "Les côtés d'un hexagone ? Six.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Les",
+          "texte": "Les côtés d’un hexagone ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Six",
+          "texte": "Six"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q6",
+      "voix": "Le peintre de la Joconde ? Léonard de Vinci.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Le",
+          "texte": "Le peintre de la Joconde ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Léonard",
+          "texte": "Léonard de Vinci"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q7",
+      "voix": "La monnaie du Japon ? Le yen.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "La",
+          "texte": "La monnaie du Japon ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "yen",
+          "texte": "Le yen"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q8",
+      "voix": "Le plus haut sommet du monde ? L'Everest.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Le",
+          "texte": "Le plus haut sommet du monde ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "L'Everest",
+          "texte": "L’Everest"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q9",
+      "voix": "La capitale de l'Australie ? Canberra.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "La",
+          "texte": "La capitale de l’Australie ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Canberra",
+          "texte": "Canberra"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q10",
+      "voix": "Les joueurs d'une équipe de foot ? Onze.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "question",
+          "ancre": "Les",
+          "texte": "Les joueurs d’une équipe de foot ?"
+        },
+        {
+          "type": "bonne",
+          "ancre": "Onze",
+          "texte": "Onze"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Ton score en commentaire ! Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

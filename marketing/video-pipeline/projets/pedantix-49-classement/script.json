@@ -1,0 +1,130 @@
+{
+  "titre": "Mon rang du jour",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Fonctionnalité : le rang du jour, esprit de compétition.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Jeûne",
+    "texte": [
+      "Le jeûne est la privation, volontaire ou non, de nourriture, accompagnée ou pas d'une privation de boisson. Le jeûne partiel fait partie intégrante de la pratique de certaines religions. D'un point de vue médical et physiologique, on considère que la période de jeûne commence à partir de la sixième heure après le dernier repas. Le jeûne met en marche des mécanismes d'adaptation physiologique hérités du lent processus de l'évolution."
+    ],
+    "titreMots": [
+      "jeûne"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mercredi 3 septembre",
+    "essaisDepart": 33
+  },
+  "dispositionInitiale": "duo",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le petit plaisir de midi : voir mon rang du jour.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Le",
+          "mode": "duo"
+        },
+        {
+          "type": "resultat",
+          "ancre": "plaisir",
+          "coups": 33,
+          "rang": 2,
+          "pct": 70
+        },
+        {
+          "type": "pose",
+          "ancre": "rang",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "argent",
+      "voix": "Deuxième aujourd'hui. Médaille d'argent.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Deuxième",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Deuxième",
+          "cible": "r-rang",
+          "echelle": 1.6,
+          "hauteur": 900
+        },
+        {
+          "type": "pose",
+          "ancre": "Médaille",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "premier",
+      "voix": "Le premier m'a battu de quatre coups. Je le retrouverai.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Le",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Le",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "battu",
+          "nom": "decu"
+        },
+        {
+          "type": "pose",
+          "ancre": "retrouverai.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Plus tu trouves vite, plus tu montes. Viens me battre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Viens",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

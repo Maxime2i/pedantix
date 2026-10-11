@@ -1,0 +1,305 @@
+{
+  "duree": 16.82,
+  "dureeVoix": 15.02,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.48,
+      "fin": 3.12
+    },
+    {
+      "id": "accueil",
+      "debut": 3.12,
+      "finVoix": 6.32,
+      "fin": 6.92
+    },
+    {
+      "id": "classement",
+      "debut": 6.92,
+      "finVoix": 9.7,
+      "fin": 10.34
+    },
+    {
+      "id": "appel",
+      "debut": 10.34,
+      "finVoix": 15.02,
+      "fin": 16.82
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.38
+    },
+    {
+      "texte": "apps",
+      "mot": "apps",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.58
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.58,
+      "fin": 0.7
+    },
+    {
+      "texte": "rallye",
+      "mot": "rallye",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 1.08
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.2
+    },
+    {
+      "texte": "parlent",
+      "mot": "parlent",
+      "scene": 0,
+      "debut": 1.2,
+      "fin": 1.64
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.76
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 1.76,
+      "fin": 1.94
+    },
+    {
+      "texte": "WRC.",
+      "mot": "WRC",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.48
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 1,
+      "debut": 3.12,
+      "fin": 3.36
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 1,
+      "debut": 3.36,
+      "fin": 3.46
+    },
+    {
+      "texte": "rallye",
+      "mot": "rallye",
+      "scene": 1,
+      "debut": 3.46,
+      "fin": 3.68
+    },
+    {
+      "texte": "régional ?",
+      "mot": "régional",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 4.72
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.9
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.16
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.42
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 5.96
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 5.96,
+      "fin": 6.1
+    },
+    {
+      "texte": "là.",
+      "mot": "là",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.32
+    },
+    {
+      "texte": "Montbéliard :",
+      "mot": "Montbéliard",
+      "scene": 2,
+      "debut": 6.92,
+      "fin": 7.66
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 2,
+      "debut": 7.94,
+      "fin": 8.08
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.22
+    },
+    {
+      "texte": "classement,",
+      "mot": "classement",
+      "scene": 2,
+      "debut": 8.22,
+      "fin": 8.62
+    },
+    {
+      "texte": "spéciale",
+      "mot": "spéciale",
+      "scene": 2,
+      "debut": 8.62,
+      "fin": 9.08
+    },
+    {
+      "texte": "après",
+      "mot": "après",
+      "scene": 2,
+      "debut": 9.08,
+      "fin": 9.34
+    },
+    {
+      "texte": "spéciale.",
+      "mot": "spéciale",
+      "scene": 2,
+      "debut": 9.34,
+      "fin": 9.7
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 10.34,
+      "fin": 10.48
+    },
+    {
+      "texte": "WRC,",
+      "mot": "WRC",
+      "scene": 3,
+      "debut": 10.48,
+      "fin": 11.02
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 11.02,
+      "fin": 11.64
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 3,
+      "debut": 11.64,
+      "fin": 11.86
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 11.86,
+      "fin": 12.0
+    },
+    {
+      "texte": "autres.",
+      "mot": "autres",
+      "scene": 3,
+      "debut": 12.0,
+      "fin": 12.2
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 12.8,
+      "fin": 13.1
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.42
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 13.7,
+      "fin": 13.86
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 13.86,
+      "fin": 14.18
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 14.18,
+      "fin": 14.5
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 14.5,
+      "fin": 14.76
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 15.02
+    }
+  ]
+}

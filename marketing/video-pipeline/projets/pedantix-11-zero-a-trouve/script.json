@@ -1,0 +1,178 @@
+{
+  "titre": "De zéro à trouvé",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Timelapse d'une partie complète, page vide → titre.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Copenhague",
+    "texte": [
+      "Copenhague est la capitale et la plus grande ville du Danemark. La commune de Copenhague compte 653 648 habitants en 2023, et son agglomération, le Grand Copenhague, en compte 1 345 562. Le nom de Copenhague est généralement donné à l'ensemble du comté de Copenhague, qui regroupe, quant à lui, 1 891 871 habitants. Située sur la côte orientale de l'île de Seeland, face au détroit d'Øresund qui sépare le Danemark de la Suède voisine, Copenhague est reliée à Malmö par le pont de l'Øresund."
+    ],
+    "titreMots": [
+      "copenhague"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Dimanche 28 septembre",
+    "motsOutils": false,
+    "accelere": [
+      "le",
+      "la",
+      "les",
+      "l",
+      "de",
+      "des",
+      "du",
+      "d",
+      "un",
+      "une",
+      "et",
+      "est",
+      "à",
+      "au",
+      "en",
+      "qui",
+      "son",
+      "sur",
+      "par",
+      "plus",
+      "quant",
+      "lui",
+      "qui",
+      "ce",
+      "danemark",
+      "suède",
+      "île",
+      "capitale",
+      "ville",
+      "grande",
+      "habitants",
+      "commune",
+      "pont",
+      "côte",
+      "détroit",
+      "nom",
+      "comté",
+      "agglomération",
+      "voisine",
+      "orientale",
+      "reliée",
+      "sépare",
+      "située",
+      "compte",
+      "regroupe",
+      "ensemble",
+      "généralement",
+      "donné",
+      "malmö",
+      "øresund",
+      "seeland",
+      "grand",
+      "face",
+      "2023",
+      "653",
+      "648",
+      "1",
+      "345",
+      "562",
+      "891",
+      "871"
+    ]
+  },
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Page vide. Aucun indice. Regarde.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Regarde.",
+          "cible": "article",
+          "echelle": 1.15
+        }
+      ]
+    },
+    {
+      "id": "partie",
+      "voix": "Je commence par les petits mots, puis Danemark, Suède, île… ça se précise.",
+      "image": null,
+      "actions": [
+        {
+          "type": "accelere",
+          "ancre": "commence",
+          "fin": "précise.",
+          "essais": 53
+        }
+      ]
+    },
+    {
+      "id": "titre",
+      "voix": "Une capitale du Nord… Copenhague !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Une",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "Nord…",
+          "mot": "copenhague",
+          "duree": 0.5
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Copenhague",
+          "mot": "copenhague"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Copenhague",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Copenhague",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "score",
+      "voix": "Cinquante-quatre coups, de zéro à trouvé.",
+      "image": null,
+      "actions": [
+        {
+          "type": "resultat",
+          "ancre": "Cinquante-quatre",
+          "coups": 54,
+          "rang": 12
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

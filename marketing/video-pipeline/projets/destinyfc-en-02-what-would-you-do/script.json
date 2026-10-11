@@ -1,0 +1,218 @@
+{
+  "titre": "What would you do?",
+  "app": "destinyfc",
+  "langue": "en",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 28
+  },
+  "objectif": "English version of destinyfc-02. Real decisive moment (National Cup final), 4 options, countdown, reveal. Outcome is random in game: one possible result shown.",
+  "voix": {
+    "instructions": "Native English male voice, young and friendly, TikTok style, first person: this is Maxime, the game's solo developer. Quick but clear delivery, natural energy, never salesy. Playful challenge tone. Clear pause after 'What do you do?'. Four options listed fast and clean. Slow tense countdown. Burst of joy on 'the cup is ours'."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Jack Turner",
+        "pays": "angleterre",
+        "age": 19,
+        "annee": 2029,
+        "poste": "milieu",
+        "note": 66,
+        "argent": "€0.6m",
+        "etoiles": 2,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Portsmouth",
+        "couleurs": [
+          "#1a4fb5",
+          "#f2f2f2"
+        ]
+      },
+      "carte": {
+        "genre": "moment",
+        "tag": "🎯 DECISIVE MOMENT",
+        "titre": "National Cup final",
+        "options": [
+          {
+            "indice": "Sneaky",
+            "texte": "Take the ball to die by the corner flag"
+          },
+          {
+            "indice": "Keep-ball",
+            "texte": "Hog the ball, pass after pass"
+          },
+          {
+            "texte": "Go for 2-0 to seal it"
+          },
+          {
+            "texte": "Chop the rhythm with crafty little fouls"
+          }
+        ],
+        "texte": "Final, 1-0 to Portsmouth, ten last minutes that never end. The coach screams at you to kill the game — how is up to you to work out."
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "situation",
+      "voix": "Cup final. You're one goal up, with ten minutes left to hold on.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Cup"
+        },
+        {
+          "type": "tableau",
+          "ancre": "Cup",
+          "titre": "Final · National cup",
+          "domicile": {
+            "nom": "Portsmouth",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ]
+          },
+          "exterieur": {
+            "nom": "Sheffield",
+            "couleurs": [
+              "#e52a1e",
+              "#1b1b1b"
+            ]
+          },
+          "score": [
+            1,
+            0
+          ],
+          "minute": 80
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "question",
+      "voix": "The coach wants you to kill the game. What do you do?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "coach"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "options",
+      "voix": "One: waste time by the corner flag. Two: keep the ball. Three: go for the second goal. Four: crafty little fouls.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "One",
+          "cible": "p-opt-1"
+        },
+        {
+          "type": "appui",
+          "ancre": "Two",
+          "cible": "p-opt-2"
+        },
+        {
+          "type": "appui",
+          "ancre": "Three",
+          "cible": "p-opt-3"
+        },
+        {
+          "type": "appui",
+          "ancre": "Four",
+          "cible": "p-opt-4"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "countdown",
+      "voix": "Think fast. Three… two… one.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "Three",
+          "valeur": 1,
+          "depart": 3,
+          "montee": 1.6,
+          "sous": "Choose!",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "answer",
+      "voix": "I kept the ball. And the cup is ours!",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "kept",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "cup",
+          "id": "finale-gagnee"
+        },
+        {
+          "type": "tampon",
+          "ancre": "ours",
+          "texte": "Champions",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "What would you have picked? Tell me in the comments. Destiny FC, free to play.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "What",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "What",
+          "nom": "clin"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "From 16 to retirement,<br>write your <em>legend</em>",
+    "detail": "Every choice counts",
+    "cta": "Free · iPhone & Android",
+    "pose": "salut"
+  }
+}

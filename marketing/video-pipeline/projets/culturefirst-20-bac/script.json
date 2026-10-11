@@ -1,0 +1,105 @@
+{
+  "titre": "Pourquoi tu as oublié ton bac",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton complice et un peu taquin au début, pédagogue au milieu, en marquant « dix minutes… le lendemain… plus tard ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "question",
+      "voix": "Pourquoi tu as oublié presque tout ce que tu avais appris pour le bac ? Ce n'est pas ta faute.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Pourquoi",
+          "texte": "Pourquoi tu as tout oublié du bac ?"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Pourquoi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "oubli",
+      "voix": "Parce que le cerveau laisse filer ce qu'il ne revoit pas.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "ancre": "Parce",
+          "mode": "oubli",
+          "fin": "pas"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "solution",
+      "voix": "La solution : revoir chaque notion juste avant de l'oublier. Dix minutes après, puis le lendemain, puis plus tard.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "ancre": "solution",
+          "mode": "revisions"
+        },
+        {
+          "type": "revision",
+          "ancre": "Dix",
+          "label": "10 min"
+        },
+        {
+          "type": "revision",
+          "ancre": "lendemain",
+          "label": "1 j"
+        },
+        {
+          "type": "revision",
+          "ancre": "tard",
+          "label": "1 mois"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "C'est exactement ce que fait Culture First, carte par carte, avec plus de deux cent mille questions. Gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "C'est"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "C'est",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "Gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

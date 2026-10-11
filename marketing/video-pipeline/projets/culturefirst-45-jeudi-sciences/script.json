@@ -1,0 +1,182 @@
+{
+  "titre": "Jeudi sciences",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Jeudi sciences ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Jeudi",
+          "texte": "Jeudi sciences",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Jeudi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : combien d'os chez un adulte ? Deux cent six.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Deux"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : la planète la plus proche du Soleil ? Mercure.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mercure"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : le gaz que les plantes absorbent pour la photosynthèse ? Le dioxyde de carbone.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "dioxyde"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous jeudi prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Corps humain",
+      "theme": "Sciences et Techniques",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Combien d'os compte le squelette d'un adulte ?",
+      "indiceType": null,
+      "indice": null,
+      "reponse": "206",
+      "fiche": []
+    },
+    {
+      "paquet": "Le système solaire",
+      "theme": "Sciences et Techniques",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle planète correspond à cette description ?",
+      "indiceType": "Description",
+      "indice": "La plus proche du Soleil",
+      "reponse": "Mercure",
+      "fiche": []
+    },
+    {
+      "paquet": "Biologie",
+      "theme": "Sciences et Techniques",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel gaz correspond à cette description ?",
+      "indiceType": "Description",
+      "indice": "Absorbé par les plantes pour la photosynthèse",
+      "reponse": "Le dioxyde de carbone",
+      "fiche": [
+        [
+          "Formule",
+          "CO₂"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

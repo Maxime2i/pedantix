@@ -1,0 +1,160 @@
+{
+  "titre": "Les règles en 20 secondes",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Tutoriel : les règles du jeu, clair et rapide.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Handball",
+    "texte": [
+      "Le handball est un sport collectif où deux équipes de sept joueurs s'affrontent avec un ballon utilisé à la main en respectant plusieurs règles sur un terrain rectangulaire de dimensions 40 × 20 m, séparé en deux camps. L'équipe déclarée victorieuse est celle qui a marqué le plus de buts à la fin du temps imparti, soit deux périodes de 30 minutes voire d'éventuelles prolongations."
+    ],
+    "titreMots": [
+      "handball"
+    ],
+    "revelations": {
+      "équipe": [
+        "équipes",
+        "équipe"
+      ]
+    },
+    "proches": {
+      "football": {
+        "cibles": [
+          "handball"
+        ],
+        "score": 78
+      }
+    },
+    "dejaTrouves": [],
+    "date": "Jeudi 2 octobre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Les règles de mon jeu, en vingt secondes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Les",
+          "texte": "Les règles",
+          "sous": "en 20 secondes",
+          "fin": "secondes."
+        },
+        {
+          "type": "pose",
+          "ancre": "Les",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "vingt",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "un",
+      "voix": "Un. Tu proposes un mot : équipe. Il apparaît partout dans la page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Un.",
+          "mode": "coin"
+        },
+        {
+          "type": "taper",
+          "ancre": "équipe.",
+          "mot": "équipe",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "apparaît",
+          "mot": "équipe"
+        }
+      ]
+    },
+    {
+      "id": "deux",
+      "voix": "Deux. Un mot proche s'écrit en gris : plus c'est clair, plus tu chauffes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "proche",
+          "mot": "football",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "gris",
+          "mot": "football"
+        },
+        {
+          "type": "zoom",
+          "ancre": "clair,",
+          "cible": "titre"
+        }
+      ]
+    },
+    {
+      "id": "trois",
+      "voix": "Trois. Touche une case pour connaître sa longueur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "case",
+          "ancre": "case",
+          "mot": "handball",
+          "dans": "titre"
+        }
+      ]
+    },
+    {
+      "id": "gagner",
+      "voix": "Et pour gagner, trouve tous les mots du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "trouve",
+          "mot": "handball",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "titre.",
+          "mot": "handball"
+        },
+        {
+          "type": "pose",
+          "ancre": "titre.",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

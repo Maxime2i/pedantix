@@ -1,0 +1,499 @@
+{
+  "duree": 24.6,
+  "dureeVoix": 22.8,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 3.5,
+      "fin": 4.04
+    },
+    {
+      "id": "blunder",
+      "debut": 4.04,
+      "finVoix": 7.9,
+      "fin": 8.46
+    },
+    {
+      "id": "choice",
+      "debut": 8.46,
+      "finVoix": 11.16,
+      "fin": 11.58
+    },
+    {
+      "id": "result",
+      "debut": 11.58,
+      "finVoix": 14.18,
+      "fin": 14.74
+    },
+    {
+      "id": "twist",
+      "debut": 14.74,
+      "finVoix": 17.8,
+      "fin": 18.38
+    },
+    {
+      "id": "cta",
+      "debut": 18.38,
+      "finVoix": 22.8,
+      "fin": 24.6
+    }
+  ],
+  "mots": [
+    {
+      "texte": "The",
+      "mot": "The",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "worst",
+      "mot": "worst",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.62
+    },
+    {
+      "texte": "decision",
+      "mot": "decision",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 1.04
+    },
+    {
+      "texte": "of",
+      "mot": "of",
+      "scene": 0,
+      "debut": 1.04,
+      "fin": 1.24
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.4
+    },
+    {
+      "texte": "entire",
+      "mot": "entire",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.88
+    },
+    {
+      "texte": "career?",
+      "mot": "career",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.46
+    },
+    {
+      "texte": "Let",
+      "mot": "Let",
+      "scene": 0,
+      "debut": 3.0,
+      "fin": 3.1
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.2
+    },
+    {
+      "texte": "show",
+      "mot": "show",
+      "scene": 0,
+      "debut": 3.2,
+      "fin": 3.38
+    },
+    {
+      "texte": "you.",
+      "mot": "you",
+      "scene": 0,
+      "debut": 3.38,
+      "fin": 3.5
+    },
+    {
+      "texte": "Seventeen.",
+      "mot": "Seventeen",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.5
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.1
+    },
+    {
+      "texte": "make",
+      "mot": "make",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.24
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.36
+    },
+    {
+      "texte": "huge",
+      "mot": "huge",
+      "scene": 1,
+      "debut": 5.36,
+      "fin": 5.72
+    },
+    {
+      "texte": "mistake,",
+      "mot": "mistake",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 6.2
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 1,
+      "debut": 6.54,
+      "fin": 6.88
+    },
+    {
+      "texte": "they",
+      "mot": "they",
+      "scene": 1,
+      "debut": 6.88,
+      "fin": 7.7
+    },
+    {
+      "texte": "score.",
+      "mot": "score",
+      "scene": 1,
+      "debut": 7.7,
+      "fin": 7.9
+    },
+    {
+      "texte": "So",
+      "mot": "So",
+      "scene": 2,
+      "debut": 8.46,
+      "fin": 8.68
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 2,
+      "debut": 8.68,
+      "fin": 8.88
+    },
+    {
+      "texte": "decide",
+      "mot": "decide",
+      "scene": 2,
+      "debut": 8.88,
+      "fin": 9.08
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 2,
+      "debut": 9.08,
+      "fin": 9.26
+    },
+    {
+      "texte": "crank",
+      "mot": "crank",
+      "scene": 2,
+      "debut": 9.26,
+      "fin": 9.54
+    },
+    {
+      "texte": "up",
+      "mot": "up",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.74
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 9.74,
+      "fin": 9.86
+    },
+    {
+      "texte": "intensity",
+      "mot": "intensity",
+      "scene": 2,
+      "debut": 9.86,
+      "fin": 10.28
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 2,
+      "debut": 10.28,
+      "fin": 10.52
+    },
+    {
+      "texte": "make",
+      "mot": "make",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.7
+    },
+    {
+      "texte": "up",
+      "mot": "up",
+      "scene": 2,
+      "debut": 10.7,
+      "fin": 10.82
+    },
+    {
+      "texte": "for",
+      "mot": "for",
+      "scene": 2,
+      "debut": 10.82,
+      "fin": 11.02
+    },
+    {
+      "texte": "it.",
+      "mot": "it",
+      "scene": 2,
+      "debut": 11.02,
+      "fin": 11.16
+    },
+    {
+      "texte": "Another",
+      "mot": "Another",
+      "scene": 3,
+      "debut": 11.58,
+      "fin": 11.92
+    },
+    {
+      "texte": "blunder.",
+      "mot": "blunder",
+      "scene": 3,
+      "debut": 11.92,
+      "fin": 12.36
+    },
+    {
+      "texte": "We",
+      "mot": "We",
+      "scene": 3,
+      "debut": 12.96,
+      "fin": 13.08
+    },
+    {
+      "texte": "lose",
+      "mot": "lose",
+      "scene": 3,
+      "debut": 13.08,
+      "fin": 13.36
+    },
+    {
+      "texte": "three-nil.",
+      "mot": "three-nil",
+      "scene": 3,
+      "debut": 13.36,
+      "fin": 14.18
+    },
+    {
+      "texte": "The",
+      "mot": "The",
+      "scene": 4,
+      "debut": 14.74,
+      "fin": 14.9
+    },
+    {
+      "texte": "worst",
+      "mot": "worst",
+      "scene": 4,
+      "debut": 14.9,
+      "fin": 15.1
+    },
+    {
+      "texte": "part?",
+      "mot": "part",
+      "scene": 4,
+      "debut": 15.1,
+      "fin": 15.36
+    },
+    {
+      "texte": "It",
+      "mot": "It",
+      "scene": 4,
+      "debut": 15.8,
+      "fin": 15.96
+    },
+    {
+      "texte": "had",
+      "mot": "had",
+      "scene": 4,
+      "debut": 15.96,
+      "fin": 16.1
+    },
+    {
+      "texte": "more",
+      "mot": "more",
+      "scene": 4,
+      "debut": 16.1,
+      "fin": 16.34
+    },
+    {
+      "texte": "than",
+      "mot": "than",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.52
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 16.52,
+      "fin": 16.6
+    },
+    {
+      "texte": "fifty-fifty",
+      "mot": "fifty-fifty",
+      "scene": 4,
+      "debut": 16.6,
+      "fin": 17.1
+    },
+    {
+      "texte": "chance",
+      "mot": "chance",
+      "scene": 4,
+      "debut": 17.1,
+      "fin": 17.4
+    },
+    {
+      "texte": "of",
+      "mot": "of",
+      "scene": 4,
+      "debut": 17.4,
+      "fin": 17.56
+    },
+    {
+      "texte": "working.",
+      "mot": "working",
+      "scene": 4,
+      "debut": 17.56,
+      "fin": 17.8
+    },
+    {
+      "texte": "In",
+      "mot": "In",
+      "scene": 5,
+      "debut": 18.38,
+      "fin": 18.5
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 18.5,
+      "fin": 18.88
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 18.88,
+      "fin": 19.24
+    },
+    {
+      "texte": "even",
+      "mot": "even",
+      "scene": 5,
+      "debut": 19.54,
+      "fin": 19.72
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 5,
+      "debut": 19.72,
+      "fin": 19.86
+    },
+    {
+      "texte": "good",
+      "mot": "good",
+      "scene": 5,
+      "debut": 19.86,
+      "fin": 20.18
+    },
+    {
+      "texte": "choice",
+      "mot": "choice",
+      "scene": 5,
+      "debut": 20.18,
+      "fin": 20.48
+    },
+    {
+      "texte": "can",
+      "mot": "can",
+      "scene": 5,
+      "debut": 20.48,
+      "fin": 20.66
+    },
+    {
+      "texte": "go",
+      "mot": "go",
+      "scene": 5,
+      "debut": 20.66,
+      "fin": 20.82
+    },
+    {
+      "texte": "wrong.",
+      "mot": "wrong",
+      "scene": 5,
+      "debut": 20.82,
+      "fin": 21.08
+    },
+    {
+      "texte": "Free",
+      "mot": "Free",
+      "scene": 5,
+      "debut": 21.58,
+      "fin": 21.82
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 5,
+      "debut": 21.82,
+      "fin": 22.06
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 22.06,
+      "fin": 22.36
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 5,
+      "debut": 22.36,
+      "fin": 22.54
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 22.54,
+      "fin": 22.8
+    }
+  ]
+}

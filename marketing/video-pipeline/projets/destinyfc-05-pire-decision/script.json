@@ -1,0 +1,194 @@
+{
+  "titre": "La pire décision de ma carrière",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 28
+  },
+  "objectif": "Téléchargements, ton autodérision. Événement réel ev_ (bévue en match, 17 ans) ; option « Hausser le ton », issue réelle « défaite 3-0 » (−8 Forme, −8 Moral, −5 Relation coach). Fait vérifié : cette option réussit dans 55 % des cas (« plus d'une chance sur deux »).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton d'aveu gêné et drôle au début, puis récit. « Défaite trois-zéro » lâché, dépité. Petite pause avant « Le pire ? ». Fin légère."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "avatar",
+  "poseInitiale": "tete-main",
+  "cartes": {
+    "pire": {
+      "genre": "resultat",
+      "tag": "😖 TERRAIN",
+      "ton": "bad",
+      "texte": "Vous commettez une nouvelle bourde et l'équipe sombre : ce n'était vraiment pas votre soir, défaite 3-0.",
+      "effets": [
+        "-8 Forme",
+        "-8 Moral",
+        "-5 Relation coach"
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 17,
+        "annee": 2027,
+        "poste": "milieu",
+        "note": 60,
+        "argent": "0,1 M€",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 66,
+          "confiance": 55,
+          "pression": 38
+        },
+        "niveau": "d2",
+        "club": "Sochaux",
+        "couleurs": [
+          "#f5c400",
+          "#1a4fb5"
+        ]
+      },
+      "carte": "bevue"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "La pire décision de toute ma carrière ? Je vous montre.",
+      "animation": "Avatar face caméra, puis démo.",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "pire",
+          "texte": "😬",
+          "fin": "carrière"
+        },
+        {
+          "type": "disposition",
+          "ancre": "montre",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "montre",
+          "nom": "neutre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "bevue",
+      "voix": "Dix-sept ans. Je fais une grosse erreur, et le but est pour eux.",
+      "animation": "Événement réel « Votre bévue offre le but ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "erreur",
+          "id": "bevue"
+        },
+        {
+          "type": "jauges",
+          "ancre": "but",
+          "moral": 58
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choix",
+      "voix": "Moi, je décide de hausser le ton pour me rattraper.",
+      "animation": "Option 2.",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "hausser",
+          "n": 2
+        },
+        {
+          "type": "pose",
+          "ancre": "hausser",
+          "nom": "fier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "resultat",
+      "voix": "Nouvelle bourde. Défaite trois-zéro.",
+      "animation": "Résultat réel, jauges qui chutent.",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "bourde",
+          "id": "pire"
+        },
+        {
+          "type": "pose",
+          "ancre": "Défaite",
+          "nom": "tete-main"
+        },
+        {
+          "type": "jauges",
+          "ancre": "Défaite",
+          "forme": 66,
+          "moral": 50
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "twist",
+      "voix": "Le pire ? Ça avait plus d'une chance sur deux de marcher.",
+      "animation": "Le chiffre réel de l'option.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "pire",
+          "nom": "decu"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "chance",
+          "valeur": 55,
+          "suffixe": " %",
+          "sous": "de chances de réussir",
+          "duree": 2.6
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Dans Destiny FC, même un bon choix peut mal tourner. Gratuit, sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Dans",
+          "nom": "neutre"
+        },
+        {
+          "type": "fin",
+          "ancre": "Gratuit"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "titre": "Au bord de la spéciale",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": { "largeur": 1080, "hauteur": 1920, "fps": 30, "dureeCible": 25 },
+  "objectif": "Téléchargements, cible spectateurs : au bord de la spéciale on ne sait pas qui gagne ; avec l'app, le classement en direct dans la poche. Épreuve et équipages fictifs (demo.js), chiffres cohérents : Marchal gagne l'ES5 de 0,7 s sur Moreau et passe en tête de 0,3 s.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé. Début un peu las et ironique, comme quelqu'un qui grelotte : petite pause après « froid… ». Puis ça s'anime : « Tu sors ton téléphone » plus vif. Montée d'excitation sur « Marchal gagne l'ES cinq… », courte pause, puis « et passe en tête ! » enthousiaste. Fin claire et énergique."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Deux heures au bord de la spéciale, dans le froid… et tu ne sais même pas qui gagne.",
+      "animation": "Photo plein écran : spectateurs au bord d'une route de montagne, brume. Une voiture passe (son moteur). Pas encore de téléphone.",
+      "image": "Photographie réaliste, cadrage vertical : des spectateurs emmitouflés en doudounes et bonnets, de dos ou de trois quarts, debout derrière une rubalise au bord d'une route asphaltée de montagne en forêt, en automne, brume matinale, lumière froide. Au loin une voiture de rallye floue dans un virage, sans aucun numéro, sponsor ni marque lisible. Aucun visage reconnaissable, aucun texte.",
+      "actions": [
+        { "type": "tampon", "texte": "QUI GAGNE ?", "couleur": "orange", "ancre": "sais", "fin": "gagne" }
+      ],
+      "bruitages": [
+        { "son": "moteur", "ancre": "spéciale", "gain": 0.5 },
+        { "son": "whoosh", "ancre": "froid", "gain": 0.3 }
+      ]
+    },
+    {
+      "id": "telephone",
+      "voix": "Tu sors ton téléphone. Rally Track, le rallye du jour, en direct.",
+      "animation": "Le téléphone monte à l'écran sur l'accueil ; zoom sur la France, le point vert « en direct » ; appui sur le Rallye des Hautes Combes.",
+      "image": null,
+      "actions": [
+        { "type": "entree", "ancre": "sors" },
+        { "type": "zoom", "cible": "a-pays-0", "echelle": 1.35, "hauteur": 960, "ancre": "rallye" },
+        { "type": "appui", "cible": "r-0", "ancre": "direct" }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "classement",
+      "voix": "Le classement se met à jour après chaque spéciale.",
+      "animation": "La fiche s'ouvre directement sur l'onglet Classement : Moreau en tête, Marchal deuxième à quatre dixièmes.",
+      "image": null,
+      "actions": [
+        { "type": "ecran", "nom": "rallye", "donnees": { "onglet": "classement" }, "ancre": "classement" },
+        { "type": "zoom", "cible": "cl-1", "echelle": 1.3, "hauteur": 980, "ancre": "après" }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "renversement",
+      "voix": "Marchal gagne l'ES cinq… et passe en tête !",
+      "animation": "La ligne de Marchal pulse en orange ; la notification réelle « Hugo Marchal gagne ES5 » tombe ; sur « tête », les lignes se réordonnent : Marchal premier, Moreau à trois dixièmes.",
+      "image": null,
+      "actions": [
+        { "type": "surligner", "n": 3, "ancre": "Marchal", "fin": "tête" },
+        { "type": "notif", "titre": "Hugo Marchal gagne ES5", "texte": "Rallye des Hautes Combes", "ancre": "gagne", "duree": 3 },
+        { "type": "maj", "ancre": "passe", "classement": [
+          { "n": 3, "temps": "43:22.4" }, { "n": 1, "temps": "43:22.7", "ecart": "+0.3" }, { "n": 2, "temps": "43:36.0", "ecart": "+13.6" },
+          { "n": 4, "temps": "44:05.6", "ecart": "+43.2" }, { "n": 6, "temps": "44:49.7", "ecart": "+1:27.3" }, { "n": 5, "temps": "45:33.4", "ecart": "+2:11.0" },
+          { "n": 7, "temps": "46:56.3", "ecart": "+3:33.9" }, { "n": 8, "temps": "47:04.2", "ecart": "+3:41.8" }, { "n": 9, "temps": "47:24.3", "ecart": "+4:01.9" } ] }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Rally Track. Tous les rallyes du monde, en direct. Gratuit sur iPhone et Android.",
+      "animation": "Carte de fin : logo, RallyTrack, « Le rallye du jour, en direct », « Tous les rallyes du monde, en français », « Gratuit · iPhone et Android ».",
+      "image": null,
+      "actions": [
+        { "type": "fin", "ancre": "Rally" }
+      ],
+      "bruitages": [
+        { "son": "whoosh", "ancre": "Rally", "gain": 0.4 },
+        { "son": "victoire", "ancre": "Gratuit", "gain": 0.35 }
+      ]
+    }
+  ],
+  "ecrans": {
+    "rallye": {
+      "classement": [
+        { "n": 1, "temps": "38:12.6" }, { "n": 3, "temps": "38:13.0", "ecart": "+0.4" }, { "n": 2, "temps": "38:24.1", "ecart": "+11.5" },
+        { "n": 4, "temps": "38:51.0", "ecart": "+38.4" }, { "n": 6, "temps": "39:30.7", "ecart": "+1:18.1" }, { "n": 5, "temps": "40:02.2", "ecart": "+1:49.6" },
+        { "n": 7, "temps": "41:15.8", "ecart": "+3:03.2" }, { "n": 8, "temps": "41:22.4", "ecart": "+3:09.8" }, { "n": 9, "temps": "41:40.3", "ecart": "+3:27.7" }
+      ]
+    }
+  },
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

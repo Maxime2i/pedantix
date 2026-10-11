@@ -1,0 +1,145 @@
+{
+  "titre": "Finis la phrase : C'est bon pour…",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton joueur au début, laisse un petit suspense après « pour… ». Chantonné et joyeux sur « Le moral ! ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "defi",
+      "voix": "Finis la phrase, sans chercher sur internet : « C'est bon pour… »",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Finis",
+          "texte": "« C’est bon pour… »",
+          "sous": "Finis la phrase"
+        },
+        {
+          "type": "chrono",
+          "ancre": "pour",
+          "secondes": 2
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Finis",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Le moral ! Et c'est de qui ? La Compagnie créole, en mille neuf cent quatre-vingt-trois.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Le"
+        },
+        {
+          "type": "entree",
+          "ancre": "Le"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Le",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Compagnie"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "tete",
+      "voix": "Si tu l'as chantée dans ta tête, c'est normal. Elle reste, celle-là.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "normal",
+          "texte": "🎶 NORMAL",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Ciné, musique, histoire, géo : plus de deux cent mille questions à réviser juste avant de les oublier.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "plus",
+          "valeur": 200000,
+          "prefixe": "+ de ",
+          "sous": "questions à réviser"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "C'est bon pour le moral",
+      "reponse": "La Compagnie créole",
+      "fiche": [
+        [
+          "Année",
+          "1983"
+        ]
+      ]
+    }
+  ]
+}

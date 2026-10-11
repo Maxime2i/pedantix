@@ -1,0 +1,268 @@
+{
+  "titre": "Pas la plus grande ville !",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, rythmé et complice. Rythme de tour du monde, la grande ville dite comme une évidence, la capitale avec malice. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Ces pays ont une capitale qui n'est pas leur plus grande ville.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "monde",
+          "ancre": "Ces",
+          "titre": "Pas la plus grande ville !",
+          "vue": {
+            "centre": [
+              10,
+              20
+            ],
+            "largeur": 360
+          }
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Ces",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "australie",
+      "voix": "L'Australie : pas Sydney, mais Canberra.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "L'Australie",
+          "vue": {
+            "centre": [
+              150,
+              -34.5
+            ],
+            "largeur": 9
+          }
+        },
+        {
+          "type": "epingle",
+          "ancre": "Sydney",
+          "lieu": [
+            151.21,
+            -33.87
+          ],
+          "label": "Sydney",
+          "couleur": "rouge"
+        },
+        {
+          "type": "epingle",
+          "ancre": "Canberra",
+          "lieu": [
+            149.13,
+            -35.28
+          ],
+          "label": "Canberra",
+          "couleur": "vert"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "canada",
+      "voix": "Le Canada : pas Toronto, mais Ottawa.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "Le",
+          "vue": {
+            "centre": [
+              -77.5,
+              44.5
+            ],
+            "largeur": 9
+          }
+        },
+        {
+          "type": "epingle",
+          "ancre": "Toronto",
+          "lieu": [
+            -79.38,
+            43.65
+          ],
+          "label": "Toronto",
+          "couleur": "rouge"
+        },
+        {
+          "type": "epingle",
+          "ancre": "Ottawa",
+          "lieu": [
+            -75.7,
+            45.42
+          ],
+          "label": "Ottawa",
+          "couleur": "vert"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "turquie",
+      "voix": "La Turquie : pas Istanbul, mais Ankara.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "La",
+          "vue": {
+            "centre": [
+              31,
+              40.5
+            ],
+            "largeur": 9
+          }
+        },
+        {
+          "type": "epingle",
+          "ancre": "Istanbul",
+          "lieu": [
+            28.98,
+            41.01
+          ],
+          "label": "Istanbul",
+          "couleur": "rouge"
+        },
+        {
+          "type": "epingle",
+          "ancre": "Ankara",
+          "lieu": [
+            32.85,
+            39.93
+          ],
+          "label": "Ankara",
+          "couleur": "vert"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "bresil",
+      "voix": "Le Brésil : pas São Paulo, mais Brasília.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "Le",
+          "vue": {
+            "centre": [
+              -47.2,
+              -19.5
+            ],
+            "largeur": 14
+          }
+        },
+        {
+          "type": "epingle",
+          "ancre": "São",
+          "lieu": [
+            -46.63,
+            -23.55
+          ],
+          "label": "São Paulo",
+          "couleur": "rouge"
+        },
+        {
+          "type": "epingle",
+          "ancre": "Brasília",
+          "lieu": [
+            -47.88,
+            -15.79
+          ],
+          "label": "Brasília",
+          "couleur": "vert"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "usa",
+      "voix": "Et les États-Unis : pas New York, mais Washington.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "vue",
+          "ancre": "Et",
+          "vue": {
+            "centre": [
+              -75.5,
+              39.8
+            ],
+            "largeur": 7
+          }
+        },
+        {
+          "type": "epingle",
+          "ancre": "New",
+          "lieu": [
+            -74.0,
+            40.71
+          ],
+          "label": "New York",
+          "couleur": "rouge"
+        },
+        {
+          "type": "epingle",
+          "ancre": "Washington",
+          "lieu": [
+            -77.04,
+            38.91
+          ],
+          "label": "Washington",
+          "couleur": "vert"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

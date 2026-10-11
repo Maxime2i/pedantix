@@ -1,0 +1,153 @@
+{
+  "titre": "Relire ses fiches, ou se tester ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton complice, un peu provocateur au début, convaincu ensuite. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Relire tes fiches, ça rassure. Mais pour retenir, il y a mieux.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Relire",
+          "texte": "Relire ses fiches ?",
+          "sous": "Ça rassure… mais il y a mieux"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Relire",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "tester",
+      "voix": "Se tester. Chercher la réponse dans sa tête, même quand on se trompe, ça ancre le souvenir.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Se"
+        },
+        {
+          "type": "entree",
+          "ancre": "Se"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Chercher",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "trompe"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "carte",
+      "voix": "C'est le principe de chaque carte : la question d'abord, la réponse ensuite.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "recto",
+          "ancre": "question"
+        },
+        {
+          "type": "reveler",
+          "ancre": "réponse"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Et Culture First te repose les cartes au bon moment pour que ça tienne.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Et",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "moment",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales européennes (1)",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "De quel pays la ville suivante est-elle la capitale ?",
+      "indiceType": "Capitale",
+      "indice": "Zagreb",
+      "reponse": "Croatie",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ],
+        [
+          "Langue",
+          "Croate"
+        ],
+        [
+          "Monnaie",
+          "Euro"
+        ]
+      ]
+    }
+  ]
+}

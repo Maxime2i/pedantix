@@ -1,0 +1,472 @@
+{
+  "duree": 22.9,
+  "dureeVoix": 21.1,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.44,
+      "fin": 3.86
+    },
+    {
+      "id": "plus",
+      "debut": 3.86,
+      "finVoix": 7.4,
+      "fin": 7.4
+    },
+    {
+      "id": "erreurs",
+      "debut": 7.4,
+      "finVoix": 11.72,
+      "fin": 12.46
+    },
+    {
+      "id": "chaud",
+      "debut": 12.46,
+      "finVoix": 16.16,
+      "fin": 16.98
+    },
+    {
+      "id": "appel",
+      "debut": 16.98,
+      "finVoix": 21.1,
+      "fin": 22.9
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.34
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.34,
+      "fin": 0.38
+    },
+    {
+      "texte": "raté",
+      "mot": "raté",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.68
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.82
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.02
+    },
+    {
+      "texte": "aujourd'hui ?",
+      "mot": "aujourd'hui",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.57
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 0,
+      "debut": 1.57,
+      "fin": 2.12
+    },
+    {
+      "texte": "grave,",
+      "mot": "grave",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.44
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 2.68,
+      "fin": 2.78
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 2.9
+    },
+    {
+      "texte": "utile.",
+      "mot": "utile",
+      "scene": 0,
+      "debut": 2.9,
+      "fin": 3.44
+    },
+    {
+      "texte": "Sur",
+      "mot": "Sur",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.08
+    },
+    {
+      "texte": "l'accueil,",
+      "mot": "l'accueil",
+      "scene": 1,
+      "debut": 4.08,
+      "fin": 4.58
+    },
+    {
+      "texte": "appuie",
+      "mot": "appuie",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 5.16
+    },
+    {
+      "texte": "sur «",
+      "mot": "sur",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.36
+    },
+    {
+      "texte": "Réviser",
+      "mot": "Réviser",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 6.2
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 6.2,
+      "fin": 6.34
+    },
+    {
+      "texte": "aujourd'hui ».",
+      "mot": "aujourd'hui",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 7.4
+    },
+    {
+      "texte": "Puis «",
+      "mot": "Puis",
+      "scene": 2,
+      "debut": 7.4,
+      "fin": 7.64
+    },
+    {
+      "texte": "Revoir",
+      "mot": "Revoir",
+      "scene": 2,
+      "debut": 8.3,
+      "fin": 8.56
+    },
+    {
+      "texte": "mes",
+      "mot": "mes",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.72
+    },
+    {
+      "texte": "erreurs",
+      "mot": "erreurs",
+      "scene": 2,
+      "debut": 8.72,
+      "fin": 9.02
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 9.02,
+      "fin": 9.14
+    },
+    {
+      "texte": "jour » :",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 9.14,
+      "fin": 9.3
+    },
+    {
+      "texte": "seulement",
+      "mot": "seulement",
+      "scene": 2,
+      "debut": 10.02,
+      "fin": 10.36
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 10.36,
+      "fin": 10.46
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 2,
+      "debut": 10.46,
+      "fin": 10.7
+    },
+    {
+      "texte": "où",
+      "mot": "où",
+      "scene": 2,
+      "debut": 10.7,
+      "fin": 10.78
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 10.78,
+      "fin": 10.84
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 2,
+      "debut": 10.84,
+      "fin": 10.88
+    },
+    {
+      "texte": "répondu «",
+      "mot": "répondu",
+      "scene": 2,
+      "debut": 10.88,
+      "fin": 11.32
+    },
+    {
+      "texte": "Encore ».",
+      "mot": "Encore",
+      "scene": 2,
+      "debut": 11.48,
+      "fin": 11.72
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 3,
+      "debut": 12.46,
+      "fin": 12.64
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 12.64,
+      "fin": 12.78
+    },
+    {
+      "texte": "revois",
+      "mot": "revois",
+      "scene": 3,
+      "debut": 12.78,
+      "fin": 13.04
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.32
+    },
+    {
+      "texte": "chaud,",
+      "mot": "chaud",
+      "scene": 3,
+      "debut": 13.32,
+      "fin": 13.52
+    },
+    {
+      "texte": "pendant",
+      "mot": "pendant",
+      "scene": 3,
+      "debut": 13.88,
+      "fin": 14.0
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 14.0,
+      "fin": 14.14
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.24
+    },
+    {
+      "texte": "frais,",
+      "mot": "frais",
+      "scene": 3,
+      "debut": 14.24,
+      "fin": 14.48
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 14.78,
+      "fin": 15.0
+    },
+    {
+      "texte": "elles",
+      "mot": "elles",
+      "scene": 3,
+      "debut": 15.0,
+      "fin": 15.1
+    },
+    {
+      "texte": "ont",
+      "mot": "ont",
+      "scene": 3,
+      "debut": 15.1,
+      "fin": 15.26
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 15.26,
+      "fin": 15.54
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 15.54,
+      "fin": 15.68
+    },
+    {
+      "texte": "chances",
+      "mot": "chances",
+      "scene": 3,
+      "debut": 15.68,
+      "fin": 15.82
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 15.82,
+      "fin": 15.96
+    },
+    {
+      "texte": "rester.",
+      "mot": "rester",
+      "scene": 3,
+      "debut": 15.96,
+      "fin": 16.16
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 16.98,
+      "fin": 17.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 17.2,
+      "fin": 17.36
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.36,
+      "fin": 17.54
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 17.54,
+      "fin": 17.72
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 17.72,
+      "fin": 17.9
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 17.9,
+      "fin": 18.32
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.74,
+      "fin": 18.96
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 18.96,
+      "fin": 19.32
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 19.72,
+      "fin": 20.04
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.04,
+      "fin": 20.24
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 20.24,
+      "fin": 20.5
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 20.5,
+      "fin": 20.86
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.86,
+      "fin": 21.1
+    }
+  ]
+}

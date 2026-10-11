@@ -1,0 +1,151 @@
+{
+  "titre": "Cléopâtre, plus proche de toi que des pyramides",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de révélation, posé, chaque date bien détachée. Bluffé sur le résultat. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "question",
+      "voix": "Qui est le plus proche de Cléopâtre : les pyramides, ou toi ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Qui",
+          "titre": "Cléopâtre : plus proche des pyramides… ou de toi ?",
+          "min": -2700,
+          "max": 2150
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Qui",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "kheops",
+      "voix": "La grande pyramide de Khéops : vers deux mille cinq cent soixante avant Jésus-Christ.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "Khéops",
+          "annee": -2560,
+          "texte": "Pyramide de Khéops",
+          "emoji": "🔺",
+          "etiquette": "vers 2560 av. J.-C."
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "rome",
+      "voix": "La fondation de Rome, selon la légende : sept cent cinquante-trois.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "fondation",
+          "annee": -753,
+          "texte": "Fondation de Rome (légende)",
+          "emoji": "🏛️"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cleopatre",
+      "voix": "Cléopâtre meurt en trente avant Jésus-Christ.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "Cléopâtre",
+          "annee": -30,
+          "texte": "Mort de Cléopâtre",
+          "emoji": "👑"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "toi",
+      "voix": "Et toi, aujourd'hui.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "toi",
+          "annee": 2026,
+          "texte": "Toi, aujourd’hui",
+          "emoji": "📱"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "resultat",
+      "voix": "Résultat : Cléopâtre a vécu plus près de nous que des pyramides.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecart",
+          "ancre": "Résultat",
+          "de": -2560,
+          "a": -30,
+          "texte": "≈ 2 530 ans"
+        },
+        {
+          "type": "ecart",
+          "ancre": "nous",
+          "de": -30,
+          "a": 2026,
+          "texte": "≈ 2 056 ans"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

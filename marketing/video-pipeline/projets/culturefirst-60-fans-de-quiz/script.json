@@ -1,0 +1,181 @@
+{
+  "titre": "Pour les fans de quiz",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de présentateur de jeu, très rythmé sur le top chrono, réponses rapides et sûres. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tu adores les quiz et les jeux télé ? Alors voilà ton entraînement quotidien, en cinq minutes.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Tu",
+          "texte": "Fan de quiz ?",
+          "sous": "Voilà ton entraînement quotidien"
+        },
+        {
+          "type": "masquer",
+          "ancre": "minutes",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "minutes",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tu",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "chrono",
+      "voix": "Top chrono ! Le plus long fleuve de France ? La Loire. La capitale du Canada ? Ottawa. L'auteur des Misérables ? Victor Hugo.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chrono",
+          "ancre": "Top",
+          "secondes": 8
+        },
+        {
+          "type": "zoom",
+          "ancre": "Top",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Loire"
+        },
+        {
+          "type": "carte",
+          "ancre": "capitale",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Ottawa"
+        },
+        {
+          "type": "carte",
+          "ancre": "L'auteur",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Victor"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "chiffre",
+      "voix": "Plus de deux cent mille questions pour t'entraîner et devenir imbattable.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "Plus",
+          "valeur": 200000,
+          "prefixe": "+ de ",
+          "sous": "questions pour devenir imbattable"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Fleuves de France",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel fleuve détient ce record ?",
+      "indiceType": "Record",
+      "indice": "Le plus long fleuve de France",
+      "reponse": "La Loire",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Canada",
+      "reponse": "Ottawa",
+      "fiche": []
+    },
+    {
+      "paquet": "Grands romans français",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a écrit ce roman ?",
+      "indiceType": "Roman",
+      "indice": "Les Misérables",
+      "reponse": "Victor Hugo",
+      "fiche": [
+        [
+          "Publication",
+          "1862"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

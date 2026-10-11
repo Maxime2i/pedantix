@@ -1,0 +1,389 @@
+{
+  "duree": 21.88,
+  "dureeVoix": 20.08,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.72,
+      "fin": 4.56
+    },
+    {
+      "id": "editions",
+      "debut": 4.56,
+      "finVoix": 9.216,
+      "fin": 9.216
+    },
+    {
+      "id": "reponse",
+      "debut": 9.216,
+      "finVoix": 15.52,
+      "fin": 16.42
+    },
+    {
+      "id": "appel",
+      "debut": 16.42,
+      "finVoix": 20.08,
+      "fin": 21.88
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "Rallye",
+      "mot": "Rallye",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.88
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 0.96
+    },
+    {
+      "texte": "Mont-Blanc,",
+      "mot": "Mont-Blanc",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.42
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.9
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 0,
+      "debut": 1.9,
+      "fin": 2.093
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 0,
+      "debut": 2.093,
+      "fin": 2.287
+    },
+    {
+      "texte": "seize :",
+      "mot": "seize",
+      "scene": 0,
+      "debut": 2.287,
+      "fin": 2.48
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 3.12,
+      "fin": 3.26
+    },
+    {
+      "texte": "l'a",
+      "mot": "l'a",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.38
+    },
+    {
+      "texte": "gagné ?",
+      "mot": "gagné",
+      "scene": 0,
+      "debut": 3.38,
+      "fin": 3.72
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.68
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 1,
+      "debut": 4.68,
+      "fin": 4.9
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.14
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 1,
+      "debut": 5.5,
+      "fin": 5.76
+    },
+    {
+      "texte": "rallye",
+      "mot": "rallye",
+      "scene": 1,
+      "debut": 5.76,
+      "fin": 6.2
+    },
+    {
+      "texte": "garde",
+      "mot": "garde",
+      "scene": 1,
+      "debut": 6.2,
+      "fin": 6.32
+    },
+    {
+      "texte": "toutes",
+      "mot": "toutes",
+      "scene": 1,
+      "debut": 6.32,
+      "fin": 6.66
+    },
+    {
+      "texte": "ses",
+      "mot": "ses",
+      "scene": 1,
+      "debut": 6.66,
+      "fin": 6.88
+    },
+    {
+      "texte": "éditions.",
+      "mot": "éditions",
+      "scene": 1,
+      "debut": 6.88,
+      "fin": 7.28
+    },
+    {
+      "texte": "Soixante-dix-huit",
+      "mot": "Soixante-dix-huit",
+      "scene": 1,
+      "debut": 7.66,
+      "fin": 8.22
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 1,
+      "debut": 8.22,
+      "fin": 8.74
+    },
+    {
+      "texte": "celui-ci.",
+      "mot": "celui-ci",
+      "scene": 1,
+      "debut": 8.74,
+      "fin": 9.216
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 9.216,
+      "fin": 9.692
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 9.692,
+      "fin": 10.168
+    },
+    {
+      "texte": "seize :",
+      "mot": "seize",
+      "scene": 2,
+      "debut": 10.168,
+      "fin": 10.644
+    },
+    {
+      "texte": "Yoann",
+      "mot": "Yoann",
+      "scene": 2,
+      "debut": 10.644,
+      "fin": 11.12
+    },
+    {
+      "texte": "Bonato,",
+      "mot": "Bonato",
+      "scene": 2,
+      "debut": 11.12,
+      "fin": 11.54
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 2,
+      "debut": 11.54,
+      "fin": 11.9
+    },
+    {
+      "texte": "cinquante-sept",
+      "mot": "cinquante-sept",
+      "scene": 2,
+      "debut": 11.9,
+      "fin": 12.4
+    },
+    {
+      "texte": "secondes",
+      "mot": "secondes",
+      "scene": 2,
+      "debut": 12.4,
+      "fin": 12.88
+    },
+    {
+      "texte": "d'avance.",
+      "mot": "d'avance",
+      "scene": 2,
+      "debut": 12.88,
+      "fin": 13.22
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 13.82,
+      "fin": 13.86
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 13.86,
+      "fin": 13.94
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 13.94,
+      "fin": 14.12
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 14.12,
+      "fin": 14.3
+    },
+    {
+      "texte": "vingt-six ?",
+      "mot": "vingt-six",
+      "scene": 2,
+      "debut": 14.3,
+      "fin": 14.48
+    },
+    {
+      "texte": "Encore",
+      "mot": "Encore",
+      "scene": 2,
+      "debut": 14.94,
+      "fin": 15.24
+    },
+    {
+      "texte": "lui.",
+      "mot": "lui",
+      "scene": 2,
+      "debut": 15.24,
+      "fin": 15.52
+    },
+    {
+      "texte": "Tout",
+      "mot": "Tout",
+      "scene": 3,
+      "debut": 16.42,
+      "fin": 16.56
+    },
+    {
+      "texte": "l'historique,",
+      "mot": "l'historique",
+      "scene": 3,
+      "debut": 16.56,
+      "fin": 17.16
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 17.16,
+      "fin": 17.42
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 3,
+      "debut": 17.42,
+      "fin": 17.54
+    },
+    {
+      "texte": "poche.",
+      "mot": "poche",
+      "scene": 3,
+      "debut": 17.54,
+      "fin": 17.86
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 18.04,
+      "fin": 18.44
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 18.44,
+      "fin": 18.72
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 18.9,
+      "fin": 19.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 19.18,
+      "fin": 19.44
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 19.44,
+      "fin": 19.68
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 19.68,
+      "fin": 19.84
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 19.84,
+      "fin": 20.08
+    }
+  ]
+}

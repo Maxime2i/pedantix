@@ -1,0 +1,471 @@
+{
+  "duree": 23.3,
+  "dureeVoix": 21.5,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.68,
+      "fin": 5.24
+    },
+    {
+      "id": "debut",
+      "debut": 5.24,
+      "finVoix": 7.96,
+      "fin": 8.44
+    },
+    {
+      "id": "finale",
+      "debut": 8.44,
+      "finVoix": 11.08,
+      "fin": 11.68
+    },
+    {
+      "id": "paris",
+      "debut": 11.68,
+      "finVoix": 13.8,
+      "fin": 14.42
+    },
+    {
+      "id": "retraite",
+      "debut": 14.42,
+      "finVoix": 17.7,
+      "fin": 18.22
+    },
+    {
+      "id": "cta",
+      "debut": 18.22,
+      "finVoix": 21.5,
+      "fin": 23.3
+    }
+  ],
+  "mots": [
+    {
+      "texte": "J'ai",
+      "mot": "J'ai",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "joué",
+      "mot": "joué",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.68
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 0.68,
+      "fin": 0.78
+    },
+    {
+      "texte": "carrière",
+      "mot": "carrière",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 1.16
+    },
+    {
+      "texte": "entière",
+      "mot": "entière",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.8
+    },
+    {
+      "texte": "footballeur,",
+      "mot": "footballeur",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 2.32
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.54
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.76
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 3.28
+    },
+    {
+      "texte": "De",
+      "mot": "De",
+      "scene": 0,
+      "debut": 3.36,
+      "fin": 3.54
+    },
+    {
+      "texte": "seize",
+      "mot": "seize",
+      "scene": 0,
+      "debut": 3.54,
+      "fin": 3.76
+    },
+    {
+      "texte": "ans…",
+      "mot": "ans",
+      "scene": 0,
+      "debut": 3.76,
+      "fin": 3.92
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 3.92,
+      "fin": 4.26
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 4.26,
+      "fin": 4.3
+    },
+    {
+      "texte": "retraite.",
+      "mot": "retraite",
+      "scene": 0,
+      "debut": 4.3,
+      "fin": 4.68
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.72
+    },
+    {
+      "texte": "seize",
+      "mot": "seize",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 5.96
+    },
+    {
+      "texte": "ans,",
+      "mot": "ans",
+      "scene": 1,
+      "debut": 5.96,
+      "fin": 6.12
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 6.2,
+      "fin": 6.22
+    },
+    {
+      "texte": "signe",
+      "mot": "signe",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.4
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 1,
+      "debut": 6.4,
+      "fin": 6.5
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 1,
+      "debut": 6.5,
+      "fin": 6.64
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 1,
+      "debut": 6.64,
+      "fin": 6.88
+    },
+    {
+      "texte": "contrat",
+      "mot": "contrat",
+      "scene": 1,
+      "debut": 6.88,
+      "fin": 7.12
+    },
+    {
+      "texte": "pro,",
+      "mot": "pro",
+      "scene": 1,
+      "debut": 7.12,
+      "fin": 7.36
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 7.36,
+      "fin": 7.72
+    },
+    {
+      "texte": "Sochaux.",
+      "mot": "Sochaux",
+      "scene": 1,
+      "debut": 7.72,
+      "fin": 7.96
+    },
+    {
+      "texte": "Dix-neuf",
+      "mot": "Dix-neuf",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.86
+    },
+    {
+      "texte": "ans :",
+      "mot": "ans",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 9.02
+    },
+    {
+      "texte": "finale",
+      "mot": "finale",
+      "scene": 2,
+      "debut": 9.44,
+      "fin": 9.74
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 9.74,
+      "fin": 9.92
+    },
+    {
+      "texte": "coupe…",
+      "mot": "coupe",
+      "scene": 2,
+      "debut": 9.92,
+      "fin": 10.14
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.52
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 10.52,
+      "fin": 10.62
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 10.62,
+      "fin": 10.7
+    },
+    {
+      "texte": "gagne.",
+      "mot": "gagne",
+      "scene": 2,
+      "debut": 10.7,
+      "fin": 11.08
+    },
+    {
+      "texte": "Vingt-quatre",
+      "mot": "Vingt-quatre",
+      "scene": 3,
+      "debut": 11.68,
+      "fin": 11.98
+    },
+    {
+      "texte": "ans :",
+      "mot": "ans",
+      "scene": 3,
+      "debut": 11.98,
+      "fin": 12.24
+    },
+    {
+      "texte": "Paris",
+      "mot": "Paris",
+      "scene": 3,
+      "debut": 12.6,
+      "fin": 12.85
+    },
+    {
+      "texte": "m'appelle.",
+      "mot": "m'appelle",
+      "scene": 3,
+      "debut": 12.85,
+      "fin": 13.1
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 3,
+      "debut": 13.44,
+      "fin": 13.54
+    },
+    {
+      "texte": "signe.",
+      "mot": "signe",
+      "scene": 3,
+      "debut": 13.54,
+      "fin": 13.8
+    },
+    {
+      "texte": "Trente-cinq",
+      "mot": "Trente-cinq",
+      "scene": 4,
+      "debut": 14.42,
+      "fin": 14.78
+    },
+    {
+      "texte": "ans :",
+      "mot": "ans",
+      "scene": 4,
+      "debut": 14.78,
+      "fin": 15.04
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 15.32,
+      "fin": 15.42
+    },
+    {
+      "texte": "retraite.",
+      "mot": "retraite",
+      "scene": 4,
+      "debut": 15.42,
+      "fin": 15.74
+    },
+    {
+      "texte": "Score",
+      "mot": "Score",
+      "scene": 4,
+      "debut": 16.18,
+      "fin": 16.42
+    },
+    {
+      "texte": "final…",
+      "mot": "final",
+      "scene": 4,
+      "debut": 16.42,
+      "fin": 16.66
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.0,
+      "fin": 17.233
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 17.233,
+      "fin": 17.467
+    },
+    {
+      "texte": "vingt-trois.",
+      "mot": "vingt-trois",
+      "scene": 4,
+      "debut": 17.467,
+      "fin": 17.7
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 18.22,
+      "fin": 18.36
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 5,
+      "debut": 18.36,
+      "fin": 18.5
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 5,
+      "debut": 18.88,
+      "fin": 18.98
+    },
+    {
+      "texte": "écrirais",
+      "mot": "écrirais",
+      "scene": 5,
+      "debut": 18.98,
+      "fin": 19.3
+    },
+    {
+      "texte": "quelle",
+      "mot": "quelle",
+      "scene": 5,
+      "debut": 19.3,
+      "fin": 19.38
+    },
+    {
+      "texte": "légende ?",
+      "mot": "légende",
+      "scene": 5,
+      "debut": 19.38,
+      "fin": 19.68
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 20.34,
+      "fin": 20.62
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 20.62,
+      "fin": 20.9
+    },
+    {
+      "texte": "gratuit.",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 21.2,
+      "fin": 21.5
+    }
+  ]
+}

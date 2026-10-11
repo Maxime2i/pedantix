@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pédantix · Le déclic</title>
+<style>
+/*
+  Vidéo « Le déclic » (1080 × 1920). Tout est piloté par renderAt(t) :
+  l'état de chaque image se recalcule depuis la chronologie (moteur.js),
+  elle-même calée sur les mots de la voix (timings.json).
+*/
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #111; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--fond); color: var(--encre); font-family: var(--texte); }
+#stage::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 45% at 50% 55%, rgb(255 255 255 / .38), transparent 70%); }
+
+/* Marque en haut (sous la zone d'interface de TikTok) */
+#brand { position: absolute; top: 175px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 22px; z-index: 6; }
+#brand img { width: 74px; height: 74px; border-radius: 18px; box-shadow: 0 8px 20px rgb(80 40 10 / .25); }
+#brand span { font-family: var(--titre); font-weight: 800; font-size: 58px; letter-spacing: -0.01em; }
+#ff { position: absolute; top: 278px; left: 50%; translate: -50% 0; z-index: 6; background: var(--encre); color: var(--fond); border-radius: 999px; padding: 10px 30px; font-weight: 800; font-size: 34px; letter-spacing: .04em; }
+
+/* Téléphone */
+#camera { position: absolute; inset: 0; z-index: 3; }
+#phone { position: absolute; left: 81px; top: 380px; background: #0B0B0C; padding: 26px; border-radius: 150px; box-shadow: 0 60px 120px rgb(80 40 10 / .45), inset 0 0 0 6px #2B2B2E; }
+#viewport { width: calc(393px * 2.2); height: calc(852px * 2.2); border-radius: 124px; overflow: hidden; position: relative; }
+.screen { width: 393px; height: 852px; transform: scale(2.2); transform-origin: top left; position: relative; overflow: hidden; background: var(--a-bg); color: var(--a-text); font-family: -apple-system, "SF Pro Text", var(--texte); }
+.island { position: absolute; top: 11px; left: 50%; translate: -50% 0; width: 124px; height: 36px; border-radius: 20px; background: #000; z-index: 9; }
+.status { height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 6px 34px 0 46px; font-size: 17px; font-weight: 600; }
+.status b { display: inline-block; width: 27px; height: 13px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; }
+.status b::after { content: ""; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+.g-head { display: flex; align-items: center; gap: 10px; padding: 6px 20px 10px; }
+.brandapp { font-family: var(--titre); font-weight: 700; font-size: 30px; line-height: 36px; }
+.meta { font-size: 13px; color: var(--a-muted); }
+.hbtn { width: 38px; height: 38px; border-radius: 19px; background: var(--a-card); border: .5px solid var(--a-soft); display: grid; place-items: center; position: relative; }
+.badge { position: absolute; top: -4px; right: -6px; min-width: 18px; height: 18px; border-radius: 9px; padding: 0 4px; background: var(--a-accent); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; }
+.prog { display: flex; align-items: center; gap: 10px; padding: 0 20px 10px; }
+.bar { flex: 1; height: 6px; border-radius: 3px; background: var(--a-soft); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--a-green); }
+.pct { font-size: 12px; color: var(--a-muted); min-width: 34px; text-align: right; }
+.body { padding: 4px 16px 0; display: flex; flex-direction: column; gap: 14px; }
+.input { height: 48px; border-radius: 24px; background: var(--a-card); display: flex; align-items: center; padding: 0 5px 0 16px; font-size: 17px; }
+.input .val { flex: 1; }
+.input .ph { color: var(--a-muted); }
+.caret { display: inline-block; width: 2px; height: 20px; background: var(--a-accent); vertical-align: -4px; margin-left: 1px; }
+.send { width: 38px; height: 38px; border-radius: 19px; display: grid; place-items: center; color: #fff; font-weight: 700; }
+.fb { display: flex; align-items: center; gap: 6px; padding: 0 16px; margin-top: -6px; font-size: 14px; min-height: 18px; }
+.ptitle { font-family: var(--titre); font-weight: 600; font-size: 28px; line-height: 46px; padding: 0 4px; }
+.article { background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 16px; padding: 16px; font-size: 17px; line-height: 31px; }
+.article p { margin: 0 0 14px; }
+.w { display: inline-block; }
+.box { display: inline-block; vertical-align: -4px; height: 1.3em; border-radius: 5px; margin: 0 1px; background: var(--a-blank); text-align: center; font-weight: 600; line-height: 1.3em; white-space: nowrap; overflow: hidden; color: transparent; }
+.fresh { background: var(--a-fresh); border-radius: 4px; }
+
+/* Feuille de résultat (dans le téléphone) */
+.sheet-bg { position: absolute; inset: 0; background: rgb(0 0 0 / .25); }
+.sheet { position: absolute; left: 6px; right: 6px; top: 110px; bottom: 0; background: var(--a-bg); border-radius: 34px 34px 0 0; padding: 10px 0 0; }
+.grab { width: 36px; height: 5px; border-radius: 3px; background: var(--a-border); margin: 0 auto; }
+.tiles { display: flex; gap: 10px; padding: 0 16px; }
+.tile { flex: 1; background: var(--a-card); border: .5px solid var(--a-soft); border-radius: 14px; padding: 14px 0; text-align: center; }
+.tile b { display: block; font-family: var(--titre); font-size: 24px; }
+.tile span { font-size: 12px; color: var(--a-muted); }
+
+/* Sous-titres : dans la zone sûre (ni boutons à droite, ni légende en bas) */
+#subs { position: absolute; left: 150px; right: 150px; top: 1430px; z-index: 8; display: flex; justify-content: center; }
+#subs .grp { background: var(--encre); color: var(--creme); border-radius: 28px; padding: 18px 34px; font-family: var(--texte); font-weight: 800; font-size: 62px; line-height: 1.12; text-align: center; box-shadow: 0 20px 50px rgb(40 20 5 / .35); }
+#subs .now { color: var(--fond); }
+
+/* Carte de fin */
+#end { position: absolute; inset: 0; z-index: 7; background: var(--fond); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding-bottom: 260px; }
+#end::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 42%, rgb(255 255 255 / .45), transparent 70%); }
+#end > * { position: relative; }
+#end img { width: 300px; height: 300px; border-radius: 68px; box-shadow: 0 30px 70px rgb(80 40 10 / .35); }
+#end h1 { margin: 0; font-family: var(--titre); font-weight: 800; font-size: 160px; letter-spacing: -0.02em; }
+#end p { margin: 0; font-family: var(--titre); font-weight: 700; font-style: italic; font-size: 70px; color: var(--accent); text-align: center; line-height: 1.1; }
+#end .pill { background: var(--encre); color: var(--creme); border-radius: 999px; padding: 22px 48px; font-weight: 800; font-size: 46px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="brand"><img id="logo1" alt=""><span>Pédantix</span></div>
+  <div id="ff">⏩ ACCÉLÉRÉ</div>
+  <div id="camera"><div id="phone"><div id="viewport"><div class="screen" id="screen"></div></div></div></div>
+  <div id="subs"></div>
+  <div id="end"><img id="logo2" alt=""><h1>Pédantix</h1><p>Une nouvelle page<br>chaque midi</p><div class="pill">Gratuit · iPhone et Android</div></div>
+</div>
+<script type="module">
+import { buildTimeline, gameState, lastAction } from "/pipeline/moteur.js";
+
+const PROJET = "/projets/01-declic/";
+const [script, timings] = await Promise.all([fetch(PROJET + "script.json").then((r) => r.json()), fetch(PROJET + "timings.json").then((r) => r.json())]);
+const charte = await fetch("/" + script.charte).then((r) => r.json());
+const tl = buildTimeline(script, timings);
+const page = script.page;
+const W = script.format.largeur;
+
+// Charte → variables CSS et polices.
+const c = charte.couleurs, root = document.getElementById("stage").style;
+for (const [k, v] of Object.entries({ fond: c.fond, encre: c.encre, accent: c.accent, creme: c.creme, titre: `"${charte.polices.titre}", Georgia, serif`, texte: `"${charte.polices.texte}", -apple-system, sans-serif` })) root.setProperty(`--${k}`, v);
+for (const [k, v] of Object.entries(c.app)) root.setProperty(`--a-${k}`, v);
+const link = Object.assign(document.createElement("link"), { rel: "stylesheet", href: charte.polices.googleFonts });
+document.head.append(link);
+document.getElementById("logo1").src = document.getElementById("logo2").src = "/" + charte.logo;
+
+// ---------- Écran de l'app (construit une fois) ----------
+const TOK = /[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu;
+let nTok = 0;
+const tokens = [];
+const tokHtml = (text, inTitle) => text.replace(TOK, (w) => { tokens.push({ id: nTok, k: w.toLowerCase(), w, title: inTitle }); return `<span class="w" id="t${nTok++}"></span>`; });
+const screen = document.getElementById("screen");
+screen.innerHTML = `
+  <div class="island"></div><div class="status"><span>9:41</span><span style="display:flex;gap:6px;align-items:center">●●● <b></b></span></div>
+  <div class="g-head"><div style="flex:1"><div class="brandapp">Pédantix</div><div class="meta">Vendredi 9 octobre</div></div>
+    <span class="hbtn">☰<span class="badge" id="badge"></span></span><span class="hbtn">▦</span><span class="hbtn">⚙︎</span></div>
+  <div class="prog"><div class="bar"><i id="bar"></i></div><span class="pct" id="pct"></span></div>
+  <div class="body">
+    <div class="input"><span class="val" id="val"></span><span class="send" id="send">↑</span></div>
+    <div class="fb" id="fb"></div>
+    <div class="ptitle" id="ptitle">${tokHtml(page.titre, true)}</div>
+    <div class="article" id="article">${page.texte.map((p) => `<p>${tokHtml(p, false)}</p>`).join("")}</div>
+  </div>
+  <div id="result" style="display:none"><div class="sheet-bg"></div><div class="sheet" id="sheet"><div class="grab"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 24px 20px">
+      <div style="width:112px;height:112px;border-radius:24px;background:var(--a-tint);display:grid;place-items:center;font-size:56px;margin-bottom:10px">🏆</div>
+      <div style="font-size:14px;color:var(--a-muted)">Bravo ! La page du vendredi 9 octobre était</div>
+      <div style="font-family:var(--titre);font-weight:700;font-size:30px">${page.titre}</div></div>
+    <div class="tiles"><div class="tile"><b id="rCoups"></b><span>coups</span></div><div class="tile"><b>🥉3e</b><span>rang du jour</span></div><div class="tile"><b id="rPct"></b><span>page révélée</span></div></div>
+    <div style="margin:22px 16px 0;height:50px;border-radius:14px;background:var(--a-accent);color:#fff;display:grid;place-items:center;font-weight:600;font-size:17px">Partager mon résultat</div>
+  </div></div>`;
+const els = tokens.map((t) => document.getElementById(`t${t.id}`));
+const occurrences = (g) => tokens.filter((t) => (page.revelations[g] ?? [g]).includes(t.k)).length;
+
+// ---------- Sous-titres : groupes de 3 mots, coupés à la ponctuation ----------
+const groups = [];
+let cur = [];
+for (const m of timings.mots) { cur.push(m); if (cur.length === 3 || /[.!?…,]$/.test(m.texte)) { groups.push(cur); cur = []; } }
+if (cur.length) groups.push(cur);
+
+// ---------- Outils d'animation ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = (x) => (x < 0.5 ? 2 * x * x : 1 - (-2 * x + 2) ** 2 / 2);
+const back = (x) => 1 + 2.2 * (x - 1) ** 3 + 1.2 * (x - 1) ** 2;
+const lerp = (a, b, p) => a + (b - a) * p;
+const CAMS = { aucun: { s: 1, x: 540, y: 900 }, titre: { s: 1.32, x: 300, y: 760 }, article: { s: 1.15, x: 540, y: 1150 } };
+
+function camera(t) {
+  let from = CAMS.aucun, to = CAMS.aucun, t0 = 0;
+  for (const a of tl.actions) {
+    if (a.t > t) break;
+    const target = a.type === "zoom" ? CAMS[a.cible] : a.type === "resultat" ? CAMS.aucun : null;
+    if (target) { const p = ease(clamp((a.t - t0) / 0.6)); from = { s: lerp(from.s, to.s, p), x: lerp(from.x, to.x, p), y: lerp(from.y, to.y, p) }; to = target; t0 = a.t; }
+  }
+  const p = ease(clamp((t - t0) / 0.6));
+  return { s: lerp(from.s, to.s, p), x: lerp(from.x, to.x, p), y: lerp(from.y, to.y, p) };
+}
+
+// ---------- Rendu d'une image à l'instant t (déterministe) ----------
+window.renderAt = (t) => {
+  const st = gameState(tl, page, t);
+
+  // Entrée du téléphone et caméra.
+  const entree = lastAction(tl, "entree", t);
+  const pin = entree ? back(clamp((t - entree.t) / 0.7)) : 0;
+  const cam = camera(t);
+  const cameraEl = document.getElementById("camera");
+  cameraEl.style.transformOrigin = `${cam.x}px ${cam.y}px`;
+  document.getElementById("brand").style.opacity = clamp(1 - (cam.s - 1) * 8);
+  cameraEl.style.transform = `translateY(${(1 - pin) * 900}px) scale(${cam.s})`;
+
+  // Mots de la page.
+  tokens.forEach((tok, i) => {
+    const el = els[i];
+    const len = tok.w.length;
+    if (st.found.has(tok.k)) {
+      const isFresh = st.fresh?.mots.includes(tok.k);
+      const pop = isFresh ? 1 + 0.25 * (1 - clamp((t - st.fresh.t) / 0.3)) : 1;
+      el.innerHTML = isFresh ? `<span class="fresh">${tok.w}</span>` : tok.w;
+      el.style.transform = `scale(${pop})`;
+    } else if (st.close[tok.k] && !tok.title) {
+      const [g, score] = st.close[tok.k];
+      const s = Math.round((255 * Math.log10(score - 30)) / 2);
+      const color = st.freshClose?.cibles.includes(tok.k) ? `rgb(255,${s},0)` : `rgb(${s},${s},${s})`;
+      el.innerHTML = `<span class="box" style="width:${Math.max(len, g.length) * 0.55 + 0.5}em;color:${color}">${g}</span>`;
+      el.style.transform = "";
+    } else {
+      el.innerHTML = `<span class="box" style="width:${len * 0.55 + 0.5}em"></span>`;
+      el.style.transform = "";
+    }
+  });
+
+  // En-tête, progression, saisie, retour.
+  const shown = tokens.filter((x) => st.found.has(x.k)).length;
+  const pct = Math.round((shown * 100) / tokens.length);
+  document.getElementById("badge").textContent = st.essais;
+  document.getElementById("badge").style.display = st.essais ? "grid" : "none";
+  document.getElementById("bar").style.width = pct + "%";
+  document.getElementById("pct").textContent = pct + " %";
+  document.getElementById("val").innerHTML = st.typing ? `${st.typing}<span class="caret"></span>` : `<span class="ph">Proposer un mot</span>`;
+  document.getElementById("send").style.background = st.typing ? "var(--a-accent)" : "var(--a-soft)";
+  const lg = st.lastGuess;
+  document.getElementById("fb").innerHTML = !lg ? "" : lg.kind === "found"
+    ? `<span style="color:var(--a-green)">●</span> « ${lg.mot} » · ${occurrences(lg.mot)} mot${occurrences(lg.mot) > 1 ? "s" : ""} révélé${occurrences(lg.mot) > 1 ? "s" : ""}`
+    : `<span style="color:var(--a-accent)">◐</span> « ${lg.mot} » · proche (${lg.score})`;
+  document.getElementById("ff").style.opacity = st.acceleration != null ? 1 : 0;
+
+  // Feuille de résultat.
+  const res = lastAction(tl, "resultat", t);
+  const result = document.getElementById("result");
+  result.style.display = res ? "block" : "none";
+  if (res) {
+    const p = back(clamp((t - res.t) / 0.5));
+    document.getElementById("sheet").style.transform = `translateY(${(1 - p) * 760}px)`;
+    document.getElementById("rCoups").textContent = st.essais;
+    document.getElementById("rPct").textContent = pct + " %";
+  }
+
+  // Sous-titres.
+  const subs = document.getElementById("subs");
+  const gi = groups.findIndex((g, i) => t >= g[0].debut - 0.08 && t < (groups[i + 1]?.[0].debut ?? g.at(-1).fin + 0.6) - 0.02);
+  if (gi < 0) subs.innerHTML = "";
+  else {
+    const g = groups[gi];
+    const p = clamp((t - (g[0].debut - 0.08)) / 0.14);
+    subs.innerHTML = `<div class="grp" style="transform:scale(${0.86 + 0.14 * back(p)})">${g.map((m) => `<span class="${t >= m.debut && t < m.fin + 0.15 ? "now" : ""}">${m.texte}</span>`).join(" ")}</div>`;
+  }
+
+  // Carte de fin.
+  const fin = lastAction(tl, "fin", t);
+  const end = document.getElementById("end");
+  const pe = fin ? clamp((t - fin.t) / 0.5) : 0;
+  end.style.opacity = pe;
+  end.style.display = pe > 0 ? "flex" : "none";
+  if (fin) {
+    const items = end.children;
+    for (let i = 0; i < items.length; i++) {
+      const q = back(clamp((t - fin.t - 0.15 - i * 0.12) / 0.45));
+      items[i].style.transform = `translateY(${(1 - q) * 80}px) scale(${0.9 + 0.1 * q})`;
+      items[i].style.opacity = clamp(q);
+    }
+  }
+};
+
+window.duree = tl.duree;
+window.ready = (async () => { await document.fonts.ready; await new Promise((r) => setTimeout(r, 300)); await document.fonts.ready; window.renderAt(0); })();
+
+// Aperçu dans un navigateur : lecture en temps réel (?play), ou ?t=12.3 pour figer.
+const q = new URLSearchParams(location.search);
+await window.ready;
+if (q.has("t")) window.renderAt(Number(q.get("t")));
+else if (q.has("play")) { const t0 = performance.now(); const loop = () => { const t = (performance.now() - t0) / 1000; window.renderAt(t % tl.duree); requestAnimationFrame(loop); }; loop(); }
+</script>
+</body>
+</html>

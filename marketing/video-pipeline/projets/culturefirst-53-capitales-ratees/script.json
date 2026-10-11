@@ -1,0 +1,297 @@
+{
+  "titre": "5 capitales que tout le monde rate",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de classement, du numéro cinq au numéro un, la mauvaise réponse dite comme une évidence puis la bonne avec malice. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Cinq capitales que tout le monde rate. Combien tu en as, toi ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Cinq",
+          "texte": "5 capitales",
+          "sous": "que tout le monde rate"
+        },
+        {
+          "type": "masquer",
+          "ancre": "as",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "as",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Cinq",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "voix": "Cinq : la Suisse ? Pas Genève : Berne, la ville fédérale.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Cinq",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Cinq",
+          "index": 0
+        },
+        {
+          "type": "bulle",
+          "ancre": "Genève",
+          "texte": "Genève ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Berne"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Berne",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "c4",
+      "voix": "Quatre : le Brésil ? Pas Rio : Brasília.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Quatre",
+          "index": 1
+        },
+        {
+          "type": "bulle",
+          "ancre": "Rio",
+          "texte": "Rio ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Brasília"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Brasília",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "c3",
+      "voix": "Trois : la Turquie ? Pas Istanbul : Ankara.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "bulle",
+          "ancre": "Istanbul",
+          "texte": "Istanbul ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Ankara"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Ankara",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "c2",
+      "voix": "Deux : le Canada ? Pas Toronto : Ottawa.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 3
+        },
+        {
+          "type": "bulle",
+          "ancre": "Toronto",
+          "texte": "Toronto ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Ottawa"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Ottawa",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "c1",
+      "voix": "Un : l'Australie ? Pas Sydney : Canberra.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Un",
+          "index": 4
+        },
+        {
+          "type": "bulle",
+          "ancre": "Sydney",
+          "texte": "Sydney ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Canberra"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Canberra",
+          "position": "fin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tu en avais combien ? Dis-le en commentaire. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Suisse",
+      "reponse": "Berne",
+      "fiche": [
+        [
+          "Statut",
+          "ville fédérale"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Brésil",
+      "reponse": "Brasília",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Turquie",
+      "reponse": "Ankara",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Canada",
+      "reponse": "Ottawa",
+      "fiche": []
+    },
+    {
+      "paquet": "Capitales du monde",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Australie",
+      "reponse": "Canberra",
+      "fiche": []
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

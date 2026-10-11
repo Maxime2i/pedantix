@@ -1,0 +1,569 @@
+{
+  "titre": "Soixante rallyes un samedi",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 19
+  },
+  "objectif": "Ampleur de la couverture. Données RÉELLES de l'API (GET /races/home?day=2026-10-03, relevé le 10/10/2026) : 60 épreuves non annulées couvrant le samedi 3 octobre 2026, dans 24 pays.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Question intrigante. « Soixante » dit avec emphase. Énumération des pays rapide et gourmande, puis « et ton rallye du coin » plus complice."
+  },
+  "ecranInitial": "accueil",
+  "ecrans": {
+    "accueil": {
+      "jours": [
+        "jeu. 1 oct",
+        "ven. 2 oct",
+        "sam. 3 oct",
+        "dim. 4 oct",
+        "lun. 5 oct"
+      ],
+      "jour": 2,
+      "pays": [
+        {
+          "drapeau": "🇿🇦",
+          "nom": "Afrique du Sud",
+          "rallyes": [
+            {
+              "id": "r-104360",
+              "titre": "Rola Ford Caledon Rally",
+              "heure": "09:49"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇩🇪",
+          "nom": "Allemagne",
+          "rallyes": [
+            {
+              "id": "r-100456",
+              "titre": "ADAC Nibelungen Rallyesprint",
+              "heure": "11:16"
+            },
+            {
+              "id": "r-100457",
+              "titre": "ADAC Rallye Bad Emstal",
+              "heure": "11:49"
+            },
+            {
+              "id": "r-104119",
+              "titre": "ADAC Nibelungen Rallyesprint Gentleman Drivers Club",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇦🇷",
+          "nom": "Argentine",
+          "rallyes": [
+            {
+              "id": "r-104005",
+              "titre": "Rally de Entre Ríos - Diamante y Valle María",
+              "heure": "16:23"
+            },
+            {
+              "id": "r-104256",
+              "titre": "Rally Integracion Catriel - 25 de Mayo",
+              "heure": "11:18"
+            },
+            {
+              "id": "r-104280",
+              "titre": "Rally de Coronel Suárez",
+              "heure": "21:00"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇦🇺",
+          "nom": "Australie",
+          "rallyes": [
+            {
+              "id": "r-99919",
+              "titre": "Adelaide Hills Rally - Heat 1",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103146",
+              "titre": "Imbil Rallysprint Double Header I",
+              "heure": "11:23"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇧🇪",
+          "nom": "Belgique",
+          "rallyes": [
+            {
+              "id": "r-99251",
+              "titre": "Critérium Jean-Louis Dumont",
+              "heure": "—"
+            },
+            {
+              "id": "r-99252",
+              "titre": "Critérium Jean-Louis Dumont - Histo Demo",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇧🇴",
+          "nom": "Bolivie",
+          "rallyes": [
+            {
+              "id": "r-104215",
+              "titre": "Rally Valle Abajo",
+              "heure": "—"
+            },
+            {
+              "id": "r-104315",
+              "titre": "Ruta Señor de Lagunas",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇩🇰",
+          "nom": "Danemark",
+          "rallyes": [
+            {
+              "id": "r-99369",
+              "titre": "Rally Stoholm",
+              "heure": "08:11"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇪🇸",
+          "nom": "Espagne",
+          "rallyes": [
+            {
+              "id": "r-99770",
+              "titre": "Rallye de Cáceres",
+              "heure": "09:30"
+            },
+            {
+              "id": "r-99785",
+              "titre": "Rallye Rías Altas Histórico",
+              "heure": "10:55"
+            },
+            {
+              "id": "r-100969",
+              "titre": "Rallysprint de Tierra Quintana y Congosto",
+              "heure": "13:00"
+            },
+            {
+              "id": "r-100978",
+              "titre": "Rallysprint de Lobios",
+              "heure": "14:15"
+            },
+            {
+              "id": "r-103218",
+              "titre": "Rallysprint de Atogo",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103311",
+              "titre": "Rallye Ciutat de Xixona",
+              "heure": "09:13"
+            },
+            {
+              "id": "r-103645",
+              "titre": "Rally Les Masies de Voltregà",
+              "heure": "09:20"
+            },
+            {
+              "id": "r-103950",
+              "titre": "Rallye Ciudad Puerto del Rosario",
+              "heure": "09:10"
+            },
+            {
+              "id": "r-104134",
+              "titre": "Rallysprint Elgoibar",
+              "heure": "—"
+            },
+            {
+              "id": "r-104200",
+              "titre": "Rallycrono Ciudad Castillo de Locubín",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇫🇮",
+          "nom": "Finlande",
+          "rallyes": [
+            {
+              "id": "r-97725",
+              "titre": "Puumala Ralli",
+              "heure": "12:38"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇫🇷",
+          "nom": "France",
+          "rallyes": [
+            {
+              "id": "r-101729",
+              "titre": "Rallye Tout-Terrain Dunes et Marais",
+              "heure": "08:58"
+            },
+            {
+              "id": "r-103089",
+              "titre": "Rallye Régional Le Mans",
+              "heure": "15:38"
+            },
+            {
+              "id": "r-103090",
+              "titre": "Rallye Régional Le Mans VHC",
+              "heure": "15:38"
+            },
+            {
+              "id": "r-103829",
+              "titre": "Rallye Régional des Corbières",
+              "heure": "10:08"
+            },
+            {
+              "id": "r-103830",
+              "titre": "Rallye Régional des Corbières VHC",
+              "heure": "10:08"
+            },
+            {
+              "id": "r-103831",
+              "titre": "Rallye Régional du Pays de Montbéliard",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103832",
+              "titre": "Rallye Régional du Pays de Montbéliard VHC",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103833",
+              "titre": "Rallye National de l'Ardèche",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103834",
+              "titre": "Rallye National de l'Ardèche VHC",
+              "heure": "08:33"
+            },
+            {
+              "id": "r-103836",
+              "titre": "Rallye Régional de la Croisette",
+              "heure": "15:18"
+            },
+            {
+              "id": "r-103837",
+              "titre": "Rallye Régional de la Croisette VHC",
+              "heure": "15:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇬🇷",
+          "nom": "Grèce",
+          "rallyes": [
+            {
+              "id": "r-104048",
+              "titre": "Rally Evoikou",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇮🇹",
+          "nom": "Italie",
+          "rallyes": [
+            {
+              "id": "r-96267",
+              "titre": "Rally Italia Sardegna",
+              "heure": "08:01"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇯🇵",
+          "nom": "Japon",
+          "rallyes": [
+            {
+              "id": "r-99840",
+              "titre": "Team if Sangaku Rally in Tsumagoi",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇱🇹",
+          "nom": "Lituanie",
+          "rallyes": [
+            {
+              "id": "r-103080",
+              "titre": "ORLEN Lietuva Rally",
+              "heure": "08:15"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇲🇬",
+          "nom": "Madagascar",
+          "rallyes": [
+            {
+              "id": "r-103328",
+              "titre": "Tour de Tana Sodirex / Orange by ASA Tana",
+              "heure": "09:35"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇲🇦",
+          "nom": "Maroc",
+          "rallyes": [
+            {
+              "id": "r-98100",
+              "titre": "Rallye Ola Energy du Maroc - FIA",
+              "heure": "09:57"
+            },
+            {
+              "id": "r-103983",
+              "titre": "Rallye Ola Energy du Maroc - FIM",
+              "heure": "07:30"
+            },
+            {
+              "id": "r-103984",
+              "titre": "Rallye Ola Energy du Maroc - Open",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇳🇴",
+          "nom": "Norvège",
+          "rallyes": [
+            {
+              "id": "r-100988",
+              "titre": "Rally Trøgstad",
+              "heure": "11:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇳🇿",
+          "nom": "Nouvelle-Zélande",
+          "rallyes": [
+            {
+              "id": "r-104157",
+              "titre": "Waimate Rally",
+              "heure": "10:25"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇵🇹",
+          "nom": "Portugal",
+          "rallyes": [
+            {
+              "id": "r-99024",
+              "titre": "Rallye Casinos do Algarve",
+              "heure": "09:28"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇬🇧",
+          "nom": "Royaume-Uni",
+          "rallyes": [
+            {
+              "id": "r-101092",
+              "titre": "Chris Kelly Rally",
+              "heure": "09:44"
+            },
+            {
+              "id": "r-98759",
+              "titre": "Historic Rally Festival",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇸🇰",
+          "nom": "Slovaquie",
+          "rallyes": [
+            {
+              "id": "r-100577",
+              "titre": "Rally Prešov",
+              "heure": "08:00"
+            },
+            {
+              "id": "r-103319",
+              "titre": "Rally Prešov - SRP",
+              "heure": "09:35"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇸🇪",
+          "nom": "Suède",
+          "rallyes": [
+            {
+              "id": "r-99451",
+              "titre": "Rikspokalen",
+              "heure": "—"
+            },
+            {
+              "id": "r-99470",
+              "titre": "Karlskronapokalen",
+              "heure": "10:35"
+            },
+            {
+              "id": "r-99554",
+              "titre": "Eliantorpssprinten",
+              "heure": "—"
+            },
+            {
+              "id": "r-104356",
+              "titre": "Autoexperten 101 Åringen",
+              "heure": "—"
+            },
+            {
+              "id": "r-104357",
+              "titre": "AP-rundan",
+              "heure": "—"
+            },
+            {
+              "id": "r-104361",
+              "titre": "Kulsvängen",
+              "heure": "—"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇹🇿",
+          "nom": "Tanzanie",
+          "rallyes": [
+            {
+              "id": "r-102547",
+              "titre": "Serengeti Rally of Tanzania",
+              "heure": "09:18"
+            }
+          ]
+        },
+        {
+          "drapeau": "🇨🇿",
+          "nom": "Tchéquie",
+          "rallyes": [
+            {
+              "id": "r-99399",
+              "titre": "Carlson-Partr Rally Vsetín",
+              "heure": "08:18"
+            },
+            {
+              "id": "r-104202",
+              "titre": "Podbrdské setkání legend",
+              "heure": "08:04"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Un samedi d'octobre, combien de rallyes dans le monde ?",
+      "animation": "Texte géant.",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "samedi",
+          "texte": "Un samedi. *Combien* de rallyes ?",
+          "fin": "monde"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "chiffre",
+      "voix": "Le trois octobre : soixante épreuves, dans vingt-quatre pays.",
+      "animation": "Grand chiffre 60.",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "soixante",
+          "valeur": 60,
+          "sous": "épreuves de rallye<br>dans 24 pays",
+          "fin": "pays"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pays",
+      "voix": "Afrique du Sud, Argentine, Japon, Madagascar… et ton rallye du coin.",
+      "animation": "Accueil réel du samedi 3 octobre qui défile de pays en pays, puis revient à la France.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Afrique"
+        },
+        {
+          "type": "defiler",
+          "ancre": "Argentine",
+          "cible": "a-pays-2"
+        },
+        {
+          "type": "defiler",
+          "ancre": "Japon",
+          "cible": "a-pays-12"
+        },
+        {
+          "type": "defiler",
+          "ancre": "Madagascar",
+          "cible": "a-pays-14"
+        },
+        {
+          "type": "defiler",
+          "ancre": "rallye",
+          "cible": "a-pays-9"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tous les rallyes du monde, pays par pays. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

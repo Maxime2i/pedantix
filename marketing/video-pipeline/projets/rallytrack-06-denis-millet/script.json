@@ -1,0 +1,175 @@
+{
+  "titre": "Ton pilote préféré",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Téléchargements + suivi de pilote. Données RÉELLES de l'API (GET /persons/driver/5862, relevé le 10/10/2026) : Denis Millet, 42 ans, 2004 → 2026, 197 départs, 33 victoires, 62 podiums, 131 ES gagnées ; dernier résultat P3 (Rally2 P3) au Rallye Régional du Pays de Montbéliard le 3 oct. 2026 ; prochain départ : Finale de la Coupe de France des Rallyes - Remiremont (16–17 oct. 2026). Photo non affichée (initiale, comme le repli de l'app).",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Question complice au début. Chiffres dits avec admiration, bien détachés. « Active la cloche » comme un conseil d'ami."
+  },
+  "ecranInitial": "pilote",
+  "ecrans": {
+    "pilote": {
+      "nom": "Denis Millet",
+      "initiale": "D",
+      "drapeau": "🇫🇷",
+      "ligne": "Pilote · France · 42 ans",
+      "carriere": "2004 → 2026 · 197 départs",
+      "dernier": {
+        "date": "🇫🇷 3 oct. 2026",
+        "rallye": "Rallye Régional du Pays de Montbéliard",
+        "voiture": "Volkswagen Polo GTI R5",
+        "partenaire": "Romain Blondeau-Toiny",
+        "general": "P3",
+        "classe": "P3",
+        "nomClasse": "Rally2"
+      },
+      "prochain": {
+        "date": "🇫🇷 16–17 oct. 2026",
+        "nom": "Finale de la Coupe de France des Rallyes - Remiremont"
+      },
+      "championnat": null,
+      "chiffres": [
+        [
+          "197",
+          "Départs"
+        ],
+        [
+          "33",
+          "Victoires"
+        ],
+        [
+          "62",
+          "Podiums"
+        ],
+        [
+          "131",
+          "ES gagnées"
+        ]
+      ],
+      "palmares": [
+        [
+          "IRC 2WD",
+          "2009"
+        ],
+        [
+          "Volant Peugeot (F)",
+          "2008"
+        ]
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Ton pilote préféré, tu connais vraiment son palmarès ?",
+      "animation": "Page pilote de Denis Millet.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "pilote"
+        },
+        {
+          "type": "zoom",
+          "ancre": "palmarès",
+          "cible": "pi-hero",
+          "echelle": 1.3,
+          "hauteur": 820
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "chiffres",
+      "voix": "Denis Millet : cent quatre-vingt-dix-sept départs, trente-trois victoires.",
+      "animation": "Zoom sur les chiffres carrière : 197 départs, 33 victoires.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "cent",
+          "cible": "pi-chiffres",
+          "echelle": 1.3,
+          "hauteur": 960
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "dernier",
+      "voix": "Le trois octobre, troisième à Montbéliard. Prochain départ : la finale de la Coupe de France.",
+      "animation": "Dernier résultat : P3 au général, P3 en Rally2 ; prochain départ : la finale à Remiremont.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "octobre",
+          "cible": "pi-dernier",
+          "echelle": 1.3,
+          "hauteur": 900
+        },
+        {
+          "type": "zoom",
+          "ancre": "Prochain",
+          "cible": "pi-prochain",
+          "echelle": 1.35,
+          "hauteur": 940
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cloche",
+      "voix": "Active la cloche : tu suis ses résultats en direct.",
+      "animation": "Appui sur la cloche, qui passe en orange.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Active",
+          "cible": "haut"
+        },
+        {
+          "type": "cloche",
+          "ancre": "cloche"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

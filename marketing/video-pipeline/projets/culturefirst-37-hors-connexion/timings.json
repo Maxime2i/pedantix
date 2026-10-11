@@ -1,0 +1,465 @@
+{
+  "duree": 22.34,
+  "dureeVoix": 20.54,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.12,
+      "fin": 3.82
+    },
+    {
+      "id": "garde",
+      "debut": 3.82,
+      "finVoix": 6.52,
+      "fin": 7.34
+    },
+    {
+      "id": "envoi",
+      "debut": 7.34,
+      "finVoix": 9.66,
+      "fin": 10.42
+    },
+    {
+      "id": "partout",
+      "debut": 10.42,
+      "finVoix": 15.68,
+      "fin": 16.34
+    },
+    {
+      "id": "appel",
+      "debut": 16.34,
+      "finVoix": 20.54,
+      "fin": 22.34
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.4
+    },
+    {
+      "texte": "réseau",
+      "mot": "réseau",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.66
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.76
+    },
+    {
+      "texte": "l'avion",
+      "mot": "l'avion",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 1.1
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.24
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.34
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.42
+    },
+    {
+      "texte": "métro ?",
+      "mot": "métro",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.66
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.28
+    },
+    {
+      "texte": "peux",
+      "mot": "peux",
+      "scene": 0,
+      "debut": 2.28,
+      "fin": 2.42
+    },
+    {
+      "texte": "quand",
+      "mot": "quand",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.52
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 2.7
+    },
+    {
+      "texte": "réviser.",
+      "mot": "réviser",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 3.12
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 4.16
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.58
+    },
+    {
+      "texte": "garde",
+      "mot": "garde",
+      "scene": 1,
+      "debut": 4.58,
+      "fin": 4.88
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.08
+    },
+    {
+      "texte": "réponses",
+      "mot": "réponses",
+      "scene": 1,
+      "debut": 5.08,
+      "fin": 5.48
+    },
+    {
+      "texte": "bien",
+      "mot": "bien",
+      "scene": 1,
+      "debut": 5.48,
+      "fin": 5.66
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.86
+    },
+    {
+      "texte": "chaud",
+      "mot": "chaud",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 5.98
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 1,
+      "debut": 5.98,
+      "fin": 6.1
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 6.1,
+      "fin": 6.22
+    },
+    {
+      "texte": "téléphone.",
+      "mot": "téléphone",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.52
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 7.34,
+      "fin": 7.88
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 7.88,
+      "fin": 7.98
+    },
+    {
+      "texte": "envoie",
+      "mot": "envoie",
+      "scene": 2,
+      "debut": 7.98,
+      "fin": 8.28
+    },
+    {
+      "texte": "toutes",
+      "mot": "toutes",
+      "scene": 2,
+      "debut": 8.28,
+      "fin": 8.48
+    },
+    {
+      "texte": "seules",
+      "mot": "seules",
+      "scene": 2,
+      "debut": 8.48,
+      "fin": 8.76
+    },
+    {
+      "texte": "dès",
+      "mot": "dès",
+      "scene": 2,
+      "debut": 8.76,
+      "fin": 9.04
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 9.04,
+      "fin": 9.12
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.12,
+      "fin": 9.22
+    },
+    {
+      "texte": "réseau",
+      "mot": "réseau",
+      "scene": 2,
+      "debut": 9.22,
+      "fin": 9.42
+    },
+    {
+      "texte": "revient.",
+      "mot": "revient",
+      "scene": 2,
+      "debut": 9.42,
+      "fin": 9.66
+    },
+    {
+      "texte": "Ta",
+      "mot": "Ta",
+      "scene": 3,
+      "debut": 10.42,
+      "fin": 10.58
+    },
+    {
+      "texte": "dernière",
+      "mot": "dernière",
+      "scene": 3,
+      "debut": 10.58,
+      "fin": 10.84
+    },
+    {
+      "texte": "séance",
+      "mot": "séance",
+      "scene": 3,
+      "debut": 10.84,
+      "fin": 11.2
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 11.2,
+      "fin": 11.34
+    },
+    {
+      "texte": "jour",
+      "mot": "jour",
+      "scene": 3,
+      "debut": 11.34,
+      "fin": 11.5
+    },
+    {
+      "texte": "reste",
+      "mot": "reste",
+      "scene": 3,
+      "debut": 11.5,
+      "fin": 11.7
+    },
+    {
+      "texte": "disponible :",
+      "mot": "disponible",
+      "scene": 3,
+      "debut": 11.7,
+      "fin": 12.28
+    },
+    {
+      "texte": "métro,",
+      "mot": "métro",
+      "scene": 3,
+      "debut": 12.7,
+      "fin": 13.18
+    },
+    {
+      "texte": "avion,",
+      "mot": "avion",
+      "scene": 3,
+      "debut": 13.48,
+      "fin": 13.78
+    },
+    {
+      "texte": "plage,",
+      "mot": "plage",
+      "scene": 3,
+      "debut": 14.08,
+      "fin": 14.4
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 14.7,
+      "fin": 14.8
+    },
+    {
+      "texte": "révises",
+      "mot": "révises",
+      "scene": 3,
+      "debut": 14.8,
+      "fin": 15.26
+    },
+    {
+      "texte": "partout.",
+      "mot": "partout",
+      "scene": 3,
+      "debut": 15.26,
+      "fin": 15.68
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.46
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.46,
+      "fin": 16.62
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 16.62,
+      "fin": 16.787
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 16.787,
+      "fin": 16.953
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 16.953,
+      "fin": 17.12
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 17.12,
+      "fin": 17.46
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.02,
+      "fin": 18.34
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 18.34,
+      "fin": 18.78
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 18.98,
+      "fin": 19.28
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 19.28,
+      "fin": 19.56
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.56,
+      "fin": 19.92
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.92,
+      "fin": 20.28
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.28,
+      "fin": 20.54
+    }
+  ]
+}

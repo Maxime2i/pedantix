@@ -1,0 +1,427 @@
+{
+  "duree": 25.4,
+  "dureeVoix": 23.6,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.94,
+      "fin": 3.5
+    },
+    {
+      "id": "n1",
+      "debut": 3.5,
+      "finVoix": 5.56,
+      "fin": 6.32
+    },
+    {
+      "id": "r1",
+      "debut": 6.32,
+      "finVoix": 7.22,
+      "fin": 7.92
+    },
+    {
+      "id": "n2",
+      "debut": 7.92,
+      "finVoix": 12.17,
+      "fin": 12.17
+    },
+    {
+      "id": "r2",
+      "debut": 12.17,
+      "finVoix": 13.04,
+      "fin": 13.68
+    },
+    {
+      "id": "n3",
+      "debut": 13.68,
+      "finVoix": 17.56,
+      "fin": 18.28
+    },
+    {
+      "id": "r3",
+      "debut": 18.28,
+      "finVoix": 20.56,
+      "fin": 21.1
+    },
+    {
+      "id": "appel",
+      "debut": 21.1,
+      "finVoix": 23.6,
+      "fin": 25.4
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.64
+    },
+    {
+      "texte": "pages",
+      "mot": "pages",
+      "scene": 0,
+      "debut": 0.64,
+      "fin": 0.78
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.98
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.06
+    },
+    {
+      "texte": "jeu,",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.26
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.64
+    },
+    {
+      "texte": "facile",
+      "mot": "facile",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 2.06
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.44
+    },
+    {
+      "texte": "impossible.",
+      "mot": "impossible",
+      "scene": 0,
+      "debut": 2.44,
+      "fin": 2.94
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.86
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.0
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.54,
+      "fin": 4.62
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 1,
+      "debut": 4.62,
+      "fin": 5.04
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 5.04,
+      "fin": 5.16
+    },
+    {
+      "texte": "Danemark.",
+      "mot": "Danemark",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.56
+    },
+    {
+      "texte": "Copenhague !",
+      "mot": "Copenhague",
+      "scene": 2,
+      "debut": 6.32,
+      "fin": 6.8
+    },
+    {
+      "texte": "Facile.",
+      "mot": "Facile",
+      "scene": 2,
+      "debut": 6.94,
+      "fin": 7.22
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 3,
+      "debut": 7.92,
+      "fin": 8.3
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 8.3,
+      "fin": 8.46
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 9.06,
+      "fin": 9.2
+    },
+    {
+      "texte": "mammifère",
+      "mot": "mammifère",
+      "scene": 3,
+      "debut": 9.2,
+      "fin": 9.76
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 3,
+      "debut": 9.76,
+      "fin": 9.92
+    },
+    {
+      "texte": "pond",
+      "mot": "pond",
+      "scene": 3,
+      "debut": 9.92,
+      "fin": 10.12
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 10.12,
+      "fin": 10.3
+    },
+    {
+      "texte": "œufs…",
+      "mot": "œufs",
+      "scene": 3,
+      "debut": 10.3,
+      "fin": 10.72
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 10.84,
+      "fin": 10.88
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 3,
+      "debut": 10.88,
+      "fin": 11.02
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 3,
+      "debut": 11.02,
+      "fin": 11.12
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 3,
+      "debut": 11.12,
+      "fin": 11.3
+    },
+    {
+      "texte": "l'ornithorynque.",
+      "mot": "l'ornithorynque",
+      "scene": 3,
+      "debut": 11.3,
+      "fin": 12.17
+    },
+    {
+      "texte": "L'échidné !",
+      "mot": "L'échidné",
+      "scene": 4,
+      "debut": 12.17,
+      "fin": 13.04
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 5,
+      "debut": 13.68,
+      "fin": 13.92
+    },
+    {
+      "texte": "trois :",
+      "mot": "trois",
+      "scene": 5,
+      "debut": 13.92,
+      "fin": 14.16
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 5,
+      "debut": 14.86,
+      "fin": 14.94
+    },
+    {
+      "texte": "spécialité",
+      "mot": "spécialité",
+      "scene": 5,
+      "debut": 14.94,
+      "fin": 15.6
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 5,
+      "debut": 15.6,
+      "fin": 15.78
+    },
+    {
+      "texte": "médecins",
+      "mot": "médecins",
+      "scene": 5,
+      "debut": 15.78,
+      "fin": 16.18
+    },
+    {
+      "texte": "ORL,",
+      "mot": "ORL",
+      "scene": 5,
+      "debut": 16.18,
+      "fin": 16.72
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 5,
+      "debut": 16.72,
+      "fin": 17.04
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 5,
+      "debut": 17.04,
+      "fin": 17.26
+    },
+    {
+      "texte": "seul",
+      "mot": "seul",
+      "scene": 5,
+      "debut": 17.26,
+      "fin": 17.38
+    },
+    {
+      "texte": "mot.",
+      "mot": "mot",
+      "scene": 5,
+      "debut": 17.38,
+      "fin": 17.56
+    },
+    {
+      "texte": "Otorhinolaryngologie.",
+      "mot": "Otorhinolaryngologie",
+      "scene": 6,
+      "debut": 18.28,
+      "fin": 19.26
+    },
+    {
+      "texte": "Vingt",
+      "mot": "Vingt",
+      "scene": 6,
+      "debut": 19.26,
+      "fin": 20.24
+    },
+    {
+      "texte": "lettres.",
+      "mot": "lettres",
+      "scene": 6,
+      "debut": 20.24,
+      "fin": 20.56
+    },
+    {
+      "texte": "T'es",
+      "mot": "T'es",
+      "scene": 7,
+      "debut": 21.1,
+      "fin": 21.24
+    },
+    {
+      "texte": "allé",
+      "mot": "allé",
+      "scene": 7,
+      "debut": 21.24,
+      "fin": 21.34
+    },
+    {
+      "texte": "jusqu'où ?",
+      "mot": "jusqu'où",
+      "scene": 7,
+      "debut": 21.34,
+      "fin": 22.18
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 7,
+      "debut": 22.18,
+      "fin": 22.66
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 7,
+      "debut": 22.88,
+      "fin": 23.08
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 7,
+      "debut": 23.08,
+      "fin": 23.3
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 7,
+      "debut": 23.3,
+      "fin": 23.38
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 7,
+      "debut": 23.38,
+      "fin": 23.6
+    }
+  ]
+}

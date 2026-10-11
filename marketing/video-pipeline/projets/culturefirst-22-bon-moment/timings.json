@@ -1,0 +1,430 @@
+{
+  "duree": 22.82,
+  "dureeVoix": 21.02,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 3.54,
+      "fin": 4.12
+    },
+    {
+      "id": "trop",
+      "debut": 4.12,
+      "finVoix": 7.42,
+      "fin": 8.1
+    },
+    {
+      "id": "calcul",
+      "debut": 8.1,
+      "finVoix": 13.5,
+      "fin": 14.26
+    },
+    {
+      "id": "espace",
+      "debut": 14.26,
+      "finVoix": 15.86,
+      "fin": 16.64
+    },
+    {
+      "id": "appel",
+      "debut": 16.64,
+      "finVoix": 21.02,
+      "fin": 22.82
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "meilleur",
+      "mot": "meilleur",
+      "scene": 0,
+      "debut": 0.48,
+      "fin": 0.94
+    },
+    {
+      "texte": "moment",
+      "mot": "moment",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.26
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.56
+    },
+    {
+      "texte": "réviser ?",
+      "mot": "réviser",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.96
+    },
+    {
+      "texte": "Juste",
+      "mot": "Juste",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.96
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 2.96,
+      "fin": 3.1
+    },
+    {
+      "texte": "d'oublier.",
+      "mot": "d'oublier",
+      "scene": 0,
+      "debut": 3.1,
+      "fin": 3.54
+    },
+    {
+      "texte": "Trop",
+      "mot": "Trop",
+      "scene": 1,
+      "debut": 4.12,
+      "fin": 4.38
+    },
+    {
+      "texte": "tôt,",
+      "mot": "tôt",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.62
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.0
+    },
+    {
+      "texte": "perds",
+      "mot": "perds",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.34
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 1,
+      "debut": 5.34,
+      "fin": 5.34
+    },
+    {
+      "texte": "temps.",
+      "mot": "temps",
+      "scene": 1,
+      "debut": 5.34,
+      "fin": 5.54
+    },
+    {
+      "texte": "Trop",
+      "mot": "Trop",
+      "scene": 1,
+      "debut": 6.14,
+      "fin": 6.22
+    },
+    {
+      "texte": "tard,",
+      "mot": "tard",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.46
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 6.86,
+      "fin": 6.94
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 1,
+      "debut": 6.94,
+      "fin": 6.96
+    },
+    {
+      "texte": "déjà",
+      "mot": "déjà",
+      "scene": 1,
+      "debut": 6.96,
+      "fin": 7.06
+    },
+    {
+      "texte": "oublié.",
+      "mot": "oublié",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.42
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 8.1,
+      "fin": 8.48
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 2,
+      "debut": 8.48,
+      "fin": 8.82
+    },
+    {
+      "texte": "calcule",
+      "mot": "calcule",
+      "scene": 2,
+      "debut": 8.82,
+      "fin": 9.26
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 2,
+      "debut": 9.26,
+      "fin": 9.42
+    },
+    {
+      "texte": "moment",
+      "mot": "moment",
+      "scene": 2,
+      "debut": 9.42,
+      "fin": 9.62
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 2,
+      "debut": 9.62,
+      "fin": 9.88
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 2,
+      "debut": 9.88,
+      "fin": 10.1
+    },
+    {
+      "texte": "carte :",
+      "mot": "carte",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.5
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 2,
+      "debut": 11.02,
+      "fin": 11.24
+    },
+    {
+      "texte": "minutes,",
+      "mot": "minutes",
+      "scene": 2,
+      "debut": 11.24,
+      "fin": 11.46
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 11.96,
+      "fin": 12.26
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.46
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 2,
+      "debut": 12.96,
+      "fin": 13.14
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 13.14,
+      "fin": 13.28
+    },
+    {
+      "texte": "mois.",
+      "mot": "mois",
+      "scene": 2,
+      "debut": 13.28,
+      "fin": 13.5
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 14.26,
+      "fin": 14.3
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 14.3,
+      "fin": 14.52
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 14.52,
+      "fin": 14.62
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 14.62,
+      "fin": 14.76
+    },
+    {
+      "texte": "connais,",
+      "mot": "connais",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 15.0
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 15.34,
+      "fin": 15.44
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 3,
+      "debut": 15.44,
+      "fin": 15.54
+    },
+    {
+      "texte": "s'espace.",
+      "mot": "s'espace",
+      "scene": 3,
+      "debut": 15.54,
+      "fin": 15.86
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 16.64,
+      "fin": 16.84
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.84,
+      "fin": 17.02
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.02,
+      "fin": 17.247
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 17.247,
+      "fin": 17.473
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 17.473,
+      "fin": 17.7
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 17.7,
+      "fin": 18.08
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.74,
+      "fin": 19.06
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 19.06,
+      "fin": 19.52
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 19.52,
+      "fin": 20.12
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.12,
+      "fin": 20.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 20.32,
+      "fin": 20.56
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 20.56,
+      "fin": 20.76
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.76,
+      "fin": 21.02
+    }
+  ]
+}

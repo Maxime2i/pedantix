@@ -1,0 +1,534 @@
+{
+  "duree": 27.6,
+  "dureeVoix": 25.8,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.44,
+      "fin": 3.98
+    },
+    {
+      "id": "flop",
+      "debut": 3.98,
+      "finVoix": 7.8,
+      "fin": 8.3
+    },
+    {
+      "id": "solid",
+      "debut": 8.3,
+      "finVoix": 13.59,
+      "fin": 13.59
+    },
+    {
+      "id": "wonder",
+      "debut": 13.59,
+      "finVoix": 17.62,
+      "fin": 18.34
+    },
+    {
+      "id": "trophy",
+      "debut": 18.34,
+      "finVoix": 22.34,
+      "fin": 22.96
+    },
+    {
+      "id": "cta",
+      "debut": 22.96,
+      "finVoix": 25.8,
+      "fin": 27.6
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Voici",
+      "mot": "Voici",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.7
+    },
+    {
+      "texte": "ma",
+      "mot": "ma",
+      "scene": 0,
+      "debut": 0.7,
+      "fin": 0.88
+    },
+    {
+      "texte": "carrière…",
+      "mot": "carrière",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.3
+    },
+    {
+      "texte": "racontée",
+      "mot": "racontée",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 2.18
+    },
+    {
+      "texte": "uniquement",
+      "mot": "uniquement",
+      "scene": 0,
+      "debut": 2.18,
+      "fin": 2.84
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 3.0
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 3.0,
+      "fin": 3.12
+    },
+    {
+      "texte": "journaux.",
+      "mot": "journaux",
+      "scene": 0,
+      "debut": 3.12,
+      "fin": 3.44
+    },
+    {
+      "texte": "Dix-sept",
+      "mot": "Dix-sept",
+      "scene": 1,
+      "debut": 3.98,
+      "fin": 4.16
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.42
+    },
+    {
+      "texte": "Lucas",
+      "mot": "Lucas",
+      "scene": 1,
+      "debut": 4.96,
+      "fin": 5.28
+    },
+    {
+      "texte": "Morel",
+      "mot": "Morel",
+      "scene": 1,
+      "debut": 5.28,
+      "fin": 5.6
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 5.6,
+      "fin": 5.86
+    },
+    {
+      "texte": "panne :",
+      "mot": "panne",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 6.34
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 6.46,
+      "fin": 6.58
+    },
+    {
+      "texte": "saison",
+      "mot": "saison",
+      "scene": 1,
+      "debut": 6.58,
+      "fin": 6.94
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 6.94,
+      "fin": 7.1
+    },
+    {
+      "texte": "laissera",
+      "mot": "laissera",
+      "scene": 1,
+      "debut": 7.1,
+      "fin": 7.42
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 7.42,
+      "fin": 7.54
+    },
+    {
+      "texte": "traces.",
+      "mot": "traces",
+      "scene": 1,
+      "debut": 7.54,
+      "fin": 7.8
+    },
+    {
+      "texte": "Vingt",
+      "mot": "Vingt",
+      "scene": 2,
+      "debut": 8.3,
+      "fin": 8.387
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 8.387,
+      "fin": 8.473
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 8.473,
+      "fin": 8.56
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.84
+    },
+    {
+      "texte": "Constant,",
+      "mot": "Constant",
+      "scene": 2,
+      "debut": 9.42,
+      "fin": 9.74
+    },
+    {
+      "texte": "appliqué,",
+      "mot": "appliqué",
+      "scene": 2,
+      "debut": 9.74,
+      "fin": 10.52
+    },
+    {
+      "texte": "décisif :",
+      "mot": "décisif",
+      "scene": 2,
+      "debut": 10.76,
+      "fin": 11.3
+    },
+    {
+      "texte": "Lucas",
+      "mot": "Lucas",
+      "scene": 2,
+      "debut": 11.6,
+      "fin": 11.9
+    },
+    {
+      "texte": "Morel",
+      "mot": "Morel",
+      "scene": 2,
+      "debut": 11.9,
+      "fin": 12.16
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 2,
+      "debut": 12.16,
+      "fin": 12.22
+    },
+    {
+      "texte": "tenu",
+      "mot": "tenu",
+      "scene": 2,
+      "debut": 12.22,
+      "fin": 12.46
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 2,
+      "debut": 12.46,
+      "fin": 12.62
+    },
+    {
+      "texte": "rang",
+      "mot": "rang",
+      "scene": 2,
+      "debut": 12.62,
+      "fin": 12.82
+    },
+    {
+      "texte": "toute",
+      "mot": "toute",
+      "scene": 2,
+      "debut": 12.82,
+      "fin": 13.06
+    },
+    {
+      "texte": "l'année.",
+      "mot": "l'année",
+      "scene": 2,
+      "debut": 13.06,
+      "fin": 13.59
+    },
+    {
+      "texte": "Vingt-quatre",
+      "mot": "Vingt-quatre",
+      "scene": 3,
+      "debut": 13.59,
+      "fin": 14.12
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 3,
+      "debut": 14.12,
+      "fin": 14.34
+    },
+    {
+      "texte": "Lucas",
+      "mot": "Lucas",
+      "scene": 3,
+      "debut": 14.94,
+      "fin": 15.28
+    },
+    {
+      "texte": "Morel",
+      "mot": "Morel",
+      "scene": 3,
+      "debut": 15.28,
+      "fin": 15.56
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 15.56,
+      "fin": 15.6
+    },
+    {
+      "texte": "changé",
+      "mot": "changé",
+      "scene": 3,
+      "debut": 15.6,
+      "fin": 15.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 15.96,
+      "fin": 16.0
+    },
+    {
+      "texte": "dimension",
+      "mot": "dimension",
+      "scene": 3,
+      "debut": 16.0,
+      "fin": 16.28
+    },
+    {
+      "texte": "cette",
+      "mot": "cette",
+      "scene": 3,
+      "debut": 16.28,
+      "fin": 16.56
+    },
+    {
+      "texte": "année,",
+      "mot": "année",
+      "scene": 3,
+      "debut": 16.56,
+      "fin": 16.8
+    },
+    {
+      "texte": "point",
+      "mot": "point",
+      "scene": 3,
+      "debut": 17.2,
+      "fin": 17.34
+    },
+    {
+      "texte": "final.",
+      "mot": "final",
+      "scene": 3,
+      "debut": 17.34,
+      "fin": 17.62
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 18.34,
+      "fin": 18.46
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 18.46,
+      "fin": 18.56
+    },
+    {
+      "texte": "vingt-sept",
+      "mot": "vingt-sept",
+      "scene": 4,
+      "debut": 18.56,
+      "fin": 18.78
+    },
+    {
+      "texte": "ans :",
+      "mot": "ans",
+      "scene": 4,
+      "debut": 18.78,
+      "fin": 19.08
+    },
+    {
+      "texte": "sacré",
+      "mot": "sacré",
+      "scene": 4,
+      "debut": 19.58,
+      "fin": 19.82
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 4,
+      "debut": 19.82,
+      "fin": 19.94
+    },
+    {
+      "texte": "Paris,",
+      "mot": "Paris",
+      "scene": 4,
+      "debut": 19.94,
+      "fin": 20.2
+    },
+    {
+      "texte": "Lucas",
+      "mot": "Lucas",
+      "scene": 4,
+      "debut": 20.6,
+      "fin": 20.88
+    },
+    {
+      "texte": "Morel",
+      "mot": "Morel",
+      "scene": 4,
+      "debut": 20.88,
+      "fin": 21.14
+    },
+    {
+      "texte": "transforme",
+      "mot": "transforme",
+      "scene": 4,
+      "debut": 21.14,
+      "fin": 21.6
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 4,
+      "debut": 21.6,
+      "fin": 21.68
+    },
+    {
+      "texte": "saison",
+      "mot": "saison",
+      "scene": 4,
+      "debut": 21.68,
+      "fin": 21.92
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.92,
+      "fin": 22.02
+    },
+    {
+      "texte": "légende.",
+      "mot": "légende",
+      "scene": 4,
+      "debut": 22.02,
+      "fin": 22.34
+    },
+    {
+      "texte": "Ta",
+      "mot": "Ta",
+      "scene": 5,
+      "debut": 22.96,
+      "fin": 23.1
+    },
+    {
+      "texte": "carrière",
+      "mot": "carrière",
+      "scene": 5,
+      "debut": 23.1,
+      "fin": 23.38
+    },
+    {
+      "texte": "fera",
+      "mot": "fera",
+      "scene": 5,
+      "debut": 23.38,
+      "fin": 23.54
+    },
+    {
+      "texte": "quels",
+      "mot": "quels",
+      "scene": 5,
+      "debut": 23.54,
+      "fin": 23.74
+    },
+    {
+      "texte": "gros",
+      "mot": "gros",
+      "scene": 5,
+      "debut": 23.74,
+      "fin": 23.9
+    },
+    {
+      "texte": "titres ?",
+      "mot": "titres",
+      "scene": 5,
+      "debut": 23.9,
+      "fin": 24.6
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 24.6,
+      "fin": 24.88
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 24.88,
+      "fin": 25.12
+    },
+    {
+      "texte": "gratuit.",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 25.46,
+      "fin": 25.8
+    }
+  ]
+}

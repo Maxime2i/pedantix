@@ -1,0 +1,522 @@
+{
+  "duree": 22.82,
+  "dureeVoix": 21.02,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 4.36,
+      "fin": 4.8
+    },
+    {
+      "id": "oubli",
+      "debut": 4.8,
+      "finVoix": 7.3,
+      "fin": 7.82
+    },
+    {
+      "id": "solution",
+      "debut": 7.82,
+      "finVoix": 14.02,
+      "fin": 14.72
+    },
+    {
+      "id": "appel",
+      "debut": 14.72,
+      "finVoix": 21.02,
+      "fin": 22.82
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Pourquoi",
+      "mot": "Pourquoi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.62
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.66
+    },
+    {
+      "texte": "oublié",
+      "mot": "oublié",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 1.02
+    },
+    {
+      "texte": "presque",
+      "mot": "presque",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.22
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.68
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 0,
+      "debut": 1.68,
+      "fin": 1.78
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 1.88
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 1.96
+    },
+    {
+      "texte": "avais",
+      "mot": "avais",
+      "scene": 0,
+      "debut": 1.96,
+      "fin": 2.06
+    },
+    {
+      "texte": "appris",
+      "mot": "appris",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.3
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.42
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.54
+    },
+    {
+      "texte": "bac ?",
+      "mot": "bac",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.72
+    },
+    {
+      "texte": "Ce",
+      "mot": "Ce",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.72
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 0,
+      "debut": 3.72,
+      "fin": 3.86
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 3.86,
+      "fin": 3.96
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 0,
+      "debut": 3.96,
+      "fin": 4.12
+    },
+    {
+      "texte": "faute.",
+      "mot": "faute",
+      "scene": 0,
+      "debut": 4.12,
+      "fin": 4.36
+    },
+    {
+      "texte": "Parce",
+      "mot": "Parce",
+      "scene": 1,
+      "debut": 4.8,
+      "fin": 5.12
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.28
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 5.28,
+      "fin": 5.38
+    },
+    {
+      "texte": "cerveau",
+      "mot": "cerveau",
+      "scene": 1,
+      "debut": 5.38,
+      "fin": 5.92
+    },
+    {
+      "texte": "laisse",
+      "mot": "laisse",
+      "scene": 1,
+      "debut": 5.92,
+      "fin": 6.24
+    },
+    {
+      "texte": "filer",
+      "mot": "filer",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.6
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 1,
+      "debut": 6.6,
+      "fin": 6.68
+    },
+    {
+      "texte": "qu'il",
+      "mot": "qu'il",
+      "scene": 1,
+      "debut": 6.68,
+      "fin": 6.78
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 1,
+      "debut": 6.78,
+      "fin": 6.88
+    },
+    {
+      "texte": "revoit",
+      "mot": "revoit",
+      "scene": 1,
+      "debut": 6.88,
+      "fin": 7.16
+    },
+    {
+      "texte": "pas.",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 7.16,
+      "fin": 7.3
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 8.02
+    },
+    {
+      "texte": "solution :",
+      "mot": "solution",
+      "scene": 2,
+      "debut": 8.02,
+      "fin": 8.3
+    },
+    {
+      "texte": "revoir",
+      "mot": "revoir",
+      "scene": 2,
+      "debut": 8.94,
+      "fin": 9.18
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 2,
+      "debut": 9.18,
+      "fin": 9.42
+    },
+    {
+      "texte": "notion",
+      "mot": "notion",
+      "scene": 2,
+      "debut": 9.42,
+      "fin": 9.76
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 2,
+      "debut": 9.76,
+      "fin": 10.26
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 2,
+      "debut": 10.26,
+      "fin": 10.48
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.48,
+      "fin": 10.62
+    },
+    {
+      "texte": "l'oublier.",
+      "mot": "l'oublier",
+      "scene": 2,
+      "debut": 10.62,
+      "fin": 11.19
+    },
+    {
+      "texte": "Dix",
+      "mot": "Dix",
+      "scene": 2,
+      "debut": 11.19,
+      "fin": 11.76
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 11.9
+    },
+    {
+      "texte": "après,",
+      "mot": "après",
+      "scene": 2,
+      "debut": 11.9,
+      "fin": 12.18
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 2,
+      "debut": 12.66,
+      "fin": 12.82
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 12.82,
+      "fin": 12.92
+    },
+    {
+      "texte": "lendemain,",
+      "mot": "lendemain",
+      "scene": 2,
+      "debut": 12.92,
+      "fin": 13.24
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 2,
+      "debut": 13.56,
+      "fin": 13.66
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 13.66,
+      "fin": 13.8
+    },
+    {
+      "texte": "tard.",
+      "mot": "tard",
+      "scene": 2,
+      "debut": 13.8,
+      "fin": 14.02
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 14.72,
+      "fin": 15.02
+    },
+    {
+      "texte": "exactement",
+      "mot": "exactement",
+      "scene": 3,
+      "debut": 15.02,
+      "fin": 15.48
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 3,
+      "debut": 15.48,
+      "fin": 15.74
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 15.74,
+      "fin": 15.82
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 3,
+      "debut": 15.82,
+      "fin": 15.94
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 15.94,
+      "fin": 16.14
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 3,
+      "debut": 16.14,
+      "fin": 16.44
+    },
+    {
+      "texte": "carte",
+      "mot": "carte",
+      "scene": 3,
+      "debut": 16.94,
+      "fin": 17.12
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 3,
+      "debut": 17.12,
+      "fin": 17.26
+    },
+    {
+      "texte": "carte,",
+      "mot": "carte",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.6
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 3,
+      "debut": 17.82,
+      "fin": 18.02
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 18.02,
+      "fin": 18.22
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 18.22,
+      "fin": 18.34
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 18.34,
+      "fin": 18.48
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 18.48,
+      "fin": 18.62
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 18.62,
+      "fin": 18.76
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 3,
+      "debut": 18.76,
+      "fin": 19.1
+    },
+    {
+      "texte": "Gratuit",
+      "mot": "Gratuit",
+      "scene": 3,
+      "debut": 19.6,
+      "fin": 20.04
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 20.04,
+      "fin": 20.22
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 20.22,
+      "fin": 20.54
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 20.54,
+      "fin": 20.78
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 20.78,
+      "fin": 21.02
+    }
+  ]
+}

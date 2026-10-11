@@ -1,0 +1,125 @@
+{
+  "titre": "3 détails cachés",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 21
+  },
+  "objectif": "Découverte : petites fonctionnalités méconnues.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Route",
+    "texte": [
+      "Une route est au sens littéral une voie terrestre aménagée pour permettre la circulation de véhicules à roues. Ce terme s'applique plutôt aux voies importantes situées en rase campagne et ne peut être apparenté à une rue. Dans les pays vastes et peu peuplés, à la fin du XXe siècle, de nombreuses routes étaient encore des chemins empierrés ou damés."
+    ],
+    "titreMots": [
+      "route"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 12 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Trois détails de mon jeu que personne ne remarque.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Trois",
+          "titre": "3 détails cachés"
+        },
+        {
+          "type": "pose",
+          "ancre": "personne",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "d1",
+      "voix": "Un : touche une case, tu vois sa longueur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "touche",
+          "texte": "La case donne la longueur"
+        },
+        {
+          "type": "pose",
+          "ancre": "Un",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "voix": "Deux : le mot proche passe en orange juste après l'envoi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "proche",
+          "texte": "Le mot proche s'allume en orange"
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "voix": "Trois : ton résultat se partage en petits carrés, sans rien dévoiler.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Trois"
+        },
+        {
+          "type": "partage",
+          "ancre": "résultat",
+          "coups": 41
+        },
+        {
+          "type": "pose",
+          "ancre": "dévoiler.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Tu les connaissais ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Tu"
+        },
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

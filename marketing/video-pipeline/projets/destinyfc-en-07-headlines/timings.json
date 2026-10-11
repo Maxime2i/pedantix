@@ -1,0 +1,506 @@
+{
+  "duree": 28.14,
+  "dureeVoix": 26.34,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 2.7,
+      "fin": 3.36
+    },
+    {
+      "id": "flop",
+      "debut": 3.36,
+      "finVoix": 7.22,
+      "fin": 7.82
+    },
+    {
+      "id": "solid",
+      "debut": 7.82,
+      "finVoix": 12.46,
+      "fin": 13.02
+    },
+    {
+      "id": "wonder",
+      "debut": 13.02,
+      "finVoix": 16.48,
+      "fin": 16.96
+    },
+    {
+      "id": "trophy",
+      "debut": 16.96,
+      "finVoix": 21.62,
+      "fin": 22.78
+    },
+    {
+      "id": "cta",
+      "debut": 22.78,
+      "finVoix": 26.34,
+      "fin": 28.14
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Here's",
+      "mot": "Here's",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.56
+    },
+    {
+      "texte": "career…",
+      "mot": "career",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.86
+    },
+    {
+      "texte": "told",
+      "mot": "told",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.28
+    },
+    {
+      "texte": "only",
+      "mot": "only",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.86
+    },
+    {
+      "texte": "by",
+      "mot": "by",
+      "scene": 0,
+      "debut": 1.86,
+      "fin": 2.12
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.26
+    },
+    {
+      "texte": "newspapers.",
+      "mot": "newspapers",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.7
+    },
+    {
+      "texte": "Seventeen.",
+      "mot": "Seventeen",
+      "scene": 1,
+      "debut": 3.36,
+      "fin": 3.8
+    },
+    {
+      "texte": "Jack",
+      "mot": "Jack",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.6
+    },
+    {
+      "texte": "Turner",
+      "mot": "Turner",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.92
+    },
+    {
+      "texte": "stalls:",
+      "mot": "stalls",
+      "scene": 1,
+      "debut": 4.92,
+      "fin": 5.34
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 5.34,
+      "fin": 5.88
+    },
+    {
+      "texte": "season",
+      "mot": "season",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.22
+    },
+    {
+      "texte": "that",
+      "mot": "that",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.52
+    },
+    {
+      "texte": "will",
+      "mot": "will",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.66
+    },
+    {
+      "texte": "leave",
+      "mot": "leave",
+      "scene": 1,
+      "debut": 6.66,
+      "fin": 6.82
+    },
+    {
+      "texte": "its",
+      "mot": "its",
+      "scene": 1,
+      "debut": 6.82,
+      "fin": 6.98
+    },
+    {
+      "texte": "mark.",
+      "mot": "mark",
+      "scene": 1,
+      "debut": 6.98,
+      "fin": 7.22
+    },
+    {
+      "texte": "Twenty-one.",
+      "mot": "Twenty-one",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 8.28
+    },
+    {
+      "texte": "Consistent,",
+      "mot": "Consistent",
+      "scene": 2,
+      "debut": 8.96,
+      "fin": 9.32
+    },
+    {
+      "texte": "diligent,",
+      "mot": "diligent",
+      "scene": 2,
+      "debut": 9.62,
+      "fin": 9.9
+    },
+    {
+      "texte": "decisive:",
+      "mot": "decisive",
+      "scene": 2,
+      "debut": 10.26,
+      "fin": 10.6
+    },
+    {
+      "texte": "Jack",
+      "mot": "Jack",
+      "scene": 2,
+      "debut": 11.14,
+      "fin": 11.26
+    },
+    {
+      "texte": "Turner",
+      "mot": "Turner",
+      "scene": 2,
+      "debut": 11.26,
+      "fin": 11.56
+    },
+    {
+      "texte": "held",
+      "mot": "held",
+      "scene": 2,
+      "debut": 11.56,
+      "fin": 11.82
+    },
+    {
+      "texte": "his",
+      "mot": "his",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 11.96
+    },
+    {
+      "texte": "own",
+      "mot": "own",
+      "scene": 2,
+      "debut": 11.96,
+      "fin": 12.1
+    },
+    {
+      "texte": "all",
+      "mot": "all",
+      "scene": 2,
+      "debut": 12.1,
+      "fin": 12.26
+    },
+    {
+      "texte": "year.",
+      "mot": "year",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.46
+    },
+    {
+      "texte": "Twenty-four.",
+      "mot": "Twenty-four",
+      "scene": 3,
+      "debut": 13.02,
+      "fin": 13.42
+    },
+    {
+      "texte": "Jack",
+      "mot": "Jack",
+      "scene": 3,
+      "debut": 14.02,
+      "fin": 14.14
+    },
+    {
+      "texte": "Turner",
+      "mot": "Turner",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.44
+    },
+    {
+      "texte": "has",
+      "mot": "has",
+      "scene": 3,
+      "debut": 14.44,
+      "fin": 14.66
+    },
+    {
+      "texte": "gone",
+      "mot": "gone",
+      "scene": 3,
+      "debut": 14.66,
+      "fin": 14.84
+    },
+    {
+      "texte": "up",
+      "mot": "up",
+      "scene": 3,
+      "debut": 14.84,
+      "fin": 15.06
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 15.06,
+      "fin": 15.18
+    },
+    {
+      "texte": "level",
+      "mot": "level",
+      "scene": 3,
+      "debut": 15.18,
+      "fin": 15.44
+    },
+    {
+      "texte": "this",
+      "mot": "this",
+      "scene": 3,
+      "debut": 15.44,
+      "fin": 15.66
+    },
+    {
+      "texte": "year,",
+      "mot": "year",
+      "scene": 3,
+      "debut": 15.66,
+      "fin": 15.86
+    },
+    {
+      "texte": "full",
+      "mot": "full",
+      "scene": 3,
+      "debut": 16.06,
+      "fin": 16.2
+    },
+    {
+      "texte": "stop.",
+      "mot": "stop",
+      "scene": 3,
+      "debut": 16.2,
+      "fin": 16.48
+    },
+    {
+      "texte": "And",
+      "mot": "And",
+      "scene": 4,
+      "debut": 16.96,
+      "fin": 17.14
+    },
+    {
+      "texte": "at",
+      "mot": "at",
+      "scene": 4,
+      "debut": 17.14,
+      "fin": 17.24
+    },
+    {
+      "texte": "twenty-seven:",
+      "mot": "twenty-seven",
+      "scene": 4,
+      "debut": 17.24,
+      "fin": 17.76
+    },
+    {
+      "texte": "crowned",
+      "mot": "crowned",
+      "scene": 4,
+      "debut": 18.3,
+      "fin": 18.84
+    },
+    {
+      "texte": "with",
+      "mot": "with",
+      "scene": 4,
+      "debut": 18.84,
+      "fin": 18.96
+    },
+    {
+      "texte": "United,",
+      "mot": "United",
+      "scene": 4,
+      "debut": 18.96,
+      "fin": 19.3
+    },
+    {
+      "texte": "Jack",
+      "mot": "Jack",
+      "scene": 4,
+      "debut": 19.72,
+      "fin": 19.88
+    },
+    {
+      "texte": "Turner",
+      "mot": "Turner",
+      "scene": 4,
+      "debut": 19.88,
+      "fin": 20.24
+    },
+    {
+      "texte": "turns",
+      "mot": "turns",
+      "scene": 4,
+      "debut": 20.24,
+      "fin": 20.6
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 20.6,
+      "fin": 20.92
+    },
+    {
+      "texte": "season",
+      "mot": "season",
+      "scene": 4,
+      "debut": 20.92,
+      "fin": 21.18
+    },
+    {
+      "texte": "into",
+      "mot": "into",
+      "scene": 4,
+      "debut": 21.18,
+      "fin": 21.4
+    },
+    {
+      "texte": "legend.",
+      "mot": "legend",
+      "scene": 4,
+      "debut": 21.4,
+      "fin": 21.62
+    },
+    {
+      "texte": "What",
+      "mot": "What",
+      "scene": 5,
+      "debut": 22.78,
+      "fin": 23.1
+    },
+    {
+      "texte": "headlines",
+      "mot": "headlines",
+      "scene": 5,
+      "debut": 23.1,
+      "fin": 23.42
+    },
+    {
+      "texte": "will",
+      "mot": "will",
+      "scene": 5,
+      "debut": 23.42,
+      "fin": 23.7
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 5,
+      "debut": 23.7,
+      "fin": 23.84
+    },
+    {
+      "texte": "career",
+      "mot": "career",
+      "scene": 5,
+      "debut": 23.84,
+      "fin": 24.1
+    },
+    {
+      "texte": "make?",
+      "mot": "make",
+      "scene": 5,
+      "debut": 24.1,
+      "fin": 24.38
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 24.82,
+      "fin": 25.12
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 25.12,
+      "fin": 25.44
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 5,
+      "debut": 25.82,
+      "fin": 26.04
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 5,
+      "debut": 26.04,
+      "fin": 26.18
+    },
+    {
+      "texte": "play.",
+      "mot": "play",
+      "scene": 5,
+      "debut": 26.18,
+      "fin": 26.34
+    }
+  ]
+}

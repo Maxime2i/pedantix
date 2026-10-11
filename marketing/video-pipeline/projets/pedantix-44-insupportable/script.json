@@ -1,0 +1,111 @@
+{
+  "titre": "Je suis devenu insupportable",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Humour : le créateur devenu pédant.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Depuis que j'ai créé ce jeu, je suis devenu insupportable.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "insupportable.",
+          "nom": "decu"
+        }
+      ]
+    },
+    {
+      "id": "abricot",
+      "voix": "On parle d'abricots ? Je précise : Prunus armeniaca.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "précise",
+          "nom": "fier"
+        },
+        {
+          "type": "bulle",
+          "ancre": "précise",
+          "texte": "Prunus armeniaca 🤓",
+          "fin": "armeniaca."
+        }
+      ]
+    },
+    {
+      "id": "orl",
+      "voix": "Quelqu'un dit ORL ? Otorhinolaryngologie, merci.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Quelqu'un",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "Otorhinolaryngologie,",
+          "texte": "Otorhino-laryngologie.",
+          "fin": "merci."
+        },
+        {
+          "type": "pose",
+          "ancre": "merci.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "amis",
+      "voix": "Mes amis ne m'invitent plus. Mais je connais l'échidné.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Mes",
+          "nom": "decu"
+        },
+        {
+          "type": "pose",
+          "ancre": "Mais",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Toi aussi, deviens pédant.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Toi",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

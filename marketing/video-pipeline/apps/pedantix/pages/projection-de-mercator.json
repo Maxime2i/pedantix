@@ -1,0 +1,13 @@
+{
+  "titre": "Projection de Mercator",
+  "texte": [
+    "La projection de Mercator ou projection Mercator est une projection cartographique de la Terre, dite « cylindrique », tangente à l'équateur du globe terrestre sur une carte plane formalisée par le géographe flamand Gerardus Mercator, en 1569.",
+    "Elle s'est imposée comme le planisphère de référence dans le monde grâce à sa précision pour les voyages marins du fait de la conservation des angles qu'elle permet, essentielle pour prévoir les routes de navigation.",
+    "La projection de Mercator est une projection conforme, c’est-à-dire qu'elle conserve les angles."
+  ],
+  "titreMots": [
+    "projection",
+    "de",
+    "mercator"
+  ]
+}

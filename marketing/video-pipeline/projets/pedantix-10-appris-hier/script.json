@@ -1,0 +1,129 @@
+{
+  "titre": "Ce que j'ai appris hier",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Culture : une anecdote tirée d'une page passée.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Échidné",
+    "texte": [
+      "Les échidnés sont des mammifères appartenant à l'ordre des monotrèmes. Comme tous les monotrèmes, ils pondent des œufs, ce qui est un caractère ancestral perdu par les autres mammifères. Il ne reste plus actuellement que quatre espèces vivantes : l'échidné à nez court en Australie, et trois espèces de Nouvelle-Guinée, à long nez, qui sont en danger plus ou moins critique d'extinction."
+    ],
+    "titreMots": [
+      "échidné"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 29 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Hier, mon propre jeu m'a appris un truc.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "truc.",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "voix": "La page, c'était l'échidné.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "La",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "La",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "devoiler",
+          "ancre": "l'échidné."
+        }
+      ]
+    },
+    {
+      "id": "fait",
+      "voix": "Un mammifère… qui pond des œufs !",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Un",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "pond",
+          "nom": "choque"
+        },
+        {
+          "type": "tampon",
+          "ancre": "œufs",
+          "texte": "VRAI",
+          "couleur": "vert"
+        }
+      ]
+    },
+    {
+      "id": "explication",
+      "voix": "Comme l'ornithorynque, c'est un monotrème.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Comme",
+          "nom": "neutre"
+        },
+        {
+          "type": "titre",
+          "ancre": "Comme",
+          "texte": "Monotrème",
+          "sous": "un mammifère qui pond des œufs",
+          "fin": "monotrème."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Chaque midi, une page, et tu deviens un peu plus pédant.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "pédant.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

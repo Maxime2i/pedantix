@@ -1,0 +1,161 @@
+{
+  "titre": "Ad patres, ça veut dire quoi ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton intrigué au début, « Au revoir ? » hésitant, « Raté. » amusé. Petit effet comique sur « au cimetière ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Locution latine : ad patres, ça veut dire quoi ? Au revoir ? Raté.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Locution"
+        },
+        {
+          "type": "zoom",
+          "ancre": "ad",
+          "cible": "carte"
+        },
+        {
+          "type": "bulle",
+          "ancre": "revoir",
+          "texte": "Au revoir ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Raté"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Locution",
+          "gain": 0.4
+        },
+        {
+          "son": "tictac",
+          "ancre": "quoi",
+          "gain": 0.3
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Ça veut dire « auprès des ancêtres ». Envoyer quelqu'un ad patres, c'est… l'envoyer au cimetière.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "reveler",
+          "ancre": "Ça"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "effet",
+      "voix": "Le genre d'expression qui fait toujours son effet en soirée.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "effet",
+          "texte": "CLASSE",
+          "couleur": "or"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pack",
+      "voix": "Il y a tout un pack de locutions latines dans Culture First.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Il",
+          "nom": "catalogue",
+          "donnees": {
+            "resultats": [
+              {
+                "titre": "Locutions latines",
+                "theme": "Culture générale",
+                "sousTheme": "Langue française"
+              }
+            ]
+          }
+        },
+        {
+          "type": "saisir",
+          "ancre": "pack",
+          "texte": "latines",
+          "fin": "latines"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Locutions latines",
+      "theme": "Culture générale",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Que signifie cette locution latine ?",
+      "indiceType": "Locution",
+      "indice": "Ad patres",
+      "reponse": "Auprès des ancêtres",
+      "fiche": [
+        [
+          "Exemple",
+          "envoyer quelqu’un ad patres"
+        ],
+        [
+          "Sens",
+          "le tuer"
+        ]
+      ]
+    }
+  ]
+}

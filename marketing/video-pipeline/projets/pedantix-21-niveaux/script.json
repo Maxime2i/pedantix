@@ -1,0 +1,174 @@
+{
+  "titre": "Facile → impossible",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 23
+  },
+  "objectif": "Défi spectateur : trois pages, difficulté croissante.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Trois pages de mon jeu, de facile à impossible.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "pages",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "voix": "Niveau un : la capitale du Danemark.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Niveau",
+          "numero": "1",
+          "texte": "La capitale du Danemark",
+          "sous": "Niveau facile"
+        },
+        {
+          "type": "pose",
+          "ancre": "capitale",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "r1",
+      "voix": "Copenhague ! Facile.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Copenhague"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Copenhague",
+          "texte": "COPENHAGUE",
+          "couleur": "vert"
+        },
+        {
+          "type": "pose",
+          "ancre": "Copenhague",
+          "nom": "content"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "voix": "Niveau deux : un mammifère qui pond des œufs… et ce n'est pas l'ornithorynque.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Niveau",
+          "numero": "2",
+          "texte": "Un mammifère qui pond des œufs",
+          "sous": "(pas l'ornithorynque)"
+        },
+        {
+          "type": "pose",
+          "ancre": "œufs…",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "voix": "L'échidné !",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "L'échidné"
+        },
+        {
+          "type": "tampon",
+          "ancre": "L'échidné",
+          "texte": "ÉCHIDNÉ",
+          "couleur": "vert"
+        },
+        {
+          "type": "pose",
+          "ancre": "L'échidné",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "voix": "Niveau trois : la spécialité des médecins ORL, en un seul mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Niveau",
+          "numero": "3",
+          "texte": "La spécialité des ORL, en un mot",
+          "sous": "Niveau impossible"
+        },
+        {
+          "type": "pose",
+          "ancre": "ORL,",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "voix": "Otorhinolaryngologie. Vingt lettres.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Otorhinolaryngologie."
+        },
+        {
+          "type": "tampon",
+          "ancre": "Vingt",
+          "texte": "20 LETTRES",
+          "couleur": "or"
+        },
+        {
+          "type": "pose",
+          "ancre": "Otorhinolaryngologie.",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "T'es allé jusqu'où ? Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "T'es",
+          "nom": "clin"
+        },
+        {
+          "type": "fin",
+          "ancre": "Pédantix,"
+        }
+      ]
+    }
+  ]
+}

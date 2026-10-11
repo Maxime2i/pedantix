@@ -1,0 +1,299 @@
+{
+  "duree": 19.08,
+  "dureeVoix": 17.28,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.16,
+      "fin": 4.98
+    },
+    {
+      "id": "notifs",
+      "debut": 4.98,
+      "finVoix": 12.5,
+      "fin": 13.3
+    },
+    {
+      "id": "appel",
+      "debut": 13.3,
+      "finVoix": 17.28,
+      "fin": 19.08
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Samedi,",
+      "mot": "Samedi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.76
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.22
+    },
+    {
+      "texte": "bosses.",
+      "mot": "bosses",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.48
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.36
+    },
+    {
+      "texte": "pilote,",
+      "mot": "pilote",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.76
+    },
+    {
+      "texte": "lui,",
+      "mot": "lui",
+      "scene": 0,
+      "debut": 2.8,
+      "fin": 2.96
+    },
+    {
+      "texte": "prend",
+      "mot": "prend",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.38
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 3.38,
+      "fin": 3.46
+    },
+    {
+      "texte": "départ",
+      "mot": "départ",
+      "scene": 0,
+      "debut": 3.46,
+      "fin": 3.66
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 3.66,
+      "fin": 3.84
+    },
+    {
+      "texte": "rallye.",
+      "mot": "rallye",
+      "scene": 0,
+      "debut": 3.84,
+      "fin": 4.16
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 1,
+      "debut": 4.98,
+      "fin": 5.16
+    },
+    {
+      "texte": "téléphone",
+      "mot": "téléphone",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.5
+    },
+    {
+      "texte": "vibre :",
+      "mot": "vibre",
+      "scene": 1,
+      "debut": 5.5,
+      "fin": 5.98
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 6.38,
+      "fin": 6.62
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.82
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 1,
+      "debut": 7.76,
+      "fin": 7.9
+    },
+    {
+      "texte": "heure",
+      "mot": "heure",
+      "scene": 1,
+      "debut": 7.9,
+      "fin": 8.02
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 8.02,
+      "fin": 8.16
+    },
+    {
+      "texte": "tard :",
+      "mot": "tard",
+      "scene": 1,
+      "debut": 8.16,
+      "fin": 8.42
+    },
+    {
+      "texte": "Marchal",
+      "mot": "Marchal",
+      "scene": 1,
+      "debut": 8.88,
+      "fin": 9.28
+    },
+    {
+      "texte": "gagne",
+      "mot": "gagne",
+      "scene": 1,
+      "debut": 9.28,
+      "fin": 9.72
+    },
+    {
+      "texte": "l'ES",
+      "mot": "l'ES",
+      "scene": 1,
+      "debut": 9.72,
+      "fin": 9.98
+    },
+    {
+      "texte": "cinq.",
+      "mot": "cinq",
+      "scene": 1,
+      "debut": 9.98,
+      "fin": 10.46
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 1,
+      "debut": 11.12,
+      "fin": 11.38
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 11.38,
+      "fin": 11.48
+    },
+    {
+      "texte": "soir…",
+      "mot": "soir",
+      "scene": 1,
+      "debut": 11.48,
+      "fin": 11.7
+    },
+    {
+      "texte": "podium !",
+      "mot": "podium",
+      "scene": 1,
+      "debut": 12.24,
+      "fin": 12.5
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 2,
+      "debut": 13.3,
+      "fin": 13.48
+    },
+    {
+      "texte": "n'as",
+      "mot": "n'as",
+      "scene": 2,
+      "debut": 13.48,
+      "fin": 13.68
+    },
+    {
+      "texte": "rien",
+      "mot": "rien",
+      "scene": 2,
+      "debut": 13.68,
+      "fin": 13.96
+    },
+    {
+      "texte": "raté.",
+      "mot": "raté",
+      "scene": 2,
+      "debut": 13.96,
+      "fin": 14.3
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 2,
+      "debut": 15.0,
+      "fin": 15.26
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 2,
+      "debut": 15.26,
+      "fin": 15.52
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 2,
+      "debut": 15.52,
+      "fin": 16.02
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 2,
+      "debut": 16.02,
+      "fin": 16.52
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 2,
+      "debut": 16.52,
+      "fin": 16.8
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 16.8,
+      "fin": 17.02
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 2,
+      "debut": 17.02,
+      "fin": 17.28
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "duree": 21.68,
+  "dureeVoix": 19.88,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.62,
+      "fin": 5.08
+    },
+    {
+      "id": "chrono",
+      "debut": 5.08,
+      "finVoix": 13.74,
+      "fin": 14.4
+    },
+    {
+      "id": "chiffre",
+      "debut": 14.4,
+      "finVoix": 17.56,
+      "fin": 18.0
+    },
+    {
+      "id": "appel",
+      "debut": 18.0,
+      "finVoix": 19.88,
+      "fin": 21.68
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.24
+    },
+    {
+      "texte": "adores",
+      "mot": "adores",
+      "scene": 0,
+      "debut": 0.24,
+      "fin": 0.78
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 0.86
+    },
+    {
+      "texte": "quiz",
+      "mot": "quiz",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.12
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.28
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.34
+    },
+    {
+      "texte": "jeux",
+      "mot": "jeux",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.46
+    },
+    {
+      "texte": "télé ?",
+      "mot": "télé",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.64
+    },
+    {
+      "texte": "Alors",
+      "mot": "Alors",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.24
+    },
+    {
+      "texte": "voilà",
+      "mot": "voilà",
+      "scene": 0,
+      "debut": 2.24,
+      "fin": 2.58
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 2.58,
+      "fin": 2.86
+    },
+    {
+      "texte": "entraînement",
+      "mot": "entraînement",
+      "scene": 0,
+      "debut": 2.86,
+      "fin": 3.24
+    },
+    {
+      "texte": "quotidien,",
+      "mot": "quotidien",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 3.8,
+      "fin": 4.04
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 4.04,
+      "fin": 4.32
+    },
+    {
+      "texte": "minutes.",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 4.32,
+      "fin": 4.62
+    },
+    {
+      "texte": "Top",
+      "mot": "Top",
+      "scene": 1,
+      "debut": 5.08,
+      "fin": 5.46
+    },
+    {
+      "texte": "chrono !",
+      "mot": "chrono",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.88
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.44
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.66
+    },
+    {
+      "texte": "long",
+      "mot": "long",
+      "scene": 1,
+      "debut": 6.66,
+      "fin": 6.74
+    },
+    {
+      "texte": "fleuve",
+      "mot": "fleuve",
+      "scene": 1,
+      "debut": 6.74,
+      "fin": 6.94
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.94,
+      "fin": 7.04
+    },
+    {
+      "texte": "France ?",
+      "mot": "France",
+      "scene": 1,
+      "debut": 7.04,
+      "fin": 7.3
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 7.92,
+      "fin": 8.16
+    },
+    {
+      "texte": "Loire.",
+      "mot": "Loire",
+      "scene": 1,
+      "debut": 8.16,
+      "fin": 8.48
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 8.94,
+      "fin": 9.16
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 1,
+      "debut": 9.16,
+      "fin": 9.54
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 9.54,
+      "fin": 9.64
+    },
+    {
+      "texte": "Canada ?",
+      "mot": "Canada",
+      "scene": 1,
+      "debut": 9.64,
+      "fin": 9.86
+    },
+    {
+      "texte": "Ottawa.",
+      "mot": "Ottawa",
+      "scene": 1,
+      "debut": 10.48,
+      "fin": 10.82
+    },
+    {
+      "texte": "L'auteur",
+      "mot": "L'auteur",
+      "scene": 1,
+      "debut": 11.5,
+      "fin": 11.9
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 11.9,
+      "fin": 12.06
+    },
+    {
+      "texte": "Misérables ?",
+      "mot": "Misérables",
+      "scene": 1,
+      "debut": 12.06,
+      "fin": 12.54
+    },
+    {
+      "texte": "Victor",
+      "mot": "Victor",
+      "scene": 1,
+      "debut": 13.04,
+      "fin": 13.42
+    },
+    {
+      "texte": "Hugo.",
+      "mot": "Hugo",
+      "scene": 1,
+      "debut": 13.42,
+      "fin": 13.74
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 2,
+      "debut": 14.4,
+      "fin": 14.56
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 14.56,
+      "fin": 14.78
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 14.78,
+      "fin": 14.953
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 14.953,
+      "fin": 15.127
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 15.127,
+      "fin": 15.3
+    },
+    {
+      "texte": "questions",
+      "mot": "questions",
+      "scene": 2,
+      "debut": 15.3,
+      "fin": 15.6
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 2,
+      "debut": 15.6,
+      "fin": 15.82
+    },
+    {
+      "texte": "t'entraîner",
+      "mot": "t'entraîner",
+      "scene": 2,
+      "debut": 15.82,
+      "fin": 16.26
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 16.26,
+      "fin": 16.48
+    },
+    {
+      "texte": "devenir",
+      "mot": "devenir",
+      "scene": 2,
+      "debut": 16.48,
+      "fin": 16.8
+    },
+    {
+      "texte": "imbattable.",
+      "mot": "imbattable",
+      "scene": 2,
+      "debut": 16.8,
+      "fin": 17.56
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 18.0,
+      "fin": 18.22
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 3,
+      "debut": 18.22,
+      "fin": 18.58
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 18.58,
+      "fin": 19.0
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 19.0,
+      "fin": 19.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 19.32,
+      "fin": 19.5
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 19.5,
+      "fin": 19.66
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 19.66,
+      "fin": 19.88
+    }
+  ]
+}

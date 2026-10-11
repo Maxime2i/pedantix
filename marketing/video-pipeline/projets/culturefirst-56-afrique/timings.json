@@ -1,0 +1,477 @@
+{
+  "duree": 32.1,
+  "dureeVoix": 30.3,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.56,
+      "fin": 5.56
+    },
+    {
+      "id": "a1",
+      "debut": 5.56,
+      "finVoix": 8.14,
+      "fin": 9.06
+    },
+    {
+      "id": "a2",
+      "debut": 9.06,
+      "finVoix": 12.38,
+      "fin": 12.94
+    },
+    {
+      "id": "a3",
+      "debut": 12.94,
+      "finVoix": 15.72,
+      "fin": 16.56
+    },
+    {
+      "id": "a4",
+      "debut": 16.56,
+      "finVoix": 20.1,
+      "fin": 20.1
+    },
+    {
+      "id": "a5",
+      "debut": 20.1,
+      "finVoix": 24.71,
+      "fin": 24.71
+    },
+    {
+      "id": "appel",
+      "debut": 24.71,
+      "finVoix": 30.3,
+      "fin": 32.1
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.58
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 0,
+      "debut": 0.58,
+      "fin": 0.78
+    },
+    {
+      "texte": "d'Afrique,",
+      "mot": "d'Afrique",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 1.3
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.82
+    },
+    {
+      "texte": "capitales",
+      "mot": "capitales",
+      "scene": 0,
+      "debut": 1.82,
+      "fin": 2.42
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.52
+    },
+    {
+      "texte": "peu",
+      "mot": "peu",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 2.82
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 3.02
+    },
+    {
+      "texte": "gens",
+      "mot": "gens",
+      "scene": 0,
+      "debut": 3.02,
+      "fin": 3.14
+    },
+    {
+      "texte": "connaissent.",
+      "mot": "connaissent",
+      "scene": 0,
+      "debut": 3.14,
+      "fin": 3.66
+    },
+    {
+      "texte": "On",
+      "mot": "On",
+      "scene": 0,
+      "debut": 4.02,
+      "fin": 4.38
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 0,
+      "debut": 4.38,
+      "fin": 4.46
+    },
+    {
+      "texte": "va ?",
+      "mot": "va",
+      "scene": 0,
+      "debut": 4.46,
+      "fin": 4.56
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.68
+    },
+    {
+      "texte": "Nigeria ?",
+      "mot": "Nigeria",
+      "scene": 1,
+      "debut": 5.68,
+      "fin": 5.98
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 1,
+      "debut": 6.68,
+      "fin": 6.86
+    },
+    {
+      "texte": "Lagos :",
+      "mot": "Lagos",
+      "scene": 1,
+      "debut": 6.86,
+      "fin": 7.5
+    },
+    {
+      "texte": "Abuja.",
+      "mot": "Abuja",
+      "scene": 1,
+      "debut": 7.5,
+      "fin": 8.14
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 2,
+      "debut": 9.06,
+      "fin": 9.2
+    },
+    {
+      "texte": "Côte",
+      "mot": "Côte",
+      "scene": 2,
+      "debut": 9.2,
+      "fin": 9.4
+    },
+    {
+      "texte": "d'Ivoire ?",
+      "mot": "d'Ivoire",
+      "scene": 2,
+      "debut": 9.4,
+      "fin": 10.22
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 2,
+      "debut": 10.22,
+      "fin": 10.48
+    },
+    {
+      "texte": "Abidjan :",
+      "mot": "Abidjan",
+      "scene": 2,
+      "debut": 10.48,
+      "fin": 10.88
+    },
+    {
+      "texte": "Yamoussoukro.",
+      "mot": "Yamoussoukro",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 12.38
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 12.94,
+      "fin": 13.1
+    },
+    {
+      "texte": "Tanzanie ?",
+      "mot": "Tanzanie",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.58
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 3,
+      "debut": 14.16,
+      "fin": 14.32
+    },
+    {
+      "texte": "Dar",
+      "mot": "Dar",
+      "scene": 3,
+      "debut": 14.32,
+      "fin": 14.64
+    },
+    {
+      "texte": "es",
+      "mot": "es",
+      "scene": 3,
+      "debut": 14.64,
+      "fin": 14.96
+    },
+    {
+      "texte": "Salaam :",
+      "mot": "Salaam",
+      "scene": 3,
+      "debut": 14.96,
+      "fin": 15.28
+    },
+    {
+      "texte": "Dodoma.",
+      "mot": "Dodoma",
+      "scene": 3,
+      "debut": 15.28,
+      "fin": 15.72
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 16.56,
+      "fin": 16.8
+    },
+    {
+      "texte": "Bénin ?",
+      "mot": "Bénin",
+      "scene": 4,
+      "debut": 16.8,
+      "fin": 17.08
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 4,
+      "debut": 17.56,
+      "fin": 17.8
+    },
+    {
+      "texte": "Cotonou :",
+      "mot": "Cotonou",
+      "scene": 4,
+      "debut": 17.8,
+      "fin": 18.95
+    },
+    {
+      "texte": "Porto-Novo.",
+      "mot": "Porto-Novo",
+      "scene": 4,
+      "debut": 18.95,
+      "fin": 20.1
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 20.1,
+      "fin": 20.3
+    },
+    {
+      "texte": "l'Afrique",
+      "mot": "l'Afrique",
+      "scene": 5,
+      "debut": 20.3,
+      "fin": 20.52
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 5,
+      "debut": 20.52,
+      "fin": 20.68
+    },
+    {
+      "texte": "Sud ?",
+      "mot": "Sud",
+      "scene": 5,
+      "debut": 20.68,
+      "fin": 20.82
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 5,
+      "debut": 20.82,
+      "fin": 21.48
+    },
+    {
+      "texte": "capitales :",
+      "mot": "capitales",
+      "scene": 5,
+      "debut": 21.48,
+      "fin": 22.16
+    },
+    {
+      "texte": "Pretoria,",
+      "mot": "Pretoria",
+      "scene": 5,
+      "debut": 22.32,
+      "fin": 22.74
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 5,
+      "debut": 23.14,
+      "fin": 23.24
+    },
+    {
+      "texte": "Cap",
+      "mot": "Cap",
+      "scene": 5,
+      "debut": 23.24,
+      "fin": 23.4
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 23.4,
+      "fin": 23.82
+    },
+    {
+      "texte": "Bloemfontein.",
+      "mot": "Bloemfontein",
+      "scene": 5,
+      "debut": 23.82,
+      "fin": 24.71
+    },
+    {
+      "texte": "L'Afrique",
+      "mot": "L'Afrique",
+      "scene": 6,
+      "debut": 24.71,
+      "fin": 25.6
+    },
+    {
+      "texte": "compte",
+      "mot": "compte",
+      "scene": 6,
+      "debut": 25.6,
+      "fin": 25.88
+    },
+    {
+      "texte": "cinquante-quatre",
+      "mot": "cinquante-quatre",
+      "scene": 6,
+      "debut": 25.88,
+      "fin": 26.24
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 6,
+      "debut": 26.24,
+      "fin": 26.7
+    },
+    {
+      "texte": "Révise-les",
+      "mot": "Révise-les",
+      "scene": 6,
+      "debut": 27.04,
+      "fin": 27.6
+    },
+    {
+      "texte": "tous",
+      "mot": "tous",
+      "scene": 6,
+      "debut": 27.6,
+      "fin": 27.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 27.78,
+      "fin": 28.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 28.02,
+      "fin": 28.26
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 28.26,
+      "fin": 28.58
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 28.58,
+      "fin": 29.28
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 29.28,
+      "fin": 29.42
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 29.42,
+      "fin": 29.7
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 29.7,
+      "fin": 30.02
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 30.02,
+      "fin": 30.3
+    }
+  ]
+}

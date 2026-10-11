@@ -1,0 +1,458 @@
+{
+  "duree": 28.48,
+  "dureeVoix": 26.68,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.4,
+      "fin": 5.46
+    },
+    {
+      "id": "q1",
+      "debut": 5.46,
+      "finVoix": 9.455,
+      "fin": 9.455
+    },
+    {
+      "id": "q2",
+      "debut": 9.455,
+      "finVoix": 13.6,
+      "fin": 14.24
+    },
+    {
+      "id": "q3",
+      "debut": 14.24,
+      "finVoix": 19.58,
+      "fin": 20.26
+    },
+    {
+      "id": "appel",
+      "debut": 20.26,
+      "finVoix": 26.68,
+      "fin": 28.48
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Jeudi",
+      "mot": "Jeudi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.62
+    },
+    {
+      "texte": "sciences !",
+      "mot": "sciences",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 1.02
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 1.52,
+      "fin": 1.7
+    },
+    {
+      "texte": "questions :",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 2.06
+    },
+    {
+      "texte": "essaie",
+      "mot": "essaie",
+      "scene": 0,
+      "debut": 2.48,
+      "fin": 2.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 2.8
+    },
+    {
+      "texte": "répondre",
+      "mot": "répondre",
+      "scene": 0,
+      "debut": 2.8,
+      "fin": 2.98
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.18
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 3.18,
+      "fin": 3.4
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 4.02,
+      "fin": 4.16
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 4.16,
+      "fin": 4.4
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.64
+    },
+    {
+      "texte": "combien",
+      "mot": "combien",
+      "scene": 1,
+      "debut": 6.3,
+      "fin": 6.48
+    },
+    {
+      "texte": "d'os",
+      "mot": "d'os",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.7
+    },
+    {
+      "texte": "chez",
+      "mot": "chez",
+      "scene": 1,
+      "debut": 6.7,
+      "fin": 6.86
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 6.86,
+      "fin": 7.02
+    },
+    {
+      "texte": "adulte ?",
+      "mot": "adulte",
+      "scene": 1,
+      "debut": 7.02,
+      "fin": 7.46
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 1,
+      "debut": 7.46,
+      "fin": 8.125
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 8.125,
+      "fin": 8.79
+    },
+    {
+      "texte": "six.",
+      "mot": "six",
+      "scene": 1,
+      "debut": 8.79,
+      "fin": 9.455
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 9.455,
+      "fin": 10.12
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 10.74,
+      "fin": 10.82
+    },
+    {
+      "texte": "planète",
+      "mot": "planète",
+      "scene": 2,
+      "debut": 10.82,
+      "fin": 11.18
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 11.18,
+      "fin": 11.32
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 11.32,
+      "fin": 11.46
+    },
+    {
+      "texte": "proche",
+      "mot": "proche",
+      "scene": 2,
+      "debut": 11.46,
+      "fin": 11.76
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 11.86
+    },
+    {
+      "texte": "Soleil ?",
+      "mot": "Soleil",
+      "scene": 2,
+      "debut": 11.86,
+      "fin": 12.26
+    },
+    {
+      "texte": "Mercure.",
+      "mot": "Mercure",
+      "scene": 2,
+      "debut": 13.16,
+      "fin": 13.6
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 14.24,
+      "fin": 14.76
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 15.44
+    },
+    {
+      "texte": "gaz",
+      "mot": "gaz",
+      "scene": 3,
+      "debut": 15.44,
+      "fin": 15.68
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 15.68,
+      "fin": 15.84
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 15.84,
+      "fin": 15.94
+    },
+    {
+      "texte": "plantes",
+      "mot": "plantes",
+      "scene": 3,
+      "debut": 15.94,
+      "fin": 16.2
+    },
+    {
+      "texte": "absorbent",
+      "mot": "absorbent",
+      "scene": 3,
+      "debut": 16.2,
+      "fin": 16.54
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 3,
+      "debut": 16.54,
+      "fin": 16.66
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 16.66,
+      "fin": 16.76
+    },
+    {
+      "texte": "photosynthèse ?",
+      "mot": "photosynthèse",
+      "scene": 3,
+      "debut": 16.76,
+      "fin": 17.4
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 18.34,
+      "fin": 18.46
+    },
+    {
+      "texte": "dioxyde",
+      "mot": "dioxyde",
+      "scene": 3,
+      "debut": 18.46,
+      "fin": 19.04
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 19.04,
+      "fin": 19.12
+    },
+    {
+      "texte": "carbone.",
+      "mot": "carbone",
+      "scene": 3,
+      "debut": 19.12,
+      "fin": 19.58
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.68
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.68,
+      "fin": 20.82
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 20.82,
+      "fin": 21.02
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 21.02,
+      "fin": 21.82
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.82,
+      "fin": 21.94
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 21.94,
+      "fin": 22.38
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.78,
+      "fin": 22.9
+    },
+    {
+      "texte": "rendez-vous",
+      "mot": "rendez-vous",
+      "scene": 4,
+      "debut": 22.9,
+      "fin": 23.26
+    },
+    {
+      "texte": "jeudi",
+      "mot": "jeudi",
+      "scene": 4,
+      "debut": 23.26,
+      "fin": 23.48
+    },
+    {
+      "texte": "prochain.",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 23.48,
+      "fin": 23.78
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 24.52,
+      "fin": 24.86
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 24.86,
+      "fin": 25.2
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 25.38,
+      "fin": 25.68
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 25.68,
+      "fin": 25.96
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 25.96,
+      "fin": 26.3
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 26.3,
+      "fin": 26.46
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 26.46,
+      "fin": 26.68
+    }
+  ]
+}

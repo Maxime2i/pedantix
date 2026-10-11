@@ -1,0 +1,194 @@
+{
+  "titre": "3 questions d'histoire",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de défi au début. Annonce chaque numéro clairement, petite pause avant chaque réponse, réponses dites avec assurance. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "defi",
+      "voix": "Seuls ceux qui écoutaient en cours d'histoire trouvent les trois. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Seuls",
+          "texte": "3 questions<br>d’histoire",
+          "sous": "Seuls ceux qui écoutaient en cours trouvent les 3"
+        },
+        {
+          "type": "masquer",
+          "ancre": "C'est"
+        },
+        {
+          "type": "entree",
+          "ancre": "C'est"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Seuls",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "un",
+      "voix": "Un : la prise de la Bastille ? Mille sept cent quatre-vingt-neuf.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "deux",
+      "voix": "Deux : combien d'années a régné Louis XIV ? Soixante-douze ans, un record.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Soixante-douze"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "trois",
+      "voix": "Trois : le sacre de Napoléon ? Mille huit cent quatre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Mille"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Trois sur trois ? Dis-le en commentaire. Et pour tout retenir : Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Et"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Et",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grandes dates de l'histoire de France",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Prise de la Bastille",
+      "reponse": "1789",
+      "fiche": [
+        [
+          "Date",
+          "14 juillet 1789"
+        ]
+      ]
+    },
+    {
+      "paquet": "Rois de France",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Combien d'années a duré ce règne ?",
+      "indiceType": "Roi",
+      "indice": "Louis XIV",
+      "reponse": "72 ans",
+      "fiche": [
+        [
+          "Début",
+          "1643"
+        ],
+        [
+          "Fin",
+          "1715"
+        ]
+      ]
+    },
+    {
+      "paquet": "Grandes dates de l'histoire de France",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "En quelle année a eu lieu cet événement ?",
+      "indiceType": "Événement",
+      "indice": "Sacre de Napoléon",
+      "reponse": "1804",
+      "fiche": [
+        [
+          "Date",
+          "2 décembre 1804"
+        ],
+        [
+          "Lieu",
+          "Notre-Dame de Paris"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "titre": "Pourquoi j'ai ajouté le mode sombre",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Coulisses : histoire d'une fonctionnalité.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Astéroïde",
+    "texte": [
+      "Un astéroïde est une planète mineure composée de roches, de métaux et de glaces, et dont les dimensions varient de l'ordre du mètre à plusieurs centaines de kilomètres. L'appellation « d'apparence stellaire » vient de l'aspect ponctuel des astéroïdes au télescope, différent du disque résolu des planètes, lors des premières observations astronomiques.",
+      "En 1801, le premier astéroïde découvert est nommé Cérès. C'est le plus gros astéroïde de la ceinture principale, groupe d'astéroïdes le plus important en nombre d'objets connus, situé entre les orbites de Mars et de Jupiter."
+    ],
+    "titreMots": [
+      "astéroïde"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 26 août"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Pourquoi j'ai ajouté le mode sombre ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Pourquoi",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "minuit",
+      "voix": "Parce que je jouais à minuit, et l'écran me brûlait les yeux.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "brûlait",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "reglages",
+      "voix": "Réglages, Sombre… et voilà.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Réglages,",
+          "mode": "duo"
+        },
+        {
+          "type": "ecran",
+          "ancre": "Réglages,",
+          "nom": "reglages"
+        },
+        {
+          "type": "pose",
+          "ancre": "Réglages,",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "reglage",
+          "ancre": "Sombre…",
+          "mode": "Sombre"
+        },
+        {
+          "type": "ecran",
+          "ancre": "voilà.",
+          "nom": "jeu"
+        }
+      ]
+    },
+    {
+      "id": "minuit2",
+      "voix": "Ton jeu de midi devient aussi ton jeu de minuit. Et tes yeux te remercient.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "minuit.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

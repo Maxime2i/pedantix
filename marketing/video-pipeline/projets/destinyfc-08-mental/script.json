@@ -1,0 +1,210 @@
+{
+  "titre": "Le mental compte autant que les pieds",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements, mettre en avant le système mental (Confiance / Pression), différenciant. Événements réels ev_pressure_choke_risk (déclenché si Pression ≥ 62) et ev_in_the_zone (Confiance ≥ 72 et Pression ≤ 35) : les jauges affichées respectent ces conditions. Effets réels : +4 Confiance, −12 Pression (« -12 Pression » affiché en rouge par la règle de signe de l'app).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton explicatif mais vivant, comme un coach. Tension sur « tes mains tremblent », soulagement sur « le calme revient », enthousiasme sur « tu entres dans la zone »."
+  },
+  "ecranInitial": "partie",
+  "dispositionInitiale": "duo",
+  "cartes": {
+    "choke": {
+      "genre": "evenement",
+      "tag": "😰 VESTIAIRE · 25 ANS",
+      "texte": "La pression est à son comble avant l'échéance. Vos mains tremblent légèrement à l'échauffement — le corps parle.",
+      "options": [
+        {
+          "texte": "Vous appuyer sur la routine et la respiration"
+        },
+        {
+          "texte": "Foncer tête baissée pour ne pas réfléchir"
+        }
+      ]
+    },
+    "calme": {
+      "genre": "resultat",
+      "tag": "😰 VESTIAIRE",
+      "ton": "great",
+      "texte": "Le rituel vous ancre : le calme revient juste à temps.",
+      "effets": [
+        "+4 Confiance",
+        "-12 Pression"
+      ]
+    },
+    "zone": {
+      "genre": "evenement",
+      "tag": "🔥 TERRAIN · 25 ANS",
+      "texte": "Tout vous réussit en ce moment. Le ballon colle au pied, le temps ralentit — vous êtes dans la zone.",
+      "options": [
+        {
+          "texte": "Tenter les gestes que vous n'osiez pas"
+        },
+        {
+          "texte": "Rester simple pour faire durer l'état de grâce"
+        }
+      ]
+    }
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 25,
+        "annee": 2035,
+        "poste": "milieu",
+        "note": 79,
+        "argent": "14 M€",
+        "etoiles": 4,
+        "jauges": {
+          "forme": 76,
+          "moral": 68,
+          "confiance": 55,
+          "pression": 48
+        },
+        "niveau": "elite",
+        "club": "Paris",
+        "couleurs": [
+          "#e52a1e",
+          "#1a4fb5"
+        ]
+      },
+      "carte": null
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Dans mon jeu de foot, ton mental compte autant que tes pieds.",
+      "animation": "Avatar en duo avec l'écran de jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "mental",
+          "nom": "montre-droite"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "jauges",
+      "voix": "Regarde ces jauges : confiance et pression.",
+      "animation": "Zoom sur les jauges.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Regarde",
+          "mode": "telephone"
+        },
+        {
+          "type": "zoom",
+          "ancre": "jauges",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pression",
+      "voix": "Si la pression monte trop, tes mains tremblent avant le match.",
+      "animation": "Jauge Pression au rouge, événement réel.",
+      "image": null,
+      "actions": [
+        {
+          "type": "jauges",
+          "ancre": "pression",
+          "pression": 70,
+          "confiance": 44
+        },
+        {
+          "type": "zoom",
+          "ancre": "mains",
+          "cible": "p-carte",
+          "echelle": 1.2,
+          "hauteur": 960
+        },
+        {
+          "type": "carte",
+          "ancre": "mains",
+          "id": "choke"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "routine",
+      "voix": "Je m'appuie sur ma routine… et le calme revient.",
+      "animation": "Option routine, résultat réel.",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "routine",
+          "n": 1
+        },
+        {
+          "type": "carte",
+          "ancre": "calme",
+          "id": "calme"
+        },
+        {
+          "type": "jauges",
+          "ancre": "revient",
+          "pression": 58,
+          "confiance": 48
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "zone",
+      "voix": "Et quand la confiance est au top, tu entres dans la zone.",
+      "animation": "Jauges au vert, événement « dans la zone ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "jauges",
+          "ancre": "confiance",
+          "confiance": 78,
+          "pression": 30
+        },
+        {
+          "type": "carte",
+          "ancre": "zone",
+          "id": "zone"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Le mental, ça se travaille. Destiny FC, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

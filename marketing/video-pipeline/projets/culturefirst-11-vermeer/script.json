@@ -1,0 +1,152 @@
+{
+  "titre": "Qui a peint La Jeune Fille à la perle ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de défi rapide au début, « Vermeer ! » enthousiaste. Complice ensuite, énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "defi",
+      "voix": "Tu as trois secondes : qui a peint La Jeune Fille à la perle ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Tu"
+        },
+        {
+          "type": "chrono",
+          "ancre": "trois",
+          "secondes": 3
+        },
+        {
+          "type": "zoom",
+          "ancre": "peint",
+          "cible": "carte"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tu",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "Vermeer ! Johannes Vermeer, peintre hollandais du siècle d'or, vers mille six cent soixante-cinq.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "reveler",
+          "ancre": "Vermeer"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pack",
+      "voix": "Si tu l'as trouvé, bravo. Sinon, ajoute un pack de peinture, et révise-le cinq minutes par jour.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Sinon",
+          "nom": "catalogue",
+          "donnees": {
+            "resultats": [
+              {
+                "titre": "Tableaux célèbres",
+                "theme": "Culture classique",
+                "sousTheme": "Peinture"
+              },
+              {
+                "titre": "Grands peintres",
+                "theme": "Culture classique",
+                "sousTheme": "Peinture"
+              }
+            ]
+          }
+        },
+        {
+          "type": "saisir",
+          "ancre": "ajoute",
+          "texte": "peinture",
+          "fin": "peinture"
+        },
+        {
+          "type": "appui",
+          "ancre": "pack",
+          "cible": "c-res-0"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Plus de deux cent mille questions, de la peinture au sport. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "Plus",
+          "valeur": 200000,
+          "prefixe": "+ de ",
+          "sous": "questions de culture G"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Grands peintres",
+      "theme": "Culture classique",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Qui a peint ce tableau ?",
+      "indiceType": "Tableau",
+      "indice": "La Jeune Fille à la perle",
+      "reponse": "Johannes Vermeer",
+      "fiche": [
+        [
+          "Date",
+          "vers 1665"
+        ],
+        [
+          "Musée",
+          "Mauritshuis, La Haye"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

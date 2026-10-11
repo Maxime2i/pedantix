@@ -1,0 +1,407 @@
+{
+  "duree": 31.06,
+  "dureeVoix": 29.26,
+  "scenes": [
+    {
+      "id": "defi",
+      "debut": 0.0,
+      "finVoix": 3.4,
+      "fin": 4.5
+    },
+    {
+      "id": "n1",
+      "debut": 4.5,
+      "finVoix": 6.98,
+      "fin": 7.58
+    },
+    {
+      "id": "n2",
+      "debut": 7.58,
+      "finVoix": 10.98,
+      "fin": 11.56
+    },
+    {
+      "id": "n3",
+      "debut": 11.56,
+      "finVoix": 14.5,
+      "fin": 15.22
+    },
+    {
+      "id": "n4",
+      "debut": 15.22,
+      "finVoix": 18.38,
+      "fin": 19.1
+    },
+    {
+      "id": "n5",
+      "debut": 19.1,
+      "finVoix": 23.22,
+      "fin": 24.02
+    },
+    {
+      "id": "appel",
+      "debut": 24.02,
+      "finVoix": 29.26,
+      "fin": 31.06
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Capitales,",
+      "mot": "Capitales",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.86
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 0.86,
+      "fin": 1.12
+    },
+    {
+      "texte": "niveau",
+      "mot": "niveau",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.32
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.64
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.86
+    },
+    {
+      "texte": "niveau",
+      "mot": "niveau",
+      "scene": 0,
+      "debut": 1.86,
+      "fin": 2.02
+    },
+    {
+      "texte": "cinq.",
+      "mot": "cinq",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.57
+    },
+    {
+      "texte": "Jusqu'où",
+      "mot": "Jusqu'où",
+      "scene": 0,
+      "debut": 2.57,
+      "fin": 3.12
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 3.12,
+      "fin": 3.24
+    },
+    {
+      "texte": "vas ?",
+      "mot": "vas",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.4
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 1,
+      "debut": 4.5,
+      "fin": 4.74
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.18
+    },
+    {
+      "texte": "l'Italie ?",
+      "mot": "l'Italie",
+      "scene": 1,
+      "debut": 5.18,
+      "fin": 5.62
+    },
+    {
+      "texte": "Rome.",
+      "mot": "Rome",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.98
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 8.02
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 2,
+      "debut": 8.02,
+      "fin": 8.22
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.72,
+      "fin": 8.84
+    },
+    {
+      "texte": "Portugal ?",
+      "mot": "Portugal",
+      "scene": 2,
+      "debut": 8.84,
+      "fin": 9.1
+    },
+    {
+      "texte": "Lisbonne.",
+      "mot": "Lisbonne",
+      "scene": 2,
+      "debut": 10.36,
+      "fin": 10.98
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 3,
+      "debut": 11.56,
+      "fin": 11.92
+    },
+    {
+      "texte": "trois :",
+      "mot": "trois",
+      "scene": 3,
+      "debut": 11.92,
+      "fin": 12.18
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 12.64,
+      "fin": 12.74
+    },
+    {
+      "texte": "Hongrie ?",
+      "mot": "Hongrie",
+      "scene": 3,
+      "debut": 12.74,
+      "fin": 13.04
+    },
+    {
+      "texte": "Budapest.",
+      "mot": "Budapest",
+      "scene": 3,
+      "debut": 13.88,
+      "fin": 14.5
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 4,
+      "debut": 15.22,
+      "fin": 15.58
+    },
+    {
+      "texte": "quatre :",
+      "mot": "quatre",
+      "scene": 4,
+      "debut": 15.58,
+      "fin": 15.84
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.46
+    },
+    {
+      "texte": "Kazakhstan ?",
+      "mot": "Kazakhstan",
+      "scene": 4,
+      "debut": 16.46,
+      "fin": 16.68
+    },
+    {
+      "texte": "Astana.",
+      "mot": "Astana",
+      "scene": 4,
+      "debut": 17.76,
+      "fin": 18.38
+    },
+    {
+      "texte": "Niveau",
+      "mot": "Niveau",
+      "scene": 5,
+      "debut": 19.1,
+      "fin": 19.54
+    },
+    {
+      "texte": "cinq :",
+      "mot": "cinq",
+      "scene": 5,
+      "debut": 19.54,
+      "fin": 19.86
+    },
+    {
+      "texte": "Nauru ?",
+      "mot": "Nauru",
+      "scene": 5,
+      "debut": 20.36,
+      "fin": 20.72
+    },
+    {
+      "texte": "Yaren,",
+      "mot": "Yaren",
+      "scene": 5,
+      "debut": 21.6,
+      "fin": 22.0
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 22.38,
+      "fin": 22.6
+    },
+    {
+      "texte": "siège",
+      "mot": "siège",
+      "scene": 5,
+      "debut": 22.6,
+      "fin": 22.82
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 5,
+      "debut": 22.82,
+      "fin": 22.9
+    },
+    {
+      "texte": "gouvernement.",
+      "mot": "gouvernement",
+      "scene": 5,
+      "debut": 22.9,
+      "fin": 23.22
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 6,
+      "debut": 24.02,
+      "fin": 24.24
+    },
+    {
+      "texte": "t'es",
+      "mot": "t'es",
+      "scene": 6,
+      "debut": 24.24,
+      "fin": 24.38
+    },
+    {
+      "texte": "arrêté",
+      "mot": "arrêté",
+      "scene": 6,
+      "debut": 24.38,
+      "fin": 24.64
+    },
+    {
+      "texte": "où ?",
+      "mot": "où",
+      "scene": 6,
+      "debut": 24.64,
+      "fin": 24.76
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 6,
+      "debut": 24.76,
+      "fin": 25.46
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 6,
+      "debut": 25.46,
+      "fin": 25.58
+    },
+    {
+      "texte": "commentaire.",
+      "mot": "commentaire",
+      "scene": 6,
+      "debut": 25.58,
+      "fin": 26.02
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 26.94,
+      "fin": 27.18
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 27.18,
+      "fin": 27.54
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 27.88,
+      "fin": 28.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 28.18,
+      "fin": 28.42
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 28.42,
+      "fin": 28.72
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 28.72,
+      "fin": 29.02
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 29.02,
+      "fin": 29.26
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "titre": "Le mot qui débloque tout",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Astuce : un mot fréquent ouvre toute la page.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Scrabble",
+    "texte": [
+      "Le Scrabble est un jeu de société et un jeu de lettres où l'objectif est de cumuler des points, sur la base de tirages aléatoires de lettres, en plaçant des mots sur une grille carrée, dont certaines cases sont primées.",
+      "Le jeu est commercialisé dans 121 pays et en 36 langues. L'entreprise Hasbro est détentrice des droits aux États-Unis d'Amérique et au Canada, et Mattel dans le reste du monde.",
+      "Le Scrabble est un jeu de société très populaire en famille et entre amis, mais aussi sur Internet."
+    ],
+    "titreMots": [
+      "scrabble"
+    ],
+    "revelations": {
+      "lettres": [
+        "lettres"
+      ]
+    },
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Dimanche 21 septembre"
+  },
+  "dispositionInitiale": "coin",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Un seul mot a tout changé dans cette partie.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "seul",
+          "cible": "article",
+          "echelle": 1.2,
+          "hauteur": 860
+        }
+      ]
+    },
+    {
+      "id": "vide",
+      "voix": "La page était presque vide… et j'ai tapé : jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "tapé",
+          "mot": "jeu",
+          "duree": 0.25
+        },
+        {
+          "type": "envoyer",
+          "ancre": "jeu.",
+          "mot": "jeu"
+        }
+      ]
+    },
+    {
+      "id": "quatre",
+      "voix": "Quatre fois ! Jeu de société, jeu de lettres…",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Quatre",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "titre",
+      "voix": "Lettres, mots, grille… c'est le Scrabble !",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Lettres,",
+          "nom": "neutre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Lettres,",
+          "mot": "lettres"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "mots,",
+          "mot": "mots"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "grille…",
+          "mot": "grille"
+        },
+        {
+          "type": "zoom",
+          "ancre": "c'est",
+          "cible": "titre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Scrabble",
+          "mot": "scrabble"
+        },
+        {
+          "type": "pose",
+          "ancre": "Scrabble",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Cherche le mot qui ouvre la page, pas le titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Cherche",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Cherche",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

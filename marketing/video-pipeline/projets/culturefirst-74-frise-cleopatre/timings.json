@@ -1,0 +1,519 @@
+{
+  "duree": 30.16,
+  "dureeVoix": 28.36,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 4.52,
+      "fin": 5.66
+    },
+    {
+      "id": "kheops",
+      "debut": 5.66,
+      "finVoix": 9.5,
+      "fin": 10.36
+    },
+    {
+      "id": "rome",
+      "debut": 10.36,
+      "finVoix": 13.42,
+      "fin": 14.18
+    },
+    {
+      "id": "cleopatre",
+      "debut": 14.18,
+      "finVoix": 16.18,
+      "fin": 16.88
+    },
+    {
+      "id": "toi",
+      "debut": 16.88,
+      "finVoix": 18.04,
+      "fin": 19.28
+    },
+    {
+      "id": "resultat",
+      "debut": 19.28,
+      "finVoix": 22.64,
+      "fin": 23.54
+    },
+    {
+      "id": "appel",
+      "debut": 23.54,
+      "finVoix": 28.36,
+      "fin": 30.16
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Qui",
+      "mot": "Qui",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.56
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.88
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.0
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.24
+    },
+    {
+      "texte": "proche",
+      "mot": "proche",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.82
+    },
+    {
+      "texte": "Cléopâtre :",
+      "mot": "Cléopâtre",
+      "scene": 0,
+      "debut": 1.82,
+      "fin": 2.4
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.16
+    },
+    {
+      "texte": "pyramides,",
+      "mot": "pyramides",
+      "scene": 0,
+      "debut": 3.16,
+      "fin": 3.68
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 4.24,
+      "fin": 4.38
+    },
+    {
+      "texte": "toi ?",
+      "mot": "toi",
+      "scene": 0,
+      "debut": 4.38,
+      "fin": 4.52
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 5.66,
+      "fin": 5.86
+    },
+    {
+      "texte": "grande",
+      "mot": "grande",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 6.04
+    },
+    {
+      "texte": "pyramide",
+      "mot": "pyramide",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.48
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.6
+    },
+    {
+      "texte": "Khéops :",
+      "mot": "Khéops",
+      "scene": 1,
+      "debut": 6.6,
+      "fin": 6.96
+    },
+    {
+      "texte": "vers",
+      "mot": "vers",
+      "scene": 1,
+      "debut": 7.42,
+      "fin": 7.68
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 1,
+      "debut": 7.68,
+      "fin": 7.908
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 7.908,
+      "fin": 8.136
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 1,
+      "debut": 8.136,
+      "fin": 8.364
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 8.364,
+      "fin": 8.592
+    },
+    {
+      "texte": "soixante",
+      "mot": "soixante",
+      "scene": 1,
+      "debut": 8.592,
+      "fin": 8.82
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 1,
+      "debut": 8.82,
+      "fin": 9.06
+    },
+    {
+      "texte": "Jésus-Christ.",
+      "mot": "Jésus-Christ",
+      "scene": 1,
+      "debut": 9.06,
+      "fin": 9.5
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 2,
+      "debut": 10.36,
+      "fin": 10.64
+    },
+    {
+      "texte": "fondation",
+      "mot": "fondation",
+      "scene": 2,
+      "debut": 10.64,
+      "fin": 11.08
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 11.08,
+      "fin": 11.26
+    },
+    {
+      "texte": "Rome,",
+      "mot": "Rome",
+      "scene": 2,
+      "debut": 11.26,
+      "fin": 11.38
+    },
+    {
+      "texte": "selon",
+      "mot": "selon",
+      "scene": 2,
+      "debut": 11.5,
+      "fin": 11.62
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 11.62,
+      "fin": 11.78
+    },
+    {
+      "texte": "légende :",
+      "mot": "légende",
+      "scene": 2,
+      "debut": 11.78,
+      "fin": 12.08
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 2,
+      "debut": 12.56,
+      "fin": 12.847
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 12.847,
+      "fin": 13.133
+    },
+    {
+      "texte": "cinquante-trois.",
+      "mot": "cinquante-trois",
+      "scene": 2,
+      "debut": 13.133,
+      "fin": 13.42
+    },
+    {
+      "texte": "Cléopâtre",
+      "mot": "Cléopâtre",
+      "scene": 3,
+      "debut": 14.18,
+      "fin": 14.78
+    },
+    {
+      "texte": "meurt",
+      "mot": "meurt",
+      "scene": 3,
+      "debut": 14.78,
+      "fin": 15.02
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 15.02,
+      "fin": 15.14
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 3,
+      "debut": 15.14,
+      "fin": 15.44
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 3,
+      "debut": 15.44,
+      "fin": 15.7
+    },
+    {
+      "texte": "Jésus-Christ.",
+      "mot": "Jésus-Christ",
+      "scene": 3,
+      "debut": 15.7,
+      "fin": 16.18
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 16.88,
+      "fin": 17.12
+    },
+    {
+      "texte": "toi,",
+      "mot": "toi",
+      "scene": 4,
+      "debut": 17.12,
+      "fin": 17.32
+    },
+    {
+      "texte": "aujourd'hui.",
+      "mot": "aujourd'hui",
+      "scene": 4,
+      "debut": 17.6,
+      "fin": 18.04
+    },
+    {
+      "texte": "Résultat :",
+      "mot": "Résultat",
+      "scene": 5,
+      "debut": 19.28,
+      "fin": 19.88
+    },
+    {
+      "texte": "Cléopâtre",
+      "mot": "Cléopâtre",
+      "scene": 5,
+      "debut": 19.88,
+      "fin": 20.48
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 5,
+      "debut": 20.48,
+      "fin": 20.66
+    },
+    {
+      "texte": "vécu",
+      "mot": "vécu",
+      "scene": 5,
+      "debut": 20.66,
+      "fin": 20.86
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 5,
+      "debut": 20.86,
+      "fin": 21.12
+    },
+    {
+      "texte": "près",
+      "mot": "près",
+      "scene": 5,
+      "debut": 21.12,
+      "fin": 21.36
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 5,
+      "debut": 21.36,
+      "fin": 21.52
+    },
+    {
+      "texte": "nous",
+      "mot": "nous",
+      "scene": 5,
+      "debut": 21.52,
+      "fin": 21.68
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 5,
+      "debut": 21.68,
+      "fin": 22.0
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 5,
+      "debut": 22.0,
+      "fin": 22.14
+    },
+    {
+      "texte": "pyramides.",
+      "mot": "pyramides",
+      "scene": 5,
+      "debut": 22.14,
+      "fin": 22.64
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 6,
+      "debut": 23.54,
+      "fin": 23.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 23.86,
+      "fin": 24.0
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 6,
+      "debut": 24.0,
+      "fin": 24.247
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 6,
+      "debut": 24.247,
+      "fin": 24.493
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 6,
+      "debut": 24.493,
+      "fin": 24.74
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 6,
+      "debut": 24.74,
+      "fin": 25.08
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 25.78,
+      "fin": 26.08
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 26.08,
+      "fin": 26.46
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 26.9,
+      "fin": 27.36
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 27.36,
+      "fin": 27.72
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 27.72,
+      "fin": 27.94
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 27.94,
+      "fin": 28.12
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 28.12,
+      "fin": 28.36
+    }
+  ]
+}

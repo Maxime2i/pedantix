@@ -1,0 +1,187 @@
+{
+  "titre": "L'astuce de la case",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Astuce : toucher une case cachée pour connaître la longueur du mot.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Jimmy Carter",
+    "texte": [
+      "James Earl Carter Jr., dit Jimmy Carter, né le 1er octobre 1924 à Plains et mort le 29 décembre 2024 dans la même ville, est un homme d'État américain. Membre du Parti démocrate, il est le 39e président des États-Unis, en fonction du 20 janvier 1977 au 20 janvier 1981. Fils de fermiers producteurs d'arachides, il est diplômé de l'académie navale d'Annapolis en 1946."
+    ],
+    "titreMots": [
+      "jimmy",
+      "carter"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [
+      "président",
+      "américain",
+      "états-unis",
+      "parti",
+      "démocrate",
+      "né",
+      "mort",
+      "octobre",
+      "décembre",
+      "1924",
+      "2024",
+      "1977",
+      "1981",
+      "janvier",
+      "homme",
+      "état",
+      "fermiers",
+      "fils",
+      "membre",
+      "ville",
+      "même",
+      "fonction"
+    ],
+    "date": "Vendredi 26 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "L'astuce que personne n'utilise dans mon jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "personne",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "voix": "Touche une case cachée : elle te donne la longueur du mot.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Touche",
+          "mode": "coin"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Touche",
+          "cible": "titre"
+        },
+        {
+          "type": "case",
+          "ancre": "case",
+          "mot": "jimmy",
+          "dans": "titre"
+        },
+        {
+          "type": "pose",
+          "ancre": "Touche",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "indices",
+      "voix": "Cinq lettres, puis six. Et la page parle d'un président américain…",
+      "image": null,
+      "actions": [
+        {
+          "type": "case",
+          "ancre": "six.",
+          "mot": "carter",
+          "dans": "titre"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Et",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "président",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "trouve",
+      "voix": "Jimmy… Carter !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Jimmy…",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "Jimmy…",
+          "mot": "jimmy",
+          "duree": 0.3
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Jimmy…",
+          "mot": "jimmy",
+          "position": "fin"
+        },
+        {
+          "type": "taper",
+          "ancre": "Carter",
+          "mot": "carter",
+          "duree": 0.25
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Carter",
+          "mot": "carter",
+          "position": "fin"
+        },
+        {
+          "type": "pose",
+          "ancre": "Carter",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "morale",
+      "voix": "Touche les cases, ça change tout.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Touche",
+          "cible": "aucun"
+        },
+        {
+          "type": "pose",
+          "ancre": "Touche",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

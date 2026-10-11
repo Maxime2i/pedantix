@@ -1,0 +1,374 @@
+{
+  "duree": 18.48,
+  "dureeVoix": 16.68,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.66,
+      "fin": 3.76
+    },
+    {
+      "id": "speciale",
+      "debut": 3.76,
+      "finVoix": 6.54,
+      "fin": 7.16
+    },
+    {
+      "id": "cumul",
+      "debut": 7.16,
+      "finVoix": 10.86,
+      "fin": 11.64
+    },
+    {
+      "id": "alerte",
+      "debut": 11.64,
+      "finVoix": 14.26,
+      "fin": 15.2
+    },
+    {
+      "id": "appel",
+      "debut": 15.2,
+      "finVoix": 16.68,
+      "fin": 18.48
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "n'as",
+      "mot": "n'as",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.5
+    },
+    {
+      "texte": "jamais",
+      "mot": "jamais",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.84
+    },
+    {
+      "texte": "suivi",
+      "mot": "suivi",
+      "scene": 0,
+      "debut": 0.84,
+      "fin": 1.38
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.38,
+      "fin": 1.46
+    },
+    {
+      "texte": "rallye ?",
+      "mot": "rallye",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 2.14
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 2.24,
+      "fin": 2.32
+    },
+    {
+      "texte": "t'explique",
+      "mot": "t'explique",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.66
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.76
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 0,
+      "debut": 2.76,
+      "fin": 2.98
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.66
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 1,
+      "debut": 3.76,
+      "fin": 3.96
+    },
+    {
+      "texte": "spéciale,",
+      "mot": "spéciale",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.58
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 4.62,
+      "fin": 4.8
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 4.8,
+      "fin": 4.9
+    },
+    {
+      "texte": "route",
+      "mot": "route",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.06
+    },
+    {
+      "texte": "fermée,",
+      "mot": "fermée",
+      "scene": 1,
+      "debut": 5.06,
+      "fin": 5.38
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.12
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 6.12,
+      "fin": 6.22
+    },
+    {
+      "texte": "chrono.",
+      "mot": "chrono",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.54
+    },
+    {
+      "texte": "On",
+      "mot": "On",
+      "scene": 2,
+      "debut": 7.16,
+      "fin": 7.3
+    },
+    {
+      "texte": "additionne",
+      "mot": "additionne",
+      "scene": 2,
+      "debut": 7.3,
+      "fin": 7.78
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 7.78,
+      "fin": 7.86
+    },
+    {
+      "texte": "temps",
+      "mot": "temps",
+      "scene": 2,
+      "debut": 7.86,
+      "fin": 8.06
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 8.06,
+      "fin": 8.2
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 2,
+      "debut": 8.2,
+      "fin": 8.32
+    },
+    {
+      "texte": "spéciale :",
+      "mot": "spéciale",
+      "scene": 2,
+      "debut": 8.32,
+      "fin": 9.3
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 9.46,
+      "fin": 9.54
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 9.54,
+      "fin": 9.7
+    },
+    {
+      "texte": "rapide",
+      "mot": "rapide",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 9.98
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 2,
+      "debut": 9.98,
+      "fin": 10.06
+    },
+    {
+      "texte": "total",
+      "mot": "total",
+      "scene": 2,
+      "debut": 10.06,
+      "fin": 10.3
+    },
+    {
+      "texte": "gagne.",
+      "mot": "gagne",
+      "scene": 2,
+      "debut": 10.6,
+      "fin": 10.86
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 11.64,
+      "fin": 11.82
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 12.133
+    },
+    {
+      "texte": "Track",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 12.133,
+      "fin": 12.447
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 3,
+      "debut": 12.447,
+      "fin": 12.76
+    },
+    {
+      "texte": "prévient",
+      "mot": "prévient",
+      "scene": 3,
+      "debut": 12.76,
+      "fin": 13.06
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 13.06,
+      "fin": 13.18
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 3,
+      "debut": 13.18,
+      "fin": 13.46
+    },
+    {
+      "texte": "victoire",
+      "mot": "victoire",
+      "scene": 3,
+      "debut": 13.46,
+      "fin": 13.98
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 13.98,
+      "fin": 14.08
+    },
+    {
+      "texte": "spéciale.",
+      "mot": "spéciale",
+      "scene": 3,
+      "debut": 14.08,
+      "fin": 14.26
+    },
+    {
+      "texte": "Gratuit,",
+      "mot": "Gratuit",
+      "scene": 4,
+      "debut": 15.2,
+      "fin": 15.62
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 15.62,
+      "fin": 16.04
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 16.04,
+      "fin": 16.32
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 16.32,
+      "fin": 16.48
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 16.48,
+      "fin": 16.68
+    }
+  ]
+}

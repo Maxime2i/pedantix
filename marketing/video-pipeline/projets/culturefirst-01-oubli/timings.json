@@ -1,0 +1,451 @@
+{
+  "duree": 24.82,
+  "dureeVoix": 23.02,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 4.52,
+      "fin": 5.02
+    },
+    {
+      "id": "oubli",
+      "debut": 5.02,
+      "finVoix": 7.58,
+      "fin": 8.22
+    },
+    {
+      "id": "principe",
+      "debut": 8.22,
+      "finVoix": 11.6,
+      "fin": 12.06
+    },
+    {
+      "id": "espacement",
+      "debut": 12.06,
+      "finVoix": 17.84,
+      "fin": 18.64
+    },
+    {
+      "id": "appel",
+      "debut": 18.64,
+      "finVoix": 23.02,
+      "fin": 24.82
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Quelle",
+      "mot": "Quelle",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.52
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.6
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.74
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 1.48
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.8
+    },
+    {
+      "texte": "l'Australie ?",
+      "mot": "l'Australie",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 3.04
+    },
+    {
+      "texte": "Sydney ?",
+      "mot": "Sydney",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.38
+    },
+    {
+      "texte": "Raté.",
+      "mot": "Raté",
+      "scene": 0,
+      "debut": 4.1,
+      "fin": 4.52
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.1
+    },
+    {
+      "texte": "l'as",
+      "mot": "l'as",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.24
+    },
+    {
+      "texte": "appris",
+      "mot": "appris",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.46
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.56
+    },
+    {
+      "texte": "l'école…",
+      "mot": "l'école",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.72
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 6.34
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 6.52
+    },
+    {
+      "texte": "cerveau",
+      "mot": "cerveau",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.92
+    },
+    {
+      "texte": "l'a",
+      "mot": "l'a",
+      "scene": 1,
+      "debut": 6.92,
+      "fin": 7.18
+    },
+    {
+      "texte": "effacé.",
+      "mot": "effacé",
+      "scene": 1,
+      "debut": 7.18,
+      "fin": 7.58
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 8.22,
+      "fin": 8.6
+    },
+    {
+      "texte": "First",
+      "mot": "First",
+      "scene": 2,
+      "debut": 8.6,
+      "fin": 8.98
+    },
+    {
+      "texte": "te",
+      "mot": "te",
+      "scene": 2,
+      "debut": 8.98,
+      "fin": 9.34
+    },
+    {
+      "texte": "repose",
+      "mot": "repose",
+      "scene": 2,
+      "debut": 9.34,
+      "fin": 9.68
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 9.68,
+      "fin": 9.8
+    },
+    {
+      "texte": "question",
+      "mot": "question",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 10.12
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 2,
+      "debut": 10.12,
+      "fin": 10.7
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 2,
+      "debut": 10.7,
+      "fin": 10.96
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 2,
+      "debut": 10.96,
+      "fin": 11.12
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 11.12,
+      "fin": 11.2
+    },
+    {
+      "texte": "l'oublies.",
+      "mot": "l'oublies",
+      "scene": 2,
+      "debut": 11.2,
+      "fin": 11.6
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 3,
+      "debut": 12.06,
+      "fin": 12.28
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 3,
+      "debut": 12.28,
+      "fin": 12.48
+    },
+    {
+      "texte": "minutes,",
+      "mot": "minutes",
+      "scene": 3,
+      "debut": 12.48,
+      "fin": 12.72
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 3,
+      "debut": 13.2,
+      "fin": 13.36
+    },
+    {
+      "texte": "demain,",
+      "mot": "demain",
+      "scene": 3,
+      "debut": 13.36,
+      "fin": 13.6
+    },
+    {
+      "texte": "puis",
+      "mot": "puis",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.32
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 14.32,
+      "fin": 14.56
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 14.56,
+      "fin": 14.76
+    },
+    {
+      "texte": "mois.",
+      "mot": "mois",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 14.96
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 3,
+      "debut": 15.56,
+      "fin": 15.72
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 3,
+      "debut": 15.72,
+      "fin": 15.96
+    },
+    {
+      "texte": "fois,",
+      "mot": "fois",
+      "scene": 3,
+      "debut": 15.96,
+      "fin": 16.26
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 3,
+      "debut": 16.56,
+      "fin": 16.78
+    },
+    {
+      "texte": "s'ancre",
+      "mot": "s'ancre",
+      "scene": 3,
+      "debut": 16.78,
+      "fin": 17.22
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 17.22,
+      "fin": 17.44
+    },
+    {
+      "texte": "peu",
+      "mot": "peu",
+      "scene": 3,
+      "debut": 17.44,
+      "fin": 17.58
+    },
+    {
+      "texte": "plus.",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 17.58,
+      "fin": 17.84
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 18.64,
+      "fin": 18.82
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 18.82,
+      "fin": 18.98
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 18.98,
+      "fin": 19.187
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 19.187,
+      "fin": 19.393
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 19.393,
+      "fin": 19.6
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 19.6,
+      "fin": 19.96
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 20.5,
+      "fin": 20.78
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 20.78,
+      "fin": 21.2
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 21.2,
+      "fin": 21.88
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 21.88,
+      "fin": 22.08
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 22.08,
+      "fin": 22.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.42,
+      "fin": 22.76
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 22.76,
+      "fin": 23.02
+    }
+  ]
+}

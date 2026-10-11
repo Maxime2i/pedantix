@@ -1,0 +1,479 @@
+{
+  "duree": 26.44,
+  "dureeVoix": 24.64,
+  "scenes": [
+    {
+      "id": "question",
+      "debut": 0.0,
+      "finVoix": 3.38,
+      "fin": 4.04
+    },
+    {
+      "id": "indice",
+      "debut": 4.04,
+      "finVoix": 8.04,
+      "fin": 9.14
+    },
+    {
+      "id": "reponse",
+      "debut": 9.14,
+      "finVoix": 16.22,
+      "fin": 17.0
+    },
+    {
+      "id": "bonus",
+      "debut": 17.0,
+      "finVoix": 19.36,
+      "fin": 20.0
+    },
+    {
+      "id": "app",
+      "debut": 20.0,
+      "finVoix": 24.64,
+      "fin": 26.44
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Qui",
+      "mot": "Qui",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.54
+    },
+    {
+      "texte": "né",
+      "mot": "né",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.62
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.76
+    },
+    {
+      "texte": "premier :",
+      "mot": "premier",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 1.04
+    },
+    {
+      "texte": "Mozart",
+      "mot": "Mozart",
+      "scene": 0,
+      "debut": 1.72,
+      "fin": 2.1
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 2.1,
+      "fin": 2.88
+    },
+    {
+      "texte": "Napoléon ?",
+      "mot": "Napoléon",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.38
+    },
+    {
+      "texte": "Réfléchis",
+      "mot": "Réfléchis",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.68
+    },
+    {
+      "texte": "bien…",
+      "mot": "bien",
+      "scene": 1,
+      "debut": 4.68,
+      "fin": 4.94
+    },
+    {
+      "texte": "Indice :",
+      "mot": "Indice",
+      "scene": 1,
+      "debut": 5.96,
+      "fin": 6.5
+    },
+    {
+      "texte": "l'un",
+      "mot": "l'un",
+      "scene": 1,
+      "debut": 6.5,
+      "fin": 7.2
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 7.2,
+      "fin": 7.32
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 1,
+      "debut": 7.32,
+      "fin": 7.46
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 7.46,
+      "fin": 7.58
+    },
+    {
+      "texte": "mort",
+      "mot": "mort",
+      "scene": 1,
+      "debut": 7.58,
+      "fin": 7.66
+    },
+    {
+      "texte": "très",
+      "mot": "très",
+      "scene": 1,
+      "debut": 7.66,
+      "fin": 7.88
+    },
+    {
+      "texte": "jeune.",
+      "mot": "jeune",
+      "scene": 1,
+      "debut": 7.88,
+      "fin": 8.04
+    },
+    {
+      "texte": "Réponse :",
+      "mot": "Réponse",
+      "scene": 2,
+      "debut": 9.14,
+      "fin": 9.68
+    },
+    {
+      "texte": "Mozart,",
+      "mot": "Mozart",
+      "scene": 2,
+      "debut": 10.22,
+      "fin": 10.7
+    },
+    {
+      "texte": "né",
+      "mot": "né",
+      "scene": 2,
+      "debut": 11.08,
+      "fin": 11.36
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 11.36,
+      "fin": 11.5
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 11.5,
+      "fin": 11.75
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 2,
+      "debut": 11.75,
+      "fin": 12.0
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 12.0,
+      "fin": 12.25
+    },
+    {
+      "texte": "cinquante-six.",
+      "mot": "cinquante-six",
+      "scene": 2,
+      "debut": 12.25,
+      "fin": 12.5
+    },
+    {
+      "texte": "Napoléon",
+      "mot": "Napoléon",
+      "scene": 2,
+      "debut": 13.26,
+      "fin": 13.8
+    },
+    {
+      "texte": "arrive",
+      "mot": "arrive",
+      "scene": 2,
+      "debut": 13.8,
+      "fin": 14.0
+    },
+    {
+      "texte": "treize",
+      "mot": "treize",
+      "scene": 2,
+      "debut": 14.0,
+      "fin": 14.44
+    },
+    {
+      "texte": "ans",
+      "mot": "ans",
+      "scene": 2,
+      "debut": 14.44,
+      "fin": 14.56
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 14.56,
+      "fin": 14.72
+    },
+    {
+      "texte": "tard,",
+      "mot": "tard",
+      "scene": 2,
+      "debut": 14.72,
+      "fin": 14.92
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 15.1,
+      "fin": 15.18
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 2,
+      "debut": 15.18,
+      "fin": 15.44
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 2,
+      "debut": 15.44,
+      "fin": 15.7
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 15.7,
+      "fin": 15.96
+    },
+    {
+      "texte": "soixante-neuf.",
+      "mot": "soixante-neuf",
+      "scene": 2,
+      "debut": 15.96,
+      "fin": 16.22
+    },
+    {
+      "texte": "Quand",
+      "mot": "Quand",
+      "scene": 3,
+      "debut": 17.0,
+      "fin": 17.18
+    },
+    {
+      "texte": "Mozart",
+      "mot": "Mozart",
+      "scene": 3,
+      "debut": 17.18,
+      "fin": 17.44
+    },
+    {
+      "texte": "meurt,",
+      "mot": "meurt",
+      "scene": 3,
+      "debut": 17.44,
+      "fin": 17.74
+    },
+    {
+      "texte": "Napoléon",
+      "mot": "Napoléon",
+      "scene": 3,
+      "debut": 18.0,
+      "fin": 18.56
+    },
+    {
+      "texte": "n'a",
+      "mot": "n'a",
+      "scene": 3,
+      "debut": 18.56,
+      "fin": 18.68
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 18.68,
+      "fin": 18.82
+    },
+    {
+      "texte": "vingt-deux",
+      "mot": "vingt-deux",
+      "scene": 3,
+      "debut": 18.82,
+      "fin": 19.1
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 3,
+      "debut": 19.1,
+      "fin": 19.36
+    },
+    {
+      "texte": "Des",
+      "mot": "Des",
+      "scene": 4,
+      "debut": 20.0,
+      "fin": 20.22
+    },
+    {
+      "texte": "questions",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 20.22,
+      "fin": 20.5
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 4,
+      "debut": 20.5,
+      "fin": 20.72
+    },
+    {
+      "texte": "ça,",
+      "mot": "ça",
+      "scene": 4,
+      "debut": 20.72,
+      "fin": 20.9
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 4,
+      "debut": 21.1,
+      "fin": 21.16
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 4,
+      "debut": 21.16,
+      "fin": 21.24
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 21.24,
+      "fin": 21.24
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 4,
+      "debut": 21.24,
+      "fin": 21.38
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 4,
+      "debut": 21.38,
+      "fin": 21.52
+    },
+    {
+      "texte": "milliers",
+      "mot": "milliers",
+      "scene": 4,
+      "debut": 21.52,
+      "fin": 21.92
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 4,
+      "debut": 21.92,
+      "fin": 22.08
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 22.08,
+      "fin": 22.38
+    },
+    {
+      "texte": "First.",
+      "mot": "First",
+      "scene": 4,
+      "debut": 22.38,
+      "fin": 22.68
+    },
+    {
+      "texte": "Gratuit",
+      "mot": "Gratuit",
+      "scene": 4,
+      "debut": 23.04,
+      "fin": 23.58
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 23.58,
+      "fin": 23.92
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 23.92,
+      "fin": 24.2
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 24.2,
+      "fin": 24.4
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 24.4,
+      "fin": 24.64
+    }
+  ]
+}

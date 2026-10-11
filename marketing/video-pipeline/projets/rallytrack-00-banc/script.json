@@ -1,0 +1,82 @@
+{
+  "titre": "Banc d'essai de la bibliothèque RallyTrack",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": { "largeur": 1080, "hauteur": 1920, "fps": 30, "dureeCible": 45 },
+  "objectif": "Test : chaque écran et chaque superposition de la bibliothèque.",
+  "voix": { "instructions": "Test." },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    { "id": "accueil", "voix": "Voici l'accueil, tous les rallyes du jour, et on ouvre celui-ci.",
+      "actions": [
+        { "type": "entree", "ancre": "Voici" },
+        { "type": "zoom", "cible": "a-pays-0", "echelle": 1.35, "ancre": "rallyes" },
+        { "type": "appui", "cible": "r-0", "ancre": "ouvre" } ] },
+    { "id": "apercu", "voix": "La fiche du rallye, en direct. J'active la cloche.",
+      "actions": [
+        { "type": "ecran", "nom": "rallye", "ancre": "fiche" },
+        { "type": "zoom", "cible": "ra-situation", "echelle": 1.3, "ancre": "direct" },
+        { "type": "cloche", "ancre": "cloche" } ] },
+    { "id": "classement", "voix": "Le classement bouge : Marchal passe devant Brunet, puis prend la tête.",
+      "actions": [
+        { "type": "onglet", "nom": "classement", "ancre": "classement" },
+        { "type": "surligner", "n": 3, "ancre": "Marchal", "fin": "tête" },
+        { "type": "maj", "ancre": "passe", "classement": [
+          { "n": 1, "temps": "43:22.7" }, { "n": 3, "temps": "43:30.3", "ecart": "+7.6" }, { "n": 2, "temps": "43:35.9", "ecart": "+13.2" },
+          { "n": 4, "temps": "44:05.6", "ecart": "+42.9" }, { "n": 6, "temps": "44:49.7", "ecart": "+1:27.0" }, { "n": 5, "temps": "45:20.1", "ecart": "+1:57.4" },
+          { "n": 7, "temps": "46:31.0", "ecart": "+3:08.3" }, { "n": 8, "temps": "46:40.2", "ecart": "+3:17.5" }, { "n": 9, "temps": "46:58.8", "ecart": "+3:36.1" } ] },
+        { "type": "maj", "ancre": "prend", "classement": [
+          { "n": 3, "temps": "48:32.1" }, { "n": 1, "temps": "48:33.4", "ecart": "+1.3" }, { "n": 2, "temps": "48:47.8", "ecart": "+15.7" },
+          { "n": 4, "temps": "49:20.2", "ecart": "+48.1" }, { "n": 6, "temps": "50:08.7", "ecart": "+1:36.6" }, { "n": 5, "temps": "50:41.0", "ecart": "+2:08.9" },
+          { "n": 7, "temps": "51:58.3", "ecart": "+3:26.2" }, { "n": 8, "temps": "52:09.9", "ecart": "+3:37.8" }, { "n": 9, "temps": "52:30.6", "ecart": "+3:58.5" } ] } ] },
+    { "id": "speciales", "voix": "Les spéciales, et le scratch de la cinq en cumul.",
+      "actions": [
+        { "type": "onglet", "nom": "speciales", "ancre": "spéciales" },
+        { "type": "feuille", "nom": "speciale", "ancre": "scratch" },
+        { "type": "segment", "mode": "cumul", "ancre": "cumul" } ] },
+    { "id": "engages", "voix": "On ferme, et voici les engagés.",
+      "actions": [
+        { "type": "fermer", "ancre": "ferme" },
+        { "type": "onglet", "nom": "engages", "ancre": "engagés" } ] },
+    { "id": "pilote", "voix": "La page pilote, avec son dernier résultat et son championnat.",
+      "actions": [
+        { "type": "ecran", "nom": "pilote", "ancre": "page" },
+        { "type": "zoom", "cible": "pi-dernier", "echelle": 1.35, "ancre": "dernier" },
+        { "type": "zoom", "cible": "pi-championnat", "echelle": 1.4, "ancre": "championnat" } ] },
+    { "id": "alertes", "voix": "Les alertes : victoire en spéciale, cochée.",
+      "actions": [
+        { "type": "ecran", "nom": "alertes", "ancre": "alertes" },
+        { "type": "choisir", "valeur": "esVictoire", "ancre": "cochée" } ] },
+    { "id": "verrou", "voix": "Téléphone verrouillé, et les notifications tombent.",
+      "actions": [
+        { "type": "ecran", "nom": "verrouillage", "ancre": "verrouillé" },
+        { "type": "notif", "titre": "Hugo Marchal gagne ES5", "texte": "Rallye des Hautes Combes", "ancre": "notifications", "duree": 6 },
+        { "type": "notif", "titre": "C’est parti : Rallye des Hautes Combes", "texte": "Le rallye est en direct.", "quand": "il y a 2 h", "ancre": "tombent", "duree": 5 } ] },
+    { "id": "avatar", "voix": "Moi c'est Maxime, je te montre l'appli. Surprise !",
+      "actions": [
+        { "type": "disposition", "mode": "avatar", "ancre": "Moi" },
+        { "type": "disposition", "mode": "duo", "ancre": "montre" },
+        { "type": "ecran", "nom": "rallye", "donnees": { "onglet": "classement" }, "ancre": "montre" },
+        { "type": "pose", "nom": "montre-droite", "ancre": "montre" },
+        { "type": "pose", "nom": "choque", "ancre": "Surprise" },
+        { "type": "bulle", "texte": "Quoi ?!", "ancre": "Surprise" } ] },
+    { "id": "formats", "voix": "Un titre, une liste de deux points, un chiffre et un chrono qui s'arrête net.",
+      "actions": [
+        { "type": "disposition", "mode": "coin", "ancre": "Un" },
+        { "type": "pose", "nom": "neutre", "ancre": "Un" },
+        { "type": "titre", "texte": "Le rallye *en direct*", "sous": "Sous-titre de test", "ancre": "titre" },
+        { "type": "liste", "titre": "Deux points", "ancre": "liste" },
+        { "type": "point", "texte": "Premier point", "ancre": "deux" },
+        { "type": "point", "texte": "Second point", "ancre": "points" },
+        { "type": "chiffre", "valeur": 1089, "sous": "rallyes ce week-end", "ancre": "chiffre" },
+        { "type": "chrono", "titre": "ES5 · COL DE LA CROIX", "depart": "5:06.0", "arret": "5:09.4", "sous": "Marchal en piste…", "sousFin": "Meilleur temps !", "ancre": "chrono" },
+        { "type": "arreter", "ancre": "net" } ] },
+    { "id": "typo", "voix": "Du texte géant, un tampon, et la fin.",
+      "actions": [
+        { "type": "typo", "texte": "Fini les *quatorze* onglets ouverts", "sous": "Tout dans une app", "ancre": "texte", "fin": "géant" },
+        { "type": "tampon", "texte": "EN DIRECT", "couleur": "vert", "ancre": "tampon" },
+        { "type": "fin", "ancre": "fin" } ] }
+  ],
+  "fin": { "pose": "salut" }
+}

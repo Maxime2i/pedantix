@@ -1,0 +1,267 @@
+{
+  "titre": "Tubes français des années 80",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton festif et nostalgique, chaque titre dit avec un petit air chantant, l'artiste dit avec assurance. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tubes français des années quatre-vingt : trouve l'artiste avant moi. Attention, ça va chanter.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Tubes",
+          "texte": "Tubes des années 80",
+          "sous": "trouve l’artiste avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "chanter",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "chanter",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tubes",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "t1",
+      "voix": "Un : « Voyage, voyage » ? Desireless.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "carte",
+          "ancre": "Un",
+          "index": 0
+        },
+        {
+          "type": "reveler",
+          "ancre": "Desireless"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "t2",
+      "voix": "Deux : « Les Démons de minuit » ? Images.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Images"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "t3",
+      "voix": "Trois : « Ella, elle l'a » ? France Gall.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "France"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "t4",
+      "voix": "Quatre : « Femme libérée » ? Cookie Dingler.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Quatre",
+          "index": 3
+        },
+        {
+          "type": "reveler",
+          "ancre": "Cookie"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "t5",
+      "voix": "Cinq : « Je te donne », en duo ? Jean-Jacques Goldman et Michael Jones.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Cinq",
+          "index": 4
+        },
+        {
+          "type": "reveler",
+          "ancre": "Jean-Jacques"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tu les as chantées dans ta tête ? Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Voyage, voyage",
+      "reponse": "Desireless",
+      "fiche": [
+        [
+          "Année",
+          "1986"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Les Démons de minuit",
+      "reponse": "Images",
+      "fiche": [
+        [
+          "Année",
+          "1986"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Ella, elle l'a",
+      "reponse": "France Gall",
+      "fiche": [
+        [
+          "Année",
+          "1987"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Femme libérée",
+      "reponse": "Cookie Dingler",
+      "fiche": [
+        [
+          "Année",
+          "1984"
+        ]
+      ]
+    },
+    {
+      "paquet": "Tubes français des années 80",
+      "theme": "Culture moderne",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel est l'artiste de cette chanson ?",
+      "indiceType": "Chanson",
+      "indice": "Je te donne",
+      "reponse": "Jean-Jacques Goldman et Michael Jones",
+      "fiche": [
+        [
+          "Année",
+          "1985"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

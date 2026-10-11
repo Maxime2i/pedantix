@@ -1,0 +1,290 @@
+{
+  "duree": 15.7,
+  "dureeVoix": 13.9,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.28,
+      "fin": 3.92
+    },
+    {
+      "id": "hier",
+      "debut": 3.92,
+      "finVoix": 6.14,
+      "fin": 6.58
+    },
+    {
+      "id": "aujourdhui",
+      "debut": 6.58,
+      "finVoix": 9.14,
+      "fin": 9.58
+    },
+    {
+      "id": "morale",
+      "debut": 9.58,
+      "finVoix": 11.78,
+      "fin": 12.2
+    },
+    {
+      "id": "appel",
+      "debut": 12.2,
+      "finVoix": 13.9,
+      "fin": 15.7
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Hier :",
+      "mot": "Hier",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.48
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.06
+    },
+    {
+      "texte": "douze",
+      "mot": "douze",
+      "scene": 0,
+      "debut": 1.06,
+      "fin": 1.3
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 2.14
+    },
+    {
+      "texte": "Aujourd'hui :",
+      "mot": "Aujourd'hui",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.425
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 0,
+      "debut": 2.425,
+      "fin": 2.71
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.71,
+      "fin": 2.995
+    },
+    {
+      "texte": "un.",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.995,
+      "fin": 3.28
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 1,
+      "debut": 3.92,
+      "fin": 4.06
+    },
+    {
+      "texte": "différence ?",
+      "mot": "différence",
+      "scene": 1,
+      "debut": 4.06,
+      "fin": 4.28
+    },
+    {
+      "texte": "Hier,",
+      "mot": "Hier",
+      "scene": 1,
+      "debut": 5.02,
+      "fin": 5.14
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 5.26,
+      "fin": 5.39
+    },
+    {
+      "texte": "tapais",
+      "mot": "tapais",
+      "scene": 1,
+      "debut": 5.39,
+      "fin": 5.52
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 5.52,
+      "fin": 5.6
+    },
+    {
+      "texte": "titres",
+      "mot": "titres",
+      "scene": 1,
+      "debut": 5.6,
+      "fin": 5.84
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 5.84,
+      "fin": 5.9
+    },
+    {
+      "texte": "hasard.",
+      "mot": "hasard",
+      "scene": 1,
+      "debut": 5.9,
+      "fin": 6.14
+    },
+    {
+      "texte": "Aujourd'hui,",
+      "mot": "Aujourd'hui",
+      "scene": 2,
+      "debut": 6.58,
+      "fin": 7.0
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.42
+    },
+    {
+      "texte": "suivi",
+      "mot": "suivi",
+      "scene": 2,
+      "debut": 7.42,
+      "fin": 7.76
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 7.76,
+      "fin": 7.84
+    },
+    {
+      "texte": "gris,",
+      "mot": "gris",
+      "scene": 2,
+      "debut": 7.84,
+      "fin": 8.1
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 2,
+      "debut": 8.34,
+      "fin": 8.58
+    },
+    {
+      "texte": "après",
+      "mot": "après",
+      "scene": 2,
+      "debut": 8.58,
+      "fin": 8.9
+    },
+    {
+      "texte": "mot.",
+      "mot": "mot",
+      "scene": 2,
+      "debut": 8.9,
+      "fin": 9.14
+    },
+    {
+      "texte": "Même",
+      "mot": "Même",
+      "scene": 3,
+      "debut": 9.58,
+      "fin": 9.8
+    },
+    {
+      "texte": "jeu,",
+      "mot": "jeu",
+      "scene": 3,
+      "debut": 9.8,
+      "fin": 10.02
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 3,
+      "debut": 10.38,
+      "fin": 10.48
+    },
+    {
+      "texte": "cerveau,",
+      "mot": "cerveau",
+      "scene": 3,
+      "debut": 10.48,
+      "fin": 10.9
+    },
+    {
+      "texte": "autre",
+      "mot": "autre",
+      "scene": 3,
+      "debut": 11.3,
+      "fin": 11.46
+    },
+    {
+      "texte": "méthode.",
+      "mot": "méthode",
+      "scene": 3,
+      "debut": 11.46,
+      "fin": 11.78
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 12.2,
+      "fin": 12.66
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 13.1,
+      "fin": 13.42
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 13.42,
+      "fin": 13.64
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 13.64,
+      "fin": 13.76
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 13.76,
+      "fin": 13.9
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "titre": "Vendredi animaux",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, énergique. Annonce chaque numéro, petite pause après chaque question, réponse dite avec assurance. Complice sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Vendredi animaux ! Trois questions : essaie de répondre avant moi. C'est parti.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Vendredi",
+          "texte": "Vendredi animaux",
+          "sous": "3 questions · réponds avant moi"
+        },
+        {
+          "type": "masquer",
+          "ancre": "parti"
+        },
+        {
+          "type": "entree",
+          "ancre": "parti"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Vendredi",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "voix": "Un : la femelle du sanglier ? La laie.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Un",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "laie"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q2",
+      "voix": "Deux : le petit du lièvre ? Le levraut.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Deux",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "levraut"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "q3",
+      "voix": "Trois : le plus grand animal du monde ? La baleine bleue.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Trois",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "baleine"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Combien sur trois ? Dis-le en commentaire, et rendez-vous vendredi prochain. Culture First, gratuit sur iPhone et Android.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Combien",
+          "cible": "aucun"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Combien",
+          "texte": "?/3",
+          "couleur": "or"
+        },
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Mâles, femelles et petits",
+      "theme": "Animaux et Plantes",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Comment s'appelle la femelle de cet animal ?",
+      "indiceType": "Animal",
+      "indice": "Sanglier",
+      "reponse": "Laie",
+      "fiche": []
+    },
+    {
+      "paquet": "Mâles, femelles et petits",
+      "theme": "Animaux et Plantes",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Comment s'appelle le petit de cet animal ?",
+      "indiceType": "Animal",
+      "indice": "Lièvre",
+      "reponse": "Levraut",
+      "fiche": []
+    },
+    {
+      "paquet": "Records du monde animal",
+      "theme": "Animaux et Plantes",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel animal détient ce record ?",
+      "indiceType": "Record",
+      "indice": "Le plus grand animal du monde",
+      "reponse": "La baleine bleue",
+      "fiche": [
+        [
+          "Longueur",
+          "jusqu’à 30 m environ"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

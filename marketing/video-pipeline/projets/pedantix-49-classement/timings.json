@@ -1,0 +1,311 @@
+{
+  "duree": 16.94,
+  "dureeVoix": 15.14,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.3,
+      "fin": 3.96
+    },
+    {
+      "id": "argent",
+      "debut": 3.96,
+      "finVoix": 5.76,
+      "fin": 6.56
+    },
+    {
+      "id": "premier",
+      "debut": 6.56,
+      "finVoix": 10.08,
+      "fin": 10.08
+    },
+    {
+      "id": "cta",
+      "debut": 10.08,
+      "finVoix": 13.0,
+      "fin": 13.8
+    },
+    {
+      "id": "appel",
+      "debut": 13.8,
+      "finVoix": 15.14,
+      "fin": 16.94
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "petit",
+      "mot": "petit",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.66
+    },
+    {
+      "texte": "plaisir",
+      "mot": "plaisir",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.16
+    },
+    {
+      "texte": "midi :",
+      "mot": "midi",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.46
+    },
+    {
+      "texte": "voir",
+      "mot": "voir",
+      "scene": 0,
+      "debut": 1.86,
+      "fin": 2.3
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.54
+    },
+    {
+      "texte": "rang",
+      "mot": "rang",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.82
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 3.06
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 3.06,
+      "fin": 3.3
+    },
+    {
+      "texte": "Deuxième",
+      "mot": "Deuxième",
+      "scene": 1,
+      "debut": 3.96,
+      "fin": 4.44
+    },
+    {
+      "texte": "aujourd'hui.",
+      "mot": "aujourd'hui",
+      "scene": 1,
+      "debut": 4.44,
+      "fin": 4.86
+    },
+    {
+      "texte": "Médaille",
+      "mot": "Médaille",
+      "scene": 1,
+      "debut": 5.18,
+      "fin": 5.5
+    },
+    {
+      "texte": "d'argent.",
+      "mot": "d'argent",
+      "scene": 1,
+      "debut": 5.5,
+      "fin": 5.76
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 6.56,
+      "fin": 6.78
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 2,
+      "debut": 6.78,
+      "fin": 6.96
+    },
+    {
+      "texte": "m'a",
+      "mot": "m'a",
+      "scene": 2,
+      "debut": 6.96,
+      "fin": 7.14
+    },
+    {
+      "texte": "battu",
+      "mot": "battu",
+      "scene": 2,
+      "debut": 7.14,
+      "fin": 7.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 7.38,
+      "fin": 7.44
+    },
+    {
+      "texte": "quatre",
+      "mot": "quatre",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.58
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 8.0
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 2,
+      "debut": 8.54,
+      "fin": 8.7
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.39
+    },
+    {
+      "texte": "retrouverai.",
+      "mot": "retrouverai",
+      "scene": 2,
+      "debut": 9.39,
+      "fin": 10.08
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 10.08,
+      "fin": 10.7
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 10.7,
+      "fin": 10.8
+    },
+    {
+      "texte": "trouves",
+      "mot": "trouves",
+      "scene": 3,
+      "debut": 10.8,
+      "fin": 11.04
+    },
+    {
+      "texte": "vite,",
+      "mot": "vite",
+      "scene": 3,
+      "debut": 11.04,
+      "fin": 11.16
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 11.32,
+      "fin": 11.4
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 11.4,
+      "fin": 11.5
+    },
+    {
+      "texte": "montes.",
+      "mot": "montes",
+      "scene": 3,
+      "debut": 11.5,
+      "fin": 11.8
+    },
+    {
+      "texte": "Viens",
+      "mot": "Viens",
+      "scene": 3,
+      "debut": 12.46,
+      "fin": 12.68
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 3,
+      "debut": 12.68,
+      "fin": 12.76
+    },
+    {
+      "texte": "battre.",
+      "mot": "battre",
+      "scene": 3,
+      "debut": 12.76,
+      "fin": 13.0
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 13.8,
+      "fin": 14.2
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 14.4,
+      "fin": 14.66
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.66,
+      "fin": 14.86
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.86,
+      "fin": 14.94
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 14.94,
+      "fin": 15.14
+    }
+  ]
+}

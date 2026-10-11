@@ -1,0 +1,612 @@
+{
+  "duree": 39.6,
+  "dureeVoix": 37.8,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.18,
+      "fin": 3.82
+    },
+    {
+      "id": "q1",
+      "debut": 3.82,
+      "finVoix": 6.12,
+      "fin": 6.74
+    },
+    {
+      "id": "q2",
+      "debut": 6.74,
+      "finVoix": 9.24,
+      "fin": 9.86
+    },
+    {
+      "id": "q3",
+      "debut": 9.86,
+      "finVoix": 12.24,
+      "fin": 12.92
+    },
+    {
+      "id": "q4",
+      "debut": 12.92,
+      "finVoix": 14.8,
+      "fin": 15.7
+    },
+    {
+      "id": "q5",
+      "debut": 15.7,
+      "finVoix": 17.68,
+      "fin": 18.36
+    },
+    {
+      "id": "q6",
+      "debut": 18.36,
+      "finVoix": 21.32,
+      "fin": 21.96
+    },
+    {
+      "id": "q7",
+      "debut": 21.96,
+      "finVoix": 24.1,
+      "fin": 24.72
+    },
+    {
+      "id": "q8",
+      "debut": 24.72,
+      "finVoix": 27.38,
+      "fin": 28.02
+    },
+    {
+      "id": "q9",
+      "debut": 28.02,
+      "finVoix": 30.3,
+      "fin": 30.78
+    },
+    {
+      "id": "q10",
+      "debut": 30.78,
+      "finVoix": 33.12,
+      "fin": 33.92
+    },
+    {
+      "id": "appel",
+      "debut": 33.92,
+      "finVoix": 37.8,
+      "fin": 39.6
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dix",
+      "mot": "Dix",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "questions,",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.7
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.26
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.8
+    },
+    {
+      "texte": "Compte",
+      "mot": "Compte",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.3
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.4
+    },
+    {
+      "texte": "points.",
+      "mot": "points",
+      "scene": 0,
+      "debut": 2.4,
+      "fin": 2.58
+    },
+    {
+      "texte": "Top !",
+      "mot": "Top",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.18
+    },
+    {
+      "texte": "Capitale",
+      "mot": "Capitale",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 4.32
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 4.32,
+      "fin": 4.42
+    },
+    {
+      "texte": "l'Espagne ?",
+      "mot": "l'Espagne",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.86
+    },
+    {
+      "texte": "Madrid.",
+      "mot": "Madrid",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 6.12
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 6.74,
+      "fin": 7.08
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 7.08,
+      "fin": 7.24
+    },
+    {
+      "texte": "grand",
+      "mot": "grand",
+      "scene": 2,
+      "debut": 7.24,
+      "fin": 7.38
+    },
+    {
+      "texte": "océan ?",
+      "mot": "océan",
+      "scene": 2,
+      "debut": 7.38,
+      "fin": 7.78
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 8.4,
+      "fin": 8.64
+    },
+    {
+      "texte": "Pacifique.",
+      "mot": "Pacifique",
+      "scene": 2,
+      "debut": 8.64,
+      "fin": 9.24
+    },
+    {
+      "texte": "L'auteur",
+      "mot": "L'auteur",
+      "scene": 3,
+      "debut": 9.86,
+      "fin": 10.24
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 10.24,
+      "fin": 10.5
+    },
+    {
+      "texte": "Misérables ?",
+      "mot": "Misérables",
+      "scene": 3,
+      "debut": 10.5,
+      "fin": 11.06
+    },
+    {
+      "texte": "Victor",
+      "mot": "Victor",
+      "scene": 3,
+      "debut": 11.72,
+      "fin": 12.0
+    },
+    {
+      "texte": "Hugo.",
+      "mot": "Hugo",
+      "scene": 3,
+      "debut": 12.0,
+      "fin": 12.24
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 4,
+      "debut": 12.92,
+      "fin": 13.14
+    },
+    {
+      "texte": "planète",
+      "mot": "planète",
+      "scene": 4,
+      "debut": 13.14,
+      "fin": 13.44
+    },
+    {
+      "texte": "rouge ?",
+      "mot": "rouge",
+      "scene": 4,
+      "debut": 13.44,
+      "fin": 13.66
+    },
+    {
+      "texte": "Mars.",
+      "mot": "Mars",
+      "scene": 4,
+      "debut": 14.24,
+      "fin": 14.8
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 5,
+      "debut": 15.7,
+      "fin": 15.82
+    },
+    {
+      "texte": "côtés",
+      "mot": "côtés",
+      "scene": 5,
+      "debut": 15.82,
+      "fin": 16.04
+    },
+    {
+      "texte": "d'un",
+      "mot": "d'un",
+      "scene": 5,
+      "debut": 16.04,
+      "fin": 16.18
+    },
+    {
+      "texte": "hexagone ?",
+      "mot": "hexagone",
+      "scene": 5,
+      "debut": 16.18,
+      "fin": 16.58
+    },
+    {
+      "texte": "Six.",
+      "mot": "Six",
+      "scene": 5,
+      "debut": 17.34,
+      "fin": 17.68
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 6,
+      "debut": 18.36,
+      "fin": 18.62
+    },
+    {
+      "texte": "peintre",
+      "mot": "peintre",
+      "scene": 6,
+      "debut": 18.62,
+      "fin": 18.96
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 18.96,
+      "fin": 19.08
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 6,
+      "debut": 19.08,
+      "fin": 19.18
+    },
+    {
+      "texte": "Joconde ?",
+      "mot": "Joconde",
+      "scene": 6,
+      "debut": 19.18,
+      "fin": 19.6
+    },
+    {
+      "texte": "Léonard",
+      "mot": "Léonard",
+      "scene": 6,
+      "debut": 20.32,
+      "fin": 20.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 20.86,
+      "fin": 21.02
+    },
+    {
+      "texte": "Vinci.",
+      "mot": "Vinci",
+      "scene": 6,
+      "debut": 21.02,
+      "fin": 21.32
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 7,
+      "debut": 21.96,
+      "fin": 22.16
+    },
+    {
+      "texte": "monnaie",
+      "mot": "monnaie",
+      "scene": 7,
+      "debut": 22.16,
+      "fin": 22.38
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 7,
+      "debut": 22.38,
+      "fin": 22.5
+    },
+    {
+      "texte": "Japon ?",
+      "mot": "Japon",
+      "scene": 7,
+      "debut": 22.5,
+      "fin": 22.76
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 7,
+      "debut": 23.64,
+      "fin": 23.82
+    },
+    {
+      "texte": "yen.",
+      "mot": "yen",
+      "scene": 7,
+      "debut": 23.82,
+      "fin": 24.1
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 8,
+      "debut": 24.72,
+      "fin": 24.96
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 8,
+      "debut": 24.96,
+      "fin": 25.16
+    },
+    {
+      "texte": "haut",
+      "mot": "haut",
+      "scene": 8,
+      "debut": 25.16,
+      "fin": 25.44
+    },
+    {
+      "texte": "sommet",
+      "mot": "sommet",
+      "scene": 8,
+      "debut": 25.44,
+      "fin": 25.76
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 8,
+      "debut": 25.76,
+      "fin": 25.9
+    },
+    {
+      "texte": "monde ?",
+      "mot": "monde",
+      "scene": 8,
+      "debut": 25.9,
+      "fin": 26.1
+    },
+    {
+      "texte": "L'Everest.",
+      "mot": "L'Everest",
+      "scene": 8,
+      "debut": 26.9,
+      "fin": 27.38
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 9,
+      "debut": 28.02,
+      "fin": 28.28
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 9,
+      "debut": 28.28,
+      "fin": 28.64
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 9,
+      "debut": 28.64,
+      "fin": 28.74
+    },
+    {
+      "texte": "l'Australie ?",
+      "mot": "l'Australie",
+      "scene": 9,
+      "debut": 28.74,
+      "fin": 29.16
+    },
+    {
+      "texte": "Canberra.",
+      "mot": "Canberra",
+      "scene": 9,
+      "debut": 29.16,
+      "fin": 30.3
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 10,
+      "debut": 30.78,
+      "fin": 31.12
+    },
+    {
+      "texte": "joueurs",
+      "mot": "joueurs",
+      "scene": 10,
+      "debut": 31.12,
+      "fin": 31.42
+    },
+    {
+      "texte": "d'une",
+      "mot": "d'une",
+      "scene": 10,
+      "debut": 31.42,
+      "fin": 31.56
+    },
+    {
+      "texte": "équipe",
+      "mot": "équipe",
+      "scene": 10,
+      "debut": 31.56,
+      "fin": 31.8
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 10,
+      "debut": 31.8,
+      "fin": 31.88
+    },
+    {
+      "texte": "foot ?",
+      "mot": "foot",
+      "scene": 10,
+      "debut": 31.88,
+      "fin": 32.1
+    },
+    {
+      "texte": "Onze.",
+      "mot": "Onze",
+      "scene": 10,
+      "debut": 32.1,
+      "fin": 33.12
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 11,
+      "debut": 33.92,
+      "fin": 33.92
+    },
+    {
+      "texte": "score",
+      "mot": "score",
+      "scene": 11,
+      "debut": 33.92,
+      "fin": 34.18
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 11,
+      "debut": 34.18,
+      "fin": 34.64
+    },
+    {
+      "texte": "commentaire !",
+      "mot": "commentaire",
+      "scene": 11,
+      "debut": 34.64,
+      "fin": 35.22
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 11,
+      "debut": 35.5,
+      "fin": 35.74
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 11,
+      "debut": 35.74,
+      "fin": 36.18
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 11,
+      "debut": 36.18,
+      "fin": 36.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 11,
+      "debut": 36.64,
+      "fin": 37.1
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 11,
+      "debut": 37.1,
+      "fin": 37.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 11,
+      "debut": 37.42,
+      "fin": 37.56
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 11,
+      "debut": 37.56,
+      "fin": 37.8
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "titre": "Mon pote et la Grande Muraille",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de narrateur complice qui raconte une conversation. Prends une voix un peu plus sûre d'elle et crâneuse pour les répliques du pote. Petit silence amusé avant « bon ok ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Mon pote est persuadé que la Grande Muraille se voit depuis l'espace.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "chat",
+          "ancre": "Mon",
+          "contact": "Thomas",
+          "avatar": "🧔"
+        },
+        {
+          "type": "message",
+          "ancre": "persuadé",
+          "de": "lui",
+          "texte": "Tu savais que la Grande Muraille se voit depuis l'espace ? 🚀"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Mon",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "moi",
+      "voix": "Moi : euh… t'es sûr ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "message",
+          "ancre": "sûr",
+          "de": "moi",
+          "texte": "euh… t'es sûr ? 🤨"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "lui",
+      "voix": "Lui : « Évidemment, c'est le seul monument visible ! »",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "message",
+          "ancre": "monument",
+          "de": "lui",
+          "texte": "Évidemment 😎 c'est le seul monument visible"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "preuve",
+      "voix": "Alors je lui envoie ça, sans un mot.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "messageCarte",
+          "ancre": "ça",
+          "de": "moi",
+          "index": 0
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "explication",
+      "voix": "Elle est trop étroite : depuis l'orbite, à l'œil nu, on ne la voit pas.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "message",
+          "ancre": "voit",
+          "de": "lui",
+          "texte": "bon ok 😶"
+        },
+        {
+          "type": "reaction",
+          "ancre": "pas",
+          "emoji": "😂"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Envoie ça à ton pote qui y croit encore. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Idées reçues",
+      "theme": "Culture générale",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Vrai ou faux ?",
+      "indiceType": "Affirmation",
+      "indice": "La Grande Muraille se voit depuis l’espace",
+      "reponse": "Faux : trop étroite",
+      "fiche": []
+    }
+  ]
+}

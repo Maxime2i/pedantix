@@ -1,0 +1,112 @@
+{
+  "titre": "Un fait par jour",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "Culture : les faits appris en jouant, sans effort.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le vrai bonus de mon jeu : un fait par jour, sans effort.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "bonus",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "fait",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "lundi",
+      "voix": "Lundi : Copenhague est reliée à la Suède par un pont.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Lundi",
+          "texte": "Copenhague ↔ Suède",
+          "sous": "reliées par le pont de l'Øresund",
+          "fin": "pont."
+        }
+      ]
+    },
+    {
+      "id": "mardi",
+      "voix": "Mardi : le Scrabble se vend en trente-six langues.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Mardi",
+          "texte": "Scrabble",
+          "sous": "vendu en 36 langues",
+          "fin": "langues."
+        }
+      ]
+    },
+    {
+      "id": "mercredi",
+      "voix": "Mercredi : l'âne entend particulièrement bien, grâce à ses longues oreilles.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Mercredi",
+          "texte": "L'âne",
+          "sous": "une ouïe particulièrement fine",
+          "fin": "oreilles."
+        },
+        {
+          "type": "pose",
+          "ancre": "oreilles.",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "an",
+      "voix": "En un an, ça fait trois cent soixante-cinq trucs à placer au dîner.",
+      "image": null,
+      "actions": [
+        {
+          "type": "chiffre",
+          "ancre": "trois",
+          "valeur": 365,
+          "sous": "trucs à placer au dîner",
+          "fin": "dîner."
+        },
+        {
+          "type": "pose",
+          "ancre": "dîner.",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

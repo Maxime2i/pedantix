@@ -1,0 +1,472 @@
+{
+  "duree": 29.36,
+  "dureeVoix": 27.56,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.3,
+      "fin": 4.3
+    },
+    {
+      "id": "q1",
+      "debut": 4.3,
+      "finVoix": 11.1,
+      "fin": 11.1
+    },
+    {
+      "id": "q2",
+      "debut": 11.1,
+      "finVoix": 16.036,
+      "fin": 16.036
+    },
+    {
+      "id": "q3",
+      "debut": 16.036,
+      "finVoix": 20.32,
+      "fin": 20.32
+    },
+    {
+      "id": "appel",
+      "debut": 20.32,
+      "finVoix": 27.56,
+      "fin": 29.36
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Samedi",
+      "mot": "Samedi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.6
+    },
+    {
+      "texte": "sport !",
+      "mot": "sport",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.98
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.66
+    },
+    {
+      "texte": "questions :",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 2.06
+    },
+    {
+      "texte": "essaie",
+      "mot": "essaie",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.62
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.62,
+      "fin": 2.7
+    },
+    {
+      "texte": "répondre",
+      "mot": "répondre",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 2.98
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.22
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 3.22,
+      "fin": 3.48
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 3.48,
+      "fin": 4.02
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 4.02,
+      "fin": 4.3
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 4.3,
+      "fin": 5.1
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.76
+    },
+    {
+      "texte": "première",
+      "mot": "première",
+      "scene": 1,
+      "debut": 5.76,
+      "fin": 6.06
+    },
+    {
+      "texte": "Coupe",
+      "mot": "Coupe",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.22
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.38
+    },
+    {
+      "texte": "monde",
+      "mot": "monde",
+      "scene": 1,
+      "debut": 6.38,
+      "fin": 6.52
+    },
+    {
+      "texte": "gagnée",
+      "mot": "gagnée",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.8
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 1,
+      "debut": 6.8,
+      "fin": 6.94
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 6.94,
+      "fin": 7.04
+    },
+    {
+      "texte": "France ?",
+      "mot": "France",
+      "scene": 1,
+      "debut": 7.04,
+      "fin": 7.4
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 1,
+      "debut": 9.66,
+      "fin": 10.02
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 1,
+      "debut": 10.02,
+      "fin": 10.38
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 10.38,
+      "fin": 10.74
+    },
+    {
+      "texte": "quatre-vingt-dix-huit.",
+      "mot": "quatre-vingt-dix-huit",
+      "scene": 1,
+      "debut": 10.74,
+      "fin": 11.1
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 11.1,
+      "fin": 11.46
+    },
+    {
+      "texte": "l'année",
+      "mot": "l'année",
+      "scene": 2,
+      "debut": 11.46,
+      "fin": 11.82
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 12.06
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 2,
+      "debut": 12.06,
+      "fin": 12.4
+    },
+    {
+      "texte": "Tour",
+      "mot": "Tour",
+      "scene": 2,
+      "debut": 12.4,
+      "fin": 12.58
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 12.58,
+      "fin": 12.7
+    },
+    {
+      "texte": "France ?",
+      "mot": "France",
+      "scene": 2,
+      "debut": 12.7,
+      "fin": 13.08
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 2,
+      "debut": 14.98,
+      "fin": 15.244
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 2,
+      "debut": 15.244,
+      "fin": 15.508
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 15.508,
+      "fin": 15.772
+    },
+    {
+      "texte": "trois.",
+      "mot": "trois",
+      "scene": 2,
+      "debut": 15.772,
+      "fin": 16.036
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 16.036,
+      "fin": 16.3
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 16.3,
+      "fin": 16.94
+    },
+    {
+      "texte": "ville",
+      "mot": "ville",
+      "scene": 3,
+      "debut": 16.94,
+      "fin": 17.22
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 17.22,
+      "fin": 17.44
+    },
+    {
+      "texte": "premiers",
+      "mot": "premiers",
+      "scene": 3,
+      "debut": 17.44,
+      "fin": 17.82
+    },
+    {
+      "texte": "Jeux",
+      "mot": "Jeux",
+      "scene": 3,
+      "debut": 17.82,
+      "fin": 18.04
+    },
+    {
+      "texte": "olympiques",
+      "mot": "olympiques",
+      "scene": 3,
+      "debut": 18.04,
+      "fin": 18.46
+    },
+    {
+      "texte": "modernes ?",
+      "mot": "modernes",
+      "scene": 3,
+      "debut": 18.46,
+      "fin": 19.44
+    },
+    {
+      "texte": "Athènes.",
+      "mot": "Athènes",
+      "scene": 3,
+      "debut": 19.44,
+      "fin": 20.32
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 20.32,
+      "fin": 21.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 21.18,
+      "fin": 21.44
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 21.44,
+      "fin": 21.68
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 21.68,
+      "fin": 22.34
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 22.34,
+      "fin": 22.46
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 22.46,
+      "fin": 22.96
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 22.96,
+      "fin": 23.44
+    },
+    {
+      "texte": "rendez-vous",
+      "mot": "rendez-vous",
+      "scene": 4,
+      "debut": 23.44,
+      "fin": 23.92
+    },
+    {
+      "texte": "samedi",
+      "mot": "samedi",
+      "scene": 4,
+      "debut": 23.92,
+      "fin": 24.46
+    },
+    {
+      "texte": "prochain.",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 24.46,
+      "fin": 24.78
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 24.78,
+      "fin": 25.46
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 25.46,
+      "fin": 25.94
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 25.94,
+      "fin": 26.4
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 26.4,
+      "fin": 26.68
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 26.68,
+      "fin": 27.14
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 27.14,
+      "fin": 27.34
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 27.34,
+      "fin": 27.56
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "duree": 20.86,
+  "dureeVoix": 19.06,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.76,
+      "fin": 3.3
+    },
+    {
+      "id": "j1",
+      "debut": 3.3,
+      "finVoix": 5.02,
+      "fin": 5.62
+    },
+    {
+      "id": "j4",
+      "debut": 5.62,
+      "finVoix": 6.96,
+      "fin": 7.4
+    },
+    {
+      "id": "j7",
+      "debut": 7.4,
+      "finVoix": 9.06,
+      "fin": 9.6
+    },
+    {
+      "id": "secret",
+      "debut": 9.6,
+      "finVoix": 16.76,
+      "fin": 17.4
+    },
+    {
+      "id": "appel",
+      "debut": 17.4,
+      "finVoix": 19.06,
+      "fin": 20.86
+    }
+  ],
+  "mots": [
+    {
+      "texte": "J'ai",
+      "mot": "J'ai",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "joué",
+      "mot": "joué",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.66
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.94
+    },
+    {
+      "texte": "jours",
+      "mot": "jours",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.18
+    },
+    {
+      "texte": "d'affilée",
+      "mot": "d'affilée",
+      "scene": 0,
+      "debut": 1.18,
+      "fin": 1.72
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 1.72,
+      "fin": 1.94
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.08
+    },
+    {
+      "texte": "propre",
+      "mot": "propre",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.42
+    },
+    {
+      "texte": "jeu.",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.76
+    },
+    {
+      "texte": "Jour",
+      "mot": "Jour",
+      "scene": 1,
+      "debut": 3.3,
+      "fin": 3.48
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.48,
+      "fin": 3.78
+    },
+    {
+      "texte": "quatre-vingt-seize",
+      "mot": "quatre-vingt-seize",
+      "scene": 1,
+      "debut": 4.08,
+      "fin": 4.74
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.02
+    },
+    {
+      "texte": "Jour",
+      "mot": "Jour",
+      "scene": 2,
+      "debut": 5.62,
+      "fin": 5.74
+    },
+    {
+      "texte": "quatre :",
+      "mot": "quatre",
+      "scene": 2,
+      "debut": 5.74,
+      "fin": 6.14
+    },
+    {
+      "texte": "cinquante-huit.",
+      "mot": "cinquante-huit",
+      "scene": 2,
+      "debut": 6.42,
+      "fin": 6.96
+    },
+    {
+      "texte": "Jour",
+      "mot": "Jour",
+      "scene": 3,
+      "debut": 7.4,
+      "fin": 7.68
+    },
+    {
+      "texte": "sept :",
+      "mot": "sept",
+      "scene": 3,
+      "debut": 7.68,
+      "fin": 8.04
+    },
+    {
+      "texte": "vingt-neuf !",
+      "mot": "vingt-neuf",
+      "scene": 3,
+      "debut": 8.42,
+      "fin": 9.06
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 9.6,
+      "fin": 9.94
+    },
+    {
+      "texte": "secret ?",
+      "mot": "secret",
+      "scene": 4,
+      "debut": 9.94,
+      "fin": 10.16
+    },
+    {
+      "texte": "Aucun.",
+      "mot": "Aucun",
+      "scene": 4,
+      "debut": 10.78,
+      "fin": 11.2
+    },
+    {
+      "texte": "Juste",
+      "mot": "Juste",
+      "scene": 4,
+      "debut": 11.62,
+      "fin": 12.02
+    },
+    {
+      "texte": "l'habitude.",
+      "mot": "l'habitude",
+      "scene": 4,
+      "debut": 12.02,
+      "fin": 12.28
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 4,
+      "debut": 12.96,
+      "fin": 13.1
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 4,
+      "debut": 13.1,
+      "fin": 13.34
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 4,
+      "debut": 13.34,
+      "fin": 13.52
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 4,
+      "debut": 13.52,
+      "fin": 13.74
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 14.12,
+      "fin": 14.28
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 4,
+      "debut": 14.28,
+      "fin": 14.42
+    },
+    {
+      "texte": "cerveau",
+      "mot": "cerveau",
+      "scene": 4,
+      "debut": 14.42,
+      "fin": 14.8
+    },
+    {
+      "texte": "s'entraîne",
+      "mot": "s'entraîne",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 15.18
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 4,
+      "debut": 15.18,
+      "fin": 15.38
+    },
+    {
+      "texte": "seul,",
+      "mot": "seul",
+      "scene": 4,
+      "debut": 15.38,
+      "fin": 15.62
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 4,
+      "debut": 15.62,
+      "fin": 16.12
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 4,
+      "debut": 16.12,
+      "fin": 16.26
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 16.26,
+      "fin": 16.34
+    },
+    {
+      "texte": "t'en",
+      "mot": "t'en",
+      "scene": 4,
+      "debut": 16.34,
+      "fin": 16.46
+    },
+    {
+      "texte": "rendes",
+      "mot": "rendes",
+      "scene": 4,
+      "debut": 16.46,
+      "fin": 16.62
+    },
+    {
+      "texte": "compte.",
+      "mot": "compte",
+      "scene": 4,
+      "debut": 16.62,
+      "fin": 16.76
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 17.4,
+      "fin": 17.96
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 18.34,
+      "fin": 18.64
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 18.64,
+      "fin": 18.82
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 18.82,
+      "fin": 18.92
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 18.92,
+      "fin": 19.06
+    }
+  ]
+}

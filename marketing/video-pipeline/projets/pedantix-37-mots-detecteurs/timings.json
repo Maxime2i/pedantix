@@ -1,0 +1,304 @@
+{
+  "duree": 16.3,
+  "dureeVoix": 14.5,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.64,
+      "fin": 2.64
+    },
+    {
+      "id": "ne",
+      "debut": 2.64,
+      "finVoix": 4.02,
+      "fin": 4.68
+    },
+    {
+      "id": "situe",
+      "debut": 4.68,
+      "finVoix": 7.98,
+      "fin": 8.96
+    },
+    {
+      "id": "exemple",
+      "debut": 8.96,
+      "finVoix": 12.34,
+      "fin": 13.24
+    },
+    {
+      "id": "appel",
+      "debut": 13.24,
+      "finVoix": 14.5,
+      "fin": 16.3
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ces",
+      "mot": "Ces",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.54
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.72
+    },
+    {
+      "texte": "marchent",
+      "mot": "marchent",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 1.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 0,
+      "debut": 1.14,
+      "fin": 1.24
+    },
+    {
+      "texte": "presque",
+      "mot": "presque",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.5
+    },
+    {
+      "texte": "toutes",
+      "mot": "toutes",
+      "scene": 0,
+      "debut": 1.5,
+      "fin": 1.88
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.26
+    },
+    {
+      "texte": "pages.",
+      "mot": "pages",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.64
+    },
+    {
+      "texte": "Né :",
+      "mot": "Né",
+      "scene": 1,
+      "debut": 2.64,
+      "fin": 2.82
+    },
+    {
+      "texte": "si",
+      "mot": "si",
+      "scene": 1,
+      "debut": 3.0,
+      "fin": 3.14
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 1,
+      "debut": 3.14,
+      "fin": 3.28
+    },
+    {
+      "texte": "s'allume,",
+      "mot": "s'allume",
+      "scene": 1,
+      "debut": 3.28,
+      "fin": 3.51
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 3.51,
+      "fin": 3.74
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.82
+    },
+    {
+      "texte": "personne.",
+      "mot": "personne",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 4.02
+    },
+    {
+      "texte": "Situé :",
+      "mot": "Situé",
+      "scene": 2,
+      "debut": 4.68,
+      "fin": 5.08
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 5.08,
+      "fin": 5.54
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 5.54,
+      "fin": 5.62
+    },
+    {
+      "texte": "lieu.",
+      "mot": "lieu",
+      "scene": 2,
+      "debut": 5.62,
+      "fin": 5.82
+    },
+    {
+      "texte": "Espèce :",
+      "mot": "Espèce",
+      "scene": 2,
+      "debut": 6.44,
+      "fin": 6.86
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 7.1,
+      "fin": 7.26
+    },
+    {
+      "texte": "animal",
+      "mot": "animal",
+      "scene": 2,
+      "debut": 7.26,
+      "fin": 7.58
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 2,
+      "debut": 7.58,
+      "fin": 7.74
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 2,
+      "debut": 7.74,
+      "fin": 7.82
+    },
+    {
+      "texte": "plante.",
+      "mot": "plante",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 7.98
+    },
+    {
+      "texte": "Exemple :",
+      "mot": "Exemple",
+      "scene": 3,
+      "debut": 8.96,
+      "fin": 9.3
+    },
+    {
+      "texte": "né,",
+      "mot": "né",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 9.8
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 10.04,
+      "fin": 10.14
+    },
+    {
+      "texte": "Barcelone…",
+      "mot": "Barcelone",
+      "scene": 3,
+      "debut": 10.14,
+      "fin": 10.62
+    },
+    {
+      "texte": "peintre…",
+      "mot": "peintre",
+      "scene": 3,
+      "debut": 11.04,
+      "fin": 11.34
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 11.34,
+      "fin": 11.75
+    },
+    {
+      "texte": "Joan",
+      "mot": "Joan",
+      "scene": 3,
+      "debut": 11.75,
+      "fin": 12.16
+    },
+    {
+      "texte": "Miró !",
+      "mot": "Miró",
+      "scene": 3,
+      "debut": 12.16,
+      "fin": 12.34
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 13.24,
+      "fin": 13.6
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 13.8,
+      "fin": 14.02
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.02,
+      "fin": 14.26
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 14.26,
+      "fin": 14.36
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 14.36,
+      "fin": 14.5
+    }
+  ]
+}

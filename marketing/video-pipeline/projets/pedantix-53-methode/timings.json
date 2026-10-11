@@ -1,0 +1,365 @@
+{
+  "duree": 20.38,
+  "dureeVoix": 18.58,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.9,
+      "fin": 2.9
+    },
+    {
+      "id": "e1",
+      "debut": 2.9,
+      "finVoix": 4.8,
+      "fin": 5.52
+    },
+    {
+      "id": "e2",
+      "debut": 5.52,
+      "finVoix": 9.4,
+      "fin": 10.14
+    },
+    {
+      "id": "e3",
+      "debut": 10.14,
+      "finVoix": 12.54,
+      "fin": 13.24
+    },
+    {
+      "id": "e4",
+      "debut": 13.24,
+      "finVoix": 14.9,
+      "fin": 15.84
+    },
+    {
+      "id": "cta",
+      "debut": 15.84,
+      "finVoix": 16.52,
+      "fin": 17.1
+    },
+    {
+      "id": "appel",
+      "debut": 17.1,
+      "finVoix": 18.58,
+      "fin": 20.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ma",
+      "mot": "Ma",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.38
+    },
+    {
+      "texte": "méthode",
+      "mot": "méthode",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.8
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.08
+    },
+    {
+      "texte": "finir",
+      "mot": "finir",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.44
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.54
+    },
+    {
+      "texte": "moins",
+      "mot": "moins",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.64
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.74
+    },
+    {
+      "texte": "cinquante",
+      "mot": "cinquante",
+      "scene": 0,
+      "debut": 1.74,
+      "fin": 1.92
+    },
+    {
+      "texte": "coups.",
+      "mot": "coups",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.9
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 2.9,
+      "fin": 3.04
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 3.6,
+      "fin": 3.66
+    },
+    {
+      "texte": "petits",
+      "mot": "petits",
+      "scene": 1,
+      "debut": 3.66,
+      "fin": 3.82
+    },
+    {
+      "texte": "mots,",
+      "mot": "mots",
+      "scene": 1,
+      "debut": 3.82,
+      "fin": 3.98
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 1,
+      "debut": 3.98,
+      "fin": 4.38
+    },
+    {
+      "texte": "voir",
+      "mot": "voir",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.5
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.5,
+      "fin": 4.6
+    },
+    {
+      "texte": "structure.",
+      "mot": "structure",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.8
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 5.52,
+      "fin": 5.98
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 6.42,
+      "fin": 6.52
+    },
+    {
+      "texte": "mot-détecteur,",
+      "mot": "mot-détecteur",
+      "scene": 2,
+      "debut": 6.52,
+      "fin": 7.24
+    },
+    {
+      "texte": "né,",
+      "mot": "né",
+      "scene": 2,
+      "debut": 7.56,
+      "fin": 8.02
+    },
+    {
+      "texte": "situé",
+      "mot": "situé",
+      "scene": 2,
+      "debut": 8.24,
+      "fin": 8.78
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 2,
+      "debut": 9.04,
+      "fin": 9.12
+    },
+    {
+      "texte": "espèce.",
+      "mot": "espèce",
+      "scene": 2,
+      "debut": 9.12,
+      "fin": 9.4
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 10.14,
+      "fin": 10.52
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 10.96,
+      "fin": 11.02
+    },
+    {
+      "texte": "champ",
+      "mot": "champ",
+      "scene": 3,
+      "debut": 11.02,
+      "fin": 11.22
+    },
+    {
+      "texte": "lexical,",
+      "mot": "lexical",
+      "scene": 3,
+      "debut": 11.22,
+      "fin": 11.62
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 11.62,
+      "fin": 12.02
+    },
+    {
+      "texte": "suivant",
+      "mot": "suivant",
+      "scene": 3,
+      "debut": 12.02,
+      "fin": 12.32
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 12.32,
+      "fin": 12.38
+    },
+    {
+      "texte": "gris.",
+      "mot": "gris",
+      "scene": 3,
+      "debut": 12.38,
+      "fin": 12.54
+    },
+    {
+      "texte": "Quatre :",
+      "mot": "Quatre",
+      "scene": 4,
+      "debut": 13.24,
+      "fin": 13.5
+    },
+    {
+      "texte": "seulement",
+      "mot": "seulement",
+      "scene": 4,
+      "debut": 13.8,
+      "fin": 14.06
+    },
+    {
+      "texte": "là,",
+      "mot": "là",
+      "scene": 4,
+      "debut": 14.06,
+      "fin": 14.36
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 14.68,
+      "fin": 14.76
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 4,
+      "debut": 14.76,
+      "fin": 14.9
+    },
+    {
+      "texte": "Teste-la",
+      "mot": "Teste-la",
+      "scene": 5,
+      "debut": 15.84,
+      "fin": 16.06
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 5,
+      "debut": 16.06,
+      "fin": 16.22
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 5,
+      "debut": 16.22,
+      "fin": 16.52
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 6,
+      "debut": 17.1,
+      "fin": 17.58
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 17.58,
+      "fin": 18.1
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 18.1,
+      "fin": 18.32
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 6,
+      "debut": 18.32,
+      "fin": 18.46
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 6,
+      "debut": 18.46,
+      "fin": 18.58
+    }
+  ]
+}

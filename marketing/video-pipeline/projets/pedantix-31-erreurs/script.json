@@ -1,0 +1,114 @@
+{
+  "titre": "3 erreurs de débutant",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 21
+  },
+  "objectif": "Tutoriel : erreurs fréquentes à éviter.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Trois erreurs que font tous les débutants sur mon jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Trois",
+          "titre": "3 erreurs de débutant"
+        },
+        {
+          "type": "pose",
+          "ancre": "erreurs",
+          "nom": "reflechit"
+        },
+        {
+          "type": "pose",
+          "ancre": "débutants",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "e1",
+      "voix": "Un : taper le titre au hasard dès le début.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "taper",
+          "texte": "Deviner le titre trop tôt"
+        },
+        {
+          "type": "pose",
+          "ancre": "hasard",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "voix": "Deux : ignorer le gris. Il te dit si tu chauffes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Deux",
+          "nom": "neutre"
+        },
+        {
+          "type": "point",
+          "ancre": "ignorer",
+          "texte": "Ignorer le gris"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "voix": "Trois : négliger les petits mots. Ils dessinent toute la page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "négliger",
+          "texte": "Négliger les petits mots"
+        },
+        {
+          "type": "pose",
+          "ancre": "dessinent",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Corrige ça, et tu verras la différence.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Corrige",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

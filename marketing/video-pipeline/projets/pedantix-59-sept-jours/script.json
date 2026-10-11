@@ -1,0 +1,183 @@
+{
+  "titre": "Je teste pendant 7 jours",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Progression : sept jours de suite, le score baisse.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "ecrans": {
+    "historique": {
+      "stats": {
+        "jouees": 7,
+        "trouvees": 7,
+        "moyenne": 59
+      },
+      "lignes": [
+        {
+          "titre": "Carte mémoire",
+          "date": "lun. 25 août",
+          "coups": 29
+        },
+        {
+          "titre": "Astéroïde",
+          "date": "dim. 24 août",
+          "coups": 37
+        },
+        {
+          "titre": "Achernar",
+          "date": "sam. 23 août",
+          "coups": 44
+        },
+        {
+          "titre": "Rod Laver",
+          "date": "ven. 22 août",
+          "coups": 58
+        },
+        {
+          "titre": "Hank Aaron",
+          "date": "jeu. 21 août",
+          "coups": 70
+        },
+        {
+          "titre": "Terbium",
+          "date": "mer. 20 août",
+          "coups": 81
+        },
+        {
+          "titre": "Feldspath",
+          "date": "mar. 19 août",
+          "coups": 96
+        }
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "J'ai joué sept jours d'affilée à mon propre jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "J'ai",
+          "texte": "7 jours de suite",
+          "fin": "jeu."
+        }
+      ]
+    },
+    {
+      "id": "j1",
+      "voix": "Jour un : quatre-vingt-seize coups.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Jour",
+          "mode": "telephone"
+        },
+        {
+          "type": "ecran",
+          "ancre": "Jour",
+          "nom": "historique"
+        },
+        {
+          "type": "appui",
+          "ancre": "quatre-vingt-seize",
+          "cible": "hist-6"
+        },
+        {
+          "type": "pose",
+          "ancre": "Jour",
+          "nom": "decu"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Jour",
+          "cible": "hist-4",
+          "echelle": 1.15,
+          "hauteur": 760
+        }
+      ]
+    },
+    {
+      "id": "j4",
+      "voix": "Jour quatre : cinquante-huit.",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "cinquante-huit.",
+          "cible": "hist-3"
+        },
+        {
+          "type": "pose",
+          "ancre": "cinquante-huit.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "j7",
+      "voix": "Jour sept : vingt-neuf !",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "vingt-neuf",
+          "cible": "hist-0"
+        },
+        {
+          "type": "disposition",
+          "ancre": "vingt-neuf",
+          "mode": "coin"
+        },
+        {
+          "type": "pose",
+          "ancre": "vingt-neuf",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "secret",
+      "voix": "Le secret ? Aucun. Juste l'habitude. Une page par jour, et ton cerveau s'entraîne tout seul, sans que tu t'en rendes compte.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Le",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Le",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "l'habitude.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

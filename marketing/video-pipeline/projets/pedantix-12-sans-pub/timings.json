@@ -1,0 +1,324 @@
+{
+  "duree": 15.5,
+  "dureeVoix": 13.2,
+  "scenes": [
+    {
+      "id": "pub",
+      "debut": 0.0,
+      "finVoix": 1.68,
+      "fin": 2.16
+    },
+    {
+      "id": "compte",
+      "debut": 2.16,
+      "finVoix": 3.22,
+      "fin": 3.42
+    },
+    {
+      "id": "abonnement",
+      "debut": 3.42,
+      "finVoix": 5.14,
+      "fin": 6.1
+    },
+    {
+      "id": "pourquoi",
+      "debut": 6.1,
+      "finVoix": 9.033,
+      "fin": 9.033
+    },
+    {
+      "id": "simple",
+      "debut": 9.033,
+      "finVoix": 10.72,
+      "fin": 11.74
+    },
+    {
+      "id": "appel",
+      "debut": 11.74,
+      "finVoix": 13.2,
+      "fin": 15.5
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.56
+    },
+    {
+      "texte": "jeu,",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.74
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.16
+    },
+    {
+      "texte": "n'y",
+      "mot": "n'y",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.26
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.28
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 1.28,
+      "fin": 1.44
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.44,
+      "fin": 1.56
+    },
+    {
+      "texte": "pub.",
+      "mot": "pub",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.68
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 1,
+      "debut": 2.16,
+      "fin": 2.4
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 2.4,
+      "fin": 2.52
+    },
+    {
+      "texte": "compte",
+      "mot": "compte",
+      "scene": 1,
+      "debut": 2.52,
+      "fin": 2.753
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 2.753,
+      "fin": 2.987
+    },
+    {
+      "texte": "créer.",
+      "mot": "créer",
+      "scene": 1,
+      "debut": 2.987,
+      "fin": 3.22
+    },
+    {
+      "texte": "Pas",
+      "mot": "Pas",
+      "scene": 2,
+      "debut": 3.42,
+      "fin": 3.62
+    },
+    {
+      "texte": "d'abonnement,",
+      "mot": "d'abonnement",
+      "scene": 2,
+      "debut": 3.62,
+      "fin": 4.08
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 4.42,
+      "fin": 4.54
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 4.54,
+      "fin": 4.66
+    },
+    {
+      "texte": "vies",
+      "mot": "vies",
+      "scene": 2,
+      "debut": 4.66,
+      "fin": 4.78
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 2,
+      "debut": 4.78,
+      "fin": 4.86
+    },
+    {
+      "texte": "racheter.",
+      "mot": "racheter",
+      "scene": 2,
+      "debut": 4.86,
+      "fin": 5.14
+    },
+    {
+      "texte": "Pourquoi ?",
+      "mot": "Pourquoi",
+      "scene": 3,
+      "debut": 6.1,
+      "fin": 6.46
+    },
+    {
+      "texte": "Parce",
+      "mot": "Parce",
+      "scene": 3,
+      "debut": 6.82,
+      "fin": 7.0
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 3,
+      "debut": 7.0,
+      "fin": 7.18
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 7.18,
+      "fin": 7.3
+    },
+    {
+      "texte": "déteste",
+      "mot": "déteste",
+      "scene": 3,
+      "debut": 7.3,
+      "fin": 7.88
+    },
+    {
+      "texte": "ça,",
+      "mot": "ça",
+      "scene": 3,
+      "debut": 7.88,
+      "fin": 8.14
+    },
+    {
+      "texte": "moi",
+      "mot": "moi",
+      "scene": 3,
+      "debut": 8.3,
+      "fin": 8.667
+    },
+    {
+      "texte": "aussi.",
+      "mot": "aussi",
+      "scene": 3,
+      "debut": 8.667,
+      "fin": 9.033
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 4,
+      "debut": 9.033,
+      "fin": 9.4
+    },
+    {
+      "texte": "ouvres,",
+      "mot": "ouvres",
+      "scene": 4,
+      "debut": 9.4,
+      "fin": 9.58
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 9.9,
+      "fin": 10.0
+    },
+    {
+      "texte": "joues,",
+      "mot": "joues",
+      "scene": 4,
+      "debut": 10.0,
+      "fin": 10.26
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 4,
+      "debut": 10.42,
+      "fin": 10.6
+    },
+    {
+      "texte": "tout.",
+      "mot": "tout",
+      "scene": 4,
+      "debut": 10.6,
+      "fin": 10.72
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 11.74,
+      "fin": 12.1
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 12.36,
+      "fin": 12.7
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 12.7,
+      "fin": 12.92
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 12.92,
+      "fin": 13.06
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 13.06,
+      "fin": 13.2
+    }
+  ]
+}

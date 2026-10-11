@@ -1,0 +1,203 @@
+{
+  "titre": "Mercato : 3 secondes pour choisir",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "Engagement + téléchargements. Écran mercato réel ; 22 ans, 3 étoiles, note 74 à Lens (D1) : offres Paris, Brighton, Marseille cohérentes avec le niveau. Après le transfert : club Élite, salaire en hausse, jauge Pression qui monte.",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Urgence ludique, débit rapide. Compte à rebours tendu. « Signé » claqué. Fin en défi."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 22,
+        "annee": 2032,
+        "poste": "milieu",
+        "note": 74,
+        "argent": "3,1 M€",
+        "etoiles": 3,
+        "jauges": {
+          "forme": 78,
+          "moral": 72,
+          "confiance": 64,
+          "pression": 34
+        },
+        "niveau": "d1",
+        "club": "Lens",
+        "couleurs": [
+          "#e52a1e",
+          "#f5c400"
+        ]
+      },
+      "carte": {
+        "genre": "mercato",
+        "tag": "🪟 MERCATO · 22 ANS",
+        "texte": "Votre nom commence à circuler sur le marché des transferts.",
+        "offres": [
+          {
+            "niveau": "elite",
+            "club": "Paris",
+            "couleurs": [
+              "#e52a1e",
+              "#1a4fb5"
+            ],
+            "pays": "france",
+            "detail": "4,2 M€/an · indemnité 38 M€"
+          },
+          {
+            "niveau": "d1",
+            "club": "Brighton",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ],
+            "pays": "angleterre",
+            "detail": "1,8 M€/an · indemnité 22 M€"
+          },
+          {
+            "niveau": "elite",
+            "club": "Marseille",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ],
+            "pays": "france",
+            "detail": "3,6 M€/an · indemnité 31 M€"
+          }
+        ],
+        "bouton": "RESTER / RECONDUIRE"
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mercato d'été. Trois clubs veulent te recruter, et tu as trois secondes pour choisir.",
+      "animation": "Carte mercato à trois offres.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Mercato"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "decompte",
+      "voix": "Paris, Brighton ou Marseille ? Trois… deux… un…",
+      "animation": "Doigt sur chaque offre, compte à rebours.",
+      "image": null,
+      "actions": [
+        {
+          "type": "appui",
+          "ancre": "Paris",
+          "cible": "p-opt-1"
+        },
+        {
+          "type": "appui",
+          "ancre": "Brighton",
+          "cible": "p-opt-2"
+        },
+        {
+          "type": "appui",
+          "ancre": "Marseille",
+          "cible": "p-opt-3"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "Trois",
+          "valeur": 1,
+          "depart": 3,
+          "montee": 1.4,
+          "sous": "Choisis !",
+          "duree": 2.4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "choix",
+      "voix": "Moi, je fonce à Paris. Signé.",
+      "animation": "Option Paris, tampon, en-tête mis à jour.",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "fonce",
+          "n": 1
+        },
+        {
+          "type": "tampon",
+          "ancre": "Signé",
+          "texte": "Signé",
+          "couleur": "menthe"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Signé",
+          "age": 22,
+          "annee": 2032,
+          "note": 76,
+          "argent": "5,8 M€",
+          "etoiles": 4,
+          "niveau": "elite",
+          "club": "Paris",
+          "couleurs": [
+            "#e52a1e",
+            "#1a4fb5"
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "pression",
+      "voix": "Nouveau club, plus d'argent… mais aussi beaucoup plus de pression.",
+      "animation": "Zoom sur l'en-tête, jauge Pression qui passe au rouge.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Nouveau",
+          "cible": "p-jauges",
+          "echelle": 1.25,
+          "hauteur": 900
+        },
+        {
+          "type": "jauges",
+          "ancre": "pression",
+          "pression": 64
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Et toi, t'aurais signé où ? Dis-le en commentaire. Destiny FC, gratuit.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

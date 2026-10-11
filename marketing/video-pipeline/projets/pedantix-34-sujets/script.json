@@ -1,0 +1,126 @@
+{
+  "titre": "Les sujets les plus inattendus",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Culture / humour : la variété des pages tombées.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Environ dix mille sujets possibles… et voilà ceux qui sont déjà tombés.",
+      "image": null,
+      "actions": [
+        {
+          "type": "liste",
+          "ancre": "Environ",
+          "titre": "Déjà tombés dans Pédantix"
+        },
+        {
+          "type": "pose",
+          "ancre": "tombés.",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "radis",
+      "voix": "Le radis blanc.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "radis",
+          "texte": "Le radis blanc"
+        },
+        {
+          "type": "pose",
+          "ancre": "radis",
+          "nom": "choque"
+        }
+      ]
+    },
+    {
+      "id": "ane",
+      "voix": "L'âne commun.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "L'âne",
+          "texte": "L'âne commun"
+        },
+        {
+          "type": "pose",
+          "ancre": "L'âne",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "pub",
+      "voix": "Le pub, oui, le bar anglais.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "pub,",
+          "texte": "Le pub (le bar)"
+        },
+        {
+          "type": "pose",
+          "ancre": "oui,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "carte",
+      "voix": "Et la carte mémoire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "point",
+          "ancre": "carte",
+          "texte": "La carte mémoire"
+        },
+        {
+          "type": "pose",
+          "ancre": "mémoire.",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Demain, ce sera peut-être ton sujet préféré.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Demain,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

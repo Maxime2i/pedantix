@@ -1,0 +1,182 @@
+{
+  "titre": "POV : un agent affamé t'a repéré",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements. Création du joueur avec les vraies listes de l'app (poste Milieu, origine Quartier populaire, entourage « Agent affamé » et sa vraie description). Les clubs proposés suivent le potentiel (pas d'Élite).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de narration POV, complice et un peu moqueur sur l'agent (« et n'oublie pas sa commission » avec un clin d'œil dans la voix)."
+  },
+  "ecranInitial": "creation",
+  "dispositionInitiale": "avatar",
+  "poseInitiale": "neutre",
+  "ecrans": {
+    "creation": {
+      "champs": {
+        "nationalite": "France"
+      }
+    },
+    "clubs": {
+      "potentiel": 3
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "POV : t'as seize ans, et un agent affamé vient de te repérer.",
+      "animation": "Avatar face caméra, carte titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "POV",
+          "texte": "POV : tu as *16 ans*",
+          "sous": "Un agent vient de te repérer"
+        },
+        {
+          "type": "pose",
+          "ancre": "agent",
+          "nom": "clin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "creation",
+      "voix": "Je crée mon joueur. Lucas Morel, milieu, né dans un quartier populaire.",
+      "animation": "Écran « Crée ton joueur ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "crée",
+          "mode": "coin"
+        },
+        {
+          "type": "ecran",
+          "ancre": "crée",
+          "nom": "creation"
+        },
+        {
+          "type": "pose",
+          "ancre": "crée",
+          "nom": "neutre"
+        },
+        {
+          "type": "taper",
+          "ancre": "Lucas",
+          "mot": "Lucas Morel"
+        },
+        {
+          "type": "feuille",
+          "ancre": "milieu",
+          "nom": "poste",
+          "position": "debut"
+        },
+        {
+          "type": "choisir",
+          "ancre": "né",
+          "valeur": "Milieu"
+        },
+        {
+          "type": "choisir",
+          "ancre": "populaire",
+          "nom": "origine",
+          "valeur": "Quartier populaire"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "agent",
+      "voix": "Entourage : l'agent affamé. Il jure de m'emmener au sommet… et n'oublie pas sa commission.",
+      "animation": "Feuille Entourage, Agent affamé.",
+      "image": null,
+      "actions": [
+        {
+          "type": "feuille",
+          "ancre": "Entourage",
+          "nom": "entourage"
+        },
+        {
+          "type": "choisir",
+          "ancre": "Il",
+          "valeur": "Agent affamé"
+        },
+        {
+          "type": "choisir",
+          "ancre": "sommet",
+          "nom": "style",
+          "valeur": "Bien équilibré"
+        },
+        {
+          "type": "attributs",
+          "ancre": "sommet",
+          "tec": 61,
+          "phy": 50,
+          "men": 58,
+          "cha": 55
+        },
+        {
+          "type": "pose",
+          "ancre": "commission",
+          "nom": "clin"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "clubs",
+      "voix": "Résultat : les recruteurs m'ont repéré. À moi de choisir mon club.",
+      "animation": "Les clubs vous ont repéré ; appui sur Lens.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "recruteurs",
+          "nom": "clubs"
+        },
+        {
+          "type": "pose",
+          "ancre": "recruteurs",
+          "nom": "fier"
+        },
+        {
+          "type": "appui",
+          "ancre": "club",
+          "cible": "cl-4"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Et toi, tu partirais avec quel entourage ? Destiny FC, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "toi",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "fin",
+          "ancre": "Destiny"
+        }
+      ],
+      "bruitages": []
+    }
+  ],
+  "fin": {
+    "promesse": "De 16 ans à la retraite,<br>écris ta <em>légende</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  }
+}

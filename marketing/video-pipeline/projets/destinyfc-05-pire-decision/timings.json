@@ -1,0 +1,485 @@
+{
+  "duree": 21.92,
+  "dureeVoix": 20.12,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.5,
+      "fin": 4.1
+    },
+    {
+      "id": "bevue",
+      "debut": 4.1,
+      "finVoix": 6.88,
+      "fin": 7.54
+    },
+    {
+      "id": "choix",
+      "debut": 7.54,
+      "finVoix": 9.64,
+      "fin": 10.32
+    },
+    {
+      "id": "resultat",
+      "debut": 10.32,
+      "finVoix": 12.36,
+      "fin": 13.06
+    },
+    {
+      "id": "twist",
+      "debut": 13.06,
+      "finVoix": 15.1,
+      "fin": 15.74
+    },
+    {
+      "id": "cta",
+      "debut": 15.74,
+      "finVoix": 20.12,
+      "fin": 21.92
+    }
+  ],
+  "mots": [
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "pire",
+      "mot": "pire",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.82
+    },
+    {
+      "texte": "décision",
+      "mot": "décision",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.36
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.36
+    },
+    {
+      "texte": "toute",
+      "mot": "toute",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.66
+    },
+    {
+      "texte": "ma",
+      "mot": "ma",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.84
+    },
+    {
+      "texte": "carrière ?",
+      "mot": "carrière",
+      "scene": 0,
+      "debut": 1.84,
+      "fin": 2.26
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 3.18
+    },
+    {
+      "texte": "vous",
+      "mot": "vous",
+      "scene": 0,
+      "debut": 3.18,
+      "fin": 3.28
+    },
+    {
+      "texte": "montre.",
+      "mot": "montre",
+      "scene": 0,
+      "debut": 3.28,
+      "fin": 3.5
+    },
+    {
+      "texte": "Dix-sept",
+      "mot": "Dix-sept",
+      "scene": 1,
+      "debut": 4.1,
+      "fin": 4.4
+    },
+    {
+      "texte": "ans.",
+      "mot": "ans",
+      "scene": 1,
+      "debut": 4.4,
+      "fin": 4.62
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 5.1,
+      "fin": 5.24
+    },
+    {
+      "texte": "fais",
+      "mot": "fais",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.36
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 5.36,
+      "fin": 5.46
+    },
+    {
+      "texte": "grosse",
+      "mot": "grosse",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.72
+    },
+    {
+      "texte": "erreur,",
+      "mot": "erreur",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 6.22
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.34
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 6.34,
+      "fin": 6.44
+    },
+    {
+      "texte": "but",
+      "mot": "but",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.52
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.62
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.78
+    },
+    {
+      "texte": "eux.",
+      "mot": "eux",
+      "scene": 1,
+      "debut": 6.78,
+      "fin": 6.88
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.78
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 8.0,
+      "fin": 8.08
+    },
+    {
+      "texte": "décide",
+      "mot": "décide",
+      "scene": 2,
+      "debut": 8.08,
+      "fin": 8.42
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 8.42,
+      "fin": 8.54
+    },
+    {
+      "texte": "hausser",
+      "mot": "hausser",
+      "scene": 2,
+      "debut": 8.54,
+      "fin": 8.86
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 8.92
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 8.92,
+      "fin": 9.06
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 2,
+      "debut": 9.06,
+      "fin": 9.16
+    },
+    {
+      "texte": "me",
+      "mot": "me",
+      "scene": 2,
+      "debut": 9.16,
+      "fin": 9.28
+    },
+    {
+      "texte": "rattraper.",
+      "mot": "rattraper",
+      "scene": 2,
+      "debut": 9.28,
+      "fin": 9.64
+    },
+    {
+      "texte": "Nouvelle",
+      "mot": "Nouvelle",
+      "scene": 3,
+      "debut": 10.32,
+      "fin": 10.54
+    },
+    {
+      "texte": "bourde.",
+      "mot": "bourde",
+      "scene": 3,
+      "debut": 10.54,
+      "fin": 10.76
+    },
+    {
+      "texte": "Défaite",
+      "mot": "Défaite",
+      "scene": 3,
+      "debut": 11.38,
+      "fin": 11.82
+    },
+    {
+      "texte": "trois-zéro.",
+      "mot": "trois-zéro",
+      "scene": 3,
+      "debut": 11.82,
+      "fin": 12.36
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 13.06,
+      "fin": 13.2
+    },
+    {
+      "texte": "pire ?",
+      "mot": "pire",
+      "scene": 4,
+      "debut": 13.2,
+      "fin": 13.46
+    },
+    {
+      "texte": "Ça",
+      "mot": "Ça",
+      "scene": 4,
+      "debut": 13.74,
+      "fin": 13.9
+    },
+    {
+      "texte": "avait",
+      "mot": "avait",
+      "scene": 4,
+      "debut": 13.9,
+      "fin": 14.04
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 4,
+      "debut": 14.04,
+      "fin": 14.22
+    },
+    {
+      "texte": "d'une",
+      "mot": "d'une",
+      "scene": 4,
+      "debut": 14.22,
+      "fin": 14.4
+    },
+    {
+      "texte": "chance",
+      "mot": "chance",
+      "scene": 4,
+      "debut": 14.4,
+      "fin": 14.52
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 14.52,
+      "fin": 14.72
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 14.72,
+      "fin": 14.8
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 14.82
+    },
+    {
+      "texte": "marcher.",
+      "mot": "marcher",
+      "scene": 4,
+      "debut": 14.82,
+      "fin": 15.1
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 5,
+      "debut": 15.74,
+      "fin": 15.98
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 15.98,
+      "fin": 16.36
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 16.36,
+      "fin": 16.68
+    },
+    {
+      "texte": "même",
+      "mot": "même",
+      "scene": 5,
+      "debut": 17.08,
+      "fin": 17.18
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 5,
+      "debut": 17.18,
+      "fin": 17.34
+    },
+    {
+      "texte": "bon",
+      "mot": "bon",
+      "scene": 5,
+      "debut": 17.34,
+      "fin": 17.58
+    },
+    {
+      "texte": "choix",
+      "mot": "choix",
+      "scene": 5,
+      "debut": 17.58,
+      "fin": 17.82
+    },
+    {
+      "texte": "peut",
+      "mot": "peut",
+      "scene": 5,
+      "debut": 17.82,
+      "fin": 17.98
+    },
+    {
+      "texte": "mal",
+      "mot": "mal",
+      "scene": 5,
+      "debut": 17.98,
+      "fin": 18.12
+    },
+    {
+      "texte": "tourner.",
+      "mot": "tourner",
+      "scene": 5,
+      "debut": 18.12,
+      "fin": 18.42
+    },
+    {
+      "texte": "Gratuit,",
+      "mot": "Gratuit",
+      "scene": 5,
+      "debut": 18.9,
+      "fin": 19.28
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 19.28,
+      "fin": 19.62
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 19.62,
+      "fin": 19.84
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 19.84,
+      "fin": 19.94
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 19.94,
+      "fin": 20.12
+    }
+  ]
+}

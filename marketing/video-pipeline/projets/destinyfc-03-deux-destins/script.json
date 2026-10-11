@@ -1,0 +1,182 @@
+{
+  "titre": "Même joueur, deux destins",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 30
+  },
+  "objectif": "Téléchargements. Une seule décision réelle du jeu (ev_growth_spurt, 16 ans) et ses deux issues : protocole respecté (+5 Physique, +3 Discipline) ou pubalgie (−4 Moral, 8 semaines d'absence). Les deux issues existent dans le jeu (50 % pour la pubalgie si on continue de jouer).",
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de narrateur intrigant. « Destin un » et « Destin deux » bien détachés. Soulagement sur « un corps tout neuf », grimace dans la voix sur « Pubalgie ». Fin posée, conviction."
+  },
+  "ecranInitial": "partie",
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 16,
+        "annee": 2026,
+        "poste": "milieu",
+        "note": 56,
+        "argent": "50 k€",
+        "etoiles": 1,
+        "jauges": {
+          "forme": 74,
+          "moral": 70,
+          "confiance": 58,
+          "pression": 30
+        },
+        "niveau": "d2",
+        "club": "Sochaux",
+        "couleurs": [
+          "#f5c400",
+          "#1a4fb5"
+        ]
+      },
+      "carte": "croissance"
+    }
+  },
+  "fin": {
+    "promesse": "Une décision,<br>toute une <em>carrière</em>",
+    "detail": "Chaque choix compte",
+    "cta": "Gratuit · iPhone et Android",
+    "pose": "salut"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Même joueur, même âge, une seule décision… et deux carrières complètement différentes.",
+      "animation": "Texte géant.",
+      "image": null,
+      "actions": [
+        {
+          "type": "typo",
+          "ancre": "Même",
+          "texte": "Une *seule* décision",
+          "sous": "Deux destins",
+          "fin": "différentes"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "situation",
+      "voix": "Seize ans : je grandis de huit centimètres. Le staff médical est inquiet.",
+      "animation": "Événement réel « Huit centimètres gagnés ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Seize"
+        },
+        {
+          "type": "zoom",
+          "ancre": "grandis",
+          "cible": "p-carte",
+          "echelle": 1.2,
+          "hauteur": 960
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "destin1",
+      "voix": "Destin un : je respecte le protocole. Six mois de rigueur… et un corps tout neuf.",
+      "animation": "Option 1, résultat positif.",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "Destin",
+          "texte": "Destin 1",
+          "couleur": "menthe",
+          "duree": 1.4
+        },
+        {
+          "type": "option",
+          "ancre": "respecte",
+          "n": 1
+        },
+        {
+          "type": "carte",
+          "ancre": "rigueur",
+          "id": "croissance-ok"
+        },
+        {
+          "type": "joueur",
+          "ancre": "corps",
+          "note": 59
+        },
+        {
+          "type": "jauges",
+          "ancre": "corps",
+          "forme": 80
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "destin2",
+      "voix": "Destin deux : je continue à jouer. Pubalgie. Huit semaines sur le flanc.",
+      "animation": "Retour au même événement, option 2, pubalgie.",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Destin",
+          "id": "croissance"
+        },
+        {
+          "type": "joueur",
+          "ancre": "Destin",
+          "note": 56
+        },
+        {
+          "type": "jauges",
+          "ancre": "Destin",
+          "forme": 74
+        },
+        {
+          "type": "tampon",
+          "ancre": "Destin",
+          "texte": "Destin 2",
+          "couleur": "rouge",
+          "duree": 1.4
+        },
+        {
+          "type": "option",
+          "ancre": "continue",
+          "n": 2
+        },
+        {
+          "type": "carte",
+          "ancre": "Pubalgie",
+          "id": "croissance-pubalgie"
+        },
+        {
+          "type": "jauges",
+          "ancre": "Huit",
+          "moral": 66
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Une seule décision, toute une carrière. Dans Destiny FC, chaque choix compte.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Dans"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

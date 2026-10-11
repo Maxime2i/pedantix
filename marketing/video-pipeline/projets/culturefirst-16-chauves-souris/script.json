@@ -1,0 +1,163 @@
+{
+  "titre": "Les chauves-souris sont aveugles ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de révélation, « Faux. » sec. Fasciné sur l'écholocation, complice ensuite, énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "mythe",
+      "voix": "Les chauves-souris sont aveugles ? Faux.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Les",
+          "texte": "Les chauves-souris sont aveugles ?",
+          "sous": "Idée reçue"
+        },
+        {
+          "type": "tampon",
+          "ancre": "Faux",
+          "texte": "FAUX",
+          "couleur": "rouge"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Les",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "explication",
+      "voix": "Elles voient bien, et beaucoup utilisent en plus l'écholocation : elles « voient » avec le son.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Elles"
+        },
+        {
+          "type": "entree",
+          "ancre": "Elles"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Elles",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "voient"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "retiens",
+      "voix": "La prochaine fois qu'on te dit le contraire, tu sauras quoi répondre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "La",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "sauras",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Dans Culture First, il y a des cartes sur les animaux, l'histoire, la géo… à réviser juste avant de les oublier.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Dans",
+          "nom": "catalogue"
+        },
+        {
+          "type": "zoom",
+          "ancre": "animaux",
+          "cible": "c-theme-5",
+          "echelle": 1.3
+        },
+        {
+          "type": "appui",
+          "ancre": "animaux",
+          "cible": "c-theme-5"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Idées reçues sur les animaux",
+      "theme": "Animaux et Plantes",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Vrai ou faux ?",
+      "indiceType": "Affirmation",
+      "indice": "Les chauves-souris sont aveugles",
+      "reponse": "Faux",
+      "fiche": [
+        [
+          "Vue",
+          "fonctionnelle"
+        ],
+        [
+          "En plus",
+          "l’écholocation"
+        ]
+      ]
+    }
+  ]
+}

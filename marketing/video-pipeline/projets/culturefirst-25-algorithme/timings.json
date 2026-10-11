@@ -1,0 +1,409 @@
+{
+  "duree": 22.38,
+  "dureeVoix": 20.58,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.22,
+      "fin": 2.92
+    },
+    {
+      "id": "difference",
+      "debut": 2.92,
+      "finVoix": 6.02,
+      "fin": 6.84
+    },
+    {
+      "id": "algo",
+      "debut": 6.84,
+      "finVoix": 12.64,
+      "fin": 13.36
+    },
+    {
+      "id": "precis",
+      "debut": 13.36,
+      "finVoix": 15.08,
+      "fin": 15.98
+    },
+    {
+      "id": "appel",
+      "debut": 15.98,
+      "finVoix": 20.58,
+      "fin": 22.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ta",
+      "mot": "Ta",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.44
+    },
+    {
+      "texte": "mémoire",
+      "mot": "mémoire",
+      "scene": 0,
+      "debut": 0.44,
+      "fin": 0.8
+    },
+    {
+      "texte": "ne",
+      "mot": "ne",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 0.94
+    },
+    {
+      "texte": "marche",
+      "mot": "marche",
+      "scene": 0,
+      "debut": 0.94,
+      "fin": 1.16
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 1.16,
+      "fin": 1.4
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.62
+    },
+    {
+      "texte": "celle",
+      "mot": "celle",
+      "scene": 0,
+      "debut": 1.62,
+      "fin": 1.8
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 1.98
+    },
+    {
+      "texte": "autres.",
+      "mot": "autres",
+      "scene": 0,
+      "debut": 1.98,
+      "fin": 2.22
+    },
+    {
+      "texte": "Certains",
+      "mot": "Certains",
+      "scene": 1,
+      "debut": 2.92,
+      "fin": 3.42
+    },
+    {
+      "texte": "retiennent",
+      "mot": "retiennent",
+      "scene": 1,
+      "debut": 3.42,
+      "fin": 3.72
+    },
+    {
+      "texte": "vite,",
+      "mot": "vite",
+      "scene": 1,
+      "debut": 3.72,
+      "fin": 3.98
+    },
+    {
+      "texte": "d'autres",
+      "mot": "d'autres",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.72
+    },
+    {
+      "texte": "ont",
+      "mot": "ont",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.86
+    },
+    {
+      "texte": "besoin",
+      "mot": "besoin",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 5.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.16,
+      "fin": 5.32
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 5.32,
+      "fin": 5.5
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.5,
+      "fin": 5.64
+    },
+    {
+      "texte": "révisions.",
+      "mot": "révisions",
+      "scene": 1,
+      "debut": 5.64,
+      "fin": 6.02
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.24
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 2,
+      "debut": 7.24,
+      "fin": 7.54
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 2,
+      "debut": 7.54,
+      "fin": 7.92
+    },
+    {
+      "texte": "l'algorithme",
+      "mot": "l'algorithme",
+      "scene": 2,
+      "debut": 8.3,
+      "fin": 8.92
+    },
+    {
+      "texte": "personnalisé",
+      "mot": "personnalisé",
+      "scene": 2,
+      "debut": 8.92,
+      "fin": 9.72
+    },
+    {
+      "texte": "analyse",
+      "mot": "analyse",
+      "scene": 2,
+      "debut": 9.72,
+      "fin": 10.14
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.4
+    },
+    {
+      "texte": "réponses",
+      "mot": "réponses",
+      "scene": 2,
+      "debut": 10.4,
+      "fin": 10.9
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 10.9,
+      "fin": 11.26
+    },
+    {
+      "texte": "ajuste",
+      "mot": "ajuste",
+      "scene": 2,
+      "debut": 11.26,
+      "fin": 11.76
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 11.76,
+      "fin": 11.86
+    },
+    {
+      "texte": "délais",
+      "mot": "délais",
+      "scene": 2,
+      "debut": 11.86,
+      "fin": 12.06
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 2,
+      "debut": 12.06,
+      "fin": 12.18
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 2,
+      "debut": 12.18,
+      "fin": 12.26
+    },
+    {
+      "texte": "mémoire.",
+      "mot": "mémoire",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.64
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 13.36,
+      "fin": 13.6
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 13.6,
+      "fin": 13.74
+    },
+    {
+      "texte": "révises,",
+      "mot": "révises",
+      "scene": 3,
+      "debut": 13.74,
+      "fin": 14.14
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 14.5,
+      "fin": 14.64
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 14.64,
+      "fin": 14.84
+    },
+    {
+      "texte": "précis.",
+      "mot": "précis",
+      "scene": 3,
+      "debut": 14.84,
+      "fin": 15.08
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 15.98,
+      "fin": 16.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.16,
+      "fin": 16.36
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 16.36,
+      "fin": 16.56
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 16.56,
+      "fin": 16.76
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 16.76,
+      "fin": 16.96
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 16.96,
+      "fin": 17.32
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.1,
+      "fin": 18.38
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 18.38,
+      "fin": 18.78
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 19.06,
+      "fin": 19.56
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 19.56,
+      "fin": 19.76
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.76,
+      "fin": 20.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 20.04,
+      "fin": 20.3
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.3,
+      "fin": 20.58
+    }
+  ]
+}

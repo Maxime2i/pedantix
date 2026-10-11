@@ -1,0 +1,459 @@
+{
+  "duree": 22.98,
+  "dureeVoix": 21.18,
+  "scenes": [
+    {
+      "id": "defi",
+      "debut": 0.0,
+      "finVoix": 3.36,
+      "fin": 4.36
+    },
+    {
+      "id": "reponse",
+      "debut": 4.36,
+      "finVoix": 9.42,
+      "fin": 10.14
+    },
+    {
+      "id": "pack",
+      "debut": 10.14,
+      "finVoix": 15.56,
+      "fin": 16.04
+    },
+    {
+      "id": "app",
+      "debut": 16.04,
+      "finVoix": 21.18,
+      "fin": 22.98
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.46
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.72
+    },
+    {
+      "texte": "secondes :",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 1.28
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 1.7
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 1.92
+    },
+    {
+      "texte": "peint",
+      "mot": "peint",
+      "scene": 0,
+      "debut": 1.92,
+      "fin": 2.22
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.42
+    },
+    {
+      "texte": "Jeune",
+      "mot": "Jeune",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.62
+    },
+    {
+      "texte": "Fille",
+      "mot": "Fille",
+      "scene": 0,
+      "debut": 2.62,
+      "fin": 2.84
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 2.96
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.96,
+      "fin": 3.04
+    },
+    {
+      "texte": "perle ?",
+      "mot": "perle",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.36
+    },
+    {
+      "texte": "Vermeer !",
+      "mot": "Vermeer",
+      "scene": 1,
+      "debut": 4.36,
+      "fin": 4.94
+    },
+    {
+      "texte": "Johannes",
+      "mot": "Johannes",
+      "scene": 1,
+      "debut": 5.34,
+      "fin": 5.86
+    },
+    {
+      "texte": "Vermeer,",
+      "mot": "Vermeer",
+      "scene": 1,
+      "debut": 5.86,
+      "fin": 6.4
+    },
+    {
+      "texte": "peintre",
+      "mot": "peintre",
+      "scene": 1,
+      "debut": 6.64,
+      "fin": 6.9
+    },
+    {
+      "texte": "hollandais",
+      "mot": "hollandais",
+      "scene": 1,
+      "debut": 6.9,
+      "fin": 7.26
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 1,
+      "debut": 7.26,
+      "fin": 7.44
+    },
+    {
+      "texte": "siècle",
+      "mot": "siècle",
+      "scene": 1,
+      "debut": 7.44,
+      "fin": 7.66
+    },
+    {
+      "texte": "d'or,",
+      "mot": "d'or",
+      "scene": 1,
+      "debut": 7.66,
+      "fin": 8.0
+    },
+    {
+      "texte": "vers",
+      "mot": "vers",
+      "scene": 1,
+      "debut": 8.26,
+      "fin": 8.4
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 1,
+      "debut": 8.4,
+      "fin": 8.655
+    },
+    {
+      "texte": "six",
+      "mot": "six",
+      "scene": 1,
+      "debut": 8.655,
+      "fin": 8.91
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 8.91,
+      "fin": 9.165
+    },
+    {
+      "texte": "soixante-cinq.",
+      "mot": "soixante-cinq",
+      "scene": 1,
+      "debut": 9.165,
+      "fin": 9.42
+    },
+    {
+      "texte": "Si",
+      "mot": "Si",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.34
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 10.34,
+      "fin": 10.46
+    },
+    {
+      "texte": "l'as",
+      "mot": "l'as",
+      "scene": 2,
+      "debut": 10.46,
+      "fin": 10.58
+    },
+    {
+      "texte": "trouvé,",
+      "mot": "trouvé",
+      "scene": 2,
+      "debut": 10.58,
+      "fin": 10.84
+    },
+    {
+      "texte": "bravo.",
+      "mot": "bravo",
+      "scene": 2,
+      "debut": 11.22,
+      "fin": 11.58
+    },
+    {
+      "texte": "Sinon,",
+      "mot": "Sinon",
+      "scene": 2,
+      "debut": 12.04,
+      "fin": 12.38
+    },
+    {
+      "texte": "ajoute",
+      "mot": "ajoute",
+      "scene": 2,
+      "debut": 12.72,
+      "fin": 12.96
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 2,
+      "debut": 12.96,
+      "fin": 13.08
+    },
+    {
+      "texte": "pack",
+      "mot": "pack",
+      "scene": 2,
+      "debut": 13.08,
+      "fin": 13.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 13.2,
+      "fin": 13.32
+    },
+    {
+      "texte": "peinture,",
+      "mot": "peinture",
+      "scene": 2,
+      "debut": 13.32,
+      "fin": 13.64
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 14.04,
+      "fin": 14.18
+    },
+    {
+      "texte": "révise-le",
+      "mot": "révise-le",
+      "scene": 2,
+      "debut": 14.18,
+      "fin": 14.68
+    },
+    {
+      "texte": "cinq",
+      "mot": "cinq",
+      "scene": 2,
+      "debut": 14.68,
+      "fin": 14.98
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 2,
+      "debut": 14.98,
+      "fin": 15.18
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 2,
+      "debut": 15.18,
+      "fin": 15.38
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 2,
+      "debut": 15.38,
+      "fin": 15.56
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 3,
+      "debut": 16.04,
+      "fin": 16.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 16.2,
+      "fin": 16.36
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 16.36,
+      "fin": 16.513
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 16.513,
+      "fin": 16.667
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 3,
+      "debut": 16.667,
+      "fin": 16.82
+    },
+    {
+      "texte": "questions,",
+      "mot": "questions",
+      "scene": 3,
+      "debut": 16.82,
+      "fin": 17.22
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 17.22,
+      "fin": 17.56
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 17.56,
+      "fin": 17.66
+    },
+    {
+      "texte": "peinture",
+      "mot": "peinture",
+      "scene": 3,
+      "debut": 17.66,
+      "fin": 18.02
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 3,
+      "debut": 18.02,
+      "fin": 18.12
+    },
+    {
+      "texte": "sport.",
+      "mot": "sport",
+      "scene": 3,
+      "debut": 18.12,
+      "fin": 18.3
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 18.86,
+      "fin": 19.14
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 3,
+      "debut": 19.14,
+      "fin": 19.54
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 19.8,
+      "fin": 20.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 20.18,
+      "fin": 20.34
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 20.34,
+      "fin": 20.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 20.58,
+      "fin": 20.92
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 20.92,
+      "fin": 21.18
+    }
+  ]
+}

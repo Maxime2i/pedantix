@@ -1,0 +1,264 @@
+{
+  "titre": "Capitales : niveau 1 à 5",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de jeu, montée en tension à chaque niveau, petite pause avant chaque capitale. Plus impressionné au niveau cinq. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "defi",
+      "voix": "Capitales, du niveau un au niveau cinq. Jusqu'où tu vas ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Capitales",
+          "texte": "Capitales",
+          "sous": "Du niveau 1 au niveau 5"
+        },
+        {
+          "type": "masquer",
+          "ancre": "Jusqu'où"
+        },
+        {
+          "type": "entree",
+          "ancre": "Jusqu'où"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Capitales",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "voix": "Niveau un : l'Italie ? Rome.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Niveau",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "Rome"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "n2",
+      "voix": "Niveau deux : le Portugal ? Lisbonne.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Niveau",
+          "index": 1
+        },
+        {
+          "type": "reveler",
+          "ancre": "Lisbonne"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "n3",
+      "voix": "Niveau trois : la Hongrie ? Budapest.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Niveau",
+          "index": 2
+        },
+        {
+          "type": "reveler",
+          "ancre": "Budapest"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "n4",
+      "voix": "Niveau quatre : le Kazakhstan ? Astana.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Niveau",
+          "index": 3
+        },
+        {
+          "type": "reveler",
+          "ancre": "Astana"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "n5",
+      "voix": "Niveau cinq : Nauru ? Yaren, le siège du gouvernement.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "carte",
+          "ancre": "Niveau",
+          "index": 4
+        },
+        {
+          "type": "reveler",
+          "ancre": "Yaren"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tu t'es arrêté où ? Dis-le en commentaire. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Culture"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Culture",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Capitales — niveau 1",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Italie",
+      "reponse": "Rome",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales — niveau 2",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Portugal",
+      "reponse": "Lisbonne",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales — niveau 3",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Hongrie",
+      "reponse": "Budapest",
+      "fiche": [
+        [
+          "Continent",
+          "Europe"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales — niveau 4",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Kazakhstan",
+      "reponse": "Astana",
+      "fiche": [
+        [
+          "Continent",
+          "Asie"
+        ]
+      ]
+    },
+    {
+      "paquet": "Capitales — niveau 5",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quelle est la capitale de ce pays ?",
+      "indiceType": "Pays",
+      "indice": "Nauru",
+      "reponse": "Yaren",
+      "fiche": [
+        [
+          "Continent",
+          "Océanie"
+        ],
+        [
+          "Statut",
+          "siège du gouvernement"
+        ]
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Deviens<br>incollable"
+  }
+}

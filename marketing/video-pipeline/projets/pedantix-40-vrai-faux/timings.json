@@ -1,0 +1,429 @@
+{
+  "duree": 23.06,
+  "dureeVoix": 21.26,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.02,
+      "fin": 3.7
+    },
+    {
+      "id": "q1",
+      "debut": 3.7,
+      "finVoix": 10.1,
+      "fin": 10.1
+    },
+    {
+      "id": "q2",
+      "debut": 10.1,
+      "finVoix": 12.9,
+      "fin": 13.44
+    },
+    {
+      "id": "q3",
+      "debut": 13.44,
+      "finVoix": 18.08,
+      "fin": 18.56
+    },
+    {
+      "id": "cta",
+      "debut": 18.56,
+      "finVoix": 19.28,
+      "fin": 19.78
+    },
+    {
+      "id": "appel",
+      "debut": 19.78,
+      "finVoix": 21.26,
+      "fin": 23.06
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Vrai",
+      "mot": "Vrai",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.58
+    },
+    {
+      "texte": "faux,",
+      "mot": "faux",
+      "scene": 0,
+      "debut": 0.58,
+      "fin": 0.74
+    },
+    {
+      "texte": "version",
+      "mot": "version",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.24
+    },
+    {
+      "texte": "Wikipédia.",
+      "mot": "Wikipédia",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.78
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.52
+    },
+    {
+      "texte": "affirmations.",
+      "mot": "affirmations",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 3.02
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 3.7,
+      "fin": 3.8
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.6
+    },
+    {
+      "texte": "Scrabble",
+      "mot": "Scrabble",
+      "scene": 1,
+      "debut": 4.6,
+      "fin": 4.96
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 1,
+      "debut": 4.96,
+      "fin": 5.0
+    },
+    {
+      "texte": "vendu",
+      "mot": "vendu",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.22
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 5.22,
+      "fin": 5.3
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 1,
+      "debut": 5.3,
+      "fin": 5.44
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 5.44,
+      "fin": 5.54
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 5.54,
+      "fin": 5.64
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 1,
+      "debut": 5.64,
+      "fin": 5.84
+    },
+    {
+      "texte": "Vrai !",
+      "mot": "Vrai",
+      "scene": 1,
+      "debut": 6.42,
+      "fin": 6.92
+    },
+    {
+      "texte": "Cent",
+      "mot": "Cent",
+      "scene": 1,
+      "debut": 7.4,
+      "fin": 8.65
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 1,
+      "debut": 8.65,
+      "fin": 9.9
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 9.9,
+      "fin": 10.1
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 10.1,
+      "fin": 10.1
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 1,
+      "debut": 10.1,
+      "fin": 10.1
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.1
+    },
+    {
+      "texte": "Héra",
+      "mot": "Héra",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.1
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.1
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 10.1,
+      "fin": 10.2
+    },
+    {
+      "texte": "déesse",
+      "mot": "déesse",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.46
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 10.46,
+      "fin": 10.58
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 10.58,
+      "fin": 10.68
+    },
+    {
+      "texte": "guerre.",
+      "mot": "guerre",
+      "scene": 2,
+      "debut": 10.68,
+      "fin": 10.86
+    },
+    {
+      "texte": "Faux !",
+      "mot": "Faux",
+      "scene": 2,
+      "debut": 11.56,
+      "fin": 11.92
+    },
+    {
+      "texte": "Celle",
+      "mot": "Celle",
+      "scene": 2,
+      "debut": 12.22,
+      "fin": 12.44
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 12.44,
+      "fin": 12.54
+    },
+    {
+      "texte": "mariage.",
+      "mot": "mariage",
+      "scene": 2,
+      "debut": 12.54,
+      "fin": 12.9
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 13.44,
+      "fin": 13.88
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 14.5,
+      "fin": 14.5
+    },
+    {
+      "texte": "symbole",
+      "mot": "symbole",
+      "scene": 3,
+      "debut": 14.5,
+      "fin": 14.8
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 14.8,
+      "fin": 14.92
+    },
+    {
+      "texte": "plomb,",
+      "mot": "plomb",
+      "scene": 3,
+      "debut": 14.92,
+      "fin": 15.14
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 15.28,
+      "fin": 15.46
+    },
+    {
+      "texte": "Pb.",
+      "mot": "Pb",
+      "scene": 3,
+      "debut": 15.46,
+      "fin": 15.68
+    },
+    {
+      "texte": "Vrai,",
+      "mot": "Vrai",
+      "scene": 3,
+      "debut": 16.46,
+      "fin": 16.82
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 17.18,
+      "fin": 17.26
+    },
+    {
+      "texte": "latin",
+      "mot": "latin",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.52
+    },
+    {
+      "texte": "plumbum.",
+      "mot": "plumbum",
+      "scene": 3,
+      "debut": 17.66,
+      "fin": 18.08
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 18.56,
+      "fin": 18.98
+    },
+    {
+      "texte": "t'en",
+      "mot": "t'en",
+      "scene": 4,
+      "debut": 18.98,
+      "fin": 19.1
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 4,
+      "debut": 19.1,
+      "fin": 19.2
+    },
+    {
+      "texte": "eu ?",
+      "mot": "eu",
+      "scene": 4,
+      "debut": 19.2,
+      "fin": 19.28
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 19.78,
+      "fin": 20.24
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 20.48,
+      "fin": 20.76
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 20.76,
+      "fin": 21.0
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 21.0,
+      "fin": 21.08
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 21.08,
+      "fin": 21.26
+    }
+  ]
+}

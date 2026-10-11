@@ -1,0 +1,426 @@
+{
+  "titre": "Banc d'essai de la bibliothèque Destiny FC",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 45
+  },
+  "objectif": "Test : chaque écran et chaque superposition de la bibliothèque.",
+  "voix": {
+    "instructions": "Test."
+  },
+  "ecranInitial": "accueil",
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    {
+      "id": "accueil",
+      "voix": "Voici la page d'accueil, et on lance une carrière.",
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Voici"
+        },
+        {
+          "type": "zoom",
+          "cible": "a-carriere",
+          "echelle": 1.25,
+          "ancre": "page"
+        },
+        {
+          "type": "appui",
+          "cible": "a-carriere",
+          "ancre": "lance"
+        }
+      ]
+    },
+    {
+      "id": "creation",
+      "voix": "Je crée mon joueur : son nom, le poste milieu, puis tout le reste au hasard.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "creation",
+          "ancre": "crée"
+        },
+        {
+          "type": "taper",
+          "mot": "Lucas Morel",
+          "ancre": "nom"
+        },
+        {
+          "type": "feuille",
+          "nom": "poste",
+          "ancre": "poste"
+        },
+        {
+          "type": "choisir",
+          "valeur": "Milieu",
+          "ancre": "milieu"
+        },
+        {
+          "type": "aleatoire",
+          "ancre": "reste",
+          "champs": {
+            "nationalite": "France",
+            "origine": "Quartier populaire",
+            "style": "Rigueur de pro",
+            "entourage": "Famille aux petits soins"
+          },
+          "attributs": {
+            "tec": 60,
+            "phy": 52,
+            "men": 62,
+            "cha": 41
+          }
+        },
+        {
+          "type": "zoom",
+          "cible": "cr-fiche",
+          "echelle": 1.3,
+          "ancre": "hasard"
+        }
+      ]
+    },
+    {
+      "id": "clubs",
+      "voix": "Les clubs me repèrent, je signe à Sochaux.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "clubs",
+          "ancre": "clubs"
+        },
+        {
+          "type": "appui",
+          "cible": "cl-1",
+          "ancre": "signe"
+        }
+      ]
+    },
+    {
+      "id": "evenement",
+      "voix": "Premier dilemme à seize ans. Je respecte le protocole, et ça paye.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "partie",
+          "ancre": "Premier"
+        },
+        {
+          "type": "carte",
+          "id": "croissance",
+          "ancre": "Premier"
+        },
+        {
+          "type": "zoom",
+          "cible": "p-carte",
+          "echelle": 1.2,
+          "hauteur": 960,
+          "ancre": "dilemme"
+        },
+        {
+          "type": "option",
+          "n": 1,
+          "ancre": "respecte"
+        },
+        {
+          "type": "carte",
+          "id": "croissance-ok",
+          "ancre": "paye"
+        },
+        {
+          "type": "joueur",
+          "note": 59,
+          "ancre": "paye"
+        },
+        {
+          "type": "jauges",
+          "forme": 82,
+          "confiance": 66,
+          "ancre": "paye"
+        }
+      ]
+    },
+    {
+      "id": "moment",
+      "voix": "Moment décisif, finale de coupe. On garde le ballon, et la coupe est à nous.",
+      "actions": [
+        {
+          "type": "zoom",
+          "cible": "aucun",
+          "ancre": "Moment"
+        },
+        {
+          "type": "carte",
+          "id": "finale",
+          "ancre": "Moment"
+        },
+        {
+          "type": "option",
+          "n": 2,
+          "ancre": "garde"
+        },
+        {
+          "type": "carte",
+          "id": "finale-gagnee",
+          "ancre": "coupe",
+          "position": "fin"
+        },
+        {
+          "type": "tampon",
+          "texte": "Champion",
+          "couleur": "or",
+          "ancre": "nous"
+        }
+      ]
+    },
+    {
+      "id": "saison",
+      "voix": "Le bilan de saison, puis le mercato et la préparation.",
+      "actions": [
+        {
+          "type": "carte",
+          "id": "saison",
+          "ancre": "bilan"
+        },
+        {
+          "type": "carte",
+          "id": "mercato",
+          "ancre": "mercato"
+        },
+        {
+          "type": "option",
+          "n": 3,
+          "ancre": "et"
+        },
+        {
+          "type": "joueur",
+          "age": 18,
+          "annee": 2028,
+          "niveau": "elite",
+          "club": "Lyon",
+          "couleurs": [
+            "#f2f2f2",
+            "#1a4fb5"
+          ],
+          "note": 66,
+          "argent": "1,2 M€",
+          "etoiles": 2,
+          "ancre": "préparation"
+        },
+        {
+          "type": "carte",
+          "id": "preparation",
+          "ancre": "préparation"
+        },
+        {
+          "type": "repartir",
+          "poste": 1,
+          "ancre": "préparation",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "fiche",
+      "voix": "La fiche de fin de carrière, avec le palmarès.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "fiche",
+          "ancre": "fiche"
+        },
+        {
+          "type": "zoom",
+          "cible": "f-palmares",
+          "echelle": 1.4,
+          "ancre": "palmarès"
+        }
+      ]
+    },
+    {
+      "id": "verrou",
+      "voix": "Téléphone verrouillé, une notification tombe.",
+      "actions": [
+        {
+          "type": "ecran",
+          "nom": "verrouillage",
+          "ancre": "verrouillé"
+        },
+        {
+          "type": "notif",
+          "titre": "Lucas Morel t'attend",
+          "texte": "18 ans, saison en cours. Reprends ta carrière là où elle s'est arrêtée.",
+          "ancre": "notification",
+          "duree": 5
+        }
+      ]
+    },
+    {
+      "id": "avatar",
+      "voix": "Moi c'est Maxime, je te montre le jeu. Surprise !",
+      "actions": [
+        {
+          "type": "disposition",
+          "mode": "avatar",
+          "ancre": "Moi"
+        },
+        {
+          "type": "disposition",
+          "mode": "duo",
+          "ancre": "montre"
+        },
+        {
+          "type": "ecran",
+          "nom": "partie",
+          "ancre": "montre"
+        },
+        {
+          "type": "pose",
+          "nom": "montre-droite",
+          "ancre": "montre"
+        },
+        {
+          "type": "pose",
+          "nom": "choque",
+          "ancre": "Surprise"
+        },
+        {
+          "type": "bulle",
+          "texte": "Quoi ?!",
+          "ancre": "Surprise"
+        }
+      ]
+    },
+    {
+      "id": "formats",
+      "voix": "Un titre, une liste de deux points, un chiffre, une frise de carrière et un match.",
+      "actions": [
+        {
+          "type": "disposition",
+          "mode": "coin",
+          "ancre": "Un"
+        },
+        {
+          "type": "pose",
+          "nom": "neutre",
+          "ancre": "Un"
+        },
+        {
+          "type": "titre",
+          "texte": "Écris ta *légende*",
+          "sous": "Sous-titre de test",
+          "ancre": "titre"
+        },
+        {
+          "type": "liste",
+          "titre": "Deux points",
+          "ancre": "liste"
+        },
+        {
+          "type": "point",
+          "texte": "Premier point",
+          "ancre": "deux"
+        },
+        {
+          "type": "point",
+          "texte": "Second point",
+          "ancre": "points"
+        },
+        {
+          "type": "chiffre",
+          "valeur": 36,
+          "depart": 16,
+          "suffixe": " ans",
+          "sous": "une carrière entière",
+          "ancre": "chiffre"
+        },
+        {
+          "type": "frise",
+          "titre": "Ma *carrière*",
+          "ancre": "frise"
+        },
+        {
+          "type": "etape",
+          "age": 16,
+          "texte": "Premier contrat",
+          "niveau": "d2",
+          "club": "Sochaux",
+          "ancre": "frise"
+        },
+        {
+          "type": "etape",
+          "age": 21,
+          "texte": "Première sélection",
+          "niveau": "d1",
+          "club": "Lens",
+          "ancre": "carrière"
+        },
+        {
+          "type": "etape",
+          "age": 27,
+          "texte": "Ballon d'or",
+          "niveau": "elite",
+          "club": "Lyon",
+          "ancre": "carrière",
+          "position": "fin"
+        },
+        {
+          "type": "tableau",
+          "titre": "Finale · Coupe nationale",
+          "domicile": {
+            "nom": "Sochaux",
+            "couleurs": [
+              "#f5c400",
+              "#1b3c8c"
+            ]
+          },
+          "exterieur": {
+            "nom": "Bastia",
+            "couleurs": [
+              "#1a4fb5",
+              "#f2f2f2"
+            ]
+          },
+          "score": [
+            0,
+            0
+          ],
+          "minute": 80,
+          "minuteFin": 89,
+          "ancre": "et",
+          "minuteDuree": 1.2
+        },
+        {
+          "type": "but",
+          "equipe": "dom",
+          "texte": "But de Lucas Morel !",
+          "ancre": "match"
+        }
+      ]
+    },
+    {
+      "id": "typo",
+      "voix": "Du texte géant, et la fin.",
+      "actions": [
+        {
+          "type": "typo",
+          "texte": "De *16 ans* à la retraite",
+          "sous": "Chaque choix compte",
+          "ancre": "texte",
+          "fin": "géant"
+        },
+        {
+          "type": "fin",
+          "ancre": "fin"
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "pose": "salut"
+  }
+}

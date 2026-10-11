@@ -1,0 +1,297 @@
+{
+  "duree": 19.94,
+  "dureeVoix": 18.14,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.64,
+      "fin": 4.2
+    },
+    {
+      "id": "reponse",
+      "debut": 4.2,
+      "finVoix": 8.46,
+      "fin": 8.98
+    },
+    {
+      "id": "fait",
+      "debut": 8.98,
+      "finVoix": 12.08,
+      "fin": 12.84
+    },
+    {
+      "id": "bravo",
+      "debut": 12.84,
+      "finVoix": 15.76,
+      "fin": 16.4
+    },
+    {
+      "id": "appel",
+      "debut": 16.4,
+      "finVoix": 18.14,
+      "fin": 19.94
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ce",
+      "mot": "Ce",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "matin,",
+      "mot": "matin",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.6
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.8
+    },
+    {
+      "texte": "t'ai",
+      "mot": "t'ai",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 0.9
+    },
+    {
+      "texte": "lancé",
+      "mot": "lancé",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.12
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 1.12,
+      "fin": 1.18
+    },
+    {
+      "texte": "défi.",
+      "mot": "défi",
+      "scene": 0,
+      "debut": 1.18,
+      "fin": 1.48
+    },
+    {
+      "texte": "Voici",
+      "mot": "Voici",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.26
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.38
+    },
+    {
+      "texte": "réponse.",
+      "mot": "réponse",
+      "scene": 0,
+      "debut": 2.38,
+      "fin": 2.64
+    },
+    {
+      "texte": "Fruit,",
+      "mot": "Fruit",
+      "scene": 1,
+      "debut": 4.2,
+      "fin": 4.76
+    },
+    {
+      "texte": "arbre,",
+      "mot": "arbre",
+      "scene": 1,
+      "debut": 4.76,
+      "fin": 5.32
+    },
+    {
+      "texte": "Prunus…",
+      "mot": "Prunus",
+      "scene": 1,
+      "debut": 5.96,
+      "fin": 6.38
+    },
+    {
+      "texte": "c'était",
+      "mot": "c'était",
+      "scene": 1,
+      "debut": 7.28,
+      "fin": 7.87
+    },
+    {
+      "texte": "l'abricot !",
+      "mot": "l'abricot",
+      "scene": 1,
+      "debut": 7.87,
+      "fin": 8.46
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 8.98,
+      "fin": 9.26
+    },
+    {
+      "texte": "nom",
+      "mot": "nom",
+      "scene": 2,
+      "debut": 9.26,
+      "fin": 9.42
+    },
+    {
+      "texte": "scientifique",
+      "mot": "scientifique",
+      "scene": 2,
+      "debut": 9.42,
+      "fin": 9.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 9.86,
+      "fin": 10.0
+    },
+    {
+      "texte": "l'abricotier,",
+      "mot": "l'abricotier",
+      "scene": 2,
+      "debut": 10.0,
+      "fin": 10.4
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 10.4,
+      "fin": 10.8
+    },
+    {
+      "texte": "Prunus",
+      "mot": "Prunus",
+      "scene": 2,
+      "debut": 10.8,
+      "fin": 11.44
+    },
+    {
+      "texte": "armeniaca.",
+      "mot": "armeniaca",
+      "scene": 2,
+      "debut": 11.44,
+      "fin": 12.08
+    },
+    {
+      "texte": "Bravo",
+      "mot": "Bravo",
+      "scene": 3,
+      "debut": 12.84,
+      "fin": 13.24
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 13.24,
+      "fin": 13.52
+    },
+    {
+      "texte": "ceux",
+      "mot": "ceux",
+      "scene": 3,
+      "debut": 13.52,
+      "fin": 13.66
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 3,
+      "debut": 13.66,
+      "fin": 13.8
+    },
+    {
+      "texte": "avaient",
+      "mot": "avaient",
+      "scene": 3,
+      "debut": 13.8,
+      "fin": 13.88
+    },
+    {
+      "texte": "trouvé.",
+      "mot": "trouvé",
+      "scene": 3,
+      "debut": 13.88,
+      "fin": 14.1
+    },
+    {
+      "texte": "Demain,",
+      "mot": "Demain",
+      "scene": 3,
+      "debut": 14.78,
+      "fin": 15.12
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 3,
+      "debut": 15.42,
+      "fin": 15.6
+    },
+    {
+      "texte": "dur.",
+      "mot": "dur",
+      "scene": 3,
+      "debut": 15.6,
+      "fin": 15.76
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 4,
+      "debut": 16.4,
+      "fin": 16.96
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 17.32,
+      "fin": 17.66
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 17.66,
+      "fin": 17.84
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 4,
+      "debut": 17.84,
+      "fin": 17.96
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 4,
+      "debut": 17.96,
+      "fin": 18.14
+    }
+  ]
+}

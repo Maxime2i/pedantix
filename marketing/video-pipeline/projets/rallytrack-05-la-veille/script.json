@@ -1,0 +1,136 @@
+{
+  "titre": "Le rallye, c'est demain",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Activation des alertes : notification réelle « Demain : {rallye} », écran « Définir les alertes ». Démo fictive.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Ton taquin sur « ou pas ? ». Énumération rythmée des alertes. Fin rassurante."
+  },
+  "ecranInitial": "verrouillage",
+  "ecrans": {
+    "verrouillage": {
+      "heure": "20:14",
+      "date": "vendredi 9 octobre"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Le rallye, c'est demain. Tu vas y penser… ou pas ?",
+      "animation": "Écran verrouillé, la notification « Demain : … » tombe.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "rallye"
+        },
+        {
+          "type": "notif",
+          "ancre": "demain",
+          "titre": "Demain : Rallye des Hautes Combes",
+          "texte": "Le rallye s’élance demain. Activez le live pour ne rien manquer.",
+          "duree": 5
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "alertes",
+      "voix": "Dans Rally Track, tu choisis tes alertes : départ en direct, victoire en spéciale, podium.",
+      "animation": "« Définir les alertes » : Départ en direct déjà coché ; on coche Victoire en spéciale, puis Podium au général.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Dans",
+          "nom": "alertes"
+        },
+        {
+          "type": "zoom",
+          "ancre": "départ",
+          "cible": "al-depart",
+          "echelle": 1.3,
+          "hauteur": 900
+        },
+        {
+          "type": "choisir",
+          "ancre": "victoire",
+          "valeur": "esVictoire"
+        },
+        {
+          "type": "choisir",
+          "ancre": "podium",
+          "valeur": "podium"
+        },
+        {
+          "type": "zoom",
+          "ancre": "podium",
+          "cible": "al-podium",
+          "echelle": 1.3,
+          "hauteur": 900
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "prevenu",
+      "voix": "Et le jour J, ton téléphone te prévient.",
+      "animation": "Écran verrouillé : « C’est parti : … ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "jour",
+          "nom": "verrouillage",
+          "donnees": {
+            "heure": "8:41",
+            "date": "samedi 10 octobre"
+          }
+        },
+        {
+          "type": "notif",
+          "ancre": "prévient",
+          "titre": "C’est parti : Rallye des Hautes Combes",
+          "texte": "Le rallye est en direct.",
+          "duree": 4
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

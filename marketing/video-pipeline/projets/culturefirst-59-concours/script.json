@@ -1,0 +1,142 @@
+{
+  "titre": "Tu prépares un concours ?",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton sérieux mais encourageant, convaincu. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Tu prépares un concours avec une épreuve de culture générale ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Tu",
+          "texte": "Concours en vue ?",
+          "sous": "avec une épreuve de culture G"
+        },
+        {
+          "type": "masquer",
+          "ancre": "générale",
+          "position": "fin"
+        },
+        {
+          "type": "entree",
+          "ancre": "générale",
+          "position": "fin"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Tu",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "construire",
+      "voix": "La culture G, ça ne se bachote pas la veille : ça se construit, un peu chaque jour.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "construit",
+          "cible": "s-activite",
+          "echelle": 1.3
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "methode",
+      "voix": "Cinq minutes par jour sur Culture First, et chaque carte revient juste avant que tu l'oublies.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Cinq",
+          "nom": "etude"
+        },
+        {
+          "type": "zoom",
+          "ancre": "chaque",
+          "cible": "carte"
+        },
+        {
+          "type": "reveler",
+          "ancre": "revient"
+        },
+        {
+          "type": "zoom",
+          "ancre": "l'oublies",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "l'oublies",
+          "bouton": "correct"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions, de l'histoire aux sciences. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Entre-deux-guerres",
+      "theme": "Histoire",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Quel traité correspond à cette description ?",
+      "indiceType": "Description",
+      "indice": "Fin de la Première Guerre mondiale avec l'Allemagne",
+      "reponse": "Traité de Versailles",
+      "fiche": [
+        [
+          "Signature",
+          "28 juin 1919"
+        ]
+      ]
+    }
+  ],
+  "ecranInitial": "stats"
+}

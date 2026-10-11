@@ -1,0 +1,118 @@
+{
+  "titre": "Elle est passée en combien ?",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Téléchargements, cible spectateurs : le scratch de la spéciale dans l'app dès sa publication. Démo fictive : voiture 3 (Hugo Marchal) 5:09.4, meilleur temps de l'ES5.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Question intriguée au début. Lecture du temps lente et nette : « cinq minutes… neuf secondes… quatre », puis « Meilleur temps ! » enthousiaste."
+  },
+  "ecranInitial": "rallye",
+  "ecrans": {
+    "rallye": {
+      "onglet": "speciales"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Elle est passée en combien, la voiture trois ?",
+      "animation": "Photo d'une voiture qui passe ; le chrono de l'ES défile.",
+      "image": "Photographie réaliste, cadrage vertical, filé photographique : une voiture de rallye générique et inventée, vue de trois quarts ARRIÈRE et de loin, très floue de mouvement, s'éloigne dans un virage d'une route de montagne asphaltée en forêt d'automne ; projection d'eau, rubalise au premier plan, spectateurs flous et lointains. Aucune calandre, aucun logo, aucun modèle de voiture reconnaissable, aucun numéro, sponsor ni texte, aucun visage reconnaissable.",
+      "actions": [
+        {
+          "type": "chrono",
+          "ancre": "passée",
+          "titre": "ES5 · COL DE LA CROIX 2",
+          "depart": "5:05.6",
+          "arret": "5:09.4",
+          "sous": "Voiture 3 en piste…",
+          "sousFin": "Meilleur temps"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "moteur",
+          "ancre": "Elle",
+          "gain": 0.55
+        }
+      ]
+    },
+    {
+      "id": "temps",
+      "voix": "Cinq minutes, neuf secondes, quatre. Meilleur temps !",
+      "animation": "Le chrono se fige sur 5:09.4 en orange.",
+      "image": null,
+      "actions": [
+        {
+          "type": "arreter",
+          "ancre": "Cinq"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "app",
+      "voix": "Dans Rally Track, le scratch tombe dès qu'il est publié, avec l'écart de chacun.",
+      "animation": "Le téléphone monte sur la fiche (onglet Spéciales) ; la feuille de l'ES5 s'ouvre : Marchal 5:09.4, Moreau +0.7.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Dans"
+        },
+        {
+          "type": "entree",
+          "ancre": "Dans"
+        },
+        {
+          "type": "feuille",
+          "ancre": "scratch",
+          "nom": "speciale"
+        },
+        {
+          "type": "zoom",
+          "ancre": "l'écart",
+          "cible": "sp-1",
+          "echelle": 1.35,
+          "hauteur": 980
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "duree": 26.6,
+  "dureeVoix": 24.8,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 5.66,
+      "fin": 6.4
+    },
+    {
+      "id": "reponse",
+      "debut": 6.4,
+      "finVoix": 12.08,
+      "fin": 12.84
+    },
+    {
+      "id": "effet",
+      "debut": 12.84,
+      "finVoix": 15.62,
+      "fin": 16.4
+    },
+    {
+      "id": "pack",
+      "debut": 16.4,
+      "finVoix": 19.54,
+      "fin": 20.2
+    },
+    {
+      "id": "appel",
+      "debut": 20.2,
+      "finVoix": 24.8,
+      "fin": 26.6
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Locution",
+      "mot": "Locution",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.8
+    },
+    {
+      "texte": "latine :",
+      "mot": "latine",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.34
+    },
+    {
+      "texte": "ad",
+      "mot": "ad",
+      "scene": 0,
+      "debut": 1.34,
+      "fin": 1.83
+    },
+    {
+      "texte": "patres,",
+      "mot": "patres",
+      "scene": 0,
+      "debut": 1.83,
+      "fin": 2.32
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 0,
+      "debut": 2.52,
+      "fin": 2.74
+    },
+    {
+      "texte": "veut",
+      "mot": "veut",
+      "scene": 0,
+      "debut": 2.74,
+      "fin": 2.84
+    },
+    {
+      "texte": "dire",
+      "mot": "dire",
+      "scene": 0,
+      "debut": 2.84,
+      "fin": 3.0
+    },
+    {
+      "texte": "quoi ?",
+      "mot": "quoi",
+      "scene": 0,
+      "debut": 3.0,
+      "fin": 3.14
+    },
+    {
+      "texte": "Au",
+      "mot": "Au",
+      "scene": 0,
+      "debut": 3.94,
+      "fin": 4.12
+    },
+    {
+      "texte": "revoir ?",
+      "mot": "revoir",
+      "scene": 0,
+      "debut": 4.12,
+      "fin": 4.28
+    },
+    {
+      "texte": "Raté.",
+      "mot": "Raté",
+      "scene": 0,
+      "debut": 5.3,
+      "fin": 5.66
+    },
+    {
+      "texte": "Ça",
+      "mot": "Ça",
+      "scene": 1,
+      "debut": 6.4,
+      "fin": 6.46
+    },
+    {
+      "texte": "veut",
+      "mot": "veut",
+      "scene": 1,
+      "debut": 6.46,
+      "fin": 6.62
+    },
+    {
+      "texte": "dire «",
+      "mot": "dire",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.82
+    },
+    {
+      "texte": "auprès",
+      "mot": "auprès",
+      "scene": 1,
+      "debut": 6.82,
+      "fin": 7.42
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 1,
+      "debut": 7.42,
+      "fin": 7.56
+    },
+    {
+      "texte": "ancêtres ».",
+      "mot": "ancêtres",
+      "scene": 1,
+      "debut": 7.56,
+      "fin": 8.06
+    },
+    {
+      "texte": "Envoyer",
+      "mot": "Envoyer",
+      "scene": 1,
+      "debut": 8.7,
+      "fin": 9.06
+    },
+    {
+      "texte": "quelqu'un",
+      "mot": "quelqu'un",
+      "scene": 1,
+      "debut": 9.06,
+      "fin": 9.564
+    },
+    {
+      "texte": "ad",
+      "mot": "ad",
+      "scene": 1,
+      "debut": 9.564,
+      "fin": 10.068
+    },
+    {
+      "texte": "patres,",
+      "mot": "patres",
+      "scene": 1,
+      "debut": 10.068,
+      "fin": 10.572
+    },
+    {
+      "texte": "c'est…",
+      "mot": "c'est",
+      "scene": 1,
+      "debut": 10.572,
+      "fin": 11.076
+    },
+    {
+      "texte": "l'envoyer",
+      "mot": "l'envoyer",
+      "scene": 1,
+      "debut": 11.076,
+      "fin": 11.58
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 1,
+      "debut": 11.58,
+      "fin": 11.7
+    },
+    {
+      "texte": "cimetière.",
+      "mot": "cimetière",
+      "scene": 1,
+      "debut": 11.7,
+      "fin": 12.08
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 12.84,
+      "fin": 13.18
+    },
+    {
+      "texte": "genre",
+      "mot": "genre",
+      "scene": 2,
+      "debut": 13.18,
+      "fin": 13.32
+    },
+    {
+      "texte": "d'expression",
+      "mot": "d'expression",
+      "scene": 2,
+      "debut": 13.32,
+      "fin": 13.82
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 2,
+      "debut": 13.82,
+      "fin": 14.06
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 2,
+      "debut": 14.06,
+      "fin": 14.24
+    },
+    {
+      "texte": "toujours",
+      "mot": "toujours",
+      "scene": 2,
+      "debut": 14.24,
+      "fin": 14.64
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 2,
+      "debut": 14.64,
+      "fin": 14.92
+    },
+    {
+      "texte": "effet",
+      "mot": "effet",
+      "scene": 2,
+      "debut": 14.92,
+      "fin": 15.14
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 2,
+      "debut": 15.14,
+      "fin": 15.3
+    },
+    {
+      "texte": "soirée.",
+      "mot": "soirée",
+      "scene": 2,
+      "debut": 15.3,
+      "fin": 15.62
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 3,
+      "debut": 16.4,
+      "fin": 16.76
+    },
+    {
+      "texte": "y",
+      "mot": "y",
+      "scene": 3,
+      "debut": 16.76,
+      "fin": 16.8
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 16.8,
+      "fin": 16.84
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 3,
+      "debut": 16.84,
+      "fin": 17.12
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 3,
+      "debut": 17.12,
+      "fin": 17.36
+    },
+    {
+      "texte": "pack",
+      "mot": "pack",
+      "scene": 3,
+      "debut": 17.36,
+      "fin": 17.6
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 17.6,
+      "fin": 17.84
+    },
+    {
+      "texte": "locutions",
+      "mot": "locutions",
+      "scene": 3,
+      "debut": 17.84,
+      "fin": 18.21
+    },
+    {
+      "texte": "latines",
+      "mot": "latines",
+      "scene": 3,
+      "debut": 18.21,
+      "fin": 18.58
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 18.58,
+      "fin": 18.84
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 3,
+      "debut": 18.84,
+      "fin": 19.2
+    },
+    {
+      "texte": "First.",
+      "mot": "First",
+      "scene": 3,
+      "debut": 19.2,
+      "fin": 19.54
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 20.2,
+      "fin": 20.36
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 20.36,
+      "fin": 20.58
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 20.58,
+      "fin": 20.773
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 20.773,
+      "fin": 20.967
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 20.967,
+      "fin": 21.16
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 21.16,
+      "fin": 21.48
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 22.38,
+      "fin": 22.88
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 22.88,
+      "fin": 23.3
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 23.52,
+      "fin": 23.96
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 23.96,
+      "fin": 24.16
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 24.16,
+      "fin": 24.42
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 24.42,
+      "fin": 24.58
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 24.58,
+      "fin": 24.8
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "duree": 29.12,
+  "dureeVoix": 27.32,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.18,
+      "fin": 2.76
+    },
+    {
+      "id": "m1",
+      "debut": 2.76,
+      "finVoix": 6.36,
+      "fin": 6.96
+    },
+    {
+      "id": "m2",
+      "debut": 6.96,
+      "finVoix": 10.32,
+      "fin": 11.18
+    },
+    {
+      "id": "m3",
+      "debut": 11.18,
+      "finVoix": 14.24,
+      "fin": 15.04
+    },
+    {
+      "id": "m4",
+      "debut": 15.04,
+      "finVoix": 18.3,
+      "fin": 19.0
+    },
+    {
+      "id": "m5",
+      "debut": 19.0,
+      "finVoix": 23.12,
+      "fin": 23.74
+    },
+    {
+      "id": "appel",
+      "debut": 23.74,
+      "finVoix": 27.32,
+      "fin": 29.12
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.74
+    },
+    {
+      "texte": "mots",
+      "mot": "mots",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.9
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 0.9,
+      "fin": 1.08
+    },
+    {
+      "texte": "beaucoup",
+      "mot": "beaucoup",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.38,
+      "fin": 1.54
+    },
+    {
+      "texte": "gens",
+      "mot": "gens",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.64
+    },
+    {
+      "texte": "écrivent",
+      "mot": "écrivent",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.94
+    },
+    {
+      "texte": "mal.",
+      "mot": "mal",
+      "scene": 0,
+      "debut": 1.94,
+      "fin": 2.18
+    },
+    {
+      "texte": "Parmis,",
+      "mot": "Parmis",
+      "scene": 1,
+      "debut": 2.76,
+      "fin": 3.34
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 1,
+      "debut": 3.64,
+      "fin": 3.84
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.84,
+      "fin": 4.04
+    },
+    {
+      "texte": "s ?",
+      "mot": "s",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.28
+    },
+    {
+      "texte": "Non :",
+      "mot": "Non",
+      "scene": 1,
+      "debut": 4.7,
+      "fin": 4.94
+    },
+    {
+      "texte": "parmi,",
+      "mot": "parmi",
+      "scene": 1,
+      "debut": 5.32,
+      "fin": 5.62
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 1,
+      "debut": 5.88,
+      "fin": 6.04
+    },
+    {
+      "texte": "s.",
+      "mot": "s",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.36
+    },
+    {
+      "texte": "Language ?",
+      "mot": "Language",
+      "scene": 2,
+      "debut": 6.96,
+      "fin": 7.7
+    },
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 2,
+      "debut": 8.2,
+      "fin": 8.34
+    },
+    {
+      "texte": "français,",
+      "mot": "français",
+      "scene": 2,
+      "debut": 8.34,
+      "fin": 8.66
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 2,
+      "debut": 8.8,
+      "fin": 8.92
+    },
+    {
+      "texte": "langage,",
+      "mot": "langage",
+      "scene": 2,
+      "debut": 8.92,
+      "fin": 9.66
+    },
+    {
+      "texte": "sans",
+      "mot": "sans",
+      "scene": 2,
+      "debut": 9.66,
+      "fin": 10.14
+    },
+    {
+      "texte": "u.",
+      "mot": "u",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.32
+    },
+    {
+      "texte": "Dilemne ?",
+      "mot": "Dilemne",
+      "scene": 3,
+      "debut": 11.18,
+      "fin": 11.68
+    },
+    {
+      "texte": "Non :",
+      "mot": "Non",
+      "scene": 3,
+      "debut": 12.12,
+      "fin": 12.4
+    },
+    {
+      "texte": "dilemme,",
+      "mot": "dilemme",
+      "scene": 3,
+      "debut": 12.9,
+      "fin": 13.48
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 3,
+      "debut": 13.58,
+      "fin": 13.8
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 3,
+      "debut": 13.8,
+      "fin": 14.04
+    },
+    {
+      "texte": "m.",
+      "mot": "m",
+      "scene": 3,
+      "debut": 14.04,
+      "fin": 14.24
+    },
+    {
+      "texte": "Connection ?",
+      "mot": "Connection",
+      "scene": 4,
+      "debut": 15.04,
+      "fin": 15.58
+    },
+    {
+      "texte": "En",
+      "mot": "En",
+      "scene": 4,
+      "debut": 15.84,
+      "fin": 16.1
+    },
+    {
+      "texte": "français,",
+      "mot": "français",
+      "scene": 4,
+      "debut": 16.1,
+      "fin": 16.42
+    },
+    {
+      "texte": "connexion,",
+      "mot": "connexion",
+      "scene": 4,
+      "debut": 16.76,
+      "fin": 17.4
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 4,
+      "debut": 17.7,
+      "fin": 17.86
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 4,
+      "debut": 17.86,
+      "fin": 18.02
+    },
+    {
+      "texte": "x.",
+      "mot": "x",
+      "scene": 4,
+      "debut": 18.02,
+      "fin": 18.3
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 19.0,
+      "fin": 19.1
+    },
+    {
+      "texte": "rénumérer ?",
+      "mot": "rénumérer",
+      "scene": 5,
+      "debut": 19.1,
+      "fin": 20.54
+    },
+    {
+      "texte": "Non :",
+      "mot": "Non",
+      "scene": 5,
+      "debut": 20.54,
+      "fin": 20.62
+    },
+    {
+      "texte": "rémunérer,",
+      "mot": "rémunérer",
+      "scene": 5,
+      "debut": 21.24,
+      "fin": 21.82
+    },
+    {
+      "texte": "comme",
+      "mot": "comme",
+      "scene": 5,
+      "debut": 22.14,
+      "fin": 22.3
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 5,
+      "debut": 22.3,
+      "fin": 22.46
+    },
+    {
+      "texte": "rémunération.",
+      "mot": "rémunération",
+      "scene": 5,
+      "debut": 22.46,
+      "fin": 23.12
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 6,
+      "debut": 23.74,
+      "fin": 24.06
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 6,
+      "debut": 24.06,
+      "fin": 24.18
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 6,
+      "debut": 24.18,
+      "fin": 24.28
+    },
+    {
+      "texte": "avais ?",
+      "mot": "avais",
+      "scene": 6,
+      "debut": 24.28,
+      "fin": 24.52
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 25.26,
+      "fin": 25.48
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 25.48,
+      "fin": 25.86
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 26.08,
+      "fin": 26.26
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 26.26,
+      "fin": 26.54
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 26.54,
+      "fin": 26.84
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 26.84,
+      "fin": 27.1
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 27.1,
+      "fin": 27.32
+    }
+  ]
+}

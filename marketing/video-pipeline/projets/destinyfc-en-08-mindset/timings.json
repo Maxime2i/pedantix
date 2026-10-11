@@ -1,0 +1,492 @@
+{
+  "duree": 22.74,
+  "dureeVoix": 20.94,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 3.12,
+      "fin": 3.54
+    },
+    {
+      "id": "gauges",
+      "debut": 3.54,
+      "finVoix": 5.7,
+      "fin": 6.32
+    },
+    {
+      "id": "pressure",
+      "debut": 6.32,
+      "finVoix": 9.5,
+      "fin": 10.0
+    },
+    {
+      "id": "routine",
+      "debut": 10.0,
+      "finVoix": 13.36,
+      "fin": 13.9
+    },
+    {
+      "id": "zone",
+      "debut": 13.9,
+      "finVoix": 16.48,
+      "fin": 16.96
+    },
+    {
+      "id": "cta",
+      "debut": 16.96,
+      "finVoix": 20.94,
+      "fin": 22.74
+    }
+  ],
+  "mots": [
+    {
+      "texte": "In",
+      "mot": "In",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.38
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 0,
+      "debut": 0.38,
+      "fin": 0.54
+    },
+    {
+      "texte": "football",
+      "mot": "football",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.8
+    },
+    {
+      "texte": "game,",
+      "mot": "game",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 1.18
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.48
+    },
+    {
+      "texte": "mind",
+      "mot": "mind",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 1.78
+    },
+    {
+      "texte": "matters",
+      "mot": "matters",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 2.16
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 2.16,
+      "fin": 2.36
+    },
+    {
+      "texte": "much",
+      "mot": "much",
+      "scene": 0,
+      "debut": 2.36,
+      "fin": 2.62
+    },
+    {
+      "texte": "as",
+      "mot": "as",
+      "scene": 0,
+      "debut": 2.62,
+      "fin": 2.78
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 0,
+      "debut": 2.78,
+      "fin": 2.9
+    },
+    {
+      "texte": "feet.",
+      "mot": "feet",
+      "scene": 0,
+      "debut": 2.9,
+      "fin": 3.12
+    },
+    {
+      "texte": "Look",
+      "mot": "Look",
+      "scene": 1,
+      "debut": 3.54,
+      "fin": 3.64
+    },
+    {
+      "texte": "at",
+      "mot": "at",
+      "scene": 1,
+      "debut": 3.64,
+      "fin": 3.74
+    },
+    {
+      "texte": "these",
+      "mot": "these",
+      "scene": 1,
+      "debut": 3.74,
+      "fin": 3.84
+    },
+    {
+      "texte": "gauges:",
+      "mot": "gauges",
+      "scene": 1,
+      "debut": 3.84,
+      "fin": 4.18
+    },
+    {
+      "texte": "confidence",
+      "mot": "confidence",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.88
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.36
+    },
+    {
+      "texte": "pressure.",
+      "mot": "pressure",
+      "scene": 1,
+      "debut": 5.36,
+      "fin": 5.7
+    },
+    {
+      "texte": "If",
+      "mot": "If",
+      "scene": 2,
+      "debut": 6.32,
+      "fin": 6.42
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 6.42,
+      "fin": 6.52
+    },
+    {
+      "texte": "pressure",
+      "mot": "pressure",
+      "scene": 2,
+      "debut": 6.52,
+      "fin": 6.72
+    },
+    {
+      "texte": "gets",
+      "mot": "gets",
+      "scene": 2,
+      "debut": 6.72,
+      "fin": 7.0
+    },
+    {
+      "texte": "too",
+      "mot": "too",
+      "scene": 2,
+      "debut": 7.0,
+      "fin": 7.14
+    },
+    {
+      "texte": "high,",
+      "mot": "high",
+      "scene": 2,
+      "debut": 7.14,
+      "fin": 7.44
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 2,
+      "debut": 7.64,
+      "fin": 7.68
+    },
+    {
+      "texte": "hands",
+      "mot": "hands",
+      "scene": 2,
+      "debut": 7.68,
+      "fin": 8.04
+    },
+    {
+      "texte": "start",
+      "mot": "start",
+      "scene": 2,
+      "debut": 8.04,
+      "fin": 8.28
+    },
+    {
+      "texte": "shaking",
+      "mot": "shaking",
+      "scene": 2,
+      "debut": 8.28,
+      "fin": 8.7
+    },
+    {
+      "texte": "before",
+      "mot": "before",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.0
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 9.0,
+      "fin": 9.18
+    },
+    {
+      "texte": "match.",
+      "mot": "match",
+      "scene": 2,
+      "debut": 9.18,
+      "fin": 9.5
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 3,
+      "debut": 10.0,
+      "fin": 10.18
+    },
+    {
+      "texte": "lean",
+      "mot": "lean",
+      "scene": 3,
+      "debut": 10.18,
+      "fin": 10.34
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 3,
+      "debut": 10.34,
+      "fin": 10.48
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 3,
+      "debut": 10.48,
+      "fin": 10.58
+    },
+    {
+      "texte": "routine…",
+      "mot": "routine",
+      "scene": 3,
+      "debut": 10.58,
+      "fin": 10.94
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 3,
+      "debut": 11.6,
+      "fin": 12.1
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 3,
+      "debut": 12.1,
+      "fin": 12.4
+    },
+    {
+      "texte": "calm",
+      "mot": "calm",
+      "scene": 3,
+      "debut": 12.4,
+      "fin": 12.76
+    },
+    {
+      "texte": "comes",
+      "mot": "comes",
+      "scene": 3,
+      "debut": 12.76,
+      "fin": 13.1
+    },
+    {
+      "texte": "back.",
+      "mot": "back",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.36
+    },
+    {
+      "texte": "And",
+      "mot": "And",
+      "scene": 4,
+      "debut": 13.9,
+      "fin": 13.96
+    },
+    {
+      "texte": "when",
+      "mot": "when",
+      "scene": 4,
+      "debut": 13.96,
+      "fin": 14.04
+    },
+    {
+      "texte": "your",
+      "mot": "your",
+      "scene": 4,
+      "debut": 14.04,
+      "fin": 14.12
+    },
+    {
+      "texte": "confidence",
+      "mot": "confidence",
+      "scene": 4,
+      "debut": 14.12,
+      "fin": 14.54
+    },
+    {
+      "texte": "is",
+      "mot": "is",
+      "scene": 4,
+      "debut": 14.54,
+      "fin": 14.8
+    },
+    {
+      "texte": "sky-high,",
+      "mot": "sky-high",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 15.52
+    },
+    {
+      "texte": "you're",
+      "mot": "you're",
+      "scene": 4,
+      "debut": 15.88,
+      "fin": 16.02
+    },
+    {
+      "texte": "in",
+      "mot": "in",
+      "scene": 4,
+      "debut": 16.02,
+      "fin": 16.12
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 4,
+      "debut": 16.12,
+      "fin": 16.24
+    },
+    {
+      "texte": "zone.",
+      "mot": "zone",
+      "scene": 4,
+      "debut": 16.24,
+      "fin": 16.48
+    },
+    {
+      "texte": "Your",
+      "mot": "Your",
+      "scene": 5,
+      "debut": 16.96,
+      "fin": 17.04
+    },
+    {
+      "texte": "mindset",
+      "mot": "mindset",
+      "scene": 5,
+      "debut": 17.04,
+      "fin": 17.38
+    },
+    {
+      "texte": "can",
+      "mot": "can",
+      "scene": 5,
+      "debut": 17.38,
+      "fin": 17.64
+    },
+    {
+      "texte": "be",
+      "mot": "be",
+      "scene": 5,
+      "debut": 17.64,
+      "fin": 17.78
+    },
+    {
+      "texte": "trained.",
+      "mot": "trained",
+      "scene": 5,
+      "debut": 17.78,
+      "fin": 18.14
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 18.66,
+      "fin": 18.92
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 18.92,
+      "fin": 19.3
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 5,
+      "debut": 19.62,
+      "fin": 19.88
+    },
+    {
+      "texte": "on",
+      "mot": "on",
+      "scene": 5,
+      "debut": 19.88,
+      "fin": 20.12
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 5,
+      "debut": 20.12,
+      "fin": 20.46
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 5,
+      "debut": 20.46,
+      "fin": 20.68
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 5,
+      "debut": 20.68,
+      "fin": 20.94
+    }
+  ]
+}

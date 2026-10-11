@@ -1,0 +1,331 @@
+{
+  "duree": 18.06,
+  "dureeVoix": 16.26,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.46,
+      "fin": 2.88
+    },
+    {
+      "id": "loin",
+      "debut": 2.88,
+      "finVoix": 5.46,
+      "fin": 6.0
+    },
+    {
+      "id": "chaud",
+      "debut": 6.0,
+      "finVoix": 8.38,
+      "fin": 8.64
+    },
+    {
+      "id": "brule",
+      "debut": 8.64,
+      "finVoix": 10.78,
+      "fin": 11.24
+    },
+    {
+      "id": "trouve",
+      "debut": 11.24,
+      "finVoix": 12.22,
+      "fin": 12.68
+    },
+    {
+      "id": "appel",
+      "debut": 12.68,
+      "finVoix": 16.26,
+      "fin": 18.06
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.36
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.36,
+      "fin": 0.5
+    },
+    {
+      "texte": "jeu,",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.72
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.0,
+      "fin": 1.08
+    },
+    {
+      "texte": "gris,",
+      "mot": "gris",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.38
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 1.66
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.78
+    },
+    {
+      "texte": "meilleur",
+      "mot": "meilleur",
+      "scene": 0,
+      "debut": 1.78,
+      "fin": 2.04
+    },
+    {
+      "texte": "indice.",
+      "mot": "indice",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.46
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 1,
+      "debut": 2.88,
+      "fin": 3.02
+    },
+    {
+      "texte": "tape",
+      "mot": "tape",
+      "scene": 1,
+      "debut": 3.02,
+      "fin": 3.18
+    },
+    {
+      "texte": "animal :",
+      "mot": "animal",
+      "scene": 1,
+      "debut": 3.18,
+      "fin": 3.66
+    },
+    {
+      "texte": "gris",
+      "mot": "gris",
+      "scene": 1,
+      "debut": 4.16,
+      "fin": 4.42
+    },
+    {
+      "texte": "foncé,",
+      "mot": "foncé",
+      "scene": 1,
+      "debut": 4.42,
+      "fin": 4.74
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 1,
+      "debut": 5.14,
+      "fin": 5.24
+    },
+    {
+      "texte": "suis",
+      "mot": "suis",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.28
+    },
+    {
+      "texte": "loin.",
+      "mot": "loin",
+      "scene": 1,
+      "debut": 5.28,
+      "fin": 5.46
+    },
+    {
+      "texte": "Chien :",
+      "mot": "Chien",
+      "scene": 2,
+      "debut": 6.0,
+      "fin": 6.34
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 2,
+      "debut": 6.8,
+      "fin": 7.02
+    },
+    {
+      "texte": "clair,",
+      "mot": "clair",
+      "scene": 2,
+      "debut": 7.02,
+      "fin": 7.2
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 2,
+      "debut": 7.56,
+      "fin": 7.72
+    },
+    {
+      "texte": "chauffe.",
+      "mot": "chauffe",
+      "scene": 2,
+      "debut": 7.72,
+      "fin": 8.38
+    },
+    {
+      "texte": "Loup :",
+      "mot": "Loup",
+      "scene": 3,
+      "debut": 8.64,
+      "fin": 8.76
+    },
+    {
+      "texte": "presque",
+      "mot": "presque",
+      "scene": 3,
+      "debut": 9.16,
+      "fin": 9.46
+    },
+    {
+      "texte": "blanc,",
+      "mot": "blanc",
+      "scene": 3,
+      "debut": 9.46,
+      "fin": 9.76
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 10.3,
+      "fin": 10.42
+    },
+    {
+      "texte": "brûle !",
+      "mot": "brûle",
+      "scene": 3,
+      "debut": 10.42,
+      "fin": 10.78
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 11.24,
+      "fin": 11.24
+    },
+    {
+      "texte": "voilà :",
+      "mot": "voilà",
+      "scene": 4,
+      "debut": 11.24,
+      "fin": 11.42
+    },
+    {
+      "texte": "renard !",
+      "mot": "renard",
+      "scene": 4,
+      "debut": 11.9,
+      "fin": 12.22
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 5,
+      "debut": 12.68,
+      "fin": 12.98
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 5,
+      "debut": 12.98,
+      "fin": 13.2
+    },
+    {
+      "texte": "clair,",
+      "mot": "clair",
+      "scene": 5,
+      "debut": 13.2,
+      "fin": 13.4
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 5,
+      "debut": 13.7,
+      "fin": 13.74
+    },
+    {
+      "texte": "t'es",
+      "mot": "t'es",
+      "scene": 5,
+      "debut": 13.74,
+      "fin": 13.92
+    },
+    {
+      "texte": "proche.",
+      "mot": "proche",
+      "scene": 5,
+      "debut": 13.92,
+      "fin": 14.22
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.74,
+      "fin": 15.24
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.48,
+      "fin": 15.78
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.78,
+      "fin": 16.0
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.0,
+      "fin": 16.12
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.12,
+      "fin": 16.26
+    }
+  ]
+}

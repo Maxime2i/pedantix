@@ -1,0 +1,451 @@
+{
+  "duree": 23.84,
+  "dureeVoix": 22.04,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.34,
+      "fin": 4.06
+    },
+    {
+      "id": "debut",
+      "debut": 4.06,
+      "finVoix": 9.42,
+      "fin": 10.3
+    },
+    {
+      "id": "fin-semaine",
+      "debut": 10.3,
+      "finVoix": 14.22,
+      "fin": 14.76
+    },
+    {
+      "id": "stats",
+      "debut": 14.76,
+      "finVoix": 17.54,
+      "fin": 18.22
+    },
+    {
+      "id": "appel",
+      "debut": 18.22,
+      "finVoix": 22.04,
+      "fin": 23.84
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Cinq",
+      "mot": "Cinq",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.52
+    },
+    {
+      "texte": "minutes",
+      "mot": "minutes",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.74
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.98
+    },
+    {
+      "texte": "jour",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 0.98,
+      "fin": 1.18
+    },
+    {
+      "texte": "pendant",
+      "mot": "pendant",
+      "scene": 0,
+      "debut": 1.18,
+      "fin": 1.46
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 1.46,
+      "fin": 1.84
+    },
+    {
+      "texte": "semaine.",
+      "mot": "semaine",
+      "scene": 0,
+      "debut": 1.84,
+      "fin": 2.14
+    },
+    {
+      "texte": "Voilà",
+      "mot": "Voilà",
+      "scene": 0,
+      "debut": 2.6,
+      "fin": 2.8
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 0,
+      "debut": 2.8,
+      "fin": 2.98
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 0,
+      "debut": 2.98,
+      "fin": 3.04
+    },
+    {
+      "texte": "ça",
+      "mot": "ça",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.16
+    },
+    {
+      "texte": "donne.",
+      "mot": "donne",
+      "scene": 0,
+      "debut": 3.16,
+      "fin": 3.34
+    },
+    {
+      "texte": "Lundi,",
+      "mot": "Lundi",
+      "scene": 1,
+      "debut": 4.06,
+      "fin": 4.58
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 4.84,
+      "fin": 4.86
+    },
+    {
+      "texte": "commences.",
+      "mot": "commences",
+      "scene": 1,
+      "debut": 4.86,
+      "fin": 5.22
+    },
+    {
+      "texte": "Mardi,",
+      "mot": "Mardi",
+      "scene": 1,
+      "debut": 5.94,
+      "fin": 6.24
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 6.66,
+      "fin": 6.78
+    },
+    {
+      "texte": "premières",
+      "mot": "premières",
+      "scene": 1,
+      "debut": 6.78,
+      "fin": 7.12
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 1,
+      "debut": 7.12,
+      "fin": 7.38
+    },
+    {
+      "texte": "reviennent",
+      "mot": "reviennent",
+      "scene": 1,
+      "debut": 7.38,
+      "fin": 7.62
+    },
+    {
+      "texte": "déjà,",
+      "mot": "déjà",
+      "scene": 1,
+      "debut": 7.62,
+      "fin": 7.9
+    },
+    {
+      "texte": "juste",
+      "mot": "juste",
+      "scene": 1,
+      "debut": 8.32,
+      "fin": 8.74
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 1,
+      "debut": 8.74,
+      "fin": 8.84
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 8.84,
+      "fin": 8.96
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 8.96,
+      "fin": 9.02
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 9.02,
+      "fin": 9.14
+    },
+    {
+      "texte": "oublies.",
+      "mot": "oublies",
+      "scene": 1,
+      "debut": 9.14,
+      "fin": 9.42
+    },
+    {
+      "texte": "Mercredi,",
+      "mot": "Mercredi",
+      "scene": 2,
+      "debut": 10.3,
+      "fin": 10.82
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 2,
+      "debut": 11.12,
+      "fin": 11.16
+    },
+    {
+      "texte": "t'en",
+      "mot": "t'en",
+      "scene": 2,
+      "debut": 11.16,
+      "fin": 11.3
+    },
+    {
+      "texte": "souviens",
+      "mot": "souviens",
+      "scene": 2,
+      "debut": 11.3,
+      "fin": 11.6
+    },
+    {
+      "texte": "mieux.",
+      "mot": "mieux",
+      "scene": 2,
+      "debut": 11.6,
+      "fin": 11.78
+    },
+    {
+      "texte": "Dimanche,",
+      "mot": "Dimanche",
+      "scene": 2,
+      "debut": 12.66,
+      "fin": 13.02
+    },
+    {
+      "texte": "sept",
+      "mot": "sept",
+      "scene": 2,
+      "debut": 13.38,
+      "fin": 13.64
+    },
+    {
+      "texte": "jours",
+      "mot": "jours",
+      "scene": 2,
+      "debut": 13.64,
+      "fin": 13.82
+    },
+    {
+      "texte": "d'affilée.",
+      "mot": "d'affilée",
+      "scene": 2,
+      "debut": 13.82,
+      "fin": 14.22
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 14.76,
+      "fin": 14.8
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 3,
+      "debut": 14.8,
+      "fin": 14.94
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 3,
+      "debut": 14.94,
+      "fin": 15.06
+    },
+    {
+      "texte": "stats,",
+      "mot": "stats",
+      "scene": 3,
+      "debut": 15.06,
+      "fin": 15.34
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 15.7,
+      "fin": 15.86
+    },
+    {
+      "texte": "série",
+      "mot": "série",
+      "scene": 3,
+      "debut": 15.86,
+      "fin": 16.06
+    },
+    {
+      "texte": "s'allume",
+      "mot": "s'allume",
+      "scene": 3,
+      "debut": 16.06,
+      "fin": 16.44
+    },
+    {
+      "texte": "jour",
+      "mot": "jour",
+      "scene": 3,
+      "debut": 16.72,
+      "fin": 17.06
+    },
+    {
+      "texte": "après",
+      "mot": "après",
+      "scene": 3,
+      "debut": 17.06,
+      "fin": 17.28
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 3,
+      "debut": 17.28,
+      "fin": 17.54
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 18.22,
+      "fin": 18.42
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 18.42,
+      "fin": 18.58
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 18.58,
+      "fin": 18.7
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 18.7,
+      "fin": 18.82
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 18.82,
+      "fin": 18.94
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 18.94,
+      "fin": 19.22
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 19.96,
+      "fin": 20.26
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.62
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 20.8,
+      "fin": 21.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 21.14,
+      "fin": 21.3
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 21.3,
+      "fin": 21.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 21.58,
+      "fin": 21.82
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 21.82,
+      "fin": 22.04
+    }
+  ]
+}

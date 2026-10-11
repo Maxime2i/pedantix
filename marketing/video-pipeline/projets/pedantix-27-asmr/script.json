@@ -1,0 +1,153 @@
+{
+  "titre": "ASMR Pédantix",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 24
+  },
+  "objectif": "Ambiance : le son des mots qui se dévoilent.",
+  "voix": {
+    "instructions": "Voix masculine jeune, française, chuchotée façon ASMR : très douce, lente, proche du micro, longues pauses entre les mots."
+  },
+  "page": {
+    "titre": "Japon",
+    "texte": [
+      "Le Japon est un pays insulaire de l'Asie de l'Est, situé entre la mer du Japon et l'océan Pacifique, à l'est de la Chine, de la Corée du Sud et de la Corée du Nord, au sud de la Russie, et au nord-est de Taïwan.",
+      "Étymologiquement, les kanjis qui constituent le nom du Japon signifient « pays d'origine du Soleil » ; c'est ainsi que le Japon est désigné comme le « pays du soleil levant ».",
+      "Les recherches archéologiques démontrent que le Japon était peuplé dès la période du Paléolithique supérieur."
+    ],
+    "titreMots": [
+      "japon"
+    ],
+    "revelations": {
+      "corée": [
+        "corée"
+      ]
+    },
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 16 septembre"
+  },
+  "dispositionInitiale": "telephone",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Chut… écoute juste le bruit des mots qui se dévoilent, un par un.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Chut…",
+          "cible": "article",
+          "echelle": 1.25,
+          "hauteur": 860
+        }
+      ]
+    },
+    {
+      "id": "mots",
+      "voix": "Océan. Pacifique. Chine. Corée. Soleil.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Océan.",
+          "mot": "océan",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Océan.",
+          "mot": "océan",
+          "position": "fin"
+        },
+        {
+          "type": "taper",
+          "ancre": "Pacifique.",
+          "mot": "pacifique",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Pacifique.",
+          "mot": "pacifique",
+          "position": "fin"
+        },
+        {
+          "type": "taper",
+          "ancre": "Chine.",
+          "mot": "chine",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Chine.",
+          "mot": "chine",
+          "position": "fin"
+        },
+        {
+          "type": "taper",
+          "ancre": "Corée.",
+          "mot": "corée",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Corée.",
+          "mot": "corée",
+          "position": "fin"
+        },
+        {
+          "type": "taper",
+          "ancre": "Soleil.",
+          "mot": "soleil",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Soleil.",
+          "mot": "soleil",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "titre",
+      "voix": "Et enfin… Japon.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Et",
+          "cible": "titre"
+        },
+        {
+          "type": "taper",
+          "ancre": "enfin…",
+          "mot": "japon",
+          "duree": 0.45
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Japon.",
+          "mot": "japon",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix. Gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "titre": "Ma première carte, revue 4 fois",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de récit personnel, « trente » hésitant, « Raté » amusé. Satisfait sur « par cœur ». Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Ma toute première carte : combien de pays en Afrique ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "Ma"
+        },
+        {
+          "type": "zoom",
+          "ancre": "combien",
+          "cible": "carte"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Ma",
+          "gain": 0.4
+        },
+        {
+          "son": "tictac",
+          "ancre": "pays",
+          "gain": 0.3
+        }
+      ]
+    },
+    {
+      "id": "rate",
+      "voix": "Je réponds trente, sans trop y croire. Raté, c'est cinquante-quatre.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "trente",
+          "texte": "30 ?"
+        },
+        {
+          "type": "rate",
+          "ancre": "Raté"
+        },
+        {
+          "type": "reveler",
+          "ancre": "cinquante-quatre"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "retours",
+      "voix": "Elle revient dix minutes plus tard : correct. Le lendemain : correct. Puis six jours après : facile.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "courbe",
+          "ancre": "Elle",
+          "mode": "revisions"
+        },
+        {
+          "type": "revision",
+          "ancre": "dix",
+          "label": "10 min"
+        },
+        {
+          "type": "revision",
+          "ancre": "lendemain",
+          "label": "1 j"
+        },
+        {
+          "type": "revision",
+          "ancre": "six",
+          "label": "6 j"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "coeur",
+      "voix": "Aujourd'hui, je la sais par cœur. Et toi, tu savais ?",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Aujourd'hui"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Aujourd'hui",
+          "cible": "boutons"
+        },
+        {
+          "type": "noter",
+          "ancre": "cœur",
+          "bouton": "facile"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "cartes": [
+    {
+      "paquet": "Continents",
+      "theme": "Géographie",
+      "compteurs": [
+        12,
+        8,
+        34
+      ],
+      "question": "Combien de pays compte ce continent ?",
+      "indiceType": "Continent",
+      "indice": "Afrique",
+      "reponse": "54",
+      "fiche": [
+        [
+          "Le plus grand",
+          "l’Algérie"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "duree": 18.24,
+  "dureeVoix": 16.44,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.84,
+      "fin": 3.54
+    },
+    {
+      "id": "indices1",
+      "debut": 3.54,
+      "finVoix": 7.12,
+      "fin": 7.68
+    },
+    {
+      "id": "indices2",
+      "debut": 7.68,
+      "finVoix": 11.26,
+      "fin": 12.18
+    },
+    {
+      "id": "reponse",
+      "debut": 12.18,
+      "finVoix": 12.96,
+      "fin": 13.54
+    },
+    {
+      "id": "cta",
+      "debut": 13.54,
+      "finVoix": 14.48,
+      "fin": 14.96
+    },
+    {
+      "id": "appel",
+      "debut": 14.96,
+      "finVoix": 16.44,
+      "fin": 18.24
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "personnalité",
+      "mot": "personnalité",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 1.1
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.22
+    },
+    {
+      "texte": "cachée",
+      "mot": "cachée",
+      "scene": 0,
+      "debut": 1.22,
+      "fin": 1.56
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 1.56,
+      "fin": 1.66
+    },
+    {
+      "texte": "cette",
+      "mot": "cette",
+      "scene": 0,
+      "debut": 1.66,
+      "fin": 1.82
+    },
+    {
+      "texte": "page.",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.82,
+      "fin": 2.12
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 2.32,
+      "fin": 2.48
+    },
+    {
+      "texte": "trouves",
+      "mot": "trouves",
+      "scene": 0,
+      "debut": 2.48,
+      "fin": 2.7
+    },
+    {
+      "texte": "qui ?",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 2.7,
+      "fin": 2.84
+    },
+    {
+      "texte": "Indice",
+      "mot": "Indice",
+      "scene": 1,
+      "debut": 3.54,
+      "fin": 3.86
+    },
+    {
+      "texte": "un :",
+      "mot": "un",
+      "scene": 1,
+      "debut": 3.86,
+      "fin": 4.06
+    },
+    {
+      "texte": "réalisateur.",
+      "mot": "réalisateur",
+      "scene": 1,
+      "debut": 4.66,
+      "fin": 5.12
+    },
+    {
+      "texte": "Indice",
+      "mot": "Indice",
+      "scene": 1,
+      "debut": 5.68,
+      "fin": 6.06
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.26
+    },
+    {
+      "texte": "canadien.",
+      "mot": "canadien",
+      "scene": 1,
+      "debut": 6.7,
+      "fin": 7.12
+    },
+    {
+      "texte": "Indice",
+      "mot": "Indice",
+      "scene": 2,
+      "debut": 7.68,
+      "fin": 8.14
+    },
+    {
+      "texte": "trois :",
+      "mot": "trois",
+      "scene": 2,
+      "debut": 8.14,
+      "fin": 8.38
+    },
+    {
+      "texte": "Terminator.",
+      "mot": "Terminator",
+      "scene": 2,
+      "debut": 8.86,
+      "fin": 9.36
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 9.98,
+      "fin": 10.14
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 10.14,
+      "fin": 10.2
+    },
+    {
+      "texte": "dernier :",
+      "mot": "dernier",
+      "scene": 2,
+      "debut": 10.2,
+      "fin": 10.44
+    },
+    {
+      "texte": "Titanic.",
+      "mot": "Titanic",
+      "scene": 2,
+      "debut": 10.96,
+      "fin": 11.26
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 3,
+      "debut": 12.18,
+      "fin": 12.46
+    },
+    {
+      "texte": "James",
+      "mot": "James",
+      "scene": 3,
+      "debut": 12.46,
+      "fin": 12.64
+    },
+    {
+      "texte": "Cameron !",
+      "mot": "Cameron",
+      "scene": 3,
+      "debut": 12.64,
+      "fin": 12.96
+    },
+    {
+      "texte": "T'avais",
+      "mot": "T'avais",
+      "scene": 4,
+      "debut": 13.54,
+      "fin": 13.74
+    },
+    {
+      "texte": "trouvé",
+      "mot": "trouvé",
+      "scene": 4,
+      "debut": 13.74,
+      "fin": 13.94
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 13.94,
+      "fin": 14.08
+    },
+    {
+      "texte": "quel",
+      "mot": "quel",
+      "scene": 4,
+      "debut": 14.08,
+      "fin": 14.14
+    },
+    {
+      "texte": "indice ?",
+      "mot": "indice",
+      "scene": 4,
+      "debut": 14.14,
+      "fin": 14.48
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 14.96,
+      "fin": 15.42
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 15.74,
+      "fin": 15.96
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 5,
+      "debut": 15.96,
+      "fin": 16.16
+    },
+    {
+      "texte": "l'App",
+      "mot": "l'App",
+      "scene": 5,
+      "debut": 16.16,
+      "fin": 16.28
+    },
+    {
+      "texte": "Store.",
+      "mot": "Store",
+      "scene": 5,
+      "debut": 16.28,
+      "fin": 16.44
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "duree": 23.74,
+  "dureeVoix": 21.94,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.884,
+      "fin": 2.884
+    },
+    {
+      "id": "j1914",
+      "debut": 2.884,
+      "finVoix": 5.76,
+      "fin": 6.3
+    },
+    {
+      "id": "j1944",
+      "debut": 6.3,
+      "finVoix": 9.0,
+      "fin": 9.82
+    },
+    {
+      "id": "j1958",
+      "debut": 9.82,
+      "finVoix": 11.88,
+      "fin": 12.76
+    },
+    {
+      "id": "j1981",
+      "debut": 12.76,
+      "finVoix": 15.36,
+      "fin": 15.98
+    },
+    {
+      "id": "j2002",
+      "debut": 15.98,
+      "finVoix": 18.04,
+      "fin": 18.52
+    },
+    {
+      "id": "appel",
+      "debut": 18.52,
+      "finVoix": 21.94,
+      "fin": 23.74
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "siècle",
+      "mot": "siècle",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.72
+    },
+    {
+      "texte": "d'histoire",
+      "mot": "d'histoire",
+      "scene": 0,
+      "debut": 0.72,
+      "fin": 1.1
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.24
+    },
+    {
+      "texte": "France",
+      "mot": "France",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.52
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.52,
+      "fin": 1.8
+    },
+    {
+      "texte": "vingt",
+      "mot": "vingt",
+      "scene": 0,
+      "debut": 1.8,
+      "fin": 2.02
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.48
+    },
+    {
+      "texte": "Accroche-toi.",
+      "mot": "Accroche-toi",
+      "scene": 0,
+      "debut": 2.6,
+      "fin": 2.884
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 1,
+      "debut": 2.884,
+      "fin": 3.168
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 1,
+      "debut": 3.168,
+      "fin": 3.452
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 1,
+      "debut": 3.452,
+      "fin": 3.736
+    },
+    {
+      "texte": "quatorze :",
+      "mot": "quatorze",
+      "scene": 1,
+      "debut": 3.736,
+      "fin": 4.02
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 4.9
+    },
+    {
+      "texte": "Première",
+      "mot": "Première",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.24
+    },
+    {
+      "texte": "Guerre",
+      "mot": "Guerre",
+      "scene": 1,
+      "debut": 5.24,
+      "fin": 5.42
+    },
+    {
+      "texte": "mondiale.",
+      "mot": "mondiale",
+      "scene": 1,
+      "debut": 5.42,
+      "fin": 5.76
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 2,
+      "debut": 6.3,
+      "fin": 6.425
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 2,
+      "debut": 6.425,
+      "fin": 6.55
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 6.55,
+      "fin": 6.675
+    },
+    {
+      "texte": "quarante-quatre :",
+      "mot": "quarante-quatre",
+      "scene": 2,
+      "debut": 6.675,
+      "fin": 6.8
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 2,
+      "debut": 7.76,
+      "fin": 7.84
+    },
+    {
+      "texte": "femmes",
+      "mot": "femmes",
+      "scene": 2,
+      "debut": 7.84,
+      "fin": 8.02
+    },
+    {
+      "texte": "obtiennent",
+      "mot": "obtiennent",
+      "scene": 2,
+      "debut": 8.02,
+      "fin": 8.44
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.44,
+      "fin": 8.56
+    },
+    {
+      "texte": "droit",
+      "mot": "droit",
+      "scene": 2,
+      "debut": 8.56,
+      "fin": 8.72
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 8.72,
+      "fin": 8.8
+    },
+    {
+      "texte": "vote.",
+      "mot": "vote",
+      "scene": 2,
+      "debut": 8.8,
+      "fin": 9.0
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 3,
+      "debut": 9.82,
+      "fin": 9.96
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 3,
+      "debut": 9.96,
+      "fin": 10.1
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 3,
+      "debut": 10.1,
+      "fin": 10.24
+    },
+    {
+      "texte": "cinquante-huit :",
+      "mot": "cinquante-huit",
+      "scene": 3,
+      "debut": 10.24,
+      "fin": 10.38
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 3,
+      "debut": 11.08,
+      "fin": 11.16
+    },
+    {
+      "texte": "Cinquième",
+      "mot": "Cinquième",
+      "scene": 3,
+      "debut": 11.16,
+      "fin": 11.6
+    },
+    {
+      "texte": "République.",
+      "mot": "République",
+      "scene": 3,
+      "debut": 11.6,
+      "fin": 11.88
+    },
+    {
+      "texte": "Mille",
+      "mot": "Mille",
+      "scene": 4,
+      "debut": 12.76,
+      "fin": 12.9
+    },
+    {
+      "texte": "neuf",
+      "mot": "neuf",
+      "scene": 4,
+      "debut": 12.9,
+      "fin": 13.04
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 13.04,
+      "fin": 13.18
+    },
+    {
+      "texte": "quatre-vingt-un :",
+      "mot": "quatre-vingt-un",
+      "scene": 4,
+      "debut": 13.18,
+      "fin": 13.32
+    },
+    {
+      "texte": "abolition",
+      "mot": "abolition",
+      "scene": 4,
+      "debut": 14.14,
+      "fin": 14.54
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 14.54,
+      "fin": 14.84
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 14.84,
+      "fin": 14.94
+    },
+    {
+      "texte": "peine",
+      "mot": "peine",
+      "scene": 4,
+      "debut": 14.94,
+      "fin": 15.08
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 15.08,
+      "fin": 15.24
+    },
+    {
+      "texte": "mort.",
+      "mot": "mort",
+      "scene": 4,
+      "debut": 15.24,
+      "fin": 15.36
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 5,
+      "debut": 15.98,
+      "fin": 16.27
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 5,
+      "debut": 16.27,
+      "fin": 16.56
+    },
+    {
+      "texte": "deux :",
+      "mot": "deux",
+      "scene": 5,
+      "debut": 16.56,
+      "fin": 16.85
+    },
+    {
+      "texte": "l'euro",
+      "mot": "l'euro",
+      "scene": 5,
+      "debut": 16.85,
+      "fin": 17.14
+    },
+    {
+      "texte": "arrive",
+      "mot": "arrive",
+      "scene": 5,
+      "debut": 17.14,
+      "fin": 17.46
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 5,
+      "debut": 17.46,
+      "fin": 17.6
+    },
+    {
+      "texte": "nos",
+      "mot": "nos",
+      "scene": 5,
+      "debut": 17.6,
+      "fin": 17.72
+    },
+    {
+      "texte": "poches.",
+      "mot": "poches",
+      "scene": 5,
+      "debut": 17.72,
+      "fin": 18.04
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 6,
+      "debut": 18.52,
+      "fin": 18.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 18.66,
+      "fin": 18.86
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 6,
+      "debut": 18.86,
+      "fin": 19.0
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 6,
+      "debut": 19.0,
+      "fin": 19.14
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 6,
+      "debut": 19.14,
+      "fin": 19.28
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 6,
+      "debut": 19.28,
+      "fin": 19.6
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 20.0,
+      "fin": 20.24
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 20.24,
+      "fin": 20.6
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 20.74,
+      "fin": 21.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 21.14,
+      "fin": 21.32
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 21.32,
+      "fin": 21.52
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 21.52,
+      "fin": 21.7
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 21.7,
+      "fin": 21.94
+    }
+  ]
+}

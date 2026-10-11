@@ -1,0 +1,401 @@
+{
+  "duree": 22.88,
+  "dureeVoix": 21.08,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.78,
+      "fin": 4.28
+    },
+    {
+      "id": "principe",
+      "debut": 4.28,
+      "finVoix": 6.74,
+      "fin": 6.84
+    },
+    {
+      "id": "recherche",
+      "debut": 6.84,
+      "finVoix": 11.92,
+      "fin": 12.06
+    },
+    {
+      "id": "declic",
+      "debut": 12.06,
+      "finVoix": 13.6,
+      "fin": 14.34
+    },
+    {
+      "id": "victoire",
+      "debut": 14.34,
+      "finVoix": 18.0,
+      "fin": 18.48
+    },
+    {
+      "id": "appel",
+      "debut": 18.48,
+      "finVoix": 21.08,
+      "fin": 22.88
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ce",
+      "mot": "Ce",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.78
+    },
+    {
+      "texte": "cache",
+      "mot": "cache",
+      "scene": 0,
+      "debut": 0.78,
+      "fin": 1.08
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.26
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.48
+    },
+    {
+      "texte": "Wikipédia",
+      "mot": "Wikipédia",
+      "scene": 0,
+      "debut": 1.48,
+      "fin": 2.14
+    },
+    {
+      "texte": "entière…",
+      "mot": "entière",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.74
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.74,
+      "fin": 3.02
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 0,
+      "debut": 3.02,
+      "fin": 3.14
+    },
+    {
+      "texte": "dois",
+      "mot": "dois",
+      "scene": 0,
+      "debut": 3.14,
+      "fin": 3.24
+    },
+    {
+      "texte": "trouver",
+      "mot": "trouver",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.46
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 0,
+      "debut": 3.46,
+      "fin": 3.58
+    },
+    {
+      "texte": "titre.",
+      "mot": "titre",
+      "scene": 0,
+      "debut": 3.58,
+      "fin": 3.78
+    },
+    {
+      "texte": "Chaque",
+      "mot": "Chaque",
+      "scene": 1,
+      "debut": 4.28,
+      "fin": 4.62
+    },
+    {
+      "texte": "mot",
+      "mot": "mot",
+      "scene": 1,
+      "debut": 4.62,
+      "fin": 4.74
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 4.82
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 4.9
+    },
+    {
+      "texte": "proposes",
+      "mot": "proposes",
+      "scene": 1,
+      "debut": 4.9,
+      "fin": 5.28
+    },
+    {
+      "texte": "apparaît",
+      "mot": "apparaît",
+      "scene": 1,
+      "debut": 5.28,
+      "fin": 5.68
+    },
+    {
+      "texte": "partout",
+      "mot": "partout",
+      "scene": 1,
+      "debut": 5.68,
+      "fin": 6.0
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 6.0,
+      "fin": 6.16
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 1,
+      "debut": 6.16,
+      "fin": 6.24
+    },
+    {
+      "texte": "texte.",
+      "mot": "texte",
+      "scene": 1,
+      "debut": 6.24,
+      "fin": 6.74
+    },
+    {
+      "texte": "Paris ?",
+      "mot": "Paris",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.18
+    },
+    {
+      "texte": "Trouvé.",
+      "mot": "Trouvé",
+      "scene": 2,
+      "debut": 7.82,
+      "fin": 8.22
+    },
+    {
+      "texte": "Clocher ?",
+      "mot": "Clocher",
+      "scene": 2,
+      "debut": 8.72,
+      "fin": 9.0
+    },
+    {
+      "texte": "Presque…",
+      "mot": "Presque",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 10.36
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 10.92,
+      "fin": 11.1
+    },
+    {
+      "texte": "chauffe.",
+      "mot": "chauffe",
+      "scene": 2,
+      "debut": 11.1,
+      "fin": 11.92
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 12.06,
+      "fin": 12.14
+    },
+    {
+      "texte": "là,",
+      "mot": "là",
+      "scene": 3,
+      "debut": 12.14,
+      "fin": 12.347
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 3,
+      "debut": 12.347,
+      "fin": 12.553
+    },
+    {
+      "texte": "tente…",
+      "mot": "tente",
+      "scene": 3,
+      "debut": 12.553,
+      "fin": 12.76
+    },
+    {
+      "texte": "tour.",
+      "mot": "tour",
+      "scene": 3,
+      "debut": 13.34,
+      "fin": 13.6
+    },
+    {
+      "texte": "Eiffel !",
+      "mot": "Eiffel",
+      "scene": 4,
+      "debut": 14.34,
+      "fin": 14.9
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 15.34,
+      "fin": 15.46
+    },
+    {
+      "texte": "titre",
+      "mot": "titre",
+      "scene": 4,
+      "debut": 15.46,
+      "fin": 15.68
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 15.68,
+      "fin": 15.82
+    },
+    {
+      "texte": "révélé.",
+      "mot": "révélé",
+      "scene": 4,
+      "debut": 15.82,
+      "fin": 16.1
+    },
+    {
+      "texte": "Quarante-deux",
+      "mot": "Quarante-deux",
+      "scene": 4,
+      "debut": 16.52,
+      "fin": 16.84
+    },
+    {
+      "texte": "coups,",
+      "mot": "coups",
+      "scene": 4,
+      "debut": 16.84,
+      "fin": 17.34
+    },
+    {
+      "texte": "troisième",
+      "mot": "troisième",
+      "scene": 4,
+      "debut": 17.34,
+      "fin": 17.66
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 4,
+      "debut": 17.66,
+      "fin": 17.82
+    },
+    {
+      "texte": "jour.",
+      "mot": "jour",
+      "scene": 4,
+      "debut": 17.82,
+      "fin": 18.0
+    },
+    {
+      "texte": "Une",
+      "mot": "Une",
+      "scene": 5,
+      "debut": 18.48,
+      "fin": 18.6
+    },
+    {
+      "texte": "nouvelle",
+      "mot": "nouvelle",
+      "scene": 5,
+      "debut": 18.6,
+      "fin": 18.76
+    },
+    {
+      "texte": "page",
+      "mot": "page",
+      "scene": 5,
+      "debut": 18.76,
+      "fin": 19.0
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 5,
+      "debut": 19.0,
+      "fin": 19.22
+    },
+    {
+      "texte": "midi.",
+      "mot": "midi",
+      "scene": 5,
+      "debut": 19.22,
+      "fin": 19.52
+    },
+    {
+      "texte": "Pédantix,",
+      "mot": "Pédantix",
+      "scene": 5,
+      "debut": 19.94,
+      "fin": 20.36
+    },
+    {
+      "texte": "gratuit.",
+      "mot": "gratuit",
+      "scene": 5,
+      "debut": 20.8,
+      "fin": 21.08
+    }
+  ]
+}

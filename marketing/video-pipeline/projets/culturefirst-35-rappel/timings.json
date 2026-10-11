@@ -1,0 +1,472 @@
+{
+  "duree": 23.04,
+  "dureeVoix": 21.24,
+  "scenes": [
+    {
+      "id": "notif",
+      "debut": 0.0,
+      "finVoix": 4.34,
+      "fin": 4.34
+    },
+    {
+      "id": "seulement",
+      "debut": 4.34,
+      "finVoix": 7.42,
+      "fin": 8.26
+    },
+    {
+      "id": "alerte",
+      "debut": 8.26,
+      "finVoix": 12.28,
+      "fin": 13.04
+    },
+    {
+      "id": "revise",
+      "debut": 13.04,
+      "finVoix": 15.88,
+      "fin": 16.56
+    },
+    {
+      "id": "appel",
+      "debut": 16.56,
+      "finVoix": 21.24,
+      "fin": 23.04
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.56
+    },
+    {
+      "texte": "rappel",
+      "mot": "rappel",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.92
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 0,
+      "debut": 0.92,
+      "fin": 1.08
+    },
+    {
+      "texte": "jour,",
+      "mot": "jour",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.32
+    },
+    {
+      "texte": "avec",
+      "mot": "avec",
+      "scene": 0,
+      "debut": 1.64,
+      "fin": 1.9
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 1.9,
+      "fin": 2.12
+    },
+    {
+      "texte": "nombre",
+      "mot": "nombre",
+      "scene": 0,
+      "debut": 2.12,
+      "fin": 2.34
+    },
+    {
+      "texte": "exact",
+      "mot": "exact",
+      "scene": 0,
+      "debut": 2.34,
+      "fin": 2.74
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 2.74,
+      "fin": 3.0
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 0,
+      "debut": 3.0,
+      "fin": 3.24
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 3.24,
+      "fin": 3.34
+    },
+    {
+      "texte": "t'attendent.",
+      "mot": "t'attendent",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 4.34
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 1,
+      "debut": 4.34,
+      "fin": 4.48
+    },
+    {
+      "texte": "seulement",
+      "mot": "seulement",
+      "scene": 1,
+      "debut": 4.48,
+      "fin": 4.82
+    },
+    {
+      "texte": "si",
+      "mot": "si",
+      "scene": 1,
+      "debut": 4.82,
+      "fin": 5.04
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 5.04,
+      "fin": 5.12
+    },
+    {
+      "texte": "n'as",
+      "mot": "n'as",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.26
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 5.26,
+      "fin": 5.4
+    },
+    {
+      "texte": "encore",
+      "mot": "encore",
+      "scene": 1,
+      "debut": 5.4,
+      "fin": 5.56
+    },
+    {
+      "texte": "étudié :",
+      "mot": "étudié",
+      "scene": 1,
+      "debut": 5.56,
+      "fin": 5.98
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 6.38,
+      "fin": 6.5
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.5,
+      "fin": 6.56
+    },
+    {
+      "texte": "notification",
+      "mot": "notification",
+      "scene": 1,
+      "debut": 6.56,
+      "fin": 6.96
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 1,
+      "debut": 6.96,
+      "fin": 7.3
+    },
+    {
+      "texte": "rien.",
+      "mot": "rien",
+      "scene": 1,
+      "debut": 7.3,
+      "fin": 7.42
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 8.26,
+      "fin": 8.46
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 8.46,
+      "fin": 8.58
+    },
+    {
+      "texte": "soir,",
+      "mot": "soir",
+      "scene": 2,
+      "debut": 8.58,
+      "fin": 8.8
+    },
+    {
+      "texte": "si",
+      "mot": "si",
+      "scene": 2,
+      "debut": 9.08,
+      "fin": 9.16
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 2,
+      "debut": 9.16,
+      "fin": 9.28
+    },
+    {
+      "texte": "série",
+      "mot": "série",
+      "scene": 2,
+      "debut": 9.28,
+      "fin": 9.52
+    },
+    {
+      "texte": "risque",
+      "mot": "risque",
+      "scene": 2,
+      "debut": 9.52,
+      "fin": 9.82
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 9.82,
+      "fin": 10.0
+    },
+    {
+      "texte": "s'arrêter,",
+      "mot": "s'arrêter",
+      "scene": 2,
+      "debut": 10.0,
+      "fin": 10.32
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 2,
+      "debut": 10.68,
+      "fin": 10.82
+    },
+    {
+      "texte": "dernière",
+      "mot": "dernière",
+      "scene": 2,
+      "debut": 10.82,
+      "fin": 11.16
+    },
+    {
+      "texte": "alerte",
+      "mot": "alerte",
+      "scene": 2,
+      "debut": 11.16,
+      "fin": 11.64
+    },
+    {
+      "texte": "vers",
+      "mot": "vers",
+      "scene": 2,
+      "debut": 11.64,
+      "fin": 11.78
+    },
+    {
+      "texte": "vingt-deux",
+      "mot": "vingt-deux",
+      "scene": 2,
+      "debut": 11.78,
+      "fin": 12.03
+    },
+    {
+      "texte": "heures.",
+      "mot": "heures",
+      "scene": 2,
+      "debut": 12.03,
+      "fin": 12.28
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 3,
+      "debut": 13.04,
+      "fin": 13.26
+    },
+    {
+      "texte": "ouvres,",
+      "mot": "ouvres",
+      "scene": 3,
+      "debut": 13.26,
+      "fin": 13.54
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 13.96,
+      "fin": 14.14
+    },
+    {
+      "texte": "révises,",
+      "mot": "révises",
+      "scene": 3,
+      "debut": 14.14,
+      "fin": 14.44
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 14.98,
+      "fin": 15.16
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 3,
+      "debut": 15.16,
+      "fin": 15.26
+    },
+    {
+      "texte": "fait",
+      "mot": "fait",
+      "scene": 3,
+      "debut": 15.26,
+      "fin": 15.38
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 3,
+      "debut": 15.38,
+      "fin": 15.52
+    },
+    {
+      "texte": "aujourd'hui.",
+      "mot": "aujourd'hui",
+      "scene": 3,
+      "debut": 15.52,
+      "fin": 15.88
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 16.56,
+      "fin": 16.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 16.86,
+      "fin": 17.08
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 17.08,
+      "fin": 17.313
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 17.313,
+      "fin": 17.547
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 17.547,
+      "fin": 17.78
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 17.78,
+      "fin": 18.12
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 18.9,
+      "fin": 19.18
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 19.18,
+      "fin": 19.6
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 19.8,
+      "fin": 20.26
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 20.26,
+      "fin": 20.46
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 20.46,
+      "fin": 20.7
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 20.7,
+      "fin": 20.96
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.96,
+      "fin": 21.24
+    }
+  ]
+}

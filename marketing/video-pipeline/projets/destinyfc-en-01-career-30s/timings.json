@@ -1,0 +1,471 @@
+{
+  "duree": 25.96,
+  "dureeVoix": 24.16,
+  "scenes": [
+    {
+      "id": "hook",
+      "debut": 0.0,
+      "finVoix": 5.7,
+      "fin": 6.36
+    },
+    {
+      "id": "start",
+      "debut": 6.36,
+      "finVoix": 9.58,
+      "fin": 10.08
+    },
+    {
+      "id": "final",
+      "debut": 10.08,
+      "finVoix": 12.42,
+      "fin": 12.8
+    },
+    {
+      "id": "paris",
+      "debut": 12.8,
+      "finVoix": 15.4,
+      "fin": 15.96
+    },
+    {
+      "id": "retire",
+      "debut": 15.96,
+      "finVoix": 20.26,
+      "fin": 20.76
+    },
+    {
+      "id": "cta",
+      "debut": 20.76,
+      "finVoix": 24.16,
+      "fin": 25.96
+    }
+  ],
+  "mots": [
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.32
+    },
+    {
+      "texte": "played",
+      "mot": "played",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.52
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.62
+    },
+    {
+      "texte": "whole",
+      "mot": "whole",
+      "scene": 0,
+      "debut": 0.62,
+      "fin": 0.88
+    },
+    {
+      "texte": "football",
+      "mot": "football",
+      "scene": 0,
+      "debut": 0.88,
+      "fin": 1.24
+    },
+    {
+      "texte": "career,",
+      "mot": "career",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.7
+    },
+    {
+      "texte": "start",
+      "mot": "start",
+      "scene": 0,
+      "debut": 1.7,
+      "fin": 2.06
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 0,
+      "debut": 2.06,
+      "fin": 2.3
+    },
+    {
+      "texte": "finish,",
+      "mot": "finish",
+      "scene": 0,
+      "debut": 2.3,
+      "fin": 2.56
+    },
+    {
+      "texte": "in",
+      "mot": "in",
+      "scene": 0,
+      "debut": 2.56,
+      "fin": 2.88
+    },
+    {
+      "texte": "thirty",
+      "mot": "thirty",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.26
+    },
+    {
+      "texte": "seconds.",
+      "mot": "seconds",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.66
+    },
+    {
+      "texte": "From",
+      "mot": "From",
+      "scene": 0,
+      "debut": 4.0,
+      "fin": 4.22
+    },
+    {
+      "texte": "sixteen…",
+      "mot": "sixteen",
+      "scene": 0,
+      "debut": 4.22,
+      "fin": 4.68
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 0,
+      "debut": 4.68,
+      "fin": 5.26
+    },
+    {
+      "texte": "retirement.",
+      "mot": "retirement",
+      "scene": 0,
+      "debut": 5.26,
+      "fin": 5.7
+    },
+    {
+      "texte": "At",
+      "mot": "At",
+      "scene": 1,
+      "debut": 6.36,
+      "fin": 6.46
+    },
+    {
+      "texte": "sixteen,",
+      "mot": "sixteen",
+      "scene": 1,
+      "debut": 6.46,
+      "fin": 6.8
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.14
+    },
+    {
+      "texte": "sign",
+      "mot": "sign",
+      "scene": 1,
+      "debut": 7.14,
+      "fin": 7.36
+    },
+    {
+      "texte": "my",
+      "mot": "my",
+      "scene": 1,
+      "debut": 7.36,
+      "fin": 7.5
+    },
+    {
+      "texte": "very",
+      "mot": "very",
+      "scene": 1,
+      "debut": 7.5,
+      "fin": 7.86
+    },
+    {
+      "texte": "first",
+      "mot": "first",
+      "scene": 1,
+      "debut": 7.86,
+      "fin": 8.14
+    },
+    {
+      "texte": "pro",
+      "mot": "pro",
+      "scene": 1,
+      "debut": 8.14,
+      "fin": 8.4
+    },
+    {
+      "texte": "contract,",
+      "mot": "contract",
+      "scene": 1,
+      "debut": 8.4,
+      "fin": 8.86
+    },
+    {
+      "texte": "with",
+      "mot": "with",
+      "scene": 1,
+      "debut": 8.86,
+      "fin": 9.14
+    },
+    {
+      "texte": "Portsmouth.",
+      "mot": "Portsmouth",
+      "scene": 1,
+      "debut": 9.14,
+      "fin": 9.58
+    },
+    {
+      "texte": "Nineteen:",
+      "mot": "Nineteen",
+      "scene": 2,
+      "debut": 10.08,
+      "fin": 10.54
+    },
+    {
+      "texte": "the",
+      "mot": "the",
+      "scene": 2,
+      "debut": 10.94,
+      "fin": 11.0
+    },
+    {
+      "texte": "cup",
+      "mot": "cup",
+      "scene": 2,
+      "debut": 11.0,
+      "fin": 11.18
+    },
+    {
+      "texte": "final…",
+      "mot": "final",
+      "scene": 2,
+      "debut": 11.18,
+      "fin": 11.48
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 2,
+      "debut": 11.78,
+      "fin": 11.82
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 11.94
+    },
+    {
+      "texte": "win",
+      "mot": "win",
+      "scene": 2,
+      "debut": 11.94,
+      "fin": 12.26
+    },
+    {
+      "texte": "it.",
+      "mot": "it",
+      "scene": 2,
+      "debut": 12.26,
+      "fin": 12.42
+    },
+    {
+      "texte": "Twenty-four:",
+      "mot": "Twenty-four",
+      "scene": 3,
+      "debut": 12.8,
+      "fin": 13.28
+    },
+    {
+      "texte": "United",
+      "mot": "United",
+      "scene": 3,
+      "debut": 13.72,
+      "fin": 14.02
+    },
+    {
+      "texte": "come",
+      "mot": "come",
+      "scene": 3,
+      "debut": 14.02,
+      "fin": 14.3
+    },
+    {
+      "texte": "calling.",
+      "mot": "calling",
+      "scene": 3,
+      "debut": 14.3,
+      "fin": 14.6
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 3,
+      "debut": 15.08,
+      "fin": 15.2
+    },
+    {
+      "texte": "sign.",
+      "mot": "sign",
+      "scene": 3,
+      "debut": 15.2,
+      "fin": 15.4
+    },
+    {
+      "texte": "Thirty-five:",
+      "mot": "Thirty-five",
+      "scene": 4,
+      "debut": 15.96,
+      "fin": 16.38
+    },
+    {
+      "texte": "I",
+      "mot": "I",
+      "scene": 4,
+      "debut": 16.98,
+      "fin": 17.1
+    },
+    {
+      "texte": "retire.",
+      "mot": "retire",
+      "scene": 4,
+      "debut": 17.1,
+      "fin": 17.34
+    },
+    {
+      "texte": "Final",
+      "mot": "Final",
+      "scene": 4,
+      "debut": 17.92,
+      "fin": 18.18
+    },
+    {
+      "texte": "score…",
+      "mot": "score",
+      "scene": 4,
+      "debut": 18.18,
+      "fin": 18.44
+    },
+    {
+      "texte": "two",
+      "mot": "two",
+      "scene": 4,
+      "debut": 18.86,
+      "fin": 19.21
+    },
+    {
+      "texte": "hundred",
+      "mot": "hundred",
+      "scene": 4,
+      "debut": 19.21,
+      "fin": 19.56
+    },
+    {
+      "texte": "and",
+      "mot": "and",
+      "scene": 4,
+      "debut": 19.56,
+      "fin": 19.91
+    },
+    {
+      "texte": "twenty-three.",
+      "mot": "twenty-three",
+      "scene": 4,
+      "debut": 19.91,
+      "fin": 20.26
+    },
+    {
+      "texte": "So,",
+      "mot": "So",
+      "scene": 5,
+      "debut": 20.76,
+      "fin": 20.96
+    },
+    {
+      "texte": "what",
+      "mot": "what",
+      "scene": 5,
+      "debut": 20.96,
+      "fin": 21.4
+    },
+    {
+      "texte": "legend",
+      "mot": "legend",
+      "scene": 5,
+      "debut": 21.4,
+      "fin": 21.68
+    },
+    {
+      "texte": "would",
+      "mot": "would",
+      "scene": 5,
+      "debut": 21.68,
+      "fin": 21.88
+    },
+    {
+      "texte": "you",
+      "mot": "you",
+      "scene": 5,
+      "debut": 21.88,
+      "fin": 22.04
+    },
+    {
+      "texte": "write?",
+      "mot": "write",
+      "scene": 5,
+      "debut": 22.04,
+      "fin": 22.24
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 22.78,
+      "fin": 23.02
+    },
+    {
+      "texte": "FC,",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 23.02,
+      "fin": 23.36
+    },
+    {
+      "texte": "free",
+      "mot": "free",
+      "scene": 5,
+      "debut": 23.68,
+      "fin": 23.9
+    },
+    {
+      "texte": "to",
+      "mot": "to",
+      "scene": 5,
+      "debut": 23.9,
+      "fin": 24.02
+    },
+    {
+      "texte": "play.",
+      "mot": "play",
+      "scene": 5,
+      "debut": 24.02,
+      "fin": 24.16
+    }
+  ]
+}

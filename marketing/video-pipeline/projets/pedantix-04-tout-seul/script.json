@@ -1,0 +1,141 @@
+{
+  "titre": "J'ai codé un jeu tout seul",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Coulisses : le développeur indépendant derrière l'app.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Copenhague",
+    "texte": [
+      "Copenhague est la capitale et la plus grande ville du Danemark. La commune de Copenhague compte 653 648 habitants en 2023, et son agglomération, le Grand Copenhague, en compte 1 345 562. Le nom de Copenhague est généralement donné à l'ensemble du comté de Copenhague, qui regroupe, quant à lui, 1 891 871 habitants. Située sur la côte orientale de l'île de Seeland, face au détroit d'Øresund qui sépare le Danemark de la Suède voisine, Copenhague est reliée à Malmö par le pont de l'Øresund."
+    ],
+    "titreMots": [
+      "copenhague"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 6 octobre"
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "J'ai codé un jeu tout seul, le soir, après les cours.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "seul,",
+          "nom": "fier"
+        },
+        {
+          "type": "pose",
+          "ancre": "soir,",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "idee",
+      "voix": "L'idée : une page Wikipédia cachée, et il faut retrouver son titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "L'idée",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "L'idée",
+          "nom": "montre-droite"
+        },
+        {
+          "type": "pose",
+          "ancre": "faut",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "galere",
+      "voix": "J'ai mis huit mois, et j'ai cassé l'app au moins cent fois.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "J'ai",
+          "mode": "avatar"
+        },
+        {
+          "type": "chiffre",
+          "ancre": "huit",
+          "valeur": 8,
+          "suffixe": " mois",
+          "sous": "de soirées",
+          "fin": "mois,"
+        },
+        {
+          "type": "pose",
+          "ancre": "cassé",
+          "nom": "panique"
+        }
+      ]
+    },
+    {
+      "id": "choix",
+      "voix": "Pas de pub, pas de compte, juste le jeu.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Pas",
+          "nom": "fier"
+        },
+        {
+          "type": "tampon",
+          "ancre": "pub,",
+          "texte": "SANS PUB",
+          "couleur": "vert"
+        }
+      ]
+    },
+    {
+      "id": "rdv",
+      "voix": "Une nouvelle page chaque jour à midi.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Une",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "midi.",
+          "texte": "Midi pile !"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

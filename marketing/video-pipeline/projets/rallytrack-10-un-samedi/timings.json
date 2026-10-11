@@ -1,0 +1,333 @@
+{
+  "duree": 20.26,
+  "dureeVoix": 18.46,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.82,
+      "fin": 3.4
+    },
+    {
+      "id": "chiffre",
+      "debut": 3.4,
+      "finVoix": 6.74,
+      "fin": 7.28
+    },
+    {
+      "id": "pays",
+      "debut": 7.28,
+      "finVoix": 12.26,
+      "fin": 13.1
+    },
+    {
+      "id": "appel",
+      "debut": 13.1,
+      "finVoix": 18.46,
+      "fin": 20.26
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Un",
+      "mot": "Un",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.4
+    },
+    {
+      "texte": "samedi",
+      "mot": "samedi",
+      "scene": 0,
+      "debut": 0.4,
+      "fin": 0.76
+    },
+    {
+      "texte": "d'octobre,",
+      "mot": "d'octobre",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 1.24
+    },
+    {
+      "texte": "combien",
+      "mot": "combien",
+      "scene": 0,
+      "debut": 1.6,
+      "fin": 1.9
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.9,
+      "fin": 2.14
+    },
+    {
+      "texte": "rallyes",
+      "mot": "rallyes",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.42
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 0,
+      "debut": 2.42,
+      "fin": 2.54
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 0,
+      "debut": 2.54,
+      "fin": 2.62
+    },
+    {
+      "texte": "monde ?",
+      "mot": "monde",
+      "scene": 0,
+      "debut": 2.62,
+      "fin": 2.82
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 3.4,
+      "fin": 3.5
+    },
+    {
+      "texte": "trois",
+      "mot": "trois",
+      "scene": 1,
+      "debut": 3.5,
+      "fin": 3.68
+    },
+    {
+      "texte": "octobre :",
+      "mot": "octobre",
+      "scene": 1,
+      "debut": 3.68,
+      "fin": 4.16
+    },
+    {
+      "texte": "soixante",
+      "mot": "soixante",
+      "scene": 1,
+      "debut": 4.36,
+      "fin": 4.74
+    },
+    {
+      "texte": "épreuves,",
+      "mot": "épreuves",
+      "scene": 1,
+      "debut": 4.74,
+      "fin": 5.64
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 1,
+      "debut": 5.96,
+      "fin": 6.04
+    },
+    {
+      "texte": "vingt-quatre",
+      "mot": "vingt-quatre",
+      "scene": 1,
+      "debut": 6.04,
+      "fin": 6.44
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 1,
+      "debut": 6.44,
+      "fin": 6.74
+    },
+    {
+      "texte": "Afrique",
+      "mot": "Afrique",
+      "scene": 2,
+      "debut": 7.28,
+      "fin": 7.6
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 7.6,
+      "fin": 7.76
+    },
+    {
+      "texte": "Sud,",
+      "mot": "Sud",
+      "scene": 2,
+      "debut": 7.76,
+      "fin": 7.98
+    },
+    {
+      "texte": "Argentine,",
+      "mot": "Argentine",
+      "scene": 2,
+      "debut": 8.46,
+      "fin": 8.98
+    },
+    {
+      "texte": "Japon,",
+      "mot": "Japon",
+      "scene": 2,
+      "debut": 9.36,
+      "fin": 9.66
+    },
+    {
+      "texte": "Madagascar…",
+      "mot": "Madagascar",
+      "scene": 2,
+      "debut": 10.22,
+      "fin": 11.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 11.04,
+      "fin": 11.52
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 11.52,
+      "fin": 11.7
+    },
+    {
+      "texte": "rallye",
+      "mot": "rallye",
+      "scene": 2,
+      "debut": 11.7,
+      "fin": 12.0
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 2,
+      "debut": 12.0,
+      "fin": 12.06
+    },
+    {
+      "texte": "coin.",
+      "mot": "coin",
+      "scene": 2,
+      "debut": 12.06,
+      "fin": 12.26
+    },
+    {
+      "texte": "Tous",
+      "mot": "Tous",
+      "scene": 3,
+      "debut": 13.1,
+      "fin": 13.36
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 3,
+      "debut": 13.36,
+      "fin": 13.52
+    },
+    {
+      "texte": "rallyes",
+      "mot": "rallyes",
+      "scene": 3,
+      "debut": 13.52,
+      "fin": 13.68
+    },
+    {
+      "texte": "du",
+      "mot": "du",
+      "scene": 3,
+      "debut": 13.68,
+      "fin": 13.88
+    },
+    {
+      "texte": "monde,",
+      "mot": "monde",
+      "scene": 3,
+      "debut": 13.88,
+      "fin": 14.14
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 3,
+      "debut": 14.4,
+      "fin": 14.66
+    },
+    {
+      "texte": "par",
+      "mot": "par",
+      "scene": 3,
+      "debut": 14.66,
+      "fin": 14.98
+    },
+    {
+      "texte": "pays.",
+      "mot": "pays",
+      "scene": 3,
+      "debut": 14.98,
+      "fin": 15.28
+    },
+    {
+      "texte": "Rally",
+      "mot": "Rally",
+      "scene": 3,
+      "debut": 15.92,
+      "fin": 16.22
+    },
+    {
+      "texte": "Track,",
+      "mot": "Track",
+      "scene": 3,
+      "debut": 16.22,
+      "fin": 16.52
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 3,
+      "debut": 16.82,
+      "fin": 17.18
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 3,
+      "debut": 17.18,
+      "fin": 17.52
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 3,
+      "debut": 17.52,
+      "fin": 17.84
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 17.84,
+      "fin": 18.2
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 3,
+      "debut": 18.2,
+      "fin": 18.46
+    }
+  ]
+}

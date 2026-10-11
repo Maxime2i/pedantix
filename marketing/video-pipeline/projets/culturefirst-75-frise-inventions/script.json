@@ -1,0 +1,134 @@
+{
+  "titre": "Le fax, plus vieux que le téléphone",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Téléchargements.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, sans se presser. Ton de révélation amusée, « Si, si » malicieux, dates bien détachées. Énergique sur la fin."
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Le fax a été inventé avant le téléphone. Si, si.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "frise",
+          "ancre": "Le",
+          "titre": "Plus vieux que tu crois",
+          "min": 1835,
+          "max": 1895
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Le",
+          "gain": 0.4
+        }
+      ]
+    },
+    {
+      "id": "fax",
+      "voix": "Le fax : brevet en mille huit cent quarante-trois.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "fax",
+          "annee": 1843,
+          "texte": "Le fax (Alexander Bain)",
+          "emoji": "📠"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "telephone",
+      "voix": "Le téléphone : mille huit cent soixante-seize.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "téléphone",
+          "annee": 1876,
+          "texte": "Le téléphone (Graham Bell)",
+          "emoji": "☎️"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "suite",
+      "voix": "L'ampoule d'Edison : mille huit cent soixante-dix-neuf. La voiture de Benz : mille huit cent quatre-vingt-six.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "jalon",
+          "ancre": "L'ampoule",
+          "annee": 1879,
+          "texte": "L’ampoule (Edison)",
+          "emoji": "💡"
+        },
+        {
+          "type": "jalon",
+          "ancre": "voiture",
+          "annee": 1886,
+          "texte": "L’automobile (Benz)",
+          "emoji": "🚗"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "ecart",
+      "voix": "Trente-trois ans d'écart entre le fax et le téléphone.",
+      "animation": "",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecart",
+          "ancre": "Trente-trois",
+          "de": 1843,
+          "a": 1876,
+          "texte": "33 ans"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Plus de deux cent mille questions. Culture First, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Plus"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Plus",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ]
+}

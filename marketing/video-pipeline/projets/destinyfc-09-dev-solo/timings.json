@@ -1,0 +1,493 @@
+{
+  "duree": 23.38,
+  "dureeVoix": 21.58,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 4.0,
+      "fin": 4.56
+    },
+    {
+      "id": "principe",
+      "debut": 4.56,
+      "finVoix": 9.02,
+      "fin": 9.8
+    },
+    {
+      "id": "choix",
+      "debut": 9.8,
+      "finVoix": 13.4,
+      "fin": 14.06
+    },
+    {
+      "id": "contenu",
+      "debut": 14.06,
+      "finVoix": 17.98,
+      "fin": 18.62
+    },
+    {
+      "id": "cta",
+      "debut": 18.62,
+      "finVoix": 21.58,
+      "fin": 23.38
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Salut !",
+      "mot": "Salut",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "Je",
+      "mot": "Je",
+      "scene": 0,
+      "debut": 1.02,
+      "fin": 1.24
+    },
+    {
+      "texte": "suis",
+      "mot": "suis",
+      "scene": 0,
+      "debut": 1.24,
+      "fin": 1.32
+    },
+    {
+      "texte": "développeur,",
+      "mot": "développeur",
+      "scene": 0,
+      "debut": 1.32,
+      "fin": 1.88
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.14
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 0,
+      "debut": 2.14,
+      "fin": 2.26
+    },
+    {
+      "texte": "crée",
+      "mot": "crée",
+      "scene": 0,
+      "debut": 2.26,
+      "fin": 2.48
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 0,
+      "debut": 2.48,
+      "fin": 2.66
+    },
+    {
+      "texte": "seul",
+      "mot": "seul",
+      "scene": 0,
+      "debut": 2.66,
+      "fin": 2.9
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 0,
+      "debut": 2.9,
+      "fin": 3.14
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 3.14,
+      "fin": 3.26
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.38
+    },
+    {
+      "texte": "carrière",
+      "mot": "carrière",
+      "scene": 0,
+      "debut": 3.38,
+      "fin": 3.7
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 3.7,
+      "fin": 3.8
+    },
+    {
+      "texte": "foot.",
+      "mot": "foot",
+      "scene": 0,
+      "debut": 3.8,
+      "fin": 4.0
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 1,
+      "debut": 4.56,
+      "fin": 4.78
+    },
+    {
+      "texte": "principe :",
+      "mot": "principe",
+      "scene": 1,
+      "debut": 4.78,
+      "fin": 5.02
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 5.42,
+      "fin": 5.54
+    },
+    {
+      "texte": "commences",
+      "mot": "commences",
+      "scene": 1,
+      "debut": 5.54,
+      "fin": 5.8
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 1,
+      "debut": 5.8,
+      "fin": 5.9
+    },
+    {
+      "texte": "seize",
+      "mot": "seize",
+      "scene": 1,
+      "debut": 5.9,
+      "fin": 6.08
+    },
+    {
+      "texte": "ans,",
+      "mot": "ans",
+      "scene": 1,
+      "debut": 6.08,
+      "fin": 6.22
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 1,
+      "debut": 6.22,
+      "fin": 6.62
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 1,
+      "debut": 6.62,
+      "fin": 6.76
+    },
+    {
+      "texte": "joues",
+      "mot": "joues",
+      "scene": 1,
+      "debut": 6.76,
+      "fin": 6.94
+    },
+    {
+      "texte": "jusqu'à",
+      "mot": "jusqu'à",
+      "scene": 1,
+      "debut": 6.94,
+      "fin": 7.26
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 1,
+      "debut": 7.26,
+      "fin": 7.32
+    },
+    {
+      "texte": "retraite,",
+      "mot": "retraite",
+      "scene": 1,
+      "debut": 7.32,
+      "fin": 7.82
+    },
+    {
+      "texte": "saison",
+      "mot": "saison",
+      "scene": 1,
+      "debut": 7.82,
+      "fin": 8.3
+    },
+    {
+      "texte": "après",
+      "mot": "après",
+      "scene": 1,
+      "debut": 8.3,
+      "fin": 8.64
+    },
+    {
+      "texte": "saison.",
+      "mot": "saison",
+      "scene": 1,
+      "debut": 8.64,
+      "fin": 9.02
+    },
+    {
+      "texte": "À",
+      "mot": "À",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 9.9
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 2,
+      "debut": 9.9,
+      "fin": 10.04
+    },
+    {
+      "texte": "saison,",
+      "mot": "saison",
+      "scene": 2,
+      "debut": 10.04,
+      "fin": 10.36
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 2,
+      "debut": 10.6,
+      "fin": 10.74
+    },
+    {
+      "texte": "choix.",
+      "mot": "choix",
+      "scene": 2,
+      "debut": 10.74,
+      "fin": 10.96
+    },
+    {
+      "texte": "Deux",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 12.02,
+      "fin": 12.167
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 2,
+      "debut": 12.167,
+      "fin": 12.313
+    },
+    {
+      "texte": "soixante",
+      "mot": "soixante",
+      "scene": 2,
+      "debut": 12.313,
+      "fin": 12.46
+    },
+    {
+      "texte": "situations",
+      "mot": "situations",
+      "scene": 2,
+      "debut": 12.46,
+      "fin": 12.9
+    },
+    {
+      "texte": "différentes.",
+      "mot": "différentes",
+      "scene": 2,
+      "debut": 12.9,
+      "fin": 13.4
+    },
+    {
+      "texte": "Des",
+      "mot": "Des",
+      "scene": 3,
+      "debut": 14.06,
+      "fin": 14.28
+    },
+    {
+      "texte": "moments",
+      "mot": "moments",
+      "scene": 3,
+      "debut": 14.28,
+      "fin": 14.46
+    },
+    {
+      "texte": "décisifs,",
+      "mot": "décisifs",
+      "scene": 3,
+      "debut": 14.46,
+      "fin": 15.1
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 15.24,
+      "fin": 15.3
+    },
+    {
+      "texte": "transferts,",
+      "mot": "transferts",
+      "scene": 3,
+      "debut": 15.3,
+      "fin": 15.96
+    },
+    {
+      "texte": "des",
+      "mot": "des",
+      "scene": 3,
+      "debut": 16.08,
+      "fin": 16.16
+    },
+    {
+      "texte": "blessures,",
+      "mot": "blessures",
+      "scene": 3,
+      "debut": 16.16,
+      "fin": 16.58
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 16.58,
+      "fin": 17.08
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 3,
+      "debut": 17.08,
+      "fin": 17.26
+    },
+    {
+      "texte": "mental",
+      "mot": "mental",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.62
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 17.62,
+      "fin": 17.74
+    },
+    {
+      "texte": "gérer.",
+      "mot": "gérer",
+      "scene": 3,
+      "debut": 17.74,
+      "fin": 17.98
+    },
+    {
+      "texte": "Il",
+      "mot": "Il",
+      "scene": 4,
+      "debut": 18.62,
+      "fin": 18.86
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 4,
+      "debut": 18.86,
+      "fin": 18.96
+    },
+    {
+      "texte": "gratuit,",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 18.96,
+      "fin": 19.14
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 19.14,
+      "fin": 19.72
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 19.72,
+      "fin": 19.96
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.96,
+      "fin": 20.14
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 20.14,
+      "fin": 20.38
+    },
+    {
+      "texte": "Dis-moi",
+      "mot": "Dis-moi",
+      "scene": 4,
+      "debut": 20.94,
+      "fin": 21.14
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 4,
+      "debut": 21.14,
+      "fin": 21.18
+    },
+    {
+      "texte": "que",
+      "mot": "que",
+      "scene": 4,
+      "debut": 21.18,
+      "fin": 21.26
+    },
+    {
+      "texte": "t'en",
+      "mot": "t'en",
+      "scene": 4,
+      "debut": 21.26,
+      "fin": 21.36
+    },
+    {
+      "texte": "penses !",
+      "mot": "penses",
+      "scene": 4,
+      "debut": 21.36,
+      "fin": 21.58
+    }
+  ]
+}

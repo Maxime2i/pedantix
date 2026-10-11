@@ -1,0 +1,423 @@
+{
+  "duree": 29.42,
+  "dureeVoix": 27.62,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 5.64,
+      "fin": 6.52
+    },
+    {
+      "id": "q1",
+      "debut": 6.52,
+      "finVoix": 10.32,
+      "fin": 10.96
+    },
+    {
+      "id": "q2",
+      "debut": 10.96,
+      "finVoix": 15.0,
+      "fin": 15.74
+    },
+    {
+      "id": "q3",
+      "debut": 15.74,
+      "finVoix": 20.98,
+      "fin": 21.76
+    },
+    {
+      "id": "appel",
+      "debut": 21.76,
+      "finVoix": 27.62,
+      "fin": 29.42
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Mercredi",
+      "mot": "Mercredi",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 1.12
+    },
+    {
+      "texte": "ciné",
+      "mot": "ciné",
+      "scene": 0,
+      "debut": 1.4,
+      "fin": 2.02
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.22
+    },
+    {
+      "texte": "musique !",
+      "mot": "musique",
+      "scene": 0,
+      "debut": 2.22,
+      "fin": 2.56
+    },
+    {
+      "texte": "Trois",
+      "mot": "Trois",
+      "scene": 0,
+      "debut": 3.04,
+      "fin": 3.26
+    },
+    {
+      "texte": "questions :",
+      "mot": "questions",
+      "scene": 0,
+      "debut": 3.26,
+      "fin": 3.54
+    },
+    {
+      "texte": "essaie",
+      "mot": "essaie",
+      "scene": 0,
+      "debut": 3.54,
+      "fin": 4.16
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 4.16,
+      "fin": 4.28
+    },
+    {
+      "texte": "répondre",
+      "mot": "répondre",
+      "scene": 0,
+      "debut": 4.28,
+      "fin": 4.5
+    },
+    {
+      "texte": "avant",
+      "mot": "avant",
+      "scene": 0,
+      "debut": 4.5,
+      "fin": 4.72
+    },
+    {
+      "texte": "moi.",
+      "mot": "moi",
+      "scene": 0,
+      "debut": 4.72,
+      "fin": 4.94
+    },
+    {
+      "texte": "C'est",
+      "mot": "C'est",
+      "scene": 0,
+      "debut": 5.36,
+      "fin": 5.38
+    },
+    {
+      "texte": "parti.",
+      "mot": "parti",
+      "scene": 0,
+      "debut": 5.38,
+      "fin": 5.64
+    },
+    {
+      "texte": "Un :",
+      "mot": "Un",
+      "scene": 1,
+      "debut": 6.52,
+      "fin": 6.66
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 1,
+      "debut": 7.32,
+      "fin": 7.38
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 7.38,
+      "fin": 7.52
+    },
+    {
+      "texte": "réalisé",
+      "mot": "réalisé",
+      "scene": 1,
+      "debut": 7.52,
+      "fin": 7.9
+    },
+    {
+      "texte": "Titanic ?",
+      "mot": "Titanic",
+      "scene": 1,
+      "debut": 7.9,
+      "fin": 8.3
+    },
+    {
+      "texte": "James",
+      "mot": "James",
+      "scene": 1,
+      "debut": 9.82,
+      "fin": 10.06
+    },
+    {
+      "texte": "Cameron.",
+      "mot": "Cameron",
+      "scene": 1,
+      "debut": 10.06,
+      "fin": 10.32
+    },
+    {
+      "texte": "Deux :",
+      "mot": "Deux",
+      "scene": 2,
+      "debut": 10.96,
+      "fin": 11.3
+    },
+    {
+      "texte": "quel",
+      "mot": "quel",
+      "scene": 2,
+      "debut": 11.82,
+      "fin": 11.98
+    },
+    {
+      "texte": "groupe",
+      "mot": "groupe",
+      "scene": 2,
+      "debut": 11.98,
+      "fin": 12.14
+    },
+    {
+      "texte": "chante",
+      "mot": "chante",
+      "scene": 2,
+      "debut": 12.14,
+      "fin": 12.44
+    },
+    {
+      "texte": "Bohemian",
+      "mot": "Bohemian",
+      "scene": 2,
+      "debut": 12.44,
+      "fin": 12.98
+    },
+    {
+      "texte": "Rhapsody ?",
+      "mot": "Rhapsody",
+      "scene": 2,
+      "debut": 12.98,
+      "fin": 13.4
+    },
+    {
+      "texte": "Queen.",
+      "mot": "Queen",
+      "scene": 2,
+      "debut": 14.54,
+      "fin": 15.0
+    },
+    {
+      "texte": "Trois :",
+      "mot": "Trois",
+      "scene": 3,
+      "debut": 15.74,
+      "fin": 16.1
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 3,
+      "debut": 16.6,
+      "fin": 16.68
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 3,
+      "debut": 16.68,
+      "fin": 16.82
+    },
+    {
+      "texte": "réalisé",
+      "mot": "réalisé",
+      "scene": 3,
+      "debut": 16.82,
+      "fin": 17.26
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 17.26,
+      "fin": 17.4
+    },
+    {
+      "texte": "Fabuleux",
+      "mot": "Fabuleux",
+      "scene": 3,
+      "debut": 17.4,
+      "fin": 17.82
+    },
+    {
+      "texte": "Destin",
+      "mot": "Destin",
+      "scene": 3,
+      "debut": 17.82,
+      "fin": 18.1
+    },
+    {
+      "texte": "d'Amélie",
+      "mot": "d'Amélie",
+      "scene": 3,
+      "debut": 18.1,
+      "fin": 18.56
+    },
+    {
+      "texte": "Poulain ?",
+      "mot": "Poulain",
+      "scene": 3,
+      "debut": 18.56,
+      "fin": 18.86
+    },
+    {
+      "texte": "Jean-Pierre",
+      "mot": "Jean-Pierre",
+      "scene": 3,
+      "debut": 18.86,
+      "fin": 19.92
+    },
+    {
+      "texte": "Jeunet.",
+      "mot": "Jeunet",
+      "scene": 3,
+      "debut": 19.92,
+      "fin": 20.98
+    },
+    {
+      "texte": "Combien",
+      "mot": "Combien",
+      "scene": 4,
+      "debut": 21.76,
+      "fin": 22.1
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 22.1,
+      "fin": 22.24
+    },
+    {
+      "texte": "trois ?",
+      "mot": "trois",
+      "scene": 4,
+      "debut": 22.24,
+      "fin": 22.46
+    },
+    {
+      "texte": "Dis-le",
+      "mot": "Dis-le",
+      "scene": 4,
+      "debut": 22.46,
+      "fin": 23.04
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 4,
+      "debut": 23.04,
+      "fin": 23.12
+    },
+    {
+      "texte": "commentaire,",
+      "mot": "commentaire",
+      "scene": 4,
+      "debut": 23.12,
+      "fin": 23.6
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 23.6,
+      "fin": 23.78
+    },
+    {
+      "texte": "rendez-vous",
+      "mot": "rendez-vous",
+      "scene": 4,
+      "debut": 23.78,
+      "fin": 24.22
+    },
+    {
+      "texte": "mercredi",
+      "mot": "mercredi",
+      "scene": 4,
+      "debut": 24.22,
+      "fin": 24.66
+    },
+    {
+      "texte": "prochain.",
+      "mot": "prochain",
+      "scene": 4,
+      "debut": 24.66,
+      "fin": 24.92
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 25.5,
+      "fin": 25.8
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 25.8,
+      "fin": 26.18
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 26.4,
+      "fin": 26.8
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 26.8,
+      "fin": 27.0
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 27.0,
+      "fin": 27.22
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 27.22,
+      "fin": 27.4
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 27.4,
+      "fin": 27.62
+    }
+  ]
+}

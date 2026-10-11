@@ -1,0 +1,30 @@
+{
+  "titre": "Ankara : 3 secondes",
+  "app": "culturefirst",
+  "charte": "config/charte-culturefirst.json",
+  "format": { "largeur": 1080, "hauteur": 1920, "fps": 30, "dureeCible": 25 },
+  "objectif": "Engagement (défi, partage) puis téléchargements : le catalogue et ses 200 000 questions.",
+  "voix": { "instructions": "Voix française jeune et joueuse, façon TikTok, débit posé. Ton de défi au début, petite tension pendant la question, « Istanbul ? » confiant puis « Raté. » amusé, « C'est Ankara. » net. Complice et taquin sur « Envoie ça à quelqu'un… ». Énergique sur la fin." },
+  "scenes": [
+    { "id": "defi", "voix": "Tu as trois secondes. Capitale de la Turquie ? Istanbul ? Raté. C'est Ankara.", "image": null,
+      "animation": "Compte à rebours de 3 s au-dessus de la carte « Turquie », bulle « Istanbul ? » barrée, réponse Ankara.",
+      "actions": [ { "type": "entree", "ancre": "Tu" }, { "type": "zoom", "cible": "carte", "ancre": "trois" }, { "type": "chrono", "secondes": 3, "ancre": "secondes", "position": "fin" }, { "type": "bulle", "texte": "Istanbul ?", "ancre": "Istanbul" }, { "type": "rate", "ancre": "Raté" }, { "type": "reveler", "ancre": "C'est" } ],
+      "bruitages": [ { "son": "whoosh", "ancre": "Tu", "gain": 0.4 } ] },
+    { "id": "fait", "voix": "Ankara est la capitale de la Turquie depuis mille neuf cent vingt-trois, pas Istanbul.", "image": null,
+      "animation": "La fiche de la carte reste visible (« Capitale depuis : 1923 »), tampon doré « 1923 ».",
+      "actions": [ { "type": "tampon", "texte": "1923", "couleur": "or", "ancre": "mille" } ], "bruitages": [] },
+    { "id": "partage", "voix": "Envoie ça à quelqu'un qui aurait dit Istanbul.", "image": null,
+      "animation": "Grande carte titre : « Envoie ça à quelqu’un qui aurait dit Istanbul ».",
+      "actions": [ { "type": "titre", "texte": "Envoie ça à quelqu’un qui aurait dit Istanbul", "sous": "👀", "ancre": "Envoie" } ], "bruitages": [] },
+    { "id": "catalogue", "voix": "Dans Culture First, cherche les capitales du monde entier… et plus de deux cent mille autres questions.", "image": null,
+      "animation": "Catalogue : on tape « capitales », résultats ; puis le grand nombre « + de 200 000 ».",
+      "actions": [ { "type": "masquer", "ancre": "Dans" }, { "type": "ecran", "nom": "catalogue", "ancre": "Dans" }, { "type": "saisir", "texte": "capitales", "ancre": "cherche", "fin": "capitales" }, { "type": "zoom", "cible": "c-res-0", "echelle": 1.2, "ancre": "monde" }, { "type": "chiffre", "valeur": 200000, "prefixe": "+ de ", "sous": "questions de culture G", "ancre": "deux" } ], "bruitages": [] },
+    { "id": "appel", "voix": "Gratuit, sur iPhone et Android.", "image": null,
+      "animation": "Carte de fin.",
+      "actions": [ { "type": "fin", "ancre": "Gratuit" } ],
+      "bruitages": [ { "son": "whoosh", "ancre": "Gratuit", "gain": 0.4 }, { "son": "victoire", "ancre": "iPhone", "gain": 0.35 } ] }
+  ],
+  "cartes": [
+    { "paquet": "Capitales du monde", "theme": "Géographie", "compteurs": [12, 8, 34], "question": "Quelle est la capitale de ce pays ?", "indiceType": "Pays", "indice": "Turquie", "reponse": "Ankara", "fiche": [["Continent", "Asie et Europe"], ["Capitale depuis", "1923"]] }
+  ]
+}

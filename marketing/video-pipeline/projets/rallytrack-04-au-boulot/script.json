@@ -1,0 +1,117 @@
+{
+  "titre": "Samedi, tu bosses",
+  "app": "rallytrack",
+  "charte": "config/charte-rallytrack.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 18
+  },
+  "objectif": "Téléchargements + alertes, cible fans à distance : les notifications réelles de l'app (« C’est parti : … », « {pilote} gagne ES5 », « Podium : {pilote} gagne »). Démo fictive.",
+  "voix": {
+    "instructions": "Voix française jeune et complice, façon TikTok, débit posé et articulé, phrases bien détachées. Début un peu dépité (« tu bosses »), puis chaque notification annoncée avec plus d'excitation. Fin soulagée et souriante."
+  },
+  "ecranInitial": "verrouillage",
+  "ecrans": {
+    "verrouillage": {
+      "heure": "18:47"
+    }
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Samedi, tu bosses. Ton pilote, lui, prend le départ du rallye.",
+      "animation": "Photo d'un atelier ; tampon « AU BOULOT ».",
+      "image": "Photographie réaliste, cadrage vertical : un atelier de mécanique automobile propre, un établi avec des outils, un téléphone posé écran vers le bas, lumière de fin de matinée. Aucune personne, aucun texte, aucune marque.",
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "bosses",
+          "texte": "AU BOULOT",
+          "couleur": "rouge",
+          "fin": "bosses",
+          "duree": 1.6
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "moteur",
+          "ancre": "départ",
+          "gain": 0.45
+        }
+      ]
+    },
+    {
+      "id": "notifs",
+      "voix": "Ton téléphone vibre : c'est parti. Une heure plus tard : Marchal gagne l'ES cinq. Et le soir… podium !",
+      "animation": "Écran verrouillé : les trois notifications réelles s'empilent.",
+      "image": null,
+      "actions": [
+        {
+          "type": "entree",
+          "ancre": "téléphone"
+        },
+        {
+          "type": "notif",
+          "ancre": "vibre",
+          "titre": "C’est parti : Rallye des Hautes Combes",
+          "texte": "Le rallye est en direct.",
+          "quand": "9:02",
+          "duree": 30
+        },
+        {
+          "type": "notif",
+          "ancre": "Marchal",
+          "titre": "Hugo Marchal gagne ES5",
+          "texte": "Rallye des Hautes Combes",
+          "quand": "14:31",
+          "duree": 30
+        },
+        {
+          "type": "notif",
+          "ancre": "podium",
+          "titre": "Podium : Hugo Marchal gagne",
+          "texte": "Rallye des Hautes Combes",
+          "quand": "maintenant",
+          "duree": 30
+        },
+        {
+          "type": "zoom",
+          "ancre": "Marchal",
+          "cible": "entier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "appel",
+      "voix": "Tu n'as rien raté. Rally Track, gratuit sur iPhone et Android.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Rally"
+        }
+      ],
+      "bruitages": [
+        {
+          "son": "whoosh",
+          "ancre": "Rally",
+          "gain": 0.4
+        },
+        {
+          "son": "victoire",
+          "ancre": "gratuit",
+          "gain": 0.35
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "promesse": "Le rallye du jour,<br>en direct",
+    "detail": "Tous les rallyes du monde, en français",
+    "cta": "Gratuit · iPhone et Android"
+  }
+}

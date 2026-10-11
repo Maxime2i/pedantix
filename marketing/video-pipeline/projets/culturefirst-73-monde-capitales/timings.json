@@ -1,0 +1,449 @@
+{
+  "duree": 26.02,
+  "dureeVoix": 24.22,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 3.3,
+      "fin": 3.84
+    },
+    {
+      "id": "australie",
+      "debut": 3.84,
+      "finVoix": 6.34,
+      "fin": 6.84
+    },
+    {
+      "id": "canada",
+      "debut": 6.84,
+      "finVoix": 9.46,
+      "fin": 10.2
+    },
+    {
+      "id": "turquie",
+      "debut": 10.2,
+      "finVoix": 12.7,
+      "fin": 13.46
+    },
+    {
+      "id": "bresil",
+      "debut": 13.46,
+      "finVoix": 16.16,
+      "fin": 16.76
+    },
+    {
+      "id": "usa",
+      "debut": 16.76,
+      "finVoix": 19.32,
+      "fin": 20.1
+    },
+    {
+      "id": "appel",
+      "debut": 20.1,
+      "finVoix": 24.22,
+      "fin": 26.02
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Ces",
+      "mot": "Ces",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.5
+    },
+    {
+      "texte": "pays",
+      "mot": "pays",
+      "scene": 0,
+      "debut": 0.5,
+      "fin": 0.82
+    },
+    {
+      "texte": "ont",
+      "mot": "ont",
+      "scene": 0,
+      "debut": 0.82,
+      "fin": 1.1
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 0,
+      "debut": 1.1,
+      "fin": 1.26
+    },
+    {
+      "texte": "capitale",
+      "mot": "capitale",
+      "scene": 0,
+      "debut": 1.26,
+      "fin": 1.84
+    },
+    {
+      "texte": "qui",
+      "mot": "qui",
+      "scene": 0,
+      "debut": 1.84,
+      "fin": 2.02
+    },
+    {
+      "texte": "n'est",
+      "mot": "n'est",
+      "scene": 0,
+      "debut": 2.02,
+      "fin": 2.2
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 2.2,
+      "fin": 2.44
+    },
+    {
+      "texte": "leur",
+      "mot": "leur",
+      "scene": 0,
+      "debut": 2.44,
+      "fin": 2.68
+    },
+    {
+      "texte": "plus",
+      "mot": "plus",
+      "scene": 0,
+      "debut": 2.68,
+      "fin": 2.88
+    },
+    {
+      "texte": "grande",
+      "mot": "grande",
+      "scene": 0,
+      "debut": 2.88,
+      "fin": 3.06
+    },
+    {
+      "texte": "ville.",
+      "mot": "ville",
+      "scene": 0,
+      "debut": 3.06,
+      "fin": 3.3
+    },
+    {
+      "texte": "L'Australie :",
+      "mot": "L'Australie",
+      "scene": 1,
+      "debut": 3.84,
+      "fin": 4.56
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 1,
+      "debut": 4.84,
+      "fin": 5.0
+    },
+    {
+      "texte": "Sydney,",
+      "mot": "Sydney",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.46
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 1,
+      "debut": 5.46,
+      "fin": 5.78
+    },
+    {
+      "texte": "Canberra.",
+      "mot": "Canberra",
+      "scene": 1,
+      "debut": 5.78,
+      "fin": 6.34
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 6.84,
+      "fin": 7.24
+    },
+    {
+      "texte": "Canada :",
+      "mot": "Canada",
+      "scene": 2,
+      "debut": 7.24,
+      "fin": 7.48
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 2,
+      "debut": 8.16,
+      "fin": 8.22
+    },
+    {
+      "texte": "Toronto,",
+      "mot": "Toronto",
+      "scene": 2,
+      "debut": 8.22,
+      "fin": 8.64
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 2,
+      "debut": 8.64,
+      "fin": 9.14
+    },
+    {
+      "texte": "Ottawa.",
+      "mot": "Ottawa",
+      "scene": 2,
+      "debut": 9.14,
+      "fin": 9.46
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 10.2,
+      "fin": 10.44
+    },
+    {
+      "texte": "Turquie :",
+      "mot": "Turquie",
+      "scene": 3,
+      "debut": 10.44,
+      "fin": 10.86
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 3,
+      "debut": 11.36,
+      "fin": 11.48
+    },
+    {
+      "texte": "Istanbul,",
+      "mot": "Istanbul",
+      "scene": 3,
+      "debut": 11.48,
+      "fin": 11.76
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 3,
+      "debut": 11.76,
+      "fin": 12.36
+    },
+    {
+      "texte": "Ankara.",
+      "mot": "Ankara",
+      "scene": 3,
+      "debut": 12.36,
+      "fin": 12.7
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 4,
+      "debut": 13.46,
+      "fin": 13.68
+    },
+    {
+      "texte": "Brésil :",
+      "mot": "Brésil",
+      "scene": 4,
+      "debut": 13.68,
+      "fin": 14.04
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 4,
+      "debut": 14.48,
+      "fin": 14.64
+    },
+    {
+      "texte": "São",
+      "mot": "São",
+      "scene": 4,
+      "debut": 14.64,
+      "fin": 14.89
+    },
+    {
+      "texte": "Paulo,",
+      "mot": "Paulo",
+      "scene": 4,
+      "debut": 14.89,
+      "fin": 15.14
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 4,
+      "debut": 15.14,
+      "fin": 15.62
+    },
+    {
+      "texte": "Brasília.",
+      "mot": "Brasília",
+      "scene": 4,
+      "debut": 15.62,
+      "fin": 16.16
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 5,
+      "debut": 16.76,
+      "fin": 16.82
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 5,
+      "debut": 16.82,
+      "fin": 16.94
+    },
+    {
+      "texte": "États-Unis :",
+      "mot": "États-Unis",
+      "scene": 5,
+      "debut": 16.94,
+      "fin": 17.44
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 5,
+      "debut": 17.84,
+      "fin": 18.04
+    },
+    {
+      "texte": "New",
+      "mot": "New",
+      "scene": 5,
+      "debut": 18.04,
+      "fin": 18.14
+    },
+    {
+      "texte": "York,",
+      "mot": "York",
+      "scene": 5,
+      "debut": 18.14,
+      "fin": 18.46
+    },
+    {
+      "texte": "mais",
+      "mot": "mais",
+      "scene": 5,
+      "debut": 18.46,
+      "fin": 18.92
+    },
+    {
+      "texte": "Washington.",
+      "mot": "Washington",
+      "scene": 5,
+      "debut": 18.92,
+      "fin": 19.32
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 6,
+      "debut": 20.1,
+      "fin": 20.36
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 6,
+      "debut": 20.36,
+      "fin": 20.52
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 6,
+      "debut": 20.52,
+      "fin": 20.54
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 6,
+      "debut": 20.54,
+      "fin": 20.9
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 6,
+      "debut": 20.9,
+      "fin": 21.08
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 6,
+      "debut": 21.08,
+      "fin": 21.46
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 6,
+      "debut": 21.96,
+      "fin": 22.26
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 6,
+      "debut": 22.26,
+      "fin": 22.68
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 6,
+      "debut": 22.68,
+      "fin": 23.26
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 6,
+      "debut": 23.26,
+      "fin": 23.42
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 6,
+      "debut": 23.42,
+      "fin": 23.74
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 6,
+      "debut": 23.74,
+      "fin": 23.98
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 6,
+      "debut": 23.98,
+      "fin": 24.22
+    }
+  ]
+}

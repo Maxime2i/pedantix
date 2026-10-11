@@ -1,0 +1,138 @@
+{
+  "titre": "Le premier qui trouve",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 17
+  },
+  "objectif": "Défi spectateur sans réponse : commentaires, réponse le soir.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "page": {
+    "titre": "Abricot",
+    "texte": [
+      "L'abricot est le fruit d'un arbre généralement de petite taille appelé abricotier, de la famille des Rosaceae. Le nom scientifique de l'abricotier est Prunus armeniaca. Il appartient au sous-genre des Prunus, section Armeniaca avec les quatre autres abricotiers du monde."
+    ],
+    "titreMots": [
+      "abricot"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 15 septembre",
+    "motsOutils": false
+  },
+  "dispositionInitiale": "avatar",
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Je te donne quatre indices. Le premier qui trouve la page, je lui réponds en vidéo.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "quatre",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "premier",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "indices",
+      "voix": "Fruit. Arbre. Petite taille. Prunus.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Fruit.",
+          "mode": "telephone"
+        },
+        {
+          "type": "zoom",
+          "ancre": "Fruit.",
+          "cible": "article",
+          "echelle": 1.35,
+          "hauteur": 820
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Fruit.",
+          "mot": "fruit"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Arbre.",
+          "mot": "arbre"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Petite",
+          "mot": "petite"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "taille.",
+          "mot": "taille"
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Prunus.",
+          "mot": "prunus"
+        }
+      ]
+    },
+    {
+      "id": "regle",
+      "voix": "Une seule réponse, en commentaire. Pas de triche !",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Une",
+          "cible": "aucun"
+        },
+        {
+          "type": "disposition",
+          "ancre": "Une",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "triche",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "soir",
+      "voix": "Réponse ce soir.",
+      "image": null,
+      "actions": [
+        {
+          "type": "bulle",
+          "ancre": "Réponse",
+          "texte": "Réponse ce soir 👀"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, gratuit sur l'App Store.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "duree": 21.4,
+  "dureeVoix": 19.6,
+  "scenes": [
+    {
+      "id": "intro",
+      "debut": 0.0,
+      "finVoix": 2.6,
+      "fin": 3.06
+    },
+    {
+      "id": "barres",
+      "debut": 3.06,
+      "finVoix": 6.78,
+      "fin": 7.46
+    },
+    {
+      "id": "detail",
+      "debut": 7.46,
+      "finVoix": 9.94,
+      "fin": 10.58
+    },
+    {
+      "id": "progres",
+      "debut": 10.58,
+      "finVoix": 13.98,
+      "fin": 14.72
+    },
+    {
+      "id": "appel",
+      "debut": 14.72,
+      "finVoix": 19.6,
+      "fin": 21.4
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.26
+    },
+    {
+      "texte": "es",
+      "mot": "es",
+      "scene": 0,
+      "debut": 0.26,
+      "fin": 0.32
+    },
+    {
+      "texte": "plutôt",
+      "mot": "plutôt",
+      "scene": 0,
+      "debut": 0.32,
+      "fin": 0.56
+    },
+    {
+      "texte": "fort",
+      "mot": "fort",
+      "scene": 0,
+      "debut": 0.56,
+      "fin": 0.8
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.8,
+      "fin": 0.96
+    },
+    {
+      "texte": "histoire,",
+      "mot": "histoire",
+      "scene": 0,
+      "debut": 0.96,
+      "fin": 1.42
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 0,
+      "debut": 1.42,
+      "fin": 1.9
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 1.9,
+      "fin": 2.04
+    },
+    {
+      "texte": "géo ?",
+      "mot": "géo",
+      "scene": 0,
+      "debut": 2.04,
+      "fin": 2.6
+    },
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 1,
+      "debut": 3.06,
+      "fin": 3.3
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 1,
+      "debut": 3.3,
+      "fin": 3.46
+    },
+    {
+      "texte": "statistiques,",
+      "mot": "statistiques",
+      "scene": 1,
+      "debut": 3.46,
+      "fin": 4.04
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 1,
+      "debut": 4.2,
+      "fin": 4.22
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 4.22,
+      "fin": 4.38
+    },
+    {
+      "texte": "bas,",
+      "mot": "bas",
+      "scene": 1,
+      "debut": 4.38,
+      "fin": 4.52
+    },
+    {
+      "texte": "chaque",
+      "mot": "chaque",
+      "scene": 1,
+      "debut": 5.0,
+      "fin": 5.32
+    },
+    {
+      "texte": "thème",
+      "mot": "thème",
+      "scene": 1,
+      "debut": 5.32,
+      "fin": 5.72
+    },
+    {
+      "texte": "a",
+      "mot": "a",
+      "scene": 1,
+      "debut": 5.72,
+      "fin": 5.92
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 1,
+      "debut": 5.92,
+      "fin": 6.06
+    },
+    {
+      "texte": "barre",
+      "mot": "barre",
+      "scene": 1,
+      "debut": 6.06,
+      "fin": 6.26
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 1,
+      "debut": 6.26,
+      "fin": 6.4
+    },
+    {
+      "texte": "progression.",
+      "mot": "progression",
+      "scene": 1,
+      "debut": 6.4,
+      "fin": 6.78
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 2,
+      "debut": 7.46,
+      "fin": 7.66
+    },
+    {
+      "texte": "cartes",
+      "mot": "cartes",
+      "scene": 2,
+      "debut": 7.66,
+      "fin": 7.92
+    },
+    {
+      "texte": "acquises,",
+      "mot": "acquises",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 8.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 8.04,
+      "fin": 8.24
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 2,
+      "debut": 8.24,
+      "fin": 8.7
+    },
+    {
+      "texte": "taux",
+      "mot": "taux",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 8.88
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 2,
+      "debut": 8.88,
+      "fin": 8.94
+    },
+    {
+      "texte": "réussite",
+      "mot": "réussite",
+      "scene": 2,
+      "debut": 8.94,
+      "fin": 9.32
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 2,
+      "debut": 9.32,
+      "fin": 9.48
+    },
+    {
+      "texte": "trente",
+      "mot": "trente",
+      "scene": 2,
+      "debut": 9.48,
+      "fin": 9.7
+    },
+    {
+      "texte": "jours.",
+      "mot": "jours",
+      "scene": 2,
+      "debut": 9.7,
+      "fin": 9.94
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 3,
+      "debut": 10.58,
+      "fin": 10.7
+    },
+    {
+      "texte": "vois",
+      "mot": "vois",
+      "scene": 3,
+      "debut": 10.7,
+      "fin": 10.84
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 3,
+      "debut": 10.84,
+      "fin": 11.04
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 3,
+      "debut": 11.04,
+      "fin": 11.12
+    },
+    {
+      "texte": "suite",
+      "mot": "suite",
+      "scene": 3,
+      "debut": 11.12,
+      "fin": 11.28
+    },
+    {
+      "texte": "où",
+      "mot": "où",
+      "scene": 3,
+      "debut": 11.28,
+      "fin": 11.42
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 3,
+      "debut": 11.42,
+      "fin": 11.5
+    },
+    {
+      "texte": "progresses…",
+      "mot": "progresses",
+      "scene": 3,
+      "debut": 11.5,
+      "fin": 11.98
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 3,
+      "debut": 12.58,
+      "fin": 12.72
+    },
+    {
+      "texte": "où",
+      "mot": "où",
+      "scene": 3,
+      "debut": 12.72,
+      "fin": 13.32
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 3,
+      "debut": 13.32,
+      "fin": 13.44
+    },
+    {
+      "texte": "faut",
+      "mot": "faut",
+      "scene": 3,
+      "debut": 13.44,
+      "fin": 13.56
+    },
+    {
+      "texte": "t'y",
+      "mot": "t'y",
+      "scene": 3,
+      "debut": 13.56,
+      "fin": 13.7
+    },
+    {
+      "texte": "remettre.",
+      "mot": "remettre",
+      "scene": 3,
+      "debut": 13.7,
+      "fin": 13.98
+    },
+    {
+      "texte": "Plus",
+      "mot": "Plus",
+      "scene": 4,
+      "debut": 14.72,
+      "fin": 14.92
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 14.92,
+      "fin": 15.12
+    },
+    {
+      "texte": "deux",
+      "mot": "deux",
+      "scene": 4,
+      "debut": 15.12,
+      "fin": 15.347
+    },
+    {
+      "texte": "cent",
+      "mot": "cent",
+      "scene": 4,
+      "debut": 15.347,
+      "fin": 15.573
+    },
+    {
+      "texte": "mille",
+      "mot": "mille",
+      "scene": 4,
+      "debut": 15.573,
+      "fin": 15.8
+    },
+    {
+      "texte": "questions.",
+      "mot": "questions",
+      "scene": 4,
+      "debut": 15.8,
+      "fin": 16.18
+    },
+    {
+      "texte": "Culture",
+      "mot": "Culture",
+      "scene": 4,
+      "debut": 16.88,
+      "fin": 17.14
+    },
+    {
+      "texte": "First,",
+      "mot": "First",
+      "scene": 4,
+      "debut": 17.14,
+      "fin": 17.54
+    },
+    {
+      "texte": "gratuit",
+      "mot": "gratuit",
+      "scene": 4,
+      "debut": 17.82,
+      "fin": 18.22
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 4,
+      "debut": 18.22,
+      "fin": 18.64
+    },
+    {
+      "texte": "iPhone",
+      "mot": "iPhone",
+      "scene": 4,
+      "debut": 18.64,
+      "fin": 19.04
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 19.04,
+      "fin": 19.32
+    },
+    {
+      "texte": "Android.",
+      "mot": "Android",
+      "scene": 4,
+      "debut": 19.32,
+      "fin": 19.6
+    }
+  ]
+}
