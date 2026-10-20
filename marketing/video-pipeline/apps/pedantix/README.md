@@ -14,6 +14,16 @@ Pour une vidéo, écrire seulement `projets/pedantix-<nn>-<slug>/script.json` av
 - **Jamais la page du jour** : seulement des pages passées (`pages-passees.json`, rafraîchir avec `node apps/pedantix/outils/pages-passees.mjs`).
 - Faits tirés des pages vérifiés sur l'article Wikipédia.
 
+## Mode site (`"navigateur": true`)
+
+Pour les vidéos qui renvoient vers le site (pedantix.vercel.app), en attendant la validation de l'app :
+
+- barre d'adresse Safari en bas de l'écran (`pedantix.vercel.app`), masquée sur l'écran verrouillé ;
+- carte de fin : appel à l'action par défaut `pedantix.vercel.app` (au lieu de l'App Store) ;
+- réglages sans la section Notifications (le site n'a pas de rappel quotidien) : ne pas utiliser `notif` ni `reglage` → `rappel`.
+
+Appel à l'action dit : « le lien est dans ma bio » (ne pas épeler l'adresse). Série : `projets/pedantix-web-*`.
+
 ## Avatar
 
 Poses (`avatar/<nom>.png`, copie de `~/.claude/avatars/maxime/poses`) : `neutre`, `parle`, `salut`, `content`, `choque`, `reflechit`, `panique`, `fier`, `montre-droite`, `montre-gauche`, `telephone`, `clin`, `decu`, `celebre`, `tete-main`.

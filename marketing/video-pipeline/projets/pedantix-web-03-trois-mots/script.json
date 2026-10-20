@@ -1,0 +1,159 @@
+{
+  "titre": "Trois mots, une page",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Défi : deviner la page à partir de trois mots, réponse à la fin.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "One Piece",
+    "texte": [
+      "One Piece est un shōnen manga créé par Eiichirō Oda. Il est prépublié depuis le 22 juillet 1997 dans le magazine hebdomadaire Weekly Shōnen Jump, puis regroupé en tankōbon aux éditions Shūeisha depuis le 24 décembre 1997. En juillet 2026, 115 tomes sont publiés au Japon. La version française est publiée en volumes reliés depuis le 1er septembre 2000 par Glénat, et 112 volumes sont commercialisés en avril 2026. Depuis le 26 septembre 2021, la version française est prépubliée simultanément avec la version japonaise sur les plates-formes en ligne Manga Plus et Glénat Manga Max."
+    ],
+    "titreMots": [
+      "one",
+      "piece"
+    ],
+    "revelations": {
+      "japon": [
+        "japon"
+      ],
+      "tomes": [
+        "tomes"
+      ]
+    },
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 4 août"
+  },
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Trois mots. Tu trouves la page ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Trois",
+          "texte": "3 mots",
+          "sous": "Tu trouves la page ?",
+          "fin": "page"
+        },
+        {
+          "type": "pose",
+          "ancre": "Trois",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "un",
+      "voix": "Premier mot : manga.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Premier",
+          "mode": "telephone"
+        },
+        {
+          "type": "taper",
+          "ancre": "mot",
+          "mot": "manga",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "manga.",
+          "mot": "manga",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "deux",
+      "voix": "Deuxième : tomes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Deuxième",
+          "mot": "tomes",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "tomes.",
+          "mot": "tomes",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "trois",
+      "voix": "Troisième : Japon.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Troisième",
+          "mot": "japon",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "Japon.",
+          "mot": "japon",
+          "position": "fin"
+        }
+      ]
+    },
+    {
+      "id": "pause",
+      "voix": "Mets pause si tu sais.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "pause",
+          "cible": "titre"
+        }
+      ]
+    },
+    {
+      "id": "reponse",
+      "voix": "C'était One Piece, le célèbre manga.",
+      "image": null,
+      "actions": [
+        {
+          "type": "voirPage",
+          "ancre": "C'était"
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "La page de demain t'attend sur le site. Lien en bio.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Lien"
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ eval "$(grep '^export OPENROUTER_API_KEY' ~/.zshrc)"
 VIDEOS=../videos
 mkdir -p $VIDEOS
 while [ ! -f projets/STOP ]; do
-  p=$(ls -d projets/pedantix-[0-9][0-9]-*/ 2>/dev/null | sed 's#projets/##; s#/$##' | while read d; do
+  p=$(ls -d projets/pedantix-[0-9][0-9]-*/ projets/pedantix-web-[0-9][0-9]-*/ 2>/dev/null | sed 's#projets/##; s#/$##' | while read d; do
         [ -f projets/$d/.pret ] && [ ! -f projets/$d/.fait ] && [ ! -f projets/$d/.echec ] && echo $d; done | head -1)
   if [ -z "$p" ]; then sleep 15; continue; fi
   mkdir -p projets/$p/output

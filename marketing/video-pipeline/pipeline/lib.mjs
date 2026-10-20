@@ -16,6 +16,9 @@ export function projectDir() {
   return dir;
 }
 
+/** Chrome refuse de tourner en root sans --no-sandbox (conteneurs Linux). */
+export const SANS_BAC_A_SABLE = process.getuid?.() === 0 ? ["--no-sandbox"] : [];
+
 export const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 export function writeJson(p, data) {
   mkdirSync(dirname(p), { recursive: true });

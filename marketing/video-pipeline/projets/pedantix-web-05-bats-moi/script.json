@@ -1,0 +1,128 @@
+{
+  "titre": "Bats mon score",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 16
+  },
+  "objectif": "Défi de score + partage sans spoiler, sur le site.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "Déforestation",
+    "texte": [
+      "La déforestation est le phénomène de régression durable des surfaces couvertes de forêts, qu'il soit d'origine anthropique ou naturel. Si une forêt repousse après une coupe rase, une attaque d'insectes xylophages ou un feu de forêt, on ne parle pas de déforestation. Le phénomène de déforestation est souvent évoqué en lien avec celui de dégradation de la forêt. La perte de couvert forestier fait référence à la perte de surface forestière brute, elle est souvent observée par satellite.",
+      "La déforestation n'est pas un phénomène récent puisque déjà signalé dès le Néolithique."
+    ],
+    "titreMots": [
+      "déforestation"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Lundi 24 août",
+    "essaisDepart": 38
+  },
+  "dispositionInitiale": "duo",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Trente-huit coups pour trouver cette page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "resultat",
+          "ancre": "Trente-huit",
+          "coups": 38
+        },
+        {
+          "type": "pose",
+          "ancre": "Trente-huit",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "voix": "C'était Déforestation. Pas facile.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "facile.",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "defi",
+      "voix": "Toi, tu fais mieux ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Toi,",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Toi,",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "partage",
+      "voix": "Sur le site, tu partages ton score sans rien spoiler.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Sur",
+          "nom": "neutre"
+        },
+        {
+          "type": "partage",
+          "ancre": "partages",
+          "coups": 38
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "voix": "Joue la page de midi et mets ton score en commentaire.",
+      "image": null,
+      "actions": [
+        {
+          "type": "masquer",
+          "ancre": "Joue"
+        },
+        {
+          "type": "bulle",
+          "ancre": "score",
+          "texte": "Ton score ?"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Lien dans ma bio.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Lien"
+        }
+      ]
+    }
+  ]
+}

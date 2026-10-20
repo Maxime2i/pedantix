@@ -1,0 +1,144 @@
+{
+  "titre": "Rien à installer",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Le site se joue tout de suite, sur téléphone comme sur ordinateur.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "Ballon (sport)",
+    "texte": [
+      "En sport, un ballon est un objet de forme généralement sphérique mais pouvant parfois être ovale comme au rugby ou au football américain, fabriqué généralement en cuir, en plastique, ou en mousse."
+    ],
+    "titreMots": [
+      "ballon",
+      "sport"
+    ],
+    "revelations": {
+      "rugby": [
+        "rugby"
+      ]
+    },
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Vendredi 3 juillet"
+  },
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Pas besoin de télécharger quoi que ce soit.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Pas",
+          "nom": "neutre"
+        },
+        {
+          "type": "bulle",
+          "ancre": "télécharger",
+          "texte": "Rien à installer"
+        }
+      ]
+    },
+    {
+      "id": "ouvre",
+      "voix": "Tu ouvres le lien, et tu joues.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "ouvres",
+          "mode": "telephone"
+        },
+        {
+          "type": "appui",
+          "ancre": "joues.",
+          "cible": "saisie"
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "voix": "Premier essai : rugby. Il apparaît dans la page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Premier",
+          "mot": "rugby",
+          "fin": "rugby."
+        },
+        {
+          "type": "envoyer",
+          "ancre": "apparaît",
+          "mot": "rugby"
+        }
+      ]
+    },
+    {
+      "id": "titre",
+      "voix": "Puis sport. Et voilà déjà un mot du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Puis",
+          "mot": "sport",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "voilà",
+          "mot": "sport"
+        },
+        {
+          "type": "zoom",
+          "ancre": "titre.",
+          "cible": "titre"
+        }
+      ]
+    },
+    {
+      "id": "ordi",
+      "voix": "Ça marche aussi sur ton ordi, au bureau.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Ça",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "bureau.",
+          "nom": "clin"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Pédantix, le lien est dans ma bio.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Pédantix"
+        }
+      ]
+    }
+  ]
+}

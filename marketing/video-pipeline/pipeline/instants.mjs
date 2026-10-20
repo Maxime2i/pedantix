@@ -4,7 +4,7 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import puppeteer from "puppeteer-core";
-import { animationPath, loadProject } from "./lib.mjs";
+import { animationPath, loadProject, SANS_BAC_A_SABLE } from "./lib.mjs";
 import { serve } from "./serveur.mjs";
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
@@ -13,7 +13,7 @@ const instants = arg("--t", "1").split(",").map(Number);
 const sortie = arg("--sortie", join(dir, "output", "instants.jpg"));
 const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const server = await serve();
-const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ["--hide-scrollbars", "--font-render-hinting=none"] });
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: [...SANS_BAC_A_SABLE, "--hide-scrollbars", "--font-render-hinting=none"] });
 try {
   const page = await browser.newPage();
   await page.setViewport({ width: script.format.largeur, height: script.format.hauteur, deviceScaleFactor: 1 });

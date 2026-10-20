@@ -2,7 +2,7 @@
 //   node pipeline/zones.mjs --projet <dossier> --t 11.75,12
 //   node pipeline/zones.mjs --projet <dossier>        (toute la vidéo, toutes les 0,25 s ; code 1 si dépassement)
 import puppeteer from "puppeteer-core";
-import { animationPath, loadProject } from "./lib.mjs";
+import { animationPath, loadProject, SANS_BAC_A_SABLE } from "./lib.mjs";
 import { serve } from "./serveur.mjs";
 
 const i = process.argv.indexOf("--t");
@@ -10,7 +10,7 @@ const choisis = i > 0 ? process.argv[i + 1].split(",").map(Number) : null;
 const { dir, script } = loadProject();
 const { largeur: W, hauteur: H } = script.format;
 const server = await serve();
-const browser = await puppeteer.launch({ executablePath: process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: true });
+const browser = await puppeteer.launch({ executablePath: process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: true, args: SANS_BAC_A_SABLE });
 try {
   const page = await browser.newPage();
   await page.setViewport({ width: W, height: H });

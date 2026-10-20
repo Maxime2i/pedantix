@@ -1,0 +1,144 @@
+{
+  "titre": "Joue avant la sortie de l'app",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 20
+  },
+  "objectif": "Inviter à tester le site avant la sortie de l'app et à faire des retours.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "Casablanca",
+    "texte": [
+      "Casablanca est une ville située dans l'Ouest du Maroc, sur la côte atlantique, dans la région tribale berbère zénète atlasienne des Mediouna Tamesna, à environ 80 km au sud de Rabat, la capitale administrative. Capitale économique du pays, siège de la région Casablanca-Settat, c'est la plus grande ville du Maghreb par sa population ; lors du recensement de 2014, sa population était de 4 359 818 habitants, faisant d'elle la ville la plus peuplée du royaume, et celle de son agglomération s'élevait à 4 570 750 habitants."
+    ],
+    "titreMots": [
+      "casablanca"
+    ],
+    "revelations": {},
+    "proches": {},
+    "dejaTrouves": [],
+    "date": "Mardi 29 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Tu veux jouer avant la sortie de l'app ?",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Tu",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "sortie",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "site",
+      "voix": "Tout est déjà sur le site : la page de midi,",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Tout",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Tout",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "historique",
+      "voix": "ton historique,",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "historique,",
+          "nom": "historique"
+        }
+      ]
+    },
+    {
+      "id": "sombre",
+      "voix": "et même le mode sombre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "et",
+          "nom": "reglages"
+        },
+        {
+          "type": "reglage",
+          "ancre": "sombre.",
+          "mode": "Sombre"
+        }
+      ]
+    },
+    {
+      "id": "avis",
+      "voix": "Teste, et dis-moi en commentaire ce qui cloche.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Teste,",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Teste,",
+          "nom": "neutre"
+        },
+        {
+          "type": "pose",
+          "ancre": "cloche.",
+          "nom": "reflechit"
+        }
+      ]
+    },
+    {
+      "id": "merci",
+      "voix": "Tes retours iront direct dans l'app.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "retours",
+          "nom": "fier"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Lien en bio. Merci !",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Lien"
+        }
+      ]
+    }
+  ]
+}

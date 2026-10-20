@@ -38,6 +38,14 @@ html, body { margin: 0; background: #111; }
 .status .bars { display: flex; gap: 6px; align-items: center; }
 .status b { display: inline-block; width: 27px; height: 13px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; }
 .status b::after { content: ""; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+/* Mode site (script.navigateur) : barre d'adresse Safari en bas, la page de jeu au-dessus. */
+.safari { display: none; position: absolute; left: 0; right: 0; bottom: 0; height: 82px; z-index: 28; background: var(--a-bg); border-top: .5px solid var(--a-border); padding: 8px 16px 0; }
+.safari .url { height: 42px; border-radius: 14px; background: var(--a-card); box-shadow: 0 1px 3px rgb(0 0 0 / .08); display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 16px; font-weight: 500; color: var(--a-text); }
+.safari .url svg { opacity: .55; }
+#screen.web .safari { display: block; }
+#screen.web .view { bottom: 82px; }
+#screen.web.verrou .safari { display: none; }
+#screen.web.verrou .view { bottom: 0; }
 .home-ind { position: absolute; bottom: 8px; left: 50%; translate: -50% 0; width: 140px; height: 5px; border-radius: 3px; background: var(--a-text); z-index: 29; }
 .view { position: absolute; inset: 0; padding-top: 54px; background: var(--a-bg); visibility: hidden; }
 svg.ic { display: block; }
@@ -176,6 +184,7 @@ svg.ic { display: block; }
     <div id="res"><div class="bg"></div><div class="sheet" id="sheet"></div></div>
     <div id="notif"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>PÉDANTIX</span><span>maintenant</span></div><b id="n-titre"></b><span class="nb" id="n-texte"></span></div></div>
     <div class="tap" id="tap"></div>
+    <div class="safari"><div class="url"><svg width="11" height="14" viewBox="0 0 11 14" fill="currentColor"><path d="M2 6V4.5a3.5 3.5 0 0 1 7 0V6h.5A1.5 1.5 0 0 1 11 7.5v5A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-5A1.5 1.5 0 0 1 1.5 6H2Zm1.5 0h4V4.5a2 2 0 0 0-4 0V6Z"/></svg>pedantix.vercel.app</div></div>
     <div class="home-ind" id="homeind"></div>
   </div></div></div></div></div>
   <div id="avatar"><img id="av-img" alt=""><img id="av-bouche" alt="" src="avatar/neutre-bouche-ouverte.png"></div>
@@ -197,7 +206,8 @@ import { DEMO, POSES, THEMES } from "./demo.js";
 const { projet, script, timings, charte, tl } = await chargerProjet();
 const $ = (id) => document.getElementById(id);
 appliquerCharte(charte, $("stage"));
-const fin = { promesse: "Une nouvelle page<br>chaque midi", detail: "", cta: "Gratuit sur l’App Store", pose: "salut", ...script.fin };
+$("screen").classList.toggle("web", !!script.navigateur);
+const fin = { promesse: "Une nouvelle page<br>chaque midi", detail: "", cta: script.navigateur ? "pedantix.vercel.app" : "Gratuit sur l’App Store", pose: "salut", ...script.fin };
 $("promesse").innerHTML = fin.promesse;
 $("detail").textContent = fin.detail;
 $("detail").style.display = fin.detail ? "" : "none";
@@ -265,8 +275,8 @@ const ECRANS = {
     <div class="navtitle">Réglages</div>
     <div class="sectitle">Apparence</div>
     <div class="rows" style="padding-top:12px"><div style="font-size:17px;padding:0 16px 10px">Mode</div><div class="seg" id="reg-mode">${["Auto", "Clair", "Sombre"].map((m) => `<span class="${d.mode === m ? "on" : ""}" id="reg-${m.toLowerCase()}">${m}</span>`).join("")}</div></div>
-    <div class="sectitle">Notifications</div>
-    <div class="rows"><div class="srow"><div style="flex:1"><div>Rappel quotidien</div><div class="meta" style="margin-top:2px">Chaque jour à midi, quand la nouvelle page arrive</div></div><span class="switch ${d.rappel ? "on" : ""}" id="reg-rappel"></span></div></div>
+    ${script.navigateur ? "" : `<div class="sectitle">Notifications</div>
+    <div class="rows"><div class="srow"><div style="flex:1"><div>Rappel quotidien</div><div class="meta" style="margin-top:2px">Chaque jour à midi, quand la nouvelle page arrive</div></div><span class="switch ${d.rappel ? "on" : ""}" id="reg-rappel"></span></div></div>`}
     <div class="sectitle">Aide</div>
     <div class="rows"><div class="srow"><span style="flex:1">Comment jouer</span><span style="color:var(--a-muted)">${IC.chevron}</span></div><div class="srow"><span style="flex:1">Questions fréquentes</span><span style="color:var(--a-muted)">${IC.chevron}</span></div></div>`,
   verrouillage: (d) => `<div class="wall"></div><div class="lock-time"><small>${d.date}</small><b>${d.heure}</b></div>`,
@@ -402,6 +412,7 @@ function renderAt(t) {
     v.style.opacity = estCourant ? pv : 1;
   }
   const verrou = s.courant.nom === "verrouillage";
+  $("screen").classList.toggle("verrou", verrou);
   $("status").style.color = verrou ? "#fff" : "";
   $("homeind").style.background = verrou ? "#fff" : "";
   $("heure").textContent = verrou ? "" : DATA.jeu.heure;

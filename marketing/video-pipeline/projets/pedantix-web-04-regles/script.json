@@ -1,0 +1,159 @@
+{
+  "titre": "Les règles en 15 secondes",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 22
+  },
+  "objectif": "Tutoriel : les règles, jouées dans le navigateur.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "Francis Ford Coppola",
+    "texte": [
+      "Francis Ford Coppola [ˈfɹænsɪs fɔɹd ˈkɒpɒlə], né le 7 avril 1939 à Détroit, est un réalisateur, producteur de cinéma et scénariste américain.",
+      "Grande figure du Nouvel Hollywood, Coppola est considéré comme l'un de ses plus grands réalisateurs.",
+      "Il est titulaire d'un diplôme de l'université Hofstra où il a étudié le théâtre et a obtenu un MFA en réalisation cinématographique à l'UCLA.",
+      "Après avoir réalisé Les Gens de la pluie en 1969, Coppola co-écrit Patton et reçoit à 30 ans l’Oscar du meilleur scénario original avec Edmund H. North."
+    ],
+    "titreMots": [
+      "francis",
+      "ford",
+      "coppola"
+    ],
+    "revelations": {
+      "cinéma": [
+        "cinéma"
+      ]
+    },
+    "proches": {
+      "spielberg": {
+        "cibles": [
+          "coppola"
+        ],
+        "score": 72
+      }
+    },
+    "dejaTrouves": [
+      "francis",
+      "ford"
+    ],
+    "date": "Lundi 6 juillet"
+  },
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "voix": "Les règles de mon jeu, en quinze secondes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "titre",
+          "ancre": "Les",
+          "texte": "Les règles",
+          "sous": "en 15 secondes",
+          "fin": "secondes."
+        },
+        {
+          "type": "pose",
+          "ancre": "Les",
+          "nom": "clin"
+        },
+        {
+          "type": "pose",
+          "ancre": "quinze",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "un",
+      "voix": "Un. Tu proposes un mot : cinéma. Il apparaît partout.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Un.",
+          "mode": "coin"
+        },
+        {
+          "type": "taper",
+          "ancre": "cinéma.",
+          "mot": "cinéma",
+          "duree": 0.35
+        },
+        {
+          "type": "envoyer",
+          "ancre": "apparaît",
+          "mot": "cinéma"
+        }
+      ]
+    },
+    {
+      "id": "deux",
+      "voix": "Deux. Un mot proche s'écrit en gris : plus c'est clair, plus tu chauffes.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "proche",
+          "mot": "spielberg",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "gris",
+          "mot": "spielberg"
+        },
+        {
+          "type": "zoom",
+          "ancre": "clair,",
+          "cible": "titre"
+        }
+      ]
+    },
+    {
+      "id": "trois",
+      "voix": "Trois. Pour gagner, trouve tous les mots du titre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "gagner,",
+          "mot": "coppola",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "titre.",
+          "mot": "coppola"
+        },
+        {
+          "type": "pose",
+          "ancre": "titre.",
+          "nom": "celebre"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Joue gratuitement sur le site : lien en bio.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "Joue"
+        }
+      ]
+    }
+  ]
+}

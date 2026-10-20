@@ -1,0 +1,164 @@
+{
+  "titre": "En attendant Apple, le site",
+  "app": "pedantix",
+  "charte": "config/charte-pedantix.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 22
+  },
+  "objectif": "Pendant la validation de l'app : le jeu est déjà jouable sur le site.",
+  "voix": {
+    "instructions": "Voix masculine jeune (vingt ans), française, naturelle et complice : un développeur indépendant qui parle de son propre jeu à ses abonnés TikTok. Rythme vif, sourire dans la voix, petites pauses avant les révélations."
+  },
+  "navigateur": true,
+  "page": {
+    "titre": "Casablanca",
+    "texte": [
+      "Casablanca est une ville située dans l'Ouest du Maroc, sur la côte atlantique, dans la région tribale berbère zénète atlasienne des Mediouna Tamesna, à environ 80 km au sud de Rabat, la capitale administrative. Capitale économique du pays, siège de la région Casablanca-Settat, c'est la plus grande ville du Maghreb par sa population ; lors du recensement de 2014, sa population était de 4 359 818 habitants, faisant d'elle la ville la plus peuplée du royaume, et celle de son agglomération s'élevait à 4 570 750 habitants."
+    ],
+    "titreMots": [
+      "casablanca"
+    ],
+    "revelations": {},
+    "proches": {
+      "marrakech": {
+        "cibles": [
+          "casablanca"
+        ],
+        "score": 74
+      }
+    },
+    "dejaTrouves": [],
+    "date": "Mardi 29 septembre"
+  },
+  "dispositionInitiale": "avatar",
+  "fin": {
+    "promesse": "Une nouvelle page<br>chaque midi",
+    "detail": "Gratuit, dans ton navigateur · lien en bio"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Mon app attend encore la validation d'Apple.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Mon",
+          "nom": "neutre"
+        },
+        {
+          "type": "pose",
+          "ancre": "validation",
+          "nom": "tete-main"
+        }
+      ]
+    },
+    {
+      "id": "mais",
+      "voix": "Mais le jeu, lui, est déjà en ligne.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Mais",
+          "mode": "duo"
+        },
+        {
+          "type": "pose",
+          "ancre": "Mais",
+          "nom": "montre-droite"
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "voix": "Chaque midi, une page Wikipédia est cachée.",
+      "image": null,
+      "actions": [
+        {
+          "type": "pose",
+          "ancre": "Chaque",
+          "nom": "neutre"
+        }
+      ]
+    },
+    {
+      "id": "jeu",
+      "voix": "Tu proposes un mot : ville. Il apparaît partout dans la page.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "proposes",
+          "mot": "ville",
+          "fin": "ville."
+        },
+        {
+          "type": "envoyer",
+          "ancre": "apparaît",
+          "mot": "ville"
+        }
+      ]
+    },
+    {
+      "id": "proche",
+      "voix": "Marrakech ? Très proche du titre : ça s'écrit en gris.",
+      "image": null,
+      "actions": [
+        {
+          "type": "taper",
+          "ancre": "Marrakech",
+          "mot": "marrakech",
+          "duree": 0.4
+        },
+        {
+          "type": "envoyer",
+          "ancre": "proche",
+          "mot": "marrakech"
+        },
+        {
+          "type": "zoom",
+          "ancre": "gris.",
+          "cible": "titre"
+        }
+      ]
+    },
+    {
+      "id": "promesse",
+      "voix": "Gratuit, sans compte, rien à installer.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Gratuit,",
+          "mode": "avatar"
+        },
+        {
+          "type": "pose",
+          "ancre": "Gratuit,",
+          "nom": "fier"
+        },
+        {
+          "type": "tampon",
+          "ancre": "installer.",
+          "texte": "GRATUIT",
+          "couleur": "vert"
+        }
+      ]
+    },
+    {
+      "id": "appel",
+      "voix": "Le lien est dans ma bio.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "lien"
+        }
+      ]
+    }
+  ]
+}

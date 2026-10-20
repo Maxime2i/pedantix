@@ -5,7 +5,7 @@
 import { existsSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import puppeteer from "puppeteer-core";
-import { animationPath, loadProject } from "./lib.mjs";
+import { animationPath, loadProject, SANS_BAC_A_SABLE } from "./lib.mjs";
 import { serve } from "./serveur.mjs";
 
 const CHROME = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
@@ -17,7 +17,7 @@ mkdirSync(out, { recursive: true });
 
 const server = await serve();
 const url = `http://127.0.0.1:${server.address().port}${animationPath(dir, script)}`;
-const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ["--hide-scrollbars", "--font-render-hinting=none"] });
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: [...SANS_BAC_A_SABLE, "--hide-scrollbars", "--font-render-hinting=none"] });
 try {
   const page = await browser.newPage();
   await page.setViewport({ width: W, height: H, deviceScaleFactor: 1 });

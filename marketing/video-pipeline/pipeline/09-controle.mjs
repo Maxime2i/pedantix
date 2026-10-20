@@ -4,7 +4,7 @@
 import { execFileSync } from "node:child_process";
 import { basename, join } from "node:path";
 import puppeteer from "puppeteer-core";
-import { animationPath, fullText, loadProject, readJson, writeJson } from "./lib.mjs";
+import { animationPath, fullText, loadProject, readJson, writeJson, SANS_BAC_A_SABLE } from "./lib.mjs";
 import { serve } from "./serveur.mjs";
 
 const { dir, script } = loadProject();
@@ -39,7 +39,7 @@ check("Volume", Math.abs(lufs + 14) <= 1.5 && peak <= -0.5, `${lufs} LUFS (cible
 // 380 px du bas (légende, boutons) et 140 px de droite (boutons d'action).
 const SAFE = { top: 160, bottom: H - 380, left: 60, right: W - 140 };
 const server = await serve();
-const browser = await puppeteer.launch({ executablePath: process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: true });
+const browser = await puppeteer.launch({ executablePath: process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless: true, args: SANS_BAC_A_SABLE });
 const horsCadre = [];
 try {
   const page = await browser.newPage();
