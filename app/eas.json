@@ -10,6 +10,15 @@
       },
       "channel": "preview"
     },
+    "simulator-test": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://localhost:5056"
+      }
+    },
     "production": {
       "autoIncrement": true,
       "channel": "production"

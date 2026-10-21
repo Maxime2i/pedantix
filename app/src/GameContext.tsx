@@ -130,7 +130,8 @@ function useGameState() {
     if (pull) setRefreshing(true);
     setLoadError(null);
     try {
-      const p = await fetchPuzzle();
+      // Au lancement, un second essai avant d'afficher l'erreur (réseau lent au réveil).
+      const p = await fetchPuzzle().catch((e) => (pull ? Promise.reject(e) : fetchPuzzle()));
       store.startDay(p.num);
       const saved = store.read<Guesses>("guesses", {});
       let restored: Cell[] = Array.from({ length: p.count }, () => ({ word: "", score: 0 }));

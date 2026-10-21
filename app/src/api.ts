@@ -39,8 +39,21 @@ export type HistoryRow = [number, number, Secret];
 const API_BASE =
   process.env.EXPO_PUBLIC_API_URL || "https://uvaupdahrvugxor7xopx2slx.141.227.190.141.sslip.io";
 
+/** Délai maximal d'une requête : sans lui, un réseau qui ne répond pas laisse l'app charger sans fin. */
+const TIMEOUT_MS = 8000;
+
+async function fetchWithTimeout(url: string, init?: RequestInit): Promise<Response> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  try {
+    return await fetch(url, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function json<T>(path: string, init?: RequestInit): Promise<T> {
-  const resp = await fetch(`${API_BASE}${path}`, init);
+  const resp = await fetchWithTimeout(`${API_BASE}${path}`, init);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return (await resp.json()) as T;
 }
@@ -69,7 +82,7 @@ export async function fetchWikiImage(urlTitle: string): Promise<string | null> {
   const url =
     "https://fr.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json" +
     `&origin=*&pithumbsize=300&titles=${encodeURIComponent(urlTitle)}`;
-  const data = await (await fetch(url)).json();
+  const data = await (await fetchWithTimeout(url)).json();
   for (const page of Object.values(data?.query?.pages ?? {}) as { thumbnail?: { source: string } }[]) {
     if (page.thumbnail?.source) return page.thumbnail.source;
   }

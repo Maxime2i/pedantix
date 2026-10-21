@@ -74,14 +74,15 @@ function Screens() {
 }
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({ Fraunces_600SemiBold, Fraunces_700Bold });
+  // En cas d'échec des polices, on continue avec celles du système plutôt que de bloquer.
+  const [fontsLoaded, fontError] = useFonts({ Fraunces_600SemiBold, Fraunces_700Bold });
   const [storageLoaded, setStorageLoaded] = useState(false);
 
   useEffect(() => {
     loadStorage().then(() => setStorageLoaded(true));
   }, []);
 
-  const ready = fontsLoaded && storageLoaded;
+  const ready = (fontsLoaded || fontError != null) && storageLoaded;
   useEffect(() => {
     if (ready) SplashScreen.hideAsync().catch(() => {});
   }, [ready]);

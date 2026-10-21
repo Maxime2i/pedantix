@@ -23,9 +23,14 @@ const PREFIX = "p/";
 const cache = new Map<string, string>();
 
 export async function loadStorage(): Promise<void> {
-  try {
+  const read = (async () => {
     const pairs = await AsyncStorage.multiGet(await AsyncStorage.getAllKeys());
     for (const [k, v] of pairs) if (v != null) cache.set(k, v);
+  })();
+  // Le lancement n'attend jamais le stockage plus de quelques secondes.
+  const timeout = new Promise<void>((resolve) => setTimeout(resolve, 3000));
+  try {
+    await Promise.race([read, timeout]);
   } catch {
     // stockage indisponible : partie non sauvegardée
   }
