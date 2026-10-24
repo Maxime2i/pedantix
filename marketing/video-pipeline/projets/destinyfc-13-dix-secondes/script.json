@@ -1,0 +1,272 @@
+{
+  "titre": "Crée ton joueur en dix secondes",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 25
+  },
+  "objectif": "Lancement des avatars (à publier une fois la mise à jour en ligne). Format rapide : création express dans l'éditeur (éléments gratuits), le joueur en grand, puis un montage de trois vraies cinématiques de moments clés (coup franc, face au gardien, penalty) jouées avec son avatar.",
+  "avatars": true,
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Rythme de chrono, très rapide et joueur sur l'énumération « Peau. Coupe. Couleur. Barbe. », un mot par battement. « Terminé ! » triomphant. Montage final dynamique."
+  },
+  "ecranInitial": "avatar",
+  "kit": {
+    "c1": "#d62828",
+    "c2": "#facc15"
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 22,
+        "annee": 2032,
+        "poste": "milieu",
+        "note": 74,
+        "argent": "2,4 M€",
+        "etoiles": 3,
+        "niveau": "d1",
+        "club": "Lens",
+        "couleurs": [
+          "#d62828",
+          "#facc15"
+        ],
+        "jauges": {
+          "forme": 78,
+          "moral": 72,
+          "confiance": 66,
+          "pression": 48
+        }
+      }
+    }
+  },
+  "fin": {
+    "promesse": "Crée ton joueur,<br>écris ta <em>légende</em>",
+    "detail": "Nouveau : les avatars"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Crée ton joueur en dix secondes. Top chrono !",
+      "animation": "L'éditeur « Mon joueur », tampon « 10 s ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "tampon",
+          "ancre": "chrono",
+          "texte": "10 s",
+          "couleur": "or",
+          "duree": 1.2
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "express",
+      "voix": "Peau. Coupe. Couleur. Barbe. Terminé !",
+      "animation": "Un réglage par mot, puis vue de dos.",
+      "image": null,
+      "actions": [
+        {
+          "type": "porter",
+          "ancre": "Peau",
+          "champ": "skin",
+          "valeur": 2
+        },
+        {
+          "type": "onglet",
+          "ancre": "Coupe",
+          "nom": "hair"
+        },
+        {
+          "type": "porter",
+          "ancre": "Coupe",
+          "decalage": 0.3,
+          "champ": "hair",
+          "valeur": "short"
+        },
+        {
+          "type": "porter",
+          "ancre": "Couleur",
+          "champ": "hairColor",
+          "valeur": 5
+        },
+        {
+          "type": "onglet",
+          "ancre": "Barbe",
+          "nom": "face"
+        },
+        {
+          "type": "porter",
+          "ancre": "Barbe",
+          "decalage": 0.3,
+          "champ": "beard",
+          "valeur": "mustache"
+        },
+        {
+          "type": "posejoueur",
+          "ancre": "Terminé",
+          "nom": "back"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "voila",
+      "voix": "Le voilà. Et maintenant, il joue tes moments clés.",
+      "animation": "Le joueur en grand, qui célèbre.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "voilà",
+          "mode": "vide"
+        },
+        {
+          "type": "perso",
+          "ancre": "voilà",
+          "mode": "centre",
+          "pose": "front"
+        },
+        {
+          "type": "perso",
+          "ancre": "maintenant",
+          "pose": "celebrate"
+        },
+        {
+          "type": "perso",
+          "ancre": "clés",
+          "mode": "cache"
+        },
+        {
+          "type": "disposition",
+          "ancre": "clés",
+          "mode": "telephone"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "montage",
+      "voix": "Le coup franc en pleine lucarne. Le face au gardien, piqué. Et le penalty, en force !",
+      "animation": "Trois cinématiques réelles de l'app, coupées autour du but.",
+      "image": null,
+      "actions": [
+        {
+          "type": "cinematique",
+          "ancre": "Le",
+          "id": "strike",
+          "titre": "LA FINALE DU CHAMPIONNAT DU MONDE",
+          "options": [
+            "curl",
+            "drive",
+            "cross",
+            "two"
+          ],
+          "option": "curl",
+          "national": true,
+          "cote": 1,
+          "debut": 4.3,
+          "sons": [
+            [
+              3.72,
+              "impact",
+              0.45
+            ],
+            [
+              5.08,
+              "foule",
+              0.6
+            ]
+          ]
+        },
+        {
+          "type": "cinematique",
+          "ancre": "face",
+          "id": "oneOnOne",
+          "titre": "LA FINALE DU CHAMPIONNAT DU MONDE",
+          "options": [
+            "chip",
+            "flat",
+            "round",
+            "square"
+          ],
+          "option": "chip",
+          "national": true,
+          "cote": -1,
+          "debut": 4.05,
+          "sons": [
+            [
+              3.52,
+              "impact",
+              0.45
+            ],
+            [
+              4.75,
+              "foule",
+              0.6
+            ]
+          ]
+        },
+        {
+          "type": "cinematique",
+          "id": "penalty",
+          "titre": "LA FINALE DE LA COUPE NATIONALE",
+          "options": [
+            "placed",
+            "power",
+            "corner",
+            "panenka"
+          ],
+          "couleursClub": "🔴🟡",
+          "clubId": "fr_lens",
+          "ancre": "penalty",
+          "option": "power",
+          "reussite": true,
+          "cote": -1,
+          "debut": 3.4,
+          "sons": [
+            [
+              2.7,
+              "whoosh",
+              0.3
+            ],
+            [
+              3.92,
+              "impact",
+              0.45
+            ],
+            [
+              4.37,
+              "foule",
+              0.7
+            ],
+            [
+              4.42,
+              "victoire",
+              0.4
+            ]
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Nouveau dans Destiny FC. Ton joueur, ta légende.",
+      "animation": "Carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "fin",
+          "ancre": "joueur"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

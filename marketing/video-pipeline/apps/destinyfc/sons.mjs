@@ -24,6 +24,12 @@ export function sonsAuto(actions) {
       case "typo": s("whoosh", a.t - 0.1, 0.35); break;
       case "tampon": s("tampon", a.t, 0.6); break;
       case "entree": s("whoosh", a.t - 0.2, 0.35); break;
+      case "onglet": case "posejoueur": s("clic", a.t, 0.4); break;
+      case "porter": s("clic", a.t, 0.4); s("pop", a.t + 0.05, 0.35); break;
+      case "perso": if (a.mode) s("whoosh", a.t - 0.1, 0.3); if (a.pose) s("pop", a.t, 0.25); break;
+      // Cinématique : la page de l'app n'a pas de son (retour haptique seulement). `sons` : [[secondes depuis son début (même avec `debut`), son, gain]],
+      // calés sur ses impacts (outils/durees-cine.mjs).
+      case "cinematique": s("whoosh", a.t - 0.1, 0.35); for (const [dt, son, g] of a.sons ?? []) if (dt >= (a.debut ?? 0)) s(son, a.t + dt - (a.debut ?? 0), g ?? 0.5); break;
     }
   }
   return sfx;

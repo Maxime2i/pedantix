@@ -12,7 +12,7 @@ Pour une vidéo, écrire seulement `projets/destinyfc-<nn>-<slug>/script.json` a
 
 - Le jeu : simulation de carrière de footballeur, **de 16 ans à la retraite**, en choix narratifs (événements, moments décisifs, mercato, intersaison). Gratuit avec achats (jetons, Destiny FC+) et pubs. Appel à l'action par défaut : « Gratuit · iPhone et Android » (App Store et Google Play, v1.6).
 - La voix est celle de **Maxime, le développeur**, à la première personne. Jamais de chiffres de joueurs ou de téléchargements, ni de faux avis.
-- **Montrer uniquement ce qui est publié** (branche `main`). L'arbre local contient des fonctions **non publiées** : avatar du joueur et éditeur « Mon joueur », cinématique « La Signature », suppression du Rendez-vous quotidien. Ne pas les montrer ni les annoncer tant qu'elles ne sont pas en ligne. Ne jamais montrer les boutons de test « 🎬 Transfert / 🎬 Prêt ».
+- **Montrer uniquement ce qui est publié** (branche `main`). Exception : les vidéos des avatars (`"avatars": true`, voir « Avatars du joueur et cinématiques »), produites à l'avance et **à ne publier qu'une fois la mise à jour avec les avatars en ligne**. Ne jamais montrer les boutons de test « 🎬 Transfert / 🎬 Prêt ».
 - Textes de jeu : uniquement ceux de `src/game/data.js` (événements, moments décisifs, titres de presse `HEADLINES`) et `src/i18n/strings.ts`, mot pour mot. `{club}`, `{name}` remplacés par les données de la démo. Les cartes de `demo.js` en sont déjà tirées ; pour un autre événement, le recopier depuis `data.js` dans `"cartes"` du script.
 - Pas de « tu choisis ce qui se passe à chaque match » : on choisit des réactions à des événements, l'issue reste aléatoire (pondérée). Ne pas promettre de contrôle du jeu en match, de 3D, de multijoueur en direct.
 - **Notifications** (écran `verrouillage`) : textes réels de `strings.ts > notif` : `{nom} t'attend` / « {âge} ans, saison en cours. Reprends ta carrière là où elle s'est arrêtée. » ; `🔥 Ta série de {n} jours est en danger` / « Termine une quête aujourd'hui pour la garder. » ; `{icône} Nouvelle Légende : {alias}` / « Gratuite aujourd'hui seulement. Feras-tu mieux que l'original ? » ; `🗓️ Nouveau défi de la semaine` ; `⚽ Un nouveau destin t'attend` / « Une carrière commence à 16 ans. Celle-ci sera peut-être la bonne. »
@@ -125,3 +125,47 @@ Niveaux : `reg` (Rég., gris), `d2` (bleu), `d1` (violet), `elite` (Élite, or).
 - Un effet annoncé (« +5 Physique ») doit correspondre à l'issue réelle de l'événement dans `data.js`.
 - Les jauges bougent dans le sens de l'effet (un moral −6 baisse Moral).
 - Un club de niveau `elite` n'apparaît pas dans les offres d'un joueur de 16 ans à 1 étoile (cohérence du potentiel).
+
+## Avatars du joueur et cinématiques (version avec avatars)
+
+Dessinés par **le code même de l'app**, copié dans `app/app.js` par `node apps/destinyfc/outils/sync-app.mjs [chemin destiny-eleven]` (rig `src/avatar/rig.ts`, catalogue, `src/cinematics/*`, textes). À relancer après toute modification du rig ou d'une cinématique dans l'app ; le fichier indique la branche et le commit copiés. Code de la bibliothèque : `joueur.js`.
+
+`"avatars": true` en tête du script : l'accueil a la tuile « Mon joueur » (avatar en portrait, « Crée ton pro » puis « Modifier mon pro » après un `porter`, id `a-avatar`) à la place du Rendez-vous quotidien (retiré de l'app).
+
+- `"joueurAvatar"` : avatar de départ, `{ skin, hair, hairColor, beard, brows, gear }` ; `skin` et `hairColor` en indice 0–7 (`SKIN_TONES`, `HAIR_COLORS`). Défaut : celui de l'app (peau 2, `buzz`, brun foncé).
+- `"kit"` : `{ c1, c2 }`, maillot du joueur en grand (`perso`). L'éditeur garde le maillot par défaut de l'app (pétrole), comme dans le jeu.
+- `"ecrans": { "avatar": { "possede": ["hair_afro", …], "jetons": 120, "halloween": false } }` : articles achetés, solde, articles Halloween visibles (vente limitée jusqu'au 03/11/2026).
+
+**Gratuit / payant** : gratuits = toutes les peaux et couleurs, coupes `buzz`, `curly`, `short`, barbes `none`, `mustache`, `stubble`, sourcils `soft`. Le reste se paie en jetons (prix sur la case). Un `porter` sur un article payant non listé dans `possede` est refusé (rendu en erreur) : ne pas laisser croire qu'il est gratuit.
+
+### Écran `avatar` (éditeur « Mon joueur », AvatarScreen)
+
+En-tête « Mon joueur » + solde, avatar fixe (comme dans l'app : pas d'animation dans l'éditeur), bouton de pose, 5 onglets (`skin` Peau, `hair` Coiffure, `face` Visage, `gear` Équipement, `outfit` Tenue), grilles de vignettes.
+
+| Action | Paramètres | Effet | Son auto |
+|---|---|---|---|
+| `onglet` | `nom` : `skin`, `hair`, `face`, `gear`, `outfit` | appui sur l'onglet | clic |
+| `porter` | `champ` : `skin`, `hair`, `hairColor`, `beard`, `brows`, `head`, `eyes`, `face`, `neck`, `outfit` ; `valeur` (indice pour `skin` / `hairColor`, id sinon, `"club"` pour retirer une tenue) | appui sur la case, l'avatar change partout (éditeur, accueil, `perso`, cinématiques suivantes). L'onglet de la case doit être ouvert (contrôlé). | clic + pop |
+| `posejoueur` | `nom` : `front`, `back` (nom et numéro 10 au dos), `celebrate` ; sans `nom` : pose suivante | appui sur le bouton de pose | clic |
+| `defiler` | `y` | fait défiler les grilles (pas l'en-tête) | — |
+
+Ids : `av-onglet-<nom>`, `av-c-<champ>-<valeur>`, `av-pose`, `av-scene`, `av-jetons`. Deux actions sur le même mot : décaler la seconde (`"decalage": 0.3`).
+
+### Joueur en grand : `perso`
+
+Avatar vivant (respiration, clignements, transitions de pose du rig), hors du téléphone. `mode` : `centre`, `gauche`, `droite`, `bas`, `cache` (sort par le bas) ; `pose` : `front`, `celebrate`, `wave`, `despair`, `back`… ; `taille` (hauteur, 1150 au centre). Avec `{ "type": "disposition", "mode": "vide" }` (ni téléphone ni avatar de Maxime) pour libérer la scène ; revenir avec `telephone`.
+
+### Cinématiques : `cinematique`
+
+La vraie page de l'app, jouée dans le téléphone sur une **horloge virtuelle** (temps, images, hasard pilotés par la vidéo : rendu identique à chaque fois). Données construites par `signingCinematic` / `momentCinematic` de l'app, avec l'avatar du moment.
+
+- Transfert : `{ "id": "signing", "club": "Paris", "clubId": "fr_paris", "couleurs": "🔴🔵", "pays": "fr", "depuis": "Lens", "montant": 38, "pret": false }` (montant en M€, couleurs = pastilles de `data.js`).
+- Moment clé : `{ "id": "penalty", "titre": "LA FINALE DE LA COUPE NATIONALE", "options": ["placed", "power", "corner", "panenka"], "option": "panenka", "reussite": true, "cote": 1, "couleursClub": "🔴🟡", "national": false }`. `options` et `titre` = un vrai scénario de `KEY_MOMENTS` (la famille de cinématique en dépend : `penalty`, `strike`, `oneOnOne`, `keeper`, `play`, `duel`, `attitude` ; erreur si `id` ne correspond pas). `cote` : 1 ou -1 (côté du tir, du plongeon). `national` : maillot du pays.
+- `debut` (s) : démarrer plus loin (montage) ; `decalage` (s, toute action) : caler un instant précis sur un mot, ex. `"ancre": "fond", "decalage": -5.2` pour que le but tombe sur « fond ».
+- `sons` : `[[secondes depuis le début, son, gain], …]` (la page de l'app n'a pas de son). Instants des impacts : `node apps/destinyfc/outils/durees-cine.mjs <projet>`.
+
+Durées mesurées (24/10/2026) : penalty ≈ 8,8 s (but ≈ 5,2 s en panenka, 4,4 s en force), coup franc ≈ 8,7 s (but 5,1 s), face au gardien ≈ 8,4 s (4,75 s), dribble ≈ 8,9 s (4,95 s), signature ≈ 8,3 s (montant qui tombe à 5,2 s). Plan A (gros plan, titre, mot) ≈ 0–1,5 s, action ensuite, réaction (« BUT ! ») sur les 3 dernières secondes. La cinématique reste à l'écran jusqu'à l'action `ecran` (ou `cinematique`) suivante.
+
+Exemples : `projets/destinyfc-11-pov-penalty`, `destinyfc-12-un-visage`, `destinyfc-13-dix-secondes` ; banc : `destinyfc-90-essai-avatar`.
+
+**Timings** : `pipeline/03-timings.py` demande `faster_whisper`, installé pour le Python 3.9 du système : si `python3` n'est plus celui-là, lancer `/usr/bin/python3 pipeline/03-timings.py --projet <dossier>`.

@@ -1,0 +1,258 @@
+{
+  "titre": "POV : le penalty de la finale",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 28
+  },
+  "objectif": "Lancement des avatars (à publier une fois la mise à jour en ligne). Accroche : un vrai moment clé du jeu (cup_final, penalty, 4 options réelles de data.js), la cinématique jouée avec l'avatar du joueur (penalty, panenka réussie : une issue possible, base 0,42), puis la révélation : ce joueur, c'est toi qui l'as créé.",
+  "avatars": true,
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Tension qui monte sur la course d'élan, voix presque chuchotée sur « le gardien plonge », explosion de joie sur « au fond ». Puis ton complice, fier, sur la révélation."
+  },
+  "ecranInitial": "partie",
+  "joueurAvatar": {
+    "skin": 4,
+    "hair": "curly",
+    "hairColor": 0,
+    "beard": "stubble"
+  },
+  "kit": {
+    "c1": "#d62828",
+    "c2": "#facc15"
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 22,
+        "annee": 2032,
+        "poste": "milieu",
+        "note": 74,
+        "argent": "2,4 M€",
+        "etoiles": 3,
+        "niveau": "d1",
+        "club": "Lens",
+        "couleurs": [
+          "#d62828",
+          "#facc15"
+        ],
+        "jauges": {
+          "forme": 78,
+          "moral": 72,
+          "confiance": 66,
+          "pression": 48
+        }
+      },
+      "carte": {
+        "genre": "moment",
+        "tag": "🎯 MOMENT DÉCISIF",
+        "titre": "Finale de la coupe nationale",
+        "texte": "90e minute de la finale, 1-1. Penalty en faveur de Lens — le trophée au bout de la chaussure, un stade tout entier qui n'ose plus souffler.",
+        "options": [
+          {
+            "indice": "Fiable",
+            "texte": "Frappe placée, jouer la sécurité"
+          },
+          {
+            "indice": "Puissance",
+            "texte": "Frappe pleine barre"
+          },
+          {
+            "texte": "Croisé du plat du pied"
+          },
+          {
+            "indice": "De légende",
+            "texte": "Panenka"
+          }
+        ]
+      }
+    }
+  },
+  "fin": {
+    "promesse": "Crée ton joueur,<br>écris ta <em>légende</em>",
+    "detail": "Nouveau : les avatars"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Finale de coupe, quatre-vingt-dixième minute. Penalty pour toi.",
+      "animation": "Tableau de score 1–1, 90e, puis la carte du moment décisif.",
+      "image": null,
+      "actions": [
+        {
+          "type": "tableau",
+          "ancre": "Finale",
+          "titre": "Finale · Coupe nationale",
+          "domicile": {
+            "nom": "Lens",
+            "couleurs": [
+              "#d62828",
+              "#facc15"
+            ]
+          },
+          "exterieur": {
+            "nom": "Nantes",
+            "couleurs": [
+              "#f5c400",
+              "#1e8a3c"
+            ]
+          },
+          "score": [
+            1,
+            1
+          ],
+          "minute": 90
+        },
+        {
+          "type": "masquer",
+          "ancre": "Penalty"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "question",
+      "voix": "Tu tires comment ? Placé, en force, croisé… ou panenka ?",
+      "animation": "Les quatre options de la carte.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "Tu",
+          "cible": "entier"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "tir",
+      "voix": "Moi, je tente la panenka. Course d'élan, tout le stade retient son souffle, le gardien plonge… et elle est au fond !",
+      "animation": "Appui sur Panenka, puis la cinématique Penalty de l'app avec l'avatar : le but tombe sur « fond ».",
+      "image": null,
+      "actions": [
+        {
+          "type": "option",
+          "ancre": "Moi",
+          "n": 4
+        },
+        {
+          "type": "cinematique",
+          "id": "penalty",
+          "titre": "LA FINALE DE LA COUPE NATIONALE",
+          "options": [
+            "placed",
+            "power",
+            "corner",
+            "panenka"
+          ],
+          "couleursClub": "🔴🟡",
+          "clubId": "fr_lens",
+          "ancre": "fond",
+          "decalage": -5.2,
+          "option": "panenka",
+          "reussite": true,
+          "cote": 1,
+          "sons": [
+            [
+              0.67,
+              "impact",
+              0.3
+            ],
+            [
+              1.25,
+              "impact",
+              0.3
+            ],
+            [
+              2.7,
+              "whoosh",
+              0.3
+            ],
+            [
+              3.92,
+              "impact",
+              0.45
+            ],
+            [
+              5.23,
+              "foule",
+              0.7
+            ],
+            [
+              5.28,
+              "victoire",
+              0.4
+            ]
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "joie",
+      "voix": "La coupe est à toi !",
+      "animation": "Fin de la cinématique : le joueur célèbre, « BUT ! ».",
+      "image": null,
+      "actions": [],
+      "bruitages": []
+    },
+    {
+      "id": "revelation",
+      "voix": "Et ce joueur, tu l'as créé toi-même, de la coupe de cheveux à la barbe.",
+      "animation": "L'éditeur « Mon joueur » avec le même avatar ; onglets Coiffure puis Visage.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "joueur",
+          "nom": "avatar"
+        },
+        {
+          "type": "onglet",
+          "ancre": "cheveux",
+          "nom": "hair"
+        },
+        {
+          "type": "onglet",
+          "ancre": "barbe",
+          "nom": "face"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Nouveau dans Destiny FC : crée ton joueur, et vis tes moments clés.",
+      "animation": "Le joueur en grand qui célèbre, puis carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Nouveau",
+          "mode": "vide"
+        },
+        {
+          "type": "perso",
+          "ancre": "Nouveau",
+          "mode": "centre",
+          "pose": "front"
+        },
+        {
+          "type": "perso",
+          "ancre": "crée",
+          "pose": "celebrate"
+        },
+        {
+          "type": "fin",
+          "ancre": "moments"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

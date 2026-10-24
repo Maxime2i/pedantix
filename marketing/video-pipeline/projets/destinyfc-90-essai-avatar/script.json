@@ -1,0 +1,36 @@
+{
+  "titre": "Essai avatar (banc)",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": { "largeur": 1080, "hauteur": 1920, "fps": 30, "dureeCible": 30 },
+  "objectif": "Banc d'essai des actions avatar : accueil avec avatar, éditeur, perso, cinématiques.",
+  "voix": { "instructions": "test" },
+  "avatars": true,
+  "ecranInitial": "accueil",
+  "ecrans": { "avatar": { "possede": ["hair_afro"] }, "partie": { "joueur": { "nom": "Lucas Morel", "pays": "france", "age": 19, "annee": 2029, "poste": "milieu", "note": 66, "argent": "0,6 M€", "etoiles": 2, "niveau": "d1", "club": "Lens", "couleurs": ["#d62828", "#facc15"] } } },
+  "scenes": [
+    { "id": "a", "voix": "Un accueil puis mon joueur tout neuf dans l'éditeur.", "actions": [
+      { "type": "appui", "ancre": "puis", "cible": "a-avatar" },
+      { "type": "ecran", "ancre": "mon", "nom": "avatar" }
+    ] },
+    { "id": "b", "voix": "Une coiffure afro, une couleur claire, une barbe courte et je tourne.", "actions": [
+      { "type": "onglet", "ancre": "Une", "nom": "hair" },
+      { "type": "porter", "ancre": "afro", "champ": "hair", "valeur": "afro" },
+      { "type": "porter", "ancre": "couleur", "champ": "hairColor", "valeur": 4 },
+      { "type": "onglet", "ancre": "barbe", "nom": "face" },
+      { "type": "porter", "ancre": "courte", "champ": "beard", "valeur": "stubble" },
+      { "type": "posejoueur", "ancre": "tourne" }
+    ] },
+    { "id": "c", "voix": "Le voici en grand sur la scène, il célèbre puis il repart.", "actions": [
+      { "type": "perso", "ancre": "voici", "mode": "centre", "pose": "front" },
+      { "type": "perso", "ancre": "célèbre", "pose": "celebrate" },
+      { "type": "perso", "ancre": "repart", "mode": "cache" }
+    ] },
+    { "id": "d", "voix": "Penalty en finale, je tente la panenka et regardez bien ce qui se passe jusqu'au bout de la cinématique complète ici même.", "actions": [
+      { "type": "cinematique", "ancre": "Penalty", "id": "penalty", "titre": "LA FINALE DE LA COUPE NATIONALE", "options": ["placed", "power", "corner", "panenka"], "option": "panenka", "reussite": true, "cote": 1, "couleursClub": "🔴🟡" }
+    ] },
+    { "id": "e", "voix": "Puis un transfert à Paris avec la signature officielle du contrat dans la grande cinématique de signature du jeu.", "actions": [
+      { "type": "cinematique", "ancre": "Puis", "id": "signing", "club": "Paris", "clubId": "fr_paris", "couleurs": "🔴🔵", "depuis": "Lens", "montant": 38 }
+    ] }
+  ]
+}

@@ -226,6 +226,40 @@ html, body { margin: 0; background: #111; }
 .notif b { display: block; font-size: 15px; margin-top: 1px; }
 .notif span.nb { font-size: 15px; color: #3c3c43; line-height: 1.25; display: block; }
 
+/* Tuile « Mon joueur » de l'accueil (version avec avatar) */
+.tile .av-tuile { height: 64px; display: flex; align-items: flex-end; justify-content: center; background: rgb(11 111 124 / .35); overflow: hidden; }
+.tile .av-tuile span { width: 62px; height: 62px; display: block; }
+
+/* Éditeur « Mon joueur » (AvatarScreen) */
+.av-ecran { padding: 12px 16px 20px; height: 100%; display: flex; flex-direction: column; }
+.av-tete { display: flex; align-items: center; gap: 12px; }
+.av-retour { width: 40px; height: 40px; border-radius: 20px; display: grid; place-items: center; background: rgb(0 0 0 / .28); border: 1px solid rgb(255 255 255 / .14); flex: none; }
+.av-titre { flex: 1; font-family: var(--titre); font-weight: 600; font-size: 28px; letter-spacing: .5px; text-transform: uppercase; }
+.av-scene { position: relative; display: flex; justify-content: center; background: rgb(0 0 0 / .22); border-radius: 16px; padding: 10px 0; margin: 8px 0 10px; }
+.av-bpose { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border-radius: 18px; display: grid; place-items: center; background: rgb(255 255 255 / .12); }
+.av-onglets { display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: rgb(0 0 0 / .22); }
+.av-onglets span { flex: 1; display: grid; place-items: center; padding: 9px 0; border-radius: 9px; }
+.av-onglets span.on { background: var(--a-primary); }
+.av-panneau { flex: 1; overflow: hidden; padding-top: 12px; }
+.av-label { font-family: var(--titre); font-weight: 600; font-size: 13px; letter-spacing: .4px; text-transform: uppercase; margin: 14px 0 8px; }
+.av-label.premier { margin-top: 0; }
+.av-grille { display: flex; flex-wrap: wrap; gap: 10px; }
+.av-cell { position: relative; border-radius: 14px; background: rgb(255 255 255 / .08); border: 2px solid transparent; display: grid; place-items: center; overflow: hidden; }
+.av-cell.on { border: 3px solid #fff; background: rgb(255 255 255 / .18); }
+.av-vig { display: block; }
+.av-teinte { display: block; border-radius: 50%; border: 1px solid rgb(0 0 0 / .35); }
+.av-prix { position: absolute; right: 5px; bottom: 5px; display: flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 99px; background: rgb(0 0 0 / .65); font-weight: 600; font-size: 11px; }
+.av-prix i { width: 9px; height: 9px; border-radius: 5px; background: #E9C35A; }
+.av-prix.bas { opacity: .55; } .av-prix.porte { background: var(--a-primary); }
+.av-nom { position: absolute; bottom: 5px; font-weight: 600; font-size: 10px; background: rgb(0 0 0 / .55); padding: 1px 6px; border-radius: 99px; }
+
+/* Cinématique (page de l'app, plein écran du téléphone) */
+#v-cinematique { padding-top: 0; background: #000; }
+#v-cinematique iframe.cine { position: absolute; inset: 0; width: 393px; height: 852px; border: 0; visibility: hidden; }
+
+/* Joueur en grand sur la scène (squelette de l'app, vivant) */
+#perso { position: absolute; z-index: 4; pointer-events: none; display: none; transform-origin: 50% 100%; }
+
 /* Avatar (poses PNG 1024², même cadrage) */
 #avatar { position: absolute; left: 0; top: 0; z-index: 4; transform-origin: 50% 100%; pointer-events: none; }
 #avatar img { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -310,12 +344,15 @@ html, body { margin: 0; background: #111; }
     <div class="view" id="v-partie"></div>
     <div class="view" id="v-fiche"></div>
     <div class="view" id="v-verrouillage"></div>
+    <div class="view" id="v-avatar"></div>
+    <div class="view" id="v-cinematique"></div>
     <div id="sheet-bg"></div><div id="sheet"></div>
     <div class="notif" id="notif"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>DESTINY FC</span><span id="n-quand">maintenant</span></div><b id="n-titre"></b><span class="nb" id="n-texte"></span></div></div>
     <div class="notif" id="notif2"><img data-logo alt=""><div style="flex:1;min-width:0"><div class="nh"><span>DESTINY FC</span><span id="n2-quand">maintenant</span></div><b id="n2-titre"></b><span class="nb" id="n2-texte"></span></div></div>
     <div class="tap" id="tap"></div>
     <div class="home-ind" id="homeind"></div>
   </div></div></div></div></div>
+  <div id="perso"></div>
   <div id="avatar"><img id="av-img" alt=""><img id="av-bouche" alt="" src="avatar/neutre-bouche-ouverte.png"></div>
   <div id="bulle" data-texte></div>
   <div id="titre"><div class="num" id="t-num" data-texte></div><h2 id="t-texte" data-texte></h2><p id="t-sous" data-texte></p></div>
@@ -328,9 +365,11 @@ html, body { margin: 0; background: #111; }
   <div id="subs"></div>
   <div id="end"><img class="logo" data-logo alt=""><h1>Destiny FC</h1><p id="promesse"></p><div class="detail" id="detail"></div><div class="pill" id="cta"></div><img id="end-av" alt=""></div>
 </div>
+<script src="app/app.js"></script>
 <script type="module">
 import { appliquerCharte, back, camera, carteFin, chargerProjet, clamp, demarrer, ease, lastAction, lerp, sousTitres, transformCamera } from "/pipeline/scene.js";
 import * as D from "./demo.js";
+import { article, CAT, donneesCine, ecranAvatar, lecteurCine, normaliser, ongletDe, POSES_EDITEUR, svgFixe, svgVivant } from "./joueur.js";
 
 const { projet, script, timings, charte, tl } = await chargerProjet();
 const $ = (id) => document.getElementById(id);
@@ -360,6 +399,8 @@ const TXT = {
     fin: { promesse: "From 16 to retirement,<br>write your <em>legend</em>", detail: "Every choice counts", cta: "Free · iPhone & Android" } },
 }[EN ? "en" : "fr"];
 const T = (k, v = {}) => TXT[k].replace(/\{(\w+)\}/g, (_, x) => v[x] ?? "");
+window.DFC_APP.langue(EN ? "en" : "fr");
+const TXA = window.DFC_APP.textes().avatar;
 const POSTES = EN ? D.POSTES_EN : D.POSTES, FEUILLES = EN ? D.FEUILLES_EN : D.FEUILLES, CHAMPS = EN ? D.CHAMPS_EN : D.CHAMPS;
 const NIVEAUX = EN ? { ...D.NIVEAUX, reg: ["Reg.", "regional"], elite: ["Elite", "elite"] } : D.NIVEAUX;
 function fusionL(a, b) { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === "object" && !Array.isArray(v) && a?.[k] && typeof a[k] === "object" && !Array.isArray(a[k]) ? fusionL(a[k], v) : v; return o; }
@@ -378,6 +419,11 @@ $("rayures").innerHTML = Array.from({ length: 14 }, (_, i) => `<i style="left:${
 // ---------- Données : démo par défaut < script.ecrans < donnees de l'action ecran ----------
 const fusion = (a, b) => { const o = { ...a }; for (const [k, v] of Object.entries(b ?? {})) o[k] = v && typeof v === "object" && !Array.isArray(v) && a?.[k] && typeof a[k] === "object" && !Array.isArray(a[k]) ? fusion(a[k], v) : v; return o; };
 const DATA = fusion(DEMO, script.ecrans ?? {});
+// Version avec avatar (script.avatars) : tuile « Mon joueur » à l'accueil, éditeur, cinématiques.
+const AVATARS = !!script.avatars;
+const AV0 = normaliser(script.joueurAvatar);
+const KIT = script.kit ?? undefined;
+DATA.avatar = { onglet: "skin", pose: "front", possede: [], jetons: DATA.accueil.jetons, halloween: false, nomMaillot: String(DATA.partie.joueur.nom).split(" ").pop(), ...(script.ecrans?.avatar ?? {}) };
 const CARTES = { ...DATA.cartes, ...(script.cartes ?? {}) };
 const fr = (x) => EN ? String(x ?? "") : String(x ?? "").replace(/ ([?!:;»])/g, " $1").replace(/« /g, "« ");
 const flag = (p, st = "") => p ? `<img class="flag" src="drapeaux/${p}.png" style="${st}" alt="">` : "";
@@ -389,13 +435,14 @@ const optionFeuille = (nom, valeur) => FEUILLES[nom]?.options.find((o) => o.titr
 
 // ---------- Écrans ----------
 const ECRANS = {
-  accueil: (d) => `<div class="home">
+  accueil: (d, s) => `<div class="home">
       <div class="topbar"><img data-logo alt=""><span class="brand">Destiny FC</span><span class="chip" id="a-jetons">🪙 ${d.jetons}</span><span class="chip">🔥 ${d.serie}</span><span class="help">?</span></div>
       <div class="hero" id="a-carriere"><img src="images/mode-career.jpg" alt=""><div class="ov"></div><div class="cp"><div class="kick">${T("carriere")}</div>
         <h3>${d.reprendre ? T("reprendre", d.reprendre) : T("ecrire")}</h3>
         <p>${d.reprendre ? T("reprendreCorps", d.reprendre) : T("corpsCarriere")}</p></div></div>
       <div class="modes">
-        <div class="tile" id="a-quotidien"><img src="images/mode-daily.jpg" alt=""><div class="cp"><div class="k">${T("quotidien")}</div><div class="t">${d.jour}</div></div></div>
+        ${AVATARS ? `<div class="tile" id="a-avatar"><div class="av-tuile"><span>${svgFixe(s.editeur.avatar, { crop: "portrait", sticker: false })}</span></div><div class="cp"><div class="k">${TXA.title}</div><div class="t">${s.editeur.modifie || d.avatarCree ? TXA.homeEdit : TXA.homeCreate}</div></div></div>`
+          : `<div class="tile" id="a-quotidien"><img src="images/mode-daily.jpg" alt=""><div class="cp"><div class="k">${T("quotidien")}</div><div class="t">${d.jour}</div></div></div>`}
         <div class="tile" id="a-legendes"><img src="images/mode-story.jpg" alt=""><div class="cp"><div class="k">${T("legendes")}</div><div class="t">${T("legendesT")}</div></div></div>
         <div class="tile" id="a-amis"><img src="images/mode-duel.jpg" alt=""><div class="cp"><div class="k">${T("amis")}</div><div class="t">${T("amisT")}</div></div></div></div>
       <div class="strip" id="a-quetes"><span>⭐ ${T("quetes")} · ${d.quetes[0]}/${d.quetes[1]}</span><span>›</span></div>
@@ -452,6 +499,8 @@ const ECRANS = {
       <div class="discours" id="f-discours"><b>${T("discours")}</b><span>${fr(d.discours)}</span></div></div>`,
 
   verrouillage: (d) => `<div class="lock"><small>${d.date ?? T("lockDate")}</small><b>${d.heure ?? "19:00"}</b></div>`,
+
+  avatar: (d, s) => ecranAvatar({ ...d, ...s.editeur }),
 };
 
 // Carte centrale de l'écran de jeu.
@@ -477,12 +526,25 @@ function options(c, s) {
   return `<div class="opts">${(c.options ?? []).map((o, i) => `<div class="opt ${s.option === i + 1 ? "on" : s.option ? "off" : ""}" id="p-opt-${i + 1}">${o.indice ? `<span class="indice">${o.indice}</span><br>` : ""}${fr(o.texte)}</div>`).join("")}</div>`;
 }
 
+// ---------- Avatar : `porter` change un élément (skin / hairColor en indice, gear par emplacement) ----------
+const SLOTS = ["head", "eyes", "face", "neck", "outfit"];
+function porter(av, a) {
+  const o = { ...av, gear: { ...av.gear } };
+  if (a.champ === "skin") o.skin = typeof a.valeur === "number" ? CAT.SKIN_TONES[a.valeur] : a.valeur;
+  else if (a.champ === "hairColor") o.hairColor = typeof a.valeur === "number" ? CAT.HAIR_COLORS[a.valeur] : a.valeur;
+  else if (SLOTS.includes(a.champ)) { if (!a.valeur || a.valeur === "club") delete o.gear[a.champ]; else o.gear[a.champ] = a.valeur; }
+  else o[a.champ] = a.valeur;
+  return o;
+}
+// Id de la case touchée par `porter` (écran avatar).
+const idCase = (a) => `av-c-${a.champ}-${SLOTS.includes(a.champ) && (!a.valeur || a.valeur === "club") ? "club" : a.valeur}`;
+
 // ---------- État de l'écran à l'instant t ----------
 const avant = (t) => tl.actions.filter((a) => a.t <= t);
 const carteDe = (a) => fusion(a.id ? CARTES[a.id] ?? (() => { throw new Error(`Carte inconnue : ${a.id}`); })() : {}, Object.fromEntries(Object.entries(a).filter(([k]) => !["type", "t", "t2", "scene", "ancre", "fin", "position", "id"].includes(k))));
 function etat(t) {
   const acts = avant(t);
-  const ecrans = acts.filter((a) => a.type === "ecran");
+  const ecrans = acts.filter((a) => a.type === "ecran" || a.type === "cinematique").map((a) => (a.type === "cinematique" ? { ...a, nom: "cinematique" } : a));
   const initial = { nom: script.ecranInitial ?? "accueil", t: -10 };
   const courant = ecrans.at(-1) ?? initial;
   const precedent = ecrans.at(-2) ?? (ecrans.length ? initial : null);
@@ -490,7 +552,8 @@ function etat(t) {
   const s = { courant, precedent, creation: { nom: cr.nom, champs: { ...cr.champs }, attributs: cr.attributs, attrPrec: null, attrT: -10, curseur: false },
     joueur: structuredClone(DATA.partie.joueur), joueurPrec: null, joueurT: -10,
     carte: DATA.partie.carte ? (typeof DATA.partie.carte === "string" ? { ...(CARTES[DATA.partie.carte] ?? (() => { throw new Error(`Carte inconnue : ${DATA.partie.carte}`); })()) } : DATA.partie.carte) : null, carteT: -10, cartePrec: null,
-    option: 0, optionT: -10, repartition: [0, 0, 0, 0], feuille: null };
+    option: 0, optionT: -10, repartition: [0, 0, 0, 0], feuille: null,
+    editeur: { avatar: structuredClone(AV0), onglet: DATA.avatar.onglet, pose: DATA.avatar.pose, possede: DATA.avatar.possede, jetons: DATA.avatar.jetons, modifie: false } };
   for (const a of acts) {
     if (a.type === "ecran" && a.donnees && a.nom === "partie" && a.donnees.joueur) s.joueur = fusion(s.joueur, a.donnees.joueur);
     else if (a.type === "taper") { const p = clamp((t - a.t) / Math.max(0.01, a.t2 - a.t)); s.creation.nom = a.mot.slice(0, Math.ceil(p * a.mot.length)); s.creation.curseur = p < 1 || t < a.t2 + 0.6; }
@@ -507,6 +570,9 @@ function etat(t) {
     else if (a.type === "carte") { s.cartePrec = s.carte; s.carte = carteDe(a); s.carteT = a.t; s.option = 0; s.repartition = [0, 0, 0, 0]; }
     else if (a.type === "option") { s.option = a.n; s.optionT = a.t; }
     else if (a.type === "repartir") s.repartition[a.poste - 1] = a.valeur ?? s.repartition[a.poste - 1] + 1;
+    else if (a.type === "onglet") s.editeur.onglet = a.nom;
+    else if (a.type === "posejoueur") s.editeur.pose = a.nom ?? POSES_EDITEUR[(POSES_EDITEUR.indexOf(s.editeur.pose) + 1) % POSES_EDITEUR.length];
+    else if (a.type === "porter") { s.editeur.avatar = porter(s.editeur.avatar, a); s.editeur.modifie = true; }
   }
   return s;
 }
@@ -563,8 +629,10 @@ const DISPOS = {
   coin: { tel: { x: 0, y: 0, s: 1 }, av: { cx: 185, base: 1965, w: 450 } },
   duo: { tel: { x: 150, y: 170, s: 0.62 }, av: { cx: 260, base: 1960, w: 720 } },
   avatar: { tel: { x: 0, y: 1750, s: 0.9 }, av: { cx: 540, base: 1945, w: 1040 } },
+  // Ni téléphone ni avatar de Maxime : la scène est libre pour le joueur en grand (perso), les titres, la typo.
+  vide: { tel: { x: 0, y: 1950, s: 0.9 }, av: { cx: 260, base: 2700, w: 600 } },
 };
-const SUBS = { telephone: [160, 160, 395], coin: [390, 160, 395], duo: [160, 160, 395], avatar: [160, 160, 395] };
+const SUBS = { telephone: [160, 160, 395], coin: [390, 160, 395], duo: [160, 160, 395], avatar: [160, 160, 395], vide: [160, 160, 395] };
 function disposition(t) {
   let from = script.dispositionInitiale ?? "telephone", to = from, t0 = -10;
   for (const a of tl.actions) { if (a.t > t) break; if (a.type === "disposition") { from = to; to = a.mode; t0 = a.t; } }
@@ -598,7 +666,7 @@ function feuille(s, t) {
 }
 
 // ---------- Rendu d'une image à l'instant t (déterministe) ----------
-function renderAt(t) {
+async function renderAt(t) {
   const s = etat(t);
 
   // Vues : la courante glisse par-dessus la précédente.
@@ -606,7 +674,7 @@ function renderAt(t) {
   for (const nom of VUES) {
     const v = $(`v-${nom}`);
     const estCourant = nom === s.courant.nom, estPrec = s.precedent && nom === s.precedent.nom && pv < 1 && !estCourant;
-    if (estCourant || estPrec || !cache[nom]) construire(nom, estCourant ? s.courant : estPrec ? s.precedent : null, s);
+    if (nom !== "cinematique" && (estCourant || estPrec || !cache[nom])) construire(nom, estCourant ? s.courant : estPrec ? s.precedent : null, s);
     v.style.visibility = estCourant || estPrec ? "visible" : "hidden";
     v.style.zIndex = estCourant ? 2 : 1;
     v.style.transform = estCourant ? `translateX(${(1 - pv) * 60}px)` : "";
@@ -617,7 +685,7 @@ function renderAt(t) {
   // Défilement (action defiler, en points d'écran), remis à zéro à chaque changement d'écran.
   const def = lastAction(tl, "defiler", t);
   const dy = def && def.t > s.courant.t ? (def.depart ?? 0) + ((def.y ?? 0) - (def.depart ?? 0)) * ease(clamp((t - def.t) / 0.7)) : 0;
-  const corps = vue.firstElementChild;
+  const corps = s.courant.nom === "avatar" ? $("av-defil") : s.courant.nom === "cinematique" ? null : vue.firstElementChild;
   if (corps) corps.style.transform = dy ? `translateY(${-dy}px)` : "";
 
   // Création : barres d'attributs (montée en 0,8 s).
@@ -694,7 +762,7 @@ function renderAt(t) {
   // Appui (rond) : appui, option, continuer, choisir, repartir, aleatoire.
   const tap = $("tap");
   tap.style.display = "none";
-  const appuis = tl.actions.filter((a) => ["appui", "option", "continuer", "choisir", "repartir", "aleatoire", "feuille"].includes(a.type));
+  const appuis = tl.actions.filter((a) => ["appui", "option", "continuer", "choisir", "repartir", "aleatoire", "feuille", "onglet", "porter", "posejoueur"].includes(a.type));
   const ap = appuis.find((a) => t >= a.t - 0.25 && t < a.t + 0.35);
   if (ap) {
     let el = null;
@@ -704,6 +772,9 @@ function renderAt(t) {
     else if (ap.type === "repartir") el = $(`p-plus-${ap.poste}`);
     else if (ap.type === "aleatoire") el = $("cr-aleatoire");
     else if (ap.type === "feuille") el = $(`cr-champ-${ap.nom}`);
+    else if (ap.type === "onglet") el = $(`av-onglet-${ap.nom}`);
+    else if (ap.type === "porter") el = $(idCase(ap));
+    else if (ap.type === "posejoueur") el = $("av-pose");
     else if (ap.type === "choisir") el = [...$("sheet").querySelectorAll(".opt-f")].find((x) => x.dataset.v === ap.valeur) ?? $(`cr-champ-${ap.nom}`);
     if (el && el.offsetParent !== null) {
       const p = posEcran(el);
@@ -719,7 +790,7 @@ function renderAt(t) {
   const avecEntree = tl.actions.some((a) => a.type === "entree");
   const pin = !avecEntree ? 1 : entree ? back(clamp((t - entree.t) / 0.7)) : 0;
   $("poste").style.transform = `translate(${d.tel.x}px, ${d.tel.y + (1 - pin) * 1950}px) scale(${d.tel.s})`;
-  const cam = camera(tl, t, cibleCamera, ["ecran", "disposition"]);
+  const cam = camera(tl, t, cibleCamera, ["ecran", "disposition", "cinematique"]);
   $("camera").style.transform = transformCamera(cam);
   const formatVisible = ARRETS_FORMATS.slice(0, 6).some((k) => actif(k, t, ARRETS_FORMATS));
   $("brand").style.opacity = clamp(1 - (cam.s - 1) * 8) * (formatVisible || (d.tel.s < 0.95 && d.mode === "duo") ? 0 : 1);
@@ -886,6 +957,35 @@ function renderAt(t) {
   endAv.style.display = fin.pose ? "block" : "none";
   $("end").classList.toggle("avec-av", !!fin.pose);
   if (fin.pose && endAv._p !== fin.pose) { endAv.src = POSE_SRC(fin.pose); endAv._p = fin.pose; }
+
+  // Joueur en grand sur la scène (action perso : mode centre / gauche / droite / cache, pose, taille).
+  rendrePerso(t, s);
+
+  // Cinématique : la page de l'app avance jusqu'à l'instant voulu (horloge virtuelle).
+  const cineVisible = s.courant.nom === "cinematique" || (s.precedent?.nom === "cinematique" && pv < 1);
+  const cineA = cineVisible ? lastAction(tl, "cinematique", t) : null;
+  for (const [a, l] of CINES) l.iframe.style.visibility = a === cineA ? "visible" : "hidden";
+  // `debut` (s) : la cinématique démarre plus loin que son début (montage).
+  if (cineA) await CINES.get(cineA).aller(Math.max(0, (t - cineA.t + (cineA.debut ?? 0)) * 1000));
+}
+
+const PLACES = { centre: { cx: 540, base: 1640, h: 1150, o: 1 }, gauche: { cx: 300, base: 1640, h: 950, o: 1 }, droite: { cx: 780, base: 1640, h: 950, o: 1 }, bas: { cx: 540, base: 1940, h: 1150, o: 1 } };
+function rendrePerso(t, s) {
+  const acts = tl.actions.filter((a) => a.type === "perso");
+  const el = $("perso");
+  const passees = acts.filter((a) => a.t <= t);
+  if (!passees.length) { el.style.display = "none"; return; }
+  // Place : transition de 0,5 s entre deux modes ; « cache » fait sortir le joueur par le bas.
+  let de = null, vers = null, t0 = 0;
+  for (const a of passees) if (a.mode) { de = vers; vers = a; t0 = a.t; }
+  const place = (a) => a?.mode === "cache" || !a ? { ...(PLACES[de?.mode] ?? PLACES.centre), base: 2600, o: 0 } : { ...PLACES[a.mode], ...(a.taille ? { h: a.taille } : {}), ...(a.cx ? { cx: a.cx } : {}) };
+  const A0 = de ? place(de) : { ...place(vers), base: 2600 }, B = place(vers), p = back(clamp((t - t0) / 0.55));
+  const P = Object.fromEntries(Object.keys(B).map((k) => [k, lerp(A0[k], B[k], p)]));
+  if (vers.mode === "cache" && t - t0 > 0.6) { el.style.display = "none"; return; }
+  const poses = [[0, acts.find((a) => a.pose)?.pose ?? "front"], ...acts.filter((a) => a.pose).map((a) => [a.t, a.pose])];
+  const w = P.h * 190 / 318;
+  Object.assign(el.style, { display: "block", width: `${w}px`, height: `${P.h}px`, left: `${P.cx - w / 2}px`, top: `${P.base - P.h}px` });
+  el.innerHTML = svgVivant(s.editeur.avatar, poses, t, { kit: KIT, shirtName: DATA.avatar.nomMaillot, shirtNumber: 10 });
 }
 
 // Notification : visible 4 s (ou jusqu'à `fin`), ou jusqu'à `masquer` / `fin`.
@@ -904,11 +1004,29 @@ for (const a of tl.actions) {
   if (a.type === "feuille" && !FEUILLES[a.nom]) throw new Error(`Feuille inconnue : ${a.nom}`);
 }
 
+// Cinématiques : une page de l'app par action `cinematique`, préparée au chargement (avatar du moment).
+const CINES = new Map();
+for (const a of tl.actions.filter((x) => x.type === "cinematique")) {
+  const av = etat(a.t - 1e-3).editeur.avatar;
+  const j = fusion(DATA.partie.joueur, a.joueur ?? {});
+  const c = donneesCine(a, j, av, EN ? "en" : "fr");
+  CINES.set(a, lecteurCine($("v-cinematique"), window.DFC_APP.cine.cinematicHtml(c)));
+}
+for (const a of tl.actions) {
+  if (a.type === "porter") {
+    const art = article(a.champ, a.valeur), e = etat(a.t - 1e-3).editeur;
+    if (art && !e.possede.includes(art.id)) throw new Error(`« ${a.valeur} » est payant (${art.cost} jetons) : l'ajouter à ecrans.avatar.possede`);
+    if (ongletDe(a.champ) !== e.onglet) throw new Error(`« porter ${a.champ} » : ouvrir d'abord l'onglet ${ongletDe(a.champ)}`);
+  }
+}
+
 // Toutes les images chargées avant le premier rendu.
 const DRAPEAUX = new Set([...JSON.stringify(DATA).matchAll(/"(?:pays|drapeau)":"([a-z-]+)"/g)].map((m) => m[1]));
 await Promise.all([...POSES.map(POSE_SRC), "avatar/neutre-bouche-ouverte.png", ...["career", "daily", "story", "duel"].map((m) => `images/mode-${m}.jpg`), ...[...DRAPEAUX].map((p) => `drapeaux/${p}.png`)]
   .map((src) => { const i = new Image(); i.src = src; return i.decode().catch(() => { throw new Error(`Image manquante : ${src}`); }); }));
 document.querySelectorAll("img[data-logo]").forEach((img) => (img.src = "/" + charte.logo));
+await Promise.all([...CINES.values()].map((l) => l.pret));
+window.__cines = CINES; // débogage : durée réelle (messages « done »)
 await demarrer(tl, renderAt);
 </script>
 </body>

@@ -1,0 +1,471 @@
+{
+  "duree": 21.4,
+  "dureeVoix": 19.6,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.26,
+      "fin": 2.44
+    },
+    {
+      "id": "nouveau",
+      "debut": 2.44,
+      "finVoix": 5.48,
+      "fin": 5.98
+    },
+    {
+      "id": "creation",
+      "debut": 5.98,
+      "finVoix": 9.02,
+      "fin": 9.44
+    },
+    {
+      "id": "transfert",
+      "debut": 9.44,
+      "finVoix": 12.42,
+      "fin": 12.54
+    },
+    {
+      "id": "paris",
+      "debut": 12.54,
+      "finVoix": 17.1,
+      "fin": 17.74
+    },
+    {
+      "id": "cta",
+      "debut": 17.74,
+      "finVoix": 19.6,
+      "fin": 21.4
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Dans",
+      "mot": "Dans",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.42
+    },
+    {
+      "texte": "mon",
+      "mot": "mon",
+      "scene": 0,
+      "debut": 0.42,
+      "fin": 0.54
+    },
+    {
+      "texte": "jeu",
+      "mot": "jeu",
+      "scene": 0,
+      "debut": 0.54,
+      "fin": 0.66
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.66,
+      "fin": 0.74
+    },
+    {
+      "texte": "foot,",
+      "mot": "foot",
+      "scene": 0,
+      "debut": 0.74,
+      "fin": 0.9
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 1.18,
+      "fin": 1.3
+    },
+    {
+      "texte": "joueur",
+      "mot": "joueur",
+      "scene": 0,
+      "debut": 1.3,
+      "fin": 1.54
+    },
+    {
+      "texte": "n'avait",
+      "mot": "n'avait",
+      "scene": 0,
+      "debut": 1.54,
+      "fin": 1.72
+    },
+    {
+      "texte": "pas",
+      "mot": "pas",
+      "scene": 0,
+      "debut": 1.72,
+      "fin": 1.86
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 1.86,
+      "fin": 1.96
+    },
+    {
+      "texte": "visage.",
+      "mot": "visage",
+      "scene": 0,
+      "debut": 1.96,
+      "fin": 2.26
+    },
+    {
+      "texte": "Juste",
+      "mot": "Juste",
+      "scene": 1,
+      "debut": 2.44,
+      "fin": 2.7
+    },
+    {
+      "texte": "un",
+      "mot": "un",
+      "scene": 1,
+      "debut": 2.7,
+      "fin": 2.86
+    },
+    {
+      "texte": "nom",
+      "mot": "nom",
+      "scene": 1,
+      "debut": 2.86,
+      "fin": 3.0
+    },
+    {
+      "texte": "sur",
+      "mot": "sur",
+      "scene": 1,
+      "debut": 3.0,
+      "fin": 3.16
+    },
+    {
+      "texte": "une",
+      "mot": "une",
+      "scene": 1,
+      "debut": 3.16,
+      "fin": 3.3
+    },
+    {
+      "texte": "fiche.",
+      "mot": "fiche",
+      "scene": 1,
+      "debut": 3.3,
+      "fin": 3.54
+    },
+    {
+      "texte": "Alors",
+      "mot": "Alors",
+      "scene": 1,
+      "debut": 4.04,
+      "fin": 4.28
+    },
+    {
+      "texte": "j'ai",
+      "mot": "j'ai",
+      "scene": 1,
+      "debut": 4.46,
+      "fin": 4.64
+    },
+    {
+      "texte": "ajouté",
+      "mot": "ajouté",
+      "scene": 1,
+      "debut": 4.64,
+      "fin": 4.94
+    },
+    {
+      "texte": "les",
+      "mot": "les",
+      "scene": 1,
+      "debut": 4.94,
+      "fin": 5.04
+    },
+    {
+      "texte": "avatars.",
+      "mot": "avatars",
+      "scene": 1,
+      "debut": 5.04,
+      "fin": 5.48
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 2,
+      "debut": 5.98,
+      "fin": 6.14
+    },
+    {
+      "texte": "choisis",
+      "mot": "choisis",
+      "scene": 2,
+      "debut": 6.14,
+      "fin": 6.44
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 6.44,
+      "fin": 6.6
+    },
+    {
+      "texte": "peau,",
+      "mot": "peau",
+      "scene": 2,
+      "debut": 6.6,
+      "fin": 6.94
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 7.1,
+      "fin": 7.2
+    },
+    {
+      "texte": "coupe,",
+      "mot": "coupe",
+      "scene": 2,
+      "debut": 7.2,
+      "fin": 7.54
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 7.92,
+      "fin": 8.04
+    },
+    {
+      "texte": "couleur,",
+      "mot": "couleur",
+      "scene": 2,
+      "debut": 8.04,
+      "fin": 8.3
+    },
+    {
+      "texte": "sa",
+      "mot": "sa",
+      "scene": 2,
+      "debut": 8.6,
+      "fin": 8.7
+    },
+    {
+      "texte": "barbe.",
+      "mot": "barbe",
+      "scene": 2,
+      "debut": 8.7,
+      "fin": 9.02
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 9.44,
+      "fin": 9.48
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 3,
+      "debut": 9.48,
+      "fin": 9.6
+    },
+    {
+      "texte": "vit",
+      "mot": "vit",
+      "scene": 3,
+      "debut": 9.6,
+      "fin": 9.74
+    },
+    {
+      "texte": "toute",
+      "mot": "toute",
+      "scene": 3,
+      "debut": 9.74,
+      "fin": 10.02
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 3,
+      "debut": 10.02,
+      "fin": 10.22
+    },
+    {
+      "texte": "carrière.",
+      "mot": "carrière",
+      "scene": 3,
+      "debut": 10.22,
+      "fin": 10.58
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 3,
+      "debut": 11.14,
+      "fin": 11.22
+    },
+    {
+      "texte": "premier",
+      "mot": "premier",
+      "scene": 3,
+      "debut": 11.22,
+      "fin": 11.5
+    },
+    {
+      "texte": "gros",
+      "mot": "gros",
+      "scene": 3,
+      "debut": 11.5,
+      "fin": 11.64
+    },
+    {
+      "texte": "transfert ?",
+      "mot": "transfert",
+      "scene": 3,
+      "debut": 11.64,
+      "fin": 12.42
+    },
+    {
+      "texte": "Paris.",
+      "mot": "Paris",
+      "scene": 4,
+      "debut": 12.54,
+      "fin": 12.92
+    },
+    {
+      "texte": "Les",
+      "mot": "Les",
+      "scene": 4,
+      "debut": 13.62,
+      "fin": 13.7
+    },
+    {
+      "texte": "flashs,",
+      "mot": "flashs",
+      "scene": 4,
+      "debut": 13.7,
+      "fin": 14.28
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 14.34,
+      "fin": 14.58
+    },
+    {
+      "texte": "maillot,",
+      "mot": "maillot",
+      "scene": 4,
+      "debut": 14.58,
+      "fin": 14.88
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 4,
+      "debut": 15.22,
+      "fin": 15.4
+    },
+    {
+      "texte": "montant…",
+      "mot": "montant",
+      "scene": 4,
+      "debut": 15.4,
+      "fin": 15.68
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 4,
+      "debut": 16.12,
+      "fin": 16.24
+    },
+    {
+      "texte": "c'est",
+      "mot": "c'est",
+      "scene": 4,
+      "debut": 16.24,
+      "fin": 16.36
+    },
+    {
+      "texte": "bien",
+      "mot": "bien",
+      "scene": 4,
+      "debut": 16.36,
+      "fin": 16.5
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 4,
+      "debut": 16.5,
+      "fin": 16.76
+    },
+    {
+      "texte": "joueur.",
+      "mot": "joueur",
+      "scene": 4,
+      "debut": 16.76,
+      "fin": 17.1
+    },
+    {
+      "texte": "Nouveau",
+      "mot": "Nouveau",
+      "scene": 5,
+      "debut": 17.74,
+      "fin": 18.12
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 5,
+      "debut": 18.12,
+      "fin": 18.22
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 18.22,
+      "fin": 18.58
+    },
+    {
+      "texte": "FC.",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 18.58,
+      "fin": 18.84
+    },
+    {
+      "texte": "Crée",
+      "mot": "Crée",
+      "scene": 5,
+      "debut": 19.24,
+      "fin": 19.4
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 5,
+      "debut": 19.4,
+      "fin": 19.46
+    },
+    {
+      "texte": "tien.",
+      "mot": "tien",
+      "scene": 5,
+      "debut": 19.46,
+      "fin": 19.6
+    }
+  ]
+}

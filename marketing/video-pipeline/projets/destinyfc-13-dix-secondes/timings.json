@@ -1,0 +1,360 @@
+{
+  "duree": 17.58,
+  "dureeVoix": 15.78,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 2.68,
+      "fin": 2.78
+    },
+    {
+      "id": "express",
+      "debut": 2.78,
+      "finVoix": 5.58,
+      "fin": 5.92
+    },
+    {
+      "id": "voila",
+      "debut": 5.92,
+      "finVoix": 7.92,
+      "fin": 8.22
+    },
+    {
+      "id": "montage",
+      "debut": 8.22,
+      "finVoix": 12.54,
+      "fin": 13.16
+    },
+    {
+      "id": "cta",
+      "debut": 13.16,
+      "finVoix": 15.78,
+      "fin": 17.58
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Crée",
+      "mot": "Crée",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.46
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 0,
+      "debut": 0.46,
+      "fin": 0.52
+    },
+    {
+      "texte": "joueur",
+      "mot": "joueur",
+      "scene": 0,
+      "debut": 0.52,
+      "fin": 0.84
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 0,
+      "debut": 0.84,
+      "fin": 1.08
+    },
+    {
+      "texte": "dix",
+      "mot": "dix",
+      "scene": 0,
+      "debut": 1.08,
+      "fin": 1.36
+    },
+    {
+      "texte": "secondes.",
+      "mot": "secondes",
+      "scene": 0,
+      "debut": 1.36,
+      "fin": 1.92
+    },
+    {
+      "texte": "Top",
+      "mot": "Top",
+      "scene": 0,
+      "debut": 1.98,
+      "fin": 2.08
+    },
+    {
+      "texte": "chrono !",
+      "mot": "chrono",
+      "scene": 0,
+      "debut": 2.08,
+      "fin": 2.68
+    },
+    {
+      "texte": "Peau.",
+      "mot": "Peau",
+      "scene": 1,
+      "debut": 2.78,
+      "fin": 3.02
+    },
+    {
+      "texte": "Coupe.",
+      "mot": "Coupe",
+      "scene": 1,
+      "debut": 3.4,
+      "fin": 3.54
+    },
+    {
+      "texte": "Couleur.",
+      "mot": "Couleur",
+      "scene": 1,
+      "debut": 3.88,
+      "fin": 4.1
+    },
+    {
+      "texte": "Barbe.",
+      "mot": "Barbe",
+      "scene": 1,
+      "debut": 4.52,
+      "fin": 4.82
+    },
+    {
+      "texte": "Terminé !",
+      "mot": "Terminé",
+      "scene": 1,
+      "debut": 5.12,
+      "fin": 5.58
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 2,
+      "debut": 5.92,
+      "fin": 5.96
+    },
+    {
+      "texte": "voilà.",
+      "mot": "voilà",
+      "scene": 2,
+      "debut": 5.96,
+      "fin": 6.14
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 2,
+      "debut": 6.64,
+      "fin": 6.7
+    },
+    {
+      "texte": "maintenant,",
+      "mot": "maintenant",
+      "scene": 2,
+      "debut": 6.7,
+      "fin": 6.98
+    },
+    {
+      "texte": "il",
+      "mot": "il",
+      "scene": 2,
+      "debut": 7.18,
+      "fin": 7.267
+    },
+    {
+      "texte": "joue",
+      "mot": "joue",
+      "scene": 2,
+      "debut": 7.267,
+      "fin": 7.353
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 2,
+      "debut": 7.353,
+      "fin": 7.44
+    },
+    {
+      "texte": "moments",
+      "mot": "moments",
+      "scene": 2,
+      "debut": 7.44,
+      "fin": 7.62
+    },
+    {
+      "texte": "clés.",
+      "mot": "clés",
+      "scene": 2,
+      "debut": 7.62,
+      "fin": 7.92
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 8.22,
+      "fin": 8.36
+    },
+    {
+      "texte": "coup",
+      "mot": "coup",
+      "scene": 3,
+      "debut": 8.36,
+      "fin": 8.52
+    },
+    {
+      "texte": "franc",
+      "mot": "franc",
+      "scene": 3,
+      "debut": 8.52,
+      "fin": 8.68
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 8.68,
+      "fin": 8.8
+    },
+    {
+      "texte": "pleine",
+      "mot": "pleine",
+      "scene": 3,
+      "debut": 8.8,
+      "fin": 8.98
+    },
+    {
+      "texte": "lucarne.",
+      "mot": "lucarne",
+      "scene": 3,
+      "debut": 8.98,
+      "fin": 9.38
+    },
+    {
+      "texte": "Le",
+      "mot": "Le",
+      "scene": 3,
+      "debut": 9.66,
+      "fin": 9.74
+    },
+    {
+      "texte": "face",
+      "mot": "face",
+      "scene": 3,
+      "debut": 9.74,
+      "fin": 9.87
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 3,
+      "debut": 9.87,
+      "fin": 10.0
+    },
+    {
+      "texte": "gardien,",
+      "mot": "gardien",
+      "scene": 3,
+      "debut": 10.0,
+      "fin": 10.28
+    },
+    {
+      "texte": "piqué.",
+      "mot": "piqué",
+      "scene": 3,
+      "debut": 10.44,
+      "fin": 10.7
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 3,
+      "debut": 10.7,
+      "fin": 11.2
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 3,
+      "debut": 11.2,
+      "fin": 11.32
+    },
+    {
+      "texte": "penalty,",
+      "mot": "penalty",
+      "scene": 3,
+      "debut": 11.32,
+      "fin": 11.84
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 3,
+      "debut": 11.84,
+      "fin": 12.28
+    },
+    {
+      "texte": "force !",
+      "mot": "force",
+      "scene": 3,
+      "debut": 12.28,
+      "fin": 12.54
+    },
+    {
+      "texte": "Nouveau",
+      "mot": "Nouveau",
+      "scene": 4,
+      "debut": 13.16,
+      "fin": 13.56
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 4,
+      "debut": 13.56,
+      "fin": 13.66
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 4,
+      "debut": 13.66,
+      "fin": 13.96
+    },
+    {
+      "texte": "FC.",
+      "mot": "FC",
+      "scene": 4,
+      "debut": 13.96,
+      "fin": 14.24
+    },
+    {
+      "texte": "Ton",
+      "mot": "Ton",
+      "scene": 4,
+      "debut": 14.64,
+      "fin": 14.8
+    },
+    {
+      "texte": "joueur,",
+      "mot": "joueur",
+      "scene": 4,
+      "debut": 14.8,
+      "fin": 15.16
+    },
+    {
+      "texte": "ta",
+      "mot": "ta",
+      "scene": 4,
+      "debut": 15.16,
+      "fin": 15.48
+    },
+    {
+      "texte": "légende.",
+      "mot": "légende",
+      "scene": 4,
+      "debut": 15.48,
+      "fin": 15.78
+    }
+  ]
+}

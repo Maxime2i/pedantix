@@ -1,0 +1,534 @@
+{
+  "duree": 29.24,
+  "dureeVoix": 27.44,
+  "scenes": [
+    {
+      "id": "accroche",
+      "debut": 0.0,
+      "finVoix": 3.86,
+      "fin": 4.48
+    },
+    {
+      "id": "question",
+      "debut": 4.48,
+      "finVoix": 9.36,
+      "fin": 9.36
+    },
+    {
+      "id": "tir",
+      "debut": 9.36,
+      "finVoix": 15.96,
+      "fin": 16.52
+    },
+    {
+      "id": "joie",
+      "debut": 16.52,
+      "finVoix": 17.22,
+      "fin": 18.02
+    },
+    {
+      "id": "revelation",
+      "debut": 18.02,
+      "finVoix": 22.42,
+      "fin": 23.34
+    },
+    {
+      "id": "cta",
+      "debut": 23.34,
+      "finVoix": 27.44,
+      "fin": 29.24
+    }
+  ],
+  "mots": [
+    {
+      "texte": "Finale",
+      "mot": "Finale",
+      "scene": 0,
+      "debut": 0.0,
+      "fin": 0.6
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 0,
+      "debut": 0.6,
+      "fin": 0.76
+    },
+    {
+      "texte": "coupe,",
+      "mot": "coupe",
+      "scene": 0,
+      "debut": 0.76,
+      "fin": 0.92
+    },
+    {
+      "texte": "quatre-vingt-dixième",
+      "mot": "quatre-vingt-dixième",
+      "scene": 0,
+      "debut": 1.18,
+      "fin": 1.88
+    },
+    {
+      "texte": "minute.",
+      "mot": "minute",
+      "scene": 0,
+      "debut": 1.88,
+      "fin": 2.12
+    },
+    {
+      "texte": "Penalty",
+      "mot": "Penalty",
+      "scene": 0,
+      "debut": 2.82,
+      "fin": 3.34
+    },
+    {
+      "texte": "pour",
+      "mot": "pour",
+      "scene": 0,
+      "debut": 3.34,
+      "fin": 3.64
+    },
+    {
+      "texte": "toi.",
+      "mot": "toi",
+      "scene": 0,
+      "debut": 3.64,
+      "fin": 3.86
+    },
+    {
+      "texte": "Tu",
+      "mot": "Tu",
+      "scene": 1,
+      "debut": 4.48,
+      "fin": 4.72
+    },
+    {
+      "texte": "tires",
+      "mot": "tires",
+      "scene": 1,
+      "debut": 4.72,
+      "fin": 4.88
+    },
+    {
+      "texte": "comment ?",
+      "mot": "comment",
+      "scene": 1,
+      "debut": 4.88,
+      "fin": 5.08
+    },
+    {
+      "texte": "Placé,",
+      "mot": "Placé",
+      "scene": 1,
+      "debut": 5.08,
+      "fin": 5.98
+    },
+    {
+      "texte": "en",
+      "mot": "en",
+      "scene": 1,
+      "debut": 6.4,
+      "fin": 6.48
+    },
+    {
+      "texte": "force,",
+      "mot": "force",
+      "scene": 1,
+      "debut": 6.48,
+      "fin": 6.7
+    },
+    {
+      "texte": "croisé…",
+      "mot": "croisé",
+      "scene": 1,
+      "debut": 7.06,
+      "fin": 7.44
+    },
+    {
+      "texte": "ou",
+      "mot": "ou",
+      "scene": 1,
+      "debut": 7.44,
+      "fin": 8.1
+    },
+    {
+      "texte": "panenka ?",
+      "mot": "panenka",
+      "scene": 1,
+      "debut": 8.1,
+      "fin": 9.36
+    },
+    {
+      "texte": "Moi,",
+      "mot": "Moi",
+      "scene": 2,
+      "debut": 9.36,
+      "fin": 9.72
+    },
+    {
+      "texte": "je",
+      "mot": "je",
+      "scene": 2,
+      "debut": 9.72,
+      "fin": 9.8
+    },
+    {
+      "texte": "tente",
+      "mot": "tente",
+      "scene": 2,
+      "debut": 9.8,
+      "fin": 9.88
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 2,
+      "debut": 9.88,
+      "fin": 10.02
+    },
+    {
+      "texte": "panenka.",
+      "mot": "panenka",
+      "scene": 2,
+      "debut": 10.02,
+      "fin": 10.487
+    },
+    {
+      "texte": "Course",
+      "mot": "Course",
+      "scene": 2,
+      "debut": 10.487,
+      "fin": 10.953
+    },
+    {
+      "texte": "d'élan,",
+      "mot": "d'élan",
+      "scene": 2,
+      "debut": 10.953,
+      "fin": 11.42
+    },
+    {
+      "texte": "tout",
+      "mot": "tout",
+      "scene": 2,
+      "debut": 12.12,
+      "fin": 12.24
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 12.24,
+      "fin": 12.36
+    },
+    {
+      "texte": "stade",
+      "mot": "stade",
+      "scene": 2,
+      "debut": 12.36,
+      "fin": 12.52
+    },
+    {
+      "texte": "retient",
+      "mot": "retient",
+      "scene": 2,
+      "debut": 12.52,
+      "fin": 12.8
+    },
+    {
+      "texte": "son",
+      "mot": "son",
+      "scene": 2,
+      "debut": 12.8,
+      "fin": 12.98
+    },
+    {
+      "texte": "souffle,",
+      "mot": "souffle",
+      "scene": 2,
+      "debut": 12.98,
+      "fin": 13.32
+    },
+    {
+      "texte": "le",
+      "mot": "le",
+      "scene": 2,
+      "debut": 13.86,
+      "fin": 14.02
+    },
+    {
+      "texte": "gardien",
+      "mot": "gardien",
+      "scene": 2,
+      "debut": 14.02,
+      "fin": 14.3
+    },
+    {
+      "texte": "plonge…",
+      "mot": "plonge",
+      "scene": 2,
+      "debut": 14.3,
+      "fin": 14.56
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 2,
+      "debut": 15.34,
+      "fin": 15.56
+    },
+    {
+      "texte": "elle",
+      "mot": "elle",
+      "scene": 2,
+      "debut": 15.56,
+      "fin": 15.6
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 2,
+      "debut": 15.6,
+      "fin": 15.7
+    },
+    {
+      "texte": "au",
+      "mot": "au",
+      "scene": 2,
+      "debut": 15.7,
+      "fin": 15.8
+    },
+    {
+      "texte": "fond !",
+      "mot": "fond",
+      "scene": 2,
+      "debut": 15.8,
+      "fin": 15.96
+    },
+    {
+      "texte": "La",
+      "mot": "La",
+      "scene": 3,
+      "debut": 16.52,
+      "fin": 16.62
+    },
+    {
+      "texte": "coupe",
+      "mot": "coupe",
+      "scene": 3,
+      "debut": 16.62,
+      "fin": 16.8
+    },
+    {
+      "texte": "est",
+      "mot": "est",
+      "scene": 3,
+      "debut": 16.8,
+      "fin": 16.96
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 3,
+      "debut": 16.96,
+      "fin": 17.06
+    },
+    {
+      "texte": "toi !",
+      "mot": "toi",
+      "scene": 3,
+      "debut": 17.06,
+      "fin": 17.22
+    },
+    {
+      "texte": "Et",
+      "mot": "Et",
+      "scene": 4,
+      "debut": 18.02,
+      "fin": 18.28
+    },
+    {
+      "texte": "ce",
+      "mot": "ce",
+      "scene": 4,
+      "debut": 18.28,
+      "fin": 18.42
+    },
+    {
+      "texte": "joueur,",
+      "mot": "joueur",
+      "scene": 4,
+      "debut": 18.42,
+      "fin": 18.74
+    },
+    {
+      "texte": "tu",
+      "mot": "tu",
+      "scene": 4,
+      "debut": 19.0,
+      "fin": 19.2
+    },
+    {
+      "texte": "l'as",
+      "mot": "l'as",
+      "scene": 4,
+      "debut": 19.2,
+      "fin": 19.593
+    },
+    {
+      "texte": "créé",
+      "mot": "créé",
+      "scene": 4,
+      "debut": 19.593,
+      "fin": 19.987
+    },
+    {
+      "texte": "toi-même,",
+      "mot": "toi-même",
+      "scene": 4,
+      "debut": 19.987,
+      "fin": 20.38
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 20.74,
+      "fin": 20.92
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 20.92,
+      "fin": 21.02
+    },
+    {
+      "texte": "coupe",
+      "mot": "coupe",
+      "scene": 4,
+      "debut": 21.02,
+      "fin": 21.2
+    },
+    {
+      "texte": "de",
+      "mot": "de",
+      "scene": 4,
+      "debut": 21.2,
+      "fin": 21.34
+    },
+    {
+      "texte": "cheveux",
+      "mot": "cheveux",
+      "scene": 4,
+      "debut": 21.34,
+      "fin": 21.7
+    },
+    {
+      "texte": "à",
+      "mot": "à",
+      "scene": 4,
+      "debut": 21.7,
+      "fin": 22.02
+    },
+    {
+      "texte": "la",
+      "mot": "la",
+      "scene": 4,
+      "debut": 22.02,
+      "fin": 22.12
+    },
+    {
+      "texte": "barbe.",
+      "mot": "barbe",
+      "scene": 4,
+      "debut": 22.12,
+      "fin": 22.42
+    },
+    {
+      "texte": "Nouveau",
+      "mot": "Nouveau",
+      "scene": 5,
+      "debut": 23.34,
+      "fin": 23.86
+    },
+    {
+      "texte": "dans",
+      "mot": "dans",
+      "scene": 5,
+      "debut": 23.86,
+      "fin": 24.0
+    },
+    {
+      "texte": "Destiny",
+      "mot": "Destiny",
+      "scene": 5,
+      "debut": 24.0,
+      "fin": 24.38
+    },
+    {
+      "texte": "FC :",
+      "mot": "FC",
+      "scene": 5,
+      "debut": 24.38,
+      "fin": 24.72
+    },
+    {
+      "texte": "crée",
+      "mot": "crée",
+      "scene": 5,
+      "debut": 25.28,
+      "fin": 25.5
+    },
+    {
+      "texte": "ton",
+      "mot": "ton",
+      "scene": 5,
+      "debut": 25.5,
+      "fin": 25.66
+    },
+    {
+      "texte": "joueur,",
+      "mot": "joueur",
+      "scene": 5,
+      "debut": 25.66,
+      "fin": 26.0
+    },
+    {
+      "texte": "et",
+      "mot": "et",
+      "scene": 5,
+      "debut": 26.0,
+      "fin": 26.46
+    },
+    {
+      "texte": "vis",
+      "mot": "vis",
+      "scene": 5,
+      "debut": 26.46,
+      "fin": 26.62
+    },
+    {
+      "texte": "tes",
+      "mot": "tes",
+      "scene": 5,
+      "debut": 26.62,
+      "fin": 26.98
+    },
+    {
+      "texte": "moments",
+      "mot": "moments",
+      "scene": 5,
+      "debut": 26.98,
+      "fin": 27.14
+    },
+    {
+      "texte": "clés.",
+      "mot": "clés",
+      "scene": 5,
+      "debut": 27.14,
+      "fin": 27.44
+    }
+  ]
+}

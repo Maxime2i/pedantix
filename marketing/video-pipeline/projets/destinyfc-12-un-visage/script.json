@@ -1,0 +1,226 @@
+{
+  "titre": "Ton joueur a enfin un visage",
+  "app": "destinyfc",
+  "charte": "config/charte-destinyfc.json",
+  "format": {
+    "largeur": 1080,
+    "hauteur": 1920,
+    "fps": 30,
+    "dureeCible": 27
+  },
+  "objectif": "Lancement des avatars (à publier une fois la mise à jour en ligne). Avant / après : le joueur n'était qu'un nom sur l'écran de jeu ; il a maintenant un avatar créé dans l'éditeur « Mon joueur » (éléments gratuits seulement), qu'on retrouve dans la cinématique de transfert (Lens → Paris, 38 M€).",
+  "avatars": true,
+  "voix": {
+    "instructions": "Voix française masculine, jeune et complice, façon TikTok, première personne : c'est Maxime, le développeur du jeu. Débit vif mais articulé, énergie naturelle, pas de ton publicitaire. Ton de confidence de développeur au début, puis enthousiaste. Énumération rapide et rythmée sur « sa peau, sa coupe, sa couleur, sa barbe ». Emphase sur « Paris »."
+  },
+  "ecranInitial": "partie",
+  "kit": {
+    "c1": "#d62828",
+    "c2": "#1d4ed8"
+  },
+  "ecrans": {
+    "partie": {
+      "joueur": {
+        "nom": "Lucas Morel",
+        "pays": "france",
+        "age": 22,
+        "annee": 2032,
+        "poste": "milieu",
+        "note": 74,
+        "argent": "2,4 M€",
+        "etoiles": 3,
+        "niveau": "d1",
+        "club": "Lens",
+        "couleurs": [
+          "#d62828",
+          "#facc15"
+        ],
+        "jauges": {
+          "forme": 78,
+          "moral": 72,
+          "confiance": 66,
+          "pression": 48
+        }
+      },
+      "carte": "croissance"
+    }
+  },
+  "fin": {
+    "promesse": "Crée ton joueur,<br>écris ta <em>légende</em>",
+    "detail": "Nouveau : les avatars"
+  },
+  "scenes": [
+    {
+      "id": "accroche",
+      "voix": "Dans mon jeu de foot, ton joueur n'avait pas de visage.",
+      "animation": "Écran de jeu, zoom sur l'en-tête : juste un nom.",
+      "image": null,
+      "actions": [
+        {
+          "type": "zoom",
+          "ancre": "joueur",
+          "cible": "p-tete",
+          "echelle": 1.25
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "nouveau",
+      "voix": "Juste un nom sur une fiche. Alors j'ai ajouté les avatars.",
+      "animation": "Accueil (version avec avatar), appui sur la tuile « Mon joueur », éditeur.",
+      "image": null,
+      "actions": [
+        {
+          "type": "ecran",
+          "ancre": "Alors",
+          "nom": "accueil"
+        },
+        {
+          "type": "appui",
+          "ancre": "ajouté",
+          "cible": "a-avatar"
+        },
+        {
+          "type": "ecran",
+          "ancre": "avatars",
+          "nom": "avatar"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "creation",
+      "voix": "Tu choisis sa peau, sa coupe, sa couleur, sa barbe.",
+      "animation": "Peau, onglet Coiffure, coupe « petit afro », couleur noire, onglet Visage, barbe courte (tout est gratuit).",
+      "image": null,
+      "actions": [
+        {
+          "type": "porter",
+          "ancre": "peau",
+          "champ": "skin",
+          "valeur": 4
+        },
+        {
+          "type": "onglet",
+          "ancre": "coupe",
+          "nom": "hair"
+        },
+        {
+          "type": "porter",
+          "ancre": "coupe",
+          "decalage": 0.4,
+          "champ": "hair",
+          "valeur": "curly"
+        },
+        {
+          "type": "porter",
+          "ancre": "couleur",
+          "champ": "hairColor",
+          "valeur": 0
+        },
+        {
+          "type": "onglet",
+          "ancre": "barbe",
+          "nom": "face"
+        },
+        {
+          "type": "porter",
+          "ancre": "barbe",
+          "decalage": 0.4,
+          "champ": "beard",
+          "valeur": "stubble"
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "transfert",
+      "voix": "Et il vit toute ta carrière. Ton premier gros transfert ?",
+      "animation": "Vue de dos (nom et numéro), puis la cinématique Signature de l'app.",
+      "image": null,
+      "actions": [
+        {
+          "type": "posejoueur",
+          "ancre": "vit",
+          "nom": "back"
+        },
+        {
+          "type": "cinematique",
+          "ancre": "transfert",
+          "id": "signing",
+          "club": "Paris",
+          "clubId": "fr_paris",
+          "couleurs": "🔴🔵",
+          "depuis": "Lens",
+          "montant": 38,
+          "sons": [
+            [
+              0.2,
+              "tampon",
+              0.4
+            ],
+            [
+              1.43,
+              "impact",
+              0.4
+            ],
+            [
+              3.2,
+              "foule",
+              0.35
+            ],
+            [
+              4.6,
+              "defilement",
+              0.3
+            ],
+            [
+              5.2,
+              "victoire",
+              0.5
+            ],
+            [
+              5.22,
+              "foule",
+              0.55
+            ]
+          ]
+        }
+      ],
+      "bruitages": []
+    },
+    {
+      "id": "paris",
+      "voix": "Paris. Les flashs, le maillot, le montant… et c'est bien ton joueur.",
+      "animation": "La cinématique continue : officiel, couleurs du club, le joueur de dos, le montant.",
+      "image": null,
+      "actions": [],
+      "bruitages": []
+    },
+    {
+      "id": "cta",
+      "voix": "Nouveau dans Destiny FC. Crée le tien.",
+      "animation": "Le joueur en grand qui célèbre, puis carte de fin.",
+      "image": null,
+      "actions": [
+        {
+          "type": "disposition",
+          "ancre": "Nouveau",
+          "mode": "vide"
+        },
+        {
+          "type": "perso",
+          "ancre": "Nouveau",
+          "mode": "centre",
+          "pose": "celebrate"
+        },
+        {
+          "type": "fin",
+          "ancre": "tien"
+        }
+      ],
+      "bruitages": []
+    }
+  ]
+}

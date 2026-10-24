@@ -22,7 +22,8 @@ export function buildTimeline(script, timings) {
   const sfx = [];
   script.scenes.forEach((scene, si) => {
     for (const a of scene.actions ?? []) {
-      const t = anchorTime(timings, si, a.ancre, a.position);
+      // `decalage` (s) : avance ou retarde l'action par rapport à son mot (ex. caler l'impact d'une cinématique sur un mot).
+      const t = anchorTime(timings, si, a.ancre, a.position) + (a.decalage ?? 0);
       let t2 = a.fin ? anchorTime(timings, si, a.fin, "fin") : a.duree ? t + a.duree : undefined;
       if (a.type === "taper" && t2 === undefined) t2 = t + 0.1 * a.mot.length;
       actions.push({ ...a, t, t2, scene: si });
