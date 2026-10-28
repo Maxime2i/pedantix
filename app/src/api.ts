@@ -36,8 +36,10 @@ export interface ScoreResponse {
 
 export type HistoryRow = [number, number, Secret];
 
-const API_BASE =
-  process.env.EXPO_PUBLIC_API_URL || "https://uvaupdahrvugxor7xopx2slx.141.227.190.141.sslip.io";
+/** Adresses du serveur, dans l'ordre : la seconde sert si la première est injoignable (DNS bloqué…). */
+const API_BASES = process.env.EXPO_PUBLIC_API_URL
+  ? [process.env.EXPO_PUBLIC_API_URL]
+  : ["https://pedantix-api.maximelanglois.fr", "https://uvaupdahrvugxor7xopx2slx.141.227.190.141.sslip.io"];
 
 /** Délai maximal d'une requête : sans lui, un réseau qui ne répond pas laisse l'app charger sans fin. */
 const TIMEOUT_MS = 8000;
@@ -53,9 +55,19 @@ async function fetchWithTimeout(url: string, init?: RequestInit): Promise<Respon
 }
 
 async function json<T>(path: string, init?: RequestInit): Promise<T> {
-  const resp = await fetchWithTimeout(`${API_BASE}${path}`, init);
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  return (await resp.json()) as T;
+  let error: unknown;
+  for (const base of API_BASES) {
+    let resp: Response;
+    try {
+      resp = await fetchWithTimeout(`${base}${path}`, init);
+    } catch (e) {
+      error = e; // réseau : on essaie l'adresse suivante
+      continue;
+    }
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    return (await resp.json()) as T;
+  }
+  throw error;
 }
 
 const post = (body: unknown): RequestInit => ({
