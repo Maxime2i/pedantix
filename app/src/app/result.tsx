@@ -7,6 +7,7 @@ import { Icon } from "../components/Icon";
 import { Sheet } from "../components/Sheet";
 import { PrimaryButton, ProgressBar, Section, SwitchRow } from "../components/ui";
 import { puzzleDate, shareText } from "../game";
+import * as telemetrie from "../lib/telemetrie";
 import { SERIF_BOLD, useThemeColors } from "../theme";
 
 function Tile({ value, label }: { value: string; label: string }) {
@@ -35,7 +36,10 @@ export default function ResultSheet() {
   const medal = ["", "🥇", "🥈", "🥉"][game.ranking] ?? "";
 
   function share() {
-    Share.share({ message: shareText(puzzle!.change, game.nTries, game.turns) });
+    Share.share({ message: shareText(puzzle!.change, game.nTries, game.turns) }).then(
+      (r) => r.action === Share.sharedAction && telemetrie.track("partage", { page: puzzle!.num }),
+      () => {},
+    );
   }
 
   return (

@@ -8,6 +8,7 @@ import { useNetInfo } from "@react-native-community/netinfo";
 import { fetchPuzzle, fetchStats, fetchWikiImage, postPage, postScore } from "./api";
 import type { Node, Puzzle, Secret } from "./api";
 import type { Flash } from "./Article";
+import * as telemetrie from "./lib/telemetrie";
 import { countTurns, improves, normalize, store } from "./game";
 import type { Cell, Guesses, Score, Turns } from "./game";
 
@@ -286,6 +287,7 @@ function useGameState() {
 
     let tries = nTries;
     if (!secret) {
+      if (tries === 0) telemetrie.track("premier_essai", { page: puzzle.num });
       tries += 1;
       setNTries(tries);
       store.setDay(puzzle.num, -tries);
@@ -304,6 +306,7 @@ function useGameState() {
       store.write("ranking", rank);
       store.setDay(puzzle.num, tries);
       setWins((w) => w + 1);
+      telemetrie.track("page_trouvee", { page: puzzle.num, essais: tries, rang: rank });
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
     }
     return true;
