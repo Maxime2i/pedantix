@@ -1,4 +1,5 @@
 // Page Réglages : apparence, notifications, aide.
+import { useEffect, useState } from "react";
 import { Alert, Linking, ScrollView, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 import * as Updates from "expo-updates";
@@ -6,13 +7,24 @@ import { router } from "expo-router";
 import { Row, Section, Segmented, SwitchRow } from "../components/ui";
 import { SITE_URL } from "../game";
 import type { Mode } from "../game";
+import * as telemetrie from "../lib/telemetrie";
 import { requestPermission } from "../notifications";
+import { inviteFriend, rateApp, sendFeedback } from "../social";
 import { useSettings } from "../settings";
 import { useThemeColors } from "../theme";
 
 export default function SettingsScreen() {
   const t = useThemeColors();
   const { settings, update } = useSettings();
+  const [statsOff, setStatsOff] = useState(false);
+  useEffect(() => {
+    telemetrie.isOptedOut().then(setStatsOff, () => {});
+  }, []);
+
+  async function toggleStats(on: boolean) {
+    setStatsOff(!on);
+    await telemetrie.setOptOut(!on);
+  }
 
   // Version de l'app, et date de la mise à jour EAS en cours s'il y en a une.
   const version = Constants.expoConfig?.version ?? "1.0.0";
@@ -61,6 +73,19 @@ export default function SettingsScreen() {
             onChange={toggleNotify}
             last
           />
+        </Section>
+
+        <Section
+          title="Confidentialité"
+          footer="Mesure anonyme de l’utilisation (écrans, actions clés, erreurs), hébergée en France. Désactiver efface vos données."
+        >
+          <SwitchRow label="Statistiques d’usage anonymes" value={!statsOff} onChange={toggleStats} last />
+        </Section>
+
+        <Section title="Pédantix vous plaît ?" footer="Une note sur le store aide beaucoup un petit jeu indépendant.">
+          <Row label="Noter Pédantix" chevron onPress={rateApp} />
+          <Row label="Envoyer un avis ou une idée" chevron onPress={() => sendFeedback(version)} />
+          <Row label="Inviter un ami" chevron onPress={inviteFriend} last />
         </Section>
 
         <Section title="Aide">

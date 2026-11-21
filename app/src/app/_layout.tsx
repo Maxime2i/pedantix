@@ -1,16 +1,39 @@
 // Racine : polices, sauvegarde, réglages, partie ; pile avec le jeu, les pages et les feuilles.
 import { useEffect, useState } from "react";
 import { Fraunces_600SemiBold, Fraunces_700Bold, useFonts } from "@expo-google-fonts/fraunces";
-import { Stack } from "expo-router";
+import { Stack, usePathname } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { GameProvider, useGame } from "../GameContext";
 import { loadStorage } from "../game";
+import * as telemetrie from "../lib/telemetrie";
 import { cancelDaily, requestPermission, scheduleDaily } from "../notifications";
 import { SettingsProvider, useSettings } from "../settings";
 import { SERIF_BOLD, useThemeColors } from "../theme";
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
+// Télémétrie de l'usine (VPS) : clé publique, présente dans le binaire de toute façon.
+telemetrie.init({ cle: process.env.EXPO_PUBLIC_TELEMETRIE_CLE ?? "pk_jBuaZhgm8apqDgea3jWgqMNi" });
+
+/** Nom d'écran envoyé à la télémétrie, d'après la route. */
+const SCREEN_NAMES: Record<string, string> = {
+  "/": "Accueil",
+  "/history": "Historique",
+  "/settings": "Reglages",
+  "/rules": "Regles",
+  "/faq": "FAQ",
+  "/guesses": "Essais",
+  "/result": "Resultat",
+};
+
+function ScreenTracking() {
+  const path = usePathname();
+  useEffect(() => {
+    telemetrie.screen(SCREEN_NAMES[path] ?? "Autre");
+  }, [path]);
+  return null;
+}
 
 /**
  * Garde le rappel quotidien en phase avec le réglage : demande l'autorisation
@@ -31,6 +54,7 @@ function NotificationsSync() {
     requestPermission().then((status) => {
       if (status === "granted") scheduleDaily(change);
       else update({ notify: false });
+      telemetrie.track("notifications", { etat: status });
     }, () => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings.notify, change]);
@@ -92,6 +116,7 @@ export default function RootLayout() {
     <SettingsProvider>
       <GameProvider>
         <NotificationsSync />
+        <ScreenTracking />
         <Screens />
       </GameProvider>
     </SettingsProvider>
