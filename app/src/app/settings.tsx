@@ -9,6 +9,7 @@ import { SITE_URL } from "../game";
 import type { Mode } from "../game";
 import * as telemetrie from "../lib/telemetrie";
 import { requestPermission } from "../notifications";
+import { inviteFriend, rateApp, sendFeedback } from "../social";
 import { useSettings } from "../settings";
 import { useThemeColors } from "../theme";
 
@@ -79,6 +80,12 @@ export default function SettingsScreen() {
           footer="Mesure anonyme de l’utilisation (écrans, actions clés, erreurs), hébergée en France. Désactiver efface vos données."
         >
           <SwitchRow label="Statistiques d’usage anonymes" value={!statsOff} onChange={toggleStats} last />
+        </Section>
+
+        <Section title="Pédantix vous plaît ?" footer="Une note sur le store aide beaucoup un petit jeu indépendant.">
+          <Row label="Noter Pédantix" chevron onPress={rateApp} />
+          <Row label="Envoyer un avis ou une idée" chevron onPress={() => sendFeedback(version)} />
+          <Row label="Inviter un ami" chevron onPress={inviteFriend} last />
         </Section>
 
         <Section title="Aide">

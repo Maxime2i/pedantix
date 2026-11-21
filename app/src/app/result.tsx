@@ -1,4 +1,5 @@
 // Feuille de résultat : rang, coups, partage, page révélée.
+import { useEffect } from "react";
 import { Image, Linking, Share, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
 import { wikiUrl } from "../api";
@@ -8,6 +9,7 @@ import { Sheet } from "../components/Sheet";
 import { PrimaryButton, ProgressBar, Section, SwitchRow } from "../components/ui";
 import { puzzleDate, shareText } from "../game";
 import * as telemetrie from "../lib/telemetrie";
+import { inviteFriend, maybeAskReview } from "../social";
 import { SERIF_BOLD, useThemeColors } from "../theme";
 
 function Tile({ value, label }: { value: string; label: string }) {
@@ -24,6 +26,13 @@ export default function ResultSheet() {
   const t = useThemeColors();
   const game = useGame();
   const { puzzle, secret } = game;
+
+  // Après quelques victoires, la fenêtre de note native, une fois le résultat vu.
+  useEffect(() => {
+    if (!secret) return;
+    const timer = setTimeout(maybeAskReview, 2500);
+    return () => clearTimeout(timer);
+  }, [secret]);
   if (!puzzle || !secret) {
     return (
       <Sheet title="Résultat">
@@ -71,6 +80,12 @@ export default function ResultSheet() {
             label="Partager mon résultat"
             onPress={share}
             icon={<Icon ios="square.and.arrow.up" android="share" size={18} color="#fff" />}
+          />
+          <PrimaryButton
+            label="Inviter un ami"
+            secondary
+            onPress={inviteFriend}
+            icon={<Icon ios="person.badge.plus" android="person_add" size={18} color={t.text} />}
           />
           <PrimaryButton
             label="Lire sur Wikipédia"
