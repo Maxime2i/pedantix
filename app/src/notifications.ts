@@ -2,6 +2,7 @@
 // (midi, heure de Paris), programmée sur l'appareil, sans serveur de push.
 import { Platform } from "react-native";
 import * as Notifications from "expo-notifications";
+import { AndroidImportance } from "expo-notifications";
 
 const DAILY_ID = "page-du-jour";
 const CHANNEL_ID = "page-du-jour";
@@ -21,7 +22,7 @@ async function ensureChannel() {
   await Notifications.setNotificationChannelAsync(CHANNEL_ID, {
     name: "Page du jour",
     description: "Rappel à l’arrivée de la nouvelle page, chaque jour à midi.",
-    importance: Notifications.AndroidImportance.DEFAULT,
+    importance: AndroidImportance.DEFAULT,
   });
 }
 

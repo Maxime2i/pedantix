@@ -10,6 +10,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import type { TextInputInstance } from "react-native";
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
@@ -56,7 +57,7 @@ export default function PlayScreen() {
   const t = useThemeColors();
   const game = useGame();
   const [input, setInput] = useState("");
-  const inputRef = useRef<TextInput>(null);
+  const inputRef = useRef<TextInputInstance>(null);
   const insets = useSafeAreaInsets();
   const { puzzle, secret, wins, firstLaunch, clearFirstLaunch } = game;
 
